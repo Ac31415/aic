@@ -1,0 +1,6 @@
+source;share/lerobot_robot_aic/hook/pythonpath.ps1
+source;share/lerobot_robot_aic/hook/pythonpath.dsv
+source;share/lerobot_robot_aic/hook/pythonpath.sh
+source;share/lerobot_robot_aic/hook/ament_prefix_path.ps1
+source;share/lerobot_robot_aic/hook/ament_prefix_path.dsv
+source;share/lerobot_robot_aic/hook/ament_prefix_path.sh

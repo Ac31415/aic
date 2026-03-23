@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../
+libdir=${prefix}/lib
+includedir=${prefix}/include/gz/common6
+
+Name: Gazebo common
+Description: A set of common classes for robot applications
+Version: 6.2.1
+Requires: gz-cmake4 >= 1.1 gz-utils3
+Requires.private: 
+Libs: -L${libdir} -lgz-common6 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

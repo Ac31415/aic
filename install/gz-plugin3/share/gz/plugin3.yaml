@@ -1,0 +1,8 @@
+--- # Subcommands available inside gz-plugin.
+format: 1.0.0
+library_name: gz-plugin
+library_version: 3.1.0
+library_path: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/ruby/gz/cmdplugin3
+commands:
+    - plugin  : Print information about plugins.
+---

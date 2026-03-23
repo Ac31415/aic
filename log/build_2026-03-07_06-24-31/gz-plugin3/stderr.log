@@ -1,0 +1,6 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.1.0.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.1.0.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.1.0.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.1.0.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/libexec/gz/plugin3/gz-plugin
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/libexec/gz/plugin3/gz-plugin'

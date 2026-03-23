@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../
+libdir=${prefix}/lib
+includedir=${prefix}/include/gz/common6
+
+Name: Gazebo common graphics
+Description: A set of common graphics classes for robot applications
+Version: 6.2.1
+Requires: gz-math8 assimp gz-common6 = 6.2.1
+Requires.private: tinyxml2
+Libs: -L${libdir} -lgz-common6-graphics 
+Libs.private: -lfreeimage
+CFLags: -I${includedir} 

@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_control_interfaces/msg/TrajectoryGenerationMode.msg
+// generated code does not contain a copyright notice
+
+
+module aic_control_interfaces {
+  module msg {
+    module TrajectoryGenerationMode_Constants {
+      const uint8 MODE_UNSPECIFIED = 0;
+      const uint8 MODE_VELOCITY = 1;
+      const uint8 MODE_POSITION = 2;
+    };
+    @verbatim (language="comment", text=
+      "There are two ways that input targets can be provided for the MotionUpdate message." "\n"
+      "  1. mode = MODE_VELOCITY" "\n"
+      "     In this case, a target velocity must be provided. The target pose" "\n"
+      "     will be ignored." "\n"
+      "  2. mode = MODE_POSITION" "\n"
+      "     In this case, a target pose must be provided. The target velocity" "\n"
+      "     will be ignored." "\n"
+      "Notes that messages with mode set to MODE_UNSPECIFIED will be ignored.")
+    struct TrajectoryGenerationMode {
+      uint8 mode;
+    };
+  };
+};

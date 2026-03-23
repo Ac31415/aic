@@ -1,0 +1,12 @@
+source;share/gz-utils3/hook/cmake_prefix_path.ps1
+source;share/gz-utils3/hook/cmake_prefix_path.dsv
+source;share/gz-utils3/hook/cmake_prefix_path.sh
+source;share/gz-utils3/hook/dyld_library_path.ps1
+source;share/gz-utils3/hook/dyld_library_path.dsv
+source;share/gz-utils3/hook/dyld_library_path.sh
+source;share/gz-utils3/hook/pkg_config.ps1
+source;share/gz-utils3/hook/pkg_config.dsv
+source;share/gz-utils3/hook/pkg_config.sh
+source;share/gz-utils3/hook/pkg_config_path.ps1
+source;share/gz-utils3/hook/pkg_config_path.dsv
+source;share/gz-utils3/hook/pkg_config_path.sh

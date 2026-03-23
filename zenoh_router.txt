@@ -1,0 +1,1321 @@
+    1  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A'
+    2  cd ./code/python/
+    3  ollama list
+    4  ollama serve
+    5  ollama list
+    6  python ./testing/check_connectivity.py
+    7  python ./testing/check_connectivity.py
+    8  python ./testing/check_connectivity.py
+    9  python ./testing/check_connectivity.py
+   10  python ./testing/check_connectivity.py
+   11  python data_loading/elasticsearch_migrate.py --index search-podcasts
+   12  python app-aiohttp.py
+   13  ollama list
+   14  python ./testing/check_connectivity.py
+   15  python app-aiohttp.py
+   16  python app-aiohttp.py
+   17  python app-aiohttp.py
+   18  python app-aiohttp.py
+   19  ollama list
+   20  ollama serve
+   21  ollama serve
+   22  ollama list
+   23  python app-aiohttp.py
+   24  ollama list
+   25  ollama serve
+   26  ollama list
+   27  ollama serve
+   28  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   29  python testing/check_connectivity.py
+   30  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   31  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   32  python testing/check_connectivity.py
+   33  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+   34  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A'
+   35  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A/code/python'
+   36  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   37  python app-aiohttp.py
+   38  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A/code/python'
+   39  python app-aiohttp.py
+   40  python app-aiohttp.py
+   41  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   42  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   43  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+   44  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/B/code/python'
+   45  python testing/check_connectivity.py
+   46  python app-aiohttp.py
+   47  ollama list
+   48  ollama serve
+   49  ollama list
+   50  ollama serve
+   51  ollama list
+   52  brew update && brew install azure-cli
+   53  az
+   54  az login
+   55  az group create --name NLWeb --location eastus2
+   56  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A/code/python'
+   57  python testing/check_connectivity.py
+   58  python testing/check_connectivity.py
+   59  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   60  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   61  python testing/check_connectivity.py
+   62  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   63  python testing/check_connectivity.py
+   64  python testing/check_connectivity.py
+   65  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   66  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   67  python testing/check_connectivity.py
+   68  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   69  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   70  ollama list
+   71  ollama serve
+   72  ollama list
+   73  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2/A/code/python'
+   74  python testing/check_connectivity.py
+   75  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   76  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+   77  python testing/check_connectivity.py
+   78  python app-aiohttp.py
+   79  python app-aiohttp.py
+   80  python app-aiohttp.py
+   81  python testing/check_connectivity.py
+   82  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   83  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   84  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+   85  python app-aiohttp.py
+   86  python app-aiohttp.py
+   87  python app-aiohttp.py
+   88  python app-aiohttp.py
+   89  python app-aiohttp.py
+   90  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   91  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+   92  conda activate pocket-flow-alignerr-cc-human-p
+   93  claude-hfi --vscode
+   94  git rev-parse HEAD
+   95  claude-hfi --vscode
+   96  claude-hfi --continue
+   97  claude-hfi --continue
+   98  claude-hfi --continue
+   99  claude-hfi --continue
+  100  claude-hfi --continue
+  101  git diff 60bd2914781099259562b0a19b45cc552c6fa6ed > ~/0ddf48c0-0865-4b2e-acc6-dcacbc44a001_final.diff
+  102  git add -A
+  103  git diff 60bd2914781099259562b0a19b45cc552c6fa6ed > ~/0ddf48c0-0865-4b2e-acc6-dcacbc44a001_final.diff
+  104  cd '/Users/wen-chungcheng/sdk-python-original-to-be-git-hash-applied-1'
+  105  git apply ~/0ddf48c0-0865-4b2e-acc6-dcacbc44a001_final.diff
+  106  cp ~/kreuzberg ~/kreuzberg-to-be-git-hashed
+  107  cd '/Users/wen-chungcheng/kreuzberg'
+  108  git rev-parse HEAD
+  109  cd ..
+  110  tar -cf kreuzberg.tar ./kreuzberg
+  111  cd '/Users/wen-chungcheng/kreuzberg-original'
+  112  task setup
+  113  brew install openssl@3
+  114  brew install go-task
+  115  task setup
+  116  maturin develop
+  117  cd '/Users/wen-chungcheng/fastapi_mcp-original'
+  118  pip install uv
+  119  cd '/Users/wen-chungcheng/fastapi_mcp'
+  120  git rev-parse HEAD
+  121  cd ..
+  122  tar -cf fas.tar ./fastapi_mcp
+  123  tar -cf fastapi_mcp.tar ./fastapi_mcp
+  124  cd '/Users/wen-chungcheng/fastapi_mcp-original'
+  125  uv sync
+  126  uv run pre-commit install
+  127  uv run pre-commit run
+  128  conda deactivate
+  129  conda activate
+  130  conda deactivate
+  131  conda activate pocket-flow-alignerr-cc-human-p
+  132  uv run pytest
+  133  uv run mypy .
+  134  uv run ruff check .
+  135  uv run python basic-usage.py
+  136  uv run python basic-usage.py
+  137  uv run python '/Users/wen-chungcheng/fastapi_mcp-original/examples/01_basic_usage_example.py'
+  138  cd ..
+  139  tar -cf NLWeb.tar ./NLWeb
+  140  cd ./NLWeb/
+  141  git rev-parse HEAD
+  142  cd '/Users/wen-chungcheng/NLWeb-original'
+  143  cd ./code/python/
+  144  ls -al
+  145  python -V
+  146  pip install -r requirements.txt
+  147  pip install protobuf>=5.29.5
+  148  pip install protobuf>=5.0
+  149  pip install protobuf
+  150  pip install protobuf==5.29.5
+  151  ollama
+  152  ollama list
+  153  ollama serve
+  154  ping http://127.0.0.1:11434
+  155  ping http://127.0.0.1:11434
+  156  ping http://127.0.0.1:11434
+  157  ping https://127.0.0.1
+  158  ping https://localhost
+  159  ping https://8.8.8.8
+  160  ping 127.0.0.1:11434
+  161  ping 127.0.0.1
+  162  ping 127.0.0.1:11434
+  163  ping localhost:11434
+  164  ping localhost
+  165  cd '/Users/wen-chungcheng/NLWeb'
+  166  cd ./code/python/
+  167  pip install -r requirements.txt
+  168  python testing/check_connectivity.py
+  169  python testing/check_connectivity.py
+  170  python testing/check_connectivity.py
+  171  python testing/check_connectivity.py
+  172  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  173  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  174  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  175  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  176  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  177  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  178  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  179  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  180  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  181  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  182  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  183  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  184  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  185  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  186  python app-aiohttp.py
+  187  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  188  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  189  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  190  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  191  python app-aiohttp.py
+  192  python app-aiohttp.py
+  193  cd '/Users/wen-chungcheng/NLWeb-original'
+  194  git rev-parse --show-toplevel
+  195  claude-hfi --help
+  196  claude-hfi --version
+  197  claude-hfi --vscode
+  198  claude-hfi --continue
+  199  claude-hfi --continue
+  200  claude-hfi --continue
+  201  claude-hfi --continue
+  202  claude-hfi --continue
+  203  claude-hfi --continue
+  204  claude-hfi --continue
+  205  claude-hfi --continue
+  206  claude-hfi --continue
+  207  claude-hfi --continue
+  208  claude-hfi --continue
+  209  claude-hfi --continue
+  210  claude-hfi --continue
+  211  git diff d5c0ba8b29c3eda718190f0e39215f2ec6a7f1ea > ~/2228bbcc-dbda-43e0-9f31-649d3858ca7e_final.diff
+  212  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+  213  git apply ~/2228bbcc-dbda-43e0-9f31-649d3858ca7e_final.diff
+  214  cd ..
+  215  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-47541CrFTYivJXGH7.txt"
+  216  conda activate pocket-flow-alignerr-cc-human-p
+  217  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-B
+  218  conda activate pocket-flow-alignerr-cc-human-p
+  219  tmux attach -t 7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-A
+  220  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-A
+  221  conda activate pocket-flow-alignerr-cc-human-p
+  222  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  223  ollama list
+  224  ollama serve
+  225  ollama serve
+  226  ollama list
+  227  ollama serve
+  228  conda activate pocket-flow-alignerr-cc-human-p
+  229  claude
+  230  claude-hfi -V
+  231  git rev-parse --show-toplevel
+  232  git rev-parse HEAD
+  233  claude-hfi --vscode
+  234  conda activate pocket-flow-alignerr-cc-human-p
+  235  ollama list
+  236  ollama serve
+  237  python testing/check_connectivity.py
+  238  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  239  python testing/check_connectivity.py
+  240  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  241  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  242  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  243  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  244  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  245  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  246  python testing/check_connectivity.py
+  247  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/A/code/python'
+  248  python testing/check_connectivity.py
+  249  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/B/code/python'
+  250  python testing/check_connectivity.py
+  251  ollama list
+  252  ollama serve
+  253  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/A/code/python'
+  254  python testing/check_connectivity.py
+  255  python testing/check_connectivity.py
+  256  python testing/check_connectivity.py
+  257  python testing/check_connectivity.py
+  258  python testing/check_connectivity.py
+  259  python testing/check_connectivity.py
+  260  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/B/code/python'
+  261  python testing/check_connectivity.py
+  262  python testing/check_connectivity.py
+  263  python testing/check_connectivity.py
+  264  python testing/check_connectivity.py
+  265  python testing/check_connectivity.py
+  266  python testing/check_connectivity.py
+  267  python testing/check_connectivity.py
+  268  conda activate Webots-Sim
+  269  python 'content category breakdown compare multiple all sounds.py'
+  270  python 'content category breakdown compare multiple all sounds.py'
+  271  python 'content category breakdown compare multiple all sounds.py'
+  272  python 'content category breakdown compare multiple all sounds.py'
+  273  python 'content category breakdown compare multiple all sounds.py'
+  274  python 'content category breakdown compare multiple all sounds.py'
+  275  python 'content category breakdown compare multiple all sounds.py'
+  276  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  277  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  278  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  279  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  280  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  281  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  282  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  283  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  284  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  285  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  286  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  287  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  288  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  289  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  290  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  291  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  292  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  293  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  294  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  295  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  296  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  297  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  298  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  299  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  300  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  301  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  302  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  303  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  304  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  305  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  306  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  307  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  308  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  309  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  310  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  311  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  312  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  313  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  314  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  315  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  316  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  317  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  318  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  319  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  320  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  321  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  322  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  323  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  324  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  325  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  326  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  327  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  328  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  329  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  330  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  331  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  332  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  333  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  334  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  335  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  336  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  337  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  338  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  339  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  340  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  341  python retrieval_nav_performance_multiple_cases_compare_all_sounds_4_prompts.py
+  342  python retrieval_nav_performance_multiple_cases_compare_screams_4_prompts.py
+  343  python retrieval_nav_performance_multiple_cases_compare_screams_4_prompts.py
+  344  python retrieval_nav_performance_multiple_cases_compare_screams_4_prompts.py
+  345  python 'content category breakdown compare multiple allsounds.py'
+  346  python 'content category breakdown compare multiple all sounds.py'
+  347  python 'content category breakdown compare multiple all sounds.py'
+  348  python 'content category breakdown compare multiple all sounds.py'
+  349  python 'content category breakdown compare multiple all sounds.py'
+  350  python 'content category breakdown compare multiple all sounds.py'
+  351  python 'content category breakdown compare multiple all sounds.py'
+  352  python 'content category breakdown compare multiple all sounds.py'
+  353  python 'content category breakdown compare multiple all sounds.py'
+  354  python 'content category breakdown compare multiple screams.py'
+  355  export PS1="\W \$"; clear;
+  356  ls -al /Users/wen-chungcheng/Documents/FREE\ \$211\ Power-Up\ Bundle 
+  357  mv -v /Users/wen-chungcheng/Downloads/ubuntu-20.04.6-desktop-amd64.iso /Users/wen-chungcheng/Downloads/sdkmanager-2.4.0.13234-Ubuntu_22.04_docker.tar /Volumes/Untitled
+  358  ls -al /Users/wen-chungcheng/AndroidStudioProjects/SpotifyClone 
+  359  mv -v /Users/wen-chungcheng/AndroidStudioProjects/SpotifyClone/.DS_Store /Volumes/USB\ DISK/AndroidStudioProjects/SpotifyClone
+  360  ls -al /Volumes/USB\ DISK/AndroidStudioProjects/SpotifyClone
+  361  ls -al /Users/wen-chungcheng/AndroidStudioProjects
+  362  mv -v /Users/wen-chungcheng/AndroidStudioProjects/.DS_Store /Volumes/USB DISK/AndroidStudioProjects
+  363  mv -v /Users/wen-chungcheng/AndroidStudioProjects/.DS_Store /Volumes/USB\ DISK/AndroidStudioProjects
+  364  ls -al /Users/wen-chungcheng/AndroidStudioProjects
+  365  ls -al /Users/wen-chungcheng/AndroidStudioProjects/SpotifyClone
+  366  mv -v /Volumes/USB\ DISK/AndroidStudioProjects /Volumes/USB\ DISK/co2-emmision-react /Volumes/USB\ DISK/CodePath\ IOS\ 101 /Volumes/USB\ DISK/DA-Raven-Codebase-Eval /Volumes/USB\ DISK/DataAnnotationCodeTesting /Volumes/USB\ DISK/Desktop /Volumes/USB\ DISK/Documents /Volumes/USB\ DISK/Downloads /Volumes/USB\ DISK/exoplanets\ star\ charts\ web\ app\ data\ annotation\ test /Volumes/USB\ DISK/multimodal\ remembr\ memories\ demo /Volumes/USB\ DISK/ps2\ games /Volumes/USB\ DISK/remaining /Volumes/USB\ DISK/YouTube-Comment-Sentiment-App /Volumes/Untitled
+  367  docker pull opensearchproject/opensearch:3.4.0
+  368  docker pull opensearchproject/opensearch-dashboards:3.4.0
+  369  docker pull opensearchproject/opensearch:latest
+  370  docker pull opensearchproject/opensearch-dashboards:latest
+  371   docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213
+  372   docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213 opensearchproject/opensearch:latest
+  373   docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213
+  374   docker run -d -p 9200:9200 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch:latest
+  375   docker run -d -p 9200:9201 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch:latest
+  376   docker run -d -p 9201:9201 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch:latest
+  377  curl https://localhost:9201 -ku admin:"EvaJim01160213"
+  378  curl https://localhost:9201 -ku admin:"EvaJim01160213"
+  379  curl https://localhost:9201 -ku admin:"EvaJim01160213"
+  380  docker container ls
+  381  curl https://localhost:9201
+  382  curl https://localhost:9201 -ku admin:"EvaJim01160213"
+  383   docker run -d -p 9201:9201 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch-dashboards:latest
+  384   docker run -d -p 9202:9202 -p 9600:9600 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch-dashboards:latest
+  385   docker run -d -p 9202:9202 -p 9601:9601 -e "discovery.type=single-node" -e "OPENSEARCH_INITIAL_ADMIN_PASSWORD=EvaJim01160213" opensearchproject/opensearch-dashboards:latest
+  386  curl -fsSL https://elastic.co/start-local | sh
+  387  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-11436bOWEIUr64U5q.txt"
+  388  conda activate pocket-flow-alignerr-cc-human-p
+  389  ollama list
+  390  ollama serve
+  391  conda activate pocket-flow-alignerr-cc-human-p
+  392  claude-hfi --continue
+  393  conda activate pocket-flow-alignerr-cc-human-p
+  394  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-A
+  395  conda activate pocket-flow-alignerr-cc-human-p
+  396  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-B
+  397  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-35462QQlQKRKCDFoM.txt"
+  398  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-35457O7akXhakj1Ct.txt"
+  399  conda activate pocket-flow-alignerr-cc-human-p
+  400  conda activate pocket-flow-alignerr-cc-human-p
+  401  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-A
+  402  conda activate tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-B
+  403  conda activate pocket-flow-alignerr-cc-human-p
+  404  tmux attach -t c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535-B
+  405  conda activate pocket-flow-alignerr-cc-human-p
+  406  tmux attach -t 9796e36d-f8de-42ac-aba3-8c2041bd4f60-A
+  407  conda activate pocket-flow-alignerr-cc-human-p
+  408  tmux attach -t 1014d63a-763b-453c-ac3a-1b4a1ff6e8dd-A
+  409  conda activate pocket-flow-alignerr-cc-human-p
+  410  tmux attach -t 1014d63a-763b-453c-ac3a-1b4a1ff6e8dd-B
+  411  conda activate pocket-flow-alignerr-cc-human-p
+  412  ollama list
+  413  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/A'
+  414  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/A/code/python'
+  415  python testing/check_connectivity.py
+  416  python testing/check_connectivity.py
+  417  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 1/B/code/python'
+  418  python testing/connectivity/elasticsearch_connectivity.py
+  419  python testing/connectivity/elasticsearch_connectivity.py
+  420  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/A/code/python'
+  421  python testing/check_connectivity.py
+  422  python testing/check_connectivity.py
+  423  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/A/code/python'
+  424  cd ..
+  425  cd ..
+  426  python scripts/run_tests_with_server.py integration
+  427  pip install aioresponses
+  428  python scripts/run_tests_with_server.py integration
+  429  python scripts/run_tests_with_server.py unit
+  430  python scripts/run_tests_with_server.py e2e
+  431  python scripts/run_tests_with_server.py websocket
+  432  python scripts/run_tests_with_server.py rest
+  433  python scripts/run_tests_with_server.py performance
+  434  python scripts/run_tests_with_server.py security
+  435  python scripts/run_tests_with_server.py reliability
+  436  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2'
+  437  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/A/code/python'
+  438  python testing/check_connectivity.py
+  439  python -m testing.connectivity.azure_connectivity
+  440  python -m testing.connectivity.inception_connectivity
+  441  ./testing/run_all_tests.sh
+  442  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2'
+  443  ollama list
+  444  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/A/code/python'
+  445  python testing/check_connectivity.py
+  446  python -m testing.connectivity.elasticsearch_connectivity
+  447  python -m testing.connectivity.elasticsearch_connectivity
+  448  python testing/check_connectivity.py
+  449  python -m testing.connectivity.elasticsearch_connectivity
+  450  python testing/check_connectivity.py
+  451  python -m testing.connectivity.azure_connectivity
+  452  python -m testing.connectivity.snowflake_connectivity
+  453  python -m testing.connectivity.inception_connectivity
+  454  ./testing/run_all_tests.sh
+  455  python testing.check_connectivity
+  456  python -m testing.check_connectivity
+  457  python -m testing.check_connectivity
+  458  python -m testing.check_connectivity --all
+  459  python -m testing.connectivity.elasticsearch_connectivity
+  460  python -m testing.connectivity.azure_connectivity
+  461  python -m testing.connectivity.snowflake_connectivity
+  462  python -m testing.connectivity.inception_connectivity
+  463  python -m pytest tests/ -v
+  464  python -m pytest tests/test_elasticsearch_connectivity.py -v
+  465  python -m pytest tests/ --cov=testing --cov-report=term-missing
+  466  python -m testing.connectivity.elasticsearch_connectivity
+  467  ollama list
+  468  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/B/code/python'
+  469  python testing/check_connectivity.py
+  470  python testing/check_connectivity.py
+  471  python testing/check_connectivity.py
+  472  python testing/check_connectivity.py --all
+  473  python testing/connectivity/elasticsearch_connectivity.py
+  474  python testing/connectivity/elasticsearch_connectivity.py
+  475  python testing/connectivity/elasticsearch_connectivity.py
+  476  python testing/connectivity/azure_connectivity.py
+  477  python testing/connectivity/snowflake_connectivity.py
+  478  python testing/connectivity/inception_connectivity.py
+  479  python testing/check_connectivity.py
+  480  python -m pytest testing/connectivity/test_elasticsearch_connectivity.py -v
+  481  python -m pytest testing/connectivity/ -v
+  482  python -m pytest ../tests/unit/ -v
+  483  ls -al ..
+  484  ls -al ../..
+  485  python -m pytest ../../tests/unit/ -v
+  486  python -m pytest ../tests/unit/test_elasticsearch_connectivity.py -v
+  487  python -m pytest ../../tests/unit/test_elasticsearch_connectivity.py -v
+  488  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/A/code/python'
+  489  python -m testing.connectivity.elasticsearch_connectivity
+  490  python -m testing.connectivity.elasticsearch_connectivity
+  491  python -m testing.check_connectivity
+  492  python -m testing.connectivity.elasticsearch_connectivity
+  493  python -m testing.connectivity.elasticsearch_connectivity
+  494  python -m testing.check_connectivity
+  495  python -m testing.connectivity.elasticsearch_connectivity
+  496  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/B'
+  497  python scripts/run_tests_with_server.py unit
+  498  ollama list
+  499  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  500  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  501  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  502  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/B/code/python'
+  503  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  504  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  505  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  506  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  507  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  508  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  509  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  510  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  511  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  512  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  513  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  514  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  515  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/B/code/python'
+  516  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  517  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  518  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  519  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  520  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  521  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  522  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  523  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  524  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  525  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  526  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  527  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  528  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  529  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  530  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  531  conda activate pocket-flow-alignerr-cc-human-p
+  532  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-A
+  533  conda activate pocket-flow-alignerr-cc-human-p
+  534  82a12efd-269a-406a-b56f-706e05f0a8c9-B
+  535  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-B
+  536  conda activate pocket-flow-alignerr-cc-human-p
+  537  ollama list
+  538  ollama serve
+  539  ollama list
+  540  ollama serve
+  541  ollama list
+  542  ollama serve
+  543  ollama list
+  544  ollama serve
+  545  ollama serve
+  546  ollama list
+  547  ollama serve
+  548  ollama list
+  549  ollama serve
+  550  ollama serve
+  551  ollama list
+  552  ollama serve
+  553  ollama list
+  554  ollama serve
+  555  ollama list
+  556  ollama serve
+  557  ollama list
+  558  ollama serve
+  559  ollama serve
+  560  conda activate pocket-flow-alignerr-cc-human-p
+  561  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-B
+  562  conda activate pocket-flow-alignerr-cc-human-p
+  563  claude-hfi --continue
+  564  claude-hfi --continue
+  565  claude-hfi --continue
+  566  claude-hfi --continue
+  567  claude-hfi --continue
+  568  claude-hfi --continue
+  569  claude-hfi --continue
+  570  claude-hfi --continue
+  571  claude-hfi --continue c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535
+  572  claude-hfi --continue
+  573  claude-hfi --continue
+  574  claude-hfi --continue
+  575  cd ..
+  576  cd '/Users/wen-chungcheng/NLWeb-original'
+  577  claude-hfi
+  578  claude-hfi
+  579  claude-hfi
+  580  claude-hfi --continue
+  581  claude-hfi --continue
+  582  claude-hfi --continue
+  583  claude-hfi --continue
+  584  claude-hfi --continue
+  585  claude-hfi --continue
+  586  claude-hfi --continue
+  587  claude-hfi --continue
+  588  claude-hfi --continue
+  589  conda activate pocket-flow-alignerr-cc-human-p
+  590  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-A
+  591  conda activate pocket-flow-alignerr-cc-human-p
+  592  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  593  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  594  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  595  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  596  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  597  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  598  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/B/code/python'
+  599  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  600  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/A/code/python'
+  601  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  602  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 1/B/code/python'
+  603  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  604  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/A/code/python'
+  605  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  606  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  607  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/B/code/python'
+  608  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  609  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  610  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/A/code/python'
+  611  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  612  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  613  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/B/code/python'
+  614  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  615  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  616  ollama list
+  617  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/A/code/python'
+  618  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  619  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  620  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/B/code/python'
+  621  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  622  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  623  ollama list
+  624  ollama list
+  625  ollama serve
+  626  ollama list
+  627  ollama list
+  628  ollama list
+  629  ollama list
+  630  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2'
+  631  ollama list
+  632  ollama list
+  633  ollama list
+  634  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/A/code/python'
+  635  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  636  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  637  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/B/code/python'
+  638  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech
+  639  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  640  python -m pytest testing/embedding/test_ollama_embedding.py -v
+  641  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2/A/code/python'
+  642  python -m pytest testing/embedding/test_ollama_embedding.py -v
+  643  conda activate pocket-flow-alignerr-cc-human-p
+  644  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 1/turn 2'
+  645  ls -al
+  646  tar -cf 2228bbcc-dbda-43e0-9f31-649d3858ca7e.tar ./2228bbcc-dbda-43e0-9f31-649d3858ca7e
+  647  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2'
+  648  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2'
+  649  cp -r '/Users/wen-chungcheng/NLWeb-all-turns/task 2/turn 2/submitted-mod-c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535' ./c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535
+  650  tar -cf c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535.tar ./c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535
+  651  cd '/Users/wen-chungcheng/NLWeb-original'
+  652  git diff d5c0ba8b29c3eda718190f0e39215f2ec6a7f1ea > ~/c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535_final.diff
+  653  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+  654  git apply ~/c7cc84d5-c0ba-41c9-94a6-9bedeb4ad535_final.diff
+  655  cd ..
+  656  cd '/Users/wen-chungcheng/NLWeb-original'
+  657  git rev-parse HEAD
+  658  git rev-parse HEAD
+  659  conda activate pocket-flow-alignerr-cc-human-p
+  660  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-A
+  661  conda activate pocket-flow-alignerr-cc-human-p
+  662  tmux attach -t 82a12efd-269a-406a-b56f-706e05f0a8c9-B
+  663  conda activate pocket-flow-alignerr-cc-human-p
+  664  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  665  python testing/check_connectivity.py
+  666  python -m data_loading.db_load --only-delete delete-site Behind-the-Tech
+  667  python -m data_loading.db_load --only-delete delete-site Decoder
+  668  python -m data_loading.db_load --only-delete delete-site Behind-the-Tech
+  669  python -m data_loading.db_load --only-delete delete-site Decoder
+  670  python -m data_loading.db_load https://feeds.libsyn.com/121695/rss Behind-the-Tech --batch-size 1
+  671  python -m data_loading.db_load https://feeds.megaphone.fm/recodedecode Decoder
+  672  python app-aiohttp.py
+  673  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 1/A/code/python'
+  674  python app-aiohttp.py
+  675  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 1/B/code/python'
+  676  python app-aiohttp.py
+  677  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 1/A/code/python'
+  678  python app-aiohttp.py
+  679  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+  680  python app-aiohttp.py
+  681  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+  682  python app-aiohttp.py
+  683  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/B/code/python'
+  684  python app-aiohttp.py
+  685  python app-aiohttp.py
+  686  python app-aiohttp.py
+  687  python app-aiohttp.py
+  688  python app-aiohttp.py
+  689  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  690  python app-aiohttp.py
+  691  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+  692  python app-aiohttp.py
+  693  python app-aiohttp.py
+  694  python app-aiohttp.py
+  695  python app-aiohttp.py
+  696  python app-aiohttp.py
+  697  python app-aiohttp.py
+  698  python app-aiohttp.py
+  699  conda activate pocket-flow-alignerr-cc-human-p
+  700  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+  701  python app-aiohttp.py
+  702  python app-aiohttp.py
+  703  python app-aiohttp.py
+  704  python app-aiohttp.py
+  705  python app-aiohttp.py
+  706  conda activate pocket-flow-alignerr-cc-human-p
+  707  tmux attach -t 818f2756-e7d2-4c21-824a-7dcc902b8346-A
+  708  conda activate pocket-flow-alignerr-cc-human-p
+  709  tmux attach -t 818f2756-e7d2-4c21-824a-7dcc902b8346-B
+  710  conda activate pocket-flow-alignerr-cc-human-p
+  711  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4'
+  712  ollama list
+  713  ollama serve
+  714  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4'
+  715  cp -r '/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/claude-hfi/6c60b580-22e2-49a8-a0e5-1ba8be8130d2' .
+  716  tar -cf 6c60b580-22e2-49a8-a0e5-1ba8be8130d2.tar ./6c60b580-22e2-49a8-a0e5-1ba8be8130d2
+  717  cd '/Users/wen-chungcheng/NLWeb-original'
+  718  git diff d5c0ba8b29c3eda718190f0e39215f2ec6a7f1ea > ~/6c60b580-22e2-49a8-a0e5-1ba8be8130d2_final.diff
+  719  cd '/Users/wen-chungcheng/NLWeb-original'
+  720  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  721  conda activate pocket-flow-alignerr-cc-human-p
+  722  tmux attach -t 6c60b580-22e2-49a8-a0e5-1ba8be8130d2-A
+  723  conda activate pocket-flow-alignerr-cc-human-p
+  724  tmux attach -t 6c60b580-22e2-49a8-a0e5-1ba8be8130d2-B
+  725  conda activate pocket-flow-alignerr-cc-human-p
+  726  claude-hfi --continue
+  727  claude-hfi --continue
+  728  claude-hfi --continue
+  729  git diff d5c0ba8b29c3eda718190f0e39215f2ec6a7f1ea > ~/82a12efd-269a-406a-b56f-706e05f0a8c9_final.diff
+  730  cd '/Users/wen-chungcheng/NLWeb-original'
+  731  claude-hfi --vscode
+  732  claude-hfi --vscode
+  733  claude-hfi --continue
+  734  claude-hfi --continue 818f2756-e7d2-4c21-824a-7dcc902b8346
+  735  claude-hfi -continue 818f2756-e7d2-4c21-824a-7dcc902b8346
+  736  claude-hfi -c 818f2756-e7d2-4c21-824a-7dcc902b8346
+  737  claude-hfi --continue
+  738  claude-hfi --continue
+  739  claude-hfi --continue
+  740  claude-hfi --continue
+  741  claude-hfi --continue
+  742  chmod +x ~/Downloads/claude-hfi
+  743  ls ~/.local/bin/
+  744  mv -f claude-hfi ~/.local/bin/
+  745  mv -f ~/Downloads/claude-hfi ~/.local/bin/
+  746  claude-hfi --continue
+  747  claude-hfi --continue
+  748  claude-hfi --continue
+  749  claude-hfi --continue
+  750  claude-hfi --continue
+  751  claude-hfi --continue
+  752  claude-hfi --continue
+  753  claude-hfi --continue
+  754  claude-hfi --continue
+  755  conda activate pocket-flow-alignerr-cc-human-p
+  756  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2'
+  757  cp -r '/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/claude-hfi/82a12efd-269a-406a-b56f-706e05f0a8c9' .
+  758  tar -cf 82a12efd-269a-406a-b56f-706e05f0a8c9.tar ./82a12efd-269a-406a-b56f-706e05f0a8c9
+  759  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+  760  git apply ~/82a12efd-269a-406a-b56f-706e05f0a8c9_final.diff
+  761  ollama list
+  762  ollama serve
+  763  ollama serve
+  764  ollama serve
+  765  ollama serve
+  766  ollama list
+  767  ollama serve
+  768  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+  769  git apply ~/6c60b580-22e2-49a8-a0e5-1ba8be8130d2_final.diff
+  770  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+  771  conda activate pocket-flow-alignerr-cc-human-p
+  772  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+  773  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+  774  python app-aiohttp.py
+  775  ollama list
+  776  python app-aiohttp.py
+  777  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/B/code/python'
+  778  python app-aiohttp.py
+  779  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+  780  python app-aiohttp.py
+  781  python app-aiohttp.py
+  782  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  783  python app-aiohttp.py
+  784  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+  785  python app-aiohttp.py
+  786  python app-aiohttp.py
+  787  python app-aiohttp.py
+  788  python app-aiohttp.py
+  789  python app-aiohttp.py
+  790  python app-aiohttp.py
+  791  python app-aiohttp.py
+  792  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/B/code/python'
+  793  python app-aiohttp.py
+  794  python app-aiohttp.py
+  795  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 4/A/code/python'
+  796  python app-aiohttp.py
+  797  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  798  python app-aiohttp.py
+  799  python app-aiohttp.py
+  800  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 4/A/code/python'
+  801  python app-aiohttp.py
+  802  python app-aiohttp.py
+  803  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  804  python app-aiohttp.py
+  805  python app-aiohttp.py
+  806  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  807  python app-aiohttp.py
+  808  cd '/Users/wen-chungcheng/NLWeb/code/python'
+  809  python app-aiohttp.py
+  810  python app-aiohttp.py
+  811  conda activate Webots-Sim
+  812  ls -al
+  813  cd ultralytics
+  814  pip install -e .
+  815  cd ..
+  816  pip install -e .
+  817  ls -al ~/Downloads
+  818  mv ~/Downloads/yolo11n.pt ~/Downloads/yolo26n.pt ~/Downloads/yolo26x.pt ./trained\ models
+  819  ls -al ~/Desktop
+  820  cp `~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png` ./pictures
+  821  cp '~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png' ./pictures
+  822  cp "~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png" ./pictures
+  823  python object_detect_demo.py
+  824  python object_detect_demo.py
+  825  python object_detect_demo.py
+  826  python object_detect_demo.py
+  827  python object_detect_demo.py
+  828  python object_detect_demo.py
+  829  python object_detect_demo.py
+  830  python object_detect_demo.py
+  831  python object_detect_demo.py
+  832  python object_detect_demo.py
+  833  python object_detect_demo.py
+  834  python object_detect_demo.py
+  835  python object_detect_demo.py
+  836  mv ~/Downloads/yolo26n-seg.pt ~/Downloads/yolo26x-seg.pt '/Users/wen-chungcheng/ultralytics/trained models/obj_seg'
+  837  python object_seg_demo.py
+  838  python object_seg_demo.py
+  839  mv ~/Downloads/yolo26n-cls ~/Downloads/yolo26x-cls.pt '/Users/wen-chungcheng/ultralytics/trained models/cls'
+  840  mv ~/Downloads/yolo26n-cls '/Users/wen-chungcheng/ultralytics/trained models/cls'
+  841  mv ~/Downloads/yolo26n-cls.pt '/Users/wen-chungcheng/ultralytics/trained models/cls'
+  842  python object_cls_demo.py
+  843  python object_cls_demo.py
+  844  python object_detect_demo.py
+  845  python object_detect_demo.py
+  846  python object_detect_demo.py
+  847  ls -al ~/Downloads
+  848  mv ~/Downloads/yolo26x-obb.pt ~/Downloads/yolo26n-obb.pt '/Users/wen-chungcheng/ultralytics/trained models/obb_detect'
+  849  history 1 > ultralytics-usage.txt
+  850  conda activate Webots-Sim
+  851  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal --audio-backend ACT --visual-backend GEMMA
+  852  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  853  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  854  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  855  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  856  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  857  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  858  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  859  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  860  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  861  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  862  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  863  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  864  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot --audio-backend ACT
+  865  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot_new --audio-backend ACT
+  866  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot_new --audio-backend ACT
+  867  history 1 > new-memory-building-obj-detect.txt
+  868  conda activate Webots-Sim
+  869  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  870  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  871  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  872  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  873  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  874  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  875  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  876  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  877  conda activate Webots-Sim
+  878  ollama list
+  879  ollama stfu
+  880  ollama help
+  881  ollama run gpt-oss:120b
+  882  cd '/Users/wen-chungcheng/remembr'
+  883  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  884  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --reset
+  885  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  886  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  887  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  888  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  889  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections --recent 600 --format detailed
+  890  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections --recent 600 --format detailed
+  891  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  892  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  893  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  894  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  895  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  896  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  897  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --export-json --include-embeddings
+  898  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --export-json
+  899  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  900  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  901  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  902  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  903  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot
+  904  pip install tabulate
+  905  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot
+  906  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --format detailed
+  907  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --reset
+  908  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --format detailed
+  909  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  910  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --reset
+  911  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  912  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  913  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  914  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  915  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  916  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  917  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  918  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  919  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  920  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  921  export PS1="\W \$"; clear;
+  922  [
+  923  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-2565uL5gG6Y73aws.txt"
+  924  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-2578M1Am7XjmXlH1.txt"
+  925  source /Users/wen-chungcheng/anaconda3/bin/activate pocket-flow-alignerr-cc-human-p
+  926  tmux attach -t 9c009fc7-103b-489e-af66-6efab7d42587-A
+  927  conda activate pocket-flow-alignerr-cc-human-p
+  928  tmux attach -t 9c009fc7-103b-489e-af66-6efab7d42587-B
+  929  source /Users/wen-chungcheng/anaconda3/bin/activate pocket-flow-alignerr-cc-human-p
+  930  tmux attach -t 6b33c25a-4dfa-44f2-869f-6a4db2c866e4-A
+  931  conda activate pocket-flow-alignerr-cc-human-p
+  932  tmux attach -t 6b33c25a-4dfa-44f2-869f-6a4db2c866e4-B
+  933  cd ..
+  934  rm -rf aic
+  935  git clone https://github.com/Ac31415/aic.git
+  936  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-39608X6RkuZdGJVLz.txt"
+  937  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+  938  brew install distrobox
+  939  chmod +x install-distrobox-mac.sh
+  940  ./install-distrobox-mac.sh
+  941  distrobox
+  942  curl -fsSL https://pixi.sh/install.sh | bash
+  943  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+  944  cd ..
+  945  mkdir -p ~/ws_aic/src
+  946  mv aic/ ~/ws_aic/src
+  947  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-78731c0ut4xNykzvz.txt"
+  948   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_CZn.sh"
+  949  pixi shell list
+  950  pixi shell --help
+  951  exit
+  952   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_hlP.sh"
+  953  exit
+  954   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_hBe.sh"
+  955  sudo apt purge ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  956  pixi remove ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  957  pixi --help
+  958  pixi --list
+  959  pixi --remove ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  960  exit
+  961  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  962  xhost + $IP
+  963  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  964  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/zsh
+  965  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/sh
+  966  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  967   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Yk0.sh"
+  968  source install/setup.bash
+  969  ros2 launch aic_bringup aic_gz_bringup.launch.py \\n  ground_truth:=false start_aic_engine:=true
+  970  pixi run colcon build
+  971  exit
+  972   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_7Hv.sh"
+  973  export LDFLAGS="-L$CONDA_PREFIX/lib"
+  974  export CXXFLAGS="-I$CONDA_PREFIX/include"
+  975  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  976  pixi add "setuptools>=61.0.0" pip
+  977  pixi add "setuptools>=61.0.0"
+  978  exit
+  979   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_v6O.sh"
+  980  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  981  exit
+  982   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_9hx.sh"
+  983  pip
+  984  pip install setuptools
+  985  pip upgrade setuptools
+  986  pip install --upgrade setuptools
+  987  pip install --upgrade lerobot
+  988  pip install --upgrade setuptools
+  989  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  990  exit
+  991   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_l4d.sh"
+  992  export LDFLAGS="-L$CONDA_PREFIX/lib"
+  993  export CXXFLAGS="-I$CONDA_PREFIX/include"
+  994  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  995  exit
+  996   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_2N5.sh"
+  997  ls -al
+  998  ls ~
+  999  rosdep
+ 1000  exit
+ 1001  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+ 1002  cd src/aic
+ 1003  pixi install
+ 1004  export DBX_CONTAINER_MANAGER=docker
+ 1005  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1006  docker pull --platform linux/amd64 ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1007  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+ 1008  distrobox enter -r aic_eval
+ 1009  podman machine ssh
+ 1010  distrobox enter -r aic_eval
+ 1011  distrobox enter -r aic_eval
+ 1012  podman machine stop
+ 1013  podman machine set --rootful
+ 1014  podman machine start
+ 1015  distrobox enter -r aic_eval
+ 1016  export DBX_CONTAINER_MANAGER='unix:///var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/podman/podman-machine-default-api.sock'
+ 1017  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1018  distrobox enter -r aic_eval
+ 1019  export DBX_CONTAINER_MANAGER=docker
+ 1020  distrobox enter -r aic_eval
+ 1021  echo DOCKER_HOST
+ 1022  echo $DOCKER_HOST
+ 1023  sudo mount --make-rshared /
+ 1024  distrobox enter -r aic_eval
+ 1025  podman machine stop
+ 1026  podman machine rm
+ 1027  ./install-distrobox-mac.sh
+ 1028  export DBX_CONTAINER_MANAGER=docker
+ 1029  distrobox enter -r aic_eval\n
+ 1030  distrobox enter -r aic_eval
+ 1031  podman machine stop
+ 1032  podman machine rm -f
+ 1033  ./install-distrobox-mac.sh
+ 1034  distrobox enter -r aic_eval
+ 1035  export DBX_CONTAINER_MANAGER=docker
+ 1036  distrobox enter -r aic_eval
+ 1037  podman machine stop
+ 1038  podman machine rm -f
+ 1039  ./install-distrobox-mac.sh
+ 1040  distrobox enter -r aic_eval
+ 1041  echo $DBX_CONTAINER_MANAGER
+ 1042  distrobox enter -r aic_eval
+ 1043  export DBX_CONTAINER_MANAGER=docker
+ 1044  distrobox enter -r aic_eval
+ 1045  distrobox enter -r aic_eval
+ 1046  export DBX_CONTAINER_MANAGER=docker
+ 1047  distrobox enter -r aic_eval
+ 1048  distrobox enter -r aic_eval
+ 1049  export DBX_CONTAINER_MANAGER=docker
+ 1050  distrobox enter -r aic_eval
+ 1051  podman machine stop
+ 1052  podman machine rm -f
+ 1053  ./install-distrobox-mac.sh
+ 1054  export DBX_CONTAINER_MANAGER=docker
+ 1055  distrobox enter -r aic_eval
+ 1056  brew install distrobox
+ 1057  docker run -it --rm \\n  --platform linux/amd64 \\n  -v ~/ws_aic:/ws_aic \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=host.docker.internal:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+ 1058  docker images | grep aic_eval
+ 1059  docker run --rm -it --platform linux/amd64 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  ls -la /ws_aic/
+ 1060  docker run --rm -it --platform linux/amd64 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  ls -la /ws_aic/install/
+ 1061  pixi shell -e kilted
+ 1062  pixi shell -e jazzy
+ 1063  pixi shell -e humble
+ 1064  pixi shell
+ 1065  pixi list
+ 1066  pixi list --environment default
+ 1067  pixi list --environment
+ 1068  conda deactivate
+ 1069  conda activate intrinsic-challenge
+ 1070  cd ..
+ 1071  pixi init robostack
+ 1072  cd ~
+ 1073  mv '/Users/wen-chungcheng/ws_aic/src/robostack' .
+ 1074  cd '/Users/wen-chungcheng/robostack'
+ 1075  pixi install
+ 1076  pixi shell -e humble
+ 1077  pixi shell -e kilted
+ 1078  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+ 1079  ./install-distrobox-mac.sh
+ 1080  export DBX_CONTAINER_MANAGER=docker
+ 1081  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1082  docker pull --platform linux/amd64 ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1083  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+ 1084  distrobox enter -r aic_eval
+ 1085  distrobox enter -r aic_eval
+ 1086  distrobox enter -r aic_eval
+ 1087  distrobox enter -r aic_eval
+ 1088  distrobox enter -r aic_eval
+ 1089  podman machine ssh
+ 1090  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+ 1091  distrobox enter -r aic_eval
+ 1092  distrobox enter -r aic_eval
+ 1093  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+ 1094  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+ 1095  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+ 1096  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=false
+ 1097  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+ 1098  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+ 1099  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  bash -c "source /ws_aic/install/setup.bash && ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true"
+ 1100  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+ 1101  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash -c "source /ws_aic/install/setup.bash && ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true"
+ 1102  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+ 1103  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+ 1104  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+ 1105  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1106  ps aux | grep XQuartz
+ 1107  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+ 1108  xhost + $IP
+ 1109  echo $DISPLAY
+ 1110  docker run -it --rm \\n  --platform linux/amd64 \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash -c "apt-get update && apt-get install -y x11-apps && xeyes"
+ 1111  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+ 1112  sudo docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+ 1113  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1114  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+ 1115  podman machine stop
+ 1116  podman machine rm -f
+ 1117  pixi run colcon build
+ 1118  pixi install
+ 1119  pixi shell
+ 1120  pixi add colcon-common-extensions
+ 1121  pixi run colcon build
+ 1122  pixi add ros-humble-ros-base
+ 1123  pixi shell
+ 1124  pixi add "setuptools>=61.0.0" pip
+ 1125  rm -rf build install log
+ 1126  pixi shell
+ 1127  pixi add "setuptools>=61.0.0" pip
+ 1128  pixi shell
+ 1129  rm -rf build install log
+ 1130  pixi shell
+ 1131  distrobox
+ 1132  pixi install
+ 1133  pixi shell
+ 1134  cd ~
+ 1135  pixi init robostack
+ 1136  cd robostack
+ 1137  pixi install
+ 1138  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+ 1139  pixi install
+ 1140  pixi install
+ 1141  pixi install
+ 1142  pixi install
+ 1143  pixi install
+ 1144  pixi install
+ 1145  pixi install
+ 1146  pixi install
+ 1147  pixi install
+ 1148  pixi install
+ 1149  pip install rclpy
+ 1150  pip install rclpy
+ 1151  pixi install
+ 1152  pixi install
+ 1153  pixi install
+ 1154  pixi install
+ 1155  pixi install
+ 1156  pixi install
+ 1157  pixi install
+ 1158  pixi install
+ 1159  pixi install
+ 1160  pixi install
+ 1161  pixi install
+ 1162  pixi install
+ 1163  pixi install
+ 1164  pixi install
+ 1165  pixi install
+ 1166  pixi install
+ 1167  pixi install
+ 1168  pixi install
+ 1169  pixi install
+ 1170  pixi install
+ 1171  conda deactivate
+ 1172  conda create -n intrinsic-challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+ 1173  conda create -n intrinsic-challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+ 1174  conda config --env --remove channels defaults
+ 1175  conda create -n intrinsic_challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+ 1176  conda update conda
+ 1177  conda update --all
+ 1178  conda update anaconda-navigator
+ 1179  conda config --append channels conda-forge
+ 1180  conda config --append channels defaults
+ 1181  conda update --all --override-channels -c conda-forge -n base
+ 1182  conda update conda-libmamba-solver
+ 1183  anaconda-navigator
+ 1184  conda update anaconda-navigator
+ 1185  conda config --set solver classic
+ 1186  conda update -n base conda
+ 1187  conda update -n base conda
+ 1188  conda update
+ 1189  conda update anaconda-navigator
+ 1190  anaconda-navigator
+ 1191  conda create -n intrinsic_challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+ 1192  conda update conda -c conda-canary
+ 1193  conda config --set channel_priority false
+ 1194  conda create --name intrinsic_challenge
+ 1195  conda activate intrinsic_challenge
+ 1196  conda install robostack-kilted ros-kilted-desktop
+ 1197  conda config --env --add channels robostack-kilted
+ 1198  conda install robostack-kilted ros-kilted-desktop
+ 1199  conda install -c conda-forge ros-dev-tools
+ 1200  micromamba self-update
+ 1201  micromamba create -n intrinsic_challenge_micromamba -c conda-forge -c robostack-kilted ros-kilted-desktop
+ 1202  micromamba activate intrinsic_challenge_micromamba
+ 1203  micromamba config append channels robostack-kilted --env
+ 1204  micromamba activate intrinsic_challenge_micromamba
+ 1205  micromamba install -c conda-forge ros-dev-tools
+ 1206  micromamba activate intrinsic_challenge_micromamba
+ 1207  micromamba clean --all
+ 1208  micromamba self-update
+ 1209  micromamba activate intrinsic_challenge_micromamba
+ 1210  micromamba install
+ 1211  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-787318bsSl47UqNcw.txt"
+ 1212   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_lIO.sh"
+ 1213  cd ..
+ 1214  vcs import . < aic/aic.repos --recursive
+ 1215  pixi add vcs
+ 1216  pixi add ros-dev-tools
+ 1217  pixi add conda-forge
+ 1218  rosdep
+ 1219  pip
+ 1220  pip install
+ 1221  pixi add pip
+ 1222  pip
+ 1223  pip install vcstool
+ 1224  vcs import . < aic/aic.repos --recursive
+ 1225  echo $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
+ 1226  pixi add $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
+ 1227  apt
+ 1228  pixi add apt
+ 1229  pixi add ros-kilted-gz-*
+ 1230  pixi add ros-kilted-gz-cmake-vendor
+ 1231  pixi add ros-kilted-gz-common-vendor ros-kilted-gz-dartsim-vendor
+ 1232  pixi add ros-kilted-gz-fuel-tools-vendor ros-kilted-gz-gui-vendor ros-kilted-gz-launch-vendor ros-kilted-gz-math-vendor ros-kilted-gz-msgs-vendor ros-kilted-gz-ogre-next-vendor ros-kilted-gz-physics-vendor ros-kilted-gz-plugin-vendor ros-kilted-gz-rendering-vendor ros-kilted-gz-ros2-control ros-kilted-gz-ros2-control-demos ros-kilted-gz-sensors-vendor ros-kilted-gz-sim-vendor ros-kilted-gz-tools-vendor ros-kilted-gz-transport-vendor ros-kilted-gz-utils-vendor
+ 1233  pixi add ros-kilted-gz-fuel-tools-vendor ros-kilted-gz-gui-vendor ros-kilted-gz-math-vendor ros-kilted-gz-msgs-vendor ros-kilted-gz-ogre-next-vendor ros-kilted-gz-physics-vendor ros-kilted-gz-plugin-vendor ros-kilted-gz-rendering-vendor ros-kilted-gz-ros2-control ros-kilted-gz-ros2-control-demos ros-kilted-gz-sensors-vendor ros-kilted-gz-sim-vendor ros-kilted-gz-tools-vendor ros-kilted-gz-transport-vendor ros-kilted-gz-utils-vendor
+ 1234  cd '/Users/wen-chungcheng/ws_aic'
+ 1235  sudo rosdep init
+ 1236  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+ 1237  rosdep update
+ 1238  rosdep init
+ 1239  rosdep update
+ 1240  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+ 1241  pixi add ros-kilted-desktop
+ 1242  sudo rosdep init
+ 1243  rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+ 1244  sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+ 1245  sudo rosdep init
+ 1246  rosdep update
+ 1247  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+ 1248  pixi add ros-kilted-rmw-zenoh-cpp python3-pynput
+ 1249  pip install pynput
+ 1250  pixi add ros-kilted-rmw-zenoh-cpp
+ 1251  colcon
+ 1252  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+ 1253  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+ 1254  pip install cython
+ 1255  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+ 1256  touch y/COLCON_IGNORE
+ 1257  touch y/pkgs/COLCON_IGNORE
+ 1258  touch y/envs/COLCON_IGNORE
+ 1259  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+ 1260  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1261  pixi add ros-kilted-test-msgs
+ 1262  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1263  rm -rf install/ build/
+ 1264  rm -rf install/
+ 1265  rm -rf build/
+ 1266  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1267  pixi add ros-kilted-ament-cmake-vendor-package
+ 1268  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1269  pixi add pinocchio
+ 1270  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1271  pixi add sophus
+ 1272  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1273  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1274  pixi add ros-kilted-ackermann-msgs
+ 1275  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1276  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1277  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1278  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1279  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz-rendering9 --cmake-args -DBUILD_OGRE2=OFF \\n  --packages-ignore lerobot_robot_aic
+ 1280  rm -rf build/gz-rendering9 install/gz-rendering9
+ 1281  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz-rendering9 --cmake-args -DSKIP_ogre2=ON \\n  --packages-ignore lerobot_robot_aic
+ 1282  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1283  rm -rf build/gz-* install/gz-*
+ 1284  rm -rf build install
+ 1285  rm -rf build
+ 1286  rm -rf install
+ 1287  pixi add ros-humble-ros-gz
+ 1288  pixi add ros-kilted-ros-gz
+ 1289  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+ 1290  pixi add ros-kilted-ros-gz-sim ros-kilted-ros-gz-bridge
+ 1291  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic \
+ 1292  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+ 1293  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+ 1294  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+ 1295  pixi add ros-kilted-ros-gz ros-kilted-ros-gz-sim ros-kilted-ros-gz-bridge
+ 1296  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_sensors_vendor \\n    gz_sim_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor \\n    gz_gui_vendor \\n    gz-cmake4 \\n    gz-common6 \\n    gz-fuel_tools10 \\n    gz-math8 \\n    gz-msgs11 \\n    gz-plugin3 \\n    gz-rendering9 \\n    gz-sensors9 \\n    gz-sim9 \\n    gz-tools2 \\n    gz-transport14 \\n    gz-utils3
+ 1297  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+ 1298  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+ 1299  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1300  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+ 1301  source install/setup.zsh
+ 1302  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1303  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1304  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select aic_bringup \\n  --packages-ignore lerobot_robot_aic
+ 1305  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_sensors_vendor \\n    gz_sim_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor \\n    gz_gui_vendor \\n    gz-cmake4 \\n    gz-common6 \\n    gz-fuel_tools10 \\n    gz-math8 \\n    gz-msgs11 \\n    gz-plugin3 \\n    gz-rendering9 \\n    gz-sensors9 \\n    gz-sim9 \\n    gz-tools2 \\n    gz-transport14 \\n    gz-utils3
+ 1306  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+ 1307  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+ 1308  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+ 1309  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+ 1310  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1311  colcon build --packages-select gz_ros2_control \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
+ 1312  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz_ros2_control \\n  --packages-ignore lerobot_robot_aic
+ 1313  ls -la ~/ws_aic/install/lib/libgz_ros2_control-system.dylib
+ 1314  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:$GZ_SIM_SYSTEM_PLUGIN_PATH
+ 1315  export LD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$LD_LIBRARY_PATH
+ 1316  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$DYLD_LIBRARY_PATH
+ 1317  source install/setup.zsh
+ 1318  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1319  ros2 run rmw_zenoh_cpp rmw_zenohd
+ 1320  find ~/ws_aic/src/aic/.pixi/envs/default -name "*ogre2*"
+ 1321  ls -la ~/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins/

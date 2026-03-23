@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../
+libdir=${prefix}/lib
+includedir=${prefix}/include/gz/utils3
+
+Name: Gazebo utils log
+Description: A set of utils log classes for robot applications
+Version: 3.1.1
+Requires: spdlog
+Requires.private: 
+Libs: -L${libdir} -lgz-utils3-log 
+Libs.private: 
+CFLags: -I${includedir} 

@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../
+libdir=${prefix}/lib
+includedir=${prefix}/include/gz/utils3
+
+Name: Gazebo utils
+Description: A set of utils classes for robot applications
+Version: 3.1.1
+Requires: gz-cmake4 >= 1.1 
+Requires.private: 
+Libs: -L${libdir} -lgz-utils3 
+Libs.private: 
+CFlags: -I${includedir} -std=c++17

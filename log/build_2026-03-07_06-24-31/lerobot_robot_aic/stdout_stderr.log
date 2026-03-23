@@ -1,0 +1,38 @@
+running egg_info
+creating ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info
+writing ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/PKG-INFO
+writing dependency_links to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/dependency_links.txt
+writing requirements to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/requires.txt
+writing top-level names to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/top_level.txt
+writing manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+reading manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+writing manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+copying lerobot_robot_aic/aic_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+copying lerobot_robot_aic/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+copying lerobot_robot_aic/types.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+copying lerobot_robot_aic/aic_robot_aic_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+copying lerobot_robot_aic/aic_robot.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+running install
+running install_lib
+creating /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/types.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_robot_aic_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_robot.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_teleop.py to aic_teleop.cpython-312.pyc
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/__init__.py to __init__.cpython-312.pyc
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/types.py to types.cpython-312.pyc
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_robot_aic_controller.py to aic_robot_aic_controller.cpython-312.pyc
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_robot.py to aic_robot.cpython-312.pyc
+running install_data
+creating /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/ament_index/resource_index/packages
+copying resource/lerobot_robot_aic -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/ament_index/resource_index/packages
+copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/lerobot_robot_aic
+running install_egg_info
+Copying ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/install.log'

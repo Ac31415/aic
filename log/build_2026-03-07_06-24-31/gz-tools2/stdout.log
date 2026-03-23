@@ -1,0 +1,51 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-tools2 version 2.0.3
+-- Operating system is Apple MacOS X
+-- 
+
+-- ====== Finding Dependencies ======
+-- Found Backward: /Users/wen-chungcheng/ws_aic/src/gazebo/gz-tools/src/Backward
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (9.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2
+[ 33%] Generating API documentation with Doxygen
+[ 66%] Building CXX object src/CMakeFiles/backward.dir/backward.cc.o
+[ 66%] Built target doc
+[100%] Linking CXX shared library ../lib/libgz-tools2-backward.dylib
+[100%] Built target backward
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz-tools2/gz-tools2.tag.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz.completion
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/bash-completion/completions/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.0.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin/gz

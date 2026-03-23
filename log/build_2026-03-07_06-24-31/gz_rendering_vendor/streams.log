@@ -1,0 +1,39 @@
+[0.060s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_rendering_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_rendering_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_rendering_vendor
+[0.363s] -- The C compiler identification is Clang 19.1.7
+[0.565s] -- The CXX compiler identification is Clang 19.1.7
+[0.595s] -- Detecting C compiler ABI info
+[0.757s] -- Detecting C compiler ABI info - done
+[0.766s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[0.766s] -- Detecting C compile features
+[0.766s] -- Detecting C compile features - done
+[0.771s] -- Detecting CXX compiler ABI info
+[0.994s] -- Detecting CXX compiler ABI info - done
+[1.006s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.006s] -- Detecting CXX compile features
+[1.006s] -- Detecting CXX compile features - done
+[1.062s] -- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+[1.214s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[1.323s] -- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+[1.375s] -- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+[1.393s] -- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+[1.409s] -- Found gz_common_vendor: 0.2.6 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake)
+[1.539s] -- Found gz_plugin_vendor: 0.2.3 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/cmake)
+[1.621s] CMake Error at CMakeLists.txt:39 (find_package):
+[1.622s]   By not providing "Findgz_ogre_next_vendor.cmake" in CMAKE_MODULE_PATH this
+[1.622s]   project has asked CMake to find a package configuration file provided by
+[1.622s]   "gz_ogre_next_vendor", but CMake did not find one.
+[1.622s] 
+[1.622s]   Could not find a package configuration file provided by
+[1.622s]   "gz_ogre_next_vendor" with any of the following names:
+[1.622s] 
+[1.622s]     gz_ogre_next_vendorConfig.cmake
+[1.623s]     gz_ogre_next_vendor-config.cmake
+[1.623s] 
+[1.623s]   Add the installation prefix of "gz_ogre_next_vendor" to CMAKE_PREFIX_PATH
+[1.623s]   or set "gz_ogre_next_vendor_DIR" to a directory containing one of the above
+[1.623s]   files.  If "gz_ogre_next_vendor" provides a separate development package or
+[1.623s]   SDK, be sure it has been installed.
+[1.623s] 
+[1.623s] 
+[1.623s] -- Configuring incomplete, errors occurred!
+[1.627s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_rendering_vendor' returned '1': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_rendering_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_rendering_vendor

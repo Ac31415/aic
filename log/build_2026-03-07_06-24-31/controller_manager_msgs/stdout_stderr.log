@@ -1,0 +1,793 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found builtin_interfaces: 2.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found lifecycle_msgs: 2.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/lifecycle_msgs/cmake)
+-- Found std_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/std_msgs/cmake)
+-- Found rosidl_default_generators: 1.7.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_adapter/cmake)
+-- Found ament_cmake_ros_core: 0.14.7 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_ros_core/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter Development NumPy Development.Module Development.Embed
+-- Configuring done (12.5s)
+-- Generating done (0.7s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/controller_manager_msgs
+[  1%] Generating type hashes for ROS interfaces
+[  1%] Built target ament_cmake_python_copy_controller_manager_msgs
+running egg_info
+creating controller_manager_msgs.egg-info
+writing controller_manager_msgs.egg-info/PKG-INFO
+writing dependency_links to controller_manager_msgs.egg-info/dependency_links.txt
+writing top-level names to controller_manager_msgs.egg-info/top_level.txt
+writing manifest file 'controller_manager_msgs.egg-info/SOURCES.txt'
+reading manifest file 'controller_manager_msgs.egg-info/SOURCES.txt'
+writing manifest file 'controller_manager_msgs.egg-info/SOURCES.txt'
+[  1%] Built target ament_cmake_python_build_controller_manager_msgs_egg
+[  1%] Built target controller_manager_msgs__rosidl_generator_type_description
+[  1%] Generating C code for ROS interfaces
+[  2%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_state__description.c.o
+[  3%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.c.o
+[  3%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_manager_activity__description.c.o
+[  4%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_manager_activity__functions.c.o
+[  4%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.c.o
+[  5%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/configure_controller__description.c.o
+[  5%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/configure_controller__functions.c.o
+[  6%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/configure_controller__type_support.c.o
+[  6%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controllers__description.c.o
+[  7%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controllers__functions.c.o
+[  7%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controllers__type_support.c.o
+[  8%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controller_types__description.c.o
+[  8%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controller_types__functions.c.o
+[  9%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_controller_types__type_support.c.o
+[  9%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_components__description.c.o
+[ 10%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_components__functions.c.o
+[ 11%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_components__type_support.c.o
+[ 11%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_interfaces__description.c.o
+[ 12%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_interfaces__functions.c.o
+[ 12%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.c.o
+[ 13%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/load_controller__description.c.o
+[ 13%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/load_controller__functions.c.o
+[ 14%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/load_controller__type_support.c.o
+[ 14%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/reload_controller_libraries__description.c.o
+[ 15%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/reload_controller_libraries__functions.c.o
+[ 15%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.c.o
+[ 16%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/set_hardware_component_state__description.c.o
+[ 16%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/set_hardware_component_state__functions.c.o
+[ 17%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.c.o
+[ 17%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/switch_controller__description.c.o
+[ 18%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/switch_controller__functions.c.o
+[ 18%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/switch_controller__type_support.c.o
+[ 19%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/unload_controller__description.c.o
+[ 19%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/unload_controller__functions.c.o
+[ 20%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/unload_controller__type_support.c.o
+[ 20%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/cleanup_controller__description.c.o
+[ 21%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/cleanup_controller__functions.c.o
+[ 21%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/srv/detail/cleanup_controller__type_support.c.o
+[ 21%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/named_lifecycle_state__functions.c.o
+[ 22%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/named_lifecycle_state__description.c.o
+[ 22%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_interface__type_support.c.o
+[ 23%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_interface__functions.c.o
+[ 23%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_interface__description.c.o
+[ 24%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_component_state__type_support.c.o
+[ 24%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_component_state__functions.c.o
+[ 25%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/hardware_component_state__description.c.o
+[ 25%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/chain_connection__type_support.c.o
+[ 26%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/chain_connection__functions.c.o
+[ 26%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/chain_connection__description.c.o
+[ 27%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_state__type_support.c.o
+[ 27%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_c.dir/rosidl_generator_c/controller_manager_msgs/msg/detail/controller_state__functions.c.o
+[ 28%] Linking C shared library libcontroller_manager_msgs__rosidl_generator_c.dylib
+[ 28%] Built target controller_manager_msgs__rosidl_generator_c
+[ 28%] Generating C++ code for ROS interfaces
+[ 28%] Built target controller_manager_msgs__cpp
+[ 28%] Generating C type support dispatch for ROS interfaces
+[ 29%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/controller_state__type_support.cpp.o
+[ 30%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/list_hardware_interfaces__type_support.cpp.o
+[ 30%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/load_controller__type_support.cpp.o
+[ 31%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/reload_controller_libraries__type_support.cpp.o
+[ 31%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/set_hardware_component_state__type_support.cpp.o
+[ 32%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/switch_controller__type_support.cpp.o
+[ 32%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/unload_controller__type_support.cpp.o
+[ 33%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/cleanup_controller__type_support.cpp.o
+[ 33%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/list_hardware_components__type_support.cpp.o
+[ 34%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/list_controller_types__type_support.cpp.o
+[ 34%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/list_controllers__type_support.cpp.o
+[ 35%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/srv/configure_controller__type_support.cpp.o
+[ 35%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/controller_manager_activity__type_support.cpp.o
+[ 36%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/named_lifecycle_state__type_support.cpp.o
+[ 36%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/hardware_interface__type_support.cpp.o
+[ 37%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/hardware_component_state__type_support.cpp.o
+[ 37%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/controller_manager_msgs/msg/chain_connection__type_support.cpp.o
+[ 37%] Linking CXX shared library libcontroller_manager_msgs__rosidl_typesupport_c.dylib
+[ 37%] Built target controller_manager_msgs__rosidl_typesupport_c
+[ 38%] Generating C++ type support dispatch for ROS interfaces
+[ 38%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/controller_state__type_support.cpp.o
+[ 38%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/load_controller__type_support.cpp.o
+[ 39%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/reload_controller_libraries__type_support.cpp.o
+[ 39%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/set_hardware_component_state__type_support.cpp.o
+[ 40%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/switch_controller__type_support.cpp.o
+[ 40%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/unload_controller__type_support.cpp.o
+[ 41%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/cleanup_controller__type_support.cpp.o
+[ 42%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/list_hardware_interfaces__type_support.cpp.o
+[ 42%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/list_hardware_components__type_support.cpp.o
+[ 43%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/list_controller_types__type_support.cpp.o
+[ 43%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/list_controllers__type_support.cpp.o
+[ 44%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/srv/configure_controller__type_support.cpp.o
+[ 44%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/controller_manager_activity__type_support.cpp.o
+[ 45%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/named_lifecycle_state__type_support.cpp.o
+[ 45%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/hardware_interface__type_support.cpp.o
+[ 46%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/hardware_component_state__type_support.cpp.o
+[ 47%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/controller_manager_msgs/msg/chain_connection__type_support.cpp.o
+[ 47%] Linking CXX shared library libcontroller_manager_msgs__rosidl_typesupport_cpp.dylib
+[ 47%] Built target controller_manager_msgs__rosidl_typesupport_cpp
+[ 47%] Generating C++ introspection for ROS interfaces
+[ 48%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/controller_state__type_support.cpp.o
+[ 49%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.cpp.o
+[ 49%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.cpp.o
+[ 50%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/switch_controller__type_support.cpp.o
+[ 50%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/unload_controller__type_support.cpp.o
+[ 51%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/cleanup_controller__type_support.cpp.o
+[ 51%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/load_controller__type_support.cpp.o
+[ 52%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.cpp.o
+[ 52%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/list_hardware_components__type_support.cpp.o
+[ 53%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/list_controller_types__type_support.cpp.o
+[ 53%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/list_controllers__type_support.cpp.o
+[ 54%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/srv/detail/configure_controller__type_support.cpp.o
+[ 54%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.cpp.o
+[ 55%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/hardware_interface__type_support.cpp.o
+[ 56%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/hardware_component_state__type_support.cpp.o
+[ 56%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/controller_manager_msgs/msg/detail/chain_connection__type_support.cpp.o
+[ 56%] Linking CXX shared library libcontroller_manager_msgs__rosidl_typesupport_introspection_cpp.dylib
+[ 56%] Built target controller_manager_msgs__rosidl_typesupport_introspection_cpp
+[ 57%] Generating C++ type support for eProsima Fast-RTPS
+[ 57%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/controller_state__type_support.cpp.o
+[ 58%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/set_hardware_component_state__type_support.cpp.o
+[ 58%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/switch_controller__type_support.cpp.o
+[ 59%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/unload_controller__type_support.cpp.o
+[ 59%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/cleanup_controller__type_support.cpp.o
+[ 59%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/reload_controller_libraries__type_support.cpp.o
+[ 60%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/load_controller__type_support.cpp.o
+[ 60%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/list_hardware_interfaces__type_support.cpp.o
+[ 61%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/list_hardware_components__type_support.cpp.o
+[ 61%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/list_controller_types__type_support.cpp.o
+[ 62%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/list_controllers__type_support.cpp.o
+[ 62%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/srv/detail/dds_fastrtps/configure_controller__type_support.cpp.o
+[ 63%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/controller_manager_activity__type_support.cpp.o
+[ 63%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/named_lifecycle_state__type_support.cpp.o
+[ 64%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/hardware_interface__type_support.cpp.o
+[ 64%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/hardware_component_state__type_support.cpp.o
+[ 65%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/controller_manager_msgs/msg/detail/dds_fastrtps/chain_connection__type_support.cpp.o
+[ 66%] Linking CXX shared library libcontroller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dylib
+[ 66%] Built target controller_manager_msgs__rosidl_typesupport_fastrtps_cpp
+[ 66%] Generating C introspection for ROS interfaces
+[ 67%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/controller_state__type_support.c.o
+[ 67%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/switch_controller__type_support.c.o
+[ 68%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/unload_controller__type_support.c.o
+[ 68%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/cleanup_controller__type_support.c.o
+[ 69%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.c.o
+[ 69%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.c.o
+[ 70%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/load_controller__type_support.c.o
+[ 71%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.c.o
+[ 71%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/list_hardware_components__type_support.c.o
+[ 72%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/list_controller_types__type_support.c.o
+[ 72%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/list_controllers__type_support.c.o
+[ 73%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/srv/detail/configure_controller__type_support.c.o
+[ 73%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.c.o
+[ 74%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.c.o
+[ 74%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/hardware_interface__type_support.c.o
+[ 75%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/hardware_component_state__type_support.c.o
+[ 75%] Building C object CMakeFiles/controller_manager_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/controller_manager_msgs/msg/detail/chain_connection__type_support.c.o
+[ 76%] Linking C shared library libcontroller_manager_msgs__rosidl_typesupport_introspection_c.dylib
+[ 76%] Built target controller_manager_msgs__rosidl_typesupport_introspection_c
+[ 77%] Generating C type support for eProsima Fast-RTPS
+[ 77%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/controller_state__type_support_c.cpp.o
+[ 78%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/unload_controller__type_support_c.cpp.o
+[ 79%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/cleanup_controller__type_support_c.cpp.o
+[ 79%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/switch_controller__type_support_c.cpp.o
+[ 80%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support_c.cpp.o
+[ 80%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support_c.cpp.o
+[ 81%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/load_controller__type_support_c.cpp.o
+[ 81%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support_c.cpp.o
+[ 82%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/list_hardware_components__type_support_c.cpp.o
+[ 82%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/list_controller_types__type_support_c.cpp.o
+[ 83%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/list_controllers__type_support_c.cpp.o
+[ 83%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/srv/detail/configure_controller__type_support_c.cpp.o
+[ 84%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/controller_manager_activity__type_support_c.cpp.o
+[ 84%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support_c.cpp.o
+[ 85%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/hardware_interface__type_support_c.cpp.o
+[ 85%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/hardware_component_state__type_support_c.cpp.o
+[ 86%] Building CXX object CMakeFiles/controller_manager_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/controller_manager_msgs/msg/detail/chain_connection__type_support_c.cpp.o
+[ 86%] Linking CXX shared library libcontroller_manager_msgs__rosidl_typesupport_fastrtps_c.dylib
+[ 86%] Built target controller_manager_msgs__rosidl_typesupport_fastrtps_c
+[ 86%] Built target controller_manager_msgs
+[ 87%] Generating Python code for ROS interfaces
+[ 87%] Built target controller_manager_msgs__py
+[ 87%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_controller_state_s.c.o
+[ 87%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_unload_controller_s.c.o
+[ 88%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_cleanup_controller_s.c.o
+[ 89%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_switch_controller_s.c.o
+[ 89%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_set_hardware_component_state_s.c.o
+[ 90%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_reload_controller_libraries_s.c.o
+[ 90%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_load_controller_s.c.o
+[ 91%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_list_hardware_interfaces_s.c.o
+[ 92%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_list_hardware_components_s.c.o
+[ 92%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_list_controller_types_s.c.o
+[ 93%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_list_controllers_s.c.o
+[ 93%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/srv/_configure_controller_s.c.o
+[ 94%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_controller_manager_activity_s.c.o
+[ 94%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_named_lifecycle_state_s.c.o
+[ 95%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_hardware_interface_s.c.o
+[ 95%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_hardware_component_state_s.c.o
+[ 96%] Building C object CMakeFiles/controller_manager_msgs__rosidl_generator_py.dir/rosidl_generator_py/controller_manager_msgs/msg/_chain_connection_s.c.o
+[ 96%] Linking C shared library libcontroller_manager_msgs__rosidl_generator_py.dylib
+[ 96%] Built target controller_manager_msgs__rosidl_generator_py
+[ 97%] Building C object CMakeFiles/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[ 97%] Linking C shared module rosidl_generator_py/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.so
+[ 97%] Built target controller_manager_msgs_s__rosidl_typesupport_fastrtps_c
+[ 98%] Building C object CMakeFiles/controller_manager_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_c.c.o
+[ 98%] Linking C shared module rosidl_generator_py/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_c.so
+[ 98%] Built target controller_manager_msgs_s__rosidl_typesupport_c
+[ 99%] Building C object CMakeFiles/controller_manager_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[100%] Linking C shared module rosidl_generator_py/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_introspection_c.so
+[100%] Built target controller_manager_msgs_s__rosidl_typesupport_introspection_c
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/ament_index/resource_index/rosidl_interfaces/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerState.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ChainConnection.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareComponentState.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareInterface.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/NamedLifecycleState.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerManagerActivity.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ConfigureController.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllers.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllerTypes.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareComponents.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareInterfaces.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/LoadController.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ReloadControllerLibraries.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SetHardwareComponentState.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SwitchController.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/UnloadController.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/CleanupController.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/hardware_interface.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/controller_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/hardware_component_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/chain_connection.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/named_lifecycle_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/controller_manager_activity.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/set_hardware_component_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_hardware_components.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/load_controller.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/cleanup_controller.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/switch_controller.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_hardware_interfaces.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/reload_controller_libraries.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/unload_controller.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_controller_types.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/configure_controller.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_controllers.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_c.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/named_lifecycle_state.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/chain_connection.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/hardware_component_state.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/controller_manager_activity.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/hardware_interface.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/controller_state.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_hardware_interfaces.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/cleanup_controller.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/switch_controller.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_hardware_components.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/configure_controller.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_controllers.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/unload_controller.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/list_controller_types.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/reload_controller_libraries.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/load_controller.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/set_hardware_component_state.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_fastrtps_cpp.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_c.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_c.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_component_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/chain_connection__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/hardware_interface__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_state__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/named_lifecycle_state__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/msg/detail/controller_manager_activity__type_support.cpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controller_types__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_controllers__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/switch_controller__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/set_hardware_component_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/configure_controller__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/reload_controller_libraries__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/load_controller__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/cleanup_controller__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/unload_controller__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_interfaces__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/include/controller_manager_msgs/controller_manager_msgs/srv/detail/list_hardware_components__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_introspection_cpp.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_cpp.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/pythonpath.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/pythonpath.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs-5.11.3-py3.12.egg-info
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs-5.11.3-py3.12.egg-info/PKG-INFO
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs-5.11.3-py3.12.egg-info/SOURCES.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs-5.11.3-py3.12.egg-info/top_level.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs-5.11.3-py3.12.egg-info/dependency_links.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_component_state.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_manager_activity.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_component_state_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_named_lifecycle_state_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_named_lifecycle_state.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_chain_connection_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_interface.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_manager_activity_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_chain_connection.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_interface_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_state.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_state_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/_controller_manager_msgs_s.ep.rosidl_typesupport_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_introspection_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_components_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_components.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_cleanup_controller_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_switch_controller.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_reload_controller_libraries.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_configure_controller_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_interfaces_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_unload_controller_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_configure_controller.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controllers_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_load_controller_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_set_hardware_component_state_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_cleanup_controller.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_set_hardware_component_state.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controller_types_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_interfaces.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_load_controller.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controllers.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_unload_controller.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_reload_controller_libraries_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controller_types.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_switch_controller_s.c
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/__init__.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_chain_connection.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_manager_activity.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_controller_state.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_component_state.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_hardware_interface.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/msg/_named_lifecycle_state.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_cleanup_controller.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_configure_controller.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controller_types.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_controllers.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_components.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_list_hardware_interfaces.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_load_controller.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_reload_controller_libraries.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_set_hardware_component_state.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_switch_controller.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/srv/_unload_controller.py'...
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_fastrtps_c.so'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_introspection_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_introspection_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_introspection_c.so'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/python3.12/site-packages/controller_manager_msgs/controller_manager_msgs_s__rosidl_typesupport_c.so'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerState.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ChainConnection.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareComponentState.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareInterface.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/NamedLifecycleState.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerManagerActivity.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ConfigureController.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllers.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllerTypes.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareComponents.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareInterfaces.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/LoadController.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ReloadControllerLibraries.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SetHardwareComponentState.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SwitchController.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/UnloadController.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/CleanupController.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerState.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ChainConnection.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareComponentState.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/HardwareInterface.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/NamedLifecycleState.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/msg/ControllerManagerActivity.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ConfigureController.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllers.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListControllerTypes.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareComponents.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ListHardwareInterfaces.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/LoadController.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/ReloadControllerLibraries.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SetHardwareComponentState.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/SwitchController.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/UnloadController.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/srv/CleanupController.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/ament_index/resource_index/package_run_dependencies/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/ament_index/resource_index/parent_prefix_path/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/ament_index/resource_index/packages/controller_manager_msgs
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_generator_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/export_controller_manager_msgs__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/rosidl_cmake-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgsConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/cmake/controller_manager_msgsConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/controller_manager_msgs/share/controller_manager_msgs/package.xml

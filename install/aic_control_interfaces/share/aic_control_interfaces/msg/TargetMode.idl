@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_control_interfaces/msg/TargetMode.msg
+// generated code does not contain a copyright notice
+
+
+module aic_control_interfaces {
+  module msg {
+    module TargetMode_Constants {
+      const uint8 MODE_UNSPECIFIED = 0;
+      const uint8 MODE_CARTESIAN = 1;
+      const uint8 MODE_JOINT = 2;
+    };
+    @verbatim (language="comment", text=
+      "There are two types of target modes." "\n"
+      "  1. target_mode = MODE_CARTESIAN" "\n"
+      "     The controller will process Cartesian targets of type 'MotionUpdate' and " "\n"
+      "     ignore other target types" "\n"
+      "  2. target_mode = MODE_JOINT" "\n"
+      "     The controller will process joint targets of type 'JointMotionUpdate' and " "\n"
+      "     ignore other target types.")
+    struct TargetMode {
+      uint8 mode;
+    };
+  };
+};

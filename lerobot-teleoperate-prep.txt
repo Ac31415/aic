@@ -1,0 +1,17 @@
+cd src/aic
+
+pixi shell
+
+source ~/ws_aic/install/setup.zsh
+
+export DYLD_LIBRARY_PATH="$(python - <<'PY'
+import os
+bad = '/.pixi/envs/default/lib'
+paths = [p for p in (os.environ.get('DYLD_LIBRARY_PATH') or '').split(':') if p and bad not in p]
+print(':'.join(paths))
+PY
+)"
+
+python -c "import pyarrow; print('pyarrow OK')"
+
+run your lerobot-teleoperate command

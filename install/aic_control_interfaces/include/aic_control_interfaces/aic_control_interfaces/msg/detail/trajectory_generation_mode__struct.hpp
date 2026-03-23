@@ -1,0 +1,156 @@
+// generated from rosidl_generator_cpp/resource/idl__struct.hpp.em
+// with input from aic_control_interfaces:msg/TrajectoryGenerationMode.idl
+// generated code does not contain a copyright notice
+
+// IWYU pragma: private, include "aic_control_interfaces/msg/trajectory_generation_mode.hpp"
+
+
+#ifndef AIC_CONTROL_INTERFACES__MSG__DETAIL__TRAJECTORY_GENERATION_MODE__STRUCT_HPP_
+#define AIC_CONTROL_INTERFACES__MSG__DETAIL__TRAJECTORY_GENERATION_MODE__STRUCT_HPP_
+
+#include <algorithm>
+#include <array>
+#include <cstdint>
+#include <memory>
+#include <string>
+#include <vector>
+
+#include "rosidl_runtime_cpp/bounded_vector.hpp"
+#include "rosidl_runtime_cpp/message_initialization.hpp"
+
+
+#ifndef _WIN32
+# define DEPRECATED__aic_control_interfaces__msg__TrajectoryGenerationMode __attribute__((deprecated))
+#else
+# define DEPRECATED__aic_control_interfaces__msg__TrajectoryGenerationMode __declspec(deprecated)
+#endif
+
+namespace aic_control_interfaces
+{
+
+namespace msg
+{
+
+// message struct
+template<class ContainerAllocator>
+struct TrajectoryGenerationMode_
+{
+  using Type = TrajectoryGenerationMode_<ContainerAllocator>;
+
+  explicit TrajectoryGenerationMode_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->mode = 0;
+    }
+  }
+
+  explicit TrajectoryGenerationMode_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  {
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->mode = 0;
+    }
+  }
+
+  // field types and members
+  using _mode_type =
+    uint8_t;
+  _mode_type mode;
+
+  // setters for named parameter idiom
+  Type & set__mode(
+    const uint8_t & _arg)
+  {
+    this->mode = _arg;
+    return *this;
+  }
+
+  // constant declarations
+  static constexpr uint8_t MODE_UNSPECIFIED =
+    0u;
+  static constexpr uint8_t MODE_VELOCITY =
+    1u;
+  static constexpr uint8_t MODE_POSITION =
+    2u;
+
+  // pointer types
+  using RawPtr =
+    aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> *;
+  using ConstRawPtr =
+    const aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> *;
+  using SharedPtr =
+    std::shared_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>>;
+  using ConstSharedPtr =
+    std::shared_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> const>;
+
+  template<typename Deleter = std::default_delete<
+      aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>>>
+  using UniquePtrWithDeleter =
+    std::unique_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>, Deleter>;
+
+  using UniquePtr = UniquePtrWithDeleter<>;
+
+  template<typename Deleter = std::default_delete<
+      aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>>>
+  using ConstUniquePtrWithDeleter =
+    std::unique_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> const, Deleter>;
+  using ConstUniquePtr = ConstUniquePtrWithDeleter<>;
+
+  using WeakPtr =
+    std::weak_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>>;
+  using ConstWeakPtr =
+    std::weak_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> const>;
+
+  // pointer types similar to ROS 1, use SharedPtr / ConstSharedPtr instead
+  // NOTE: Can't use 'using' here because GNU C++ can't parse attributes properly
+  typedef DEPRECATED__aic_control_interfaces__msg__TrajectoryGenerationMode
+    std::shared_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator>>
+    Ptr;
+  typedef DEPRECATED__aic_control_interfaces__msg__TrajectoryGenerationMode
+    std::shared_ptr<aic_control_interfaces::msg::TrajectoryGenerationMode_<ContainerAllocator> const>
+    ConstPtr;
+
+  // comparison operators
+  bool operator==(const TrajectoryGenerationMode_ & other) const
+  {
+    if (this->mode != other.mode) {
+      return false;
+    }
+    return true;
+  }
+  bool operator!=(const TrajectoryGenerationMode_ & other) const
+  {
+    return !this->operator==(other);
+  }
+};  // struct TrajectoryGenerationMode_
+
+// alias to use template instance with default allocator
+using TrajectoryGenerationMode =
+  aic_control_interfaces::msg::TrajectoryGenerationMode_<std::allocator<void>>;
+
+// constant definitions
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t TrajectoryGenerationMode_<ContainerAllocator>::MODE_UNSPECIFIED;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t TrajectoryGenerationMode_<ContainerAllocator>::MODE_VELOCITY;
+#endif  // __cplusplus < 201703L
+#if __cplusplus < 201703L
+// static constexpr member variable definitions are only needed in C++14 and below, deprecated in C++17
+template<typename ContainerAllocator>
+constexpr uint8_t TrajectoryGenerationMode_<ContainerAllocator>::MODE_POSITION;
+#endif  // __cplusplus < 201703L
+
+}  // namespace msg
+
+}  // namespace aic_control_interfaces
+
+#endif  // AIC_CONTROL_INTERFACES__MSG__DETAIL__TRAJECTORY_GENERATION_MODE__STRUCT_HPP_

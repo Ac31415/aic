@@ -1,0 +1,42 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Configuring done (2.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch/aic_mujoco_bringup.launch.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_robot.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_world.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/scene.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/add_cable_plugin.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/view_scene.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/load_aic_world.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/package_run_dependencies/aic_mujoco
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/parent_prefix_path/aic_mujoco
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/packages/aic_mujoco
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.xml

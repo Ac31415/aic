@@ -1,0 +1,48 @@
+[0.030s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_tools_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor
+[0.631s] -- The C compiler identification is Clang 19.1.7
+[1.052s] -- The CXX compiler identification is Clang 19.1.7
+[1.172s] -- Detecting C compiler ABI info
+[1.587s] -- Detecting C compiler ABI info - done
+[1.595s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.595s] -- Detecting C compile features
+[1.596s] -- Detecting C compile features - done
+[1.604s] -- Detecting CXX compiler ABI info
+[1.973s] -- Detecting CXX compiler ABI info - done
+[1.982s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.983s] -- Detecting CXX compile features
+[1.983s] -- Detecting CXX compile features - done
+[2.112s] -- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+[2.348s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[2.579s] -- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+[2.847s] -- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+[2.945s] -- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+[2.947s] -- Skipping vendor package build for 'gz_tools_vendor', as SATISFIED is TRUE and AMENT_VENDOR_POLICY is set to DEFAULT
+[3.068s] -- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+[3.200s] -- Configuring done (2.9s)
+[3.231s] -- Generating done (0.0s)
+[3.234s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor
+[3.237s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_tools_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor
+[3.238s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor -- -j16 -l16
+[3.535s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor -- -j16 -l16
+[3.536s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor
+[3.959s] -- Install configuration: ""
+[3.960s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/ament_index/resource_index/package_run_dependencies/gz_tools_vendor
+[3.960s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/ament_index/resource_index/parent_prefix_path/gz_tools_vendor
+[3.961s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/environment/ament_prefix_path.sh
+[3.961s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/environment/ament_prefix_path.dsv
+[3.961s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/environment/path.sh
+[3.961s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/environment/path.dsv
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/local_setup.bash
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/local_setup.sh
+[3.963s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/local_setup.zsh
+[3.963s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/local_setup.dsv
+[3.963s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/package.dsv
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/ament_index/resource_index/packages/gz_tools_vendor
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake/gz_tools_vendor-extras.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake/gz_tools_vendorConfig.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake/gz_tools_vendorConfig-version.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/package.xml
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/opt/gz_tools_vendor/extra_cmake/lib/cmake/gz-tools/gz-tools-config.cmake
+[3.966s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/opt/gz_tools_vendor/extra_cmake/lib/cmake/gz-tools/gz-tools-config-version.cmake
+[3.972s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz_tools_vendor

@@ -1,0 +1,52 @@
+[1.578s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/ros/joint_state_publisher/joint_state_publisher_gui': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:${AMENT_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/joint_state_publisher_gui build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/install.log --single-version-externally-managed install_data
+[1.794s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.794s]   warnings.warn(msg)
+[1.839s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.839s] !!
+[1.839s] 
+[1.839s]         ********************************************************************************
+[1.839s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.839s] 
+[1.839s]         License :: OSI Approved :: BSD
+[1.839s] 
+[1.840s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.840s]         ********************************************************************************
+[1.840s] 
+[1.840s] !!
+[1.840s]   self._finalize_license_expression()
+[1.966s] running egg_info
+[1.972s] creating ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info
+[1.976s] writing ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/PKG-INFO
+[1.976s] writing dependency_links to ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/dependency_links.txt
+[1.976s] writing entry points to ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/entry_points.txt
+[1.976s] writing requirements to ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/requires.txt
+[1.976s] writing top-level names to ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/top_level.txt
+[1.976s] writing manifest file '../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/SOURCES.txt'
+[2.015s] reading manifest file '../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/SOURCES.txt'
+[2.015s] adding license file 'LICENSE'
+[2.015s] writing manifest file '../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info/SOURCES.txt'
+[2.015s] running build
+[2.015s] running build_py
+[2.015s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui
+[2.020s] copying joint_state_publisher_gui/flow_layout.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui
+[2.020s] copying joint_state_publisher_gui/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui
+[2.020s] copying joint_state_publisher_gui/joint_state_publisher_gui.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui
+[2.020s] running install
+[2.024s] running install_lib
+[2.051s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui
+[2.051s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui/flow_layout.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui
+[2.051s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui
+[2.052s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build/lib/joint_state_publisher_gui/joint_state_publisher_gui.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui
+[2.052s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui/flow_layout.py to flow_layout.cpython-312.pyc
+[2.055s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui/__init__.py to __init__.cpython-312.pyc
+[2.056s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui/joint_state_publisher_gui.py to joint_state_publisher_gui.cpython-312.pyc
+[2.056s] running install_data
+[2.056s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/share/ament_index/resource_index/packages
+[2.058s] copying resource/joint_state_publisher_gui -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/share/ament_index/resource_index/packages
+[2.058s] copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/share/joint_state_publisher_gui
+[2.058s] running install_egg_info
+[2.091s] Copying ../../../aic/build/joint_state_publisher_gui/joint_state_publisher_gui.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages/joint_state_publisher_gui-2.4.1-py3.12.egg-info
+[2.092s] running install_scripts
+[2.146s] Installing joint_state_publisher_gui script to /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/joint_state_publisher_gui
+[2.146s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/install.log'
+[2.183s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/ros/joint_state_publisher/joint_state_publisher_gui' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:${AMENT_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/joint_state_publisher_gui build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher_gui/install.log --single-version-externally-managed install_data

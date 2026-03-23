@@ -1,0 +1,399 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found builtin_interfaces: 2.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/geometry_msgs/cmake)
+-- Found rosidl_default_generators: 1.7.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_adapter/cmake)
+-- Found trajectory_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/trajectory_msgs/cmake)
+-- Found ament_cmake_ros_core: 0.14.7 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_ros_core/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter Development NumPy Development.Module Development.Embed
+-- Configuring done (13.4s)
+-- Generating done (0.6s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_control_interfaces
+[  1%] Generating type hashes for ROS interfaces
+[  1%] Built target aic_control_interfaces__rosidl_generator_type_description
+[  1%] Built target ament_cmake_python_copy_aic_control_interfaces
+[  2%] Generating C code for ROS interfaces
+[  3%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/controller_state__description.c.o
+[  4%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/trajectory_generation_mode__functions.c.o
+[  5%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.c.o
+[  7%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/srv/detail/change_target_mode__description.c.o
+[  8%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/srv/detail/change_target_mode__functions.c.o
+[  9%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/srv/detail/change_target_mode__type_support.c.o
+[ 10%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/trajectory_generation_mode__description.c.o
+[ 11%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/target_mode__type_support.c.o
+[ 13%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/target_mode__functions.c.o
+[ 14%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/target_mode__description.c.o
+[ 15%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/motion_update__type_support.c.o
+[ 16%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/motion_update__functions.c.o
+[ 17%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/motion_update__description.c.o
+[ 19%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/joint_motion_update__type_support.c.o
+[ 20%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/joint_motion_update__functions.c.o
+[ 21%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/joint_motion_update__description.c.o
+[ 22%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/controller_state__type_support.c.o
+[ 23%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_control_interfaces/msg/detail/controller_state__functions.c.o
+[ 25%] Linking C shared library libaic_control_interfaces__rosidl_generator_c.dylib
+[ 25%] Built target aic_control_interfaces__rosidl_generator_c
+running egg_info
+creating aic_control_interfaces.egg-info
+writing aic_control_interfaces.egg-info/PKG-INFO
+writing dependency_links to aic_control_interfaces.egg-info/dependency_links.txt
+writing top-level names to aic_control_interfaces.egg-info/top_level.txt
+writing manifest file 'aic_control_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'aic_control_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'aic_control_interfaces.egg-info/SOURCES.txt'
+[ 25%] Built target ament_cmake_python_build_aic_control_interfaces_egg
+[ 26%] Generating C type support dispatch for ROS interfaces
+[ 27%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/msg/controller_state__type_support.cpp.o
+[ 28%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/srv/change_target_mode__type_support.cpp.o
+[ 29%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/msg/trajectory_generation_mode__type_support.cpp.o
+[ 30%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/msg/target_mode__type_support.cpp.o
+[ 32%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/msg/motion_update__type_support.cpp.o
+[ 33%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_control_interfaces/msg/joint_motion_update__type_support.cpp.o
+[ 34%] Linking CXX shared library libaic_control_interfaces__rosidl_typesupport_c.dylib
+[ 34%] Built target aic_control_interfaces__rosidl_typesupport_c
+[ 35%] Generating C introspection for ROS interfaces
+[ 36%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/msg/detail/controller_state__type_support.c.o
+[ 38%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/srv/detail/change_target_mode__type_support.c.o
+[ 39%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.c.o
+[ 40%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/msg/detail/target_mode__type_support.c.o
+[ 41%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/msg/detail/motion_update__type_support.c.o
+[ 42%] Building C object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_control_interfaces/msg/detail/joint_motion_update__type_support.c.o
+[ 44%] Linking C shared library libaic_control_interfaces__rosidl_typesupport_introspection_c.dylib
+[ 44%] Built target aic_control_interfaces__rosidl_typesupport_introspection_c
+[ 45%] Generating C type support for eProsima Fast-RTPS
+[ 46%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/msg/detail/controller_state__type_support_c.cpp.o
+[ 47%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/srv/detail/change_target_mode__type_support_c.cpp.o
+[ 48%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support_c.cpp.o
+[ 50%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/msg/detail/target_mode__type_support_c.cpp.o
+[ 51%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/msg/detail/motion_update__type_support_c.cpp.o
+[ 52%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_control_interfaces/msg/detail/joint_motion_update__type_support_c.cpp.o
+[ 53%] Linking CXX shared library libaic_control_interfaces__rosidl_typesupport_fastrtps_c.dylib
+[ 53%] Built target aic_control_interfaces__rosidl_typesupport_fastrtps_c
+[ 54%] Generating C++ code for ROS interfaces
+[ 54%] Built target aic_control_interfaces__cpp
+[ 55%] Generating C++ type support dispatch for ROS interfaces
+[ 57%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/msg/controller_state__type_support.cpp.o
+[ 58%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/srv/change_target_mode__type_support.cpp.o
+[ 59%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/msg/trajectory_generation_mode__type_support.cpp.o
+[ 60%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/msg/target_mode__type_support.cpp.o
+[ 61%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/msg/motion_update__type_support.cpp.o
+[ 63%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_control_interfaces/msg/joint_motion_update__type_support.cpp.o
+[ 64%] Linking CXX shared library libaic_control_interfaces__rosidl_typesupport_cpp.dylib
+[ 64%] Built target aic_control_interfaces__rosidl_typesupport_cpp
+[ 65%] Generating C++ introspection for ROS interfaces
+[ 66%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/msg/detail/controller_state__type_support.cpp.o
+[ 67%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/srv/detail/change_target_mode__type_support.cpp.o
+[ 69%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.cpp.o
+[ 70%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/msg/detail/target_mode__type_support.cpp.o
+[ 71%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/msg/detail/motion_update__type_support.cpp.o
+[ 72%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_control_interfaces/msg/detail/joint_motion_update__type_support.cpp.o
+[ 73%] Linking CXX shared library libaic_control_interfaces__rosidl_typesupport_introspection_cpp.dylib
+[ 73%] Built target aic_control_interfaces__rosidl_typesupport_introspection_cpp
+[ 75%] Generating C++ type support for eProsima Fast-RTPS
+[ 76%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/msg/detail/dds_fastrtps/controller_state__type_support.cpp.o
+[ 77%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/srv/detail/dds_fastrtps/change_target_mode__type_support.cpp.o
+[ 78%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/msg/detail/dds_fastrtps/trajectory_generation_mode__type_support.cpp.o
+[ 79%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/msg/detail/dds_fastrtps/target_mode__type_support.cpp.o
+[ 80%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/msg/detail/dds_fastrtps/motion_update__type_support.cpp.o
+[ 82%] Building CXX object CMakeFiles/aic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_control_interfaces/msg/detail/dds_fastrtps/joint_motion_update__type_support.cpp.o
+[ 83%] Linking CXX shared library libaic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+[ 83%] Built target aic_control_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 83%] Built target aic_control_interfaces
+[ 84%] Generating Python code for ROS interfaces
+[ 84%] Built target aic_control_interfaces__py
+[ 85%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/msg/_controller_state_s.c.o
+[ 86%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/srv/_change_target_mode_s.c.o
+[ 88%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/msg/_trajectory_generation_mode_s.c.o
+[ 89%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/msg/_target_mode_s.c.o
+[ 90%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/msg/_motion_update_s.c.o
+[ 91%] Building C object CMakeFiles/aic_control_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_control_interfaces/msg/_joint_motion_update_s.c.o
+[ 92%] Linking C shared library libaic_control_interfaces__rosidl_generator_py.dylib
+[ 92%] Built target aic_control_interfaces__rosidl_generator_py
+[ 94%] Building C object CMakeFiles/aic_control_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[ 95%] Linking C shared module rosidl_generator_py/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[ 95%] Built target aic_control_interfaces_s__rosidl_typesupport_fastrtps_c
+[ 96%] Building C object CMakeFiles/aic_control_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_c.c.o
+[ 97%] Linking C shared module rosidl_generator_py/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_c.so
+[ 97%] Built target aic_control_interfaces_s__rosidl_typesupport_c
+[ 98%] Building C object CMakeFiles/aic_control_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[100%] Linking C shared module rosidl_generator_py/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_introspection_c.so
+[100%] Built target aic_control_interfaces_s__rosidl_typesupport_introspection_c
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/ament_index/resource_index/rosidl_interfaces/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/ControllerState.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/JointMotionUpdate.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/MotionUpdate.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TargetMode.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TrajectoryGenerationMode.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/srv/ChangeTargetMode.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/trajectory_generation_mode.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/motion_update.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/target_mode.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/controller_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/joint_motion_update.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/change_target_mode.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_generator_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_fastrtps_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/joint_motion_update.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/motion_update.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/trajectory_generation_mode.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/target_mode.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/controller_state.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/change_target_mode.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_introspection_c.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/trajectory_generation_mode__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/controller_state__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/joint_motion_update__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/target_mode__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/msg/detail/motion_update__type_support.cpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/include/aic_control_interfaces/aic_control_interfaces/srv/detail/change_target_mode__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_introspection_cpp.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_typesupport_cpp.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/pythonpath.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/pythonpath.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces-0.0.1-py3.12.egg-info
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_joint_motion_update_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_trajectory_generation_mode.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_target_mode_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_motion_update_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_motion_update.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_target_mode.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_trajectory_generation_mode_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_joint_motion_update.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_controller_state.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_controller_state_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/_aic_control_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv/_change_target_mode.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv/_change_target_mode_s.c
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/__init__.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_controller_state.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_joint_motion_update.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_motion_update.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_target_mode.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/msg/_trajectory_generation_mode.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/srv/_change_target_mode.py'...
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages/aic_control_interfaces/aic_control_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/libaic_control_interfaces__rosidl_generator_py.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/ControllerState.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/JointMotionUpdate.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/MotionUpdate.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TargetMode.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TrajectoryGenerationMode.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/srv/ChangeTargetMode.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/ControllerState.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/JointMotionUpdate.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/MotionUpdate.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TargetMode.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/msg/TrajectoryGenerationMode.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/srv/ChangeTargetMode.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/ament_index/resource_index/package_run_dependencies/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/ament_index/resource_index/parent_prefix_path/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/ament_index/resource_index/packages/aic_control_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/export_aic_control_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfacesConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake/aic_control_interfacesConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/package.xml

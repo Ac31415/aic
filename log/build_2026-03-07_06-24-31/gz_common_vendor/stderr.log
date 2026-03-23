@@ -1,0 +1,96 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import load_entry_point
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/av/src/HWEncoder.cc:419:27: warning: unused function 'GetFormatVAAPI' [-Wunused-function]
+  419 | static enum AVPixelFormat GetFormatVAAPI(
+      |                           ^~~~~~~~~~~~~~
+1 warning generated.
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:243:26: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  243 | static rmtU32 msTimer_Get()
+      |                          ^
+      |                           void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:499:23: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  499 | static void WriteFence()
+      |                       ^
+      |                        void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:1822:30: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+ 1822 | static rmtBool IsLittleEndian()
+      |                              ^
+      |                               void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2191:34: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+ 2191 | static rmtError InitialiseNetwork()
+      |                                  ^
+      |                                   void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2211:28: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+ 2211 | static void ShutdownNetwork()
+      |                            ^
+      |                             void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2308:17: warning: variable 'total' set but not used [-Wunused-but-set-variable]
+ 2308 |             int total = 0;
+      |                 ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2412:31: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+ 2412 | static int TCPSocketWouldBlock()
+      |                               ^
+      |                                void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6908:55: warning: unused parameter 'stamp' [-Wunused-parameter]
+ 6908 | static void MetalTimestamp_Destructor(MetalTimestamp* stamp)
+      |                                                       ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6914:26: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+ 6914 | rmtU64 rmtMetal_usGetTime()
+      |                          ^
+      |                           void
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6936:48: warning: unused parameter 'stamp' [-Wunused-parameter]
+ 6936 | static void MetalTimestamp_End(MetalTimestamp* stamp)
+      |                                                ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6994:13: warning: unused function 'UpdateOpenGLFrame' [-Wunused-function]
+ 6994 | static void UpdateOpenGLFrame(void);
+      |             ^~~~~~~~~~~~~~~~~
+11 warnings generated.
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/Dem.cc:20:
+/opt/homebrew/include/gdal_priv.h:4632:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+ 4632 |     return fVal1 == fVal2 || /* Should cover infinity */
+      |            ~~~~~ ^  ~~~~~
+/opt/homebrew/include/gdal_priv.h:4642:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+ 4642 |     return dfVal1 == dfVal2 || /* Should cover infinity */
+      |            ~~~~~~ ^  ~~~~~~
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/Dem.cc:23:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+In file included from /opt/homebrew/include/spdlog/logger.h:17:
+In file included from /opt/homebrew/include/spdlog/common.h:50:
+In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+/opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1319 |   switch (c) {
+      |   ^
+3 warnings generated.
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/ImageHeightmap.cc:17:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+In file included from /opt/homebrew/include/spdlog/logger.h:17:
+In file included from /opt/homebrew/include/spdlog/common.h:50:
+In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+/opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1319 |   switch (c) {
+      |   ^
+1 warning generated.
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/HeightmapUtil.cc:23:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+In file included from /opt/homebrew/include/spdlog/logger.h:17:
+In file included from /opt/homebrew/include/spdlog/common.h:50:
+In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+/opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1319 |   switch (c) {
+      |   ^
+1 warning generated.
+ld: warning: dylib (/opt/homebrew/Cellar/gdal/3.11.4/lib/libgdal.dylib) was built for newer macOS version (26.0) than being linked (16.0)
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib'

@@ -1,0 +1,107 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-tools2 version 2.0.3
+-- Operating system is Apple MacOS X
+-- 
+
+-- ====== Finding Dependencies ======
+-- Found Backward: /Users/wen-chungcheng/ws_aic/src/gazebo/gz-tools/src/Backward
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (9.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2
+[ 33%] Generating API documentation with Doxygen
+[ 66%] Building CXX object src/CMakeFiles/backward.dir/backward.cc.o
+warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[ 66%] Built target doc
+[100%] Linking CXX shared library ../lib/libgz-tools2-backward.dylib
+[100%] Built target backward
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz-tools2/gz-tools2.tag.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz.completion
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/bash-completion/completions/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.0.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin/gz

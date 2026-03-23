@@ -1,0 +1,14 @@
+/Users/wen-chungcheng/ws_aic/src/ros-controls/realtime_tools/realtime_tools/src/realtime_helpers.cpp:151:24: warning: unused parameter 'thread' [-Wunused-parameter]
+  151 |   NATIVE_THREAD_HANDLE thread, const std::vector<int> & cores)
+      |                        ^
+/Users/wen-chungcheng/ws_aic/src/ros-controls/realtime_tools/realtime_tools/src/realtime_helpers.cpp:151:57: warning: unused parameter 'cores' [-Wunused-parameter]
+  151 |   NATIVE_THREAD_HANDLE thread, const std::vector<int> & cores)
+      |                                                         ^
+2 warnings generated.
+/Users/wen-chungcheng/ws_aic/src/ros-controls/realtime_tools/realtime_tools/src/realtime_helpers.cpp:151:24: warning: unused parameter 'thread' [-Wunused-parameter]
+  151 |   NATIVE_THREAD_HANDLE thread, const std::vector<int> & cores)
+      |                        ^
+/Users/wen-chungcheng/ws_aic/src/ros-controls/realtime_tools/realtime_tools/src/realtime_helpers.cpp:151:57: warning: unused parameter 'cores' [-Wunused-parameter]
+  151 |   NATIVE_THREAD_HANDLE thread, const std::vector<int> & cores)
+      |                                                         ^
+2 warnings generated.

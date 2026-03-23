@@ -1,0 +1,169 @@
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found diagnostic_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/diagnostic_msgs/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found pluginlib: 5.6.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/pluginlib/cmake)
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Found rclcpp: 29.5.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(diagnostic_aggregator PUBLIC
+      ${diagnostic_msgs_TARGETS}
+      ${std_msgs_TARGETS}
+      pluginlib::pluginlib
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:28 (ament_target_dependencies)
+
+
+CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(diagnostic_aggregator_analyzers PUBLIC
+      ${diagnostic_msgs_TARGETS}
+      ${std_msgs_TARGETS}
+      pluginlib::pluginlib
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:53 (ament_target_dependencies)
+
+
+CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(add_analyzer PUBLIC
+      ${rcl_interfaces_TARGETS}
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:74 (ament_target_dependencies)
+
+
+-- Configuring done (13.2s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_aggregator
+[  8%] Building CXX object CMakeFiles/diagnostic_aggregator.dir/src/analyzer_group.cpp.o
+[ 16%] Building CXX object CMakeFiles/diagnostic_aggregator.dir/src/aggregator.cpp.o
+[ 25%] Building CXX object CMakeFiles/diagnostic_aggregator.dir/src/status_item.cpp.o
+[ 33%] Building CXX object CMakeFiles/add_analyzer.dir/src/add_analyzer.cpp.o
+[ 33%] Built target ament_cmake_python_copy_diagnostic_aggregator
+running egg_info
+creating diagnostic_aggregator.egg-info
+writing diagnostic_aggregator.egg-info/PKG-INFO
+writing dependency_links to diagnostic_aggregator.egg-info/dependency_links.txt
+writing top-level names to diagnostic_aggregator.egg-info/top_level.txt
+writing manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'
+reading manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'
+writing manifest file 'diagnostic_aggregator.egg-info/SOURCES.txt'
+[ 33%] Built target ament_cmake_python_build_diagnostic_aggregator_egg
+[ 41%] Linking CXX executable add_analyzer
+[ 41%] Built target add_analyzer
+[ 50%] Linking CXX shared library libdiagnostic_aggregator.dylib
+[ 50%] Built target diagnostic_aggregator
+[ 58%] Building CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/generic_analyzer.cpp.o
+[ 66%] Building CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/ignore_analyzer.cpp.o
+[ 75%] Building CXX object CMakeFiles/diagnostic_aggregator_analyzers.dir/src/discard_analyzer.cpp.o
+[ 83%] Linking CXX shared library libdiagnostic_aggregator_analyzers.dylib
+[ 83%] Built target diagnostic_aggregator_analyzers
+[ 91%] Building CXX object CMakeFiles/aggregator_node.dir/src/aggregator_node.cpp.o
+[100%] Linking CXX executable aggregator_node
+[100%] Built target aggregator_node
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/diagnostic_aggregator/aggregator_node
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/diagnostic_aggregator/aggregator_node
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/diagnostic_aggregator/aggregator_node'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/diagnostic_aggregator/add_analyzer
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/libdiagnostic_aggregator.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/libdiagnostic_aggregator_analyzers.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/libdiagnostic_aggregator_analyzers.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/libdiagnostic_aggregator_analyzers.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/discard_analyzer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/analyzer_group.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/other_analyzer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/analyzer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/generic_analyzer_base.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/generic_analyzer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/status_item.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/visibility_control.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/aggregator.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/include/diagnostic_aggregator/ignore_analyzer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/pythonpath.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/pythonpath.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator-4.2.2-py3.12.egg-info
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator-4.2.2-py3.12.egg-info/PKG-INFO
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator-4.2.2-py3.12.egg-info/SOURCES.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator-4.2.2-py3.12.egg-info/top_level.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator-4.2.2-py3.12.egg-info/dependency_links.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator/__init__.py
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/python3.12/site-packages/diagnostic_aggregator/__init__.py'...
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/example.launch.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/lib/diagnostic_aggregator/example_pub.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/example_analyzers.yaml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/example_add_analyzers.yaml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/plugin_description.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/ament_index/resource_index/package_run_dependencies/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/ament_index/resource_index/parent_prefix_path/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/ament_index/resource_index/packages/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/ament_index/resource_index/diagnostic_aggregator__pluginlib__plugin/diagnostic_aggregator
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorTargetsExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorTargetsExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/cmake/diagnostic_aggregatorConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_aggregator/share/diagnostic_aggregator/package.xml

@@ -1,0 +1,1140 @@
+    1  conda activate pocket-flow-alignerr-cc-human-p
+    2  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 3/turn 2'
+    3  cp -r '/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/claude-hfi/82a12efd-269a-406a-b56f-706e05f0a8c9' .
+    4  tar -cf 82a12efd-269a-406a-b56f-706e05f0a8c9.tar ./82a12efd-269a-406a-b56f-706e05f0a8c9
+    5  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+    6  git apply ~/82a12efd-269a-406a-b56f-706e05f0a8c9_final.diff
+    7  ollama list
+    8  ollama serve
+    9  ollama serve
+   10  ollama serve
+   11  ollama serve
+   12  ollama list
+   13  ollama serve
+   14  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+   15  git apply ~/6c60b580-22e2-49a8-a0e5-1ba8be8130d2_final.diff
+   16  cd '/Users/wen-chungcheng/NLWeb-to-be-git-hashed'
+   17  conda activate pocket-flow-alignerr-cc-human-p
+   18  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 2/A/code/python'
+   19  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+   20  python app-aiohttp.py
+   21  ollama list
+   22  python app-aiohttp.py
+   23  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/B/code/python'
+   24  python app-aiohttp.py
+   25  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+   26  python app-aiohttp.py
+   27  python app-aiohttp.py
+   28  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   29  python app-aiohttp.py
+   30  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/A/code/python'
+   31  python app-aiohttp.py
+   32  python app-aiohttp.py
+   33  python app-aiohttp.py
+   34  python app-aiohttp.py
+   35  python app-aiohttp.py
+   36  python app-aiohttp.py
+   37  python app-aiohttp.py
+   38  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 3/B/code/python'
+   39  python app-aiohttp.py
+   40  python app-aiohttp.py
+   41  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 4/A/code/python'
+   42  python app-aiohttp.py
+   43  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   44  python app-aiohttp.py
+   45  python app-aiohttp.py
+   46  cd '/Users/wen-chungcheng/NLWeb-all-turns/task 4/turn 4/A/code/python'
+   47  python app-aiohttp.py
+   48  python app-aiohttp.py
+   49  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   50  python app-aiohttp.py
+   51  python app-aiohttp.py
+   52  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   53  python app-aiohttp.py
+   54  cd '/Users/wen-chungcheng/NLWeb/code/python'
+   55  python app-aiohttp.py
+   56  python app-aiohttp.py
+   57  conda activate Webots-Sim
+   58  ls -al
+   59  cd ultralytics
+   60  pip install -e .
+   61  cd ..
+   62  pip install -e .
+   63  ls -al ~/Downloads
+   64  mv ~/Downloads/yolo11n.pt ~/Downloads/yolo26n.pt ~/Downloads/yolo26x.pt ./trained\ models
+   65  ls -al ~/Desktop
+   66  cp `~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png` ./pictures
+   67  cp '~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png' ./pictures
+   68  cp "~/Desktop/Screenshot 2026-01-20 at 5.39.19 AM.png" ./pictures
+   69  python object_detect_demo.py
+   70  python object_detect_demo.py
+   71  python object_detect_demo.py
+   72  python object_detect_demo.py
+   73  python object_detect_demo.py
+   74  python object_detect_demo.py
+   75  python object_detect_demo.py
+   76  python object_detect_demo.py
+   77  python object_detect_demo.py
+   78  python object_detect_demo.py
+   79  python object_detect_demo.py
+   80  python object_detect_demo.py
+   81  python object_detect_demo.py
+   82  mv ~/Downloads/yolo26n-seg.pt ~/Downloads/yolo26x-seg.pt '/Users/wen-chungcheng/ultralytics/trained models/obj_seg'
+   83  python object_seg_demo.py
+   84  python object_seg_demo.py
+   85  mv ~/Downloads/yolo26n-cls ~/Downloads/yolo26x-cls.pt '/Users/wen-chungcheng/ultralytics/trained models/cls'
+   86  mv ~/Downloads/yolo26n-cls '/Users/wen-chungcheng/ultralytics/trained models/cls'
+   87  mv ~/Downloads/yolo26n-cls.pt '/Users/wen-chungcheng/ultralytics/trained models/cls'
+   88  python object_cls_demo.py
+   89  python object_cls_demo.py
+   90  python object_detect_demo.py
+   91  python object_detect_demo.py
+   92  python object_detect_demo.py
+   93  ls -al ~/Downloads
+   94  mv ~/Downloads/yolo26x-obb.pt ~/Downloads/yolo26n-obb.pt '/Users/wen-chungcheng/ultralytics/trained models/obb_detect'
+   95  history 1 > ultralytics-usage.txt
+   96  conda activate Webots-Sim
+   97  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal --audio-backend ACT --visual-backend GEMMA
+   98  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+   99  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  100  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  101  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  102  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  103  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections --audio-backend ACT --visual-backend YOLO
+  104  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  105  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  106  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  107  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  108  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  109  ./launch_multimodal_memory_working.sh --collection webots_sounds_multimodal_detections_new --audio-backend ACT --visual-backend YOLO
+  110  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot --audio-backend ACT
+  111  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot_new --audio-backend ACT
+  112  ./launch_multimodal_memory_multirobot.sh --collection webots_sounds_multimodal_detections_new_multirobot_new --audio-backend ACT
+  113  history 1 > new-memory-building-obj-detect.txt
+  114  conda activate Webots-Sim
+  115  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  116  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  117  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  118  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  119  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  120  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  121  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  122  python spatial_sound_controller.py --ground-truth '/Users/wen-chungcheng/remembr/sounds_visual_locations.json' --debug
+  123  conda activate Webots-Sim
+  124  ollama list
+  125  ollama stfu
+  126  ollama help
+  127  ollama run gpt-oss:120b
+  128  cd '/Users/wen-chungcheng/remembr'
+  129  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  130  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --reset
+  131  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  132  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  133  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  134  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal --recent 600 --format detailed
+  135  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections --recent 600 --format detailed
+  136  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections --recent 600 --format detailed
+  137  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  138  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  139  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  140  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  141  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  142  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  143  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --export-json --include-embeddings
+  144  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --export-json
+  145  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  146  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  147  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --reset
+  148  python milvus_memory_inspector_multimodal.py --collection webots_sounds_multimodal_detections_new --recent 600 --format detailed
+  149  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot
+  150  pip install tabulate
+  151  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot
+  152  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --format detailed
+  153  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --reset
+  154  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot --format detailed
+  155  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  156  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --reset
+  157  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  158  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  159  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  160  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  161  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  162  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  163  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  164  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  165  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new
+  166  python milvus_memory_inspector_multimodal_multirobot.py \\n  --collection webots_sounds_multimodal_detections_new_multirobot_new --format detailed
+  167  export PS1="\W \$"; clear;
+  168  [
+  169  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-2565uL5gG6Y73aws.txt"
+  170  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-2578M1Am7XjmXlH1.txt"
+  171  source /Users/wen-chungcheng/anaconda3/bin/activate pocket-flow-alignerr-cc-human-p
+  172  tmux attach -t 9c009fc7-103b-489e-af66-6efab7d42587-A
+  173  conda activate pocket-flow-alignerr-cc-human-p
+  174  tmux attach -t 9c009fc7-103b-489e-af66-6efab7d42587-B
+  175  source /Users/wen-chungcheng/anaconda3/bin/activate pocket-flow-alignerr-cc-human-p
+  176  tmux attach -t 6b33c25a-4dfa-44f2-869f-6a4db2c866e4-A
+  177  conda activate pocket-flow-alignerr-cc-human-p
+  178  tmux attach -t 6b33c25a-4dfa-44f2-869f-6a4db2c866e4-B
+  179  cd ..
+  180  rm -rf aic
+  181  git clone https://github.com/Ac31415/aic.git
+  182  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-39608X6RkuZdGJVLz.txt"
+  183  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+  184  brew install distrobox
+  185  chmod +x install-distrobox-mac.sh
+  186  ./install-distrobox-mac.sh
+  187  distrobox
+  188  curl -fsSL https://pixi.sh/install.sh | bash
+  189  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+  190  cd ..
+  191  mkdir -p ~/ws_aic/src
+  192  mv aic/ ~/ws_aic/src
+  193  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-78731c0ut4xNykzvz.txt"
+  194   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_CZn.sh"
+  195  pixi shell list
+  196  pixi shell --help
+  197  exit
+  198   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_hlP.sh"
+  199  exit
+  200   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_hBe.sh"
+  201  sudo apt purge ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  202  pixi remove ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  203  pixi --help
+  204  pixi --list
+  205  pixi --remove ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  206  exit
+  207  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  208  xhost + $IP
+  209  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  210  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/zsh
+  211  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/sh
+  212  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  213   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Yk0.sh"
+  214  source install/setup.bash
+  215  ros2 launch aic_bringup aic_gz_bringup.launch.py \\n  ground_truth:=false start_aic_engine:=true
+  216  pixi run colcon build
+  217  exit
+  218   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_7Hv.sh"
+  219  export LDFLAGS="-L$CONDA_PREFIX/lib"
+  220  export CXXFLAGS="-I$CONDA_PREFIX/include"
+  221  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  222  pixi add "setuptools>=61.0.0" pip
+  223  pixi add "setuptools>=61.0.0"
+  224  exit
+  225   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_v6O.sh"
+  226  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  227  exit
+  228   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_9hx.sh"
+  229  pip
+  230  pip install setuptools
+  231  pip upgrade setuptools
+  232  pip install --upgrade setuptools
+  233  pip install --upgrade lerobot
+  234  pip install --upgrade setuptools
+  235  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  236  exit
+  237   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_l4d.sh"
+  238  export LDFLAGS="-L$CONDA_PREFIX/lib"
+  239  export CXXFLAGS="-I$CONDA_PREFIX/include"
+  240  colcon build --symlink-install --cmake-args -DCMAKE_FIND_FRAMEWORK=LAST
+  241  exit
+  242   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_2N5.sh"
+  243  ls -al
+  244  ls ~
+  245  rosdep
+  246  exit
+  247  source /Users/wen-chungcheng/anaconda3/bin/activate intrinsic-challeng
+  248  cd src/aic
+  249  pixi install
+  250  export DBX_CONTAINER_MANAGER=docker
+  251  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  252  docker pull --platform linux/amd64 ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  253  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  254  distrobox enter -r aic_eval
+  255  podman machine ssh
+  256  distrobox enter -r aic_eval
+  257  distrobox enter -r aic_eval
+  258  podman machine stop
+  259  podman machine set --rootful
+  260  podman machine start
+  261  distrobox enter -r aic_eval
+  262  export DBX_CONTAINER_MANAGER='unix:///var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/podman/podman-machine-default-api.sock'
+  263  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  264  distrobox enter -r aic_eval
+  265  export DBX_CONTAINER_MANAGER=docker
+  266  distrobox enter -r aic_eval
+  267  echo DOCKER_HOST
+  268  echo $DOCKER_HOST
+  269  sudo mount --make-rshared /
+  270  distrobox enter -r aic_eval
+  271  podman machine stop
+  272  podman machine rm
+  273  ./install-distrobox-mac.sh
+  274  export DBX_CONTAINER_MANAGER=docker
+  275  distrobox enter -r aic_eval\n
+  276  distrobox enter -r aic_eval
+  277  podman machine stop
+  278  podman machine rm -f
+  279  ./install-distrobox-mac.sh
+  280  distrobox enter -r aic_eval
+  281  export DBX_CONTAINER_MANAGER=docker
+  282  distrobox enter -r aic_eval
+  283  podman machine stop
+  284  podman machine rm -f
+  285  ./install-distrobox-mac.sh
+  286  distrobox enter -r aic_eval
+  287  echo $DBX_CONTAINER_MANAGER
+  288  distrobox enter -r aic_eval
+  289  export DBX_CONTAINER_MANAGER=docker
+  290  distrobox enter -r aic_eval
+  291  distrobox enter -r aic_eval
+  292  export DBX_CONTAINER_MANAGER=docker
+  293  distrobox enter -r aic_eval
+  294  distrobox enter -r aic_eval
+  295  export DBX_CONTAINER_MANAGER=docker
+  296  distrobox enter -r aic_eval
+  297  podman machine stop
+  298  podman machine rm -f
+  299  ./install-distrobox-mac.sh
+  300  export DBX_CONTAINER_MANAGER=docker
+  301  distrobox enter -r aic_eval
+  302  brew install distrobox
+  303  docker run -it --rm \\n  --platform linux/amd64 \\n  -v ~/ws_aic:/ws_aic \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=host.docker.internal:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  304  docker images | grep aic_eval
+  305  docker run --rm -it --platform linux/amd64 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  ls -la /ws_aic/
+  306  docker run --rm -it --platform linux/amd64 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  ls -la /ws_aic/install/
+  307  pixi shell -e kilted
+  308  pixi shell -e jazzy
+  309  pixi shell -e humble
+  310  pixi shell
+  311  pixi list
+  312  pixi list --environment default
+  313  pixi list --environment
+  314  conda deactivate
+  315  conda activate intrinsic-challenge
+  316  cd ..
+  317  pixi init robostack
+  318  cd ~
+  319  mv '/Users/wen-chungcheng/ws_aic/src/robostack' .
+  320  cd '/Users/wen-chungcheng/robostack'
+  321  pixi install
+  322  pixi shell -e humble
+  323  pixi shell -e kilted
+  324  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  325  ./install-distrobox-mac.sh
+  326  export DBX_CONTAINER_MANAGER=docker
+  327  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  328  docker pull --platform linux/amd64 ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  329  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  330  distrobox enter -r aic_eval
+  331  distrobox enter -r aic_eval
+  332  distrobox enter -r aic_eval
+  333  distrobox enter -r aic_eval
+  334  distrobox enter -r aic_eval
+  335  podman machine ssh
+  336  distrobox create -r -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  337  distrobox enter -r aic_eval
+  338  distrobox enter -r aic_eval
+  339  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+  340  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+  341  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=true
+  342  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /entrypoint.sh ground_truth:=false start_aic_engine:=true headless:=false
+  343  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  344  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  345  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  bash -c "source /ws_aic/install/setup.bash && ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true"
+  346  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  347  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash -c "source /ws_aic/install/setup.bash && ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true"
+  348  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  349  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  350  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  351  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  352  ps aux | grep XQuartz
+  353  IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+  354  xhost + $IP
+  355  echo $DISPLAY
+  356  docker run -it --rm \\n  --platform linux/amd64 \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash -c "apt-get update && apt-get install -y x11-apps && xeyes"
+  357  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  358  sudo docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  -e QT_X11_NO_MITSHM=1 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest \\n  /bin/bash
+  359  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  360  docker run -it --rm \\n  --platform linux/amd64 \\n  --name aic_eval \\n  -v ~/aic_results:/root/aic_results \\n  -e DISPLAY=$IP:0 \\n  ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  361  podman machine stop
+  362  podman machine rm -f
+  363  pixi run colcon build
+  364  pixi install
+  365  pixi shell
+  366  pixi add colcon-common-extensions
+  367  pixi run colcon build
+  368  pixi add ros-humble-ros-base
+  369  pixi shell
+  370  pixi add "setuptools>=61.0.0" pip
+  371  rm -rf build install log
+  372  pixi shell
+  373  pixi add "setuptools>=61.0.0" pip
+  374  pixi shell
+  375  rm -rf build install log
+  376  pixi shell
+  377  distrobox
+  378  pixi install
+  379  pixi shell
+  380  cd ~
+  381  pixi init robostack
+  382  cd robostack
+  383  pixi install
+  384  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  385  pixi install
+  386  pixi install
+  387  pixi install
+  388  pixi install
+  389  pixi install
+  390  pixi install
+  391  pixi install
+  392  pixi install
+  393  pixi install
+  394  pixi install
+  395  pip install rclpy
+  396  pip install rclpy
+  397  pixi install
+  398  pixi install
+  399  pixi install
+  400  pixi install
+  401  pixi install
+  402  pixi install
+  403  pixi install
+  404  pixi install
+  405  pixi install
+  406  pixi install
+  407  pixi install
+  408  pixi install
+  409  pixi install
+  410  pixi install
+  411  pixi install
+  412  pixi install
+  413  pixi install
+  414  pixi install
+  415  pixi install
+  416  pixi install
+  417  conda deactivate
+  418  conda create -n intrinsic-challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+  419  conda create -n intrinsic-challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+  420  conda config --env --remove channels defaults
+  421  conda create -n intrinsic_challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+  422  conda update conda
+  423  conda update --all
+  424  conda update anaconda-navigator
+  425  conda config --append channels conda-forge
+  426  conda config --append channels defaults
+  427  conda update --all --override-channels -c conda-forge -n base
+  428  conda update conda-libmamba-solver
+  429  anaconda-navigator
+  430  conda update anaconda-navigator
+  431  conda config --set solver classic
+  432  conda update -n base conda
+  433  conda update -n base conda
+  434  conda update
+  435  conda update anaconda-navigator
+  436  anaconda-navigator
+  437  conda create -n intrinsic_challenge -c conda-forge -c robostack-kilted ros-kilted-desktop
+  438  conda update conda -c conda-canary
+  439  conda config --set channel_priority false
+  440  conda create --name intrinsic_challenge
+  441  conda activate intrinsic_challenge
+  442  conda install robostack-kilted ros-kilted-desktop
+  443  conda config --env --add channels robostack-kilted
+  444  conda install robostack-kilted ros-kilted-desktop
+  445  conda install -c conda-forge ros-dev-tools
+  446  micromamba self-update
+  447  micromamba create -n intrinsic_challenge_micromamba -c conda-forge -c robostack-kilted ros-kilted-desktop
+  448  micromamba activate intrinsic_challenge_micromamba
+  449  micromamba config append channels robostack-kilted --env
+  450  micromamba activate intrinsic_challenge_micromamba
+  451  micromamba install -c conda-forge ros-dev-tools
+  452  micromamba activate intrinsic_challenge_micromamba
+  453  micromamba clean --all
+  454  micromamba self-update
+  455  micromamba activate intrinsic_challenge_micromamba
+  456  micromamba install
+  457  printenv > "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/tmp-787318bsSl47UqNcw.txt"
+  458  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  459  pixi shell
+  460   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_mYR.sh"
+  461  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  462  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  463  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  464  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  465  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  466  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  467  pixi shell
+  468   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Uad.sh"
+  469  source '/Users/wen-chungcheng/ws_aic/install/setup.bash'
+  470  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  471  gz sim --version
+  472  gz sim --versions
+  473  gz sim -g
+  474  gz gui
+  475  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  476  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  477  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  478  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  479  pixi shell
+  480   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_97T.sh"
+  481  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  482  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  483  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  484  cat ~/ws_aic/src/aic/aic_bringup/launch/aic_gz_bringup.launch.py
+  485  gz sim -v 4
+  486  gz sim --help
+  487  pixi list | grep gz-sim
+  488  gz sim -v 4 ~/ws_aic/install/share/aic_description/world/aic.sdf
+  489  gz --versions
+  490  pixi add ros-kilted-ros-gz-sim
+  491  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  492  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  493  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  494  gz --versions
+  495  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  496  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  497  pixi shell
+  498   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_6XM.sh"
+  499  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  500  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  501  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  502  gz
+  503  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  504  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  505  pixi shell
+  506   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_EtV.sh"
+  507  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  508  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  509  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  510  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  511  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  512  pixi shell
+  513   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_UMj.sh"
+  514  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  515  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  516  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  517  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:$GZ_SIM_SYSTEM_PLUGIN_PATH
+  518  export LD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$LD_LIBRARY_PATH
+  519  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$DYLD_LIBRARY_PATH
+  520  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  521  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  522  pixi shell
+  523   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_SRe.sh"
+  524  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  525  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  526  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  527  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:$GZ_SIM_SYSTEM_PLUGIN_PATH
+  528  export LD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$LD_LIBRARY_PATH
+  529  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$DYLD_LIBRARY_PATH
+  530  export GZ_SIM_RENDER_ENGINE_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  531  export GZ_RENDERING_PLUGIN_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  532  history 1 > eval_sim.txt
+  533  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  534  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  535  pixi shell
+  536   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_QKd.sh"
+  537  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  538  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  539  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  540  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:$GZ_SIM_SYSTEM_PLUGIN_PATH
+  541  export LD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$LD_LIBRARY_PATH
+  542  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$DYLD_LIBRARY_PATH
+  543  export GZ_SIM_RENDER_ENGINE_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  544  export GZ_RENDERING_PLUGIN_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  545  export GZ_SIM_RENDER_ENGINE_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  546  export IGN_RENDERING_PLUGIN_PATH=$GZ_SIM_RENDER_ENGINE_PATH
+  547  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  548  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  549  pixi shell
+  550   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_jIZ.sh"
+  551  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  552  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  553  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  554  export GZ_RENDERING_PLUGIN_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  555  export GZ_RENDERING_RESOURCE_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/gz/gz-rendering9
+  556  export DYLD_FALLBACK_LIBRARY_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_FALLBACK_LIBRARY_PATH
+  557  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  558  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  559  pixi shell
+  560   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_3EL.sh"
+  561  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  562  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  563  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  564  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:${GZ_SIM_SYSTEM_PLUGIN_PATH:-}
+  565  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:${DYLD_LIBRARY_PATH:-}
+  566  export DYLD_LIBRARY_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  567  ls -l gz-rendering-ogre2
+  568  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  569  ln -sf gz-rendering-9/engine-plugins/libgz-rendering9-ogre2.dylib ./gz-rendering-ogre2
+  570  ls -l gz-rendering-ogre2
+  571  cd '/Users/wen-chungcheng/ws_aic'
+  572  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  573  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  574  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  575  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  576  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  577  pixi shell
+  578   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_lXj.sh"
+  579  export OGRE_PLUGIN_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/OGRE-Next
+  580  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib
+  581  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  582  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  583  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  584  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  585  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  586  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  587  pixi shell
+  588   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Dqr.sh"
+  589  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:${GZ_SIM_SYSTEM_PLUGIN_PATH:-}
+  590  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:${DYLD_LIBRARY_PATH:-}
+  591  export DYLD_LIBRARY_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  592  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  593  ln -sf gz-rendering-9/engine-plugins/libgz-rendering9-ogre2.dylib ./gz-rendering-ogre2
+  594  ls -l gz-rendering-ogre2
+  595  cd ~/ws_aic
+  596  source install/setup.zsh
+  597  export OGRE_PLUGIN_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/OGRE-Next
+  598  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib
+  599  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  600  cd ~/ws_aic
+  601  source install/setup.zsh
+  602  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  603  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  604  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  605   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_kSQ.sh"
+  606  cd '/Users/wen-chungcheng/ws_aic'
+  607  source ~/ws_aic/gz_env.sh
+  608  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  609  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  610  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  611  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  612  chmod +x ~/ws_aic/gz_env.sh
+  613  source ~/ws_aic/gz_env.sh
+  614  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  615  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  616  ros2 launch aic_bringup aic_gz_bringup.launch.py ground_truth:=false start_aic_engine:=true
+  617  rm -rf build install log src/gazebo src/ros src/ros-controls src/UniversalRobots y
+  618  rm -rf build
+  619  exit
+  620   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_lIO.sh"
+  621  cd ..
+  622  vcs import . < aic/aic.repos --recursive
+  623  pixi add vcs
+  624  pixi add ros-dev-tools
+  625  pixi add conda-forge
+  626  rosdep
+  627  pip
+  628  pip install
+  629  pixi add pip
+  630  pip
+  631  pip install vcstool
+  632  vcs import . < aic/aic.repos --recursive
+  633  echo $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
+  634  pixi add $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
+  635  apt
+  636  pixi add apt
+  637  pixi add ros-kilted-gz-*
+  638  pixi add ros-kilted-gz-cmake-vendor
+  639  pixi add ros-kilted-gz-common-vendor ros-kilted-gz-dartsim-vendor
+  640  pixi add ros-kilted-gz-fuel-tools-vendor ros-kilted-gz-gui-vendor ros-kilted-gz-launch-vendor ros-kilted-gz-math-vendor ros-kilted-gz-msgs-vendor ros-kilted-gz-ogre-next-vendor ros-kilted-gz-physics-vendor ros-kilted-gz-plugin-vendor ros-kilted-gz-rendering-vendor ros-kilted-gz-ros2-control ros-kilted-gz-ros2-control-demos ros-kilted-gz-sensors-vendor ros-kilted-gz-sim-vendor ros-kilted-gz-tools-vendor ros-kilted-gz-transport-vendor ros-kilted-gz-utils-vendor
+  641  pixi add ros-kilted-gz-fuel-tools-vendor ros-kilted-gz-gui-vendor ros-kilted-gz-math-vendor ros-kilted-gz-msgs-vendor ros-kilted-gz-ogre-next-vendor ros-kilted-gz-physics-vendor ros-kilted-gz-plugin-vendor ros-kilted-gz-rendering-vendor ros-kilted-gz-ros2-control ros-kilted-gz-ros2-control-demos ros-kilted-gz-sensors-vendor ros-kilted-gz-sim-vendor ros-kilted-gz-tools-vendor ros-kilted-gz-transport-vendor ros-kilted-gz-utils-vendor
+  642  cd '/Users/wen-chungcheng/ws_aic'
+  643  sudo rosdep init
+  644  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+  645  rosdep update
+  646  rosdep init
+  647  rosdep update
+  648  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+  649  pixi add ros-kilted-desktop
+  650  sudo rosdep init
+  651  rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+  652  sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+  653  sudo rosdep init
+  654  rosdep update
+  655  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+  656  pixi add ros-kilted-rmw-zenoh-cpp python3-pynput
+  657  pip install pynput
+  658  pixi add ros-kilted-rmw-zenoh-cpp
+  659  colcon
+  660  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+  661  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+  662  pip install cython
+  663  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+  664  touch y/COLCON_IGNORE
+  665  touch y/pkgs/COLCON_IGNORE
+  666  touch y/envs/COLCON_IGNORE
+  667  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+  668  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  669  pixi add ros-kilted-test-msgs
+  670  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  671  rm -rf install/ build/
+  672  rm -rf install/
+  673  rm -rf build/
+  674  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  675  pixi add ros-kilted-ament-cmake-vendor-package
+  676  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  677  pixi add pinocchio
+  678  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  679  pixi add sophus
+  680  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  681  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  682  pixi add ros-kilted-ackermann-msgs
+  683  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  684  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  685  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  686  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  687  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz-rendering9 --cmake-args -DBUILD_OGRE2=OFF \\n  --packages-ignore lerobot_robot_aic
+  688  rm -rf build/gz-rendering9 install/gz-rendering9
+  689  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz-rendering9 --cmake-args -DSKIP_ogre2=ON \\n  --packages-ignore lerobot_robot_aic
+  690  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  691  rm -rf build/gz-* install/gz-*
+  692  rm -rf build install
+  693  rm -rf build
+  694  rm -rf install
+  695  pixi add ros-humble-ros-gz
+  696  pixi add ros-kilted-ros-gz
+  697  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic
+  698  pixi add ros-kilted-ros-gz-sim ros-kilted-ros-gz-bridge
+  699  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic \
+  700  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+  701  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+  702  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor
+  703  pixi add ros-kilted-ros-gz ros-kilted-ros-gz-sim ros-kilted-ros-gz-bridge
+  704  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_sensors_vendor \\n    gz_sim_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor \\n    gz_gui_vendor \\n    gz-cmake4 \\n    gz-common6 \\n    gz-fuel_tools10 \\n    gz-math8 \\n    gz-msgs11 \\n    gz-plugin3 \\n    gz-rendering9 \\n    gz-sensors9 \\n    gz-sim9 \\n    gz-tools2 \\n    gz-transport14 \\n    gz-utils3
+  705  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  706  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  707  ros2 run rmw_zenoh_cpp rmw_zenohd
+  708  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  709  source install/setup.zsh
+  710  ros2 run rmw_zenoh_cpp rmw_zenohd
+  711  ros2 run rmw_zenoh_cpp rmw_zenohd
+  712  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select aic_bringup \\n  --packages-ignore lerobot_robot_aic
+  713  colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install \\n  --packages-ignore lerobot_robot_aic gz_rendering_vendor \\n    gz_cmake_vendor \\n    gz_common_vendor \\n    gz_fuel_tools_vendor \\n    gz_math_vendor \\n    gz_msgs_vendor \\n    gz_physics_vendor \\n    gz_plugin_vendor \\n    gz_sensors_vendor \\n    gz_sim_vendor \\n    gz_tools_vendor \\n    gz_transport_vendor \\n    gz_utils_vendor \\n    gz_gui_vendor \\n    gz-cmake4 \\n    gz-common6 \\n    gz-fuel_tools10 \\n    gz-math8 \\n    gz-msgs11 \\n    gz-plugin3 \\n    gz-rendering9 \\n    gz-sensors9 \\n    gz-sim9 \\n    gz-tools2 \\n    gz-transport14 \\n    gz-utils3
+  714  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  715  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  716  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  717  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  718  ros2 run rmw_zenoh_cpp rmw_zenohd
+  719  colcon build --packages-select gz_ros2_control \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
+  720  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON \\n  --merge-install --packages-select gz_ros2_control \\n  --packages-ignore lerobot_robot_aic
+  721  ls -la ~/ws_aic/install/lib/libgz_ros2_control-system.dylib
+  722  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:$GZ_SIM_SYSTEM_PLUGIN_PATH
+  723  export LD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$LD_LIBRARY_PATH
+  724  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$DYLD_LIBRARY_PATH
+  725  source install/setup.zsh
+  726  ros2 run rmw_zenoh_cpp rmw_zenohd
+  727  ros2 run rmw_zenoh_cpp rmw_zenohd
+  728  find ~/ws_aic/src/aic/.pixi/envs/default -name "*ogre2*"
+  729  ls -la ~/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins/
+  730  history 1 > src/aic/zenoh_router.txt
+  731  export GZ_SIM_RENDER_ENGINE_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  732  export IGN_RENDERING_PLUGIN_PATH=$GZ_SIM_RENDER_ENGINE_PATH
+  733  ros2 run rmw_zenoh_cpp rmw_zenohd
+  734  find ~/ws_aic/src/aic/.pixi/envs/default -name "*ogre2*"
+  735  ls -la ~/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins/
+  736  export GZ_RENDERING_PLUGIN_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9/engine-plugins
+  737  export GZ_RENDERING_RESOURCE_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/gz/gz-rendering9
+  738  export DYLD_FALLBACK_LIBRARY_PATH=/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_FALLBACK_LIBRARY_PATH
+  739  ros2 run rmw_zenoh_cpp rmw_zenohd
+  740  find ~/ws_aic -name "*gz_ros2_control*" -type f | grep -E "\.(so|dylib)$"
+  741  find ~/ws_aic -name "*gz_ros2_control*" -type f | grep -E "\.(so|dylib)$"
+  742  ls -la ~/ws_aic/install/lib/*gz_ros2_control*
+  743  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:${GZ_SIM_SYSTEM_PLUGIN_PATH:-}
+  744  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:${DYLD_LIBRARY_PATH:-}
+  745  export DYLD_LIBRARY_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  746  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  747  ln -sf gz-rendering-9/engine-plugins/libgz-rendering9-ogre2.dylib ./gz-rendering-ogre2
+  748  ls -l gz-rendering-ogre2
+  749  cd '/Users/wen-chungcheng/ws_aic'
+  750  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  751  ros2 run rmw_zenoh_cpp rmw_zenohd
+  752  find ~/ws_aic/src/aic/.pixi/envs/default -name "RenderSystem_*" -o -name "*Codec*Plugin*"
+  753  ls -la ~/ws_aic/src/aic/.pixi/envs/default/lib/OGRE-Next/
+  754  export OGRE_PLUGIN_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/OGRE-Next
+  755  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib
+  756  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  757  source '/Users/wen-chungcheng/ws_aic/install/setup.zsh'
+  758  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  759  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  760  ros2 run rmw_zenoh_cpp rmw_zenohd
+  761  export GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib:${GZ_SIM_SYSTEM_PLUGIN_PATH:-}
+  762  export DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:${DYLD_LIBRARY_PATH:-}
+  763  export DYLD_LIBRARY_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH
+  764  cd ~/ws_aic/src/aic/.pixi/envs/default/lib\n
+  765  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  766  ln -sf gz-rendering-9/engine-plugins/libgz-rendering9-ogre2.dylib ./gz-rendering-ogre2
+  767  ls -l gz-rendering-ogre2
+  768  cd ~/ws_aic
+  769  source install/setup.zsh
+  770  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  771  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  772  ros2 run rmw_zenoh_cpp rmw_zenohd
+  773  find ~/ws_aic/src/aic/.pixi/envs/default -name "*ogre2*.dylib" -o -name "*OGRE*" -type d
+  774  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  775  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  776  ln -sf gz-rendering-9/engine-plugins/libgz-rendering9-ogre2.dylib ./libgz-rendering-ogre2.dylib
+  777  ls -lh libgz-rendering-ogre2.dylib
+  778  file libgz-rendering-ogre2.dylib
+  779  ls -la ~/ws_aic/src/aic/.pixi/envs/default/lib/ | grep -i ogre
+  780  # Create an environment setup file\ncat > ~/ws_aic/gz_env.sh << 'EOF'\n#!/bin/bash\n\n# Gazebo system plugin path\nexport GZ_SIM_SYSTEM_PLUGIN_PATH=$HOME/ws_aic/install/lib\n\n# Library path for dynamic loading\nexport DYLD_LIBRARY_PATH=$HOME/ws_aic/install/lib:$HOME/ws_aic/src/aic/.pixi/envs/default/lib:$DYLD_LIBRARY_PATH\n\n# OGRE rendering engine paths (if needed)\nexport OGRE_PLUGIN_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/OGRE-Next\n\n# Gazebo rendering resource path\nexport GZ_RENDERING_RESOURCE_PATH=$HOME/ws_aic/src/aic/.pixi/envs/default/lib/gz-rendering-9\n\n# Source ROS 2 setup\nsource $HOME/ws_aic/install/setup.bash\n\necho "✓ Gazebo environment configured"\necho "  GZ_SIM_SYSTEM_PLUGIN_PATH: $GZ_SIM_SYSTEM_PLUGIN_PATH"\necho "  DYLD_LIBRARY_PATH: $DYLD_LIBRARY_PATH"\necho "  GZ_RENDERING_RESOURCE_PATH: $GZ_RENDERING_RESOURCE_PATH"\nEOF\n\nchmod +x ~/ws_aic/gz_env.sh
+  781  cd '/Users/wen-chungcheng/ws_aic'
+  782  chmod +x '/Users/wen-chungcheng/ws_aic/src/aic/gz_env.sh'
+  783  cd ~/ws_aic/src/aic/.pixi/envs/default/lib
+  784  ls -lh gz-rendering-9/engine-plugins/
+  785  ls -lh OGRE-Next/ 2>/dev/null || echo "OGRE-Next directory not found"
+  786  cd ~/ws_aic
+  787  source ~/ws_aic/gz_env.sh
+  788  ros2 run rmw_zenoh_cpp rmw_zenohd
+  789  export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+  790  export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+  791  ros2 run rmw_zenoh_cpp rmw_zenohd
+  792  exit
+  793   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_NLu.sh"
+  794  pixi remove ros-kilted-ros2-control*
+  795  pixi remove ros-kilted-ros2-control
+  796  pixi remove ros-kilted-ros2-control
+  797  pixi remove ros-kilted-ros2-control
+  798  pixi remove ros-kilted-ros2-control-*
+  799  pixi remove ros-kilted-control
+  800  pixi remove ros-kilted-kinematics ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz
+  801  sudo apt purge ros-kilted-ros2-control* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  802  sudo apt purge ros-kilted-ros2-control-* ros-kilted-control* ros-kilted-kinematics* ros-kilted-joint-state-publisher ros-kilted-realtime-tools ros-kilted-gz*
+  803  pixi list
+  804  pixi remove ros-kilted-control-msgs
+  805  pixi self-update
+  806  cd '/Users/wen-chungcheng/ws_aic/src'
+  807  pip install vcstools
+  808  vcs import . < aic/aic.repos --recursive
+  809  echo $(sort -u $(find . -iname 'packages-'`lsb_release -cs`'.apt' -o -iname 'packages.apt' | grep -v '/\.git/') | sed '/gz\|sdf/d' | tr '\n' ' ')
+  810  brew install binutils-dev build-essential cmake curl freeglut3-dev libassimp-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+  811  brew install binutils
+  812  brew install build-essential cmake curl freeglut3-dev libassimp-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+  813  brew install cmake curl freeglut3-dev libassimp-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+  814  brew install cmake curl freeglut libassimp-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+  815  brew install cmake curl freeglut libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+  816  cd '/Users/wen-chungcheng/ws_aic'
+  817  sudo rosdep init
+  818  rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+  819  sudo rm -f /etc/ros/rosdep/sources.list.d/20-default.list
+  820  sudo rosdep init
+  821  rosdep update
+  822  sudo rosdep init
+  823  rosdep update
+  824  rosdep update
+  825  rosdep init
+  826  rosdep update
+  827  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta"
+  828  rosdep install --from-paths src --ignore-src --rosdistro kilted -yr --skip-keys "gz-cmake3 DART libogre-dev libogre-next-2.3-dev rosetta" --verbose
+  829  pixi add ros-kilted-rmw-zenoh-cpp
+  830  pixi add ros-kilted-control-msgs
+  831  pixi add ros-kilted-rmw-zenoh-cpp
+  832  pip install pynput
+  833  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic
+  834  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --packages-ignore lerobot_robot_aic
+  835  colcon build --packages-select ros2_control_cmake --merge-install
+  836  pixi add ros2_control_cmake
+  837  pixi add ros-kilted-ros2-control-cmake
+  838  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --packages-ignore lerobot_robot_aic
+  839  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --packages-ignore lerobot_robot_aic aic_task
+  840  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  841  rm -rf '/Users/wen-chungcheng/ws_aic/build' '/Users/wen-chungcheng/ws_aic/install' '/Users/wen-chungcheng/ws_aic/log'
+  842  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  843  pixi add ros-kilted-backward-ros
+  844  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  845  pixi add ros-kilted-test-msgs
+  846  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  847  pixi add ros-kilted-ament-cmake-vendor-package
+  848  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  849  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  850  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select gz_cmake_vendor gz_common_vendor gz_fuel_tools_vendor gz_gui_vendor gz_math_vendor gz_msgs_vendor gz_physics_vendor gz_plugin_vendor gz_rendering_vendor gz_ros2_control gz_sensors_vendor gz_sim_vendor gz_tools_vendor gz_transport_vendor gz_utils_vendor gz-cmake gz-common gz-fuel-tools gz-gui gz-math gz-msgs gz-physics gz-plugin gz-rendering gz-sensors gz-sim gz-tools gz-transport gz-utils ros_gz sdformat sdformat_vendor --packages-ignore lerobot_robot_aic
+  851  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select gz_cmake_vendor gz_common_vendor gz_fuel_tools_vendor gz_gui_vendor gz_math_vendor gz_msgs_vendor gz_physics_vendor gz_plugin_vendor gz_rendering_vendor gz_ros2_control gz_sensors_vendor gz_sim_vendor gz_tools_vendor gz_transport_vendor gz_utils_vendor gz-cmake gz-common gz-fuel-tools gz-gui gz-math gz-msgs gz-physics gz-plugin gz-rendering gz-sensors gz-sim gz-tools gz-transport gz_utils ros_gz sdformat sdformat_vendor --packages-ignore lerobot_robot_aic
+  852  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select gz_cmake_vendor gz_common_vendor gz_fuel_tools_vendor gz_gui_vendor gz_math_vendor gz_msgs_vendor gz_physics_vendor gz_plugin_vendor gz_rendering_vendor gz_ros2_control gz_sensors_vendor gz_sim_vendor gz_tools_vendor gz_transport_vendor gz_utils_vendor ros_gz sdformat sdformat_vendor --packages-ignore lerobot_robot_aic
+  853  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  854  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  855  pixi add ros-kilted-urdf
+  856  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  857  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-up-to gz_math_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release
+  858  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz-math8 --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  859  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-up-to gz_math_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release
+  860  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+  861  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_cmake_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  862  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_math_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  863  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_utils_vendor gz_plugin_vendor gz_tools_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  864  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz-cmake4 gz-utils3 gz-plugin3 gz-math8 gz-tools2 --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  865  GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_utils_vendor gz_plugin_vendor gz_tools_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+  866  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  867  pixi add ros-kilted-generate-parameter-library ros-kilted-kdl-parser
+  868  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  869  source install/setup.zsh
+  870  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  871  pixi add ros-kilted-filters
+  872  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  873  pixi add ros-kilted-tf2-eigen-kdl
+  874  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  875  pixi add fmt
+  876  source install/setup.zsh
+  877  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  878  rm -rf build/joint_limits install/joint_limits
+  879  source install/setup.zsh
+  880  colcon build --packages-select joint_limits --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CONDA_PREFIX" -DCMAKE_FIND_FRAMEWORK=LAST
+  881  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  882  pixi add ros-kilted-tf2-geometry-msgs
+  883  source install/setup.zsh
+  884  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  885  pixi add ros-kilted-pinocchio
+  886  pixi add pinocchio
+  887  source install/setup.zsh
+  888  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  889  pixi add ros-kilted-pal-statistics
+  890  source install/setup.zsh
+  891  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  892  pixi add ros-kilted-rosbag2-cpp
+  893  source install/setup.zsh
+  894  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  895  rm -rf build/control_toolbox install/control_toolbox
+  896  rm -rf build/joint_limits install/joint_limits
+  897  export LDFLAGS="-L$CONDA_PREFIX/lib -lfmt"
+  898  export CPPFLAGS="-I$CONDA_PREFIX/include"
+  899  source install/setup.zsh
+  900  colcon build --packages-select joint_limits control_toolbox \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DCMAKE_PREFIX_PATH="$CONDA_PREFIX" \\n    -DCMAKE_FIND_FRAMEWORK=LAST \\n    -DCMAKE_EXE_LINKER_FLAGS="-L$CONDA_PREFIX/lib -lfmt" \\n    -DCMAKE_SHARED_LINKER_FLAGS="-L$CONDA_PREFIX/lib -lfmt"
+  901  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  902  pixi add zeromq cppzmq
+  903  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  904  source install/setup.zsh
+  905  GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+  906  pixi run which protoc
+  907  pixi run protoc --version
+  908  otool -L install/gz-msgs11/lib/libgz-msgs11.dylib | grep protobuf
+  909  ls -la $CONDA_PREFIX/lib/libprotobuf*
+  910  rm -rf build/gz-msgs11 install/gz-msgs11
+  911  rm -rf build/gz_msgs_vendor install/gz_msgs_vendor
+  912  rm -rf build/gz-common6 install/gz-common6
+  913  rm -rf build/gz_common_vendor install/gz_common_vendor
+  914  rm -rf build/gz-transport14 install/gz-transport14
+  915  rm -rf build/gz-fuel_tools10 install/gz-fuel_tools10
+  916  rm -rf build/ros_gz_interfaces install/ros_gz_interfaces
+  917  export Protobuf_ROOT=$CONDA_PREFIX
+  918  export CMAKE_PREFIX_PATH=$CONDA_PREFIX:$CMAKE_PREFIX_PATH
+  919  source install/setup.zsh
+  920  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz-msgs11 \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX \\n    -DCMAKE_PREFIX_PATH=$CONDA_PREFIX \\n    -DCMAKE_VERBOSE_MAKEFILE=ON
+  921  otool -L install/gz-msgs11/lib/libgz-msgs11.dylib | grep protobuf
+  922  source install/setup.bash\nGZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz_msgs_vendor gz-common6 gz_common_vendor \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX
+  923  source install/setup.zsh
+  924  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz_msgs_vendor gz-common6 gz_common_vendor \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX
+  925  source install/setup.zsh
+  926  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz-transport14 gz-fuel_tools10 \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX
+  927  grep -n "PROTOBUF_VERSION" install/gz-msgs11/include/gz/msgs11/gz/msgs/details/fuel_metadata.pb.h | head -5
+  928  echo '#include <google/protobuf/port_def.inc>\n#ifndef PROTOBUF_VERSION\n#error "PROTOBUF_VERSION not defined"\n#endif\n#if PROTOBUF_VERSION != 6031001\n#error "Version mismatch"\n#endif' | $CXX -E -x c++ - -I$CONDA_PREFIX/include 2>&1 | grep -i "error\|version"
+  929  ls -la $CONDA_PREFIX/include/google/protobuf/port_def.inc
+  930  rm -rf build/gz-fuel_tools10 install/gz-fuel_tools10
+  931  source install/setup.zsh
+  932  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz-fuel_tools10 \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX \\n    -DProtobuf_INCLUDE_DIR=$CONDA_PREFIX/include \\n    -DCMAKE_PREFIX_PATH=$CONDA_PREFIX \\n    -DCMAKE_CXX_FLAGS="-isystem $CONDA_PREFIX/include" \\n    -DCMAKE_C_FLAGS="-isystem $CONDA_PREFIX/include" \\n    -DCMAKE_VERBOSE_MAKEFILE=ON
+  933  ls -la $CONDA_PREFIX/include/google/protobuf/
+  934  source install/setup.zsh
+  935  GZ_BUILD_FROM_SOURCE=1 colcon build \\n  --packages-select gz-fuel_tools10 \\n  --cmake-args \\n    -DCMAKE_BUILD_TYPE=Release \\n    -DSKIP_SWIG=ON \\n    -DProtobuf_ROOT=$CONDA_PREFIX \\n    -DProtobuf_INCLUDE_DIR=$CONDA_PREFIX/include \\n    -DCMAKE_PREFIX_PATH=$CONDA_PREFIX \\n    -DCMAKE_CXX_FLAGS="-isystem $CONDA_PREFIX/include" \\n    -DCMAKE_C_FLAGS="-isystem $CONDA_PREFIX/include" \\n    -DCMAKE_VERBOSE_MAKEFILE=ON
+  936  exit
+  937  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+  938  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  939  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  940  pixi shell
+  941  mv ~/Downloads/ubuntu-25.10-desktop-arm64.iso '/Volumes/Untitled'
+  942  mv '/Users/wen-chungcheng/webots' '/Volumes/Untitled'
+  943  mv -rv '/Users/wen-chungcheng/label-studio' '/Volumes/Untitled'
+  944  mv -fv '/Users/wen-chungcheng/label-studio' '/Volumes/Untitled'
+  945  mv ~/Downloads/noble-desktop-arm64.iso '/Volumes/Untitled'
+  946  conda
+  947  conda activate intrinsic-challenge
+  948  conda info --envs
+  949  conda activate intrinsic_challenge
+  950  cd '/Users/wen-chungcheng/ws_aic/src/aic'
+  951  pixi install
+  952  ls -al
+  953  ls -al .pixi
+  954  pixi install
+  955  pixi install
+  956  rm -rf .pixi
+  957  pixi install
+  958  pixi install
+  959  pixi shell
+  960  rm -rf '/Users/wen-chungcheng/ws_aic/src/aic/.pixi'
+  961  rm -rf '/Users/wen-chungcheng/ws_aic/src/aic/.pixi'
+  962  pixi install
+  963  pixi install
+  964  pixi install
+  965  pixi shell
+  966   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_kbY.sh"
+  967  vcs
+  968  cd ..
+  969  vcs import < aic/aic_utils/aic_mujoco/mujoco.repos
+  970  colcon
+  971  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  972  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control
+  973  cat ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-stamp/mujoco_vendor-build-*.log 2>/dev/null || \
+  974  cat ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-stamp/mujoco_vendor-build-*.log 2>/dev/null || \\nfind ~/ws_aic/build/mujoco_vendor -name "*.log" | xargs grep -l "lodepng" 2>/dev/null
+  975  find ~/ws_aic/src -path "*/lodepng*CMakeLists*" 2>/dev/null
+  976  find ~/ws_aic/src -name "lodepng" -type d 2>/dev/null
+  977  cd ..
+  978  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  979  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --merge-install --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor --merge-install
+  980  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  981  find ~/ws_aic/build/mujoco_vendor -name "build.make" | xargs grep -l "lodepng" 2>/dev/null
+  982  ls ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/lodepng-build/
+  983  ls ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/lodepng-build/lib/ 2>/dev/null || echo "lib/ dir does NOT exist"
+  984  find ~/ws_aic/src -name "CMakeLists.txt" | xargs grep -l "lodepng" 2>/dev/null
+  985  cat ~/ws_aic/src/mujoco/cmake/LodePNGOptions.cmake 2>/dev/null || \
+  986  cat ~/ws_aic/src/mujoco/cmake/LodePNGOptions.cmake 2>/dev/null || \\nfind ~/ws_aic/src -path "*lodepng*" -name "*.cmake" 2>/dev/null
+  987  cat ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/lodepng-subbuild/CMakeFiles/lodepng-populate.dir/build.make
+  988  grep -r "lodepng" ~/ws_aic/src/mujoco/cmake/ 2>/dev/null
+  989  grep -rn "FetchContent\|lodepng" ~/ws_aic/src/mujoco/CMakeLists.txt 2>/dev/null | head -30
+  990  ls ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/
+  991  ls ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/lodepng-subbuild/
+  992  cat ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/lodepng-subbuild/CMakeLists.txt
+  993  find ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build -name "CMakeLists.txt" | xargs grep -l "lodepng" 2>/dev/null
+  994  find ~/ws_aic/src/mujoco_vendor -name "*.cmake" -o -name "CMakeLists.txt" | xargs grep -l "lodepng" 2>/dev/null
+  995  ls ~/ws_aic/src/mujoco_vendor/
+  996  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  997  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  998  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+  999  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install --packages-ignore lerobot_robot_aic --packages-select mujoco_ros2_control mujoco_vendor
+ 1000  exit
+ 1001  cd src/aic
+ 1002  pixi shell
+ 1003   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_U2l.sh"
+ 1004  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1005  cd ~/ws_aic && colcon build --packages-select aic_description aic_bringup --cmake-args -DBUILD_TESTING=OFF 2>&1 | tail -15
+ 1006  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1007  pixi add ros-kilted-rviz2
+ 1008  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1009  cd src/aic
+ 1010  pixi shell
+ 1011   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Vgu.sh"
+ 1012  colcon build --packages-select aic_mujoco --cmake-args -DBUILD_TESTING=OFF
+ 1013  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1014  grep -rn "lodepng\|ARCHIVE_OUTPUT" ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor/ --include="CMakeLists.txt" 2>/dev/null | head -30
+ 1015  # Also check relevant lines from main mujoco CMakeLists
+ 1016  sed -n '150,170p' ~/ws_aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor/CMakeLists.txt
+ 1017  find ~/ws_aic/src/aic/.pixi/envs/default/bin -name "*ar*" -o -name "*ranlib*" 2>/dev/null | sort
+ 1018  which llvm-ar 2>/dev/null
+ 1019  which ar
+ 1020  ls ~/ws_aic/build/mujoco_vendor 2>/dev/null || echo "build/mujoco_vendor is clean"
+ 1021  python3 -c "\nimport re\nwith open('cmake/MujocoOptions.cmake', 'r') as f:\n    content = f.read()\nprint(repr(content[content.find('if(NOT CMAKE_INTERPROCEDURAL'):content.find('include(MujocoHarden)')]))\n"
+ 1022  find ~/ws_aic/build/mujoco_vendor -delete 2>/dev/null; rm -rf ~/ws_aic/install/mujoco_vendor
+ 1023  echo "Done: $?"
+ 1024  find ~/ws_aic/src/aic/.pixi/envs/default -name "libelasticity*" 2>/dev/null
+ 1025  find ~/ws_aic/install -name "libelasticity*" 2>/dev/null
+ 1026  find ~/ws_aic/src/aic/.pixi/envs/default -name "libelasticity*" 2>/dev/null
+ 1027  find ~/ws_aic/src/aic/.pixi/envs/default -name "libmujoco_plugin*" -o -name "mujoco_plugin" -type d 2>/dev/null | head -10
+ 1028  find ~/ws_aic/src/aic/.pixi/envs/default -name "libelasticity*" 2>/dev/null
+ 1029  find ~/ws_aic/src/aic/.pixi/envs/default -path "*/mujoco*plugin*" 2>/dev/null | head -10
+ 1030  find ~/ws_aic/src/aic/.pixi/envs/default/lib -name "*mujoco*" -name "*.dylib" 2>/dev/null | head -10
+ 1031  find ~/ws_aic/src/aic/.pixi/envs/default -name "libelasticity*" 2>/dev/null; echo "---"
+ 1032  find ~/ws_aic/src/aic/.pixi/envs/default/lib -name "*mujoco*" 2>/dev/null | head -10; echo "---"
+ 1033  find ~/ws_aic/src/aic/.pixi/envs/default -name "mujoco" -type d 2>/dev/null; echo "---"
+ 1034  ls ~/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/ | grep -i mujoco
+ 1035  python3 -c "import mujoco; print(mujoco.__file__)"
+ 1036  find ~/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/mujoco -name "libelasticity*" -o -name "simulate" 2>/dev/null
+ 1037  ls ~/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/mujoco/ | grep -E "plugin|elasticity|simulate"
+ 1038  ls ~/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/mujoco/ | grep simulate
+ 1039  find ~/ws_aic/install/mujoco_vendor -name "libelasticity*" 2>/dev/null
+ 1040  find ~/ws_aic/install/mujoco_vendor -name "*.dylib" 2>/dev/null | head -20
+ 1041  find ~/ws_aic/install/mujoco_vendor -type f | sort
+ 1042  find ~/ws_aic/src -name "diagnostic_updater" -type d 2>/dev/null | grep -v build
+ 1043  ls ~/ws_aic/src/aic/.pixi/envs/default/share/ | grep diagnostic
+ 1044  find ~/ws_aic/src -maxdepth 3 -name "diagnostic_updater" -type d 2>/dev/null | grep -v build; echo "---"
+ 1045  ls ~/ws_aic/src/aic/.pixi/envs/default/share/ | grep -i diag; echo "---"
+ 1046  cat ~/ws_aic/src/aic/.pixi/envs/default/share/ament_index/resource_index/packages/diagnostic_updater 2>/dev/null || echo "not in pixi env"
+ 1047  echo "---"
+ 1048  ls ~/ws_aic/src/ | grep -v aic
+ 1049  cat ~/ws_aic/src/aic/pixi.toml | grep -i "diagnostic\|ros2_controllers\|controller_manager"
+ 1050  find ~/ws_aic/src/ros-controls -maxdepth 2 -name "diagnostic_updater" -type d 2>/dev/null
+ 1051  ls ~/ws_aic/src/ros/
+ 1052  ls ~/ws_aic/src/ros-controls/
+ 1053  find ~/ws_aic/src/aic -name "*.repos" -exec grep -l "diagnostic" {} \; 2>/dev/null
+ 1054  echo "EXIT: $?"
+ 1055  # Find package.xml files for the target packages
+ 1056  PKGS="aic_controller ros_gz_interfaces sdformat_vendor gz_fuel_tools_vendor gz_physics_vendor gz_transport_vendor gz_gui_vendor gz_sensors_vendor ros_gz_bridge gz_sim_vendor aic_gazebo ros_gz_sim aic_description aic_bringup"
+ 1057  for pkg in $PKGS; do\n  xml=$(find ~/ws_aic/src -maxdepth 4 -name "package.xml" -path "*/${pkg}/package.xml" 2>/dev/null | head -1)\n  if [[ -n "$xml" ]]; then\n    echo "=== $pkg: $xml ==="\n    grep -oP '(?<=<depend>)[^<]+|(?<=<build_depend>)[^<]+' "$xml" | sort -u\n  fi\ndone
+ 1058  for xml in \\n  ~/ws_aic/src/aic/aic_controller/package.xml \\n  ~/ws_aic/src/aic/aic_gazebo/package.xml \\n  ~/ws_aic/src/aic/aic_description/package.xml \\n  ~/ws_aic/src/aic/aic_bringup/package.xml \\n  ~/ws_aic/src/gazebo/ros_gz/ros_gz_interfaces/package.xml \\n  ~/ws_aic/src/gazebo/ros_gz/ros_gz_bridge/package.xml \\n  ~/ws_aic/src/gazebo/ros_gz/ros_gz_sim/package.xml; do\n  echo "=== $xml ==="\n  grep -E "<depend>|<build_depend>" "$xml" | sed 's/.*<[^>]*>//;s/<[^>]*>//' | sort -u\ndone
+ 1059  WS_INSTALL="$HOME/ws_aic/install"
+ 1060  for dep in tf2_eigen actuator_msgs gps_msgs simulation_interfaces sophus kdl_parser vision_msgs yaml_cpp_vendor cli11 generate_parameter_library; do\n  in_pixi=$(ls "$PIXI_SHARE" 2>/dev/null | grep -c "^${dep}$")\n  in_install=$(ls "$WS_INSTALL" 2>/dev/null | grep -c "^${dep}$")\n  in_src=$(find ~/ws_aic/src -maxdepth 4 -name "package.xml" -path "*/${dep}/package.xml" 2>/dev/null | wc -l | tr -d ' ')\n  echo "$dep: pixi=$in_pixi install=$in_install src=$in_src"\ndone
+ 1061  INST="$HOME/ws_aic/install"
+ 1062  for dep in tf2_eigen actuator_msgs gps_msgs simulation_interfaces sophus kdl_parser vision_msgs yaml_cpp_vendor cli11 generate_parameter_library; do\n  p=$(ls "$PIXI" 2>/dev/null | grep "^${dep}$" | wc -l | tr -d ' ')\n  i=$(ls "$INST" 2>/dev/null | grep "^${dep}$" | wc -l | tr -d ' ')\n  s=$(find ~/ws_aic/src -maxdepth 5 -name "package.xml" 2>/dev/null | xargs grep -l "<name>${dep}</name>" 2>/dev/null | wc -l | tr -d ' ')\n  echo "${dep}: pixi=${p} install=${i} src=${s}"\ndone
+ 1063  grep -E "<depend>|<build_depend>" ~/ws_aic/src/gazebo/ros_gz/ros_gz_sim/package.xml | sed -E 's|.*<[^>]+>([^<]+)<.*|\1|' | sort -u
+ 1064  ls ~/ws_aic/src/aic/.pixi/envs/default/share/ | grep -i sophus
+ 1065  find ~/ws_aic/src/aic/.pixi/envs/default -name "SophusConfig.cmake" -o -name "sophusConfig.cmake" 2>/dev/null | head -3
+ 1066  find ~/ws_aic/src/aic/.pixi/envs/default -name "sophus*" -path "*/cmake/*" 2>/dev/null | head -5
+ 1067  cd ~/ws_aic/src/aic && pixi search ros-kilted-gps-msgs 2>&1 | grep "Name" | head -3
+ 1068  cd ~/ws_aic/src/aic && pixi search sophus 2>&1 | grep "Name" | head -5
+ 1069  cd ~/ws_aic/src/aic && pixi search cli11 2>&1 | grep "Name" | head -3
+ 1070  find ~/ws_aic/src/aic/.pixi/envs/default -name "SophusConfig.cmake" 2>/dev/null
+ 1071  find ~/ws_aic/src/aic/.pixi/envs/default -name "CLI11Config.cmake" -o -name "cli11Config.cmake" 2>/dev/null | head -3
+ 1072  find ~/ws_aic/src/aic/.pixi/envs/default -name "CLI11Config.cmake" 2>/dev/null | head -3
+ 1073  ls ~/ws_aic/src/aic/aic_bringup/rviz/ 2>/dev/null
+ 1074  find ~/ws_aic/src/aic -name "aic_description" -type d 2>/dev/null
+ 1075  find ~/ws_aic/src/aic -name "aic_description" -type d 2>/dev/null
+ 1076  find ~/ws_aic/src/aic -name "ur_gz.urdf.xacro" 2>/dev/null | head -5
+ 1077  find ~/ws_aic/src/aic -name "ur_gz.urdf.xacro" 2>/dev/null | head -5
+ 1078  cat ~/ws_aic/src/aic/aic_description/package.xml
+ 1079  ls ~/ws_aic/install/ | grep -E "^aic_description$|^aic_bringup$"
+ 1080  ls ~/ws_aic/src/aic/.pixi/envs/default/share/ | grep "ur_description"
+ 1081  cd ~/ws_aic/src/aic && pixi search ros-kilted-xacro 2>&1 | grep "Name"
+ 1082  otool -L ~/ws_aic/install/mujoco_ros2_control/lib/libmujoco_system_plugins.dylib 2>/dev/null | grep -E "python|mujoco|libmujoco"
+ 1083  otool -l ~/ws_aic/install/mujoco_ros2_control/lib/mujoco_ros2_control/mujoco_ros2_control 2>/dev/null | grep "path " | head -10
+ 1084  otool -L ~/ws_aic/install/mujoco_vendor/opt/mujoco_vendor/lib/libmujoco.3.5.0.dylib 2>/dev/null | grep -E "python|Python"
+ 1085  nm ~/ws_aic/install/mujoco_ros2_control/lib/libmujoco_system_plugins.dylib 2>/dev/null | grep "_PyExc_RuntimeError"
+ 1086  find ~/ws_aic/src -maxdepth 4 -name "CMakeLists.txt" 2>/dev/null | xargs grep -l "mujoco_ros2_control\|MujocoSystem" 2>/dev/null | head -5
+ 1087  echo "---"
+ 1088  otool -L ~/ws_aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib 2>/dev/null | grep python
+ 1089  echo "---"
+ 1090  # check if controller_manager itself links the py dylib
+ 1091  otool -L ~/ws_aic/install/controller_manager/lib/libcontroller_manager.dylib 2>/dev/null | grep -i "py\|python" | head -10
+ 1092  echo "==="
+ 1093  otool -L ~/ws_aic/install/controller_manager/lib/libcontroller_manager.dylib 2>/dev/null | grep "generator_py"
+ 1094  echo "==="
+ 1095  # Check rosidl_typesupport_cpp itself - does it dlopen all type supports including Python?
+ 1096  otool -L ~/ws_aic/src/aic/.pixi/envs/default/lib/librosidl_typesupport_cpp.dylib 2>/dev/null | grep -i "py\|python" | head -5
+ 1097  echo "==="
+ 1098  otool -L ~/ws_aic/install/controller_manager/lib/libcontroller_manager.dylib | grep "generator_py"
+ 1099  echo "==="
+ 1100  # The real question - which ament_index entries are causing the py libs to load?
+ 1101  # Check ament resource index for rosidl_generator_py
+ 1102  ls ~/ws_aic/install/ament_index/share/ament_index/resource_index/rosidl_generator_py/ | head -20
+ 1103  otool -l ~/ws_aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib | grep -A5 "LC_VERSION_MIN\|two_level\|flat"
+ 1104  echo "==="
+ 1105  # Check linking flags used when building this dylib
+ 1106  otool -hv ~/ws_aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib | head -10
+ 1107  echo "==="
+ 1108  # See what flags were actually used (MH_TWOLEVEL should be present for two-level, absent for flat)
+ 1109  python3 -c "\nimport subprocess, sys\nr = subprocess.run(['otool','-hv', '$HOME/ws_aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_generator_py.dylib'], capture_output=True, text=True)\nprint(r.stdout)\n"
+ 1110  echo "==="
+ 1111  otool -L ~/ws_aic/install/controller_manager_msgs/lib/libcontroller_manager_msgs__rosidl_typesupport_cpp.dylib | grep "generator_py"
+ 1112  echo "==="
+ 1113  # Check what the combined typesupport_cpp does - does it load generator_py type support via dlopen?
+ 1114  # Look at what's in the ament_index for "rosidl_typesupport_cpp" to see registered impls\nls ~/ws_aic/install/ament_index/share/ament_index/resource_index/rosidl_typesupport_cpp/ 2>/dev/null || echo "not found"\nls ~/ws_aic/src/aic/.pixi/envs/default/share/ament_index/resource_index/rosidl_typesupport_cpp/ 2>/dev/null | head -20
+ 1115  echo "---"
+ 1116  ls ~/ws_aic/src/aic/.pixi/envs/default/share/ament_index/resource_index/ 2>/dev/null | grep "rosidl"
+ 1117  echo "==="
+ 1118  otool -L ~/ws_aic/install/joint_limits/lib/libjoint_limits_helpers.dylib | grep "generator_py\|python"
+ 1119  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.bash\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1120  cd src/aic
+ 1121  pixi shell
+ 1122   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_LiA.sh"
+ 1123  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.bash\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1124  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1125  cd src/aic
+ 1126  pixi shell
+ 1127   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_mL8.sh"
+ 1128  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1129  ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1130  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1131  colcon build --packages-select aic_mujoco
+ 1132  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1133  colcon build --packages-select aic_mujoco
+ 1134  # terminal 2: Launch MuJoCo simulation with ros2_control\nsource ~/ws_aic/install/setup.zsh\nexport RMW_IMPLEMENTATION=rmw_zenoh_cpp\nexport ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'\nros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+ 1135   . "/var/folders/5d/lflhdvkn3sl5sfbzfhmv0v140000gn/T/pixi_env_Cfs.sh"
+ 1136  source ~/ws_aic/install/setup.zsh\nros2 run aic_teleoperation cartesian_keyboard_teleop
+ 1137  colcon build --packages-select aic_teleoperation
+ 1138  source ~/ws_aic/install/setup.zsh\nros2 run aic_teleoperation cartesian_keyboard_teleop
+ 1139  colcon build --packages-select aic_teleoperation
+ 1140  source ~/ws_aic/install/setup.zsh\nros2 run aic_teleoperation cartesian_keyboard_teleop

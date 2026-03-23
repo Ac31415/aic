@@ -1,0 +1,16 @@
+CMake Warning (dev) at /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig.cmake:41 (include)
+  CMakeLists.txt:22 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limiter_interface.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limiter_interface.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_saturation_limiter.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_saturation_limiter.dylib'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limits_helpers.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limits_helpers.dylib'

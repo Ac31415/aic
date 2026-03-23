@@ -1,0 +1,6 @@
+Sat Mar  7 06:53:39 2026
+ERROR: Load model error: Error: Error opening file '/Users/wen-chungcheng/ws_aic/install/aic_mujoco/share/aic_mujoco/mjcf/2526a91bb24bdc844d851a8061563c5c49b4bfe1445f84f9fcebda7b03d12c17_shoulder_eSeries_UR5e_067-mesh-ff08040e3ff3e66b2fcbba78dad276e67a66f2a9.obj'
+
+Sat Mar  7 06:56:26 2026
+ERROR: Load model error: Error: Error opening file '/Users/wen-chungcheng/ws_aic/install/aic_mujoco/share/aic_mujoco/mjcf/shoulder-a83506202923a888b5b5d3c371edb9e13f236336.stl'
+

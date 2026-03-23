@@ -1,0 +1,54 @@
+[0.052s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_description -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_description
+[0.224s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.224s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.224s]   CMake.
+[0.224s] 
+[0.224s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.224s]   to tell CMake that the project requires at least <min> but has been updated
+[0.224s]   to work with policies introduced by <max> or earlier.
+[0.224s] 
+[0.224s] 
+[0.644s] -- The C compiler identification is Clang 19.1.7
+[0.975s] -- The CXX compiler identification is Clang 19.1.7
+[1.140s] -- Detecting C compiler ABI info
+[1.621s] -- Detecting C compiler ABI info - done
+[1.630s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.630s] -- Detecting C compile features
+[1.630s] -- Detecting C compile features - done
+[1.642s] -- Detecting CXX compiler ABI info
+[2.052s] -- Detecting CXX compiler ABI info - done
+[2.056s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.056s] -- Detecting CXX compile features
+[2.056s] -- Detecting CXX compile features - done
+[2.086s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[2.338s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[3.024s] -- Configuring done (2.8s)
+[3.057s] -- Generating done (0.0s)
+[3.092s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_description
+[3.108s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_description -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_description
+[3.110s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_description -- -j16 -l16
+[3.351s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_description -- -j16 -l16
+[3.352s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_description
+[3.565s] -- Install configuration: ""
+[3.565s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/urdf
+[3.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/urdf/ur_gz.urdf.xacro
+[3.567s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/urdf/cable.sdf.xacro
+[3.567s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/urdf/task_board.urdf.xacro
+[3.568s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/world
+[3.568s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/world/aic.sdf
+[3.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/ament_index/resource_index/package_run_dependencies/aic_description
+[3.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/ament_index/resource_index/parent_prefix_path/aic_description
+[3.570s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/environment/ament_prefix_path.sh
+[3.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/environment/ament_prefix_path.dsv
+[3.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/environment/path.sh
+[3.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/environment/path.dsv
+[3.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/local_setup.bash
+[3.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/local_setup.sh
+[3.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/local_setup.zsh
+[3.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/local_setup.dsv
+[3.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/package.dsv
+[3.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/ament_index/resource_index/packages/aic_description
+[3.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/cmake/aic_descriptionConfig.cmake
+[3.574s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/cmake/aic_descriptionConfig-version.cmake
+[3.575s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_description/share/aic_description/package.xml
+[3.578s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_description' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/ur_description:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher_gui/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_description

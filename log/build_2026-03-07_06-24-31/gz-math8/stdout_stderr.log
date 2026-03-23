@@ -1,0 +1,157 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-math8 version 8.2.0
+-- Operating system is Apple MacOS X
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Searching for dependencies of gz-utils3
+-- Looking for gz-utils3 - found
+
+-- Looking for eigen3 - found
+
+-- Searching for swig - found version 4.3.1.
+-- Searching for Ruby - found version 3.4.8.
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter Development Development.Module Development.Embed
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Configuring library: gz-math8
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Testing is disabled -- skipping UNIT tests
+-- Testing is disabled -- skipping UNIT tests
+-- Performing Test HAS_FLTO_THIN
+-- Performing Test HAS_FLTO_THIN - Success
+-- Searching for pybind11 - found version 2.13.6.
+-- Building pybind11 interfaces
+-- Configuring library: gz-math8-eigen3
+-- Testing is disabled -- skipping UNIT tests
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-math8
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (12.7s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-math8
+[  1%] Building CXX object src/CMakeFiles/gz-math8.dir/Angle.cc.o
+[  2%] Building CXX object src/CMakeFiles/gz-math8.dir/RollingMean.cc.o
+[  3%] Building CXX object src/CMakeFiles/gz-math8.dir/RotationSpline.cc.o
+[  4%] Building CXX object src/CMakeFiles/gz-math8.dir/SemanticVersion.cc.o
+[  5%] Building CXX object src/CMakeFiles/gz-math8.dir/SignalStats.cc.o
+[  6%] Building CXX object src/CMakeFiles/gz-math8.dir/SpeedLimiter.cc.o
+[  7%] Building CXX object src/CMakeFiles/gz-math8.dir/SphericalCoordinates.cc.o
+[  8%] Building CXX object src/CMakeFiles/gz-math8.dir/Spline.cc.o
+[ 10%] Building CXX object src/CMakeFiles/gz-math8.dir/SplinePrivate.cc.o
+[ 11%] Building CXX object src/CMakeFiles/gz-math8.dir/Stopwatch.cc.o
+[ 12%] Building CXX object src/CMakeFiles/gz-math8.dir/Temperature.cc.o
+[ 13%] Building CXX object src/CMakeFiles/gz-math8.dir/Vector3Stats.cc.o
+[ 14%] Building CXX object src/CMakeFiles/gz-math8.dir/Rand.cc.o
+[ 15%] Building CXX object src/CMakeFiles/gz-math8.dir/PID.cc.o
+[ 16%] Building CXX object src/CMakeFiles/gz-math8.dir/MecanumDriveOdometry.cc.o
+[ 17%] Building CXX object src/CMakeFiles/gz-math8.dir/Material.cc.o
+[ 19%] Building CXX object src/CMakeFiles/gz-math8.dir/Kmeans.cc.o
+[ 20%] Building CXX object src/CMakeFiles/gz-math8.dir/Helpers.cc.o
+[ 21%] Building CXX object src/CMakeFiles/gz-math8.dir/GaussMarkovProcess.cc.o
+[ 22%] Building CXX object src/CMakeFiles/gz-math8.dir/Frustum.cc.o
+[ 23%] Building CXX object src/CMakeFiles/gz-math8.dir/Error.cc.o
+[ 24%] Building CXX object src/CMakeFiles/gz-math8.dir/DiffDriveOdometry.cc.o
+[ 25%] Building CXX object src/CMakeFiles/gz-math8.dir/CoordinateVector3.cc.o
+[ 26%] Building CXX object src/CMakeFiles/gz-math8.dir/Color.cc.o
+[ 28%] Building CXX object src/CMakeFiles/gz-math8.dir/AxisAlignedBox.cc.o
+[ 29%] Linking CXX shared library ../lib/libgz-math8.dylib
+[ 29%] Built target gz-math8
+[ 30%] Swig compile Angle.i for ruby
+[ 31%] Swig compile ruby.i for ruby
+[ 32%] Swig compile Vector4.i for ruby
+[ 33%] Swig compile Vector3.i for ruby
+[ 34%] Swig compile Vector2.i for ruby
+[ 35%] Swig compile SphericalCoordinates.i for ruby
+[ 37%] Swig compile Rand.i for ruby
+[ 38%] Swig compile GaussMarkovProcess.i for ruby
+[ 39%] Swig compile CoordinateVector3.i for ruby
+[ 39%] Built target rbmath_swig_compilation
+[ 40%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/_gz_math_pybind11.cc.o
+[ 41%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Line2.cc.o
+[ 42%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Line3.cc.o
+[ 43%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/MassMatrix3.cc.o
+[ 44%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Material.cc.o
+[ 46%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Matrix3.cc.o
+[ 47%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Matrix4.cc.o
+[ 48%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Matrix6.cc.o
+[ 49%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/MecanumDriveOdometry.cc.o
+[ 50%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/MovingWindowFilter.cc.o
+[ 51%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/PID.cc.o
+[ 52%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Polynomial3.cc.o
+[ 53%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Pose3.cc.o
+[ 55%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Quaternion.cc.o
+[ 56%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Rand.cc.o
+[ 57%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Region3.cc.o
+[ 58%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/RollingMean.cc.o
+[ 59%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/RotationSpline.cc.o
+[ 60%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/SemanticVersion.cc.o
+[ 61%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/SignalStats.cc.o
+[ 62%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/SphericalCoordinates.cc.o
+[ 64%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Spline.cc.o
+[ 65%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/StopWatch.cc.o
+[ 66%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Temperature.cc.o
+[ 67%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Triangle.cc.o
+[ 68%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Triangle3.cc.o
+[ 69%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Vector2.cc.o
+[ 70%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Vector3.cc.o
+[ 71%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Vector4.cc.o
+[ 73%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Vector3Stats.cc.o
+[ 74%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Kmeans.cc.o
+[ 75%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Interval.cc.o
+[ 76%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Helpers.cc.o
+[ 77%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/GaussMarkovProcess.cc.o
+[ 78%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Frustum.cc.o
+[ 79%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Filter.cc.o
+[ 80%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Ellipsoid.cc.o
+[ 82%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/DiffDriveOdometry.cc.o
+[ 83%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/CoordinateVector3.cc.o
+[ 84%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Color.cc.o
+[ 85%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Capsule.cc.o
+[ 86%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/AxisAlignedBox.cc.o
+[ 87%] Building CXX object src/python_pybind11/CMakeFiles/math8.dir/src/Angle.cc.o
+[ 88%] Linking CXX shared module test/gz/math8.cpython-312-darwin.so
+[ 88%] Built target math8
+[ 89%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/rubyRUBY_wrap.cxx.o
+[ 91%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/Vector4RUBY_wrap.cxx.o
+[ 92%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/Vector3RUBY_wrap.cxx.o
+[ 93%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/Vector2RUBY_wrap.cxx.o
+[ 94%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/SphericalCoordinatesRUBY_wrap.cxx.o
+[ 95%] Building CXX object src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/RandRUBY_wrap.cxx.o
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz-math8/lib/ruby/RandRUBY_wrap.cxx:1906:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/utility:284:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/compare:174:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/cmath:327:
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/__math/special_functions.h:51:8: error: no member named 'finite' in namespace 'std::__math'; did you mean simply 'finite'?
+   51 |   if (!__math::isfinite(__H_n)) {
+      |        ^~~~~~~~
+/Applications/Xcode-26.0.0-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Headers/ruby/ruby/missing.h:105:17: note: 'finite' declared here
+  105 | RUBY_EXTERN int finite(double);
+      |                 ^
+1 error generated.
+make[2]: *** [src/ruby/CMakeFiles/rbmath.dir/build.make:135: src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/RandRUBY_wrap.cxx.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:586: src/ruby/CMakeFiles/rbmath.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

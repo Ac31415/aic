@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../../
+libdir=${prefix}/lib
+includedir=${prefix}/include/gz/common6
+
+Name: Gazebo common av
+Description: A set of common av classes for robot applications
+Version: 6.2.1
+Requires: libswscale libavdevice >= 56.4.100 libavformat libavcodec libavutil gz-common6 = 6.2.1
+Requires.private: 
+Libs: -L${libdir} -lgz-common6-av 
+Libs.private: 
+CFLags: -I${includedir} 

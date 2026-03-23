@@ -1,0 +1,677 @@
+[0.306s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/mujoco/mujoco_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/mujoco_vendor
+[0.514s] CMake Deprecation Warning at CMakeLists.txt:2 (cmake_minimum_required):
+[0.514s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.514s]   CMake.
+[0.514s] 
+[0.514s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.514s]   to tell CMake that the project requires at least <min> but has been updated
+[0.514s]   to work with policies introduced by <max> or earlier.
+[0.514s] 
+[0.514s] 
+[1.385s] -- The C compiler identification is Clang 19.1.7
+[1.746s] -- The CXX compiler identification is Clang 19.1.7
+[1.818s] -- Detecting C compiler ABI info
+[2.581s] -- Detecting C compiler ABI info - done
+[2.581s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[2.582s] -- Detecting C compile features
+[2.583s] -- Detecting C compile features - done
+[2.583s] -- Detecting CXX compiler ABI info
+[2.583s] -- Detecting CXX compiler ABI info - done
+[2.583s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.583s] -- Detecting CXX compile features
+[2.583s] -- Detecting CXX compile features - done
+[2.584s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[3.056s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[5.066s] -- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+[5.265s] -- Configuring done (4.8s)
+[5.305s] -- Generating done (0.0s)
+[5.310s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor
+[5.314s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/mujoco/mujoco_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/mujoco_vendor
+[5.319s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor -- -j16 -l16
+[5.709s] [ 12%] Creating directories for 'mujoco_vendor'
+[5.756s] [ 25%] Performing download step for 'mujoco_vendor'
+[6.054s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[6.054s]   from pkg_resources import load_entry_point
+[14.667s] === ./mujoco_vendor (git) ===
+[14.667s] hint: Using 'master' as the name for the initial branch. This default branch name
+[14.667s] hint: will change to "main" in Git 3.0. To configure the initial branch name
+[14.667s] hint: to use in all of your new repositories, which will suppress this warning,
+[14.667s] hint: call:
+[14.667s] hint:
+[14.667s] hint: 	git config --global init.defaultBranch <name>
+[14.668s] hint:
+[14.668s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[14.668s] hint: 'development'. The just-created branch can be renamed via this command:
+[14.668s] hint:
+[14.668s] hint: 	git branch -m <name>
+[14.668s] hint:
+[14.668s] hint: Disable this message with "git config set advice.defaultBranchName false"
+[14.668s] Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor/.git/
+[14.668s] 
+[14.668s] From https://github.com/google-deepmind/mujoco
+[14.668s]  * [new tag]         3.5.0      -> 3.5.0
+[14.669s] Note: switching to '3.5.0'.
+[14.669s] 
+[14.669s] You are in 'detached HEAD' state. You can look around, make experimental
+[14.669s] changes and commit them, and you can discard any commits you make in this
+[14.669s] state without impacting any branches by switching back to a branch.
+[14.669s] 
+[14.669s] If you want to create a new branch to retain commits you create, you may
+[14.669s] do so (now or later) by using -c with the switch command. Example:
+[14.669s] 
+[14.669s]   git switch -c <new-branch-name>
+[14.669s] 
+[14.671s] Or undo this operation with:
+[14.671s] 
+[14.672s]   git switch -
+[14.672s] 
+[14.672s] Turn off this advice by setting config variable advice.detachedHead to false
+[14.672s] 
+[14.672s] HEAD is now at 881544c Modify MuJoCo Warp dev version check
+[14.672s] 
+[14.763s] [ 37%] No update_disconnected step for 'mujoco_vendor'
+[14.829s] [ 50%] Performing patch_disconnected step for 'mujoco_vendor'
+[14.847s] Applying patch: /Users/wen-chungcheng/ws_aic/src/mujoco/mujoco_vendor/patches/0001-disable-ipo-on-apple.patch
+[14.989s] [ 62%] Performing configure step for 'mujoco_vendor'
+[15.029s] loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-config.cmake
+[15.502s] -- The C compiler identification is Clang 19.1.7
+[15.872s] -- The CXX compiler identification is Clang 19.1.7
+[15.944s] -- Detecting C compiler ABI info
+[16.342s] -- Detecting C compiler ABI info - done
+[16.359s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[16.360s] -- Detecting C compile features
+[16.365s] -- Detecting C compile features - done
+[16.384s] -- Detecting CXX compiler ABI info
+[16.766s] -- Detecting CXX compiler ABI info - done
+[16.774s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[16.774s] -- Detecting CXX compile features
+[16.775s] -- Detecting CXX compile features - done
+[16.977s] -- The OBJC compiler identification is Clang 19.1.7
+[17.008s] -- Detecting OBJC compiler ABI info
+[17.363s] -- Detecting OBJC compiler ABI info - done
+[17.376s] -- Check for working OBJC compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[17.557s] -- The OBJCXX compiler identification is Clang 19.1.7
+[17.569s] -- Detecting OBJCXX compiler ABI info
+[17.911s] -- Detecting OBJCXX compiler ABI info - done
+[17.925s] -- Check for working OBJCXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[17.933s] -- Performing Test CAN_BUILD_AVX
+[18.155s] -- Performing Test CAN_BUILD_AVX - Failed
+[18.155s] -- Performing Test SUPPORTS_LLD
+[18.413s] -- Performing Test SUPPORTS_LLD - Failed
+[18.413s] -- Performing Test SUPPORTS_GOLD
+[18.705s] -- Performing Test SUPPORTS_GOLD - Failed
+[18.705s] -- Performing Test SUPPORTS_GC_SECTIONS
+[19.033s] -- Performing Test SUPPORTS_GC_SECTIONS - Failed
+[19.033s] -- Performing Test SUPPORTS_DEAD_STRIP
+[19.400s] -- Performing Test SUPPORTS_DEAD_STRIP - Success
+[23.118s] -- mujoco::FindOrFetch: checking for targets in package `qhull`
+[23.118s] -- mujoco::FindOrFetch: checking for targets in package `qhull` - target `qhull` not defined.
+[23.118s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `qhull`
+[25.998s] -- Looking for sys/types.h
+[26.452s] -- Looking for sys/types.h - found
+[26.452s] -- Looking for inttypes.h
+[26.861s] -- Looking for inttypes.h - found
+[26.861s] -- Looking for stddef.h
+[27.185s] -- Looking for stddef.h - found
+[27.185s] -- Looking for stdint.h
+[27.542s] -- Looking for stdint.h - found
+[27.542s] -- Check size of off_t
+[28.063s] -- Check size of off_t - done
+[28.064s] -- Looking for fseeko
+[28.542s] -- Looking for fseeko - found
+[28.542s] -- Looking for ftello
+[29.021s] -- Looking for ftello - found
+[29.021s] -- Looking for PRIdMAX
+[29.390s] -- Looking for PRIdMAX - found
+[29.390s] -- 
+[29.390s] -- ========== qhull Build Information ==========
+[29.390s] -- Build Version:                             8.1-alpha3
+[29.390s] -- Install Prefix (CMAKE_INSTALL_PREFIX):     /Users/wen-chungcheng/ws_aic/src/aic/install/mujoco_vendor/opt/mujoco_vendor
+[29.390s] -- Binary Directory (CMAKE_INSTALL_BINDIR):   bin
+[29.390s] -- Library Directory (CMAKE_INSTALL_LIBDIR):  lib
+[29.390s] -- Include Directory (CMAKE_INSTALL_INCLUDEDIR): include
+[29.391s] -- Documentation Directory (CMAKE_INSTALL_DOCDIR): share/doc/mujoco
+[29.391s] -- Man Pages Directory (CMAKE_INSTALL_MANDIR): share/man
+[29.391s] -- Build Type (CMAKE_BUILD_TYPE):             Release
+[29.391s] -- Build static libraries:                    ON
+[29.391s] -- Build shared library:                      OFF
+[29.391s] -- Use shared library for linking apps:       OFF
+[29.391s] -- Build tests:				   OFF
+[29.391s] -- To override these options, add -D{OPTION_NAME}=... to the cmake command
+[29.391s] --   Build the debug targets                  -DCMAKE_BUILD_TYPE=Debug
+[29.391s] -- 
+[29.391s] -- To build and install qhull, enter "make" and "make install"
+[29.391s] -- To smoketest qhull, enter "ctest"
+[29.392s] -- 
+[29.406s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `qhull` - Done
+[29.407s] -- mujoco::FindOrFetch: checking for targets in package `tinyxml2`
+[29.407s] -- mujoco::FindOrFetch: checking for targets in package `tinyxml2` - target `tinyxml2` not defined.
+[29.407s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `tinyxml2`
+[31.578s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `tinyxml2` - Done
+[31.583s] -- mujoco::FindOrFetch: checking for targets in package `tinyobjloader`
+[31.584s] -- mujoco::FindOrFetch: checking for targets in package `tinyobjloader` - target `tinyobjloader` not defined.
+[31.584s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `tinyobjloader`
+[33.800s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `tinyobjloader` - Done
+[35.681s] -- mujoco::FindOrFetch: checking for targets in package `ccd`
+[35.681s] -- mujoco::FindOrFetch: checking for targets in package `ccd` - target `ccd` not defined.
+[35.681s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `ccd`
+[37.661s] -- Performing Test COMPILER_SUPPORTS_VISIBILITY
+[37.957s] -- Performing Test COMPILER_SUPPORTS_VISIBILITY - Success
+[37.964s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `ccd` - Done
+[37.964s] -- mujoco::FindOrFetch: checking for targets in package `absl`
+[37.964s] -- mujoco::FindOrFetch: checking for targets in package `absl` - target `absl::core_headers` not defined.
+[37.964s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `abseil-cpp`
+[42.863s] -- Performing Test ABSL_INTERNAL_AT_LEAST_CXX17
+[43.338s] -- Performing Test ABSL_INTERNAL_AT_LEAST_CXX17 - Success
+[43.338s] -- Performing Test ABSL_INTERNAL_AT_LEAST_CXX20
+[43.635s] -- Performing Test ABSL_INTERNAL_AT_LEAST_CXX20 - Success
+[43.639s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[43.951s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[43.952s] -- Found Threads: TRUE
+[44.058s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `abseil-cpp` - Done
+[44.059s] -- mujoco::FindOrFetch: checking for targets in package `GTest`
+[44.059s] -- mujoco::FindOrFetch: checking for targets in package `GTest` - target `gtest` not defined.
+[44.059s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `googletest`
+[47.960s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `googletest` - Done
+[47.965s] -- mujoco::FindOrFetch: checking for targets in package `benchmark`
+[47.965s] -- mujoco::FindOrFetch: checking for targets in package `benchmark` - target `benchmark::benchmark` not defined.
+[47.965s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `benchmark`
+[50.337s] -- Found Git: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/git (found version "2.53.0")
+[50.375s] -- Google Benchmark version: v1.9.4-40-g5f7d6692, normalized to 1.9.4.40
+[50.377s] -- Looking for shm_open in rt
+[50.743s] -- Looking for shm_open in rt - not found
+[50.744s] -- Performing Test HAVE_CXX_FLAG_WALL
+[51.333s] -- Performing Test HAVE_CXX_FLAG_WALL - Success
+[51.335s] -- Performing Test HAVE_CXX_FLAG_WEXTRA
+[51.780s] -- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+[51.780s] -- Performing Test HAVE_CXX_FLAG_WSHADOW
+[52.230s] -- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+[52.240s] -- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+[52.666s] -- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL - Success
+[52.671s] -- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST
+[53.166s] -- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST - Success
+[53.166s] -- Performing Test HAVE_CXX_FLAG_WCONVERSION
+[53.551s] -- Performing Test HAVE_CXX_FLAG_WCONVERSION - Success
+[53.551s] -- Performing Test HAVE_CXX_FLAG_WERROR
+[54.093s] -- Performing Test HAVE_CXX_FLAG_WERROR - Success
+[54.095s] -- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+[54.589s] -- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+[54.589s] -- Performing Test HAVE_CXX_FLAG_PEDANTIC
+[55.062s] -- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+[55.063s] -- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+[55.537s] -- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+[55.537s] -- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+[55.950s] -- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Success
+[55.950s] -- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+[56.437s] -- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+[56.439s] -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+[56.882s] -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+[56.884s] -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED
+[57.278s] -- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED - Success
+[57.279s] -- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+[57.745s] -- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+[57.745s] -- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+[58.274s] -- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Success
+[58.274s] -- Enabling additional flags: -DINCLUDE_DIRECTORIES=/Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build/_deps/benchmark-src/include
+[58.275s] -- Compiling and running to test HAVE_THREAD_SAFETY_ATTRIBUTES
+[59.499s] -- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES -- success
+[59.499s] -- Performing Test HAVE_CXX_FLAG_COVERAGE
+[60.100s] -- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+[60.100s] -- Compiling and running to test HAVE_STD_REGEX
+[62.557s] -- Performing Test HAVE_STD_REGEX -- success
+[62.558s] -- Compiling and running to test HAVE_GNU_POSIX_REGEX
+[63.206s] -- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+[63.206s] -- Compiling and running to test HAVE_POSIX_REGEX
+[64.258s] -- Performing Test HAVE_POSIX_REGEX -- success
+[64.258s] -- Compiling and running to test HAVE_STEADY_CLOCK
+[65.406s] -- Performing Test HAVE_STEADY_CLOCK -- success
+[65.406s] -- Compiling and running to test HAVE_PTHREAD_AFFINITY
+[65.743s] -- Performing Test HAVE_PTHREAD_AFFINITY -- failed to compile
+[65.752s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `benchmark` - Done
+[76.310s] -- mujoco::FindOrFetch: checking for targets in package `mujoco`
+[76.310s] -- mujoco::FindOrFetch: checking for targets in package `mujoco` - found
+[76.313s] -- mujoco::FindOrFetch: checking for targets in package `glfw3`
+[76.313s] -- mujoco::FindOrFetch: checking for targets in package `glfw3` - target `glfw` not defined.
+[76.313s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `glfw3`
+[79.620s] -- Including Cocoa support
+[79.620s] -- mujoco::FindOrFetch: Using FetchContent to retrieve `glfw3` - Done
+[79.620s] -- mujoco::FindOrFetch: checking for targets in package `mujoco`
+[79.620s] -- mujoco::FindOrFetch: checking for targets in package `mujoco` - found
+[79.620s] -- mujoco::FindOrFetch: checking for targets in package `glfw3`
+[79.620s] -- mujoco::FindOrFetch: checking for targets in package `glfw3` - found
+[79.620s] -- Configuring done (64.4s)
+[80.534s] -- Generating done (1.1s)
+[80.534s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/src/mujoco_vendor-build
+[80.583s] [ 75%] Performing build step for 'mujoco_vendor'
+[80.758s] [  0%] Building CXX object CMakeFiles/lodepng.dir/_deps/lodepng-src/lodepng.cpp.o
+[83.436s] [  0%] Linking CXX static library lib/liblodepng.a
+[83.505s] [  0%] Built target lodepng
+[83.571s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/context.c.o
+[84.252s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/null_window.c.o
+[84.621s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/null_joystick.c.o
+[84.982s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/cocoa_time.c.o
+[85.325s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/posix_module.c.o
+[85.653s] [  0%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/posix_thread.c.o
+[85.976s] [  3%] Building OBJC object _deps/glfw3-build/src/CMakeFiles/glfw.dir/cocoa_init.m.o
+[86.679s] [  3%] Building OBJC object _deps/glfw3-build/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o
+[87.287s] [  3%] Building OBJC object _deps/glfw3-build/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o
+[87.963s] [  3%] Building OBJC object _deps/glfw3-build/src/CMakeFiles/glfw.dir/cocoa_window.m.o
+[88.768s] [  3%] Building OBJC object _deps/glfw3-build/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+[89.378s] [  7%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/null_monitor.c.o
+[89.750s] [  7%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/null_init.c.o
+[90.136s] [  7%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+[90.517s] [  7%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/egl_context.c.o
+[90.924s] [  7%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/window.c.o
+[91.298s] [ 10%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/vulkan.c.o
+[91.683s] [ 10%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/platform.c.o
+[92.023s] [ 10%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/monitor.c.o
+[92.390s] [ 10%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/input.c.o
+[92.872s] [ 10%] Building C object _deps/glfw3-build/src/CMakeFiles/glfw.dir/init.c.o
+[93.261s] [ 10%] Linking C static library ../../../lib/libglfw3.a
+[93.364s] [ 10%] Built target glfw
+[93.411s] [ 10%] Building CXX object _deps/tinyobjloader-build/CMakeFiles/tinyobjloader.dir/tiny_obj_loader.cc.o
+[95.690s] [ 10%] Linking CXX static library ../../lib/libtinyobjloader.a
+[95.779s] [ 10%] Built target tinyobjloader
+[95.818s] [ 14%] Building CXX object _deps/tinyxml2-build/CMakeFiles/tinyxml2.dir/tinyxml2.cpp.o
+[96.406s] [ 14%] Linking CXX static library ../../lib/libtinyxml2.a
+[96.486s] [ 14%] Built target tinyxml2
+[96.529s] [ 14%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/global_r.c.o
+[96.842s] [ 14%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/user_r.c.o
+[96.948s] [ 14%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/accessors_r.c.o
+[97.049s] [ 14%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/rboxlib_r.c.o
+[97.305s] [ 14%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/userprintf_rbox_r.c.o
+[97.381s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/io_r.c.o
+[97.998s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/userprintf_r.c.o
+[98.083s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/usermem_r.c.o
+[98.185s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/random_r.c.o
+[98.266s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/mem_r.c.o
+[98.374s] [ 17%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/qset_r.c.o
+[98.548s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/poly_r.c.o
+[98.798s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/geom_r.c.o
+[99.051s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/libqhull_r.c.o
+[99.381s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/merge_r.c.o
+[100.011s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/poly2_r.c.o
+[100.524s] [ 21%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/geom2_r.c.o
+[100.950s] [ 25%] Building C object _deps/qhull-build/CMakeFiles/qhullstatic_r.dir/src/libqhull_r/stat_r.c.o
+[101.210s] [ 28%] Linking C static library ../../lib/libqhullstatic_r.a
+[101.333s] [ 28%] Built target qhullstatic_r
+[101.401s] [ 28%] Building C object _deps/ccd-build/src/CMakeFiles/ccd.dir/ccd.c.o
+[101.615s] [ 28%] Building C object _deps/ccd-build/src/CMakeFiles/ccd.dir/vec3.c.o
+[101.738s] [ 28%] Building C object _deps/ccd-build/src/CMakeFiles/ccd.dir/support.c.o
+[101.825s] [ 32%] Building C object _deps/ccd-build/src/CMakeFiles/ccd.dir/polytope.c.o
+[101.945s] [ 32%] Building C object _deps/ccd-build/src/CMakeFiles/ccd.dir/mpr.c.o
+[102.069s] [ 32%] Linking C static library ../../../lib/libccd.a
+[102.166s] [ 32%] Built target ccd
+[102.236s] [ 32%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_callback.c.o
+[102.302s] [ 32%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_init.c.o
+[102.395s] [ 32%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_island.c.o
+[102.553s] [ 32%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_io.c.o
+[106.431s] [ 32%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_memory.c.o
+[106.525s] [ 35%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_name.c.o
+[106.610s] [ 35%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_passive.c.o
+[106.959s] [ 35%] Building CXX object CMakeFiles/mujoco.dir/src/engine/engine_plugin.cc.o
+[108.143s] [ 35%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_print.c.o
+[108.771s] [ 35%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_ray.c.o
+[109.041s] [ 35%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_sensor.c.o
+[109.360s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_setconst.c.o
+[109.673s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_sleep.c.o
+[109.813s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_solver.c.o
+[110.148s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_support.c.o
+[110.315s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_blas.c.o
+[110.533s] [ 39%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_errmem.c.o
+[110.616s] [ 42%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_misc.c.o
+[110.891s] [ 42%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_solve.c.o
+[111.272s] [ 42%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_sparse.c.o
+[111.532s] [ 42%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_util_spatial.c.o
+[111.661s] [ 42%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_vis_init.c.o
+[111.773s] [ 46%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_vis_interact.c.o
+[112.157s] [ 46%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_vis_visualize.c.o
+[112.898s] [ 46%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_api.cc.o
+[114.370s] [ 46%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_cache.cc.o
+[115.307s] [ 46%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_composite.cc.o
+[116.747s] [ 46%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_flexcomp.cc.o
+[118.515s] [ 50%] Building C object CMakeFiles/mujoco.dir/src/user/user_init.c.o
+[118.590s] [ 50%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_mesh.cc.o
+[123.812s] [ 50%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_model.cc.o
+[128.781s] [ 50%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_objects.cc.o
+[133.256s] [ 50%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_resource.cc.o
+[133.841s] [ 50%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_threadpool.cc.o
+[134.561s] [ 53%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_util.cc.o
+[135.550s] [ 53%] Building CXX object CMakeFiles/mujoco.dir/src/user/user_vfs.cc.o
+[136.394s] [ 53%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_api.cc.o
+[137.214s] [ 53%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_base.cc.o
+[137.846s] [ 53%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_global.cc.o
+[138.451s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml.cc.o
+[139.359s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_native_reader.cc.o
+[141.381s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_numeric_format.cc.o
+[141.422s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_native_writer.cc.o
+[143.397s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_urdf.cc.o
+[144.496s] [ 57%] Building CXX object CMakeFiles/mujoco.dir/src/xml/xml_util.cc.o
+[146.019s] [ 60%] Building CXX object CMakeFiles/mujoco.dir/src/thread/thread_pool.cc.o
+[146.688s] [ 60%] Building CXX object CMakeFiles/mujoco.dir/src/thread/thread_task.cc.o
+[147.235s] [ 60%] Building C object CMakeFiles/mujoco.dir/src/render/glad/glad.c.o
+[147.410s] [ 60%] Building CXX object CMakeFiles/mujoco.dir/src/render/glad/loader.cc.o
+[147.456s] [ 60%] Building C object CMakeFiles/mujoco.dir/src/render/render_context.c.o
+[147.779s] [ 60%] Building C object CMakeFiles/mujoco.dir/src/render/render_gl2.c.o
+[147.945s] [ 64%] Building C object CMakeFiles/mujoco.dir/src/render/render_gl3.c.o
+[148.118s] [ 64%] Building C object CMakeFiles/mujoco.dir/src/render/render_util.c.o
+[148.203s] [ 64%] Building C object CMakeFiles/mujoco.dir/src/ui/ui_main.c.o
+[148.527s] [ 67%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_inverse.c.o
+[148.603s] [ 67%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_forward.c.o
+[148.792s] [ 67%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_derivative_fd.c.o
+[148.980s] [ 67%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_derivative.c.o
+[149.303s] [ 67%] Building CXX object CMakeFiles/mujoco.dir/src/engine/engine_crossplatform.cc.o
+[149.352s] [ 67%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_core_smooth.c.o
+[149.800s] [ 71%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_core_util.c.o
+[149.998s] [ 71%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_core_constraint.c.o
+[150.489s] [ 71%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_sdf.c.o
+[150.610s] [ 71%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_primitive.c.o
+[150.726s] [ 71%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_gjk.c.o
+[151.072s] [ 75%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_driver.c.o
+[151.415s] [ 75%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_convex.c.o
+[151.651s] [ 75%] Building C object CMakeFiles/mujoco.dir/src/engine/engine_collision_box.c.o
+[151.846s] [ 75%] Linking CXX shared library lib/libmujoco.dylib
+[151.884s] ld: warning: object file (lib/libtinyobjloader.a(tiny_obj_loader.cc.o)) was built for newer macOS version (16.0) than being linked (11.0)
+[151.962s] [ 75%] Built target mujoco
+[151.989s] [ 75%] Building CXX object plugin/elasticity/CMakeFiles/elasticity.dir/cable.cc.o
+[152.647s] [ 75%] Building CXX object plugin/elasticity/CMakeFiles/elasticity.dir/register.cc.o
+[153.104s] [ 75%] Building CXX object plugin/elasticity/CMakeFiles/elasticity.dir/elasticity.cc.o
+[153.735s] [ 78%] Linking CXX shared library ../../lib/libelasticity.dylib
+[153.803s] [ 78%] Built target elasticity
+[153.829s] [ 78%] Building CXX object sample/CMakeFiles/record.dir/record.cc.o
+[154.346s] [ 82%] Linking CXX executable ../bin/record
+[154.544s] [ 82%] Built target record
+[154.569s] [ 82%] Building CXX object sample/CMakeFiles/basic.dir/basic.cc.o
+[155.035s] [ 82%] Linking CXX executable ../bin/basic
+[155.196s] [ 82%] Built target basic
+[155.225s] [ 82%] Building CXX object sample/CMakeFiles/testspeed.dir/testspeed.cc.o
+[155.924s] [ 82%] Linking CXX executable ../bin/testspeed
+[155.991s] [ 82%] Built target testspeed
+[156.018s] [ 82%] Building CXX object sample/CMakeFiles/dependencies.dir/dependencies.cc.o
+[156.679s] [ 82%] Linking CXX executable ../bin/dependencies
+[156.746s] [ 82%] Built target dependencies
+[156.772s] [ 82%] Building CXX object sample/CMakeFiles/compile.dir/compile.cc.o
+[157.400s] [ 85%] Linking CXX executable ../bin/compile
+[157.467s] [ 85%] Built target compile
+[157.495s] [ 85%] Building CXX object simulate/CMakeFiles/platform_ui_adapter.dir/glfw_adapter.cc.o
+[158.343s] [ 85%] Building OBJCXX object simulate/CMakeFiles/platform_ui_adapter.dir/glfw_corevideo.mm.o
+[159.339s] [ 85%] Building CXX object simulate/CMakeFiles/platform_ui_adapter.dir/platform_ui_adapter.cc.o
+[160.008s] [ 89%] Building CXX object simulate/CMakeFiles/platform_ui_adapter.dir/glfw_dispatch.cc.o
+[160.810s] [ 89%] Built target platform_ui_adapter
+[160.835s] [ 89%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/sdf.cc.o
+[161.416s] [ 89%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/torus.cc.o
+[162.012s] [ 92%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/nut.cc.o
+[162.624s] [ 92%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/register.cc.o
+[163.141s] [ 92%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/gear.cc.o
+[163.760s] [ 92%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/bowl.cc.o
+[164.365s] [ 92%] Building CXX object plugin/sdf/CMakeFiles/sdf_plugin.dir/bolt.cc.o
+[164.965s] [ 92%] Linking CXX shared library ../../lib/libsdf_plugin.dylib
+[165.033s] [ 92%] Built target sdf_plugin
+[165.060s] [ 92%] Building CXX object simulate/CMakeFiles/libmujoco_simulate.dir/simulate.cc.o
+[166.811s] [ 92%] Building OBJCXX object simulate/CMakeFiles/libmujoco_simulate.dir/macos_gui.mm.o
+[168.035s] [ 92%] Linking CXX static library ../lib/libsimulate.a
+[168.087s] [ 92%] Built target libmujoco_simulate
+[168.112s] [ 92%] Building CXX object plugin/sensor/CMakeFiles/sensor.dir/register.cc.o
+[168.578s] [ 92%] Building CXX object plugin/sensor/CMakeFiles/sensor.dir/touch_grid.cc.o
+[169.314s] [ 96%] Linking CXX shared library ../../lib/libsensor.dylib
+[169.380s] [ 96%] Built target sensor
+[169.404s] [ 96%] Building CXX object simulate/CMakeFiles/simulate.dir/main.cc.o
+[170.525s] [ 96%] Linking CXX executable ../bin/simulate
+[170.689s] [ 96%] Built target simulate
+[170.715s] [ 96%] Building CXX object plugin/actuator/CMakeFiles/actuator.dir/pid.cc.o
+[171.267s] [100%] Building CXX object plugin/actuator/CMakeFiles/actuator.dir/register.cc.o
+[171.720s] [100%] Linking CXX shared library ../../lib/libactuator.dylib
+[171.785s] [100%] Built target actuator
+[171.820s] [ 87%] Performing install step for 'mujoco_vendor'
+[171.907s] [  0%] Built target lodepng
+[172.096s] [ 10%] Built target glfw
+[172.136s] [ 10%] Built target tinyobjloader
+[172.166s] [ 14%] Built target tinyxml2
+[172.207s] [ 28%] Built target qhullstatic_r
+[172.241s] [ 32%] Built target ccd
+[172.421s] [ 75%] Built target mujoco
+[172.471s] [ 78%] Built target elasticity
+[172.509s] [ 82%] Built target record
+[172.550s] [ 82%] Built target basic
+[172.589s] [ 82%] Built target testspeed
+[172.629s] [ 82%] Built target dependencies
+[172.668s] [ 85%] Built target compile
+[172.762s] [ 89%] Built target platform_ui_adapter
+[172.828s] [ 92%] Built target sdf_plugin
+[172.893s] [ 92%] Built target libmujoco_simulate
+[172.936s] [ 96%] Built target sensor
+[172.987s] [ 96%] Built target simulate
+[173.031s] [100%] Built target actuator
+[173.056s] Install the project...
+[173.063s] -- Install configuration: "Release"
+[173.064s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/simulate
+[173.066s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/libsimulate.a
+[173.081s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/simulate.h
+[173.081s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/platform_ui_adapter.h
+[173.081s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/glfw_adapter.h
+[173.082s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/glfw_dispatch.h
+[173.082s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/glfw_corevideo.h
+[173.082s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/simulate/array_safety.h
+[173.082s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/basic
+[173.083s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/compile
+[173.083s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/dependencies
+[173.084s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/record
+[173.085s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/bin/testspeed
+[173.085s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/libmujoco.3.5.0.dylib
+[173.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/libmujoco.dylib
+[173.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjdata.h
+[173.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjexport.h
+[173.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjmacro.h
+[173.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjmodel.h
+[173.096s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjplugin.h
+[173.096s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjrender.h
+[173.097s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjsan.h
+[173.097s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjspec.h
+[173.097s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjthread.h
+[173.097s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjtnum.h
+[173.098s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjui.h
+[173.098s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjvisualize.h
+[173.098s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mjxmacro.h
+[173.099s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/include/mujoco/mujoco.h
+[173.100s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/cmake/mujoco/mujocoTargets.cmake
+[173.100s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/cmake/mujoco/mujocoTargets-release.cmake
+[173.100s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/cmake/mujoco/mujocoConfig.cmake
+[173.100s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/lib/cmake/mujoco/mujocoConfigVersion.cmake
+[173.101s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model
+[173.101s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/balloons
+[173.101s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/balloons/balloons.xml
+[173.101s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/car
+[173.101s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/car/car.xml
+[173.102s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/sleep
+[173.102s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/sleep/dominos.xml
+[173.102s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/sleep/100_humanoids.xml
+[173.102s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/sleep/humanoid.xml
+[173.102s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/tactile
+[173.103s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/tactile/tactile.xml
+[173.103s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards
+[173.103s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/cards.xml
+[173.103s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets
+[173.103s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/7_of_diamonds.png
+[173.104s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/queen_of_spades.png
+[173.105s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/jack_of_spades.png
+[173.105s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/8_of_diamonds.png
+[173.105s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/6_of_clubs.png
+[173.106s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/9_of_hearts.png
+[173.106s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/ace_of_hearts.png
+[173.107s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/8_of_spades.png
+[173.107s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/king_of_clubs.png
+[173.107s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/7_of_clubs.png
+[173.108s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/10_of_diamonds.png
+[173.108s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/10_of_spades.png
+[173.109s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/black_joker.png
+[173.109s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/jack_of_clubs.png
+[173.110s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/6_of_spades.png
+[173.110s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/4_of_hearts.png
+[173.111s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/2_of_spades.png
+[173.111s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/queen_of_clubs.png
+[173.112s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/3_of_hearts.png
+[173.112s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/5_of_spades.png
+[173.114s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/6_of_diamonds.png
+[173.114s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/queen_of_diamonds.png
+[173.115s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/card.obj
+[173.115s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/7_of_hearts.png
+[173.116s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/king_of_hearts.png
+[173.117s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/ace_of_clubs.png
+[173.117s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/9_of_diamonds.png
+[173.118s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/6_of_hearts.png
+[173.118s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/9_of_clubs.png
+[173.119s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/king_of_diamonds.png
+[173.119s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/4_of_spades.png
+[173.120s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/2_of_hearts.png
+[173.120s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/3_of_diamonds.png
+[173.121s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/10_of_hearts.png
+[173.121s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/king_of_spades.png
+[173.121s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/8_of_clubs.png
+[173.122s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/4_of_diamonds.png
+[173.123s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/jack_of_diamonds.png
+[173.123s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/3_of_spades.png
+[173.123s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/5_of_hearts.png
+[173.125s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/7_of_spades.png
+[173.126s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/ace_of_spades.png
+[173.126s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/5_of_diamonds.png
+[173.127s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/9_of_spades.png
+[173.128s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/queen_of_hearts.png
+[173.128s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/ace_of_diamonds.png
+[173.129s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/5_of_clubs.png
+[173.129s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/2_of_clubs.png
+[173.130s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/jack_of_hearts.png
+[173.131s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/10_of_clubs.png
+[173.131s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/2_of_diamonds.png
+[173.132s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/8_of_hearts.png
+[173.132s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/red_joker.png
+[173.133s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/3_of_clubs.png
+[173.133s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cards/assets/4_of_clubs.png
+[173.134s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube
+[173.134s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/cube_3x3x3.xml
+[173.134s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/README.md
+[173.134s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets
+[173.135s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_orange_yellow.png
+[173.135s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_red_yellow.png
+[173.135s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_orange.png
+[173.135s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_red.png
+[173.135s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/yellow.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_white.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/orange_yellow.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_orange_white.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_yellow.png
+[173.136s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/red_yellow.png
+[173.137s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_red_white.png
+[173.137s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_orange_white.png
+[173.137s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/orange.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/red_white.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_red_yellow.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_red_white.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_orange_yellow.png
+[173.138s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_white.png
+[173.139s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/green_orange.png
+[173.139s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_yellow.png
+[173.139s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/white.png
+[173.139s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/orange_white.png
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/orange_red.png
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/red.png
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/cube/assets/blue_red.png
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/elasticity
+[173.140s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/elasticity/cable.xml
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/elasticity/scene.xml
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/elasticity/belt.xml
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/elasticity/coil.xml
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/gear.xml
+[173.141s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/nutbolt.xml
+[173.142s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/bowl.xml
+[173.142s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/asset
+[173.142s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/asset/spot.png
+[173.143s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/asset/die.obj
+[173.143s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/asset/spot.obj
+[173.144s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/asset/README.md
+[173.144s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/torus.xml
+[173.144s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/cow.xml
+[173.144s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/primitives.xml
+[173.145s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/mug.xml
+[173.145s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/mesh.xml
+[173.145s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sdf/scene.xml
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sensor
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sensor/touch_grid.xml
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/sensor/a.png
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/actuator
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/plugin/actuator/pid.xml
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/tendon_arm
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/tendon_arm/arm26.xml
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/mug
+[173.146s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/mug/mug.obj
+[173.153s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/mug/mug.png
+[173.154s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/mug/mug.xml
+[173.154s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate
+[173.154s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/stonehenge.xml
+[173.154s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/helix.xml
+[173.155s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/bowl.xml
+[173.155s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/container.xml
+[173.155s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/particle_free.xml
+[173.155s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/tendon.xml
+[173.156s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/newton_cradle.xml
+[173.156s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/asset
+[173.156s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/asset/marble.png
+[173.157s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/bunny.obj
+[173.157s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/bunnies.xml
+[173.158s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/README.md
+[173.158s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/cylinder.xml
+[173.158s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/particle_free2d.xml
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/particle.xml
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/leaves.xml
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/replicate/scene.xml
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/gripper.xml
+[173.159s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/flag.xml
+[173.160s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/floppy.xml
+[173.160s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/gripper_trilinear.xml
+[173.160s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/softbox.xml
+[173.160s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/asset
+[173.161s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/asset/bunny.obj
+[173.162s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/asset/bunny_with_uv.obj
+[173.163s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/asset/sponge.png
+[173.165s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/asset/cap.obj
+[173.165s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/bunny_with_uv.xml
+[173.165s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/bunny.xml
+[173.165s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/sphere_passive.xml
+[173.166s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/basket.xml
+[173.166s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/pancake.xml
+[173.166s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/trilinear.xml
+[173.166s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/sphere_full.xml
+[173.166s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/pinch.xml
+[173.167s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/poncho.xml
+[173.167s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/pulley.xml
+[173.167s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/poncho_vertcollide.xml
+[173.167s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/jelly.xml
+[173.168s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/bunny_quadratic.xml
+[173.168s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/press.xml
+[173.168s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/quadratic.xml
+[173.168s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/plate.xml
+[173.168s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/sphere_trilinear.xml
+[173.169s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/sphere_radial.xml
+[173.169s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/mannequin.xml
+[173.169s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/scene.xml
+[173.169s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/flex/trampoline.xml
+[173.170s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/adhesion
+[173.170s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/adhesion/README.md
+[173.170s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/adhesion/active_adhesion.xml
+[173.170s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/hammock
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/hammock/hammock.xml
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/humanoid100.xml
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/22_humanoids.xml
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/100_humanoids.xml
+[173.171s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/README.md
+[173.172s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/humanoid.png
+[173.172s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/humanoid/humanoid.xml
+[173.173s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/slider_crank
+[173.173s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/mujoco_vendor/mujoco_vendor-prefix/install/share/mujoco/model/slider_crank/slider_crank.xml
+[173.195s] [100%] Completed 'mujoco_vendor'
+[173.227s] [100%] Built target mujoco_vendor

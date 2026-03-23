@@ -1,0 +1,80 @@
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ros2_control_cmake: 0.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ros2_control_cmake/cmake)
+-- Compiler warnings enabled for Clang
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found pluginlib: 5.6.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/pluginlib/cmake)
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Found realtime_tools: 4.7.1 (/Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+-- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_lifecycle: 29.5.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclcpp_lifecycle/cmake)
+-- Found trajectory_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/trajectory_msgs/cmake)
+-- Found urdf: 2.12.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/urdf/cmake)
+-- Configuring done (9.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/joint_limits
+[ 11%] Generating joint_limits/version.h
+[ 11%] Built target ament_generate_version_header__joint_limits
+[ 22%] Building CXX object CMakeFiles/joint_limiter_interface.dir/src/joint_limiter_interface.cpp.o
+[ 33%] Linking CXX shared library libjoint_limiter_interface.dylib
+[ 33%] Built target joint_limiter_interface
+[ 44%] Building CXX object CMakeFiles/joint_limits_helpers.dir/src/joint_limits_helpers.cpp.o
+[ 55%] Linking CXX shared library libjoint_limits_helpers.dylib
+[ 55%] Built target joint_limits_helpers
+[ 66%] Building CXX object CMakeFiles/joint_saturation_limiter.dir/src/joint_saturation_limiter.cpp.o
+[ 77%] Building CXX object CMakeFiles/joint_saturation_limiter.dir/src/joint_soft_limiter.cpp.o
+[ 88%] Building CXX object CMakeFiles/joint_saturation_limiter.dir/src/joint_range_limiter.cpp.o
+[100%] Linking CXX shared library libjoint_saturation_limiter.dylib
+[100%] Built target joint_saturation_limiter
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/joint_limiters.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_limits_rosparam.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_limiter_interface.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_soft_limiter.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_limits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_saturation_limiter.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/data_structures.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_limits_urdf.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/joint_limits_helpers.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limiter_interface.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_saturation_limiter.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/lib/libjoint_limits_helpers.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/ament_index/resource_index/package_run_dependencies/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/ament_index/resource_index/parent_prefix_path/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/ament_index/resource_index/packages/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/ament_index/resource_index/joint_limits__pluginlib__plugin/joint_limits
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/export_joint_limitsExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/export_joint_limitsExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/joint_limitsConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/cmake/joint_limitsConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/share/joint_limits/package.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/joint_limits/include/joint_limits/joint_limits/version.h

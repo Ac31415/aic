@@ -1,0 +1,46 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+-- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+-- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+-- Found spdlog_vendor: 1.7.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/spdlog_vendor/cmake)
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Skipping vendor package build for 'gz_utils_vendor', as SATISFIED is TRUE and AMENT_VENDOR_POLICY is set to DEFAULT
+-- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+-- Configuring done (4.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_utils_vendor
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/ament_index/resource_index/package_run_dependencies/gz_utils_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/ament_index/resource_index/parent_prefix_path/gz_utils_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/ament_index/resource_index/packages/gz_utils_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/cmake/gz_utils_vendor-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/cmake/gz_utils_vendorConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/cmake/gz_utils_vendorConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/package.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/opt/gz_utils_vendor/extra_cmake/lib/cmake/gz-utils/gz-utils-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/opt/gz_utils_vendor/extra_cmake/lib/cmake/gz-utils/gz-utils-config-version.cmake

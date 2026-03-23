@@ -1,0 +1,849 @@
+[0.047s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_common_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor
+[0.459s] -- The C compiler identification is Clang 19.1.7
+[0.781s] -- The CXX compiler identification is Clang 19.1.7
+[0.861s] -- Detecting C compiler ABI info
+[1.214s] -- Detecting C compiler ABI info - done
+[1.215s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.216s] -- Detecting C compile features
+[1.216s] -- Detecting C compile features - done
+[1.220s] -- Detecting CXX compiler ABI info
+[1.541s] -- Detecting CXX compiler ABI info - done
+[1.552s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.552s] -- Detecting CXX compile features
+[1.552s] -- Detecting CXX compile features - done
+[1.593s] -- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+[1.794s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[1.935s] -- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+[2.002s] -- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+[2.024s] -- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+[2.044s] -- Found gz_math_vendor: 0.2.5 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor/share/gz_math_vendor/cmake)
+[2.443s] -- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+[2.569s] -- Configuring done (2.3s)
+[2.602s] -- Generating done (0.0s)
+[2.638s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor
+[2.644s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_common_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor
+[2.645s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor -- -j16 -l16
+[2.952s] [ 12%] Creating directories for 'gz_common_vendor'
+[3.001s] [ 25%] Performing download step for 'gz_common_vendor'
+[3.536s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[3.537s]   from pkg_resources import load_entry_point
+[6.549s] === ./gz_common_vendor (git) ===
+[6.549s] hint: Using 'master' as the name for the initial branch. This default branch name
+[6.550s] hint: will change to "main" in Git 3.0. To configure the initial branch name
+[6.550s] hint: to use in all of your new repositories, which will suppress this warning,
+[6.550s] hint: call:
+[6.550s] hint:
+[6.550s] hint: 	git config --global init.defaultBranch <name>
+[6.550s] hint:
+[6.550s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[6.550s] hint: 'development'. The just-created branch can be renamed via this command:
+[6.550s] hint:
+[6.550s] hint: 	git branch -m <name>
+[6.550s] hint:
+[6.550s] hint: Disable this message with "git config set advice.defaultBranchName false"
+[6.550s] Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/.git/
+[6.550s] 
+[6.550s] From https://github.com/gazebosim/gz-common
+[6.550s]  * [new tag]         gz-common6_6.2.1 -> gz-common6_6.2.1
+[6.550s] Note: switching to 'gz-common6_6.2.1'.
+[6.550s] 
+[6.550s] You are in 'detached HEAD' state. You can look around, make experimental
+[6.550s] changes and commit them, and you can discard any commits you make in this
+[6.550s] state without impacting any branches by switching back to a branch.
+[6.551s] 
+[6.551s] If you want to create a new branch to retain commits you create, you may
+[6.551s] do so (now or later) by using -c with the switch command. Example:
+[6.551s] 
+[6.551s]   git switch -c <new-branch-name>
+[6.551s] 
+[6.551s] Or undo this operation with:
+[6.551s] 
+[6.551s]   git switch -
+[6.551s] 
+[6.551s] Turn off this advice by setting config variable advice.detachedHead to false
+[6.551s] 
+[6.551s] HEAD is now at 8ce782d Prepare for 6.2.1 release (#723)
+[6.551s] 
+[6.615s] [ 37%] No update_disconnected step for 'gz_common_vendor'
+[6.654s] [ 50%] No patch_disconnected step for 'gz_common_vendor'
+[6.691s] [ 62%] Performing configure step for 'gz_common_vendor'
+[6.707s] loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-config.cmake
+[6.962s] -- The C compiler identification is Clang 19.1.7
+[7.319s] -- The CXX compiler identification is Clang 19.1.7
+[7.394s] -- Detecting C compiler ABI info
+[7.804s] -- Detecting C compiler ABI info - done
+[7.811s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[7.811s] -- Detecting C compile features
+[7.811s] -- Detecting C compile features - done
+[7.847s] -- Detecting CXX compiler ABI info
+[8.391s] -- Detecting CXX compiler ABI info - done
+[8.404s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[8.404s] -- Detecting CXX compile features
+[8.404s] -- Detecting CXX compile features - done
+[8.447s] -- gz-common6 version 6.2.1
+[8.448s] -- Operating system is Apple MacOS X
+[8.467s] -- 
+[8.467s] 
+[8.467s] -- ====== Finding Dependencies ======
+[8.497s] -- Looking for gz-math8 -- found version 8.2.0
+[8.499s] -- Searching for dependencies of gz-math8
+[8.564s] -- Looking for gz-utils3 -- found version 3.1.1
+[8.564s] -- Searching for dependencies of gz-utils3
+[8.565s] -- Looking for gz-math8 - found
+[8.565s] 
+[8.567s] -- Looking for gz-utils3 -- found version 3.1.1
+[8.567s] -- Searching for dependencies of gz-utils3
+[8.567s] -- Searching for <gz-utils3> component [log]
+[8.609s] -- Looking for gz-utils3-log -- found version 3.1.1
+[8.609s] -- Searching for dependencies of gz-utils3-log
+[8.642s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[9.128s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[9.128s] -- Found Threads: TRUE
+[9.171s] -- Looking for gz-utils3 - found
+[9.171s] 
+[9.280s] -- Checking for module 'tinyxml2'
+[9.885s] --   Found tinyxml2, version 11.0.0
+[11.389s] -- Looking for tinyxml2 - found
+[11.389s] 
+[11.391s] -- Found UUID: TRUE
+[11.391s] -- Looking for uuid - found
+[11.391s] 
+[12.238s] -- Found FreeImage: TRUE (Required is at least version "3.9")
+[12.238s] -- Looking for FreeImage - found
+[12.239s] 
+[12.453s] -- Found GDAL: /opt/homebrew/Cellar/gdal/3.11.4/lib/libgdal.dylib (found suitable version "3.11.4", minimum required is "3.0")
+[12.453s] -- Looking for GDAL - found
+[12.453s] 
+[12.522s] -- Checking for module 'libswscale'
+[12.975s] --   Found libswscale, version 9.1.100
+[14.483s] -- Found SWSCALE: TRUE
+[14.484s] -- Looking for libswscale - found
+[14.484s] 
+[14.565s] -- Checking for module 'libavdevice >= 56.4.100'
+[15.219s] --   Found libavdevice, version 62.1.100
+[16.776s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100")
+[16.776s] -- Looking for libavdevice - found
+[16.776s] 
+[16.923s] -- Checking for module 'libavformat'
+[17.462s] --   Found libavformat, version 62.3.100
+[19.148s] -- Found AVFORMAT: TRUE
+[19.149s] -- Looking for libavformat - found
+[19.149s] 
+[19.217s] -- Checking for module 'libavcodec'
+[19.658s] --   Found libavcodec, version 62.11.100
+[21.144s] -- Found AVCODEC: TRUE
+[21.146s] -- Looking for libavcodec - found
+[21.146s] 
+[21.216s] -- Checking for module 'libavutil'
+[21.724s] --   Found libavutil, version 60.8.100
+[23.060s] -- Found AVUTIL: TRUE
+[23.060s] -- Looking for libavutil - found
+[23.060s] 
+[23.100s] -- Found GzAssimp: TRUE (found version "5.4.3")
+[23.100s] -- Looking for assimp - found
+[23.100s] 
+[23.100s] -- -------------------------------------------
+[23.100s] 
+[28.021s] -- 
+[28.021s] -- Searching for host SSE information
+[28.238s] -- Could not find hardware support for SSE2 on this machine.
+[28.239s] -- Could not find hardware support for SSE3 on this machine.
+[28.239s] -- Could not find hardware support for SSSE3 on this machine.
+[28.239s] -- Could not find hardware support for SSE4.1 on this machine.
+[28.239s] -- Could not find hardware support for SSE4.2 on this machine.
+[28.239s] -- SSE4 disabled.
+[28.239s] --
+[28.683s] -- Configuring library: gz-common6
+[28.690s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+[29.052s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+[29.052s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+[29.590s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+[29.591s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+[29.940s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+[29.946s] -- Testing is disabled -- skipping UNIT tests
+[29.951s] -- Configuring library: gz-common6-av
+[29.962s] -- Testing is disabled -- skipping UNIT tests
+[29.970s] -- Configuring library: gz-common6-events
+[29.980s] -- Testing is disabled -- skipping UNIT tests
+[29.984s] -- Configuring library: gz-common6-graphics
+[29.997s] -- Testing is disabled -- skipping UNIT tests
+[30.003s] -- Configuring library: gz-common6-geospatial
+[30.008s] -- Testing is disabled -- skipping UNIT tests
+[30.013s] -- Configuring library: gz-common6-io
+[30.018s] -- Testing is disabled -- skipping UNIT tests
+[30.027s] -- Configuring library: gz-common6-profiler
+[30.031s] -- Testing is disabled -- skipping UNIT tests
+[30.033s] -- Configuring library: gz-common6-testing
+[30.045s] -- Testing is disabled -- skipping UNIT tests
+[30.363s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+[30.367s] -- Adding codecheck target
+[30.367s] -- Build configuration successful
+[30.367s] -- Build type: RelWithDebInfo
+[30.367s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor
+[30.395s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[30.419s] -- Configuring done (23.7s)
+[30.685s] -- Generating done (0.3s)
+[30.685s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor-build
+[30.747s] [ 75%] Performing build step for 'gz_common_vendor'
+[30.896s] [  1%] Building CXX object src/CMakeFiles/gz-common6.dir/Base64.cc.o
+[31.768s] [  3%] Building CXX object src/CMakeFiles/gz-common6.dir/WorkerPool.cc.o
+[33.892s] [  4%] Building CXX object src/CMakeFiles/gz-common6.dir/Uuid.cc.o
+[35.181s] [  6%] Building CXX object src/CMakeFiles/gz-common6.dir/Util.cc.o
+[36.659s] [  7%] Building CXX object src/CMakeFiles/gz-common6.dir/URI.cc.o
+[41.236s] [  9%] Building CXX object src/CMakeFiles/gz-common6.dir/Timer.cc.o
+[42.222s] [ 10%] Building CXX object src/CMakeFiles/gz-common6.dir/TempDirectory.cc.o
+[43.440s] [ 12%] Building CXX object src/CMakeFiles/gz-common6.dir/SystemPaths.cc.o
+[45.391s] [ 13%] Building CXX object src/CMakeFiles/gz-common6.dir/StringUtils.cc.o
+[46.064s] [ 15%] Building CXX object src/CMakeFiles/gz-common6.dir/SignalHandler.cc.o
+[47.578s] [ 16%] Building CXX object src/CMakeFiles/gz-common6.dir/MaterialDensity.cc.o
+[48.715s] [ 18%] Building CXX object src/CMakeFiles/gz-common6.dir/Filesystem.cc.o
+[49.962s] [ 19%] Building CXX object src/CMakeFiles/gz-common6.dir/DirIter.cc.o
+[50.674s] [ 21%] Building CXX object src/CMakeFiles/gz-common6.dir/Console.cc.o
+[51.758s] [ 22%] Building CXX object src/CMakeFiles/gz-common6.dir/Battery.cc.o
+[52.837s] [ 24%] Linking CXX shared library ../lib/libgz-common6.dylib
+[52.982s] [ 24%] Built target gz-common6
+[53.021s] [ 25%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/AudioDecoder.cc.o
+[54.042s] [ 27%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/VideoEncoder.cc.o
+[55.304s] [ 28%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/Video.cc.o
+[56.205s] [ 30%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/Util.cc.o
+[57.182s] [ 31%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/HWEncoder.cc.o
+[58.046s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/av/src/HWEncoder.cc:419:27: warning: unused function 'GetFormatVAAPI' [-Wunused-function]
+[58.046s]   419 | static enum AVPixelFormat GetFormatVAAPI(
+[58.047s]       |                           ^~~~~~~~~~~~~~
+[58.415s] 1 warning generated.
+[58.447s] [ 33%] Linking CXX shared library ../../lib/libgz-common6-av.dylib
+[58.603s] [ 33%] Built target gz-common6-av
+[58.654s] [ 34%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/BazelTestPaths.cc.o
+[59.522s] [ 36%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/Utils.cc.o
+[60.317s] [ 37%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/TestPaths.cc.o
+[61.375s] [ 39%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/RedirectConsoleStream.cc.o
+[62.288s] [ 40%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/CMakeTestPaths.cc.o
+[63.289s] [ 42%] Linking CXX shared library ../../lib/libgz-common6-testing.dylib
+[63.289s] [ 42%] Built target gz-common6-testing
+[63.323s] [ 43%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/Profiler.cc.o
+[64.341s] [ 45%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/RemoteryProfilerImpl.cc.o
+[65.239s] [ 46%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/Remotery/lib/RemoteryMetal.mm.o
+[65.921s] [ 48%] Building C object profiler/src/CMakeFiles/gz-common6-profiler.dir/Remotery/lib/Remotery.c.o
+[66.010s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:243:26: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.010s]   243 | static rmtU32 msTimer_Get()
+[66.010s]       |                          ^
+[66.010s]       |                           void
+[66.011s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:499:23: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.011s]   499 | static void WriteFence()
+[66.011s]       |                       ^
+[66.011s]       |                        void
+[66.018s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:1822:30: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.018s]  1822 | static rmtBool IsLittleEndian()
+[66.018s]       |                              ^
+[66.018s]       |                               void
+[66.019s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2191:34: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.019s]  2191 | static rmtError InitialiseNetwork()
+[66.019s]       |                                  ^
+[66.019s]       |                                   void
+[66.019s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2211:28: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.019s]  2211 | static void ShutdownNetwork()
+[66.019s]       |                            ^
+[66.019s]       |                             void
+[66.020s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2308:17: warning: variable 'total' set but not used [-Wunused-but-set-variable]
+[66.020s]  2308 |             int total = 0;
+[66.020s]       |                 ^
+[66.020s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:2412:31: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.020s]  2412 | static int TCPSocketWouldBlock()
+[66.020s]       |                               ^
+[66.020s]       |                                void
+[66.035s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6908:55: warning: unused parameter 'stamp' [-Wunused-parameter]
+[66.035s]  6908 | static void MetalTimestamp_Destructor(MetalTimestamp* stamp)
+[66.035s]       |                                                       ^
+[66.035s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6914:26: warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+[66.035s]  6914 | rmtU64 rmtMetal_usGetTime()
+[66.036s]       |                          ^
+[66.036s]       |                           void
+[66.036s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6936:48: warning: unused parameter 'stamp' [-Wunused-parameter]
+[66.036s]  6936 | static void MetalTimestamp_End(MetalTimestamp* stamp)
+[66.036s]       |                                                ^
+[66.036s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/profiler/src/Remotery/lib/Remotery.c:6994:13: warning: unused function 'UpdateOpenGLFrame' [-Wunused-function]
+[66.036s]  6994 | static void UpdateOpenGLFrame(void);
+[66.036s]       |             ^~~~~~~~~~~~~~~~~
+[66.432s] 11 warnings generated.
+[66.449s] [ 50%] Linking CXX shared library ../../lib/libgz-common6-profiler.dylib
+[66.668s] [ 50%] Built target gz-common6-profiler
+[66.729s] [ 51%] Building CXX object io/src/CMakeFiles/gz-common6-io.dir/CSVStreams.cc.o
+[67.469s] [ 53%] Linking CXX shared library ../../lib/libgz-common6-io.dylib
+[67.585s] [ 53%] Built target gz-common6-io
+[67.629s] [ 54%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Animation.cc.o
+[68.833s] [ 56%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/OBJLoader.cc.o
+[71.628s] [ 57%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Pbr.cc.o
+[72.282s] [ 59%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/STLLoader.cc.o
+[73.109s] [ 60%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SVGLoader.cc.o
+[74.636s] [ 62%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Skeleton.cc.o
+[76.289s] [ 63%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SkeletonAnimation.cc.o
+[77.346s] [ 65%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SkeletonNode.cc.o
+[78.401s] [ 66%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SubMesh.cc.o
+[79.869s] [ 68%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/NodeTransform.cc.o
+[80.656s] [ 69%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/NodeAnimation.cc.o
+[81.957s] [ 71%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/MeshManager.cc.o
+[87.915s] [ 72%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/MeshExporter.cc.o
+[88.289s] [ 74%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Mesh.cc.o
+[89.498s] [ 75%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Material.cc.o
+[90.540s] [ 77%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/KeyFrame.cc.o
+[91.157s] [ 78%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Image.cc.o
+[92.076s] [ 80%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/DelaunayTriangulation.cc.o
+[95.575s] [ 81%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/ColladaLoader.cc.o
+[99.027s] [ 83%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/ColladaExporter.cc.o
+[99.991s] [ 84%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/BVHLoader.cc.o
+[100.899s] [ 86%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/AssimpLoader.cc.o
+[102.227s] [ 87%] Linking CXX shared library ../../lib/libgz-common6-graphics.dylib
+[102.366s] [ 87%] Built target gz-common6-graphics
+[102.399s] [ 89%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/Event.cc.o
+[103.053s] [ 90%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/MouseEvent.cc.o
+[103.506s] [ 92%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/KeyEvent.cc.o
+[103.852s] [ 93%] Linking CXX shared library ../../lib/libgz-common6-events.dylib
+[103.972s] [ 93%] Built target gz-common6-events
+[104.013s] [ 95%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/Dem.cc.o
+[104.566s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/Dem.cc:20:
+[104.566s] /opt/homebrew/include/gdal_priv.h:4632:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+[104.566s]  4632 |     return fVal1 == fVal2 || /* Should cover infinity */
+[104.566s]       |            ~~~~~ ^  ~~~~~
+[104.566s] /opt/homebrew/include/gdal_priv.h:4642:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+[104.566s]  4642 |     return dfVal1 == dfVal2 || /* Should cover infinity */
+[104.566s]       |            ~~~~~~ ^  ~~~~~~
+[104.582s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/Dem.cc:23:
+[104.582s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+[104.582s] In file included from /opt/homebrew/include/spdlog/logger.h:17:
+[104.582s] In file included from /opt/homebrew/include/spdlog/common.h:50:
+[104.582s] In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+[104.582s] /opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[104.582s]  1319 |   switch (c) {
+[104.582s]       |   ^
+[105.110s] 3 warnings generated.
+[105.127s] [ 96%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/ImageHeightmap.cc.o
+[105.505s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/ImageHeightmap.cc:17:
+[105.505s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+[105.505s] In file included from /opt/homebrew/include/spdlog/logger.h:17:
+[105.505s] In file included from /opt/homebrew/include/spdlog/common.h:50:
+[105.506s] In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+[105.506s] /opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[105.506s]  1319 |   switch (c) {
+[105.506s]       |   ^
+[105.835s] 1 warning generated.
+[105.850s] [ 98%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/HeightmapUtil.cc.o
+[106.231s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/geospatial/src/HeightmapUtil.cc:23:
+[106.231s] In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/include/gz/common/Console.hh:20:
+[106.231s] In file included from /opt/homebrew/include/spdlog/logger.h:17:
+[106.231s] In file included from /opt/homebrew/include/spdlog/common.h:50:
+[106.231s] In file included from /opt/homebrew/include/spdlog/fmt/fmt.h:28:
+[106.231s] /opt/homebrew/include/fmt/base.h:1319:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[106.231s]  1319 |   switch (c) {
+[106.231s]       |   ^
+[106.520s] 1 warning generated.
+[106.536s] [100%] Linking CXX shared library ../../lib/libgz-common6-geospatial.dylib
+[106.577s] ld: warning: dylib (/opt/homebrew/Cellar/gdal/3.11.4/lib/libgdal.dylib) was built for newer macOS version (26.0) than being linked (16.0)
+[106.627s] [100%] Built target gz-common6-geospatial
+[106.669s] [ 87%] Performing install step for 'gz_common_vendor'
+[106.811s] [ 24%] Built target gz-common6
+[106.879s] [ 33%] Built target gz-common6-av
+[106.944s] [ 42%] Built target gz-common6-testing
+[107.053s] [ 50%] Built target gz-common6-profiler
+[107.096s] [ 53%] Built target gz-common6-io
+[107.257s] [ 87%] Built target gz-common6-graphics
+[107.312s] [ 93%] Built target gz-common6-events
+[107.369s] [100%] Built target gz-common6-geospatial
+[107.395s] Install the project...
+[107.402s] -- Install configuration: "RelWithDebInfo"
+[107.403s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/detail/Export.hh
+[107.403s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Export.hh
+[107.404s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.6.2.1.dylib
+[107.405s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.6.dylib
+[107.405s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.dylib
+[107.405s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-config.cmake
+[107.406s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-config-version.cmake
+[107.406s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-targets.cmake
+[107.406s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-targets-relwithdebinfo.cmake
+[107.407s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6.pc
+[107.407s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/detail/TemplateHelpers.hh
+[107.408s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Base64.hh
+[107.408s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Battery.hh
+[107.408s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Console.hh
+[107.409s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/EnumIface.hh
+[107.409s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Filesystem.hh
+[107.409s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/FlagSet.hh
+[107.409s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MaterialDensity.hh
+[107.410s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MovingWindowFilter.hh
+[107.410s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SignalHandler.hh
+[107.411s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SingletonT.hh
+[107.411s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/StringUtils.hh
+[107.411s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SystemPaths.hh
+[107.411s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/TempDirectory.hh
+[107.411s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/TemplateHelpers.hh
+[107.413s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Timer.hh
+[107.414s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/URI.hh
+[107.414s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Util.hh
+[107.414s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Uuid.hh
+[107.414s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/WorkerPool.hh
+[107.414s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common.hh
+[107.415s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/config.hh
+[107.415s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/detail/Export.hh
+[107.416s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/Export.hh
+[107.416s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib
+[107.416s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.dylib
+[107.419s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib
+[107.420s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib'
+[107.434s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.dylib
+[107.434s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-config.cmake
+[107.434s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-config-version.cmake
+[107.435s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-targets.cmake
+[107.436s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-targets-relwithdebinfo.cmake
+[107.436s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-av.pc
+[107.437s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/Util.hh
+[107.437s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/AudioDecoder.hh
+[107.438s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/HWVideo.hh
+[107.438s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Video.hh
+[107.438s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/VideoEncoder.hh
+[107.438s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ffmpeg_inc.hh
+[107.439s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av.hh
+[107.439s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/detail/Export.hh
+[107.439s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/Export.hh
+[107.439s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib
+[107.439s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.dylib
+[107.441s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib
+[107.441s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib'
+[107.455s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.dylib
+[107.456s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-config.cmake
+[107.457s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-config-version.cmake
+[107.457s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-targets.cmake
+[107.457s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-targets-relwithdebinfo.cmake
+[107.457s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-events.pc
+[107.458s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/Types.hh
+[107.458s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Event.hh
+[107.459s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/KeyEvent.hh
+[107.459s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MouseEvent.hh
+[107.461s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events.hh
+[107.462s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/detail/Export.hh
+[107.463s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/Export.hh
+[107.463s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib
+[107.465s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.dylib
+[107.467s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib
+[107.468s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib'
+[107.486s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.dylib
+[107.488s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-config.cmake
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-config-version.cmake
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets.cmake
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets-relwithdebinfo.cmake
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-graphics.pc
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/Types.hh
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Animation.hh
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/AssimpLoader.hh
+[107.489s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/BVHLoader.hh
+[107.490s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ColladaExporter.hh
+[107.490s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ColladaLoader.hh
+[107.491s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/DelaunayTriangulation.hh
+[107.492s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Image.hh
+[107.492s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/KeyFrame.hh
+[107.492s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Material.hh
+[107.493s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Mesh.hh
+[107.494s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshExporter.hh
+[107.494s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshLoader.hh
+[107.494s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshManager.hh
+[107.497s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/NodeAnimation.hh
+[107.497s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/NodeTransform.hh
+[107.498s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/OBJLoader.hh
+[107.498s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Pbr.hh
+[107.498s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/STLLoader.hh
+[107.498s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SVGLoader.hh
+[107.501s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Skeleton.hh
+[107.501s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SkeletonAnimation.hh
+[107.501s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SkeletonNode.hh
+[107.501s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SubMesh.hh
+[107.502s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics.hh
+[107.502s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/detail/Export.hh
+[107.502s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/Export.hh
+[107.503s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib
+[107.503s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.dylib
+[107.506s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib
+[107.507s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib'
+[107.519s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.dylib
+[107.519s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config.cmake
+[107.519s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config-version.cmake
+[107.520s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets.cmake
+[107.520s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets-relwithdebinfo.cmake
+[107.520s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-geospatial.pc
+[107.521s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/Dem.hh
+[107.521s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/HeightmapData.hh
+[107.521s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/HeightmapUtil.hh
+[107.521s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/ImageHeightmap.hh
+[107.522s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial.hh
+[107.522s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io/detail/Export.hh
+[107.523s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io/Export.hh
+[107.524s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib
+[107.524s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.dylib
+[107.526s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib
+[107.527s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib'
+[107.540s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.dylib
+[107.541s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-config.cmake
+[107.541s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-config-version.cmake
+[107.541s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-targets.cmake
+[107.541s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-targets-relwithdebinfo.cmake
+[107.542s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-io.pc
+[107.542s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/CSVStreams.hh
+[107.543s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/DataFrame.hh
+[107.544s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/IOBase.hh
+[107.544s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io.hh
+[107.545s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/profiler/detail/Export.hh
+[107.545s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/profiler/Export.hh
+[107.546s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib
+[107.546s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.dylib
+[107.549s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib
+[107.549s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib'
+[107.562s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.dylib
+[107.562s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-config.cmake
+[107.563s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-config-version.cmake
+[107.563s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets.cmake
+[107.563s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets-relwithdebinfo.cmake
+[107.563s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-profiler.pc
+[107.563s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/libexec/gz/gz-common6/gz_remotery_vis
+[107.564s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis
+[107.564s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/index.html
+[107.564s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code
+[107.564s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/WebSocketConnection.js
+[107.565s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TitleWindow.js
+[107.565s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/DataViewReader.js
+[107.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/SampleWindow.js
+[107.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/Console.js
+[107.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TimelineWindow.js
+[107.567s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/ThreadFrame.js
+[107.567s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TimelineRow.js
+[107.568s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/PixelTimeRange.js
+[107.568s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/Remotery.js
+[107.568s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Styles
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Styles/Remotery.css
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code
+[107.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Convert.js
+[107.570s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Core.js
+[107.570s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/MurmurHash3.js
+[107.570s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Keyboard.js
+[107.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/DOM.js
+[107.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Animation.js
+[107.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/LocalStore.js
+[107.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Bind.js
+[107.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Mouse.js
+[107.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager
+[107.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code
+[107.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/WindowManager.js
+[107.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/ComboBox.js
+[107.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Grid.js
+[107.573s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Window.js
+[107.574s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Treeview.js
+[107.574s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Button.js
+[107.574s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/TreeviewItem.js
+[107.575s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Container.js
+[107.575s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Label.js
+[107.575s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/EditBox.js
+[107.576s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles
+[107.576s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles/WindowManager.css
+[107.577s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz
+[107.577s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common
+[107.577s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Profiler.hh
+[107.578s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ProfilerImpl.hh
+[107.578s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/detail/Export.hh
+[107.578s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/Export.hh
+[107.578s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib
+[107.579s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.dylib
+[107.582s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib
+[107.582s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib'
+[107.595s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.dylib
+[107.595s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-config.cmake
+[107.595s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-config-version.cmake
+[107.595s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-targets.cmake
+[107.596s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-targets-relwithdebinfo.cmake
+[107.596s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-testing.pc
+[107.597s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/AutoLogFixture.hh
+[107.598s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/BazelTestPaths.hh
+[107.598s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/CMakeTestPaths.hh
+[107.598s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/RedirectConsoleStream.hh
+[107.598s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/TestPaths.hh
+[107.599s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/Utils.hh
+[107.599s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/detail/AutoLogFixture.hh
+[107.599s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing.hh
+[107.600s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-config.cmake
+[107.600s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-config-version.cmake
+[107.600s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-targets.cmake
+[107.636s] [100%] Completed 'gz_common_vendor'
+[107.666s] [100%] Built target gz_common_vendor
+[107.677s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor -- -j16 -l16
+[107.678s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor
+[107.842s] -- Install configuration: ""
+[107.842s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor
+[107.842s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz/gz-common6
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz/gz-common6/gz_remotery_vis
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz
+[107.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common.hh
+[107.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common
+[107.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MouseEvent.hh
+[107.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/URI.hh
+[107.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av.hh
+[107.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial.hh
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/detail
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/detail/Export.hh
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/Export.hh
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/Util.hh
+[107.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshExporter.hh
+[107.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/OBJLoader.hh
+[107.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Animation.hh
+[107.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SkeletonAnimation.hh
+[107.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshLoader.hh
+[107.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ffmpeg_inc.hh
+[107.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/KeyEvent.hh
+[107.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SVGLoader.hh
+[107.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Video.hh
+[107.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/DelaunayTriangulation.hh
+[107.848s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Uuid.hh
+[107.848s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Image.hh
+[107.848s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/TemplateHelpers.hh
+[107.848s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io
+[107.849s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/detail
+[107.849s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/detail/Export.hh
+[107.849s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/Export.hh
+[107.849s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/IOBase.hh
+[107.849s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MaterialDensity.hh
+[107.850s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing.hh
+[107.850s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Profiler.hh
+[107.850s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ColladaExporter.hh
+[107.850s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Pbr.hh
+[107.850s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/AudioDecoder.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/Utils.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/RedirectConsoleStream.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/TestPaths.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/BazelTestPaths.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/AutoLogFixture.hh
+[107.851s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/CMakeTestPaths.hh
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail/AutoLogFixture.hh
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail/Export.hh
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/Export.hh
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/NodeAnimation.hh
+[107.852s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail
+[107.853s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail/TemplateHelpers.hh
+[107.853s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail/Export.hh
+[107.853s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Base64.hh
+[107.853s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/config.hh
+[107.853s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MovingWindowFilter.hh
+[107.854s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Console.hh
+[107.854s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshManager.hh
+[107.855s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/NodeTransform.hh
+[107.855s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/AssimpLoader.hh
+[107.855s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/VideoEncoder.hh
+[107.855s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SignalHandler.hh
+[107.856s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Material.hh
+[107.857s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Event.hh
+[107.857s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ColladaLoader.hh
+[107.857s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SubMesh.hh
+[107.858s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics.hh
+[107.858s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/TempDirectory.hh
+[107.858s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/CSVStreams.hh
+[107.858s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/BVHLoader.hh
+[107.859s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Mesh.hh
+[107.859s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Export.hh
+[107.859s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler
+[107.860s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/detail
+[107.860s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/detail/Export.hh
+[107.860s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/Export.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/STLLoader.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/WorkerPool.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/HWVideo.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/detail
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/detail/Export.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/Types.hh
+[107.861s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/Export.hh
+[107.862s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ProfilerImpl.hh
+[107.862s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/EnumIface.hh
+[107.863s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics
+[107.863s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/detail
+[107.863s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/detail/Export.hh
+[107.863s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/Types.hh
+[107.864s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/Export.hh
+[107.864s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SystemPaths.hh
+[107.864s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SingletonT.hh
+[107.865s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Filesystem.hh
+[107.865s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/StringUtils.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/HeightmapData.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/HeightmapUtil.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/detail
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/detail/Export.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/Dem.hh
+[107.866s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/Export.hh
+[107.867s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/ImageHeightmap.hh
+[107.867s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/FlagSet.hh
+[107.867s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Skeleton.hh
+[107.867s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Util.hh
+[107.867s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/KeyFrame.hh
+[107.868s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SkeletonNode.hh
+[107.868s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events.hh
+[107.868s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/DataFrame.hh
+[107.868s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Timer.hh
+[107.868s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Battery.hh
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.6.dylib
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.dylib
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-events.pc
+[107.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-geospatial.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-io.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-profiler.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-av.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-graphics.pc
+[107.870s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-testing.pc
+[107.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.dylib
+[107.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.6.2.1.dylib
+[107.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.6.dylib
+[107.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake
+[107.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events
+[107.872s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-config.cmake
+[107.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-targets-relwithdebinfo.cmake
+[107.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-config-version.cmake
+[107.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-targets.cmake
+[107.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing
+[107.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-targets-relwithdebinfo.cmake
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-config-version.cmake
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-config.cmake
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-targets.cmake
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-targets-relwithdebinfo.cmake
+[107.874s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-targets.cmake
+[107.875s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-config.cmake
+[107.875s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-config-version.cmake
+[107.875s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all
+[107.875s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-targets.cmake
+[107.875s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-config.cmake
+[107.876s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-config-version.cmake
+[107.876s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io
+[107.876s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-targets-relwithdebinfo.cmake
+[107.877s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-config-version.cmake
+[107.877s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-config.cmake
+[107.877s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-targets.cmake
+[107.877s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler
+[107.877s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets-relwithdebinfo.cmake
+[107.878s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets.cmake
+[107.878s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-config.cmake
+[107.879s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-config-version.cmake
+[107.879s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics
+[107.879s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets.cmake
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-config.cmake
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-config-version.cmake
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets-relwithdebinfo.cmake
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets-relwithdebinfo.cmake
+[107.880s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets.cmake
+[107.881s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config.cmake
+[107.881s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config-version.cmake
+[107.881s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av
+[107.881s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-config.cmake
+[107.882s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-targets.cmake
+[107.882s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-targets-relwithdebinfo.cmake
+[107.882s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-config-version.cmake
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.6.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.6.2.1.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.6.2.1.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.6.dylib
+[107.883s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.6.2.1.dylib
+[107.884s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.dylib
+[107.884s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.dylib
+[107.884s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.6.dylib
+[107.884s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.6.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.6.2.1.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.6.2.1.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.6.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.6.dylib
+[107.885s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.6.2.1.dylib
+[107.886s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.6.2.1.dylib
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/index.html
+[107.889s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/WebSocketConnection.js
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TitleWindow.js
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/DataViewReader.js
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/SampleWindow.js
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/Console.js
+[107.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TimelineWindow.js
+[107.891s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/ThreadFrame.js
+[107.891s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TimelineRow.js
+[107.891s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/PixelTimeRange.js
+[107.892s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/Remotery.js
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Styles
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Styles/Remotery.css
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Convert.js
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Core.js
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/MurmurHash3.js
+[107.893s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Keyboard.js
+[107.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/DOM.js
+[107.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Animation.js
+[107.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/LocalStore.js
+[107.895s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Bind.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Mouse.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/WindowManager.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/ComboBox.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Grid.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Window.js
+[107.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Treeview.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Button.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/TreeviewItem.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Container.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Label.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/EditBox.js
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles/WindowManager.css
+[107.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.bat
+[107.898s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.dsv
+[107.899s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.sh
+[107.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.bat
+[107.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.dsv
+[107.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.sh
+[107.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/vendor_packages/gz_common_vendor
+[107.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/gz_common_vendor.dsv
+[107.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/gz_common_vendor.sh
+[107.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/package_run_dependencies/gz_common_vendor
+[107.902s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/parent_prefix_path/gz_common_vendor
+[107.903s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/ament_prefix_path.sh
+[107.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/ament_prefix_path.dsv
+[107.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/path.sh
+[107.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/path.dsv
+[107.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.bash
+[107.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.sh
+[107.906s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.zsh
+[107.906s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.dsv
+[107.906s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/package.dsv
+[107.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/packages/gz_common_vendor
+[107.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/ament_cmake_export_dependencies-extras.cmake
+[107.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendor-extras.cmake
+[107.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendorConfig.cmake
+[107.908s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendorConfig-version.cmake
+[107.908s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/package.xml
+[107.909s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/extra_cmake/lib/cmake/gz-common/gz-common-config.cmake
+[107.909s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/extra_cmake/lib/cmake/gz-common/gz-common-config-version.cmake
+[107.914s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor

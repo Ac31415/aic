@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "aic_control_interfaces/msg/TrajectoryGenerationMode",
+      "fields": [
+        {
+          "name": "mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "aic_control_interfaces/msg/TrajectoryGenerationMode",
+      "hash_string": "RIHS01_0810b77cacbc1e0550a7a6739970c212979fde8ac081085cdde7a8cea44ef06d"
+    }
+  ]
+}

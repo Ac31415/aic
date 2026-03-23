@@ -1,0 +1,241 @@
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found aic_control_interfaces: 0.0.1 (/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/share/aic_control_interfaces/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.7.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_adapter/cmake)
+-- Found sensor_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/sensor_msgs/cmake)
+-- Found ament_cmake_ros_core: 0.14.7 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_ros_core/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter Development NumPy Development.Module Development.Embed
+-- Configuring done (7.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_model_interfaces
+[  2%] Generating type hashes for ROS interfaces
+[  2%] Built target aic_model_interfaces__rosidl_generator_type_description
+[  2%] Built target ament_cmake_python_copy_aic_model_interfaces
+[  5%] Generating C code for ROS interfaces
+[  8%] Building C object CMakeFiles/aic_model_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_model_interfaces/msg/detail/observation__description.c.o
+[ 11%] Building C object CMakeFiles/aic_model_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_model_interfaces/msg/detail/observation__type_support.c.o
+[ 14%] Building C object CMakeFiles/aic_model_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_model_interfaces/msg/detail/observation__functions.c.o
+[ 17%] Linking C shared library libaic_model_interfaces__rosidl_generator_c.dylib
+[ 17%] Built target aic_model_interfaces__rosidl_generator_c
+running egg_info
+creating aic_model_interfaces.egg-info
+writing aic_model_interfaces.egg-info/PKG-INFO
+writing dependency_links to aic_model_interfaces.egg-info/dependency_links.txt
+writing top-level names to aic_model_interfaces.egg-info/top_level.txt
+writing manifest file 'aic_model_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'aic_model_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'aic_model_interfaces.egg-info/SOURCES.txt'
+[ 17%] Built target ament_cmake_python_build_aic_model_interfaces_egg
+[ 20%] Generating C type support dispatch for ROS interfaces
+[ 23%] Building CXX object CMakeFiles/aic_model_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_model_interfaces/msg/observation__type_support.cpp.o
+[ 26%] Linking CXX shared library libaic_model_interfaces__rosidl_typesupport_c.dylib
+[ 26%] Built target aic_model_interfaces__rosidl_typesupport_c
+[ 29%] Generating C introspection for ROS interfaces
+[ 32%] Building C object CMakeFiles/aic_model_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_model_interfaces/msg/detail/observation__type_support.c.o
+[ 35%] Linking C shared library libaic_model_interfaces__rosidl_typesupport_introspection_c.dylib
+[ 35%] Built target aic_model_interfaces__rosidl_typesupport_introspection_c
+[ 38%] Generating C type support for eProsima Fast-RTPS
+[ 41%] Building CXX object CMakeFiles/aic_model_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_model_interfaces/msg/detail/observation__type_support_c.cpp.o
+[ 44%] Linking CXX shared library libaic_model_interfaces__rosidl_typesupport_fastrtps_c.dylib
+[ 44%] Built target aic_model_interfaces__rosidl_typesupport_fastrtps_c
+[ 47%] Generating C++ code for ROS interfaces
+[ 47%] Built target aic_model_interfaces__cpp
+[ 50%] Generating C++ type support dispatch for ROS interfaces
+[ 52%] Building CXX object CMakeFiles/aic_model_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_model_interfaces/msg/observation__type_support.cpp.o
+[ 55%] Linking CXX shared library libaic_model_interfaces__rosidl_typesupport_cpp.dylib
+[ 55%] Built target aic_model_interfaces__rosidl_typesupport_cpp
+[ 58%] Generating C++ introspection for ROS interfaces
+[ 61%] Building CXX object CMakeFiles/aic_model_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_model_interfaces/msg/detail/observation__type_support.cpp.o
+[ 64%] Linking CXX shared library libaic_model_interfaces__rosidl_typesupport_introspection_cpp.dylib
+[ 64%] Built target aic_model_interfaces__rosidl_typesupport_introspection_cpp
+[ 67%] Generating C++ type support for eProsima Fast-RTPS
+[ 70%] Building CXX object CMakeFiles/aic_model_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_model_interfaces/msg/detail/dds_fastrtps/observation__type_support.cpp.o
+[ 73%] Linking CXX shared library libaic_model_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+[ 73%] Built target aic_model_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 73%] Built target aic_model_interfaces
+[ 76%] Generating Python code for ROS interfaces
+[ 76%] Built target aic_model_interfaces__py
+[ 79%] Building C object CMakeFiles/aic_model_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_model_interfaces/msg/_observation_s.c.o
+[ 82%] Linking C shared library libaic_model_interfaces__rosidl_generator_py.dylib
+[ 82%] Built target aic_model_interfaces__rosidl_generator_py
+[ 85%] Building C object CMakeFiles/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[ 88%] Linking C shared module rosidl_generator_py/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[ 88%] Built target aic_model_interfaces_s__rosidl_typesupport_fastrtps_c
+[ 91%] Building C object CMakeFiles/aic_model_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_c.c.o
+[ 94%] Linking C shared module rosidl_generator_py/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_c.so
+[ 94%] Built target aic_model_interfaces_s__rosidl_typesupport_c
+[ 97%] Building C object CMakeFiles/aic_model_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[100%] Linking C shared module rosidl_generator_py/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_introspection_c.so
+[100%] Built target aic_model_interfaces_s__rosidl_typesupport_introspection_c
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/ament_index/resource_index/rosidl_interfaces/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/msg/Observation.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/observation.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_c.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_c.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/observation.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__builder.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_fastrtps_cpp.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_c.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_c.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_c.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_c.dylib'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/include/aic_model_interfaces/aic_model_interfaces/msg/detail/observation__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_introspection_cpp.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_cpp.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_cpp.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_typesupport_cpp.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/pythonpath.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/pythonpath.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces-0.0.1-py3.12.egg-info
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg/_observation.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg/_observation_s.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/_aic_model_interfaces_s.ep.rosidl_typesupport_c.c
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/__init__.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/msg/_observation.py'...
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_fastrtps_c.so'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_introspection_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_introspection_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_introspection_c.so'
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_c.so
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_c.so
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages/aic_model_interfaces/aic_model_interfaces_s__rosidl_typesupport_c.so'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_py.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_py.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/libaic_model_interfaces__rosidl_generator_py.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/msg/Observation.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/msg/Observation.msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/ament_index/resource_index/package_run_dependencies/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/ament_index/resource_index/parent_prefix_path/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/ament_index/resource_index/packages/aic_model_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/export_aic_model_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfacesConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/cmake/aic_model_interfacesConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/share/aic_model_interfaces/package.xml

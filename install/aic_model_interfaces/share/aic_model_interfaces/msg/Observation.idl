@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_model_interfaces/msg/Observation.msg
+// generated code does not contain a copyright notice
+
+#include "aic_control_interfaces/msg/ControllerState.idl"
+#include "geometry_msgs/msg/WrenchStamped.idl"
+#include "sensor_msgs/msg/CameraInfo.idl"
+#include "sensor_msgs/msg/Image.idl"
+#include "sensor_msgs/msg/JointState.idl"
+
+module aic_model_interfaces {
+  module msg {
+    struct Observation {
+      sensor_msgs::msg::Image left_image;
+
+      sensor_msgs::msg::CameraInfo left_camera_info;
+
+      sensor_msgs::msg::Image center_image;
+
+      sensor_msgs::msg::CameraInfo center_camera_info;
+
+      sensor_msgs::msg::Image right_image;
+
+      sensor_msgs::msg::CameraInfo right_camera_info;
+
+      geometry_msgs::msg::WrenchStamped wrist_wrench;
+
+      sensor_msgs::msg::JointState joint_states;
+
+      aic_control_interfaces::msg::ControllerState controller_state;
+    };
+  };
+};

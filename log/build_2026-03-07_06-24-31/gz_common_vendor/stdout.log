@@ -1,0 +1,747 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+-- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+-- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+-- Found gz_math_vendor: 0.2.5 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor/share/gz_math_vendor/cmake)
+-- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+-- Configuring done (2.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor
+[ 12%] Creating directories for 'gz_common_vendor'
+[ 25%] Performing download step for 'gz_common_vendor'
+=== ./gz_common_vendor (git) ===
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor/.git/
+
+From https://github.com/gazebosim/gz-common
+ * [new tag]         gz-common6_6.2.1 -> gz-common6_6.2.1
+Note: switching to 'gz-common6_6.2.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 8ce782d Prepare for 6.2.1 release (#723)
+
+[ 37%] No update_disconnected step for 'gz_common_vendor'
+[ 50%] No patch_disconnected step for 'gz_common_vendor'
+[ 62%] Performing configure step for 'gz_common_vendor'
+loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-config.cmake
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-common6 version 6.2.1
+-- Operating system is Apple MacOS X
+-- 
+
+-- ====== Finding Dependencies ======
+-- Looking for gz-math8 -- found version 8.2.0
+-- Searching for dependencies of gz-math8
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Searching for dependencies of gz-utils3
+-- Looking for gz-math8 - found
+
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Searching for dependencies of gz-utils3
+-- Searching for <gz-utils3> component [log]
+-- Looking for gz-utils3-log -- found version 3.1.1
+-- Searching for dependencies of gz-utils3-log
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for gz-utils3 - found
+
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 11.0.0
+-- Looking for tinyxml2 - found
+
+-- Found UUID: TRUE
+-- Looking for uuid - found
+
+-- Found FreeImage: TRUE (Required is at least version "3.9")
+-- Looking for FreeImage - found
+
+-- Found GDAL: /opt/homebrew/Cellar/gdal/3.11.4/lib/libgdal.dylib (found suitable version "3.11.4", minimum required is "3.0")
+-- Looking for GDAL - found
+
+-- Checking for module 'libswscale'
+--   Found libswscale, version 9.1.100
+-- Found SWSCALE: TRUE
+-- Looking for libswscale - found
+
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice, version 62.1.100
+-- Found AVDEVICE: TRUE (Required is at least version "56.4.100")
+-- Looking for libavdevice - found
+
+-- Checking for module 'libavformat'
+--   Found libavformat, version 62.3.100
+-- Found AVFORMAT: TRUE
+-- Looking for libavformat - found
+
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 62.11.100
+-- Found AVCODEC: TRUE
+-- Looking for libavcodec - found
+
+-- Checking for module 'libavutil'
+--   Found libavutil, version 60.8.100
+-- Found AVUTIL: TRUE
+-- Looking for libavutil - found
+
+-- Found GzAssimp: TRUE (found version "5.4.3")
+-- Looking for assimp - found
+
+-- -------------------------------------------
+
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Configuring library: gz-common6
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-av
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-events
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-graphics
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-geospatial
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-io
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-profiler
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-common6-testing
+-- Testing is disabled -- skipping UNIT tests
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (23.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/src/gz_common_vendor-build
+[ 75%] Performing build step for 'gz_common_vendor'
+[  1%] Building CXX object src/CMakeFiles/gz-common6.dir/Base64.cc.o
+[  3%] Building CXX object src/CMakeFiles/gz-common6.dir/WorkerPool.cc.o
+[  4%] Building CXX object src/CMakeFiles/gz-common6.dir/Uuid.cc.o
+[  6%] Building CXX object src/CMakeFiles/gz-common6.dir/Util.cc.o
+[  7%] Building CXX object src/CMakeFiles/gz-common6.dir/URI.cc.o
+[  9%] Building CXX object src/CMakeFiles/gz-common6.dir/Timer.cc.o
+[ 10%] Building CXX object src/CMakeFiles/gz-common6.dir/TempDirectory.cc.o
+[ 12%] Building CXX object src/CMakeFiles/gz-common6.dir/SystemPaths.cc.o
+[ 13%] Building CXX object src/CMakeFiles/gz-common6.dir/StringUtils.cc.o
+[ 15%] Building CXX object src/CMakeFiles/gz-common6.dir/SignalHandler.cc.o
+[ 16%] Building CXX object src/CMakeFiles/gz-common6.dir/MaterialDensity.cc.o
+[ 18%] Building CXX object src/CMakeFiles/gz-common6.dir/Filesystem.cc.o
+[ 19%] Building CXX object src/CMakeFiles/gz-common6.dir/DirIter.cc.o
+[ 21%] Building CXX object src/CMakeFiles/gz-common6.dir/Console.cc.o
+[ 22%] Building CXX object src/CMakeFiles/gz-common6.dir/Battery.cc.o
+[ 24%] Linking CXX shared library ../lib/libgz-common6.dylib
+[ 24%] Built target gz-common6
+[ 25%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/AudioDecoder.cc.o
+[ 27%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/VideoEncoder.cc.o
+[ 28%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/Video.cc.o
+[ 30%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/Util.cc.o
+[ 31%] Building CXX object av/src/CMakeFiles/gz-common6-av.dir/HWEncoder.cc.o
+[ 33%] Linking CXX shared library ../../lib/libgz-common6-av.dylib
+[ 33%] Built target gz-common6-av
+[ 34%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/BazelTestPaths.cc.o
+[ 36%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/Utils.cc.o
+[ 37%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/TestPaths.cc.o
+[ 39%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/RedirectConsoleStream.cc.o
+[ 40%] Building CXX object testing/src/CMakeFiles/gz-common6-testing.dir/CMakeTestPaths.cc.o
+[ 42%] Linking CXX shared library ../../lib/libgz-common6-testing.dylib
+[ 42%] Built target gz-common6-testing
+[ 43%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/Profiler.cc.o
+[ 45%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/RemoteryProfilerImpl.cc.o
+[ 46%] Building CXX object profiler/src/CMakeFiles/gz-common6-profiler.dir/Remotery/lib/RemoteryMetal.mm.o
+[ 48%] Building C object profiler/src/CMakeFiles/gz-common6-profiler.dir/Remotery/lib/Remotery.c.o
+[ 50%] Linking CXX shared library ../../lib/libgz-common6-profiler.dylib
+[ 50%] Built target gz-common6-profiler
+[ 51%] Building CXX object io/src/CMakeFiles/gz-common6-io.dir/CSVStreams.cc.o
+[ 53%] Linking CXX shared library ../../lib/libgz-common6-io.dylib
+[ 53%] Built target gz-common6-io
+[ 54%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Animation.cc.o
+[ 56%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/OBJLoader.cc.o
+[ 57%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Pbr.cc.o
+[ 59%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/STLLoader.cc.o
+[ 60%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SVGLoader.cc.o
+[ 62%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Skeleton.cc.o
+[ 63%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SkeletonAnimation.cc.o
+[ 65%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SkeletonNode.cc.o
+[ 66%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/SubMesh.cc.o
+[ 68%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/NodeTransform.cc.o
+[ 69%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/NodeAnimation.cc.o
+[ 71%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/MeshManager.cc.o
+[ 72%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/MeshExporter.cc.o
+[ 74%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Mesh.cc.o
+[ 75%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Material.cc.o
+[ 77%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/KeyFrame.cc.o
+[ 78%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/Image.cc.o
+[ 80%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/DelaunayTriangulation.cc.o
+[ 81%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/ColladaLoader.cc.o
+[ 83%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/ColladaExporter.cc.o
+[ 84%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/BVHLoader.cc.o
+[ 86%] Building CXX object graphics/src/CMakeFiles/gz-common6-graphics.dir/AssimpLoader.cc.o
+[ 87%] Linking CXX shared library ../../lib/libgz-common6-graphics.dylib
+[ 87%] Built target gz-common6-graphics
+[ 89%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/Event.cc.o
+[ 90%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/MouseEvent.cc.o
+[ 92%] Building CXX object events/src/CMakeFiles/gz-common6-events.dir/KeyEvent.cc.o
+[ 93%] Linking CXX shared library ../../lib/libgz-common6-events.dylib
+[ 93%] Built target gz-common6-events
+[ 95%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/Dem.cc.o
+[ 96%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/ImageHeightmap.cc.o
+[ 98%] Building CXX object geospatial/src/CMakeFiles/gz-common6-geospatial.dir/HeightmapUtil.cc.o
+[100%] Linking CXX shared library ../../lib/libgz-common6-geospatial.dylib
+[100%] Built target gz-common6-geospatial
+[ 87%] Performing install step for 'gz_common_vendor'
+[ 24%] Built target gz-common6
+[ 33%] Built target gz-common6-av
+[ 42%] Built target gz-common6-testing
+[ 50%] Built target gz-common6-profiler
+[ 53%] Built target gz-common6-io
+[ 87%] Built target gz-common6-graphics
+[ 93%] Built target gz-common6-events
+[100%] Built target gz-common6-geospatial
+Install the project...
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6/gz-common6-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/detail/TemplateHelpers.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Base64.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Battery.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Console.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/EnumIface.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Filesystem.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/FlagSet.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MaterialDensity.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MovingWindowFilter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SignalHandler.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SingletonT.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/StringUtils.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SystemPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/TempDirectory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/TemplateHelpers.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Timer.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/URI.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Util.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Uuid.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/WorkerPool.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/config.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-av.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-av/gz-common6-av-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-av.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av/Util.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/AudioDecoder.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/HWVideo.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Video.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/VideoEncoder.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ffmpeg_inc.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/av.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-events.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-events/gz-common6-events-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-events.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events/Types.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Event.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/KeyEvent.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MouseEvent.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/events.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-graphics.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-graphics.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics/Types.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Animation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/AssimpLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/BVHLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ColladaExporter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ColladaLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/DelaunayTriangulation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Image.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/KeyFrame.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Material.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Mesh.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshExporter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/MeshManager.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/NodeAnimation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/NodeTransform.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/OBJLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Pbr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/STLLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SVGLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Skeleton.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SkeletonAnimation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SkeletonNode.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/SubMesh.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/graphics.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-geospatial.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-geospatial.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/Dem.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/HeightmapData.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/HeightmapUtil.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial/ImageHeightmap.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/geospatial.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-io.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-io/gz-common6-io-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-io.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/CSVStreams.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/DataFrame.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/IOBase.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/io.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/profiler/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/profiler/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-profiler.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-profiler.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/libexec/gz/gz-common6/gz_remotery_vis
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/index.html
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/WebSocketConnection.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TitleWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/DataViewReader.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/SampleWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/Console.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TimelineWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/ThreadFrame.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/TimelineRow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/PixelTimeRange.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Code/Remotery.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Styles
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/Styles/Remotery.css
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Convert.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Core.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/MurmurHash3.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Keyboard.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/DOM.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Animation.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/LocalStore.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Bind.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Mouse.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/WindowManager.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/ComboBox.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Grid.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Window.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Treeview.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Button.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/TreeviewItem.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Container.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Label.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/EditBox.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles/WindowManager.css
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/Profiler.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/ProfilerImpl.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/libgz-common6-testing.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-testing/gz-common6-testing-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/pkgconfig/gz-common6-testing.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/AutoLogFixture.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/BazelTestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/CMakeTestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/RedirectConsoleStream.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/TestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/Utils.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing/detail/AutoLogFixture.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/include/gz/common6/gz/common/testing.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_common_vendor/gz_common_vendor-prefix/install/lib/cmake/gz-common6-all/gz-common6-all-targets.cmake
+[100%] Completed 'gz_common_vendor'
+[100%] Built target gz_common_vendor
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz/gz-common6
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/libexec/gz/gz-common6/gz_remotery_vis
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MouseEvent.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/URI.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/av/Util.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshExporter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/OBJLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Animation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SkeletonAnimation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ffmpeg_inc.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/KeyEvent.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SVGLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Video.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/DelaunayTriangulation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Uuid.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Image.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/TemplateHelpers.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/IOBase.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MaterialDensity.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Profiler.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ColladaExporter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Pbr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/AudioDecoder.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/Utils.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/RedirectConsoleStream.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/TestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/BazelTestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/AutoLogFixture.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/CMakeTestPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail/AutoLogFixture.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/testing/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/NodeAnimation.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail/TemplateHelpers.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Base64.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/config.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MovingWindowFilter.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Console.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/MeshManager.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/NodeTransform.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/AssimpLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/VideoEncoder.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SignalHandler.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Material.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Event.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ColladaLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SubMesh.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/TempDirectory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/CSVStreams.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/BVHLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Mesh.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/profiler/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/STLLoader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/WorkerPool.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/HWVideo.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/Types.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/ProfilerImpl.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/EnumIface.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/Types.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/graphics/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SystemPaths.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SingletonT.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Filesystem.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/StringUtils.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/io.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/HeightmapData.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/HeightmapUtil.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/Dem.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/geospatial/ImageHeightmap.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/FlagSet.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Skeleton.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Util.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/KeyFrame.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/SkeletonNode.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/events.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/DataFrame.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Timer.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/include/gz/common6/gz/common/Battery.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-events.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-geospatial.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-io.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-profiler.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-av.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-graphics.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/pkgconfig/gz-common6-testing.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-events/gz-common6-events-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-testing/gz-common6-testing-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6/gz-common6-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-all/gz-common6-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-io/gz-common6-io-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-profiler/gz-common6-profiler-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-graphics/gz-common6-graphics-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-geospatial/gz-common6-geospatial-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/cmake/gz-common6-av/gz-common6-av-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-testing.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-av.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-events.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-io.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-geospatial.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-profiler.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.6.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/lib/libgz-common6-graphics.6.2.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/index.html
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/WebSocketConnection.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TitleWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/DataViewReader.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/SampleWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/Console.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TimelineWindow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/ThreadFrame.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/TimelineRow.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/PixelTimeRange.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Code/Remotery.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Styles
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/Styles/Remotery.css
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Convert.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Core.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/MurmurHash3.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Keyboard.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/DOM.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Animation.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/LocalStore.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Bind.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/Core/Code/Mouse.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/WindowManager.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/ComboBox.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Grid.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Window.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Treeview.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Button.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/TreeviewItem.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Container.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/Label.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Code/EditBox.js
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/share/gz/gz-common6/profiler_vis/extern/BrowserLib/WindowManager/Styles/WindowManager.css
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.bat
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package_cmake_prefix.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.bat
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/vendor_package.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/vendor_packages/gz_common_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/gz_common_vendor.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/gz_common_vendor.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/package_run_dependencies/gz_common_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/parent_prefix_path/gz_common_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/ament_index/resource_index/packages/gz_common_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendor-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendorConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/cmake/gz_common_vendorConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/share/gz_common_vendor/package.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/extra_cmake/lib/cmake/gz-common/gz-common-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_common_vendor/opt/gz_common_vendor/extra_cmake/lib/cmake/gz-common/gz-common-config-version.cmake

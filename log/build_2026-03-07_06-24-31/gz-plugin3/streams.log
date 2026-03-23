@@ -1,0 +1,155 @@
+[0.102s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-plugin -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3
+[0.542s] -- The C compiler identification is Clang 19.1.7
+[0.864s] -- The CXX compiler identification is Clang 19.1.7
+[0.931s] -- Detecting C compiler ABI info
+[1.396s] -- Detecting C compiler ABI info - done
+[1.396s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.396s] -- Detecting C compile features
+[1.397s] -- Detecting C compile features - done
+[1.410s] -- Detecting CXX compiler ABI info
+[1.816s] -- Detecting CXX compiler ABI info - done
+[1.827s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.828s] -- Detecting CXX compile features
+[1.828s] -- Detecting CXX compile features - done
+[1.863s] -- gz-plugin3 version 3.1.0
+[1.864s] -- Operating system is Apple MacOS X
+[1.866s] -- 
+[1.866s] 
+[1.867s] -- ====== Finding Dependencies ======
+[1.993s] -- Looking for dlfcn.h - found
+[2.002s] -- Looking for libdl - found
+[2.004s] -- Found DL: TRUE
+[2.005s] -- Looking for libdl - found
+[2.006s] 
+[2.024s] -- Looking for gz-utils3 -- found version 3.1.1
+[2.024s] -- Searching for dependencies of gz-utils3
+[2.025s] -- Searching for <gz-utils3> component [cli]
+[2.043s] -- Looking for gz-utils3-cli -- found version 3.1.1
+[2.044s] -- Searching for dependencies of gz-utils3-cli
+[2.044s] -- Looking for gz-utils3 - found
+[2.044s] 
+[7.151s] -- 
+[7.151s] -- Searching for host SSE information
+[7.397s] -- Could not find hardware support for SSE2 on this machine.
+[7.397s] -- Could not find hardware support for SSE3 on this machine.
+[7.397s] -- Could not find hardware support for SSSE3 on this machine.
+[7.397s] -- Could not find hardware support for SSE4.1 on this machine.
+[7.397s] -- Could not find hardware support for SSE4.2 on this machine.
+[7.397s] -- SSE4 disabled.
+[7.397s] --
+[7.927s] -- Configuring library: gz-plugin3
+[7.931s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+[8.421s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+[8.424s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+[8.852s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+[8.853s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+[9.296s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+[9.300s] -- Testing is disabled -- skipping UNIT tests
+[9.304s] -- Configuring library: gz-plugin3-loader
+[9.308s] -- Testing is disabled -- skipping UNIT tests
+[9.358s] -- Configuring library: gz-plugin3-register
+[9.601s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+[9.605s] -- Adding codecheck target
+[9.605s] -- Build configuration successful
+[9.605s] -- Build type: RelWithDebInfo
+[9.605s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3
+[9.634s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[9.666s] -- Configuring done (9.4s)
+[9.827s] -- Generating done (0.2s)
+[9.837s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3
+[9.848s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-plugin -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3
+[9.849s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3 -- -j16 -l16
+[10.262s] [  6%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/EnablePluginFromThis.cc.o
+[11.680s] [ 13%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/utility.cc.o
+[12.886s] [ 20%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/WeakPluginPtr.cc.o
+[14.338s] [ 26%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Plugin.cc.o
+[16.043s] [ 33%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Info.cc.o
+[17.080s] [ 40%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Factory.cc.o
+[18.577s] [ 46%] Linking CXX shared library ../lib/libgz-plugin3.dylib
+[18.773s] [ 46%] Built target gz-plugin3
+[18.814s] [ 53%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/Loader.cc.o
+[21.634s] [ 60%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/detail/StaticRegistry.cc.o
+[23.329s] [ 66%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/detail/Registry.cc.o
+[25.527s] [ 73%] Linking CXX shared library ../lib/libgz-plugin3-loader.dylib
+[25.716s] [ 73%] Built target gz-plugin3-loader
+[25.870s] [ 80%] Building CXX object loader/src/cmd/CMakeFiles/gz.dir/gz.cc.o
+[26.918s] [ 86%] Linking CXX static library ../../../lib/libgz.a
+[27.072s] [ 86%] Built target gz
+[27.118s] [ 93%] Building CXX object loader/src/cmd/CMakeFiles/gz-plugin.dir/plugin_main.cc.o
+[35.790s] [100%] Linking CXX executable ../../../bin/gz-plugin
+[35.962s] [100%] Built target gz-plugin
+[35.983s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3 -- -j16 -l16
+[35.984s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3
+[36.146s] -- Install configuration: "RelWithDebInfo"
+[36.150s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Export.hh
+[36.152s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Export.hh
+[36.152s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.1.0.dylib
+[36.152s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.dylib
+[36.164s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.1.0.dylib
+[36.166s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.3.1.0.dylib'
+[36.205s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3.dylib
+[36.205s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3/gz-plugin3-config.cmake
+[36.205s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3/gz-plugin3-config-version.cmake
+[36.209s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3/gz-plugin3-targets.cmake
+[36.210s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3/gz-plugin3-targets-relwithdebinfo.cmake
+[36.212s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/pkgconfig/gz-plugin3.pc
+[36.212s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Factory.hh
+[36.213s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Plugin.hh
+[36.213s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/PluginPtr.hh
+[36.214s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/SpecializedPlugin.hh
+[36.214s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/utility.hh
+[36.214s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/EnablePluginFromThis.hh
+[36.214s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Factory.hh
+[36.214s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Info.hh
+[36.215s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Plugin.hh
+[36.217s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/PluginPtr.hh
+[36.217s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/SpecializedPlugin.hh
+[36.217s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/SpecializedPluginPtr.hh
+[36.218s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/WeakPluginPtr.hh
+[36.218s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/utility.hh
+[36.218s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin.hh
+[36.218s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/config.hh
+[36.223s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/loader/detail/Export.hh
+[36.225s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/loader/Export.hh
+[36.225s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.1.0.dylib
+[36.227s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.dylib
+[36.231s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.1.0.dylib
+[36.233s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.3.1.0.dylib'
+[36.264s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/libgz-plugin3-loader.dylib
+[36.265s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config.cmake
+[36.265s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config-version.cmake
+[36.268s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets.cmake
+[36.268s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets-relwithdebinfo.cmake
+[36.268s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/pkgconfig/gz-plugin3-loader.pc
+[36.270s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3
+[36.270s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz
+[36.270s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin
+[36.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Loader.hh
+[36.272s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail
+[36.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Loader.hh
+[36.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/StaticRegistry.hh
+[36.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Registry.hh
+[36.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/share/gz/plugin3.yaml
+[36.273s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/share/gz/gz3.completion.d/plugin3.bash_completion.sh
+[36.276s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/libexec/gz/plugin3/gz-plugin
+[36.285s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/libexec/gz/plugin3/gz-plugin
+[36.285s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/libexec/gz/plugin3/gz-plugin'
+[36.309s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/ruby/gz/cmdplugin3.rb
+[36.310s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-register/gz-plugin3-register-config.cmake
+[36.310s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-register/gz-plugin3-register-config-version.cmake
+[36.311s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-register/gz-plugin3-register-targets.cmake
+[36.312s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/pkgconfig/gz-plugin3-register.pc
+[36.312s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3
+[36.312s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz
+[36.313s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin
+[36.313s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/RegisterStatic.hh
+[36.313s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/Register.hh
+[36.314s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail
+[36.314s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Common.hh
+[36.314s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/RegisterStatic.hh
+[36.314s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/detail/Register.hh
+[36.315s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/include/gz/plugin3/gz/plugin/RegisterMore.hh
+[36.315s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-all/gz-plugin3-all-config.cmake
+[36.315s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-all/gz-plugin3-all-config-version.cmake
+[36.315s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-plugin3/lib/cmake/gz-plugin3-all/gz-plugin3-all-targets.cmake
+[36.353s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin:${PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/pkgconfig:/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-plugin3

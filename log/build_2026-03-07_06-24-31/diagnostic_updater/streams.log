@@ -1,0 +1,143 @@
+[0.067s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/diagnostic_updater -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater
+[0.555s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.555s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.556s]   CMake.
+[0.556s] 
+[0.556s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.556s]   to tell CMake that the project requires at least <min> but has been updated
+[0.556s]   to work with policies introduced by <max> or earlier.
+[0.556s] 
+[0.556s] 
+[1.389s] -- The C compiler identification is Clang 19.1.7
+[1.776s] -- The CXX compiler identification is Clang 19.1.7
+[1.883s] -- Detecting C compiler ABI info
+[2.636s] -- Detecting C compiler ABI info - done
+[2.636s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[2.636s] -- Detecting C compile features
+[2.636s] -- Detecting C compile features - done
+[2.636s] -- Detecting CXX compiler ABI info
+[2.935s] -- Detecting CXX compiler ABI info - done
+[2.935s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.935s] -- Detecting CXX compile features
+[2.935s] -- Detecting CXX compile features - done
+[2.936s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[3.195s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[5.203s] -- Found ament_cmake_ros: 0.14.7 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_ros/cmake)
+[5.806s] -- Found diagnostic_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/diagnostic_msgs/cmake)
+[7.019s] -- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[7.400s] -- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[7.932s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.240s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.242s] -- Found rclcpp: 29.5.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclcpp/cmake)
+[9.387s] -- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[9.480s] -- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[12.635s] -- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+[12.794s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[13.284s] -- Found rclpy: 9.1.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclpy/cmake)
+[13.289s] CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[13.289s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[13.289s]   with modern CMake targets instead.  Try replacing this call with:
+[13.289s] 
+[13.289s]     target_link_libraries(diagnostic_updater PUBLIC
+[13.289s]       ${diagnostic_msgs_TARGETS}
+[13.289s]       rclcpp::rclcpp
+[13.289s]     )
+[13.289s] 
+[13.290s] Call Stack (most recent call first):
+[13.290s]   CMakeLists.txt:31 (ament_target_dependencies)
+[13.290s] 
+[13.290s] 
+[13.290s] CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[13.290s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[13.290s]   with modern CMake targets instead.  Try replacing this call with:
+[13.290s] 
+[13.290s]     target_link_libraries(example PUBLIC
+[13.290s]       ${diagnostic_msgs_TARGETS}
+[13.290s]       ${std_msgs_TARGETS}
+[13.290s]       rclcpp::rclcpp
+[13.290s]     )
+[13.291s] 
+[13.291s] Call Stack (most recent call first):
+[13.291s]   CMakeLists.txt:48 (ament_target_dependencies)
+[13.291s] 
+[13.291s] 
+[13.851s] -- Configuring done (13.5s)
+[14.069s] -- Generating done (0.2s)
+[14.101s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater
+[14.104s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/diagnostic_updater -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater
+[14.110s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater -- -j16 -l16
+[14.637s] [ 25%] Building CXX object CMakeFiles/diagnostic_updater.dir/src/diagnostic_updater.cpp.o
+[14.653s] [ 25%] Built target ament_cmake_python_copy_diagnostic_updater
+[15.448s] running egg_info
+[15.463s] creating diagnostic_updater.egg-info
+[15.468s] writing diagnostic_updater.egg-info/PKG-INFO
+[15.468s] writing dependency_links to diagnostic_updater.egg-info/dependency_links.txt
+[15.468s] writing top-level names to diagnostic_updater.egg-info/top_level.txt
+[15.468s] writing manifest file 'diagnostic_updater.egg-info/SOURCES.txt'
+[15.559s] reading manifest file 'diagnostic_updater.egg-info/SOURCES.txt'
+[15.559s] writing manifest file 'diagnostic_updater.egg-info/SOURCES.txt'
+[15.623s] [ 25%] Built target ament_cmake_python_build_diagnostic_updater_egg
+[25.016s] [ 50%] Linking CXX shared library libdiagnostic_updater.dylib
+[25.138s] [ 50%] Built target diagnostic_updater
+[25.193s] [ 75%] Building CXX object CMakeFiles/example.dir/src/example.cpp.o
+[32.506s] [100%] Linking CXX executable example
+[32.633s] [100%] Built target example
+[32.649s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater -- -j16 -l16
+[32.655s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater
+[32.840s] -- Install configuration: ""
+[32.840s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/libdiagnostic_updater.dylib
+[32.841s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/pythonpath.sh
+[32.842s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/pythonpath.dsv
+[32.843s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater-4.2.2-py3.12.egg-info
+[32.844s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater-4.2.2-py3.12.egg-info/PKG-INFO
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater-4.2.2-py3.12.egg-info/SOURCES.txt
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater-4.2.2-py3.12.egg-info/top_level.txt
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater-4.2.2-py3.12.egg-info/dependency_links.txt
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_update_functions.py
+[32.845s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/__init__.py
+[32.846s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_diagnostic_status_wrapper.py
+[32.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_publisher.py
+[32.847s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/example.py
+[32.848s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_diagnostic_updater.py
+[32.928s] Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/__init__.py'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_diagnostic_status_wrapper.py'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_diagnostic_updater.py'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_publisher.py'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/_update_functions.py'...
+[32.928s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages/diagnostic_updater/example.py'...
+[32.939s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example.py
+[32.940s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example
+[32.947s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example
+[32.958s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example'
+[32.995s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include
+[32.995s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include/diagnostic_updater
+[32.995s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include/diagnostic_updater/diagnostic_updater.hpp
+[32.997s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include/diagnostic_updater/update_functions.hpp
+[32.998s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include/diagnostic_updater/diagnostic_status_wrapper.hpp
+[32.998s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/include/diagnostic_updater/publisher.hpp
+[32.999s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/library_path.sh
+[32.999s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/library_path.dsv
+[32.999s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/ament_index/resource_index/package_run_dependencies/diagnostic_updater
+[33.001s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/ament_index/resource_index/parent_prefix_path/diagnostic_updater
+[33.002s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/ament_prefix_path.sh
+[33.002s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/ament_prefix_path.dsv
+[33.003s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/path.sh
+[33.006s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/environment/path.dsv
+[33.006s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/local_setup.bash
+[33.006s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/local_setup.sh
+[33.007s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/local_setup.zsh
+[33.007s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/local_setup.dsv
+[33.008s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/package.dsv
+[33.008s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/ament_index/resource_index/packages/diagnostic_updater
+[33.009s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterTargetsExport.cmake
+[33.009s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterTargetsExport-noconfig.cmake
+[33.009s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_targets-extras.cmake
+[33.010s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.010s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_libraries-extras.cmake
+[33.010s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/ament_cmake_export_dependencies-extras.cmake
+[33.011s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterConfig.cmake
+[33.015s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake/diagnostic_updaterConfig-version.cmake
+[33.015s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/package.xml
+[33.020s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_updater

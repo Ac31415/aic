@@ -1,0 +1,25 @@
+-- Install configuration: ""
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch/aic_mujoco_bringup.launch.py
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_robot.xml
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_world.xml
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/scene.xml
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/add_cable_plugin.py
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/view_scene.py
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/load_aic_world.py
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/package_run_dependencies/aic_mujoco
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/parent_prefix_path/aic_mujoco
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.sh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.dsv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.sh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.dsv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.bash
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.sh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.zsh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.dsv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.dsv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/packages/aic_mujoco
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig.cmake
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig-version.cmake
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.xml

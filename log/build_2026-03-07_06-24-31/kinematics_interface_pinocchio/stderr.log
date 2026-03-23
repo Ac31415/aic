@@ -1,0 +1,34 @@
+CMake Warning (dev) at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:166 (find_dependency)
+  CMakeLists.txt:18 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/hpp-fcl/hpp-fclConfig.cmake:4 (message):
+  Please update your CMake from 'hpp-fcl' to 'coal', or define
+  COAL_DISABLE_HPP_FCL_WARNINGS
+Call Stack (most recent call first):
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:167 (find_dependency)
+  CMakeLists.txt:18 (find_package)
+
+
+CMake Warning (dev) at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package):
+  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+  --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/coal/coalConfig.cmake:154 (find_dependency)
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/hpp-fcl/hpp-fclConfig.cmake:10 (find_package)
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)
+  /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:167 (find_dependency)
+  CMakeLists.txt:18 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/lib/libkinematics_interface_pinocchio.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/lib/libkinematics_interface_pinocchio.dylib'

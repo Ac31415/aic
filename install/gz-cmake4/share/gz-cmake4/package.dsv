@@ -1,0 +1,9 @@
+source;share/gz-cmake4/hook/cmake_prefix_path.ps1
+source;share/gz-cmake4/hook/cmake_prefix_path.dsv
+source;share/gz-cmake4/hook/cmake_prefix_path.sh
+source;share/gz-cmake4/hook/pkg_config.ps1
+source;share/gz-cmake4/hook/pkg_config.dsv
+source;share/gz-cmake4/hook/pkg_config.sh
+source;share/gz-cmake4/hook/pkg_config_path.ps1
+source;share/gz-cmake4/hook/pkg_config_path.dsv
+source;share/gz-cmake4/hook/pkg_config_path.sh

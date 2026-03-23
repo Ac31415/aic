@@ -1,0 +1,155 @@
+[0.303s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_assets -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets
+[0.520s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.521s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.521s]   CMake.
+[0.521s] 
+[0.521s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.521s]   to tell CMake that the project requires at least <min> but has been updated
+[0.521s]   to work with policies introduced by <max> or earlier.
+[0.521s] 
+[0.521s] 
+[1.354s] -- The C compiler identification is Clang 19.1.7
+[1.715s] -- The CXX compiler identification is Clang 19.1.7
+[1.808s] -- Detecting C compiler ABI info
+[2.163s] -- Detecting C compiler ABI info - done
+[2.588s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[2.588s] -- Detecting C compile features
+[2.589s] -- Detecting C compile features - done
+[2.589s] -- Detecting CXX compiler ABI info
+[2.603s] -- Detecting CXX compiler ABI info - done
+[2.603s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.604s] -- Detecting CXX compile features
+[2.604s] -- Detecting CXX compile features - done
+[2.898s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[3.056s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[5.022s] -- Configuring done (4.6s)
+[5.067s] -- Generating done (0.0s)
+[5.074s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets
+[5.081s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_assets -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets
+[5.087s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets -- -j16 -l16
+[5.387s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets -- -j16 -l16
+[5.388s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets
+[5.756s] -- Install configuration: ""
+[5.757s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/environment/aic_assets.dsv
+[5.758s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models
+[5.759s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Module
+[5.759s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Module/model.sdf
+[5.760s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Module/sfp_module_visual.glb
+[6.094s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Module/model.config
+[6.095s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_cable
+[6.096s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_cable/model.sdf
+[6.097s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_cable/model.config
+[6.099s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount
+[6.099s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount/nic_card_visual.glb
+[6.551s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount/model.sdf
+[6.554s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount/nic_card_mount_visual.glb
+[6.565s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount/nic_card_mount_macro.xacro
+[6.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card Mount/model.config
+[6.566s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Camera Mount
+[6.569s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Camera Mount/cam_mount_macro.xacro
+[6.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Camera Mount/model.sdf
+[6.571s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Camera Mount/model.config
+[6.572s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Camera Mount/cam_mount_visual.glb
+[6.582s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure Walls
+[6.582s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure Walls/model.sdf
+[6.583s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure Walls/model.config
+[6.584s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure Walls/enclosure_walls_visual.glb
+[6.586s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Port
+[6.586s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Port/sc_port_macro.xacro
+[6.587s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Port/model.sdf
+[6.587s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Port/sc_port_visual.glb
+[6.815s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Port/model.config
+[6.815s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated
+[6.816s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated/model.sdf
+[6.817s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated/model.config
+[6.817s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure
+[6.817s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure/model.sdf
+[6.817s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure/enclosure_visual.glb
+[6.903s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure/enclosurewalls_visual.glb
+[6.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure/model.config
+[6.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Enclosure/light_visual.glb
+[6.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Plug
+[6.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Plug/model.sdf
+[6.906s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Plug/lc_plug_visual.glb
+[7.051s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Plug/model.config
+[7.055s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Mount
+[7.055s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Mount/model.sdf
+[7.057s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Mount/lc_mount_macro.xacro
+[7.057s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Mount/model.config
+[7.060s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/LC Mount/lc_mount_visual.glb
+[7.063s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable_reversed
+[7.063s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable_reversed/model.sdf
+[7.064s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable_reversed/model.config
+[7.065s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E
+[7.065s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/model.sdf
+[7.066s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/robotiq_hande.ros2_control.xacro
+[7.066s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/robotiq_hande_macro.xacro
+[7.067s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/model.config
+[7.069s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/hande_base_visual.glb
+[7.079s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Robotiq Hand-E/hande_finger_visual.glb
+[7.087s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Plug
+[7.087s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Plug/model.sdf
+[7.089s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Plug/sc_plug_visual.glb
+[7.253s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Plug/model.config
+[7.254s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_sc_cable
+[7.255s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_sc_cable/model.sdf
+[7.258s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/lc_sc_cable/model.config
+[7.258s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card
+[7.259s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card/nic_card_visual.glb
+[7.555s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card/model.sdf
+[7.555s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/NIC Card/model.config
+[7.555s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Basler Camera
+[7.555s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Basler Camera/basler_camera_macro.xacro
+[7.557s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Basler Camera/basler_cam_visual.glb
+[7.597s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Basler Camera/model.sdf
+[7.597s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Basler Camera/model.config
+[7.597s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated_reversed
+[7.597s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated_reversed/model.sdf
+[7.601s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/cable_base_c_rotated_reversed/model.config
+[7.601s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Mount
+[7.601s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Mount/sc_mount_macro.xacro
+[7.609s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Mount/model.sdf
+[7.609s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Mount/model.config
+[7.609s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SC Mount/sc_mount_visual.glb
+[7.618s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Task Board Base
+[7.618s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Task Board Base/task_board_base_macro.xacro
+[7.623s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Task Board Base/model.sdf
+[7.623s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Task Board Base/base_visual.glb
+[7.642s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Task Board Base/model.config
+[7.643s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable
+[7.643s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable/model.sdf
+[7.644s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sfp_sc_cable/model.config
+[7.645s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Mount
+[7.646s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Mount/model.sdf
+[7.646s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Mount/sfp_mount_visual.glb
+[7.647s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Mount/model.config
+[7.648s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/SFP Mount/sfp_mount_macro.xacro
+[7.649s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Axia80 M20
+[7.650s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Axia80 M20/model.sdf
+[7.650s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Axia80 M20/axia80_m20_macro.xacro
+[7.650s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Axia80 M20/axia_ft_sensor_visual.glb
+[7.653s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Axia80 M20/model.config
+[7.654s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sc_cable
+[7.654s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sc_cable/model.sdf
+[7.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/sc_cable/model.config
+[7.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Floor
+[7.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Floor/walls_visual.glb
+[7.657s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Floor/model.sdf
+[7.657s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Floor/floor_visual.glb
+[7.734s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/models/Floor/model.config
+[7.735s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/ament_index/resource_index/package_run_dependencies/aic_assets
+[7.735s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/ament_index/resource_index/parent_prefix_path/aic_assets
+[7.738s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/environment/ament_prefix_path.sh
+[7.738s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/environment/ament_prefix_path.dsv
+[7.739s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/environment/path.sh
+[7.740s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/environment/path.dsv
+[7.742s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/local_setup.bash
+[7.742s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/local_setup.sh
+[7.742s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/local_setup.zsh
+[7.742s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/local_setup.dsv
+[7.742s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/package.dsv
+[7.743s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/ament_index/resource_index/packages/aic_assets
+[7.743s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/cmake/aic_assetsConfig.cmake
+[7.744s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/cmake/aic_assetsConfig-version.cmake
+[7.744s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_assets/share/aic_assets/package.xml
+[7.744s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_assets

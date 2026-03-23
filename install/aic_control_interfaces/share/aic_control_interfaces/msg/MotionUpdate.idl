@@ -1,0 +1,53 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_control_interfaces/msg/MotionUpdate.msg
+// generated code does not contain a copyright notice
+
+#include "aic_control_interfaces/msg/TrajectoryGenerationMode.idl"
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Twist.idl"
+#include "geometry_msgs/msg/Wrench.idl"
+#include "std_msgs/msg/Header.idl"
+
+module aic_control_interfaces {
+  module msg {
+    typedef double double__36[36];
+    typedef double double__6[6];
+    @verbatim (language="comment", text=
+      "Command the robot to a target cartesian state.")
+    struct MotionUpdate {
+      @verbatim (language="comment", text=
+        "Header")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Note: These targets are used according to the trajectory_generation_mode specified below." "\n"
+        "Pose target.")
+      geometry_msgs::msg::Pose pose;
+
+      @verbatim (language="comment", text=
+        "Velocity target.")
+      geometry_msgs::msg::Twist velocity;
+
+      @verbatim (language="comment", text=
+        "Impedance matrices for Cartesian impedance control." "\n"
+        "6x6 row-major matrix")
+      double__36 target_stiffness;
+
+      @verbatim (language="comment", text=
+        "6x6 row-major matrix")
+      double__36 target_damping;
+
+      geometry_msgs::msg::Wrench feedforward_wrench_at_tip;
+
+      @verbatim (language="comment", text=
+        "Feedback gains of force feedback control. These gains must be in [0, 0.95]" "\n"
+        "to minimize risk of instability.")
+      @unit (value="OPTIONAL")
+      double__6 wrench_feedback_gains_at_tip;
+
+      @verbatim (language="comment", text=
+        "The mode of trajectory generation.")
+      aic_control_interfaces::msg::TrajectoryGenerationMode trajectory_generation_mode;
+    };
+  };
+};

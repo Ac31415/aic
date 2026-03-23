@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.14.0">
+  <compound kind="file">
+    <name>tutorials.md</name>
+    <path></path>
+    <filename>tutorials_8md.html</filename>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>tutorials</name>
+    <title>Tutorials</title>
+    <filename>tutorials.html</filename>
+  </compound>
+</tagfile>

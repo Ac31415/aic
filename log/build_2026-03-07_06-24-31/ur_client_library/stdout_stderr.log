@@ -1,0 +1,205 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+ur_client_library: You did not request a specific build type: selecting 'RelWithDebInfo'.
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Building tests disabled.
+-- Configuring done (2.0s)
+-- Generating done (0.2s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_TESTING
+
+
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/ur_client_library
+[  1%] Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_socket.cpp.o
+[  2%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state/robot_mode_data.cpp.o
+[  4%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state/configuration_data.cpp.o
+[  5%] Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_pause.cpp.o
+[  6%] Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_inputs.cpp.o
+[  8%] Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_setup_outputs.cpp.o
+[  9%] Building CXX object CMakeFiles/urcl.dir/src/rtde/control_package_start.cpp.o
+[ 11%] Building CXX object CMakeFiles/urcl.dir/src/rtde/data_package.cpp.o
+[ 12%] Building CXX object CMakeFiles/urcl.dir/src/rtde/get_urcontrol_version.cpp.o
+[ 13%] Building CXX object CMakeFiles/urcl.dir/src/rtde/request_protocol_version.cpp.o
+[ 15%] Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_package.cpp.o
+[ 16%] Building CXX object CMakeFiles/urcl.dir/src/rtde/text_message.cpp.o
+[ 18%] Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_client.cpp.o
+[ 19%] Building CXX object CMakeFiles/urcl.dir/src/ur/ur_driver.cpp.o
+[ 20%] Building CXX object CMakeFiles/urcl.dir/src/ur/calibration_checker.cpp.o
+[ 22%] Building CXX object CMakeFiles/urcl.dir/src/ur/dashboard_client.cpp.o
+[ 23%] Building CXX object CMakeFiles/urcl.dir/src/ur/dashboard_client_implementation_g5.cpp.o
+[ 25%] Building CXX object CMakeFiles/urcl.dir/src/ur/dashboard_client_implementation_x.cpp.o
+[ 26%] Building CXX object CMakeFiles/urcl.dir/src/ur/instruction_executor.cpp.o
+[ 27%] Building CXX object CMakeFiles/urcl.dir/src/ur/tool_communication.cpp.o
+[ 29%] Building CXX object CMakeFiles/urcl.dir/src/ur/robot_receive_timeout.cpp.o
+[ 30%] Building CXX object CMakeFiles/urcl.dir/src/ur/version_information.cpp.o
+[ 31%] Building CXX object CMakeFiles/urcl.dir/src/rtde/rtde_writer.cpp.o
+[ 33%] Building CXX object CMakeFiles/urcl.dir/src/default_log_handler.cpp.o
+[ 34%] Building CXX object CMakeFiles/urcl.dir/src/example_robot_wrapper.cpp.o
+[ 36%] Building CXX object CMakeFiles/urcl.dir/src/log.cpp.o
+[ 37%] Building CXX object CMakeFiles/urcl.dir/src/helpers.cpp.o
+[ 38%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state/kinematics_info.cpp.o
+[ 40%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message/error_code_message.cpp.o
+[ 41%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message/version_message.cpp.o
+[ 43%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_state.cpp.o
+[ 44%] Building CXX object CMakeFiles/urcl.dir/src/primary/robot_message.cpp.o
+[ 45%] Building CXX object CMakeFiles/urcl.dir/src/primary/primary_client.cpp.o
+[ 47%] Building CXX object CMakeFiles/urcl.dir/src/primary/primary_package.cpp.o
+[ 48%] Building CXX object CMakeFiles/urcl.dir/src/control/script_command_interface.cpp.o
+[ 50%] Building CXX object CMakeFiles/urcl.dir/src/control/trajectory_point_interface.cpp.o
+[ 51%] Building CXX object CMakeFiles/urcl.dir/src/control/script_sender.cpp.o
+[ 52%] Building CXX object CMakeFiles/urcl.dir/src/control/script_reader.cpp.o
+[ 54%] Building CXX object CMakeFiles/urcl.dir/src/control/reverse_interface.cpp.o
+[ 55%] Building CXX object CMakeFiles/urcl.dir/src/control/motion_primitives.cpp.o
+[ 56%] Building CXX object CMakeFiles/urcl.dir/src/comm/tcp_server.cpp.o
+[ 58%] Linking CXX shared library liburcl.dylib
+[ 58%] Built target urcl
+[ 59%] Building CXX object examples/CMakeFiles/driver_example.dir/full_driver.cpp.o
+[ 61%] Linking CXX executable driver_example
+[ 61%] Built target driver_example
+[ 62%] Building CXX object examples/CMakeFiles/external_fts_through_rtde.dir/external_fts_through_rtde.cpp.o
+[ 63%] Linking CXX executable external_fts_through_rtde
+[ 63%] Built target external_fts_through_rtde
+[ 65%] Building CXX object examples/CMakeFiles/instruction_executor.dir/instruction_executor.cpp.o
+[ 66%] Linking CXX executable instruction_executor
+[ 66%] Built target instruction_executor
+[ 68%] Building CXX object examples/CMakeFiles/trajectory_point_interface_example.dir/trajectory_point_interface.cpp.o
+[ 69%] Linking CXX executable trajectory_point_interface_example
+[ 69%] Built target trajectory_point_interface_example
+[ 70%] Building CXX object examples/CMakeFiles/direct_torque_control_example.dir/direct_torque_control.cpp.o
+[ 72%] Linking CXX executable direct_torque_control_example
+[ 72%] Built target direct_torque_control_example
+[ 73%] Building CXX object examples/CMakeFiles/script_command_interface_example.dir/script_command_interface.cpp.o
+[ 75%] Linking CXX executable script_command_interface_example
+[ 75%] Built target script_command_interface_example
+[ 76%] Building CXX object examples/CMakeFiles/script_sender_example.dir/script_sender.cpp.o
+[ 77%] Linking CXX executable script_sender_example
+[ 77%] Built target script_sender_example
+[ 79%] Building CXX object examples/CMakeFiles/force_mode_example.dir/force_mode_example.cpp.o
+[ 80%] Linking CXX executable force_mode_example
+[ 80%] Built target force_mode_example
+[ 81%] Building CXX object examples/CMakeFiles/freedrive_example.dir/freedrive_example.cpp.o
+[ 83%] Linking CXX executable freedrive_example
+[ 83%] Built target freedrive_example
+[ 84%] Building CXX object examples/CMakeFiles/tool_contact_example.dir/tool_contact_example.cpp.o
+[ 86%] Linking CXX executable tool_contact_example
+[ 86%] Built target tool_contact_example
+[ 87%] Building CXX object examples/CMakeFiles/spline_example.dir/spline_example.cpp.o
+[ 88%] Linking CXX executable spline_example
+[ 88%] Built target spline_example
+[ 90%] Building CXX object examples/CMakeFiles/dashboard_example.dir/dashboard_example.cpp.o
+[ 91%] Linking CXX executable dashboard_example
+[ 91%] Built target dashboard_example
+[ 93%] Building CXX object examples/CMakeFiles/rtde_client_example.dir/rtde_client.cpp.o
+[ 94%] Linking CXX executable rtde_client_example
+[ 94%] Built target rtde_client_example
+[ 95%] Building CXX object examples/CMakeFiles/primary_pipeline_calibration_example.dir/primary_pipeline_calibration.cpp.o
+[ 97%] Linking CXX executable primary_pipeline_calibration_example
+[ 97%] Built target primary_pipeline_calibration_example
+[ 98%] Building CXX object examples/CMakeFiles/primary_pipeline_example.dir/primary_pipeline.cpp.o
+[100%] Linking CXX executable primary_pipeline_example
+[100%] Built target primary_pipeline_example
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/lib/liburcl.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/dashboard_client_implementation_x.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/dashboard_client_implementation.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/dashboard_client.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/instruction_executor.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/tool_communication.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/ur_driver.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/calibration_checker.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/datatypes.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/robot_receive_timeout.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/dashboard_client_implementation_g5.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/ur/version_information.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/types.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/example_robot_wrapper.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/exceptions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/package_serializer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/tcp_server.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/tcp_socket.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/parser.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/shell_consumer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/socket_t.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/stream.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/package.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/producer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/pipeline.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/control_mode.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/comm/bin_parser.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/log.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/package_header.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/text_message.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/rtde_writer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/get_urcontrol_version.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/.clang-tidy
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/data_package.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/control_package_pause.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/control_package_start.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/rtde_parser.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/control_package_setup_outputs.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/control_package_setup_inputs.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/request_protocol_version.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/rtde_package.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/rtde/rtde_client.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/queue
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/queue/LICENSE.md
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/queue/readerwriterqueue.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/queue/.clang-tidy
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/queue/atomicops.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/default_log_handler.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/helpers.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/reverse_interface.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/motion_primitives.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/script_sender.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/trajectory_point_interface.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/script_command_interface.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/control/script_reader.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/package_header.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/primary_parser.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_message.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/primary_client.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_state.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/.clang-tidy
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/primary_consumer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_state
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_state/configuration_data.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_state/kinematics_info.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_state/robot_mode_data.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/abstract_primary_consumer.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/primary_package.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_message
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_message/version_message.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/primary/robot_message/error_code_message.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/3rdparty
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/include/ur_client_library/3rdparty/endian.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/lib/cmake/ur_client_library/urclTargets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/lib/cmake/ur_client_library/urclTargets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/lib/ur_client_library/start_ursim.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/lib/cmake/ur_client_library/ur_client_libraryConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ur_client_library/package.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ament_index/resource_index/packages/ur_client_library
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ur_client_library/hook/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ur_client_library/hook/ros_package_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ur_client_library/resources
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ur_client_library/share/ur_client_library/resources/external_control.urscript

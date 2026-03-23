@@ -1,0 +1,67 @@
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ros2_control_cmake: 0.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ros2_control_cmake/cmake)
+-- Compiler warnings enabled for Clang
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found rclcpp: 29.5.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_action: 29.5.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rclcpp_action/cmake)
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (14.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/realtime_tools
+[ 25%] Building CXX object CMakeFiles/realtime_tools.dir/src/realtime_helpers.cpp.o
+[ 50%] Linking CXX shared library librealtime_tools.dylib
+[ 50%] Built target realtime_tools
+[ 75%] Building CXX object CMakeFiles/thread_priority.dir/src/realtime_helpers.cpp.o
+[100%] Linking CXX shared library libthread_priority.dylib
+[100%] Built target thread_priority
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_server_goal_handle.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_publisher.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/lock_free_queue.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_helpers.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_buffer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_box.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/async_function_handler.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/mutex.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/include/realtime_tools/realtime_tools/realtime_thread_safe_box.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/lib/librealtime_tools.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/lib/libthread_priority.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/ament_index/resource_index/package_run_dependencies/realtime_tools
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/ament_index/resource_index/parent_prefix_path/realtime_tools
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/ament_index/resource_index/packages/realtime_tools
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/export_realtime_toolsExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/cmake/realtime_toolsConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/realtime_tools/share/realtime_tools/package.xml

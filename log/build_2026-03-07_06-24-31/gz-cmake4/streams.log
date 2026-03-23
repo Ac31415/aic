@@ -1,0 +1,128 @@
+[0.070s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-cmake -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4
+[1.378s] -- The C compiler identification is Clang 19.1.7
+[1.747s] -- The CXX compiler identification is Clang 19.1.7
+[1.870s] -- Detecting C compiler ABI info
+[2.624s] -- Detecting C compiler ABI info - done
+[2.624s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[2.624s] -- Detecting C compile features
+[2.624s] -- Detecting C compile features - done
+[2.624s] -- Detecting CXX compiler ABI info
+[2.918s] -- Detecting CXX compiler ABI info - done
+[2.922s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.922s] -- Detecting CXX compile features
+[2.922s] -- Detecting CXX compile features - done
+[2.923s] -- gz-cmake4 version 4.2.0
+[2.923s] -- Operating system is Apple MacOS X
+[2.923s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4
+[2.943s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+[2.945s] -- Adding codecheck target
+[3.019s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[3.043s] -- Configuring done (2.7s)
+[3.080s] -- Generating done (0.0s)
+[3.084s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4
+[3.096s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-cmake -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4
+[3.096s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4 -- -j16 -l16
+[3.438s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4 -- -j16 -l16
+[3.656s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4
+[3.910s] -- Install configuration: ""
+[3.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen
+[3.911s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen/layout.xml
+[3.912s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen/cppreference.tag.xml
+[3.925s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen/footer.html
+[3.926s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen/api.in
+[3.926s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/doxygen/header.html
+[3.928s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/benchmark
+[3.928s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/benchmark/run_benchmarks.py
+[3.928s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/codecheck
+[3.928s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/codecheck/namespace_AZ.rule
+[3.934s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/codecheck/header_guard.rule
+[3.934s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/codecheck/cpplint.py
+[3.938s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/tools
+[3.940s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/tools/print_package_xml_version.py
+[3.940s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/tools/doc_check.sh
+[3.942s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/gz/gz-cmake4/tools/check_test_ran.py
+[3.942s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/gz-cmake4-config.cmake
+[3.942s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/gz-cmake4-config-version.cmake
+[3.942s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig/gz-cmake4.pc
+[3.942s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/gz-cmake4-utilities-targets.cmake
+[3.947s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4
+[3.949s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz
+[3.949s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities
+[3.949s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities/SuppressWarning.hh
+[3.949s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities/ExtraTestMacros.hh
+[3.949s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities/detail
+[3.950s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities/detail/SuppressWarning.hh
+[3.950s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/include/gz/cmake4/gz/utilities/detail/ExtraTestMacros.hh
+[3.951s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindAVCODEC.cmake
+[3.951s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindAVDEVICE.cmake
+[3.951s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindAVFORMAT.cmake
+[3.951s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindAVUTIL.cmake
+[3.951s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindCPPZMQ.cmake
+[3.952s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindDL.cmake
+[3.952s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindEIGEN3.cmake
+[3.952s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindFreeImage.cmake
+[3.953s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGTS.cmake
+[3.955s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzAssimp.cmake
+[3.955s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzBullet.cmake
+[3.955s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzCURL.cmake
+[3.956s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzOGRE.cmake
+[3.957s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzOGRE2.cmake
+[3.958s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzOGRENext.cmake
+[3.959s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzProtobuf.cmake
+[3.959s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindGzURDFDOM.cmake
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindIFADDRS.cmake
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindJSONCPP.cmake
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindODE.cmake
+[3.962s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindOptiX.cmake
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindSQLite3.cmake
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindSWSCALE.cmake
+[3.964s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindTINYXML2.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindUUID.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindYAML.cmake
+[3.965s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindZIP.cmake
+[3.966s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/FindZeroMQ.cmake
+[3.966s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzAddComponent.cmake
+[3.967s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzBenchmark.cmake
+[3.967s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzBuildExamples.cmake
+[3.967s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzBuildExecutables.cmake
+[3.968s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzBuildTests.cmake
+[3.968s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCMake.cmake
+[3.968s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCheckSSE.cmake
+[3.970s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCmakeLogging.cmake
+[3.970s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCodeCheck.cmake
+[3.971s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCodeCoverage.cmake
+[3.971s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzConfigureBuild.cmake
+[3.971s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzConfigureProject.cmake
+[3.971s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCreateCoreLibrary.cmake
+[3.971s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCreateDocs.cmake
+[3.973s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzCxxStandard.cmake
+[3.973s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzFindPackage.cmake
+[3.977s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzGenerateVersionInfo.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzGetLibSourcesAndUnitTests.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzGetPackageXmlVersion.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzGetSources.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzImportTarget.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzInstallAllHeaders.cmake
+[3.980s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzManualSearch.cmake
+[3.982s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzPackaging.cmake
+[3.983s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzPkgConfig.cmake
+[3.984s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzPython.cmake
+[3.986s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzRelocatableBinaries.cmake
+[3.986s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzRonn2Man.cmake
+[3.987s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzSanitizers.cmake
+[3.988s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzSetCompilerFlags.cmake
+[3.988s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzStringAppend.cmake
+[3.988s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/GzUtils.cmake
+[3.988s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/JoinPaths.cmake
+[3.989s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/Export.hh.in
+[3.992s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/cmake_uninstall.cmake.in
+[3.992s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/cpack_options.cmake.in
+[3.992s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/gz-all-config.cmake.in
+[3.994s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/gz-component-config.cmake.in
+[3.995s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/gz-config.cmake.in
+[3.995s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/gz_auto_headers.hh.in
+[3.996s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/upload_doc.sh.in
+[3.996s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/version_info.json.in
+[3.996s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/pkgconfig/gz-component.pc.in
+[3.996s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/share/cmake/gz-cmake4/cmake4/pkgconfig/gz.pc.in
+[4.036s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-cmake4

@@ -1,0 +1,40 @@
+[1.588s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/lerobot_robot_aic': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lerobot_robot_aic build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/install.log --single-version-externally-managed install_data
+[2.018s] running egg_info
+[2.018s] creating ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info
+[2.018s] writing ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/PKG-INFO
+[2.018s] writing dependency_links to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/dependency_links.txt
+[2.018s] writing requirements to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/requires.txt
+[2.018s] writing top-level names to ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/top_level.txt
+[2.019s] writing manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+[2.053s] reading manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+[2.059s] writing manifest file '../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info/SOURCES.txt'
+[2.059s] running build
+[2.062s] running build_py
+[2.063s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.063s] copying lerobot_robot_aic/aic_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.063s] copying lerobot_robot_aic/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.074s] copying lerobot_robot_aic/types.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.074s] copying lerobot_robot_aic/aic_robot_aic_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.074s] copying lerobot_robot_aic/aic_robot.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic
+[2.074s] running install
+[2.076s] running install_lib
+[2.111s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.111s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.111s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.111s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/types.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.112s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_robot_aic_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.112s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build/lib/lerobot_robot_aic/aic_robot.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic
+[2.116s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_teleop.py to aic_teleop.cpython-312.pyc
+[2.116s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/__init__.py to __init__.cpython-312.pyc
+[2.117s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/types.py to types.cpython-312.pyc
+[2.117s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_robot_aic_controller.py to aic_robot_aic_controller.cpython-312.pyc
+[2.119s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic/aic_robot.py to aic_robot.cpython-312.pyc
+[2.119s] running install_data
+[2.119s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/ament_index/resource_index/packages
+[2.132s] copying resource/lerobot_robot_aic -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/ament_index/resource_index/packages
+[2.135s] copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/share/lerobot_robot_aic
+[2.138s] running install_egg_info
+[2.159s] Copying ../../build/lerobot_robot_aic/lerobot_robot_aic.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages/lerobot_robot_aic-0.0.0-py3.12.egg-info
+[2.159s] running install_scripts
+[2.202s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/install.log'
+[2.230s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/lerobot_robot_aic' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/lerobot_robot_aic/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lerobot_robot_aic build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/lerobot_robot_aic/install.log --single-version-externally-managed install_data

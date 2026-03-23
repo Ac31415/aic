@@ -1,0 +1,55 @@
+[1.488s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/ros-controls/ros2_controllers/ros2_controllers_test_nodes': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/ros2_controllers_test_nodes build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data
+[1.700s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.700s]   warnings.warn(msg)
+[1.737s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.737s] !!
+[1.737s] 
+[1.738s]         ********************************************************************************
+[1.738s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.738s] 
+[1.738s]         License :: OSI Approved :: Apache Software License
+[1.738s] 
+[1.738s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.738s]         ********************************************************************************
+[1.739s] 
+[1.739s] !!
+[1.739s]   self._finalize_license_expression()
+[1.848s] running egg_info
+[1.876s] creating ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info
+[1.877s] writing ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/PKG-INFO
+[1.877s] writing dependency_links to ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/dependency_links.txt
+[1.877s] writing entry points to ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/entry_points.txt
+[1.877s] writing requirements to ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/requires.txt
+[1.877s] writing top-level names to ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/top_level.txt
+[1.877s] writing manifest file '../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.915s] reading manifest file '../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.915s] writing manifest file '../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info/SOURCES.txt'
+[1.915s] running build
+[1.917s] running build_py
+[1.917s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.917s] copying ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.917s] copying ros2_controllers_test_nodes/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.917s] copying ros2_controllers_test_nodes/publisher_forward_position_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes
+[1.921s] running install
+[1.927s] running install_lib
+[1.950s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.951s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.952s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.953s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build/lib/ros2_controllers_test_nodes/publisher_forward_position_controller.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes
+[1.954s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/publisher_joint_trajectory_controller.py to publisher_joint_trajectory_controller.cpython-312.pyc
+[1.955s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/__init__.py to __init__.cpython-312.pyc
+[1.955s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes/publisher_forward_position_controller.py to publisher_forward_position_controller.cpython-312.pyc
+[1.956s] running install_data
+[1.956s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ament_index/resource_index/packages
+[1.958s] copying resource/ros2_controllers_test_nodes -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ament_index/resource_index/packages
+[1.958s] copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes
+[1.959s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.959s] copying test/rrbot_forward_position_publisher.yaml -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.959s] copying test/rrbot_joint_trajectory_publisher.yaml -> /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/share/ros2_controllers_test_nodes/test
+[1.959s] running install_egg_info
+[1.997s] Copying ../../../aic/build/ros2_controllers_test_nodes/ros2_controllers_test_nodes.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages/ros2_controllers_test_nodes-5.12.0-py3.12.egg-info
+[1.997s] running install_scripts
+[2.051s] Installing publisher_forward_position_controller script to /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.051s] Installing publisher_joint_trajectory_controller script to /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/ros2_controllers_test_nodes
+[2.052s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/install.log'
+[2.072s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/ros-controls/ros2_controllers/ros2_controllers_test_nodes' returned '0': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_controllers_test_nodes/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/ros2_controllers_test_nodes build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_controllers_test_nodes/install.log --single-version-externally-managed install_data

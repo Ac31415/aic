@@ -1,0 +1,26 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "aic_control_interfaces/msg/TargetMode",
+      "fields": [
+        {
+          "name": "mode",
+          "type": {
+            "type_id": 3,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "aic_control_interfaces/msg/TargetMode",
+      "hash_string": "RIHS01_d1e9f0a21c03d5fe823cd1dfb2be0bc193fb53a775b09b317a5c0fda56af5a24"
+    }
+  ]
+}

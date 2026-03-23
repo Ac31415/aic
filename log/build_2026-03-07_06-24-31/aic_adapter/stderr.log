@@ -1,0 +1,2 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter/lib/aic_adapter/aic_adapter
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter/lib/aic_adapter/aic_adapter'

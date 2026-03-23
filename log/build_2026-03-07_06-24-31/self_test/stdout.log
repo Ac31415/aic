@@ -1,0 +1,56 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Build for kilted
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found diagnostic_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/diagnostic_msgs/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found diagnostic_updater: 4.2.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake)
+-- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done (8.5s)
+-- Generating done (0.2s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/self_test
+[ 25%] Building CXX object CMakeFiles/run_selftest.dir/src/run_selftest.cpp.o
+[ 50%] Linking CXX executable run_selftest
+[ 50%] Built target run_selftest
+[ 75%] Building CXX object CMakeFiles/selftest_example.dir/example/selftest_example.cpp.o
+[100%] Linking CXX executable selftest_example
+[100%] Built target selftest_example
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include/self_test
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include/self_test/test_runner.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/run_selftest
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/selftest_example
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/package_run_dependencies/self_test
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/parent_prefix_path/self_test
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/packages/self_test
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/self_testConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/self_testConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/package.xml

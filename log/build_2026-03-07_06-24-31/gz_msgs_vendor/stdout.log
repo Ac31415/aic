@@ -1,0 +1,549 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+-- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+-- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+-- Found gz_math_vendor: 0.2.5 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor/share/gz_math_vendor/cmake)
+-- Found gz_tools_vendor: 0.1.3 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake)
+-- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+-- Configuring done (2.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor
+[ 12%] Creating directories for 'gz_msgs_vendor'
+[ 25%] Performing download step for 'gz_msgs_vendor'
+=== ./gz_msgs_vendor (git) ===
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/.git/
+
+From https://github.com/gazebosim/gz-msgs
+ * [new tag]         gz-msgs11_11.1.0 -> gz-msgs11_11.1.0
+Note: switching to 'gz-msgs11_11.1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1f5f19e Prepare for 11.1.0 release (#509)
+
+[ 37%] No update_disconnected step for 'gz_msgs_vendor'
+[ 50%] No patch_disconnected step for 'gz_msgs_vendor'
+[ 62%] Performing configure step for 'gz_msgs_vendor'
+loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-config.cmake
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-msgs11 version 11.1.0
+-- Operating system is Apple MacOS X
+-- 
+
+-- ====== Finding Dependencies ======
+-- Found ZLIB: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libz.dylib (found version "1.2.12")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for Protobuf - found
+
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Searching for dependencies of gz-utils3
+-- Searching for <gz-utils3> component [cli]
+-- Looking for gz-utils3-cli -- found version 3.1.1
+-- Searching for dependencies of gz-utils3-cli
+-- Looking for gz-utils3 - found
+
+-- Looking for gz-math8 -- found version 8.2.0
+-- Searching for dependencies of gz-math8
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Looking for gz-math8 - found
+
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 11.0.0
+-- Looking for tinyxml2 - found
+
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Configuring library: gz-msgs11
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_msgs_vendor/opt/gz_msgs_vendor
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (12.0s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build
+[ 75%] Performing build step for 'gz_msgs_vendor'
+[  0%] Building CXX object core/CMakeFiles/gz-msgs11_protoc_plugin.dir/generator/Generator.cc.o
+[  0%] Building CXX object core/CMakeFiles/gz-msgs11_protoc_plugin.dir/generator/generator_main.cc.o
+[  1%] Linking CXX executable ../bin/gz-msgs11_protoc_plugin
+[  1%] Built target gz-msgs11_protoc_plugin
+[  2%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wrench.proto
+[  2%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis.proto
+[  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis_aligned_2d_box.proto
+[  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis_aligned_box.proto
+[  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/battery.proto
+[  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/battery_state.proto
+[  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/boolean.proto
+[  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/boxgeom.proto
+[  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/bytes.proto
+[  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_cmd.proto
+[  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_info.proto
+[  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_lens.proto
+[  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camerasensor.proto
+[  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cameratrack.proto
+[  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/capsulegeom.proto
+[  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cessna.proto
+[  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/clock.proto
+[  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cmd_vel2d.proto
+[  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/collision.proto
+[  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/color.proto
+[  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/conegeom.proto
+[  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contact.proto
+[  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contacts.proto
+[  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contactsensor.proto
+[  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cylindergeom.proto
+[  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/data_load_options.proto
+[  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dataframe.proto
+[  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/density.proto
+[  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/diagnostics.proto
+[  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/discovery.proto
+[  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/distortion.proto
+[  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/double.proto
+[ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/double_v.proto
+[ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/duration.proto
+[ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_beam_state.proto
+[ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_kinematic_estimate.proto
+[ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_range_estimate.proto
+[ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_tracking_target.proto
+[ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_velocity_tracking.proto
+[ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/ellipsoidgeom.proto
+[ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/empty.proto
+[ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity.proto
+[ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_factory.proto
+[ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_factory_v.proto
+[ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_plugin_v.proto
+[ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_wrench.proto
+[ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_wrench_map.proto
+[ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/float.proto
+[ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/float_v.proto
+[ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fluid.proto
+[ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fluid_pressure.proto
+[ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fog.proto
+[ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/friction.proto
+[ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fuel_metadata.proto
+[ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/geometry.proto
+[ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gps.proto
+[ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gps_sensor.proto
+[ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gui.proto
+[ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gui_camera.proto
+[ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/header.proto
+[ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/heightmapgeom.proto
+[ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/hydra.proto
+[ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/image.proto
+[ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imagegeom.proto
+[ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imu.proto
+[ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imu_sensor.proto
+[ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/inertial.proto
+[ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int32.proto
+[ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int32_v.proto
+[ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int64.proto
+[ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int64_v.proto
+[ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint.proto
+[ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_animation.proto
+[ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_cmd.proto
+[ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_trajectory.proto
+[ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_trajectory_point.proto
+[ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_wrench.proto
+[ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joy.proto
+[ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joystick.proto
+[ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/laserscan.proto
+[ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/lens.proto
+[ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/lidar_sensor.proto
+[ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/light.proto
+[ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/link.proto
+[ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/link_data.proto
+[ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_control.proto
+[ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_playback_control.proto
+[ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_playback_stats.proto
+[ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_status.proto
+[ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/logical_camera_image.proto
+[ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/logical_camera_sensor.proto
+[ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/magnetometer.proto
+[ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/magnetometer_sensor.proto
+[ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/marker.proto
+[ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/marker_v.proto
+[ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/material.proto
+[ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/material_color.proto
+[ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/meshgeom.proto
+[ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model.proto
+[ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model_configuration.proto
+[ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model_v.proto
+[ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/navsat.proto
+[ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/navsat_sensor.proto
+[ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/occupancy_grid.proto
+[ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/odometry.proto
+[ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/odometry_with_covariance.proto
+[ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/oriented_3d_box.proto
+[ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/packet.proto
+[ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/param.proto
+[ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/param_v.proto
+[ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter.proto
+[ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_declaration.proto
+[ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_declarations.proto
+[ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_error.proto
+[ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_name.proto
+[ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_value.proto
+[ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/particle_emitter.proto
+[ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/particle_emitter_v.proto
+[ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/performance_sensor_metrics.proto
+[ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/physics.proto
+[ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pid.proto
+[ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/planegeom.proto
+[ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/plugin.proto
+[ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/plugin_v.proto
+[ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pointcloud.proto
+[ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pointcloud_packed.proto
+[ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/polylinegeom.proto
+[ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose.proto
+[ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_animation.proto
+[ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_trajectory.proto
+[ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_v.proto
+[ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_with_covariance.proto
+[ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/projector.proto
+[ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/propagation_grid.proto
+[ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/propagation_particle.proto
+[ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/publish.proto
+[ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/publishers.proto
+[ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/quaternion.proto
+[ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/raysensor.proto
+[ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/request.proto
+[ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/response.proto
+[ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_login.proto
+[ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_logout.proto
+[ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_post.proto
+[ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_response.proto
+[ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/road.proto
+[ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/scene.proto
+[ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sdf_generator_config.proto
+[ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/selection.proto
+[ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor.proto
+[ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor_noise.proto
+[ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor_v.proto
+[ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/serialized.proto
+[ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/serialized_map.proto
+[ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/server_control.proto
+[ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/shadows.proto
+[ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sim_event.proto
+[ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sky.proto
+[ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sonar.proto
+[ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/spheregeom.proto
+[ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/spherical_coordinates.proto
+[ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/statistic.proto
+[ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/stringmsg.proto
+[ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/stringmsg_v.proto
+[ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/subscribe.proto
+[ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/surface.proto
+[ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/tactile.proto
+[ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/test.proto
+[ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/time.proto
+[ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/topic_info.proto
+[ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/track_visual.proto
+[ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/twist.proto
+[ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/twist_with_covariance.proto
+[ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint32.proto
+[ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint32_v.proto
+[ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint64.proto
+[ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint64_v.proto
+[ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/undo_redo.proto
+[ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/user_cmd.proto
+[ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/user_cmd_stats.proto
+[ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/vector2d.proto
+[ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/vector3d.proto
+[ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/version.proto
+[ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/version_range.proto
+[ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/versioned_name.proto
+[ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/video_record.proto
+[ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/visual.proto
+[ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/visual_v.proto
+[ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/web_request.proto
+[ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wheel_slip_parameters_cmd.proto
+[ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wind.proto
+[ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wireless_node.proto
+[ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wireless_nodes.proto
+[ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_control.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_control_state.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_modify.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_reset.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_stats.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/atmosphere.proto
+[ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/any.proto
+[ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_oriented_3d_box_v.proto
+[ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_oriented_3d_box.proto
+[ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_axis_aligned_2d_box_v.proto
+[ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_axis_aligned_2d_box.proto
+[ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/altimeter_sensor.proto
+[ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/altimeter.proto
+[ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_speed_sensor.proto
+[ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_speed.proto
+[ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_pressure_sensor.proto
+[ 50%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/actuators.proto
+[ 50%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/actor.proto
+[ 50%] Generating descriptor set
+[ 50%] Running factory generator
+[ 50%] Building CXX object core/CMakeFiles/gz-msgs11.dir/src/Factory.cc.o
+[ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/atmosphere.pb.cc.o
+[ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis.pb.cc.o
+[ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis_aligned_2d_box.pb.cc.o
+[ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis_aligned_box.pb.cc.o
+[ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/battery.pb.cc.o
+[ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/battery_state.pb.cc.o
+[ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/boolean.pb.cc.o
+[ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/boxgeom.pb.cc.o
+[ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/bytes.pb.cc.o
+[ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_cmd.pb.cc.o
+[ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_info.pb.cc.o
+[ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_lens.pb.cc.o
+[ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camerasensor.pb.cc.o
+[ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cameratrack.pb.cc.o
+[ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/capsulegeom.pb.cc.o
+[ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cessna.pb.cc.o
+[ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/clock.pb.cc.o
+[ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cmd_vel2d.pb.cc.o
+[ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/collision.pb.cc.o
+[ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/color.pb.cc.o
+[ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/conegeom.pb.cc.o
+[ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contact.pb.cc.o
+[ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contacts.pb.cc.o
+[ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contactsensor.pb.cc.o
+[ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cylindergeom.pb.cc.o
+[ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/data_load_options.pb.cc.o
+[ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dataframe.pb.cc.o
+[ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/density.pb.cc.o
+[ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/diagnostics.pb.cc.o
+[ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/discovery.pb.cc.o
+[ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/distortion.pb.cc.o
+[ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/double.pb.cc.o
+[ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/double_v.pb.cc.o
+[ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/duration.pb.cc.o
+[ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_beam_state.pb.cc.o
+[ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_kinematic_estimate.pb.cc.o
+[ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_range_estimate.pb.cc.o
+[ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_tracking_target.pb.cc.o
+[ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_velocity_tracking.pb.cc.o
+[ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/ellipsoidgeom.pb.cc.o
+[ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/empty.pb.cc.o
+[ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity.pb.cc.o
+[ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_factory.pb.cc.o
+[ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_factory_v.pb.cc.o
+[ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_plugin_v.pb.cc.o
+[ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_wrench.pb.cc.o
+[ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_wrench_map.pb.cc.o
+[ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/float.pb.cc.o
+[ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/float_v.pb.cc.o
+[ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fluid.pb.cc.o
+[ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fluid_pressure.pb.cc.o
+[ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fog.pb.cc.o
+[ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/friction.pb.cc.o
+[ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc.o
+[ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/geometry.pb.cc.o
+[ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gps.pb.cc.o
+[ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gps_sensor.pb.cc.o
+[ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gui.pb.cc.o
+[ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gui_camera.pb.cc.o
+[ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/header.pb.cc.o
+[ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/heightmapgeom.pb.cc.o
+[ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/hydra.pb.cc.o
+[ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/image.pb.cc.o
+[ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imagegeom.pb.cc.o
+[ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imu.pb.cc.o
+[ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imu_sensor.pb.cc.o
+[ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/inertial.pb.cc.o
+[ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int32.pb.cc.o
+[ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int32_v.pb.cc.o
+[ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int64.pb.cc.o
+[ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int64_v.pb.cc.o
+[ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint.pb.cc.o
+[ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_animation.pb.cc.o
+[ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_cmd.pb.cc.o
+[ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_trajectory.pb.cc.o
+[ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_trajectory_point.pb.cc.o
+[ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_wrench.pb.cc.o
+[ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joy.pb.cc.o
+[ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joystick.pb.cc.o
+[ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/laserscan.pb.cc.o
+[ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/lens.pb.cc.o
+[ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/lidar_sensor.pb.cc.o
+[ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/light.pb.cc.o
+[ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/link.pb.cc.o
+[ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/link_data.pb.cc.o
+[ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_control.pb.cc.o
+[ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_playback_control.pb.cc.o
+[ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_playback_stats.pb.cc.o
+[ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_status.pb.cc.o
+[ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/logical_camera_image.pb.cc.o
+[ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/logical_camera_sensor.pb.cc.o
+[ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/magnetometer.pb.cc.o
+[ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/magnetometer_sensor.pb.cc.o
+[ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/marker.pb.cc.o
+[ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/marker_v.pb.cc.o
+[ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/material.pb.cc.o
+[ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/material_color.pb.cc.o
+[ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/meshgeom.pb.cc.o
+[ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model.pb.cc.o
+[ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model_configuration.pb.cc.o
+[ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model_v.pb.cc.o
+[ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/navsat.pb.cc.o
+[ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/navsat_sensor.pb.cc.o
+[ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/occupancy_grid.pb.cc.o
+[ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/odometry.pb.cc.o
+[ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/odometry_with_covariance.pb.cc.o
+[ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/oriented_3d_box.pb.cc.o
+[ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/packet.pb.cc.o
+[ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/param.pb.cc.o
+[ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/param_v.pb.cc.o
+[ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter.pb.cc.o
+[ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_declaration.pb.cc.o
+[ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_declarations.pb.cc.o
+[ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_error.pb.cc.o
+[ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_name.pb.cc.o
+[ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_value.pb.cc.o
+[ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/particle_emitter.pb.cc.o
+[ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/particle_emitter_v.pb.cc.o
+[ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/performance_sensor_metrics.pb.cc.o
+[ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/physics.pb.cc.o
+[ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pid.pb.cc.o
+[ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/planegeom.pb.cc.o
+[ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/plugin.pb.cc.o
+[ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/plugin_v.pb.cc.o
+[ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pointcloud.pb.cc.o
+[ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pointcloud_packed.pb.cc.o
+[ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/polylinegeom.pb.cc.o
+[ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose.pb.cc.o
+[ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_animation.pb.cc.o
+[ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_trajectory.pb.cc.o
+[ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_v.pb.cc.o
+[ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_with_covariance.pb.cc.o
+[ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/projector.pb.cc.o
+[ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/propagation_grid.pb.cc.o
+[ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/propagation_particle.pb.cc.o
+[ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/publish.pb.cc.o
+[ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/publishers.pb.cc.o
+[ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/quaternion.pb.cc.o
+[ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/raysensor.pb.cc.o
+[ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/request.pb.cc.o
+[ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/response.pb.cc.o
+[ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_login.pb.cc.o
+[ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_logout.pb.cc.o
+[ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_post.pb.cc.o
+[ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_response.pb.cc.o
+[ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/road.pb.cc.o
+[ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/scene.pb.cc.o
+[ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sdf_generator_config.pb.cc.o
+[ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/selection.pb.cc.o
+[ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor.pb.cc.o
+[ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor_noise.pb.cc.o
+[ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor_v.pb.cc.o
+[ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/serialized.pb.cc.o
+[ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/serialized_map.pb.cc.o
+[ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/server_control.pb.cc.o
+[ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/shadows.pb.cc.o
+[ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sim_event.pb.cc.o
+[ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sky.pb.cc.o
+[ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sonar.pb.cc.o
+[ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/spheregeom.pb.cc.o
+[ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/spherical_coordinates.pb.cc.o
+[ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/statistic.pb.cc.o
+[ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/stringmsg.pb.cc.o
+[ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/stringmsg_v.pb.cc.o
+[ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/subscribe.pb.cc.o
+[ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/surface.pb.cc.o
+[ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/tactile.pb.cc.o
+[ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/test.pb.cc.o
+[ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/time.pb.cc.o
+[ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/topic_info.pb.cc.o
+[ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/track_visual.pb.cc.o
+[ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/twist.pb.cc.o
+[ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/twist_with_covariance.pb.cc.o
+[ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint32.pb.cc.o
+[ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint32_v.pb.cc.o
+[ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint64.pb.cc.o
+[ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint64_v.pb.cc.o
+[ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/undo_redo.pb.cc.o
+[ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/user_cmd.pb.cc.o
+[ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/user_cmd_stats.pb.cc.o
+[ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/vector2d.pb.cc.o
+[ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/vector3d.pb.cc.o
+[ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/version.pb.cc.o
+[ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/version_range.pb.cc.o
+[ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/versioned_name.pb.cc.o
+[ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/video_record.pb.cc.o
+[ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/visual.pb.cc.o
+[ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/visual_v.pb.cc.o
+[ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/web_request.pb.cc.o
+[ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wheel_slip_parameters_cmd.pb.cc.o
+[ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wind.pb.cc.o
+[ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wireless_node.pb.cc.o
+[ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wireless_nodes.pb.cc.o
+[ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_control.pb.cc.o
+[ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_control_state.pb.cc.o
+[ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_modify.pb.cc.o
+[ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_reset.pb.cc.o
+[ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_stats.pb.cc.o
+[ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wrench.pb.cc.o
+[ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/register.cc.o

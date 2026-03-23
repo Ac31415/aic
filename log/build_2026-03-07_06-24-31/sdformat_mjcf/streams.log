@@ -1,0 +1,143 @@
+[1.426s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/gazebo/gz-mujoco/sdformat_mjcf': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/sdformat_mjcf build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/install.log --single-version-externally-managed
+[1.653s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'test_suite'
+[1.653s]   warnings.warn(msg)
+[1.688s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.688s] !!
+[1.688s] 
+[1.689s]         ********************************************************************************
+[1.689s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.689s] 
+[1.689s]         License :: OSI Approved :: Apache Software License
+[1.689s] 
+[1.689s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.689s]         ********************************************************************************
+[1.689s] 
+[1.689s] !!
+[1.689s]   self._finalize_license_expression()
+[1.778s] running egg_info
+[1.794s] creating ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info
+[1.795s] writing ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/PKG-INFO
+[1.798s] writing dependency_links to ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/dependency_links.txt
+[1.798s] writing entry points to ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/entry_points.txt
+[1.798s] writing requirements to ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/requires.txt
+[1.798s] writing top-level names to ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/top_level.txt
+[1.798s] writing manifest file '../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/SOURCES.txt'
+[1.869s] reading manifest file '../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/SOURCES.txt'
+[1.869s] adding license file 'LICENSE'
+[1.869s] writing manifest file '../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info/SOURCES.txt'
+[1.869s] running build
+[1.869s] running build_py
+[1.869s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf
+[1.870s] copying src/sdformat_mjcf/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf
+[1.870s] copying src/sdformat_mjcf/__version__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf
+[1.872s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.872s] copying src/sdformat_mjcf/sdformat_to_mjcf/sdf_kinematics.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.894s] copying src/sdformat_mjcf/sdformat_to_mjcf/mesh_io.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.897s] copying src/sdformat_mjcf/sdformat_to_mjcf/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.900s] copying src/sdformat_mjcf/sdformat_to_mjcf/sdformat_to_mjcf.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.900s] copying src/sdformat_mjcf/sdformat_to_mjcf/cli.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf
+[1.922s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils
+[1.922s] copying src/sdformat_mjcf/utils/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils
+[1.922s] copying src/sdformat_mjcf/utils/defaults.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils
+[1.944s] copying src/sdformat_mjcf/utils/sdf_utils.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils
+[1.945s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat
+[1.945s] copying src/sdformat_mjcf/mjcf_to_sdformat/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat
+[1.945s] copying src/sdformat_mjcf/mjcf_to_sdformat/cli.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat
+[1.975s] copying src/sdformat_mjcf/mjcf_to_sdformat/mjcf_to_sdformat.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat
+[1.979s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[1.979s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/link.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[1.984s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/world.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[1.984s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/material.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[1.985s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/sensor.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[1.989s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/light.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.000s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.000s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/model.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.000s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/geometry.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.009s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/joint.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.009s] copying src/sdformat_mjcf/sdformat_to_mjcf/converters/root.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.018s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.018s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/link.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.018s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/world.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.018s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/material.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.018s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/sensor.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.020s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/light.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.020s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.020s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/geometry.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.030s] copying src/sdformat_mjcf/mjcf_to_sdformat/converters/joint.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.036s] running install
+[2.043s] running install_lib
+[2.067s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf
+[2.068s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.068s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/sdf_kinematics.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.078s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/mesh_io.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.078s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.078s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/link.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.079s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/world.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.079s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/material.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.079s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/sensor.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.079s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/light.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.079s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.082s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/model.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.083s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/geometry.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.083s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/joint.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.083s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/converters/root.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters
+[2.085s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.085s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/sdformat_to_mjcf.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.085s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/sdformat_to_mjcf/cli.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf
+[2.085s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf
+[2.085s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils
+[2.085s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils
+[2.086s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils/defaults.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils
+[2.086s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/utils/sdf_utils.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils
+[2.088s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/__version__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf
+[2.088s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat
+[2.088s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.088s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/link.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.088s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/world.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.089s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/material.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.090s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/sensor.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.090s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/light.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.090s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.091s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/geometry.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.095s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/converters/joint.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters
+[2.099s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat
+[2.099s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/cli.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat
+[2.099s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build/lib/sdformat_mjcf/mjcf_to_sdformat/mjcf_to_sdformat.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat
+[2.099s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/sdf_kinematics.py to sdf_kinematics.cpython-312.pyc
+[2.099s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/mesh_io.py to mesh_io.cpython-312.pyc
+[2.101s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/link.py to link.cpython-312.pyc
+[2.101s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/world.py to world.cpython-312.pyc
+[2.106s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/material.py to material.cpython-312.pyc
+[2.106s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/sensor.py to sensor.cpython-312.pyc
+[2.106s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/light.py to light.cpython-312.pyc
+[2.122s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/__init__.py to __init__.cpython-312.pyc
+[2.122s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/model.py to model.cpython-312.pyc
+[2.123s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/geometry.py to geometry.cpython-312.pyc
+[2.126s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/joint.py to joint.cpython-312.pyc
+[2.129s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/converters/root.py to root.cpython-312.pyc
+[2.129s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/__init__.py to __init__.cpython-312.pyc
+[2.129s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/sdformat_to_mjcf.py to sdformat_to_mjcf.cpython-312.pyc
+[2.131s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/sdformat_to_mjcf/cli.py to cli.cpython-312.pyc
+[2.131s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/__init__.py to __init__.cpython-312.pyc
+[2.133s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils/__init__.py to __init__.cpython-312.pyc
+[2.133s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils/defaults.py to defaults.cpython-312.pyc
+[2.133s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/utils/sdf_utils.py to sdf_utils.cpython-312.pyc
+[2.135s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/__version__.py to __version__.cpython-312.pyc
+[2.135s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/link.py to link.cpython-312.pyc
+[2.136s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/world.py to world.cpython-312.pyc
+[2.140s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/material.py to material.cpython-312.pyc
+[2.145s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/sensor.py to sensor.cpython-312.pyc
+[2.147s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/light.py to light.cpython-312.pyc
+[2.149s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/__init__.py to __init__.cpython-312.pyc
+[2.151s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/geometry.py to geometry.cpython-312.pyc
+[2.151s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/converters/joint.py to joint.cpython-312.pyc
+[2.152s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/__init__.py to __init__.cpython-312.pyc
+[2.154s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/cli.py to cli.cpython-312.pyc
+[2.154s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf/mjcf_to_sdformat/mjcf_to_sdformat.py to mjcf_to_sdformat.cpython-312.pyc
+[2.154s] running install_egg_info
+[2.215s] Copying ../../../aic/build/sdformat_mjcf/sdformat_mjcf.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages/sdformat_mjcf-0.1.2-py3.12.egg-info
+[2.219s] running install_scripts
+[2.268s] Installing mjcf2sdf script to /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/bin
+[2.277s] Installing sdf2mjcf script to /Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/bin
+[2.324s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/install.log'
+[2.424s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/gazebo/gz-mujoco/sdformat_mjcf' returned '0': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/sdformat_mjcf/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../aic/build/sdformat_mjcf build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_mjcf/install.log --single-version-externally-managed

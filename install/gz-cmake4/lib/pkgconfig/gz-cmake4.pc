@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../../
+includedir=${prefix}/include/gz/cmake4
+
+Name: Gazebo cmake
+Description: Build system package for the Gazebo libraries
+Version: 4.2.0
+Requires:
+Requires.private:
+Libs:
+Libs.private:
+CFlags: -I${includedir} 

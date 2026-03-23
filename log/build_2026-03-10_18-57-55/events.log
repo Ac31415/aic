@@ -1,0 +1,20 @@
+[0.000000] (-) TimerEvent: {}
+[0.000090] (-) JobUnselected: {'identifier': 'aic_adapter'}
+[0.000146] (-) JobUnselected: {'identifier': 'aic_assets'}
+[0.000166] (-) JobUnselected: {'identifier': 'aic_bringup'}
+[0.000180] (-) JobUnselected: {'identifier': 'aic_control_interfaces'}
+[0.000192] (-) JobUnselected: {'identifier': 'aic_controller'}
+[0.000203] (-) JobUnselected: {'identifier': 'aic_description'}
+[0.000214] (-) JobUnselected: {'identifier': 'aic_engine'}
+[0.000225] (-) JobUnselected: {'identifier': 'aic_engine_interfaces'}
+[0.000235] (-) JobUnselected: {'identifier': 'aic_example_policies'}
+[0.000246] (-) JobUnselected: {'identifier': 'aic_gazebo'}
+[0.000255] (-) JobUnselected: {'identifier': 'aic_model'}
+[0.000265] (-) JobUnselected: {'identifier': 'aic_model_interfaces'}
+[0.000275] (-) JobUnselected: {'identifier': 'aic_mujoco'}
+[0.000284] (-) JobUnselected: {'identifier': 'aic_scoring'}
+[0.000294] (-) JobUnselected: {'identifier': 'aic_task'}
+[0.000303] (-) JobUnselected: {'identifier': 'aic_task_interfaces'}
+[0.000313] (-) JobUnselected: {'identifier': 'aic_teleoperation'}
+[0.000323] (-) JobUnselected: {'identifier': 'lerobot_robot_aic'}
+[0.000452] (-) EventReactorShutdown: {}

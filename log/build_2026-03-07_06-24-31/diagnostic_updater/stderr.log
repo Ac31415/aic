@@ -1,0 +1,38 @@
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(diagnostic_updater PUBLIC
+      ${diagnostic_msgs_TARGETS}
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:31 (ament_target_dependencies)
+
+
+CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+  ament_target_dependencies() is deprecated.  Use target_link_libraries()
+  with modern CMake targets instead.  Try replacing this call with:
+
+    target_link_libraries(example PUBLIC
+      ${diagnostic_msgs_TARGETS}
+      ${std_msgs_TARGETS}
+      rclcpp::rclcpp
+    )
+
+Call Stack (most recent call first):
+  CMakeLists.txt:48 (ament_target_dependencies)
+
+
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/diagnostic_updater/example'

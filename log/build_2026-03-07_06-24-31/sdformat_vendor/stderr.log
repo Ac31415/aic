@@ -1,0 +1,4 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import load_entry_point
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_vendor/sdformat_vendor-prefix/install/libexec/gz/sdformat15/gz-sdformat-sdf
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/sdformat_vendor/sdformat_vendor-prefix/install/libexec/gz/sdformat15/gz-sdformat-sdf'

@@ -7,10 +7,30 @@ version = "0.1.0"
 conda-pypi-map = { "robostack-kilted" = "robostack_mapping.json" }
 preview = ["pixi-build"]
 
+# This will automatically activate the ros workspace on activation
+[target.unix.activation]
+# For activation scripts, we use bash for Unix-like systems
+scripts = ["install/setup.bash"]
+
+# To build you can use - `pixi run -e <ros distro> build <Any other temporary args>`
+[feature.build.target.unix.tasks]
+build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DPython_FIND_VIRTUALENV=ONLY -DPython3_FIND_VIRTUALENV=ONLY"
+
 [target.linux-64.dependencies]
 evdev = ">=1.9.2,<2"
+libgl-devel = "*"
 
 [dependencies]
+python = "*"
+# Build tools
+compilers = "*"
+cmake = "*"
+pkg-config = "*"
+make = "*"
+ninja = "*"
+# ROS specific tools
+rosdep = "*"
+colcon-common-extensions = "*"
 isort = "==5.13.2"                                                                     # version bundled by the vscode extension
 json5 = ">=0.13.0,<0.14"                                                               # version bundled by the vscode extension
 opencv = "<4.13.0"
@@ -22,18 +42,49 @@ ros-kilted-aic-model = { path = "aic_model" }
 ros-kilted-aic-model-interfaces = { path = "aic_interfaces/aic_model_interfaces" }
 ros-kilted-aic-task-interfaces = { path = "aic_interfaces/aic_task_interfaces" }
 ros-kilted-aic-teleoperation = { path = "aic_utils/aic_teleoperation" }
-ros-kilted-control-msgs = "*"                                                          # lerobot_robot_ros
 ros-kilted-geometry-msgs = "*"                                                         # lerobot_robot_ros
 ros-kilted-lerobot-robot-aic = { path = "aic_utils/lerobot_robot_aic" }
 ros-kilted-moveit-msgs = "*"                                                           # lerobot_robot_ros
 ros-kilted-rclpy = "*"
-ros-kilted-rmw-zenoh-cpp = "*"
+ros-kilted-rmw-zenoh-cpp = ">=0.6.6,<0.7"
 ros-kilted-ros-core = "*"
 ros-kilted-sensor-msgs = "*"                                                           # lerobot_robot_ros
 ros-kilted-std-msgs = "*"                                                              # lerobot_robot_ros
 ros-kilted-std-srvs = "*"
 ros-kilted-tf2-ros-py = "*"
 setuptools = ">=71.0.0,<81.0.0"                                                        # required by lerobot==0.4.3
+ros-dev-tools = ">=1.0.1,<2"
+pip = ">=26.0.1,<27"
+ros-kilted-control-msgs = ">=6.7.0,<7"
+ros-kilted-ros2-control-cmake = ">=0.3.0,<0.4"
+ros-kilted-backward-ros = ">=1.0.8,<2"
+ros-kilted-test-msgs = ">=2.3.0,<3"
+ros-kilted-ament-cmake-vendor-package = ">=2.7.4,<3"
+ros-kilted-urdf = ">=2.12.3,<3"
+ros-kilted-generate-parameter-library = ">=0.6.0,<0.7"
+ros-kilted-kdl-parser = ">=2.12.1,<3"
+ros-kilted-filters = ">=2.2.2,<3"
+ros-kilted-tf2-eigen-kdl = ">=0.41.6,<0.42"
+fmt = ">=12.1.0,<13"
+ros-kilted-tf2-geometry-msgs = ">=0.41.6,<0.42"
+pinocchio = ">=3.9.0,<4"
+ros-kilted-pal-statistics = ">=2.7.0,<3"
+ros-kilted-rosbag2-cpp = ">=0.32.0,<0.33"
+zeromq = ">=4.3.5,<5"
+cppzmq = ">=4.11.0,<5"
+# Dependencies for aic_controller, ros_gz_bridge, ros_gz_sim
+ros-kilted-tf2-eigen = ">=0.41.6,<0.42"
+ros-kilted-vision-msgs = "*"
+ros-kilted-actuator-msgs = "*"
+ros-kilted-gps-msgs = "*"
+ros-kilted-simulation-interfaces = "*"
+sophus = "*"
+cli11 = "*"
+gflags = "*"
+# Runtime dependencies for aic_mujoco launch
+ros-kilted-robot-state-publisher = "*"
+ros-kilted-xacro = "*"
+ros-kilted-rviz2 = ">=15.0.11,<16"
 
 [pypi-dependencies]
 huggingface-hub = { version = "==0.35.3", extras = ["hf-transfer", "cli"] }
@@ -43,6 +94,8 @@ lerobot_teleoperator_devices = { git = "https://github.com/koonpeng/lerobot-ros"
 mujoco = "==3.5.0"
 pynput = ">=1.7.6,<2"
 pyspacemouse = ">=2.0.0, <3"
+
+
 
 [activation]
 scripts = ["pixi_env_setup.sh"]

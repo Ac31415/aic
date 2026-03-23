@@ -1,0 +1,125 @@
+[0.057s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros-controls/kinematics_interface/kinematics_interface_pinocchio -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio
+[0.683s] -- The CXX compiler identification is Clang 19.1.7
+[0.897s] -- Detecting CXX compiler ABI info
+[1.294s] -- Detecting CXX compiler ABI info - done
+[1.303s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.303s] -- Detecting CXX compile features
+[1.304s] -- Detecting CXX compile features - done
+[1.329s] -- Found ros2_control_cmake: 0.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ros2_control_cmake/cmake)
+[1.331s] -- Compiler warnings enabled for Clang
+[1.353s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[1.704s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[2.753s] -- Found kinematics_interface: 2.4.0 (/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface/share/kinematics_interface/cmake)
+[3.122s] -- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[3.346s] -- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[3.515s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.613s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.169s] -- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[4.200s] -- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[7.317s] -- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+[7.435s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.220s] -- Found pluginlib: 5.6.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/pluginlib/cmake)
+[8.390s] -- Found eigen3_cmake_module: 0.4.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/eigen3_cmake_module/cmake)
+[8.414s] -- pinocchio_default FOUND. pinocchio_default at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libpinocchio_default.dylib
+[8.416s] -- pinocchio_parsers FOUND. pinocchio_parsers at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libpinocchio_parsers.dylib
+[8.418s] -- pinocchio_casadi FOUND. pinocchio_casadi at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libpinocchio_casadi.dylib
+[8.421s] -- pinocchio_extra FOUND. pinocchio_extra at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libpinocchio_extra.dylib
+[8.422s] -- qhullcpp FOUND. qhullcpp at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libqhullcpp.a
+[8.428s] -- Found Eigen3: TRUE (found version "3.4.0")
+[8.740s] -- Looking for sdformat14 -- found version 14.8.0
+[8.801s] -- Searching for dependencies of sdformat14
+[8.802s] -- Found TinyXML2 via Config file: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/tinyxml2
+[9.116s] -- Looking for dlfcn.h - found
+[9.127s] -- Looking for libdl - found
+[9.128s] -- Found DL: TRUE
+[9.148s] -- Looking for gz-math7 -- found version 7.5.2
+[9.148s] -- Searching for dependencies of gz-math7
+[9.187s] -- Looking for gz-utils2 -- found version 2.2.1
+[9.187s] -- Searching for dependencies of gz-utils2
+[9.187s] -- Looking for gz-utils2 -- found version 2.2.1
+[9.187s] -- Searching for dependencies of gz-utils2
+[9.187s] -- Searching for <gz-utils2> component [cli]
+[9.194s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[9.195s] -- Searching for dependencies of gz-utils2-cli
+[10.257s] -- Found OpenMP_CXX: -fopenmp=libomp (found version "5.1")
+[10.270s] -- Found OpenMP: TRUE (found version "5.1")
+[10.282s] CMake Warning (dev) at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package):
+[10.282s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[10.282s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[10.282s]   set the policy and suppress this warning.
+[10.282s] 
+[10.282s] Call Stack (most recent call first):
+[10.282s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:166 (find_dependency)
+[10.283s]   CMakeLists.txt:18 (find_package)
+[10.283s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[10.284s] 
+[11.154s] -- Found Boost: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/include (found version "1.88.0") found components: filesystem serialization
+[11.196s] CMake Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/hpp-fcl/hpp-fclConfig.cmake:4 (message):
+[11.196s]   Please update your CMake from 'hpp-fcl' to 'coal', or define
+[11.196s]   COAL_DISABLE_HPP_FCL_WARNINGS
+[11.196s] Call Stack (most recent call first):
+[11.196s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)
+[11.196s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:167 (find_dependency)
+[11.197s]   CMakeLists.txt:18 (find_package)
+[11.197s] 
+[11.197s] 
+[11.217s] -- coal FOUND. coal at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcoal.dylib
+[11.218s] CMake Warning (dev) at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package):
+[11.219s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[11.219s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[11.219s]   set the policy and suppress this warning.
+[11.219s] 
+[11.219s] Call Stack (most recent call first):
+[11.219s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/coal/coalConfig.cmake:154 (find_dependency)
+[11.219s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/hpp-fcl/hpp-fclConfig.cmake:10 (find_package)
+[11.219s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/cmake/data/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)
+[11.219s]   /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/cmake/pinocchio/pinocchioConfig.cmake:167 (find_dependency)
+[11.219s]   CMakeLists.txt:18 (find_package)
+[11.219s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[11.219s] 
+[11.229s] -- Found Boost: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/include (found version "1.88.0") found components: serialization filesystem
+[12.619s] -- Default C++ standard: 201703
+[12.619s] -- Minimal C++ standard upgraded to 14
+[12.619s] -- C++ standard sufficient: Minimal required 14, currently defined: 17
+[12.619s] -- C++ standard sufficient: Minimal required 14, currently defined: 17
+[12.747s] -- Configuring done (12.5s)
+[12.818s] -- Generating done (0.1s)
+[12.838s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio
+[12.842s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros-controls/kinematics_interface/kinematics_interface_pinocchio -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio
+[12.846s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio -- -j16 -l16
+[13.194s] [ 50%] Building CXX object CMakeFiles/kinematics_interface_pinocchio.dir/src/kinematics_interface_pinocchio.cpp.o
+[40.564s] [100%] Linking CXX shared library libkinematics_interface_pinocchio.dylib
+[40.687s] [100%] Built target kinematics_interface_pinocchio
+[40.701s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio -- -j16 -l16
+[40.706s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio
+[40.863s] -- Install configuration: ""
+[40.864s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/kinematics_interface_pinocchio.xml
+[40.864s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/include/kinematics_interface_pinocchio
+[40.865s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/include/kinematics_interface_pinocchio/kinematics_interface_pinocchio
+[40.865s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/include/kinematics_interface_pinocchio/kinematics_interface_pinocchio/kinematics_interface_pinocchio.hpp
+[40.865s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/lib/libkinematics_interface_pinocchio.dylib
+[40.874s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/lib/libkinematics_interface_pinocchio.dylib
+[40.874s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/lib/libkinematics_interface_pinocchio.dylib'
+[40.897s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/library_path.sh
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/library_path.dsv
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/ament_index/resource_index/package_run_dependencies/kinematics_interface_pinocchio
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/ament_index/resource_index/parent_prefix_path/kinematics_interface_pinocchio
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/ament_prefix_path.sh
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/ament_prefix_path.dsv
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/path.sh
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/environment/path.dsv
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/local_setup.bash
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/local_setup.sh
+[40.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/local_setup.zsh
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/local_setup.dsv
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/package.dsv
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/ament_index/resource_index/packages/kinematics_interface_pinocchio
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/ament_index/resource_index/kinematics_interface__pluginlib__plugin/kinematics_interface_pinocchio
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/export_kinematics_interface_pinocchioExport.cmake
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/export_kinematics_interface_pinocchioExport-noconfig.cmake
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/ament_cmake_export_targets-extras.cmake
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/ament_cmake_export_dependencies-extras.cmake
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/kinematics_interface_pinocchioConfig.cmake
+[40.905s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/cmake/kinematics_interface_pinocchioConfig-version.cmake
+[40.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface_pinocchio/share/kinematics_interface_pinocchio/package.xml
+[40.914s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/kinematics_interface:/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/kinematics_interface_pinocchio

@@ -1,0 +1,216 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found builtin_interfaces: 2.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/builtin_interfaces/cmake)
+-- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.7.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_adapter/cmake)
+-- Found std_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/std_msgs/cmake)
+-- Found ament_cmake_ros_core: 0.14.7 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_ros_core/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter Development NumPy Development.Module Development.Embed
+-- Configuring done (11.8s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_engine_interfaces
+[  2%] Generating type hashes for ROS interfaces
+[  2%] Built target ament_cmake_python_copy_aic_engine_interfaces
+[  2%] Built target aic_engine_interfaces__rosidl_generator_type_description
+[  5%] Generating C code for ROS interfaces
+[  8%] Generating C++ code for ROS interfaces
+running egg_info
+creating aic_engine_interfaces.egg-info
+writing aic_engine_interfaces.egg-info/PKG-INFO
+writing dependency_links to aic_engine_interfaces.egg-info/dependency_links.txt
+writing top-level names to aic_engine_interfaces.egg-info/top_level.txt
+writing manifest file 'aic_engine_interfaces.egg-info/SOURCES.txt'
+reading manifest file 'aic_engine_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'aic_engine_interfaces.egg-info/SOURCES.txt'
+[  8%] Built target ament_cmake_python_build_aic_engine_interfaces_egg
+[ 11%] Building C object CMakeFiles/aic_engine_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_engine_interfaces/srv/detail/reset_joints__type_support.c.o
+[ 14%] Building C object CMakeFiles/aic_engine_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_engine_interfaces/srv/detail/reset_joints__description.c.o
+[ 17%] Building C object CMakeFiles/aic_engine_interfaces__rosidl_generator_c.dir/rosidl_generator_c/aic_engine_interfaces/srv/detail/reset_joints__functions.c.o
+[ 17%] Built target aic_engine_interfaces__cpp
+[ 20%] Linking C shared library libaic_engine_interfaces__rosidl_generator_c.dylib
+[ 20%] Built target aic_engine_interfaces__rosidl_generator_c
+[ 23%] Generating C++ type support for eProsima Fast-RTPS
+[ 26%] Generating C++ type support dispatch for ROS interfaces
+[ 29%] Generating C type support dispatch for ROS interfaces
+[ 32%] Generating C type support for eProsima Fast-RTPS
+[ 35%] Generating C introspection for ROS interfaces
+[ 38%] Generating C++ introspection for ROS interfaces
+[ 41%] Building CXX object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/aic_engine_interfaces/srv/reset_joints__type_support.cpp.o
+[ 44%] Building C object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/aic_engine_interfaces/srv/detail/reset_joints__type_support.c.o
+[ 47%] Building CXX object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/aic_engine_interfaces/srv/reset_joints__type_support.cpp.o
+[ 50%] Linking C shared library libaic_engine_interfaces__rosidl_typesupport_introspection_c.dylib
+[ 52%] Building CXX object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/aic_engine_interfaces/srv/detail/reset_joints__type_support.cpp.o
+[ 55%] Linking CXX shared library libaic_engine_interfaces__rosidl_typesupport_c.dylib
+[ 58%] Building CXX object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/aic_engine_interfaces/srv/detail/reset_joints__type_support_c.cpp.o
+[ 61%] Building CXX object CMakeFiles/aic_engine_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/aic_engine_interfaces/srv/detail/dds_fastrtps/reset_joints__type_support.cpp.o
+[ 61%] Built target aic_engine_interfaces__rosidl_typesupport_introspection_c
+[ 61%] Built target aic_engine_interfaces__rosidl_typesupport_c
+[ 64%] Linking CXX shared library libaic_engine_interfaces__rosidl_typesupport_cpp.dylib
+[ 64%] Built target aic_engine_interfaces__rosidl_typesupport_cpp
+[ 67%] Linking CXX shared library libaic_engine_interfaces__rosidl_typesupport_fastrtps_c.dylib
+[ 67%] Built target aic_engine_interfaces__rosidl_typesupport_fastrtps_c
+[ 70%] Linking CXX shared library libaic_engine_interfaces__rosidl_typesupport_introspection_cpp.dylib
+[ 70%] Built target aic_engine_interfaces__rosidl_typesupport_introspection_cpp
+[ 73%] Linking CXX shared library libaic_engine_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+[ 73%] Built target aic_engine_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 73%] Built target aic_engine_interfaces
+[ 76%] Generating Python code for ROS interfaces
+[ 76%] Built target aic_engine_interfaces__py
+[ 79%] Building C object CMakeFiles/aic_engine_interfaces__rosidl_generator_py.dir/rosidl_generator_py/aic_engine_interfaces/srv/_reset_joints_s.c.o
+[ 82%] Linking C shared library libaic_engine_interfaces__rosidl_generator_py.dylib
+[ 82%] Built target aic_engine_interfaces__rosidl_generator_py
+[ 85%] Building C object CMakeFiles/aic_engine_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[ 88%] Linking C shared module rosidl_generator_py/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[ 88%] Built target aic_engine_interfaces_s__rosidl_typesupport_fastrtps_c
+[ 91%] Building C object CMakeFiles/aic_engine_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_c.c.o
+[ 94%] Linking C shared module rosidl_generator_py/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_c.so
+[ 94%] Built target aic_engine_interfaces_s__rosidl_typesupport_c
+[ 97%] Building C object CMakeFiles/aic_engine_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o
+[100%] Linking C shared module rosidl_generator_py/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_introspection_c.so
+[100%] Built target aic_engine_interfaces_s__rosidl_typesupport_introspection_c
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/ament_index/resource_index/rosidl_interfaces/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/srv/ResetJoints.json
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__functions.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__struct.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__type_support.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__functions.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__description.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/reset_joints.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_generator_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__rosidl_typesupport_fastrtps_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_fastrtps_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/reset_joints.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__traits.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__struct.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__type_support.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__builder.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/dds_fastrtps
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_fastrtps_cpp.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__type_support.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__rosidl_typesupport_introspection_c.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_introspection_c.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_c.dylib
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/include/aic_engine_interfaces/aic_engine_interfaces/srv/detail/reset_joints__type_support.cpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_introspection_cpp.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_typesupport_cpp.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/pythonpath.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/pythonpath.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces-0.0.1-py3.12.egg-info
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces-0.0.1-py3.12.egg-info/PKG-INFO
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces-0.0.1-py3.12.egg-info/SOURCES.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces-0.0.1-py3.12.egg-info/top_level.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces-0.0.1-py3.12.egg-info/dependency_links.txt
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/_aic_engine_interfaces_s.ep.rosidl_typesupport_c.c
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv/__init__.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv/_reset_joints.py
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv/_reset_joints_s.c
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/__init__.py'...
+Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv/__init__.py'...
+Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/srv/_reset_joints.py'...
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_fastrtps_c.so
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_introspection_c.so
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/python3.12/site-packages/aic_engine_interfaces/aic_engine_interfaces_s__rosidl_typesupport_c.so
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/lib/libaic_engine_interfaces__rosidl_generator_py.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/srv/ResetJoints.idl
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/srv/ResetJoints.srv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/ament_index/resource_index/package_run_dependencies/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/ament_index/resource_index/parent_prefix_path/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/ament_index/resource_index/packages/aic_engine_interfaces
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/export_aic_engine_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfacesConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/cmake/aic_engine_interfacesConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_engine_interfaces/share/aic_engine_interfaces/package.xml

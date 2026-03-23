@@ -1,0 +1,107 @@
+[0.048s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/self_test -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/self_test
+[0.255s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.255s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.256s]   CMake.
+[0.256s] 
+[0.256s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.256s]   to tell CMake that the project requires at least <min> but has been updated
+[0.256s]   to work with policies introduced by <max> or earlier.
+[0.256s] 
+[0.256s] 
+[0.552s] -- The C compiler identification is Clang 19.1.7
+[0.849s] -- The CXX compiler identification is Clang 19.1.7
+[0.982s] -- Detecting C compiler ABI info
+[1.381s] -- Detecting C compiler ABI info - done
+[1.386s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.386s] -- Detecting C compile features
+[1.387s] -- Detecting C compile features - done
+[1.390s] -- Detecting CXX compiler ABI info
+[1.682s] -- Detecting CXX compiler ABI info - done
+[1.694s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.695s] -- Detecting CXX compile features
+[1.695s] -- Detecting CXX compile features - done
+[1.698s] -- Build for kilted
+[1.736s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[2.076s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[3.209s] -- Found diagnostic_msgs: 5.5.1 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/diagnostic_msgs/cmake)
+[3.740s] -- Found rosidl_generator_c: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_c/cmake)
+[3.857s] -- Found rosidl_generator_cpp: 4.9.6 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rosidl_generator_cpp/cmake)
+[4.058s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.191s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.518s] -- Found diagnostic_updater: 4.2.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/share/diagnostic_updater/cmake)
+[5.097s] -- Found rmw_implementation_cmake: 7.8.2 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_implementation_cmake/cmake)
+[5.127s] -- Found rmw_fastrtps_cpp: 9.3.3 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/rmw_fastrtps_cpp/cmake)
+[8.048s] -- Found OpenSSL: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libcrypto.dylib (found version "1.1.1s")
+[8.154s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.513s] CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[8.513s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[8.513s]   with modern CMake targets instead.  Try replacing this call with:
+[8.514s] 
+[8.514s]     target_link_libraries(run_selftest PUBLIC
+[8.514s]       ${builtin_interfaces_TARGETS}
+[8.514s]       ${diagnostic_msgs_TARGETS}
+[8.514s]       diagnostic_updater::diagnostic_updater
+[8.514s]       rclcpp::rclcpp
+[8.514s]       rcutils::rcutils
+[8.514s]     )
+[8.514s] 
+[8.514s] Call Stack (most recent call first):
+[8.514s]   CMakeLists.txt:41 (ament_target_dependencies)
+[8.514s] 
+[8.514s] 
+[8.522s] CMake Deprecation Warning at /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:87 (message):
+[8.523s]   ament_target_dependencies() is deprecated.  Use target_link_libraries()
+[8.523s]   with modern CMake targets instead.  Try replacing this call with:
+[8.523s] 
+[8.524s]     target_link_libraries(selftest_example PUBLIC
+[8.524s]       ${builtin_interfaces_TARGETS}
+[8.524s]       ${diagnostic_msgs_TARGETS}
+[8.524s]       diagnostic_updater::diagnostic_updater
+[8.524s]       rclcpp::rclcpp
+[8.525s]       rcutils::rcutils
+[8.525s]     )
+[8.525s] 
+[8.525s] Call Stack (most recent call first):
+[8.525s]   CMakeLists.txt:56 (ament_target_dependencies)
+[8.525s] 
+[8.525s] 
+[8.713s] -- Configuring done (8.5s)
+[8.892s] -- Generating done (0.2s)
+[8.925s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/self_test
+[8.927s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/self_test -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/self_test
+[8.942s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/self_test -- -j16 -l16
+[9.267s] [ 25%] Building CXX object CMakeFiles/run_selftest.dir/src/run_selftest.cpp.o
+[15.476s] [ 50%] Linking CXX executable run_selftest
+[15.579s] [ 50%] Built target run_selftest
+[15.693s] [ 75%] Building CXX object CMakeFiles/selftest_example.dir/example/selftest_example.cpp.o
+[20.762s] [100%] Linking CXX executable selftest_example
+[20.933s] [100%] Built target selftest_example
+[20.972s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/self_test -- -j16 -l16
+[20.973s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/self_test
+[21.188s] -- Install configuration: ""
+[21.189s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include
+[21.189s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include/self_test
+[21.189s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/include/self_test/test_runner.hpp
+[21.189s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/run_selftest
+[21.210s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/run_selftest
+[21.210s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/run_selftest'
+[21.225s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/selftest_example
+[21.234s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/selftest_example
+[21.235s] [cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/install/self_test/lib/self_test/selftest_example'
+[21.269s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/package_run_dependencies/self_test
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/parent_prefix_path/self_test
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/ament_prefix_path.sh
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/ament_prefix_path.dsv
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/path.sh
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/environment/path.dsv
+[21.270s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.bash
+[21.271s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.sh
+[21.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.zsh
+[21.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/local_setup.dsv
+[21.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/package.dsv
+[21.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/ament_index/resource_index/packages/self_test
+[21.272s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/ament_cmake_export_include_directories-extras.cmake
+[21.273s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/self_testConfig.cmake
+[21.273s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/cmake/self_testConfig-version.cmake
+[21.273s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/self_test/share/self_test/package.xml
+[21.275s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/self_test' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/self_test

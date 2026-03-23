@@ -1,0 +1,124 @@
+[0.034s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-utils -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3
+[0.600s] -- The C compiler identification is Clang 19.1.7
+[0.942s] -- The CXX compiler identification is Clang 19.1.7
+[1.052s] -- Detecting C compiler ABI info
+[1.367s] -- Detecting C compiler ABI info - done
+[1.382s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.383s] -- Detecting C compile features
+[1.383s] -- Detecting C compile features - done
+[1.389s] -- Detecting CXX compiler ABI info
+[1.843s] -- Detecting CXX compiler ABI info - done
+[1.853s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.853s] -- Detecting CXX compile features
+[1.855s] -- Detecting CXX compile features - done
+[1.981s] -- gz-utils3 version 3.1.1
+[1.981s] -- Operating system is Apple MacOS X
+[2.084s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.596s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.596s] -- Found Threads: TRUE
+[2.698s] -- Looking for spdlog - found
+[2.698s] 
+[7.792s] -- 
+[7.793s] -- Searching for host SSE information
+[8.098s] -- Could not find hardware support for SSE2 on this machine.
+[8.098s] -- Could not find hardware support for SSE3 on this machine.
+[8.098s] -- Could not find hardware support for SSSE3 on this machine.
+[8.098s] -- Could not find hardware support for SSE4.1 on this machine.
+[8.098s] -- Could not find hardware support for SSE4.2 on this machine.
+[8.098s] -- SSE4 disabled.
+[8.098s] --
+[8.634s] -- Configuring library: gz-utils3
+[8.639s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+[8.994s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+[9.002s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+[9.460s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+[9.460s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+[9.867s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+[9.888s] -- Testing is disabled -- skipping UNIT tests
+[9.892s] -- Configuring library: gz-utils3-cli
+[9.895s] -- Testing is disabled -- skipping UNIT tests
+[9.905s] -- Configuring library: gz-utils3-log
+[9.919s] -- Testing is disabled -- skipping UNIT tests
+[10.150s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+[10.154s] -- Adding codecheck target
+[10.154s] -- Build configuration successful
+[10.154s] -- Build type: RelWithDebInfo
+[10.154s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3
+[10.180s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[10.209s] -- Configuring done (9.9s)
+[10.333s] -- Generating done (0.1s)
+[10.367s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3
+[10.408s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-utils -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3
+[10.414s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3 -- -j16 -l16
+[11.090s] [ 20%] Building CXX object src/CMakeFiles/gz-utils3.dir/Environment.cc.o
+[13.556s] [ 40%] Linking CXX shared library ../lib/libgz-utils3.dylib
+[13.706s] [ 40%] Built target gz-utils3
+[13.754s] [ 60%] Building CXX object log/src/CMakeFiles/gz-utils3-log.dir/Logger.cc.o
+[16.093s] [ 80%] Building CXX object log/src/CMakeFiles/gz-utils3-log.dir/SplitSink.cc.o
+[18.173s] [100%] Linking CXX shared library ../../lib/libgz-utils3-log.dylib
+[18.342s] [100%] Built target gz-utils3-log
+[18.355s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3 -- -j16 -l16
+[18.364s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3
+[18.625s] -- Install configuration: "RelWithDebInfo"
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/Export.hh
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Export.hh
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.3.1.1.dylib
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.3.dylib
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.dylib
+[18.626s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-config.cmake
+[18.627s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-config-version.cmake
+[18.627s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-targets.cmake
+[18.631s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-targets-relwithdebinfo.cmake
+[18.631s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3.pc
+[18.632s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/DefaultOps.hh
+[18.632s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/ExtraTestMacros.hh
+[18.634s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/ImplPtr.hh
+[18.634s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/SuppressWarning.hh
+[18.634s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/subprocess.h
+[18.635s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Environment.hh
+[18.636s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/ExtraTestMacros.hh
+[18.636s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/ImplPtr.hh
+[18.636s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/NeverDestroyed.hh
+[18.637s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Subprocess.hh
+[18.638s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/SuppressWarning.hh
+[18.638s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils.hh
+[18.638s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/config.hh
+[18.638s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-config.cmake
+[18.639s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-config-version.cmake
+[18.639s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-targets.cmake
+[18.640s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3-cli.pc
+[18.641s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/App.hpp
+[18.643s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/CLI.hpp
+[18.645s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Config.hpp
+[18.646s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/ConfigFwd.hpp
+[18.648s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Error.hpp
+[18.648s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Formatter.hpp
+[18.648s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/FormatterFwd.hpp
+[18.649s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Macros.hpp
+[18.650s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Option.hpp
+[18.651s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Split.hpp
+[18.651s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/StringTools.hpp
+[18.651s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Timer.hpp
+[18.651s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/TypeTools.hpp
+[18.653s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Validators.hpp
+[18.654s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Version.hpp
+[18.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli.hh
+[18.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/GzFormatter.hpp
+[18.655s] -- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli.hh
+[18.655s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/detail/Export.hh
+[18.658s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/Export.hh
+[18.659s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.3.1.1.dylib
+[18.660s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.3.dylib
+[18.660s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.dylib
+[18.660s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-config.cmake
+[18.660s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-config-version.cmake
+[18.660s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-targets.cmake
+[18.661s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-targets-relwithdebinfo.cmake
+[18.662s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3-log.pc
+[18.663s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/Logger.hh
+[18.664s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/SplitSink.hh
+[18.665s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log.hh
+[18.665s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-config.cmake
+[18.667s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-config-version.cmake
+[18.667s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-targets.cmake
+[18.706s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3

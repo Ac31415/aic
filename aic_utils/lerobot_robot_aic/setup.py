@@ -14,9 +14,23 @@
 #  limitations under the License.
 #
 
+# import sys
+
 from setuptools import find_packages, setup
 
 package_name = "lerobot_robot_aic"
+
+
+# # colcon may call `setup.py develop --uninstall` during editable installs.
+# # Newer setuptools no longer supports `--uninstall`, so drop it when present.
+# if "develop" in sys.argv and "--uninstall" in sys.argv:
+#     sys.argv.remove("--uninstall")
+    
+# if "develop" in sys.argv and "--build-directory" in sys.argv:
+#     sys.argv.remove("--build-directory")
+    
+# if "develop" in sys.argv and "--editable" in sys.argv:
+#     sys.argv.remove("--editable")
 
 
 setup(

@@ -1,0 +1,37 @@
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Configuring done (3.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/components_urdfs.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/descriptions.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/test_hardware_interface_constants.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/urdf/test_hardware_components.urdf
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/library_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/library_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/package_run_dependencies/ros2_control_test_assets
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/parent_prefix_path/ros2_control_test_assets
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/packages/ros2_control_test_assets
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/export_ros2_control_test_assetsExport.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ros2_control_test_assetsConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ros2_control_test_assetsConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/package.xml

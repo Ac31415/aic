@@ -1,0 +1,84 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import load_entry_point
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:1727:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1727 |   switch (pub_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:1776:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1776 |   switch (pub_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2089:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2089 |   switch (this_.pub_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2174:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2174 |     switch (oneof_from_case) {
+      |     ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2313:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2313 |   switch (disc_contents_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2363:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2363 |   switch (disc_contents_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2668:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2668 |   switch (this_.disc_contents_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2747:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2747 |     switch (oneof_from_case) {
+      |     ^
+8 warnings generated.
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:273:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  273 |   switch (from_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:335:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  335 |   switch (from_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:715:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  715 |   switch (this_.from_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:824:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+  824 |     switch (oneof_from_case) {
+      |     ^
+4 warnings generated.
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2061:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2061 |   switch (version_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2103:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2103 |   switch (version_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2306:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2306 |   switch (this_.version_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2357:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2357 |     switch (oneof_from_case) {
+      |     ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2892:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2892 |   switch (resource_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2949:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 2949 |   switch (resource_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:3447:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 3447 |   switch (this_.resource_type_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:3538:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 3538 |     switch (oneof_from_case) {
+      |     ^
+8 warnings generated.
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:447:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  447 |   switch (content_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:515:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  515 |   switch (content_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:892:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+  892 |   switch (this_.content_case()) {
+      |   ^
+/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:1002:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+ 1002 |     switch (oneof_from_case) {
+      |     ^
+4 warnings generated.
+make[5]: *** [core/CMakeFiles/gz-msgs11.dir/build.make:6882: core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/register.cc.o] Interrupt: 2
+make[4]: *** [CMakeFiles/Makefile2:478: core/CMakeFiles/gz-msgs11.dir/all] Interrupt: 2
+make[3]: *** [Makefile:146: all] Interrupt: 2
+make[2]: *** [CMakeFiles/gz_msgs_vendor.dir/build.make:86: gz_msgs_vendor-prefix/src/gz_msgs_vendor-stamp/gz_msgs_vendor-build] Interrupt: 2
+make[1]: *** [CMakeFiles/Makefile2:153: CMakeFiles/gz_msgs_vendor.dir/all] Interrupt: 2
+make: *** [Makefile:146: all] Interrupt: 2

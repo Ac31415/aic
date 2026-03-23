@@ -1,0 +1,14 @@
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/build/gz-math8/lib/ruby/RandRUBY_wrap.cxx:1906:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/utility:284:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/compare:174:
+In file included from /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/cmath:327:
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/../include/c++/v1/__math/special_functions.h:51:8: error: no member named 'finite' in namespace 'std::__math'; did you mean simply 'finite'?
+   51 |   if (!__math::isfinite(__H_n)) {
+      |        ^~~~~~~~
+/Applications/Xcode-26.0.0-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Headers/ruby/ruby/missing.h:105:17: note: 'finite' declared here
+  105 | RUBY_EXTERN int finite(double);
+      |                 ^
+1 error generated.
+make[2]: *** [src/ruby/CMakeFiles/rbmath.dir/build.make:135: src/ruby/CMakeFiles/rbmath.dir/__/__/lib/ruby/RandRUBY_wrap.cxx.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:586: src/ruby/CMakeFiles/rbmath.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

@@ -1,0 +1,84 @@
+[0.063s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/diagnostic_common_diagnostics -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics
+[0.367s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.367s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.368s]   CMake.
+[0.368s] 
+[0.368s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.368s]   to tell CMake that the project requires at least <min> but has been updated
+[0.368s]   to work with policies introduced by <max> or earlier.
+[0.368s] 
+[0.368s] 
+[0.633s] -- The C compiler identification is Clang 19.1.7
+[0.914s] -- The CXX compiler identification is Clang 19.1.7
+[1.059s] -- Detecting C compiler ABI info
+[1.472s] -- Detecting C compiler ABI info - done
+[1.477s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.477s] -- Detecting C compile features
+[1.477s] -- Detecting C compile features - done
+[1.482s] -- Detecting CXX compiler ABI info
+[1.806s] -- Detecting CXX compiler ABI info - done
+[1.813s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.814s] -- Detecting CXX compile features
+[1.814s] -- Detecting CXX compile features - done
+[1.863s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[2.169s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[3.686s] -- Configuring done (3.4s)
+[3.711s] -- Generating done (0.0s)
+[3.716s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics
+[3.720s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros/diagnostics/diagnostic_common_diagnostics -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics
+[3.725s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics -- -j16 -l16
+[4.105s] Built target ament_cmake_python_copy_diagnostic_common_diagnostics
+[4.705s] running egg_info
+[4.723s] creating diagnostic_common_diagnostics.egg-info
+[4.724s] writing diagnostic_common_diagnostics.egg-info/PKG-INFO
+[4.734s] writing dependency_links to diagnostic_common_diagnostics.egg-info/dependency_links.txt
+[4.735s] writing top-level names to diagnostic_common_diagnostics.egg-info/top_level.txt
+[4.735s] writing manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'
+[4.792s] reading manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'
+[4.792s] writing manifest file 'diagnostic_common_diagnostics.egg-info/SOURCES.txt'
+[4.962s] Built target ament_cmake_python_build_diagnostic_common_diagnostics_egg
+[4.978s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics -- -j16 -l16
+[4.979s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics
+[5.180s] -- Install configuration: ""
+[5.180s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/pythonpath.sh
+[5.182s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/pythonpath.dsv
+[5.182s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics-4.2.2-py3.12.egg-info
+[5.183s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics-4.2.2-py3.12.egg-info/PKG-INFO
+[5.183s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics-4.2.2-py3.12.egg-info/SOURCES.txt
+[5.183s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics-4.2.2-py3.12.egg-info/top_level.txt
+[5.183s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics-4.2.2-py3.12.egg-info/dependency_links.txt
+[5.184s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics
+[5.184s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/ram_monitor.py
+[5.185s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/hd_monitor.py
+[5.185s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/ntp_monitor.py
+[5.185s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/sensors_monitor.py
+[5.185s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/__init__.py
+[5.185s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/cpu_monitor.py
+[5.230s] Listing '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/__init__.py'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/cpu_monitor.py'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/hd_monitor.py'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/ntp_monitor.py'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/ram_monitor.py'...
+[5.230s] Compiling '/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/python3.12/site-packages/diagnostic_common_diagnostics/sensors_monitor.py'...
+[5.236s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/cpu_monitor.py
+[5.236s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/ntp_monitor.py
+[5.236s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/ram_monitor.py
+[5.237s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/sensors_monitor.py
+[5.237s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/lib/diagnostic_common_diagnostics/hd_monitor.py
+[5.237s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/ament_index/resource_index/package_run_dependencies/diagnostic_common_diagnostics
+[5.238s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/ament_index/resource_index/parent_prefix_path/diagnostic_common_diagnostics
+[5.238s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/ament_prefix_path.sh
+[5.238s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/ament_prefix_path.dsv
+[5.239s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/path.sh
+[5.239s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/environment/path.dsv
+[5.239s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.bash
+[5.239s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.sh
+[5.239s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.zsh
+[5.240s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/local_setup.dsv
+[5.240s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.dsv
+[5.240s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/ament_index/resource_index/packages/diagnostic_common_diagnostics
+[5.240s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/cmake/diagnostic_common_diagnosticsConfig.cmake
+[5.240s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/cmake/diagnostic_common_diagnosticsConfig-version.cmake
+[5.241s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_common_diagnostics/share/diagnostic_common_diagnostics/package.xml
+[5.245s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/diagnostic_updater/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/diagnostic_common_diagnostics

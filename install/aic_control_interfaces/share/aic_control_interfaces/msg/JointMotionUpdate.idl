@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_control_interfaces/msg/JointMotionUpdate.msg
+// generated code does not contain a copyright notice
+
+#include "aic_control_interfaces/msg/TrajectoryGenerationMode.idl"
+#include "trajectory_msgs/msg/JointTrajectoryPoint.idl"
+
+module aic_control_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "Command the robot to a target joint state.")
+    struct JointMotionUpdate {
+      @verbatim (language="comment", text=
+        "The target joint configuration including set points for positions," "\n"
+        "velocities, accelerations, and efforts.")
+      trajectory_msgs::msg::JointTrajectoryPoint target_state;
+
+      @verbatim (language="comment", text=
+        "Stiffness and damping both evolve from a current value toward these target" "\n"
+        "ones. This avoids sudden jumps when the values are changed." "\n"
+        "Specify for each joint.")
+      sequence<double> target_stiffness;
+
+      sequence<double> target_damping;
+
+      @verbatim (language="comment", text=
+        "The mode of trajectory generation.")
+      @unit (value="OPTIONAL")
+      aic_control_interfaces::msg::TrajectoryGenerationMode trajectory_generation_mode;
+
+      sequence<double> target_feedforward_torque;
+    };
+  };
+};

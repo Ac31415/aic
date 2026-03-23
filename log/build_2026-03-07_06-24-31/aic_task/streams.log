@@ -1,0 +1,27 @@
+[1.080s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_isaac/aic_isaaclab/source/aic_task': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/aic_task build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/install.log --single-version-externally-managed
+[1.350s] running egg_info
+[1.368s] creating ../../../../../build/aic_task/aic_task.egg-info
+[1.368s] writing ../../../../../build/aic_task/aic_task.egg-info/PKG-INFO
+[1.369s] writing dependency_links to ../../../../../build/aic_task/aic_task.egg-info/dependency_links.txt
+[1.369s] writing requirements to ../../../../../build/aic_task/aic_task.egg-info/requires.txt
+[1.369s] writing top-level names to ../../../../../build/aic_task/aic_task.egg-info/top_level.txt
+[1.369s] writing manifest file '../../../../../build/aic_task/aic_task.egg-info/SOURCES.txt'
+[1.495s] reading manifest file '../../../../../build/aic_task/aic_task.egg-info/SOURCES.txt'
+[1.496s] writing manifest file '../../../../../build/aic_task/aic_task.egg-info/SOURCES.txt'
+[1.497s] running build
+[1.497s] running build_py
+[1.497s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build/lib/aic_task
+[1.497s] copying aic_task/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build/lib/aic_task
+[1.497s] copying aic_task/extension.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build/lib/aic_task
+[1.498s] running install
+[1.508s] running install_lib
+[1.528s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task
+[1.528s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build/lib/aic_task/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task
+[1.534s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build/lib/aic_task/extension.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task
+[1.534s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task/__init__.py to __init__.cpython-312.pyc
+[1.535s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task/extension.py to extension.cpython-312.pyc
+[1.535s] running install_egg_info
+[1.780s] Copying ../../../../../build/aic_task/aic_task.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages/aic_task-0.1.0-py3.12.egg-info
+[1.782s] running install_scripts
+[1.875s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/install.log'
+[2.150s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_isaac/aic_isaaclab/source/aic_task' returned '0': PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_task/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/aic_task build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/aic_task/install.log --single-version-externally-managed

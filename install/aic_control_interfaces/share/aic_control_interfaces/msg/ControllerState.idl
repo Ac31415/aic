@@ -1,0 +1,52 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from aic_control_interfaces/msg/ControllerState.msg
+// generated code does not contain a copyright notice
+
+#include "aic_control_interfaces/msg/TargetMode.idl"
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Twist.idl"
+#include "geometry_msgs/msg/WrenchStamped.idl"
+#include "std_msgs/msg/Header.idl"
+#include "trajectory_msgs/msg/JointTrajectoryPoint.idl"
+
+module aic_control_interfaces {
+  module msg {
+    typedef double double__6[6];
+    @verbatim (language="comment", text=
+      "Current state of the AIC Controller which includes the computed cartesian and joint commands")
+    struct ControllerState {
+      @verbatim (language="comment", text=
+        "Header")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Current tcp pose.")
+      geometry_msgs::msg::Pose tcp_pose;
+
+      @verbatim (language="comment", text=
+        "Current tcp velocity.")
+      geometry_msgs::msg::Twist tcp_velocity;
+
+      @verbatim (language="comment", text=
+        "Reference tcp pose.")
+      geometry_msgs::msg::Pose reference_tcp_pose;
+
+      @verbatim (language="comment", text=
+        "Pose error from current to target tool pose in the form of (x,y,z,rx,ry,rz)")
+      double__6 tcp_error;
+
+      @verbatim (language="comment", text=
+        "Reference joint state commands")
+      trajectory_msgs::msg::JointTrajectoryPoint reference_joint_state;
+
+      @verbatim (language="comment", text=
+        "Current mode for target execution")
+      aic_control_interfaces::msg::TargetMode target_mode;
+
+      @verbatim (language="comment", text=
+        "Tare offset for force torque sensor." "\n"
+        "header.frame_id: The reference coordinate frame of the tare values.")
+      geometry_msgs::msg::WrenchStamped fts_tare_offset;
+    };
+  };
+};

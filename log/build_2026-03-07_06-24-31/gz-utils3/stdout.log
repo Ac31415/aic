@@ -1,0 +1,118 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-utils3 version 3.1.1
+-- Operating system is Apple MacOS X
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for spdlog - found
+
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Configuring library: gz-utils3
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-utils3-cli
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-utils3-log
+-- Testing is disabled -- skipping UNIT tests
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (9.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-utils3
+[ 20%] Building CXX object src/CMakeFiles/gz-utils3.dir/Environment.cc.o
+[ 40%] Linking CXX shared library ../lib/libgz-utils3.dylib
+[ 40%] Built target gz-utils3
+[ 60%] Building CXX object log/src/CMakeFiles/gz-utils3-log.dir/Logger.cc.o
+[ 80%] Building CXX object log/src/CMakeFiles/gz-utils3-log.dir/SplitSink.cc.o
+[100%] Linking CXX shared library ../../lib/libgz-utils3-log.dylib
+[100%] Built target gz-utils3-log
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.3.1.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3/gz-utils3-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/DefaultOps.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/ExtraTestMacros.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/ImplPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/SuppressWarning.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/detail/subprocess.h
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Environment.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/ExtraTestMacros.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/ImplPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/NeverDestroyed.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/Subprocess.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/SuppressWarning.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/config.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-cli/gz-utils3-cli-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3-cli.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/App.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/CLI.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Config.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/ConfigFwd.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Error.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Formatter.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/FormatterFwd.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Macros.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Option.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Split.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/StringTools.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Timer.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/TypeTools.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Validators.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/Version.hpp
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli/GzFormatter.hpp
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/cli.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.3.1.1.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/libgz-utils3-log.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-log/gz-utils3-log-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/pkgconfig/gz-utils3-log.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/Logger.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log/SplitSink.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/include/gz/utils3/gz/utils/log.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-utils3/lib/cmake/gz-utils3-all/gz-utils3-all-targets.cmake

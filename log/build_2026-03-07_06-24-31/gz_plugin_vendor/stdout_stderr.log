@@ -1,0 +1,334 @@
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+-- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+-- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+-- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+-- Found gz_tools_vendor: 0.1.3 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake)
+-- Found gz_utils_vendor: 0.3.0 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor/share/gz_utils_vendor/cmake)
+-- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+-- Configuring done (3.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor
+[ 12%] Creating directories for 'gz_plugin_vendor'
+[ 25%] Performing download step for 'gz_plugin_vendor'
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import load_entry_point
+=== ./gz_plugin_vendor (git) ===
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: will change to "main" in Git 3.0. To configure the initial branch name
+hint: to use in all of your new repositories, which will suppress this warning,
+hint: call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/src/gz_plugin_vendor/.git/
+
+From https://github.com/gazebosim/gz-plugin
+ * [new tag]         gz-plugin3_3.1.0 -> gz-plugin3_3.1.0
+Note: switching to 'gz-plugin3_3.1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 4341e1b Prepare for 3.1.0 release (#178)
+
+[ 37%] No update_disconnected step for 'gz_plugin_vendor'
+[ 50%] No patch_disconnected step for 'gz_plugin_vendor'
+[ 62%] Performing configure step for 'gz_plugin_vendor'
+loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-config.cmake
+-- The C compiler identification is Clang 19.1.7
+-- The CXX compiler identification is Clang 19.1.7
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- gz-plugin3 version 3.1.0
+-- Operating system is Apple MacOS X
+-- 
+
+-- ====== Finding Dependencies ======
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE
+-- Looking for libdl - found
+
+-- Looking for gz-utils3 -- found version 3.1.1
+-- Searching for dependencies of gz-utils3
+-- Searching for <gz-utils3> component [cli]
+-- Looking for gz-utils3-cli -- found version 3.1.1
+-- Searching for dependencies of gz-utils3-cli
+-- Looking for gz-utils3 - found
+
+-- 
+-- Searching for host SSE information
+-- Could not find hardware support for SSE2 on this machine.
+-- Could not find hardware support for SSE3 on this machine.
+-- Could not find hardware support for SSSE3 on this machine.
+-- Could not find hardware support for SSE4.1 on this machine.
+-- Could not find hardware support for SSE4.2 on this machine.
+-- SSE4 disabled.
+--
+-- Configuring library: gz-plugin3
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+-- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-plugin3-loader
+-- Testing is disabled -- skipping UNIT tests
+-- Configuring library: gz-plugin3-register
+-- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+-- Adding codecheck target
+-- Build configuration successful
+-- Build type: RelWithDebInfo
+-- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor
+-- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+-- Configuring done (9.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/src/gz_plugin_vendor-build
+[ 75%] Performing build step for 'gz_plugin_vendor'
+[  6%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/EnablePluginFromThis.cc.o
+[ 13%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/utility.cc.o
+[ 20%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/WeakPluginPtr.cc.o
+[ 26%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Plugin.cc.o
+[ 33%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Info.cc.o
+[ 40%] Building CXX object core/CMakeFiles/gz-plugin3.dir/src/Factory.cc.o
+[ 46%] Linking CXX shared library ../lib/libgz-plugin3.dylib
+[ 46%] Built target gz-plugin3
+[ 53%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/Loader.cc.o
+[ 60%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/detail/StaticRegistry.cc.o
+[ 66%] Building CXX object loader/CMakeFiles/gz-plugin3-loader.dir/src/detail/Registry.cc.o
+[ 73%] Linking CXX shared library ../lib/libgz-plugin3-loader.dylib
+[ 73%] Built target gz-plugin3-loader
+[ 80%] Building CXX object loader/src/cmd/CMakeFiles/gz.dir/gz.cc.o
+[ 86%] Linking CXX static library ../../../lib/libgz.a
+[ 86%] Built target gz
+[ 93%] Building CXX object loader/src/cmd/CMakeFiles/gz-plugin.dir/plugin_main.cc.o
+[100%] Linking CXX executable ../../../bin/gz-plugin
+[100%] Built target gz-plugin
+[ 87%] Performing install step for 'gz_plugin_vendor'
+[ 46%] Built target gz-plugin3
+[ 73%] Built target gz-plugin3-loader
+[ 86%] Built target gz
+[100%] Built target gz-plugin
+Install the project...
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3.3.1.0.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3/gz-plugin3-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3/gz-plugin3-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3/gz-plugin3-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3/gz-plugin3-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/pkgconfig/gz-plugin3.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Factory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/PluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/SpecializedPlugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/utility.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/EnablePluginFromThis.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Factory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Info.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/PluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/SpecializedPlugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/SpecializedPluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/WeakPluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/utility.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/config.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/loader/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/loader/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3-loader.3.1.0.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3-loader.3.dylib
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3-loader.3.1.0.dylib
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3-loader.3.1.0.dylib'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/libgz-plugin3-loader.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/pkgconfig/gz-plugin3-loader.pc
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Loader.hh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Loader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/StaticRegistry.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Registry.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/share/gz/plugin3.yaml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/share/gz/gz3.completion.d/plugin3.bash_completion.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/libexec/gz/plugin3/gz-plugin
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/libexec/gz/plugin3/gz-plugin
+[cctools-port]: generating fake signature for '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/libexec/gz/plugin3/gz-plugin'
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/ruby/gz/cmdplugin3.rb
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-register/gz-plugin3-register-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-register/gz-plugin3-register-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-register/gz-plugin3-register-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/pkgconfig/gz-plugin3-register.pc
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/RegisterStatic.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/Register.hh
+-- Up-to-date: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Common.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/RegisterStatic.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/detail/Register.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/include/gz/plugin3/gz/plugin/RegisterMore.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-all/gz-plugin3-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-all/gz-plugin3-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_plugin_vendor/gz_plugin_vendor-prefix/install/lib/cmake/gz-plugin3-all/gz-plugin3-all-targets.cmake
+[100%] Completed 'gz_plugin_vendor'
+[100%] Built target gz_plugin_vendor
+-- Install configuration: ""
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/libexec
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/libexec/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/libexec/gz/plugin3
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/libexec/gz/plugin3/gz-plugin
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Loader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/SpecializedPlugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/RegisterStatic.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Info.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Register.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/SpecializedPluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Plugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Loader.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/SpecializedPlugin.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Common.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/StaticRegistry.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/RegisterStatic.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Register.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Factory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/utility.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/PluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/detail/Registry.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/config.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/loader
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/loader/detail
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/loader/detail/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/loader/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/WeakPluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/EnablePluginFromThis.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Export.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/Factory.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/utility.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/PluginPtr.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/include/gz/plugin3/gz/plugin/RegisterMore.hh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3-loader.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/pkgconfig
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/pkgconfig/gz-plugin3.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/pkgconfig/gz-plugin3-loader.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/pkgconfig/gz-plugin3-register.pc
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-register
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-register/gz-plugin3-register-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-register/gz-plugin3-register-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-register/gz-plugin3-register-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-all
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-all/gz-plugin3-all-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-all/gz-plugin3-all-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-all/gz-plugin3-all-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-loader
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3-loader/gz-plugin3-loader-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3/gz-plugin3-config-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3/gz-plugin3-targets-relwithdebinfo.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3/gz-plugin3-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/cmake/gz-plugin3/gz-plugin3-targets.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3.3.1.0.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3-loader.3.1.0.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3-loader.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/libgz-plugin3.3.dylib
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/ruby
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/ruby/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/lib/ruby/gz/cmdplugin3.rb
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/share
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/share/gz
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/share/gz/plugin3.yaml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/share/gz/gz3.completion.d
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/share/gz/gz3.completion.d/plugin3.bash_completion.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package_cmake_prefix.bat
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package_cmake_prefix.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package_cmake_prefix.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package.bat
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/vendor_package.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/ament_index/resource_index/vendor_packages/gz_plugin_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/gz_plugin_vendor.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/gz_plugin_vendor.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/ament_index/resource_index/package_run_dependencies/gz_plugin_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/ament_index/resource_index/parent_prefix_path/gz_plugin_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/ament_prefix_path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/ament_prefix_path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/path.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/environment/path.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/local_setup.bash
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/local_setup.sh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/local_setup.zsh
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/local_setup.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/package.dsv
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/ament_index/resource_index/packages/gz_plugin_vendor
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/cmake/gz_plugin_vendor-extras.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/cmake/gz_plugin_vendorConfig.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/cmake/gz_plugin_vendorConfig-version.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/share/gz_plugin_vendor/package.xml
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/extra_cmake/lib/cmake/gz-plugin/gz-plugin-config.cmake
+-- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_plugin_vendor/opt/gz_plugin_vendor/extra_cmake/lib/cmake/gz-plugin/gz-plugin-config-version.cmake

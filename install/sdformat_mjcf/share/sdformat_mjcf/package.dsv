@@ -1,0 +1,9 @@
+source;share/sdformat_mjcf/hook/path.ps1
+source;share/sdformat_mjcf/hook/path.dsv
+source;share/sdformat_mjcf/hook/path.sh
+source;share/sdformat_mjcf/hook/pythonpath.ps1
+source;share/sdformat_mjcf/hook/pythonpath.dsv
+source;share/sdformat_mjcf/hook/pythonpath.sh
+source;share/sdformat_mjcf/hook/pythonscriptspath.ps1
+source;share/sdformat_mjcf/hook/pythonscriptspath.dsv
+source;share/sdformat_mjcf/hook/pythonscriptspath.sh

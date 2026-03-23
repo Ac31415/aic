@@ -1,0 +1,37 @@
+[1.582s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_teleoperation': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aic_teleoperation build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/install.log --single-version-externally-managed install_data
+[2.044s] running egg_info
+[2.086s] creating ../../build/aic_teleoperation/aic_teleoperation.egg-info
+[2.086s] writing ../../build/aic_teleoperation/aic_teleoperation.egg-info/PKG-INFO
+[2.086s] writing dependency_links to ../../build/aic_teleoperation/aic_teleoperation.egg-info/dependency_links.txt
+[2.086s] writing entry points to ../../build/aic_teleoperation/aic_teleoperation.egg-info/entry_points.txt
+[2.086s] writing requirements to ../../build/aic_teleoperation/aic_teleoperation.egg-info/requires.txt
+[2.086s] writing top-level names to ../../build/aic_teleoperation/aic_teleoperation.egg-info/top_level.txt
+[2.086s] writing manifest file '../../build/aic_teleoperation/aic_teleoperation.egg-info/SOURCES.txt'
+[2.141s] reading manifest file '../../build/aic_teleoperation/aic_teleoperation.egg-info/SOURCES.txt'
+[2.145s] writing manifest file '../../build/aic_teleoperation/aic_teleoperation.egg-info/SOURCES.txt'
+[2.145s] running build
+[2.145s] running build_py
+[2.146s] creating /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation
+[2.146s] copying aic_teleoperation/joint_keyboard_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation
+[2.147s] copying aic_teleoperation/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation
+[2.148s] copying aic_teleoperation/cartesian_keyboard_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation
+[2.152s] running install
+[2.155s] running install_lib
+[2.175s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation
+[2.177s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation/joint_keyboard_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation
+[2.177s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation
+[2.177s] copying /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build/lib/aic_teleoperation/cartesian_keyboard_teleop.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation
+[2.177s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation/joint_keyboard_teleop.py to joint_keyboard_teleop.cpython-312.pyc
+[2.177s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation/__init__.py to __init__.cpython-312.pyc
+[2.178s] byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation/cartesian_keyboard_teleop.py to cartesian_keyboard_teleop.cpython-312.pyc
+[2.180s] running install_data
+[2.180s] creating /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/share/ament_index/resource_index/packages
+[2.182s] copying resource/aic_teleoperation -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/share/ament_index/resource_index/packages
+[2.183s] copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/share/aic_teleoperation
+[2.183s] running install_egg_info
+[2.215s] Copying ../../build/aic_teleoperation/aic_teleoperation.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages/aic_teleoperation-0.0.0-py3.12.egg-info
+[2.218s] running install_scripts
+[2.286s] Installing cartesian_keyboard_teleop script to /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/aic_teleoperation
+[2.286s] Installing joint_keyboard_teleop script to /Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/aic_teleoperation
+[2.287s] writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/install.log'
+[2.303s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_teleoperation' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/prefix_override:/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_teleoperation/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/aic_teleoperation build --build-base /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/build install --record /Users/wen-chungcheng/ws_aic/src/aic/build/aic_teleoperation/install.log --single-version-externally-managed install_data

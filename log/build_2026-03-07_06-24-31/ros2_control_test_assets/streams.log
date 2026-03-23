@@ -1,0 +1,43 @@
+[0.069s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros-controls/ros2_control/ros2_control_test_assets -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets
+[1.485s] -- The CXX compiler identification is Clang 19.1.7
+[1.609s] -- Detecting CXX compiler ABI info
+[2.037s] -- Detecting CXX compiler ABI info - done
+[2.049s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.049s] -- Detecting CXX compile features
+[2.050s] -- Detecting CXX compile features - done
+[2.182s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[2.648s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[4.149s] -- Configuring done (3.8s)
+[4.170s] -- Generating done (0.0s)
+[4.198s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets
+[4.199s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/ros-controls/ros2_control/ros2_control_test_assets -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets
+[4.200s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets -- -j16 -l16
+[4.582s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets -- -j16 -l16
+[4.586s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets
+[4.869s] -- Install configuration: ""
+[4.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets
+[4.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets
+[4.869s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/components_urdfs.hpp
+[4.871s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/descriptions.hpp
+[4.873s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/include/ros2_control_test_assets/ros2_control_test_assets/test_hardware_interface_constants.hpp
+[4.881s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/urdf/test_hardware_components.urdf
+[4.890s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/library_path.sh
+[4.891s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/library_path.dsv
+[4.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/package_run_dependencies/ros2_control_test_assets
+[4.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/parent_prefix_path/ros2_control_test_assets
+[4.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/ament_prefix_path.sh
+[4.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/ament_prefix_path.dsv
+[4.894s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/path.sh
+[4.895s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/environment/path.dsv
+[4.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.bash
+[4.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.sh
+[4.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.zsh
+[4.896s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/local_setup.dsv
+[4.898s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/package.dsv
+[4.898s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ament_index/resource_index/packages/ros2_control_test_assets
+[4.898s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/export_ros2_control_test_assetsExport.cmake
+[4.899s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ament_cmake_export_targets-extras.cmake
+[4.899s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ros2_control_test_assetsConfig.cmake
+[4.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/cmake/ros2_control_test_assetsConfig-version.cmake
+[4.900s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/ros2_control_test_assets/share/ros2_control_test_assets/package.xml
+[4.907s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets' returned '0': PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/ros2_control_test_assets

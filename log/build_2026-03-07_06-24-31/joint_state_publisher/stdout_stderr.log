@@ -1,0 +1,47 @@
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: BSD
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+  self._finalize_license_expression()
+running egg_info
+creating ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info
+writing ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/PKG-INFO
+writing dependency_links to ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/dependency_links.txt
+writing entry points to ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/entry_points.txt
+writing requirements to ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/requires.txt
+writing top-level names to ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/top_level.txt
+writing manifest file '../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/SOURCES.txt'
+reading manifest file '../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/build/lib/joint_state_publisher
+copying joint_state_publisher/joint_state_publisher.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/build/lib/joint_state_publisher
+copying joint_state_publisher/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/build/lib/joint_state_publisher
+running install
+running install_lib
+creating /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/build/lib/joint_state_publisher/joint_state_publisher.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher
+copying /Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/build/lib/joint_state_publisher/__init__.py -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher/joint_state_publisher.py to joint_state_publisher.cpython-312.pyc
+byte-compiling /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/share/ament_index/resource_index/packages
+copying resource/joint_state_publisher -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/share/ament_index/resource_index/packages
+copying package.xml -> /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/share/joint_state_publisher
+running install_egg_info
+Copying ../../../aic/build/joint_state_publisher/joint_state_publisher.egg-info to /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/python3.12/site-packages/joint_state_publisher-2.4.1-py3.12.egg-info
+running install_scripts
+Installing joint_state_publisher script to /Users/wen-chungcheng/ws_aic/src/aic/install/joint_state_publisher/lib/joint_state_publisher
+writing list of installed files to '/Users/wen-chungcheng/ws_aic/src/aic/build/joint_state_publisher/install.log'

@@ -1,0 +1,232 @@
+binutils is keg-only, which means it was not symlinked into /opt/homebrew,
+because it shadows the host toolchain.
+
+If you need to have binutils first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/binutils/bin:$PATH"' >> /Users/wen-chungcheng/.zshrc
+
+For compilers to find binutils you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
+
+
+
+
+brew install cmake curl freeglut libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libbenchmark-dev libcurl4-openssl-dev libdart6.13-collision-bullet-dev libdart6.13-collision-ode-dev libdart6.13-dev libdart6.13-external-ikfast-dev libdart6.13-external-odelcpsolver-dev libdart6.13-utils-urdf-dev libdw-dev libdwarf-dev libeigen3-dev libfreeimage-dev libgdal-dev libgflags-dev libglew-dev libgz-cmake3-dev libgz-cmake4-dev libgz-common6-dev libgz-fuel-tools10-dev libgz-gui9-dev libgz-math8-dev libgz-math8-eigen3-dev libgz-msgs11-dev libgz-physics8-dev libgz-plugin3-dev libgz-rendering9-dev libgz-sensors9-dev libgz-tools2-dev libgz-transport14-dev libgz-utils3-cli-dev libgz-utils3-dev libgz-utils3-log-dev libjsoncpp-dev libogre-1.9-dev libogre-next-2.3-dev libprotobuf-dev libprotoc-dev libpython3-dev libsdformat15-dev libspdlog-dev libsqlite3-dev libswscale-dev libtinyxml2-dev liburdfdom-dev libxi-dev libxml2-utils libxmu-dev libyaml-dev libzip-dev libzmq3-dev mesa-utils pkg-config protobuf-compiler python3-dev python3-gz-math8 python3-gz-msgs11 python3-gz-transport14 python3-protobuf python3-psutil python3-pybind11 python3-pytest python3-sdformat15 qml-module-qt-labs-folderlistmodel qml-module-qt-labs-platform qml-module-qt-labs-settings qml-module-qtcharts qml-module-qtgraphicaleffects qml-module-qtlocation qml-module-qtpositioning qml-module-qtqml-models2 qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-layouts qml-module-qtquick-templates2 qml-module-qtquick-window2 qml-module-qtquick2 qtbase5-dev qtdeclarative5-dev qtquickcontrols2-5-dev rubocop ruby ruby-dev swig uuid-dev x11-utils xvfb
+
+
+
+
+
+GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic aic_task
+
+colcon build --packages-select aic_task
+
+
+
+
+# Build gazebo packages first
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-up-to gz_math_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+# Then build the rest
+GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-ignore lerobot_robot_aic
+
+
+
+
+
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz-math8 --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz-math8 --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DUSE_INTERNAL_URDF=OFF
+
+
+
+
+# Build gz_cmake_vendor first (dependency of gz_math_vendor)
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_cmake_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+# Then build gz_math_vendor
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_math_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+# Then build other gazebo vendor packages
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_utils_vendor gz_plugin_vendor gz_tools_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+# Finally build everything else
+GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+
+
+
+
+# 1. Build base Gazebo libraries first
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz-cmake4 gz-utils3 gz-plugin3 gz-math8 gz-tools2 --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+# 2. Then build vendor packages
+GZ_BUILD_FROM_SOURCE=1 colcon build --packages-select gz_cmake_vendor gz_utils_vendor gz_plugin_vendor gz_math_vendor gz_tools_vendor --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON
+
+# 3. Then build the rest
+GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+
+
+
+
+# Clean the failed package
+rm -rf build/joint_limits install/joint_limits
+
+# Rebuild with explicit fmt linking
+source install/setup.bash
+colcon build --packages-select joint_limits --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$CONDA_PREFIX" -DCMAKE_FIND_FRAMEWORK=LAST
+
+
+
+
+# Clean the failed packages
+rm -rf build/control_toolbox install/control_toolbox
+rm -rf build/joint_limits install/joint_limits
+
+# Set explicit linker flags for fmt
+export LDFLAGS="-L$CONDA_PREFIX/lib -lfmt"
+export CPPFLAGS="-I$CONDA_PREFIX/include"
+
+# Rebuild with explicit CMAKE_PREFIX_PATH
+source install/setup.bash
+colcon build --packages-select joint_limits control_toolbox \
+  --cmake-args \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_PREFIX_PATH="$CONDA_PREFIX" \
+    -DCMAKE_FIND_FRAMEWORK=LAST \
+    -DCMAKE_EXE_LINKER_FLAGS="-L$CONDA_PREFIX/lib -lfmt" \
+    -DCMAKE_SHARED_LINKER_FLAGS="-L$CONDA_PREFIX/lib -lfmt"
+
+
+
+
+GZ_BUILD_FROM_SOURCE=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release -DSKIP_SWIG=ON --packages-ignore lerobot_robot_aic
+
+
+
+
+
+
+
+
+
+
+I understand your reluctance to switch to Docker. Let me be completely honest about the remaining options:
+
+## Remaining Options (Ranked by Viability)
+
+### Option 1: Use RoboStack (Moderate chance of success)
+RoboStack provides pre-built conda packages for ROS 2 on macOS. This bypasses building Gazebo from source.
+
+```bash
+cd ~/ws_aic
+
+# Create new environment with RoboStack
+mamba create -n ros_jazzy
+mamba activate ros_jazzy
+
+# Add RoboStack channels
+mamba config --env --add channels conda-forge
+mamba config --env --add channels robostack-jazzy
+
+# Install ROS 2 Jazzy with Gazebo
+mamba install ros-jazzy-desktop
+mamba install ros-jazzy-gz-ros2-control
+mamba install ros-jazzy-ros2-control
+mamba install ros-jazzy-ros2-controllers
+
+# Build only your custom packages
+source $CONDA_PREFIX/setup.bash
+colcon build --packages-select \
+  aic_adapter aic_assets aic_control_interfaces \
+  aic_engine aic_engine_interfaces aic_example_policies \
+  aic_model aic_model_interfaces aic_scoring \
+  aic_task aic_task_interfaces aic_teleoperation
+```
+
+**Pros:** Pre-built binaries, no compilation issues
+**Cons:** RoboStack Jazzy might not have all packages; still experimental for macOS ARM64
+**Time:** 1-2 hours
+**Success probability:** 40%
+
+### Option 2: Downgrade to Protobuf that Works (Low chance)
+Force an older protobuf version that might be more compatible.
+
+```bash
+cd ~/ws_aic/src/aic
+
+# Edit pixi.toml - lock to older protobuf
+# Change: libprotobuf = "*"
+# To: libprotobuf = "3.21.*"
+```
+
+````toml
+[dependencies]
+# ...existing dependencies...
+libprotobuf = "3.21.*"
+protobuf = "3.21.*"
+````
+
+```bash
+pixi install
+cd ~/ws_aic
+
+# Clean everything and rebuild
+rm -rf build/* install/*
+source /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/setup.bash
+
+GZ_BUILD_FROM_SOURCE=1 colcon build \
+  --packages-ignore lerobot_robot_aic kinematics_interface_pinocchio
+```
+
+**Pros:** Might resolve protobuf incompatibility
+**Cons:** Older protobuf may be incompatible with Gazebo's requirements; will hit fmt/other issues again
+**Time:** 2-3 hours of trial and error
+**Success probability:** 15%
+
+### Option 3: Skip Gazebo Simulation Entirely (Immediate)
+Focus on policy development without testing in simulation.
+
+```bash
+cd ~/ws_aic
+
+# Build only non-Gazebo packages
+colcon build --packages-skip-regex "gz.*" --packages-ignore \
+  aic_scoring lerobot_robot_aic kinematics_interface_pinocchio
+```
+
+**Pros:** No build issues, can develop policies
+**Cons:** Cannot test policies before submission; blind development
+**Time:** 30 minutes
+**Success probability:** 100% (for building), 0% (for testing)
+
+### Option 4: Ubuntu Virtual Machine (High success, but slow)
+Run Ubuntu 24.04 in a VM instead of Docker.
+
+```bash
+# Install UTM or Parallels
+# Create Ubuntu 24.04 ARM64 VM
+# Follow official Ubuntu installation instructions
+```
+
+**Pros:** Full Ubuntu environment, matches competition
+**Cons:** VM overhead, slower than Docker, resource intensive
+**Time:** 2-4 hours (VM setup + build)
+**Success probability:** 90%
+
+---
+
+## My Honest Assessment
+
+**Docker is still the best option** because:
+1. **RoboStack** (Option 1) is experimental for macOS ARM64 - Jazzy support incomplete
+2. **Protobuf downgrade** (Option 2) unlikely to work - you'll hit other incompatibilities
+3. **Skip simulation** (Option 3) means blind development - very risky for competition
+4. **VM** (Option 4) works but is slower and more resource-intensive than Docker
+
+**Docker gives you:**
+- ✓ Exact Ubuntu 24.04 environment (100% matches competition)
+- ✓ Pre-configured by competition organizers
+- ✓ Workspace mounted (edit on macOS)
+- ✓ 10 minute setup vs hours of debugging
+
+**The choice is yours**, but after 3+ hours of build issues, Docker is the pragmatic solution. Which option would you like to try?

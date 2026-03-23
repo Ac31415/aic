@@ -1,0 +1,636 @@
+[0.073s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_msgs_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_msgs_vendor
+[0.952s] -- The C compiler identification is Clang 19.1.7
+[1.441s] -- The CXX compiler identification is Clang 19.1.7
+[1.579s] -- Detecting C compiler ABI info
+[2.133s] -- Detecting C compiler ABI info - done
+[2.144s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[2.144s] -- Detecting C compile features
+[2.145s] -- Detecting C compile features - done
+[2.153s] -- Detecting CXX compiler ABI info
+[2.566s] -- Detecting CXX compiler ABI info - done
+[2.573s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[2.574s] -- Detecting CXX compile features
+[2.574s] -- Detecting CXX compile features - done
+[2.635s] -- Found ament_cmake_core: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_core/cmake)
+[2.836s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[2.956s] -- Found ament_cmake_vendor_package: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_vendor_package/cmake)
+[3.007s] -- Found ament_cmake_export_dependencies: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_export_dependencies/cmake)
+[3.027s] -- Found gz_cmake_vendor: 0.3.2 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor/share/gz_cmake_vendor/cmake)
+[3.048s] -- Found gz_math_vendor: 0.2.5 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor/share/gz_math_vendor/cmake)
+[3.138s] -- Found gz_tools_vendor: 0.1.3 (/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor/share/gz_tools_vendor/cmake)
+[3.367s] -- Found ament_cmake_test: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake_test/cmake)
+[3.486s] -- Configuring done (2.9s)
+[3.510s] -- Generating done (0.0s)
+[3.512s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor
+[3.520s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz_msgs_vendor -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_msgs_vendor
+[3.520s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz_math_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_utils_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_tools_vendor:/Users/wen-chungcheng/ws_aic/src/aic/install/gz_cmake_vendor${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor -- -j16 -l16
+[3.796s] [ 12%] Creating directories for 'gz_msgs_vendor'
+[3.826s] [ 25%] Performing download step for 'gz_msgs_vendor'
+[4.019s] /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/vcstool/commands/help.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+[4.019s]   from pkg_resources import load_entry_point
+[5.563s] === ./gz_msgs_vendor (git) ===
+[5.563s] hint: Using 'master' as the name for the initial branch. This default branch name
+[5.563s] hint: will change to "main" in Git 3.0. To configure the initial branch name
+[5.563s] hint: to use in all of your new repositories, which will suppress this warning,
+[5.564s] hint: call:
+[5.564s] hint:
+[5.564s] hint: 	git config --global init.defaultBranch <name>
+[5.564s] hint:
+[5.564s] hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+[5.564s] hint: 'development'. The just-created branch can be renamed via this command:
+[5.564s] hint:
+[5.564s] hint: 	git branch -m <name>
+[5.564s] hint:
+[5.564s] hint: Disable this message with "git config set advice.defaultBranchName false"
+[5.564s] Initialized empty Git repository in /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/.git/
+[5.565s] 
+[5.565s] From https://github.com/gazebosim/gz-msgs
+[5.565s]  * [new tag]         gz-msgs11_11.1.0 -> gz-msgs11_11.1.0
+[5.565s] Note: switching to 'gz-msgs11_11.1.0'.
+[5.565s] 
+[5.565s] You are in 'detached HEAD' state. You can look around, make experimental
+[5.565s] changes and commit them, and you can discard any commits you make in this
+[5.565s] state without impacting any branches by switching back to a branch.
+[5.565s] 
+[5.565s] If you want to create a new branch to retain commits you create, you may
+[5.565s] do so (now or later) by using -c with the switch command. Example:
+[5.566s] 
+[5.566s]   git switch -c <new-branch-name>
+[5.566s] 
+[5.566s] Or undo this operation with:
+[5.566s] 
+[5.566s]   git switch -
+[5.566s] 
+[5.566s] Turn off this advice by setting config variable advice.detachedHead to false
+[5.566s] 
+[5.566s] HEAD is now at 1f5f19e Prepare for 11.1.0 release (#509)
+[5.566s] 
+[5.618s] [ 37%] No update_disconnected step for 'gz_msgs_vendor'
+[5.672s] [ 50%] No patch_disconnected step for 'gz_msgs_vendor'
+[5.713s] [ 62%] Performing configure step for 'gz_msgs_vendor'
+[5.732s] loading initial cache file /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-config.cmake
+[5.988s] -- The C compiler identification is Clang 19.1.7
+[6.293s] -- The CXX compiler identification is Clang 19.1.7
+[6.378s] -- Detecting C compiler ABI info
+[6.738s] -- Detecting C compiler ABI info - done
+[6.753s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[6.753s] -- Detecting C compile features
+[6.753s] -- Detecting C compile features - done
+[6.754s] -- Detecting CXX compiler ABI info
+[7.079s] -- Detecting CXX compiler ABI info - done
+[7.089s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[7.089s] -- Detecting CXX compile features
+[7.091s] -- Detecting CXX compile features - done
+[7.130s] -- gz-msgs11 version 11.1.0
+[7.130s] -- Operating system is Apple MacOS X
+[7.156s] -- 
+[7.156s] 
+[7.156s] -- ====== Finding Dependencies ======
+[7.511s] -- Found ZLIB: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/lib/libz.dylib (found version "1.2.12")
+[7.598s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[8.089s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[8.090s] -- Found Threads: TRUE
+[8.162s] -- Looking for Protobuf - found
+[8.162s] 
+[8.210s] -- Looking for gz-utils3 -- found version 3.1.1
+[8.211s] -- Searching for dependencies of gz-utils3
+[8.211s] -- Searching for <gz-utils3> component [cli]
+[8.246s] -- Looking for gz-utils3-cli -- found version 3.1.1
+[8.246s] -- Searching for dependencies of gz-utils3-cli
+[8.307s] -- Looking for gz-utils3 - found
+[8.307s] 
+[8.343s] -- Looking for gz-math8 -- found version 8.2.0
+[8.343s] -- Searching for dependencies of gz-math8
+[8.343s] -- Looking for gz-utils3 -- found version 3.1.1
+[8.349s] -- Looking for gz-math8 - found
+[8.350s] 
+[8.525s] -- Checking for module 'tinyxml2'
+[9.044s] --   Found tinyxml2, version 11.0.0
+[10.264s] -- Looking for tinyxml2 - found
+[10.264s] 
+[10.552s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3.12 (found version "3.12.12") found components: Interpreter
+[15.692s] -- 
+[15.692s] -- Searching for host SSE information
+[15.903s] -- Could not find hardware support for SSE2 on this machine.
+[15.903s] -- Could not find hardware support for SSE3 on this machine.
+[15.903s] -- Could not find hardware support for SSSE3 on this machine.
+[15.903s] -- Could not find hardware support for SSE4.1 on this machine.
+[15.903s] -- Could not find hardware support for SSE4.2 on this machine.
+[15.904s] -- SSE4 disabled.
+[15.904s] --
+[16.473s] -- Configuring library: gz-msgs11
+[16.474s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY
+[16.917s] -- Performing Test COMPILER_HAS_HIDDEN_VISIBILITY - Success
+[16.918s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY
+[17.197s] -- Performing Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY - Success
+[17.197s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+[17.564s] -- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Success
+[17.580s] -- Adding codecheck target
+[17.580s] -- Build configuration successful
+[17.592s] -- Build type: RelWithDebInfo
+[17.592s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz_msgs_vendor/opt/gz_msgs_vendor
+[17.647s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[17.703s] -- Configuring done (12.0s)
+[17.998s] -- Generating done (0.3s)
+[17.998s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build
+[18.043s] [ 75%] Performing build step for 'gz_msgs_vendor'
+[18.129s] [  0%] Building CXX object core/CMakeFiles/gz-msgs11_protoc_plugin.dir/generator/Generator.cc.o
+[22.114s] [  0%] Building CXX object core/CMakeFiles/gz-msgs11_protoc_plugin.dir/generator/generator_main.cc.o
+[24.910s] [  1%] Linking CXX executable ../bin/gz-msgs11_protoc_plugin
+[25.093s] [  1%] Built target gz-msgs11_protoc_plugin
+[25.125s] [  2%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wrench.proto
+[26.823s] [  2%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis.proto
+[26.996s] [  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis_aligned_2d_box.proto
+[27.149s] [  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/axis_aligned_box.proto
+[27.488s] [  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/battery.proto
+[27.705s] [  3%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/battery_state.proto
+[28.014s] [  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/boolean.proto
+[28.198s] [  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/boxgeom.proto
+[28.483s] [  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/bytes.proto
+[28.795s] [  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_cmd.proto
+[29.084s] [  4%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_info.proto
+[29.403s] [  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camera_lens.proto
+[29.629s] [  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/camerasensor.proto
+[29.840s] [  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cameratrack.proto
+[30.032s] [  5%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/capsulegeom.proto
+[30.207s] [  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cessna.proto
+[30.387s] [  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/clock.proto
+[30.567s] [  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cmd_vel2d.proto
+[30.869s] [  6%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/collision.proto
+[31.130s] [  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/color.proto
+[31.404s] [  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/conegeom.proto
+[31.648s] [  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contact.proto
+[31.900s] [  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contacts.proto
+[32.080s] [  7%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/contactsensor.proto
+[32.256s] [  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/cylindergeom.proto
+[32.437s] [  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/data_load_options.proto
+[32.644s] [  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dataframe.proto
+[32.812s] [  8%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/density.proto
+[33.089s] [  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/diagnostics.proto
+[33.314s] [  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/discovery.proto
+[33.538s] [  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/distortion.proto
+[33.861s] [  9%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/double.proto
+[34.130s] [ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/double_v.proto
+[34.335s] [ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/duration.proto
+[34.531s] [ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_beam_state.proto
+[34.825s] [ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_kinematic_estimate.proto
+[35.053s] [ 10%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_range_estimate.proto
+[35.329s] [ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_tracking_target.proto
+[35.493s] [ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/dvl_velocity_tracking.proto
+[35.813s] [ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/ellipsoidgeom.proto
+[36.095s] [ 11%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/empty.proto
+[36.339s] [ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity.proto
+[36.628s] [ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_factory.proto
+[36.874s] [ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_factory_v.proto
+[37.171s] [ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_plugin_v.proto
+[37.489s] [ 12%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_wrench.proto
+[37.824s] [ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/entity_wrench_map.proto
+[38.060s] [ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/float.proto
+[38.339s] [ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/float_v.proto
+[38.598s] [ 13%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fluid.proto
+[38.784s] [ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fluid_pressure.proto
+[39.064s] [ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fog.proto
+[39.418s] [ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/friction.proto
+[39.600s] [ 14%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/fuel_metadata.proto
+[39.844s] [ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/geometry.proto
+[40.110s] [ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gps.proto
+[40.362s] [ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gps_sensor.proto
+[40.640s] [ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gui.proto
+[40.893s] [ 15%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/gui_camera.proto
+[41.133s] [ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/header.proto
+[41.391s] [ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/heightmapgeom.proto
+[41.648s] [ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/hydra.proto
+[41.880s] [ 16%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/image.proto
+[42.175s] [ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imagegeom.proto
+[42.444s] [ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imu.proto
+[42.769s] [ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/imu_sensor.proto
+[43.025s] [ 17%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/inertial.proto
+[43.261s] [ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int32.proto
+[43.531s] [ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int32_v.proto
+[43.750s] [ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int64.proto
+[43.982s] [ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/int64_v.proto
+[44.220s] [ 18%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint.proto
+[44.584s] [ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_animation.proto
+[44.842s] [ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_cmd.proto
+[45.123s] [ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_trajectory.proto
+[45.354s] [ 19%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_trajectory_point.proto
+[45.643s] [ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joint_wrench.proto
+[46.044s] [ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joy.proto
+[46.282s] [ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/joystick.proto
+[46.484s] [ 20%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/laserscan.proto
+[46.722s] [ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/lens.proto
+[46.968s] [ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/lidar_sensor.proto
+[47.241s] [ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/light.proto
+[47.455s] [ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/link.proto
+[47.818s] [ 21%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/link_data.proto
+[48.484s] [ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_control.proto
+[48.485s] [ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_playback_control.proto
+[48.803s] [ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_playback_stats.proto
+[48.803s] [ 22%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/log_status.proto
+[49.039s] [ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/logical_camera_image.proto
+[49.204s] [ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/logical_camera_sensor.proto
+[49.405s] [ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/magnetometer.proto
+[49.623s] [ 23%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/magnetometer_sensor.proto
+[49.865s] [ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/marker.proto
+[50.153s] [ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/marker_v.proto
+[50.343s] [ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/material.proto
+[50.616s] [ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/material_color.proto
+[50.826s] [ 24%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/meshgeom.proto
+[51.122s] [ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model.proto
+[51.387s] [ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model_configuration.proto
+[51.602s] [ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/model_v.proto
+[51.928s] [ 25%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/navsat.proto
+[52.226s] [ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/navsat_sensor.proto
+[52.581s] [ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/occupancy_grid.proto
+[52.738s] [ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/odometry.proto
+[52.942s] [ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/odometry_with_covariance.proto
+[53.165s] [ 26%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/oriented_3d_box.proto
+[53.431s] [ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/packet.proto
+[53.710s] [ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/param.proto
+[53.930s] [ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/param_v.proto
+[54.130s] [ 27%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter.proto
+[54.345s] [ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_declaration.proto
+[54.535s] [ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_declarations.proto
+[54.716s] [ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_error.proto
+[54.903s] [ 28%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_name.proto
+[55.076s] [ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/parameter_value.proto
+[55.296s] [ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/particle_emitter.proto
+[55.526s] [ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/particle_emitter_v.proto
+[55.689s] [ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/performance_sensor_metrics.proto
+[55.893s] [ 29%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/physics.proto
+[56.120s] [ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pid.proto
+[56.325s] [ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/planegeom.proto
+[56.530s] [ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/plugin.proto
+[56.705s] [ 30%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/plugin_v.proto
+[56.968s] [ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pointcloud.proto
+[57.223s] [ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pointcloud_packed.proto
+[57.464s] [ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/polylinegeom.proto
+[57.607s] [ 31%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose.proto
+[57.747s] [ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_animation.proto
+[57.927s] [ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_trajectory.proto
+[58.092s] [ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_v.proto
+[58.253s] [ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/pose_with_covariance.proto
+[58.406s] [ 32%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/projector.proto
+[58.584s] [ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/propagation_grid.proto
+[58.761s] [ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/propagation_particle.proto
+[58.951s] [ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/publish.proto
+[59.125s] [ 33%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/publishers.proto
+[59.377s] [ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/quaternion.proto
+[59.542s] [ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/raysensor.proto
+[59.711s] [ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/request.proto
+[59.908s] [ 34%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/response.proto
+[60.078s] [ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_login.proto
+[60.253s] [ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_logout.proto
+[60.405s] [ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_post.proto
+[60.602s] [ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/rest_response.proto
+[60.756s] [ 35%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/road.proto
+[60.926s] [ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/scene.proto
+[61.159s] [ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sdf_generator_config.proto
+[61.360s] [ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/selection.proto
+[61.598s] [ 36%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor.proto
+[61.819s] [ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor_noise.proto
+[62.042s] [ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sensor_v.proto
+[62.241s] [ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/serialized.proto
+[62.451s] [ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/serialized_map.proto
+[62.675s] [ 37%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/server_control.proto
+[62.882s] [ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/shadows.proto
+[63.099s] [ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sim_event.proto
+[63.268s] [ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sky.proto
+[63.442s] [ 38%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/sonar.proto
+[63.653s] [ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/spheregeom.proto
+[63.853s] [ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/spherical_coordinates.proto
+[64.068s] [ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/statistic.proto
+[64.312s] [ 39%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/stringmsg.proto
+[64.512s] [ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/stringmsg_v.proto
+[64.716s] [ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/subscribe.proto
+[64.879s] [ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/surface.proto
+[65.066s] [ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/tactile.proto
+[65.258s] [ 40%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/test.proto
+[65.485s] [ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/time.proto
+[65.866s] [ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/topic_info.proto
+[65.879s] [ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/track_visual.proto
+[66.116s] [ 41%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/twist.proto
+[66.314s] [ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/twist_with_covariance.proto
+[66.537s] [ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint32.proto
+[66.741s] [ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint32_v.proto
+[66.996s] [ 42%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint64.proto
+[67.274s] [ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/uint64_v.proto
+[67.791s] [ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/undo_redo.proto
+[67.822s] [ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/user_cmd.proto
+[68.055s] [ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/user_cmd_stats.proto
+[68.280s] [ 43%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/vector2d.proto
+[68.519s] [ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/vector3d.proto
+[68.702s] [ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/version.proto
+[68.876s] [ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/version_range.proto
+[69.130s] [ 44%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/versioned_name.proto
+[69.295s] [ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/video_record.proto
+[69.501s] [ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/visual.proto
+[69.717s] [ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/visual_v.proto
+[69.929s] [ 45%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/web_request.proto
+[70.118s] [ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wheel_slip_parameters_cmd.proto
+[70.317s] [ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wind.proto
+[70.502s] [ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wireless_node.proto
+[70.669s] [ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/wireless_nodes.proto
+[70.840s] [ 46%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_control.proto
+[71.047s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_control_state.proto
+[71.252s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_modify.proto
+[71.470s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_reset.proto
+[71.632s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/world_stats.proto
+[74.849s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/atmosphere.proto
+[75.013s] [ 47%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/any.proto
+[75.242s] [ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_oriented_3d_box_v.proto
+[75.429s] [ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_oriented_3d_box.proto
+[75.717s] [ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_axis_aligned_2d_box_v.proto
+[75.982s] [ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/annotated_axis_aligned_2d_box.proto
+[76.278s] [ 48%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/altimeter_sensor.proto
+[76.526s] [ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/altimeter.proto
+[76.772s] [ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_speed_sensor.proto
+[76.956s] [ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_speed.proto
+[77.199s] [ 49%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/air_pressure_sensor.proto
+[77.392s] [ 50%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/actuators.proto
+[77.680s] [ 50%] Running protoc on /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor/proto/gz/msgs/actor.proto
+[77.855s] [ 50%] Generating descriptor set
+[77.972s] [ 50%] Running factory generator
+[78.132s] [ 50%] Building CXX object core/CMakeFiles/gz-msgs11.dir/src/Factory.cc.o
+[79.672s] [ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/atmosphere.pb.cc.o
+[81.094s] [ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis.pb.cc.o
+[82.572s] [ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis_aligned_2d_box.pb.cc.o
+[84.060s] [ 51%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/axis_aligned_box.pb.cc.o
+[85.664s] [ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/battery.pb.cc.o
+[87.425s] [ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/battery_state.pb.cc.o
+[88.998s] [ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/boolean.pb.cc.o
+[90.614s] [ 52%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/boxgeom.pb.cc.o
+[92.175s] [ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/bytes.pb.cc.o
+[93.631s] [ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_cmd.pb.cc.o
+[95.298s] [ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_info.pb.cc.o
+[96.863s] [ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camera_lens.pb.cc.o
+[98.550s] [ 53%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/camerasensor.pb.cc.o
+[99.865s] [ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cameratrack.pb.cc.o
+[101.094s] [ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/capsulegeom.pb.cc.o
+[102.285s] [ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cessna.pb.cc.o
+[103.497s] [ 54%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/clock.pb.cc.o
+[104.652s] [ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cmd_vel2d.pb.cc.o
+[105.789s] [ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/collision.pb.cc.o
+[107.156s] [ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/color.pb.cc.o
+[108.339s] [ 55%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/conegeom.pb.cc.o
+[109.557s] [ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contact.pb.cc.o
+[110.824s] [ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contacts.pb.cc.o
+[112.005s] [ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/contactsensor.pb.cc.o
+[113.209s] [ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/cylindergeom.pb.cc.o
+[114.464s] [ 56%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/data_load_options.pb.cc.o
+[115.643s] [ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dataframe.pb.cc.o
+[116.777s] [ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/density.pb.cc.o
+[117.863s] [ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/diagnostics.pb.cc.o
+[119.066s] [ 57%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/discovery.pb.cc.o
+[120.039s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:1727:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.039s]  1727 |   switch (pub_type_case()) {
+[120.040s]       |   ^
+[120.040s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:1776:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.040s]  1776 |   switch (pub_type_case()) {
+[120.040s]       |   ^
+[120.043s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2089:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.043s]  2089 |   switch (this_.pub_type_case()) {
+[120.043s]       |   ^
+[120.043s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2174:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.043s]  2174 |     switch (oneof_from_case) {
+[120.043s]       |     ^
+[120.044s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2313:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.044s]  2313 |   switch (disc_contents_case()) {
+[120.044s]       |   ^
+[120.045s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2363:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.045s]  2363 |   switch (disc_contents_case()) {
+[120.045s]       |   ^
+[120.048s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2668:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.048s]  2668 |   switch (this_.disc_contents_case()) {
+[120.048s]       |   ^
+[120.048s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/discovery.pb.cc:2747:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[120.048s]  2747 |     switch (oneof_from_case) {
+[120.048s]       |     ^
+[120.384s] 8 warnings generated.
+[120.400s] [ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/distortion.pb.cc.o
+[121.507s] [ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/double.pb.cc.o
+[122.607s] [ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/double_v.pb.cc.o
+[123.735s] [ 58%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/duration.pb.cc.o
+[124.843s] [ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_beam_state.pb.cc.o
+[125.947s] [ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_kinematic_estimate.pb.cc.o
+[127.116s] [ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_range_estimate.pb.cc.o
+[128.230s] [ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_tracking_target.pb.cc.o
+[129.374s] [ 59%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/dvl_velocity_tracking.pb.cc.o
+[130.575s] [ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/ellipsoidgeom.pb.cc.o
+[131.670s] [ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/empty.pb.cc.o
+[132.753s] [ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity.pb.cc.o
+[133.894s] [ 60%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_factory.pb.cc.o
+[135.114s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:273:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[135.114s]   273 |   switch (from_case()) {
+[135.114s]       |   ^
+[135.114s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:335:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[135.114s]   335 |   switch (from_case()) {
+[135.114s]       |   ^
+[135.123s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:715:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[135.123s]   715 |   switch (this_.from_case()) {
+[135.123s]       |   ^
+[135.123s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/entity_factory.pb.cc:824:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[135.123s]   824 |     switch (oneof_from_case) {
+[135.123s]       |     ^
+[135.356s] 4 warnings generated.
+[135.373s] [ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_factory_v.pb.cc.o
+[136.783s] [ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_plugin_v.pb.cc.o
+[137.902s] [ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_wrench.pb.cc.o
+[139.020s] [ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/entity_wrench_map.pb.cc.o
+[140.372s] [ 61%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/float.pb.cc.o
+[141.483s] [ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/float_v.pb.cc.o
+[142.627s] [ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fluid.pb.cc.o
+[143.778s] [ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fluid_pressure.pb.cc.o
+[144.953s] [ 62%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fog.pb.cc.o
+[146.126s] [ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/friction.pb.cc.o
+[147.283s] [ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc.o
+[148.287s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2061:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.288s]  2061 |   switch (version_type_case()) {
+[148.288s]       |   ^
+[148.288s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2103:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.288s]  2103 |   switch (version_type_case()) {
+[148.288s]       |   ^
+[148.290s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2306:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.290s]  2306 |   switch (this_.version_type_case()) {
+[148.290s]       |   ^
+[148.291s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2357:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.291s]  2357 |     switch (oneof_from_case) {
+[148.291s]       |     ^
+[148.294s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2892:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.294s]  2892 |   switch (resource_type_case()) {
+[148.294s]       |   ^
+[148.294s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:2949:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.294s]  2949 |   switch (resource_type_case()) {
+[148.294s]       |   ^
+[148.300s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:3447:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.300s]  3447 |   switch (this_.resource_type_case()) {
+[148.300s]       |   ^
+[148.301s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/fuel_metadata.pb.cc:3538:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[148.301s]  3538 |     switch (oneof_from_case) {
+[148.301s]       |     ^
+[148.950s] 8 warnings generated.
+[148.967s] [ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/geometry.pb.cc.o
+[150.210s] [ 63%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gps.pb.cc.o
+[151.327s] [ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gps_sensor.pb.cc.o
+[152.479s] [ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gui.pb.cc.o
+[153.691s] [ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/gui_camera.pb.cc.o
+[154.866s] [ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/header.pb.cc.o
+[156.031s] [ 64%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/heightmapgeom.pb.cc.o
+[157.376s] [ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/hydra.pb.cc.o
+[158.523s] [ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/image.pb.cc.o
+[159.651s] [ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imagegeom.pb.cc.o
+[160.811s] [ 65%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imu.pb.cc.o
+[162.006s] [ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/imu_sensor.pb.cc.o
+[163.241s] [ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/inertial.pb.cc.o
+[164.524s] [ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int32.pb.cc.o
+[165.615s] [ 66%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int32_v.pb.cc.o
+[166.774s] [ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int64.pb.cc.o
+[167.894s] [ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/int64_v.pb.cc.o
+[169.022s] [ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint.pb.cc.o
+[170.358s] [ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_animation.pb.cc.o
+[171.593s] [ 67%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_cmd.pb.cc.o
+[172.811s] [ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_trajectory.pb.cc.o
+[173.964s] [ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_trajectory_point.pb.cc.o
+[175.134s] [ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joint_wrench.pb.cc.o
+[176.252s] [ 68%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joy.pb.cc.o
+[177.439s] [ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/joystick.pb.cc.o
+[178.589s] [ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/laserscan.pb.cc.o
+[179.788s] [ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/lens.pb.cc.o
+[180.882s] [ 69%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/lidar_sensor.pb.cc.o
+[182.001s] [ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/light.pb.cc.o
+[183.172s] [ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/link.pb.cc.o
+[184.688s] [ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/link_data.pb.cc.o
+[185.797s] [ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_control.pb.cc.o
+[186.905s] [ 70%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_playback_control.pb.cc.o
+[188.031s] [ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_playback_stats.pb.cc.o
+[189.124s] [ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/log_status.pb.cc.o
+[190.311s] [ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/logical_camera_image.pb.cc.o
+[191.459s] [ 71%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/logical_camera_sensor.pb.cc.o
+[192.556s] [ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/magnetometer.pb.cc.o
+[193.655s] [ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/magnetometer_sensor.pb.cc.o
+[194.753s] [ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/marker.pb.cc.o
+[195.970s] [ 72%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/marker_v.pb.cc.o
+[197.098s] [ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/material.pb.cc.o
+[198.439s] [ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/material_color.pb.cc.o
+[199.563s] [ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/meshgeom.pb.cc.o
+[200.682s] [ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model.pb.cc.o
+[202.161s] [ 73%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model_configuration.pb.cc.o
+[203.360s] [ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/model_v.pb.cc.o
+[204.723s] [ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/navsat.pb.cc.o
+[205.891s] [ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/navsat_sensor.pb.cc.o
+[207.005s] [ 74%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/occupancy_grid.pb.cc.o
+[208.154s] [ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/odometry.pb.cc.o
+[209.241s] [ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/odometry_with_covariance.pb.cc.o
+[210.477s] [ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/oriented_3d_box.pb.cc.o
+[211.563s] [ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/packet.pb.cc.o
+[212.525s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:447:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[212.525s]   447 |   switch (content_case()) {
+[212.525s]       |   ^
+[212.525s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:515:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[212.525s]   515 |   switch (content_case()) {
+[212.525s]       |   ^
+[212.533s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:892:3: warning: 'switch' missing 'default' label [-Wswitch-default]
+[212.533s]   892 |   switch (this_.content_case()) {
+[212.533s]       |   ^
+[212.534s] /Users/wen-chungcheng/ws_aic/src/aic/build/gz_msgs_vendor/gz_msgs_vendor-prefix/src/gz_msgs_vendor-build/gz_msgs_gen/gz/msgs/packet.pb.cc:1002:5: warning: 'switch' missing 'default' label [-Wswitch-default]
+[212.534s]  1002 |     switch (oneof_from_case) {
+[212.534s]       |     ^
+[212.726s] 4 warnings generated.
+[212.742s] [ 75%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/param.pb.cc.o
+[214.083s] [ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/param_v.pb.cc.o
+[215.210s] [ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter.pb.cc.o
+[216.365s] [ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_declaration.pb.cc.o
+[217.446s] [ 76%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_declarations.pb.cc.o
+[218.546s] [ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_error.pb.cc.o
+[219.608s] [ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_name.pb.cc.o
+[220.699s] [ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/parameter_value.pb.cc.o
+[221.759s] [ 77%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/particle_emitter.pb.cc.o
+[222.958s] [ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/particle_emitter_v.pb.cc.o
+[224.076s] [ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/performance_sensor_metrics.pb.cc.o
+[225.206s] [ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/physics.pb.cc.o
+[226.387s] [ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pid.pb.cc.o
+[227.476s] [ 78%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/planegeom.pb.cc.o
+[228.600s] [ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/plugin.pb.cc.o
+[229.764s] [ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/plugin_v.pb.cc.o
+[230.882s] [ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pointcloud.pb.cc.o
+[231.990s] [ 79%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pointcloud_packed.pb.cc.o
+[233.201s] [ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/polylinegeom.pb.cc.o
+[234.290s] [ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose.pb.cc.o
+[235.406s] [ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_animation.pb.cc.o
+[236.564s] [ 80%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_trajectory.pb.cc.o
+[237.689s] [ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_v.pb.cc.o
+[238.783s] [ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/pose_with_covariance.pb.cc.o
+[239.862s] [ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/projector.pb.cc.o
+[241.026s] [ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/propagation_grid.pb.cc.o
+[242.119s] [ 81%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/propagation_particle.pb.cc.o
+[243.180s] [ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/publish.pb.cc.o
+[244.259s] [ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/publishers.pb.cc.o
+[245.320s] [ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/quaternion.pb.cc.o
+[246.402s] [ 82%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/raysensor.pb.cc.o
+[247.483s] [ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/request.pb.cc.o
+[248.567s] [ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/response.pb.cc.o
+[249.650s] [ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_login.pb.cc.o
+[250.740s] [ 83%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_logout.pb.cc.o
+[251.834s] [ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_post.pb.cc.o
+[252.924s] [ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/rest_response.pb.cc.o
+[253.999s] [ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/road.pb.cc.o
+[255.122s] [ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/scene.pb.cc.o
+[256.541s] [ 84%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sdf_generator_config.pb.cc.o
+[257.856s] [ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/selection.pb.cc.o
+[258.946s] [ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor.pb.cc.o
+[260.179s] [ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor_noise.pb.cc.o
+[261.264s] [ 85%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sensor_v.pb.cc.o
+[262.410s] [ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/serialized.pb.cc.o
+[263.631s] [ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/serialized_map.pb.cc.o
+[265.090s] [ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/server_control.pb.cc.o
+[266.179s] [ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/shadows.pb.cc.o
+[267.229s] [ 86%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sim_event.pb.cc.o
+[268.354s] [ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sky.pb.cc.o
+[269.439s] [ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/sonar.pb.cc.o
+[270.542s] [ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/spheregeom.pb.cc.o
+[271.590s] [ 87%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/spherical_coordinates.pb.cc.o
+[272.681s] [ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/statistic.pb.cc.o
+[273.863s] [ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/stringmsg.pb.cc.o
+[274.935s] [ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/stringmsg_v.pb.cc.o
+[276.027s] [ 88%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/subscribe.pb.cc.o
+[277.128s] [ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/surface.pb.cc.o
+[278.223s] [ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/tactile.pb.cc.o
+[279.386s] [ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/test.pb.cc.o
+[280.421s] [ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/time.pb.cc.o
+[281.478s] [ 89%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/topic_info.pb.cc.o
+[282.590s] [ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/track_visual.pb.cc.o
+[283.712s] [ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/twist.pb.cc.o
+[284.776s] [ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/twist_with_covariance.pb.cc.o
+[285.827s] [ 90%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint32.pb.cc.o
+[286.885s] [ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint32_v.pb.cc.o
+[288.014s] [ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint64.pb.cc.o
+[289.097s] [ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/uint64_v.pb.cc.o
+[290.196s] [ 91%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/undo_redo.pb.cc.o
+[291.249s] [ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/user_cmd.pb.cc.o
+[292.699s] [ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/user_cmd_stats.pb.cc.o
+[294.143s] [ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/vector2d.pb.cc.o
+[295.222s] [ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/vector3d.pb.cc.o
+[296.297s] [ 92%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/version.pb.cc.o
+[297.379s] [ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/version_range.pb.cc.o
+[298.422s] [ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/versioned_name.pb.cc.o
+[299.505s] [ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/video_record.pb.cc.o
+[300.590s] [ 93%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/visual.pb.cc.o
+[301.855s] [ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/visual_v.pb.cc.o
+[303.033s] [ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/web_request.pb.cc.o
+[304.203s] [ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wheel_slip_parameters_cmd.pb.cc.o
+[305.325s] [ 94%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wind.pb.cc.o
+[306.405s] [ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wireless_node.pb.cc.o
+[307.545s] [ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wireless_nodes.pb.cc.o
+[308.621s] [ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_control.pb.cc.o
+[309.695s] [ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_control_state.pb.cc.o
+[310.779s] [ 95%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_modify.pb.cc.o
+[311.849s] [ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_reset.pb.cc.o
+[312.890s] [ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/world_stats.pb.cc.o
+[313.953s] [ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/wrench.pb.cc.o
+[315.008s] [ 96%] Building CXX object core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/register.cc.o
+[324.342s] make[5]: *** [core/CMakeFiles/gz-msgs11.dir/build.make:6882: core/CMakeFiles/gz-msgs11.dir/__/gz_msgs_gen/gz/msgs/register.cc.o] Interrupt: 2
+[324.343s] make[4]: *** [CMakeFiles/Makefile2:478: core/CMakeFiles/gz-msgs11.dir/all] Interrupt: 2
+[324.343s] make[3]: *** [Makefile:146: all] Interrupt: 2
+[324.344s] make[2]: *** [CMakeFiles/gz_msgs_vendor.dir/build.make:86: gz_msgs_vendor-prefix/src/gz_msgs_vendor-stamp/gz_msgs_vendor-build] Interrupt: 2
+[324.344s] make[1]: *** [CMakeFiles/Makefile2:153: CMakeFiles/gz_msgs_vendor.dir/all] Interrupt: 2
+[324.344s] make: *** [Makefile:146: all] Interrupt: 2

@@ -79,7 +79,10 @@ class AICCartesianTeleoperatorNode(Node):
             self.get_logger().info(
                 f"Waiting for subscriber to '{self.controller_namespace}/pose_commands'..."
             )
-            time.sleep(1.0)
+            # spin_once is required for Zenoh RMW: discovery events are async and
+            # require the executor to process them. Without spinning, the count
+            # never updates and this loop blocks forever.
+            rclpy.spin_once(self, timeout_sec=1.0)
 
         self.client = self.create_client(
             ChangeTargetMode, f"/{self.controller_namespace}/change_target_mode"

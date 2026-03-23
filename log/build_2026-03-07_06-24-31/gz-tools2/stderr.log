@@ -1,0 +1,56 @@
+warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+         To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"

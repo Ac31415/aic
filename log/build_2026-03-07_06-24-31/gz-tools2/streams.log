@@ -1,0 +1,113 @@
+[0.034s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-tools -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2
+[0.666s] -- The C compiler identification is Clang 19.1.7
+[0.995s] -- The CXX compiler identification is Clang 19.1.7
+[1.069s] -- Detecting C compiler ABI info
+[1.479s] -- Detecting C compiler ABI info - done
+[1.488s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.488s] -- Detecting C compile features
+[1.488s] -- Detecting C compile features - done
+[1.494s] -- Detecting CXX compiler ABI info
+[1.829s] -- Detecting CXX compiler ABI info - done
+[1.847s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.848s] -- Detecting CXX compile features
+[1.848s] -- Detecting CXX compile features - done
+[1.945s] -- gz-tools2 version 2.0.3
+[1.945s] -- Operating system is Apple MacOS X
+[1.961s] -- 
+[1.961s] 
+[1.961s] -- ====== Finding Dependencies ======
+[2.079s] -- Found Backward: /Users/wen-chungcheng/ws_aic/src/gazebo/gz-tools/src/Backward
+[7.011s] -- 
+[7.011s] -- Searching for host SSE information
+[7.419s] -- Could not find hardware support for SSE2 on this machine.
+[7.419s] -- Could not find hardware support for SSE3 on this machine.
+[7.419s] -- Could not find hardware support for SSSE3 on this machine.
+[7.420s] -- Could not find hardware support for SSE4.1 on this machine.
+[7.420s] -- Could not find hardware support for SSE4.2 on this machine.
+[7.420s] -- SSE4 disabled.
+[7.420s] --
+[9.387s] -- Adding codecheck target
+[9.388s] -- Build configuration successful
+[9.388s] -- Build type: RelWithDebInfo
+[9.388s] -- Install prefix: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2
+[9.417s] -- Found Doxygen: /opt/homebrew/bin/doxygen (found version "1.14.0") found components: doxygen dot
+[9.451s] -- Configuring done (9.1s)
+[9.566s] -- Generating done (0.1s)
+[9.618s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2
+[9.621s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/gazebo/gz-tools -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2
+[9.628s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2 -- -j16 -l16
+[10.171s] [ 33%] Generating API documentation with Doxygen
+[10.173s] [ 66%] Building CXX object src/CMakeFiles/backward.dir/backward.cc.o
+[10.182s] warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.182s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.182s] warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+[10.182s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.182s] warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+[10.182s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.183s] warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' belongs to an option that was not enabled at compile time.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.183s] warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.183s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.183s] warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.184s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.184s] warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.184s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.184s] warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.184s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.184s] warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api_tagfile.dox' has become obsolete.
+[10.184s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.542s] warning: Tag 'OUTPUT_TEXT_DIRECTION' at line 102 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.542s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.547s] warning: Tag 'CLANG_ASSISTED_PARSING' at line 1072 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.547s] warning: Tag 'CLANG_OPTIONS' at line 1080 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.547s] warning: Tag 'CLANG_DATABASE_PATH' at line 1090 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' belongs to an option that was not enabled at compile time.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u", or recompile doxygen with this feature enabled.
+[10.547s] warning: Tag 'HTML_TIMESTAMP' at line 1237 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.547s] warning: Tag 'FORMULA_TRANSPARENT' at line 1529 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.547s] warning: Tag 'LATEX_SOURCE_CODE' at line 1837 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.547s] warning: Tag 'LATEX_TIMESTAMP' at line 1853 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.547s] warning: Tag 'RTF_SOURCE_CODE' at line 1927 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.547s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.548s] warning: Tag 'DOCBOOK_PROGRAMLISTING' at line 2032 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.548s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.548s] warning: Tag 'CLASS_DIAGRAMS' at line 2219 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.548s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.548s] warning: Tag 'DOT_FONTNAME' at line 2261 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.548s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.548s] warning: Tag 'DOT_FONTSIZE' at line 2268 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.548s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.548s] warning: Tag 'DOT_TRANSPARENT' at line 2494 of file '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2/api.dox' has become obsolete.
+[10.549s]          To avoid this warning please remove this line from your configuration file or upgrade it using "doxygen -u"
+[10.823s] [ 66%] Built target doc
+[13.657s] [100%] Linking CXX shared library ../lib/libgz-tools2-backward.dylib
+[13.796s] [100%] Built target backward
+[13.813s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2 -- -j16 -l16
+[13.819s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2
+[13.970s] -- Install configuration: "RelWithDebInfo"
+[13.970s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config.cmake
+[13.977s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-config-version.cmake
+[13.977s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/cmake/gz-tools2-all/gz-tools2-all-targets.cmake
+[14.000s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz-tools2/gz-tools2.tag.xml
+[14.001s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/gz/gz.completion
+[14.001s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/share/bash-completion/completions/gz
+[14.002s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.0.3.dylib
+[14.003s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.2.dylib
+[14.003s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/lib/libgz-tools2-backward.dylib
+[14.004s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/gz-tools2/bin/gz
+[14.005s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2' returned '0': CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PKG_CONFIG_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/gz-cmake4/lib/pkgconfig SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/gz-tools2

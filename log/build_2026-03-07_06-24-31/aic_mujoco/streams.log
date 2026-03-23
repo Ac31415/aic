@@ -1,0 +1,57 @@
+[0.070s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_mujoco -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco
+[0.245s] CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.245s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.245s]   CMake.
+[0.245s] 
+[0.245s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.245s]   to tell CMake that the project requires at least <min> but has been updated
+[0.245s]   to work with policies introduced by <max> or earlier.
+[0.245s] 
+[0.245s] 
+[0.478s] -- The C compiler identification is Clang 19.1.7
+[0.810s] -- The CXX compiler identification is Clang 19.1.7
+[0.874s] -- Detecting C compiler ABI info
+[1.149s] -- Detecting C compiler ABI info - done
+[1.160s] -- Check for working C compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang - skipped
+[1.161s] -- Detecting C compile features
+[1.161s] -- Detecting C compile features - done
+[1.161s] -- Detecting CXX compiler ABI info
+[1.512s] -- Detecting CXX compiler ABI info - done
+[1.517s] -- Check for working CXX compiler: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/arm64-apple-darwin20.0.0-clang++ - skipped
+[1.519s] -- Detecting CXX compile features
+[1.519s] -- Detecting CXX compile features - done
+[1.561s] -- Found ament_cmake: 2.7.4 (/Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/share/ament_cmake/cmake)
+[1.787s] -- Found Python3: /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/python3 (found version "3.12.12") found components: Interpreter
+[2.430s] -- Configuring done (2.2s)
+[2.455s] -- Generating done (0.0s)
+[2.461s] -- Build files have been written to: /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco
+[2.468s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake /Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_mujoco -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco
+[2.472s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco -- -j16 -l16
+[2.719s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --build /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco -- -j16 -l16
+[2.723s] Invoking command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco
+[2.900s] -- Install configuration: ""
+[2.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch
+[2.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//launch/aic_mujoco_bringup.launch.py
+[2.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf
+[2.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_robot.xml
+[2.901s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/aic_world.xml
+[2.902s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco//mjcf/scene.xml
+[2.902s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/add_cable_plugin.py
+[2.903s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/view_scene.py
+[2.904s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/lib/aic_mujoco/load_aic_world.py
+[2.906s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/package_run_dependencies/aic_mujoco
+[2.907s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/parent_prefix_path/aic_mujoco
+[2.908s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.sh
+[2.908s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/ament_prefix_path.dsv
+[2.908s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.sh
+[2.909s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/environment/path.dsv
+[2.909s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.bash
+[2.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.sh
+[2.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.zsh
+[2.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/local_setup.dsv
+[2.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.dsv
+[2.910s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/ament_index/resource_index/packages/aic_mujoco
+[2.911s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig.cmake
+[2.911s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/cmake/aic_mujocoConfig-version.cmake
+[2.911s] -- Installing: /Users/wen-chungcheng/ws_aic/src/aic/install/aic_mujoco/share/aic_mujoco/package.xml
+[2.917s] Invoked command in '/Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco' returned '0': AMENT_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_adapter:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces${CMAKE_PREFIX_PATH} PIXI_PROMPT=(aic) PYTHONPATH=/Users/wen-chungcheng/ws_aic/src/aic/install/aic_model_interfaces/lib/python3.12/site-packages:/Users/wen-chungcheng/ws_aic/src/aic/install/aic_control_interfaces/lib/python3.12/site-packages:${PYTHONPATH} SHLVL=2 _=/usr/bin/env /Users/wen-chungcheng/ws_aic/src/aic/.pixi/envs/default/bin/cmake --install /Users/wen-chungcheng/ws_aic/src/aic/build/aic_mujoco
