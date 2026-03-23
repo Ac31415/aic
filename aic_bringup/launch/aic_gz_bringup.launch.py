@@ -339,6 +339,12 @@ def launch_setup(context, *args, **kwargs):
         condition=IfCondition(PythonExpression(["'", gazebo_gui, "' == 'true'"])),
         output="screen",
     )
+    
+    # gzgui = ExecuteProcess(
+    #     cmd=["gz", "gui"],
+    #     condition=IfCondition(PythonExpression(["'", gazebo_gui, "' == 'true'"])),
+    #     output="screen",
+    # )
 
     ros_gz_bridge = RosGzBridge(
         bridge_name="ros_gz_bridge",
