@@ -1,3 +1,42 @@
+# terminal 1: Start the Zenoh router if not already running
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 run rmw_zenoh_cpp rmw_zenohd
+
+
+
+
+
+
+
+
+
+# terminal 2: Launch MuJoCo simulation with ros2_control
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+
+
+
+
+
+
+# terminal 2: Launch MuJoCo simulation with ros2_control                                                                  
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 run aic_teleoperation cartesian_keyboard_teleop
+
+
+
+
+
+
+
+
+
 cd src/aic
 
 pixi shell
@@ -14,4 +53,32 @@ PY
 
 python -c "import pyarrow; print('pyarrow OK')"
 
-run your lerobot-teleoperate command
+run your lerobot-teleoperate command:
+
+
+
+# terminal 2: Launch MuJoCo simulation with ros2_control                                              
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+lerobot-teleoperate \
+  --robot.type=aic_controller --robot.id=aic \
+  --teleop.type=aic_keyboard_ee --teleop.id=aic \
+  --robot.teleop_target_mode=cartesian --robot.teleop_frame_id=base_link \
+  --display_data=true
+
+
+
+
+# terminal 2: Launch MuJoCo simulation with ros2_control
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+lerobot-record \
+  --robot.type=aic_controller --robot.id=aic \
+  --teleop.type=aic_keyboard_ee --teleop.id=aic \
+  --robot.teleop_target_mode=cartesian --robot.teleop_frame_id=base_link \
+  --dataset.repo_id=${HF_USER}/record-test-5 \
+  --dataset.single_task="task 5" \
+  --dataset.push_to_hub=true \
+  --dataset.private=true \
+  --play_sounds=false \
+  --display_data=true
