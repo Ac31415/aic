@@ -1,3 +1,10 @@
+cd src/aic
+pixi shell
+
+
+
+
+
 # terminal 1: Start the Zenoh router if not already running
 source ~/ws_aic/install/setup.zsh
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
