@@ -19,7 +19,7 @@
           <property type="string" key="state">docked</property>
         </gz-gui>
 
-        <engine>ogre2</engine>
+        <engine>ogre</engine>
 
         <!--<shadows>
           <texture_size light_type="spotlight">2048</texture_size>
@@ -36,7 +36,7 @@
         <gz-gui>
           <property type="string" key="state">docked_collapsed</property>
         </gz-gui>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <highQuality>false</highQuality>
         <resolution>256 256 256</resolution>
         <octantCount>1 1 1</octantCount>
@@ -104,9 +104,9 @@
     <plugin
       filename="gz-sim-sensors-system"
       name="gz::sim::systems::Sensors">
-      <render_engine>ogre2</render_engine>
+      <render_engine>ogre</render_engine>
       <global_illumination type="vct">
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <resolution>256 256 256</resolution>
         <octant_count>1 1 1</octant_count>
         <bounce_count>3</bounce_count>

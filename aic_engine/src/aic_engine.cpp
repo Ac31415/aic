@@ -684,7 +684,8 @@ TrialScore Engine::handle_trial(Trial& trial) {
               trial.id.c_str());
   TrialScore score;
 
-  constexpr int MAX_RETRIES = 5;
+  // constexpr int MAX_RETRIES = 5;
+  constexpr int MAX_RETRIES = 100;
 
   if (trial.state == TrialState::Uninitialized) {
     if (this->check_model()) {
