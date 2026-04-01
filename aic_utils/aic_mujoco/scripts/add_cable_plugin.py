@@ -708,16 +708,14 @@ def main():
         # Set plugin and childclass on cable bodies
         print("Setting plugin on cable bodies...")
 
-        def traverse_find_links(body, target_plugin):
+        def traverse_find_links(body):
             count = 0
-
-            if body.name == "lc_plug_link":
-                return 0
 
             is_cable_body = (
                 body.name.startswith("cable_end_")
                 or body.name.startswith("cable_connection_")
                 or body.name == "sc_plug_link"
+                or body.name == "lc_plug_link"
             )
             if body.name.startswith("link_"):
                 try:
@@ -728,18 +726,18 @@ def main():
                     pass
 
             if is_cable_body:
-                body.plugin = target_plugin
-                body.plugin.active = True
-                body.plugin.name = target_plugin.name
+                # NOTE: Direct per-body plugin handle mutation can cause
+                # inconsistent plugin state in mjSpec on some converted models.
+                # Keep body tagging via childclass only.
                 body.childclass = "cable_default"
                 count += 1
 
             if hasattr(body, "bodies"):
                 for child in body.bodies:
-                    count += traverse_find_links(child, target_plugin)
+                    count += traverse_find_links(child)
             return count
 
-        bodies_found = traverse_find_links(world_spec.worldbody, plugin)
+        bodies_found = traverse_find_links(world_spec.worldbody)
         print(f"Attached plugin to {bodies_found} bodies.")
 
         # --- Generate and Save ---

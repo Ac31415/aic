@@ -24,6 +24,7 @@ import logging
 import os
 import re
 import shutil
+import signal
 import subprocess
 import sys
 import tempfile
@@ -275,6 +276,29 @@ class GazeboExporter:
         self.env['RMW_IMPLEMENTATION'] = 'rmw_zenoh_cpp'
         self.env['ZENOH_CONFIG_OVERRIDE'] = \
             'transport/shared_memory/enabled=true;transport/shared_memory/transport_optimization/pool_size=536870912'
+
+    def _terminate_process_group(self, process: subprocess.Popen, timeout: int = 30) -> None:
+        """Terminate ros2 launch and all spawned children (Gazebo, RViz, etc.)."""
+        if process is None or process.poll() is not None:
+            return
+
+        try:
+            # start_new_session=True makes PID the process-group id.
+            os.killpg(process.pid, signal.SIGTERM)
+            process.wait(timeout=timeout)
+            logger.info("✓ Gazebo/RViz process group terminated gracefully")
+            return
+        except subprocess.TimeoutExpired:
+            logger.warning("Launch process group did not exit after SIGTERM, forcing SIGKILL...")
+            try:
+                os.killpg(process.pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+            process.wait()
+            logger.info("✓ Gazebo/RViz process group killed")
+        except ProcessLookupError:
+            # Process group already exited.
+            pass
     
     def export_scene(self, config: SceneConfig, timeout: int = 120) -> Path:
         """
@@ -305,7 +329,8 @@ class GazeboExporter:
                 env=self.env,
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
-                text=True
+                text=True,
+                start_new_session=True,
             )
             logger.info(f"Gazebo process started (PID: {process.pid})")
             
@@ -349,19 +374,9 @@ class GazeboExporter:
             elif sdf_path.stat().st_size == 0:
                 logger.warning(f"SDF file exists but is empty - may indicate incomplete export")
             
-            # Gracefully terminate Gazebo
-            logger.info("Terminating Gazebo process...")
-            process.terminate()
-            
-            try:
-                # Wait up to 30 seconds for graceful shutdown
-                process.wait(timeout=30)
-                logger.info("✓ Gazebo terminated gracefully")
-            except subprocess.TimeoutExpired:
-                logger.warning("Gazebo did not terminate gracefully, forcing shutdown...")
-                process.kill()
-                process.wait()
-                logger.info("✓ Gazebo process killed")
+            # Gracefully terminate launch tree (ros2 launch + Gazebo + RViz)
+            logger.info("Terminating Gazebo/RViz launch process group...")
+            self._terminate_process_group(process, timeout=30)
             
             # Verify SDF was created
             if not sdf_path.exists():
@@ -376,14 +391,10 @@ class GazeboExporter:
         
         except Exception as e:
             logger.error(f"Gazebo export failed: {e}")
-            # Ensure process is terminated even on error
-            if process is not None and process.poll() is None:
-                logger.info("Cleaning up: terminating Gazebo process...")
-                try:
-                    process.terminate()
-                    process.wait(timeout=10)
-                except:
-                    process.kill()
+            # Ensure full launch tree is terminated even on error.
+            if process is not None:
+                logger.info("Cleaning up: terminating Gazebo/RViz launch process group...")
+                self._terminate_process_group(process, timeout=10)
             raise
 
 
@@ -407,18 +418,18 @@ class SDFProcessor:
         with open(sdf_path, 'r') as f:
             content = f.read()
         
-        # # Fix Issue 1: <urdf-string> in mesh URIs
-        # content = re.sub(
-        #     r'file://<urdf-string>/model://',
-        #     'model://',
-        #     content
-        # )
-
         # Fix Issue 1: <urdf-string> in mesh URIs
-        content = content.replace(
-            'file://<urdf-string>/model://',
-            'model://'
+        content = re.sub(
+            r'file://<urdf-string>/model://',
+            'model://',
+            content
         )
+
+        # # Fix Issue 1: <urdf-string> in mesh URIs
+        # content = content.replace(
+        #     'file://<urdf-string>/model://',
+        #     'model://'
+        # )
         
         # Fix Issue 2: Broken relative mesh URIs
         content = content.replace(
