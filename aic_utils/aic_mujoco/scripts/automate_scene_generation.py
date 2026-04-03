@@ -73,22 +73,32 @@ class SceneConfig:
     sfp_mount_rail_0_present: bool
     sfp_mount_rail_0_translation: float
     sfp_mount_rail_0_roll: float
+    sfp_mount_rail_0_pitch: float
+    sfp_mount_rail_0_yaw: float
     
     sc_mount_rail_0_present: bool
     sc_mount_rail_0_translation: float
     sc_mount_rail_0_roll: float
+    sc_mount_rail_0_pitch: float
+    sc_mount_rail_0_yaw: float
     
     lc_mount_rail_0_present: bool
     lc_mount_rail_0_translation: float
     lc_mount_rail_0_roll: float
+    lc_mount_rail_0_pitch: float
+    lc_mount_rail_0_yaw: float
     
     nic_card_mount_0_present: bool
     nic_card_mount_0_translation: float
     nic_card_mount_0_roll: float
+    nic_card_mount_0_pitch: float
+    nic_card_mount_0_yaw: float
     
     sc_port_0_present: bool
     sc_port_0_translation: float
     sc_port_0_roll: float
+    sc_port_0_pitch: float
+    sc_port_0_yaw: float
     
     @property
     def scene_name(self) -> str:
@@ -100,6 +110,8 @@ class SceneConfig:
         params.append(f"robot_z={self.robot_z:.3f}")
         params.append(f"tb_x={self.task_board_x:.3f}")
         params.append(f"tb_y={self.task_board_y:.3f}")
+        params.append(f"tb_roll={self.task_board_roll:.3f}")
+        params.append(f"tb_pitch={self.task_board_pitch:.3f}")
         params.append(f"tb_yaw={self.task_board_yaw:.3f}")
         
         if self.spawn_cable:
@@ -108,12 +120,21 @@ class SceneConfig:
         
         if self.sfp_mount_rail_0_present:
             params.append(f"sfp_trans={self.sfp_mount_rail_0_translation:.3f}")
+            params.append(f"sfp_rpy={self.sfp_mount_rail_0_roll:.2f},{self.sfp_mount_rail_0_pitch:.2f},{self.sfp_mount_rail_0_yaw:.2f}")
         
         if self.sc_mount_rail_0_present:
             params.append(f"sc_trans={self.sc_mount_rail_0_translation:.3f}")
+            params.append(f"sc_rpy={self.sc_mount_rail_0_roll:.2f},{self.sc_mount_rail_0_pitch:.2f},{self.sc_mount_rail_0_yaw:.2f}")
         
         if self.lc_mount_rail_0_present:
             params.append(f"lc_trans={self.lc_mount_rail_0_translation:.3f}")
+            params.append(f"lc_rpy={self.lc_mount_rail_0_roll:.2f},{self.lc_mount_rail_0_pitch:.2f},{self.lc_mount_rail_0_yaw:.2f}")
+
+        if self.nic_card_mount_0_present:
+            params.append(f"nic_rpy={self.nic_card_mount_0_roll:.2f},{self.nic_card_mount_0_pitch:.2f},{self.nic_card_mount_0_yaw:.2f}")
+
+        if self.sc_port_0_present:
+            params.append(f"sc_port_rpy={self.sc_port_0_roll:.2f},{self.sc_port_0_pitch:.2f},{self.sc_port_0_yaw:.2f}")
         
         name = "_".join(params).replace(".", "p")
         return name
@@ -156,6 +177,8 @@ class SceneConfig:
                 "sfp_mount_rail_0_present:=true",
                 f"sfp_mount_rail_0_translation:={self.sfp_mount_rail_0_translation}",
                 f"sfp_mount_rail_0_roll:={self.sfp_mount_rail_0_roll}",
+                f"sfp_mount_rail_0_pitch:={self.sfp_mount_rail_0_pitch}",
+                f"sfp_mount_rail_0_yaw:={self.sfp_mount_rail_0_yaw}",
             ])
         
         if self.sc_mount_rail_0_present:
@@ -163,6 +186,8 @@ class SceneConfig:
                 "sc_mount_rail_0_present:=true",
                 f"sc_mount_rail_0_translation:={self.sc_mount_rail_0_translation}",
                 f"sc_mount_rail_0_roll:={self.sc_mount_rail_0_roll}",
+                f"sc_mount_rail_0_pitch:={self.sc_mount_rail_0_pitch}",
+                f"sc_mount_rail_0_yaw:={self.sc_mount_rail_0_yaw}",
             ])
         
         if self.lc_mount_rail_0_present:
@@ -170,6 +195,8 @@ class SceneConfig:
                 "lc_mount_rail_0_present:=true",
                 f"lc_mount_rail_0_translation:={self.lc_mount_rail_0_translation}",
                 f"lc_mount_rail_0_roll:={self.lc_mount_rail_0_roll}",
+                f"lc_mount_rail_0_pitch:={self.lc_mount_rail_0_pitch}",
+                f"lc_mount_rail_0_yaw:={self.lc_mount_rail_0_yaw}",
             ])
         
         if self.nic_card_mount_0_present:
@@ -177,6 +204,8 @@ class SceneConfig:
                 "nic_card_mount_0_present:=true",
                 f"nic_card_mount_0_translation:={self.nic_card_mount_0_translation}",
                 f"nic_card_mount_0_roll:={self.nic_card_mount_0_roll}",
+                f"nic_card_mount_0_pitch:={self.nic_card_mount_0_pitch}",
+                f"nic_card_mount_0_yaw:={self.nic_card_mount_0_yaw}",
             ])
         
         if self.sc_port_0_present:
@@ -184,6 +213,8 @@ class SceneConfig:
                 "sc_port_0_present:=true",
                 f"sc_port_0_translation:={self.sc_port_0_translation}",
                 f"sc_port_0_roll:={self.sc_port_0_roll}",
+                f"sc_port_0_pitch:={self.sc_port_0_pitch}",
+                f"sc_port_0_yaw:={self.sc_port_0_yaw}",
             ])
         
         return " ".join(args)
@@ -214,8 +245,8 @@ class SceneGenerator:
                 task_board_x=random.uniform(0.1, 0.3),
                 task_board_y=random.uniform(-0.3, -0.1),
                 task_board_z=1.14,  # Fixed
-                task_board_roll=0.0,
-                task_board_pitch=0.0,
+                task_board_roll=random.uniform(-0.175, 0.175),
+                task_board_pitch=random.uniform(-0.175, 0.175),
                 task_board_yaw=random.uniform(-0.5, 0.5),
                 
                 # Cable configuration
@@ -236,22 +267,32 @@ class SceneGenerator:
                 sfp_mount_rail_0_present=random.choice([True, False]),
                 sfp_mount_rail_0_translation=random.uniform(-0.09625, 0.09625),
                 sfp_mount_rail_0_roll=random.uniform(-0.175, 0.175),  # ~+/-10 degrees
+                sfp_mount_rail_0_pitch=random.uniform(-0.175, 0.175),
+                sfp_mount_rail_0_yaw=random.uniform(-0.175, 0.175),
                 
                 sc_mount_rail_0_present=random.choice([True, False]),
                 sc_mount_rail_0_translation=random.uniform(-0.09625, 0.09625),
                 sc_mount_rail_0_roll=random.uniform(-0.175, 0.175),
+                sc_mount_rail_0_pitch=random.uniform(-0.175, 0.175),
+                sc_mount_rail_0_yaw=random.uniform(-0.175, 0.175),
                 
                 lc_mount_rail_0_present=random.choice([True, False]),
                 lc_mount_rail_0_translation=random.uniform(-0.188, 0.188),
                 lc_mount_rail_0_roll=random.uniform(-1.047, 1.047),  # ~+/-60 degrees
+                lc_mount_rail_0_pitch=random.uniform(-1.047, 1.047),
+                lc_mount_rail_0_yaw=random.uniform(-1.047, 1.047),
                 
                 nic_card_mount_0_present=random.choice([True, False]),
                 nic_card_mount_0_translation=random.uniform(0.0, 0.062),
                 nic_card_mount_0_roll=random.uniform(-0.175, 0.175),
+                nic_card_mount_0_pitch=random.uniform(-0.175, 0.175),
+                nic_card_mount_0_yaw=random.uniform(-0.175, 0.175),
                 
                 sc_port_0_present=random.choice([True, False]),
                 sc_port_0_translation=random.uniform(0.0, 0.115),
                 sc_port_0_roll=random.uniform(-0.175, 0.175),
+                sc_port_0_pitch=random.uniform(-0.175, 0.175),
+                sc_port_0_yaw=random.uniform(-0.175, 0.175),
             )
 
             # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
