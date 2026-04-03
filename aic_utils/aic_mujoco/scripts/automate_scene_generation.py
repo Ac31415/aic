@@ -225,6 +225,7 @@ class SceneGenerator:
                 cable_x=random.uniform(0.15, 0.19),
                 cable_y=random.uniform(0.0, 0.05),
                 cable_z=1.508 if random.random() > 0.5 else 1.518,
+                # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
                 cable_roll=random.uniform(0.3, 0.6),
                 cable_pitch=random.uniform(-0.6, -0.3),
                 cable_yaw=random.uniform(1.0, 1.66),
@@ -252,6 +253,12 @@ class SceneGenerator:
                 sc_port_0_translation=random.uniform(0.0, 0.115),
                 sc_port_0_roll=random.uniform(-0.175, 0.175),
             )
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if config.cable_type == "sfp_sc_cable_reversed":
+                config.cable_z = 1.508
+            else:
+                config.cable_z = 1.518
             
             # Check uniqueness
             config_hash = config.scene_name
