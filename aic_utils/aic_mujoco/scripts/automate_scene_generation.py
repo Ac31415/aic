@@ -110,8 +110,6 @@ class SceneConfig:
         params.append(f"robot_z={self.robot_z:.3f}")
         params.append(f"tb_x={self.task_board_x:.3f}")
         params.append(f"tb_y={self.task_board_y:.3f}")
-        params.append(f"tb_roll={self.task_board_roll:.3f}")
-        params.append(f"tb_pitch={self.task_board_pitch:.3f}")
         params.append(f"tb_yaw={self.task_board_yaw:.3f}")
         
         if self.spawn_cable:
@@ -245,8 +243,8 @@ class SceneGenerator:
                 task_board_x=random.uniform(0.1, 0.3),
                 task_board_y=random.uniform(-0.3, -0.1),
                 task_board_z=1.14,  # Fixed
-                task_board_roll=random.uniform(-0.175, 0.175),
-                task_board_pitch=random.uniform(-0.175, 0.175),
+                task_board_roll=0.0,
+                task_board_pitch=0.0,
                 task_board_yaw=random.uniform(-0.5, 0.5),
                 
                 # Cable configuration
