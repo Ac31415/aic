@@ -1,4 +1,4 @@
-# Vr Teleop Workflow
+# Setup Workflow
 
 ## Prerequisites
 - Setup aic workspace
@@ -72,3 +72,127 @@ python3 oculus_reader/viz_transforms.py
 cd ~/ws_aic/src/aic/aic_utils/aic_teleoperation/aic_teleoperation
 pixi run python3 vr_aic.py 
 ```
+
+
+
+
+
+
+
+# Controller Guide — AIC UR5e Teleoperation
+
+Quick reference for operating the Oculus Quest right controller with `vr_aic.py`
+
+
+On launch the node automatically switches the AIC controller to Cartesian mode and tares the F/T sensor. If the force reading in the HUD is non-zero after startup, press **`t`** to re-tare manually.
+
+---
+
+## Control Modes
+
+Press **A** on the right controller to cycle through modes:
+
+```
+IDLE  ──[A]──▶  VR TRACKING  ──[A]──▶  ANALOGUE  ──[A]──▶  IDLE
+```
+
+| Mode | Behaviour |
+|------|-----------|
+| **IDLE** | Robot holds last commanded pose. Safe starting state. |
+| **VR TRACKING** | Full 6-DOF wrist mirroring. Reference pose is captured on entry. |
+| **ANALOGUE** | Fine-grained stick control. VR tracking is off. |
+
+Both modes can be combined — enable VR tracking first, then analogue mode adds stick offsets on top each tick.
+
+---
+
+## Right Controller Buttons
+
+| Button | Action |
+|--------|--------|
+| **A** | Cycle mode: IDLE → VR TRACKING → ANALOGUE → IDLE |
+| **B** | Toggle orientation follow on / off |
+| **RJ** (stick click) | Toggle analogue frame: `base_link` ↔ TCP |
+
+---
+
+## Analogue Stick Modes
+
+With no modifier held the stick provides yaw and vertical control. Hold **grip** or **trigger** to change behaviour:
+
+| Modifier | Stick left/right | Stick forward/back |
+|----------|-----------------|-------------------|
+| None | Yaw | Z (up / down) |
+| **Grip** held | X translation | Y translation |
+| **Trigger** held | Pitch | Roll |
+
+Stick offsets persist when released — the robot holds its nudged position. Offsets reset when analogue mode is re-enabled (A) or when a new VR reference is captured (keyboard `e`).
+
+### Frame selection (RJ)
+
+| Frame | Stick axes relative to… |
+|-------|------------------------|
+| `base` | World / robot base (default) |
+| `tcp` | Gripper tip — "forward" always means along the approach direction |
+
+TCP frame is useful for insertion tasks where you want to nudge along the tool axis.
+
+---
+
+## Keyboard Reference
+
+| Key | Action |
+|-----|--------|
+| `e` | Enable VR tracking (capture reference) |
+| `q` | Disable VR tracking |
+| `o` | Toggle orientation follow |
+| `g` | Toggle gripper open / closed |
+| `f` | Toggle force-feedback stiffness modulation |
+| `l` | Toggle workspace limits |
+| `t` | Re-tare F/T sensor |
+| `x` | Exit |
+
+---
+
+## Terminal HUD
+
+A live status bar is rendered at the bottom of the terminal:
+
+```
+  ─────────────────────────────────────────────────  [x] quit
+  MODE   VR ● TRACKING   ANALOGUE ○ OFF   FRAME: base   ORI: off
+  F/T    ████████░░░░░░░░░░░░░░░░░░░░░░    6.2 N   contact
+                  2N              20N
+```
+
+| Colour | Meaning |
+|--------|---------|
+| 🟢 Green | Free — below 2 N contact threshold |
+| 🟡 Yellow | Contact — stiffness begins reducing |
+| 🔴 Red | High force — at minimum stiffness (20 N+) |
+
+If the reading is non-zero at rest, press **`t`** to re-tare.
+
+---
+
+## Force Feedback
+
+When enabled (`f`), Cartesian stiffness reduces automatically with contact force:
+
+| Force | Stiffness |
+|-------|-----------|
+| < 2 N | 60 (full teleop) |
+| 2 – 20 N | 60 → 15 (linear) |
+| > 20 N | 15 (maximum compliance) |
+
+For cable and connector insertion where high stiffness would resist the environment.
+
+---
+
+## Tips
+
+- Always start in **IDLE** and verify the F/T reading is near zero before enabling motion.
+- Use **VR TRACKING** to move to the task area, then switch to **ANALOGUE** for fine positioning.
+- **TCP frame** (RJ toggle) makes insertion nudges intuitive — you push toward the connector regardless of gripper orientation.
+- Workspace limits are off by default. Enable with `l` to constrain motion to the defined safe volume.
+- Press `t` any time the force reading looks wrong — re-taring takes effect immediately.
