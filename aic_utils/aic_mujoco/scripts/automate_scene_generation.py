@@ -127,6 +127,8 @@ class SceneConfig:
         if self.spawn_cable:
             params.append(f"cable={self.cable_type}")
             params.append(f"cable_x={self.cable_x:.3f}")
+            params.append(f"cable_y={self.cable_y:.3f}")
+            params.append(f"cable_z={self.cable_z:.3f}")
         
         if self.sfp_mount_rail_0_present:
             params.append(f"sfp_trans={self.sfp_mount_rail_0_translation:.3f}")
@@ -260,20 +262,34 @@ class SceneGenerator:
                 task_board_roll=0.0,
                 task_board_pitch=0.0,
                 task_board_yaw=random.uniform(-0.5, 0.5),
-                
+
                 # Cable configuration
                 # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
                 spawn_cable=True,
                 cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
-                cable_x=random.uniform(0.15, 0.19),
-                cable_y=random.uniform(0.0, 0.05),
+                cable_x=0.172,
+                cable_y=0.024,
                 cable_z=1.508 if random.random() > 0.5 else 1.518,
                 # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
-                cable_roll=random.uniform(0.3, 0.6),
-                cable_pitch=random.uniform(-0.6, -0.3),
-                cable_yaw=random.uniform(1.0, 1.66),
+                cable_roll=0.4432,
+                cable_pitch=-0.48,
+                cable_yaw=1.3303,
                 # attach_cable_to_gripper=random.choice([True, False]),
                 attach_cable_to_gripper=True,
+                
+                # # Cable configuration
+                # # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
+                # spawn_cable=True,
+                # cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
+                # cable_x=random.uniform(0.15, 0.19),
+                # cable_y=random.uniform(0.0, 0.05),
+                # cable_z=1.508 if random.random() > 0.5 else 1.518,
+                # # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
+                # cable_roll=random.uniform(0.3, 0.6),
+                # cable_pitch=random.uniform(-0.6, -0.3),
+                # cable_yaw=random.uniform(1.0, 1.66),
+                # # attach_cable_to_gripper=random.choice([True, False]),
+                # attach_cable_to_gripper=True,
                 
                 # Mount rails (presence and positioning)
                 sfp_mount_rail_0_present=random.choice([True, False]),
@@ -384,8 +400,28 @@ class GazeboExporter:
         
         logger.info(f"Launching Gazebo with parameters: {config.scene_name}")
         
+        def _sdf_seems_complete(path: Path) -> bool:
+            """Heuristic completeness check to avoid consuming partial exports."""
+            try:
+                content = path.read_text()
+            except (OSError, UnicodeDecodeError):
+                return False
+
+            if "</sdf>" not in content:
+                return False
+
+            # A valid AIC export should include robot/tabletop content.
+            return ("tabletop" in content) or ("shoulder_link" in content)
+
         process = None
         try:
+            sdf_path = Path("/tmp/aic.sdf")
+            if sdf_path.exists():
+                logger.info(f"Removing stale SDF before launch: {sdf_path}")
+                sdf_path.unlink()
+
+            launch_start_time = time.time()
+
             # Launch Gazebo process
             process = subprocess.Popen(
                 cmd,
@@ -398,7 +434,6 @@ class GazeboExporter:
             logger.info(f"Gazebo process started (PID: {process.pid})")
             
             # Poll for SDF file with intelligent detection
-            sdf_path = Path("/tmp/aic.sdf")
             poll_interval = 1.0  # Check every 1 second
             elapsed_time = 0.0
             last_file_size = 0
@@ -407,19 +442,37 @@ class GazeboExporter:
             logger.info(f"Polling for SDF export (timeout: {timeout}s, poll interval: {poll_interval}s)...")
             
             while elapsed_time < timeout:
+                if process.poll() is not None and not sdf_path.exists():
+                    raise RuntimeError(
+                        "Gazebo launch exited before producing /tmp/aic.sdf"
+                    )
+
                 if sdf_path.exists():
+                    stat = sdf_path.stat()
+
+                    # Ignore stale files that predate this launch.
+                    if stat.st_mtime < launch_start_time:
+                        time.sleep(poll_interval)
+                        elapsed_time += poll_interval
+                        continue
+
                     # File exists, check if it's stable (size not changing)
-                    current_size = sdf_path.stat().st_size
+                    current_size = stat.st_size
                     
                     if current_size > 0:  # Ensure file is not empty
                         if current_size == last_file_size:
                             # File size unchanged, means export likely complete
                             stable_size_count += 1
                             if stable_size_count >= 2:  # Size stable for 2 consecutive checks
-                                logger.info(f"✓ SDF file detected at {sdf_path} ({current_size} bytes)")
-                                logger.info(f"✓ File size stable - export completed after {elapsed_time:.1f}s")
-                                logger.info("Shutting down Gazebo...")
-                                break
+                                if _sdf_seems_complete(sdf_path):
+                                    logger.info(f"✓ SDF file detected at {sdf_path} ({current_size} bytes)")
+                                    logger.info(f"✓ File size stable - export completed after {elapsed_time:.1f}s")
+                                    logger.info("Shutting down Gazebo...")
+                                    break
+                                logger.info(
+                                    "SDF file is stable but appears incomplete; waiting for full export..."
+                                )
+                                stable_size_count = 0
                         else:
                             # File size changed, it's still being written
                             logger.debug(f"SDF file size: {last_file_size} → {current_size} bytes (still writing)")
@@ -731,6 +784,7 @@ class OrchestrationManager:
         ws_path: Path,
         num_scenes: int,
         output_dir: Path,
+        export_timeout: int = 120,
         gazebo_gui: bool = True,
         launch_rviz: bool = False,
     ):
@@ -739,6 +793,7 @@ class OrchestrationManager:
         self.num_scenes = num_scenes
         self.output_dir = Path(output_dir)
         self.script_dir = Path(__file__).parent
+        self.export_timeout = export_timeout
         self.gazebo_gui = gazebo_gui
         self.launch_rviz = launch_rviz
         
@@ -769,7 +824,7 @@ class OrchestrationManager:
             logger.info(f"{'='*60}")
             
             # Step 1: Export from Gazebo
-            sdf_path = self.gazebo_exporter.export_scene(config, timeout=120)
+            sdf_path = self.gazebo_exporter.export_scene(config, timeout=self.export_timeout)
             
             # Step 2: Fix SDF
             SDFProcessor.fix_sdf(sdf_path)
@@ -922,6 +977,7 @@ def main():
         ws_path=ws_path,
         num_scenes=args.num_scenes,
         output_dir=ws_path / "src/aic/aic_utils/aic_mujoco/mjcf",
+        export_timeout=args.export_timeout,
         gazebo_gui=args.gazebo_gui,
         launch_rviz=args.launch_rviz,
     )
