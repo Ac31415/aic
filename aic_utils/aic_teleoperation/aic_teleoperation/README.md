@@ -1,6 +1,6 @@
 # Vr Teleop Workflow
 
-Prerequisites:
+## Prerequisites:
 - Setup aic workspace
 - Test evaluation container with example policies
 - Install [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
