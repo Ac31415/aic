@@ -742,85 +742,46 @@ def main():
         nic_card_default.geom.friction = [0.1, 0.005, 0.1]
         print("Added 'nic_card_default' with friction [0.1, 0.005, 0.1].")
 
-        # Mark cable bodies with cable childclass in mjSpec.
-        # NOTE: Assigning body.plugin directly through mjSpec can trigger
-        # intermittent plugin-instance serialization errors in world_spec.to_xml().
-        # We inject <plugin instance="composite"/> at XML level below instead.
-        print("Marking cable bodies for plugin injection...")
+        # Set plugin and childclass on cable bodies
+        print("Setting plugin on cable bodies...")
 
-        def is_cable_body_name(name):
-            if not name:
-                return False
-            if (
-                name.startswith("cable_end_")
-                or name.startswith("cable_connection_")
-                or name == "sc_plug_link"
-            ):
-                return True
-            if name.startswith("link_"):
-                try:
-                    idx = int(name.split("_")[1])
-                    return 1 <= idx <= 20
-                except ValueError:
-                    return False
-            return False
-
-        def traverse_mark_cable_bodies(body):
+        def traverse_find_links(body, target_plugin):
             count = 0
-            names = []
 
-            if is_cable_body_name(body.name):
+            if body.name == "lc_plug_link":
+                return 0
+
+            is_cable_body = (
+                body.name.startswith("cable_end_")
+                or body.name.startswith("cable_connection_")
+                or body.name == "sc_plug_link"
+            )
+            if body.name.startswith("link_"):
+                try:
+                    idx = int(body.name.split("_")[1])
+                    if 1 <= idx <= 20:
+                        is_cable_body = True
+                except ValueError:
+                    pass
+
+            if is_cable_body:
+                body.plugin = target_plugin
+                body.plugin.active = True
+                body.plugin.name = target_plugin.name
                 body.childclass = "cable_default"
-                names.append(body.name)
                 count += 1
 
             if hasattr(body, "bodies"):
                 for child in body.bodies:
-                    child_count, child_names = traverse_mark_cable_bodies(child)
-                    count += child_count
-                    names.extend(child_names)
-            return count, names
+                    count += traverse_find_links(child, target_plugin)
+            return count
 
-        bodies_found, cable_body_names = traverse_mark_cable_bodies(world_spec.worldbody)
-        print(f"Marked {bodies_found} cable bodies for plugin injection.")
+        bodies_found = traverse_find_links(world_spec.worldbody, plugin)
+        print(f"Attached plugin to {bodies_found} bodies.")
 
         # --- Generate and Save ---
         print("Generating World XML...")
         xml_str = world_spec.to_xml()
-
-        # XML-level plugin instance injection avoids mjSpec plugin serialization bugs.
-        def inject_plugin_instances(xml, body_names, instance_name="composite"):
-            xml_root = ET.fromstring(xml)
-            names_set = set(body_names)
-            injected = 0
-            for body_elem in xml_root.iter("body"):
-                body_name = body_elem.get("name")
-                if body_name not in names_set:
-                    continue
-
-                has_plugin = any(
-                    c.tag == "plugin" and c.get("instance") == instance_name
-                    for c in list(body_elem)
-                )
-                if has_plugin:
-                    continue
-
-                plugin_elem = ET.Element("plugin", {"instance": instance_name})
-
-                # Keep element ordering stable by inserting after inertial if present.
-                insert_idx = 0
-                for i, child in enumerate(list(body_elem)):
-                    if child.tag == "inertial":
-                        insert_idx = i + 1
-                        break
-
-                body_elem.insert(insert_idx, plugin_elem)
-                injected += 1
-
-            return ET.tostring(xml_root, encoding="unicode"), injected
-
-        xml_str, injected_count = inject_plugin_instances(xml_str, cable_body_names)
-        print(f"Injected plugin instances on {injected_count} cable bodies.")
         xml_str = rename_class(xml_str, "unused", "world_default")
 
         def strip_class_from_cable_children(xml):
