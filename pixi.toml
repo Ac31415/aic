@@ -86,6 +86,8 @@ gflags = "*"
 ros-kilted-robot-state-publisher = "*"
 ros-kilted-xacro = "*"
 ros-kilted-rviz2 = ">=15.0.11,<16"
+ros-kilted-tf-transformations = ">=1.0.1,<2"
+ros-kilted-ros2bag = ">=0.32.0,<0.33"
 
 [pypi-dependencies]
 huggingface-hub = { version = "~=1.7" }

@@ -1,0 +1,33 @@
+# terminal 1: Start the Zenoh router if not already running
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 run rmw_zenoh_cpp rmw_zenohd
+
+
+
+
+# terminal 2: Launch MuJoCo simulation with ros2_control
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+
+
+
+
+cd ~/oculus_reader
+source ~/ws_aic/install/setup.zsh     
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+python oculus_reader/viz_transforms.py
+
+
+
+
+on native terminal:
+
+source ~/ws_aic/install/setup.zsh                                                                    
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+python '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_teleoperation/aic_teleoperation/vr_aic.py'
