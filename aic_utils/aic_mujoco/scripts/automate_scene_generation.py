@@ -42,6 +42,18 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def parse_bool_arg(value: str) -> bool:
+    """Parse common string boolean values for argparse options."""
+    normalized = value.strip().lower()
+    if normalized in {"1", "true", "t", "yes", "y", "on"}:
+        return True
+    if normalized in {"0", "false", "f", "no", "n", "off"}:
+        return False
+    raise argparse.ArgumentTypeError(
+        f"Invalid boolean value: {value}. Use true/false."
+    )
+
+
 @dataclass
 class SceneConfig:
     """Configuration for a single scene."""
@@ -137,7 +149,7 @@ class SceneConfig:
         name = "_".join(params).replace(".", "p")
         return name
     
-    def to_launch_args(self) -> str:
+    def to_launch_args(self, gazebo_gui: bool = True, launch_rviz: bool = False) -> str:
         """Convert configuration to ros2 launch arguments."""
         args = [
             # f"robot_x:={self.robot_x}",
@@ -154,6 +166,8 @@ class SceneConfig:
             f"task_board_pitch:={self.task_board_pitch}",
             f"task_board_yaw:={self.task_board_yaw}",
             f"spawn_cable:={str(self.spawn_cable).lower()}",
+            f"gazebo_gui:={str(gazebo_gui).lower()}",
+            f"launch_rviz:={str(launch_rviz).lower()}",
             "ground_truth:=true",
         ]
         
@@ -311,9 +325,11 @@ class SceneGenerator:
 class GazeboExporter:
     """Handles Gazebo simulation and SDF export."""
     
-    def __init__(self, ws_path: Path):
+    def __init__(self, ws_path: Path, gazebo_gui: bool = True, launch_rviz: bool = False):
         """Initialize exporter."""
         self.ws_path = ws_path
+        self.gazebo_gui = gazebo_gui
+        self.launch_rviz = launch_rviz
         self.env = os.environ.copy()
         self._setup_ros_env()
     
@@ -362,7 +378,8 @@ class GazeboExporter:
         cmd = [
             "bash", "-c",
             f"source {self.ws_path}/install/setup.bash && "
-            f"ros2 launch aic_bringup aic_gz_bringup.launch.py {config.to_launch_args()}"
+            f"ros2 launch aic_bringup aic_gz_bringup.launch.py "
+            f"{config.to_launch_args(gazebo_gui=self.gazebo_gui, launch_rviz=self.launch_rviz)}"
         ]
         
         logger.info(f"Launching Gazebo with parameters: {config.scene_name}")
@@ -709,12 +726,21 @@ class ExportOrganizer:
 class OrchestrationManager:
     """Orchestrates the entire scene generation workflow."""
     
-    def __init__(self, ws_path: Path, num_scenes: int, output_dir: Path):
+    def __init__(
+        self,
+        ws_path: Path,
+        num_scenes: int,
+        output_dir: Path,
+        gazebo_gui: bool = True,
+        launch_rviz: bool = False,
+    ):
         """Initialize orchestration manager."""
         self.ws_path = Path(ws_path)
         self.num_scenes = num_scenes
         self.output_dir = Path(output_dir)
         self.script_dir = Path(__file__).parent
+        self.gazebo_gui = gazebo_gui
+        self.launch_rviz = launch_rviz
         
         # Create output directory structure
         self.mjcf_base_dir = self.ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
@@ -722,7 +748,11 @@ class OrchestrationManager:
         
         # Initialize components
         self.scene_generator = SceneGenerator()
-        self.gazebo_exporter = GazeboExporter(self.ws_path)
+        self.gazebo_exporter = GazeboExporter(
+            self.ws_path,
+            gazebo_gui=self.gazebo_gui,
+            launch_rviz=self.launch_rviz,
+        )
         self.mjcf_converter = MJCFConverter(self.ws_path)
         self.cable_processor = CablePluginProcessor(self.ws_path, self.script_dir)
     
@@ -862,6 +892,18 @@ def main():
         default=120,
         help='Timeout in seconds for each Gazebo export'
     )
+    parser.add_argument(
+        '--gazebo_gui',
+        type=parse_bool_arg,
+        default=True,
+        help='Whether to show Gazebo GUI (true/false)'
+    )
+    parser.add_argument(
+        '--launch_rviz',
+        type=parse_bool_arg,
+        default=False,
+        help='Whether to launch RViz (true/false)'
+    )
     
     args = parser.parse_args()
     
@@ -879,7 +921,9 @@ def main():
     manager = OrchestrationManager(
         ws_path=ws_path,
         num_scenes=args.num_scenes,
-        output_dir=ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
+        output_dir=ws_path / "src/aic/aic_utils/aic_mujoco/mjcf",
+        gazebo_gui=args.gazebo_gui,
+        launch_rviz=args.launch_rviz,
     )
     
     manager.run()
