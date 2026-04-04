@@ -1,12 +1,14 @@
 # Vr Teleop Workflow
 
-## Prerequisites:
+## Prerequisites
 - Setup aic workspace
 - Test evaluation container with example policies
-- Install [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
-- Clone and setup [oculus_reader](https://github.com/S-abk/oculus_reader)
+- [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
+- [oculus_reader](https://github.com/S-abk/oculus_reader)
 
-Open 3 shell windows and run these in order:
+---
+
+Open 3 shell windows accordingly:
 
 
 ## Terminal 1 - Simulation
@@ -34,8 +36,9 @@ Start sim:
 ```bash
 /entrypoint.sh spawn_task_board:=true     task_board_x:=0.3 task_board_y:=-0.1 task_board_z:=1.2     task_board_roll:=0.0 task_board_pitch:=0.0 task_board_yaw:=0.785     sfp_mount_rail_0_present:=true sfp_mount_rail_0_translation:=-0.08     sc_mount_rail_0_present:=true sc_mount_rail_0_translation:=-0.09     nic_card_mount_0_present:=true nic_card_mount_0_translation:=0.005     sc_port_0_present:=true sc_port_0_translation:=-0.04     spawn_cable:=true cable_type:=sfp_sc_cable attach_cable_to_gripper:=true     ground_truth:=true start_aic_engine:=false
 ```
-This is an example configuration, change the argument values to vary the scene configuration:
+This is an example configuration, change the argument values to vary the scene configuration
 
+---
 
 ## Terminal 2 - oculus_reader
 
@@ -62,7 +65,7 @@ Put on headset on forehead so you can view your monitor through bare eyes. Conne
 cd oculus_reader/
 python3 oculus_reader/viz_transforms.py 
 ```
-
+---
 
 ## Terminal 3 - Telop Interface
 ```bash
