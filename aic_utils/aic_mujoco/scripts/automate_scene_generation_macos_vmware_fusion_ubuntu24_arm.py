@@ -799,7 +799,7 @@ class OrchestrationManager:
         
         # Create output directory structure
         self.mjcf_base_dir = self.ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
-        # self.export_base_dir = Path("/mnt/hgfs/exported mujoco training envs")
+        self.export_base_dir = Path("/mnt/hgfs/exported mujoco training envs")
         
         # Initialize components
         self.scene_generator = SceneGenerator()
@@ -849,12 +849,12 @@ class OrchestrationManager:
             # Step 5: Process with cable plugin
             self.cable_processor.process_mjcf(scene_mjcf_dir)
             
-            # # Step 6: Copy to export directory
-            # if self.export_base_dir.exists():
-            #     ExportOrganizer.organize_scene(scene_mjcf_dir, self.export_base_dir, config.scene_name)
-            #     logger.info(f"Scene exported to {self.export_base_dir / config.scene_name}")
-            # else:
-            #     logger.warning(f"Export directory not found: {self.export_base_dir}")
+            # Step 6: Copy to export directory
+            if self.export_base_dir.exists():
+                ExportOrganizer.organize_scene(scene_mjcf_dir, self.export_base_dir, config.scene_name)
+                logger.info(f"Scene exported to {self.export_base_dir / config.scene_name}")
+            else:
+                logger.warning(f"Export directory not found: {self.export_base_dir}")
             
             # Cleanup temporary directory
             shutil.rmtree(scene_temp_dir, ignore_errors=True)
@@ -871,7 +871,7 @@ class OrchestrationManager:
         logger.info(f"Starting automated scene generation: {self.num_scenes} scenes")
         logger.info(f"Workspace: {self.ws_path}")
         logger.info(f"MJCF output: {self.mjcf_base_dir}")
-        # logger.info(f"Export directory: {self.export_base_dir}")
+        logger.info(f"Export directory: {self.export_base_dir}")
         
         # Generate all unique configurations first
         logger.info("Generating unique scene configurations...")
@@ -917,7 +917,7 @@ class OrchestrationManager:
         logger.info(f"Successful: {successful}")
         logger.info(f"Failed: {failed}")
         logger.info(f"MJCF output directory: {self.mjcf_base_dir}")
-        # logger.info(f"Export directory: {self.export_base_dir}")
+        logger.info(f"Export directory: {self.export_base_dir}")
         logger.info(f"{'='*60}\n")
         
         if failed > 0:
