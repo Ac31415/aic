@@ -246,36 +246,254 @@ class SceneGenerator:
         max_attempts = 100
         
         for attempt in range(max_attempts):
+
+            # Robot position (fixed for baseline)
+            # robot_x=random.uniform(-0.3, -0.1),
+            # robot_y=random.uniform(0.1, 0.3),
+            robot_z=1.14,  # Fixed
+            robot_roll=0.0
+            robot_pitch=0.0
+            robot_yaw=-3.141
+            
+            # Task board position with some randomization
+            task_board_x=random.uniform(0.1, 0.3)
+            task_board_y=random.uniform(-0.3, -0.1)
+            task_board_z=1.14  # Fixed
+            task_board_roll=0.0
+            task_board_pitch=0.0
+            task_board_yaw=random.uniform(-0.5, 0.5)
+
+            # Cable configuration (same as grasp pose mentioned in `docs/qualification_phase.md`??)
+            # values obtained from `aic_bringup/README.md`
+            # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
+            spawn_cable=True
+            cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
+            cable_x=0.172
+            cable_y=0.024
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if cable_type == "sfp_sc_cable_reversed":
+                cable_z = 1.508
+            else:
+                cable_z = 1.518
+
+            cable_roll=0.4432
+            cable_pitch=-0.48
+            cable_yaw=1.3303
+            # attach_cable_to_gripper=random.choice([True, False]),
+            attach_cable_to_gripper=True
+            
+            # # Cable configuration
+            # # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
+            # spawn_cable=True,
+            # cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
+            # cable_x=random.uniform(0.15, 0.19),
+            # cable_y=random.uniform(0.0, 0.05),
+            # cable_z=1.508 if random.random() > 0.5 else 1.518,
+            # # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
+            # cable_roll=random.uniform(0.3, 0.6),
+            # cable_pitch=random.uniform(-0.6, -0.3),
+            # cable_yaw=random.uniform(1.0, 1.66),
+            # # attach_cable_to_gripper=random.choice([True, False]),
+            # attach_cable_to_gripper=True,
+
+            lc_mount_rail_0_present=random.choice([True, False])
+            lc_mount_rail_0_translation=random.uniform(-0.09625, 0.09625)
+            lc_mount_rail_0_roll=0.0
+            lc_mount_rail_0_pitch=0.0
+            lc_mount_rail_0_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if cable_type == "sfp_sc_cable_reversed":
+                # Mount rails (presence and positioning)
+                sfp_mount_rail_0_present=random.choice([True, False])
+                sfp_mount_rail_0_translation=random.uniform(-0.09625, 0.09625)
+                sfp_mount_rail_0_roll=0.0
+                sfp_mount_rail_0_pitch=0.0
+                sfp_mount_rail_0_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+            else:
+                # Mount rails (presence and positioning)
+                sfp_mount_rail_0_present=True
+                sfp_mount_rail_0_translation=random.uniform(-0.09625, 0.09625)
+                sfp_mount_rail_0_roll=0.0
+                sfp_mount_rail_0_pitch=0.0
+                sfp_mount_rail_0_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if cable_type == "sfp_sc_cable_reversed":
+                sc_mount_rail_0_present=True
+                sc_mount_rail_0_translation=random.uniform(-0.09625, 0.09625)
+                sc_mount_rail_0_roll=0.0
+                sc_mount_rail_0_pitch=0.0
+                sc_mount_rail_0_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+            else:
+                sc_mount_rail_0_present=random.choice([True, False])
+                sc_mount_rail_0_translation=random.uniform(-0.09625, 0.09625)
+                sc_mount_rail_0_roll=0.0
+                sc_mount_rail_0_pitch=0.0
+                sc_mount_rail_0_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+
+            lc_mount_rail_1_present=random.choice([True, False])
+            lc_mount_rail_1_translation=random.uniform(-0.09625, 0.09625)
+            lc_mount_rail_1_roll=0.0
+            lc_mount_rail_1_pitch=0.0
+            lc_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if cable_type == "sfp_sc_cable_reversed":
+                # Mount rails (presence and positioning)
+                sfp_mount_rail_1_present=random.choice([True, False])
+                sfp_mount_rail_1_translation=random.uniform(-0.09625, 0.09625)
+                sfp_mount_rail_1_roll=0.0
+                sfp_mount_rail_1_pitch=0.0
+                sfp_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+            else:
+                # Mount rails (presence and positioning)
+                sfp_mount_rail_1_present=True
+                sfp_mount_rail_1_translation=random.uniform(-0.09625, 0.09625)
+                sfp_mount_rail_1_roll=0.0
+                sfp_mount_rail_1_pitch=0.0
+                sfp_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+                sfp_mount_rail_1_pitch=random.uniform(-0.175, 0.175)
+                sfp_mount_rail_1_yaw=random.uniform(-0.175, 0.175)
+
+            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
+            if cable_type == "sfp_sc_cable_reversed":
+                sc_mount_rail_1_present=True
+                sc_mount_rail_1_translation=random.uniform(-0.09625, 0.09625)
+                sc_mount_rail_1_roll=0.0
+                sc_mount_rail_1_pitch=0.0
+                sc_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+            else:
+                sc_mount_rail_1_present=random.choice([True, False])
+                sc_mount_rail_1_translation=random.uniform(-0.09625, 0.09625)
+                sc_mount_rail_1_roll=0.0
+                sc_mount_rail_1_pitch=0.0
+                sc_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
+
+            if cable_type == "sfp_sc_cable_reversed":
+                sc_port_0_present=True
+                sc_port_0_translation=random.uniform(-0.06, 0.055)
+                sc_port_0_roll=0.0
+                sc_port_0_pitch=0.0
+                sc_port_0_yaw=0.0
+            else:
+                sc_port_0_present=random.choice([True, False])
+                sc_port_0_translation=random.uniform(-0.06, 0.055)
+                sc_port_0_roll=0.0
+                sc_port_0_pitch=0.0
+                sc_port_0_yaw=0.0
+
+            if cable_type == "sfp_sc_cable_reversed":
+                sc_port_1_present=True
+                sc_port_1_translation=random.uniform(-0.06, 0.055)
+                sc_port_1_roll=0.0
+                sc_port_1_pitch=0.0
+                sc_port_1_yaw=0.0
+            else:
+                sc_port_1_present=random.choice([True, False])
+                sc_port_1_translation=random.uniform(-0.06, 0.055)
+                sc_port_1_roll=0.0
+                sc_port_1_pitch=0.0
+                sc_port_1_yaw=0.0
+
+            if cable_type == "sfp_sc_cable_reversed":
+                nic_card_mount_0_present=random.choice([True, False])
+                nic_card_mount_0_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_0_roll=0.0
+                nic_card_mount_0_pitch=0.0
+                nic_card_mount_0_yaw=random.uniform(-0.175, 0.175)
+            else:
+                nic_card_mount_0_present=True
+                nic_card_mount_0_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_0_roll=0.0
+                nic_card_mount_0_pitch=0.0
+                nic_card_mount_0_yaw=random.uniform(-0.175, 0.175)
+
+            if cable_type == "sfp_sc_cable_reversed":
+                nic_card_mount_1_present=random.choice([True, False])
+                nic_card_mount_1_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_1_roll=0.0
+                nic_card_mount_1_pitch=0.0
+                nic_card_mount_1_yaw=random.uniform(-0.175, 0.175)
+            else:
+                nic_card_mount_1_present=True
+                nic_card_mount_1_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_1_roll=0.0
+                nic_card_mount_1_pitch=0.0
+                nic_card_mount_1_yaw=random.uniform(-0.175, 0.175)
+
+            if cable_type == "sfp_sc_cable_reversed":
+                nic_card_mount_2_present=random.choice([True, False])
+                nic_card_mount_2_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_2_roll=0.0
+                nic_card_mount_2_pitch=0.0
+                nic_card_mount_2_yaw=random.uniform(-0.175, 0.175)
+            else:
+                nic_card_mount_2_present=True
+                nic_card_mount_2_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_2_roll=0.0
+                nic_card_mount_2_pitch=0.0
+                nic_card_mount_2_yaw=random.uniform(-0.175, 0.175)
+
+            if cable_type == "sfp_sc_cable_reversed":
+                nic_card_mount_3_present=random.choice([True, False])
+                nic_card_mount_3_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_3_roll=0.0
+                nic_card_mount_3_pitch=0.0
+                nic_card_mount_3_yaw=random.uniform(-0.175, 0.175)
+            else:
+                nic_card_mount_3_present=True
+                nic_card_mount_3_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_3_roll=0.0
+                nic_card_mount_3_pitch=0.0
+                nic_card_mount_3_yaw=random.uniform(-0.175, 0.175)
+
+            if cable_type == "sfp_sc_cable_reversed":
+                nic_card_mount_4_present=random.choice([True, False])
+                nic_card_mount_4_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_4_roll=0.0
+                nic_card_mount_4_pitch=0.0
+                nic_card_mount_4_yaw=random.uniform(-0.175, 0.175)
+            else:
+                nic_card_mount_4_present=True
+                nic_card_mount_4_translation=random.uniform(-0.0215, 0.0234)
+                nic_card_mount_4_roll=0.0
+                nic_card_mount_4_pitch=0.0
+                nic_card_mount_4_yaw=random.uniform(-0.175, 0.175)
+
+            # will come back and continue!!!
+
             config = SceneConfig(
                 # Robot position (fixed for baseline)
                 # robot_x=random.uniform(-0.3, -0.1),
                 # robot_y=random.uniform(0.1, 0.3),
-                robot_z=1.14,  # Fixed
-                robot_roll=0.0,
-                robot_pitch=0.0,
-                robot_yaw=-3.141,
+                robot_z=robot_z,  # Fixed
+                robot_roll=robot_roll,
+                robot_pitch=robot_pitch,
+                robot_yaw=robot_yaw,
                 
                 # Task board position with some randomization
-                task_board_x=random.uniform(0.1, 0.3),
-                task_board_y=random.uniform(-0.3, -0.1),
-                task_board_z=1.14,  # Fixed
-                task_board_roll=0.0,
-                task_board_pitch=0.0,
-                task_board_yaw=random.uniform(-0.5, 0.5),
+                task_board_x=task_board_x,
+                task_board_y=task_board_y,
+                task_board_z=task_board_z,  # Fixed
+                task_board_roll=task_board_roll,
+                task_board_pitch=task_board_pitch,
+                task_board_yaw=task_board_yaw,
 
                 # Cable configuration
                 # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
-                spawn_cable=True,
-                cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
-                cable_x=0.172,
-                cable_y=0.024,
-                cable_z=1.508 if random.random() > 0.5 else 1.518,
+                spawn_cable=spawn_cable,
+                cable_type=cable_type,
+                cable_x=cable_x,
+                cable_y=cable_y,
+                cable_z=cable_z,
                 # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
-                cable_roll=0.4432,
-                cable_pitch=-0.48,
-                cable_yaw=1.3303,
+                cable_roll=cable_roll,
+                cable_pitch=cable_pitch,
+                cable_yaw=cable_yaw,
                 # attach_cable_to_gripper=random.choice([True, False]),
-                attach_cable_to_gripper=True,
+                attach_cable_to_gripper=attach_cable_to_gripper,
                 
                 # # Cable configuration
                 # # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
@@ -292,42 +510,36 @@ class SceneGenerator:
                 # attach_cable_to_gripper=True,
                 
                 # Mount rails (presence and positioning)
-                sfp_mount_rail_0_present=random.choice([True, False]),
-                sfp_mount_rail_0_translation=random.uniform(-0.09625, 0.09625),
-                sfp_mount_rail_0_roll=random.uniform(-0.175, 0.175),  # ~+/-10 degrees
-                sfp_mount_rail_0_pitch=random.uniform(-0.175, 0.175),
-                sfp_mount_rail_0_yaw=random.uniform(-0.175, 0.175),
-                
-                sc_mount_rail_0_present=random.choice([True, False]),
-                sc_mount_rail_0_translation=random.uniform(-0.09625, 0.09625),
-                sc_mount_rail_0_roll=random.uniform(-0.175, 0.175),
-                sc_mount_rail_0_pitch=random.uniform(-0.175, 0.175),
-                sc_mount_rail_0_yaw=random.uniform(-0.175, 0.175),
-                
-                lc_mount_rail_0_present=random.choice([True, False]),
-                lc_mount_rail_0_translation=random.uniform(-0.188, 0.188),
-                lc_mount_rail_0_roll=random.uniform(-1.047, 1.047),  # ~+/-60 degrees
-                lc_mount_rail_0_pitch=random.uniform(-1.047, 1.047),
-                lc_mount_rail_0_yaw=random.uniform(-1.047, 1.047),
-                
-                nic_card_mount_0_present=random.choice([True, False]),
-                nic_card_mount_0_translation=random.uniform(0.0, 0.062),
-                nic_card_mount_0_roll=random.uniform(-0.175, 0.175),
-                nic_card_mount_0_pitch=random.uniform(-0.175, 0.175),
-                nic_card_mount_0_yaw=random.uniform(-0.175, 0.175),
-                
-                sc_port_0_present=random.choice([True, False]),
-                sc_port_0_translation=random.uniform(0.0, 0.115),
-                sc_port_0_roll=random.uniform(-0.175, 0.175),
-                sc_port_0_pitch=random.uniform(-0.175, 0.175),
-                sc_port_0_yaw=random.uniform(-0.175, 0.175),
-            )
+                sfp_mount_rail_0_present=sfp_mount_rail_0_present,
+                sfp_mount_rail_0_translation=sfp_mount_rail_0_translation,
+                sfp_mount_rail_0_roll=sfp_mount_rail_0_roll,
+                sfp_mount_rail_0_pitch=sfp_mount_rail_0_pitch,
+                sfp_mount_rail_0_yaw=sfp_mount_rail_0_yaw,
 
-            # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
-            if config.cable_type == "sfp_sc_cable_reversed":
-                config.cable_z = 1.508
-            else:
-                config.cable_z = 1.518
+                sc_mount_rail_0_present=sc_mount_rail_0_present,
+                sc_mount_rail_0_translation=sc_mount_rail_0_translation,
+                sc_mount_rail_0_roll=sc_mount_rail_0_roll,
+                sc_mount_rail_0_pitch=sc_mount_rail_0_pitch,
+                sc_mount_rail_0_yaw=sc_mount_rail_0_yaw,
+                
+                lc_mount_rail_0_present=lc_mount_rail_0_present,
+                lc_mount_rail_0_translation=lc_mount_rail_0_translation,
+                lc_mount_rail_0_roll=lc_mount_rail_0_roll,
+                lc_mount_rail_0_pitch=lc_mount_rail_0_pitch,
+                lc_mount_rail_0_yaw=lc_mount_rail_0_yaw,
+                
+                nic_card_mount_0_present=nic_card_mount_0_present,
+                nic_card_mount_0_translation=nic_card_mount_0_translation,
+                nic_card_mount_0_roll=nic_card_mount_0_roll,
+                nic_card_mount_0_pitch=nic_card_mount_0_pitch,
+                nic_card_mount_0_yaw=nic_card_mount_0_yaw,
+                
+                sc_port_0_present=sc_port_0_present,
+                sc_port_0_translation=sc_port_0_translation,
+                sc_port_0_roll=sc_port_0_roll,
+                sc_port_0_pitch=sc_port_0_pitch,
+                sc_port_0_yaw=sc_port_0_yaw,
+            )
             
             # Check uniqueness
             config_hash = config.scene_name
