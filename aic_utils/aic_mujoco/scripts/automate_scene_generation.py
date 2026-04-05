@@ -87,30 +87,78 @@ class SceneConfig:
     sfp_mount_rail_0_roll: float
     sfp_mount_rail_0_pitch: float
     sfp_mount_rail_0_yaw: float
+
+    sfp_mount_rail_1_present: bool
+    sfp_mount_rail_1_translation: float
+    sfp_mount_rail_1_roll: float
+    sfp_mount_rail_1_pitch: float
+    sfp_mount_rail_1_yaw: float
     
     sc_mount_rail_0_present: bool
     sc_mount_rail_0_translation: float
     sc_mount_rail_0_roll: float
     sc_mount_rail_0_pitch: float
     sc_mount_rail_0_yaw: float
+
+    sc_mount_rail_1_present: bool
+    sc_mount_rail_1_translation: float
+    sc_mount_rail_1_roll: float
+    sc_mount_rail_1_pitch: float
+    sc_mount_rail_1_yaw: float
     
     lc_mount_rail_0_present: bool
     lc_mount_rail_0_translation: float
     lc_mount_rail_0_roll: float
     lc_mount_rail_0_pitch: float
     lc_mount_rail_0_yaw: float
+
+    lc_mount_rail_1_present: bool
+    lc_mount_rail_1_translation: float
+    lc_mount_rail_1_roll: float
+    lc_mount_rail_1_pitch: float
+    lc_mount_rail_1_yaw: float
     
     nic_card_mount_0_present: bool
     nic_card_mount_0_translation: float
     nic_card_mount_0_roll: float
     nic_card_mount_0_pitch: float
     nic_card_mount_0_yaw: float
+
+    nic_card_mount_1_present: bool
+    nic_card_mount_1_translation: float
+    nic_card_mount_1_roll: float
+    nic_card_mount_1_pitch: float
+    nic_card_mount_1_yaw: float
+
+    nic_card_mount_2_present: bool
+    nic_card_mount_2_translation: float
+    nic_card_mount_2_roll: float
+    nic_card_mount_2_pitch: float
+    nic_card_mount_2_yaw: float
+
+    nic_card_mount_3_present: bool
+    nic_card_mount_3_translation: float
+    nic_card_mount_3_roll: float
+    nic_card_mount_3_pitch: float
+    nic_card_mount_3_yaw: float
+
+    nic_card_mount_4_present: bool
+    nic_card_mount_4_translation: float
+    nic_card_mount_4_roll: float
+    nic_card_mount_4_pitch: float
+    nic_card_mount_4_yaw: float
     
     sc_port_0_present: bool
     sc_port_0_translation: float
     sc_port_0_roll: float
     sc_port_0_pitch: float
     sc_port_0_yaw: float
+
+    sc_port_1_present: bool
+    sc_port_1_translation: float
+    sc_port_1_roll: float
+    sc_port_1_pitch: float
+    sc_port_1_yaw: float
     
     @property
     def scene_name(self) -> str:
@@ -131,22 +179,56 @@ class SceneConfig:
             params.append(f"cable_z={self.cable_z:.3f}")
         
         if self.sfp_mount_rail_0_present:
-            params.append(f"sfp_trans={self.sfp_mount_rail_0_translation:.3f}")
-            params.append(f"sfp_rpy={self.sfp_mount_rail_0_roll:.2f},{self.sfp_mount_rail_0_pitch:.2f},{self.sfp_mount_rail_0_yaw:.2f}")
+            params.append(f"sfp0_trans={self.sfp_mount_rail_0_translation:.3f}")
+            params.append(f"sfp0_rpy={self.sfp_mount_rail_0_roll:.2f},{self.sfp_mount_rail_0_pitch:.2f},{self.sfp_mount_rail_0_yaw:.2f}")
+
+        if self.sfp_mount_rail_1_present:
+            params.append(f"sfp1_trans={self.sfp_mount_rail_1_translation:.3f}")
+            params.append(f"sfp1_rpy={self.sfp_mount_rail_1_roll:.2f},{self.sfp_mount_rail_1_pitch:.2f},{self.sfp_mount_rail_1_yaw:.2f}")
         
         if self.sc_mount_rail_0_present:
-            params.append(f"sc_trans={self.sc_mount_rail_0_translation:.3f}")
-            params.append(f"sc_rpy={self.sc_mount_rail_0_roll:.2f},{self.sc_mount_rail_0_pitch:.2f},{self.sc_mount_rail_0_yaw:.2f}")
+            params.append(f"sc0_trans={self.sc_mount_rail_0_translation:.3f}")
+            params.append(f"sc0_rpy={self.sc_mount_rail_0_roll:.2f},{self.sc_mount_rail_0_pitch:.2f},{self.sc_mount_rail_0_yaw:.2f}")
+
+        if self.sc_mount_rail_1_present:
+            params.append(f"sc1_trans={self.sc_mount_rail_1_translation:.3f}")
+            params.append(f"sc1_rpy={self.sc_mount_rail_1_roll:.2f},{self.sc_mount_rail_1_pitch:.2f},{self.sc_mount_rail_1_yaw:.2f}")
         
         if self.lc_mount_rail_0_present:
-            params.append(f"lc_trans={self.lc_mount_rail_0_translation:.3f}")
-            params.append(f"lc_rpy={self.lc_mount_rail_0_roll:.2f},{self.lc_mount_rail_0_pitch:.2f},{self.lc_mount_rail_0_yaw:.2f}")
+            params.append(f"lc0_trans={self.lc_mount_rail_0_translation:.3f}")
+            params.append(f"lc0_rpy={self.lc_mount_rail_0_roll:.2f},{self.lc_mount_rail_0_pitch:.2f},{self.lc_mount_rail_0_yaw:.2f}")
+
+        if self.lc_mount_rail_1_present:
+            params.append(f"lc1_trans={self.lc_mount_rail_1_translation:.3f}")
+            params.append(f"lc1_rpy={self.lc_mount_rail_1_roll:.2f},{self.lc_mount_rail_1_pitch:.2f},{self.lc_mount_rail_1_yaw:.2f}")
 
         if self.nic_card_mount_0_present:
-            params.append(f"nic_rpy={self.nic_card_mount_0_roll:.2f},{self.nic_card_mount_0_pitch:.2f},{self.nic_card_mount_0_yaw:.2f}")
+            params.append(f"nic0_trans={self.nic_card_mount_0_translation:.3f}")
+            params.append(f"nic0_rpy={self.nic_card_mount_0_roll:.2f},{self.nic_card_mount_0_pitch:.2f},{self.nic_card_mount_0_yaw:.2f}")
+
+        if self.nic_card_mount_1_present:
+            params.append(f"nic1_trans={self.nic_card_mount_1_translation:.3f}")
+            params.append(f"nic1_rpy={self.nic_card_mount_1_roll:.2f},{self.nic_card_mount_1_pitch:.2f},{self.nic_card_mount_1_yaw:.2f}")
+
+        if self.nic_card_mount_2_present:
+            params.append(f"nic2_trans={self.nic_card_mount_2_translation:.3f}")
+            params.append(f"nic2_rpy={self.nic_card_mount_2_roll:.2f},{self.nic_card_mount_2_pitch:.2f},{self.nic_card_mount_2_yaw:.2f}")
+
+        if self.nic_card_mount_3_present:
+            params.append(f"nic3_trans={self.nic_card_mount_3_translation:.3f}")
+            params.append(f"nic3_rpy={self.nic_card_mount_3_roll:.2f},{self.nic_card_mount_3_pitch:.2f},{self.nic_card_mount_3_yaw:.2f}")
+
+        if self.nic_card_mount_4_present:
+            params.append(f"nic4_trans={self.nic_card_mount_4_translation:.3f}")
+            params.append(f"nic4_rpy={self.nic_card_mount_4_roll:.2f},{self.nic_card_mount_4_pitch:.2f},{self.nic_card_mount_4_yaw:.2f}")
 
         if self.sc_port_0_present:
-            params.append(f"sc_port_rpy={self.sc_port_0_roll:.2f},{self.sc_port_0_pitch:.2f},{self.sc_port_0_yaw:.2f}")
+            params.append(f"sc_port0_trans={self.sc_port_0_translation:.3f}")
+            params.append(f"sc_port0_rpy={self.sc_port_0_roll:.2f},{self.sc_port_0_pitch:.2f},{self.sc_port_0_yaw:.2f}")
+
+        if self.sc_port_1_present:
+            params.append(f"sc_port1_trans={self.sc_port_1_translation:.3f}")
+            params.append(f"sc_port1_rpy={self.sc_port_1_roll:.2f},{self.sc_port_1_pitch:.2f},{self.sc_port_1_yaw:.2f}")
         
         name = "_".join(params).replace(".", "p")
         return name
@@ -194,6 +276,15 @@ class SceneConfig:
                 f"sfp_mount_rail_0_pitch:={self.sfp_mount_rail_0_pitch}",
                 f"sfp_mount_rail_0_yaw:={self.sfp_mount_rail_0_yaw}",
             ])
+
+        if self.sfp_mount_rail_1_present:
+            args.extend([
+                "sfp_mount_rail_1_present:=true",
+                f"sfp_mount_rail_1_translation:={self.sfp_mount_rail_1_translation}",
+                f"sfp_mount_rail_1_roll:={self.sfp_mount_rail_1_roll}",
+                f"sfp_mount_rail_1_pitch:={self.sfp_mount_rail_1_pitch}",
+                f"sfp_mount_rail_1_yaw:={self.sfp_mount_rail_1_yaw}",
+            ])
         
         if self.sc_mount_rail_0_present:
             args.extend([
@@ -202,6 +293,15 @@ class SceneConfig:
                 f"sc_mount_rail_0_roll:={self.sc_mount_rail_0_roll}",
                 f"sc_mount_rail_0_pitch:={self.sc_mount_rail_0_pitch}",
                 f"sc_mount_rail_0_yaw:={self.sc_mount_rail_0_yaw}",
+            ])
+
+        if self.sc_mount_rail_1_present:
+            args.extend([
+                "sc_mount_rail_1_present:=true",
+                f"sc_mount_rail_1_translation:={self.sc_mount_rail_1_translation}",
+                f"sc_mount_rail_1_roll:={self.sc_mount_rail_1_roll}",
+                f"sc_mount_rail_1_pitch:={self.sc_mount_rail_1_pitch}",
+                f"sc_mount_rail_1_yaw:={self.sc_mount_rail_1_yaw}",
             ])
         
         if self.lc_mount_rail_0_present:
@@ -212,6 +312,15 @@ class SceneConfig:
                 f"lc_mount_rail_0_pitch:={self.lc_mount_rail_0_pitch}",
                 f"lc_mount_rail_0_yaw:={self.lc_mount_rail_0_yaw}",
             ])
+
+        if self.lc_mount_rail_1_present:
+            args.extend([
+                "lc_mount_rail_1_present:=true",
+                f"lc_mount_rail_1_translation:={self.lc_mount_rail_1_translation}",
+                f"lc_mount_rail_1_roll:={self.lc_mount_rail_1_roll}",
+                f"lc_mount_rail_1_pitch:={self.lc_mount_rail_1_pitch}",
+                f"lc_mount_rail_1_yaw:={self.lc_mount_rail_1_yaw}",
+            ])
         
         if self.nic_card_mount_0_present:
             args.extend([
@@ -221,6 +330,42 @@ class SceneConfig:
                 f"nic_card_mount_0_pitch:={self.nic_card_mount_0_pitch}",
                 f"nic_card_mount_0_yaw:={self.nic_card_mount_0_yaw}",
             ])
+
+        if self.nic_card_mount_1_present:
+            args.extend([
+                "nic_card_mount_1_present:=true",
+                f"nic_card_mount_1_translation:={self.nic_card_mount_1_translation}",
+                f"nic_card_mount_1_roll:={self.nic_card_mount_1_roll}",
+                f"nic_card_mount_1_pitch:={self.nic_card_mount_1_pitch}",
+                f"nic_card_mount_1_yaw:={self.nic_card_mount_1_yaw}",
+            ])
+
+        if self.nic_card_mount_2_present:
+            args.extend([
+                "nic_card_mount_2_present:=true",
+                f"nic_card_mount_2_translation:={self.nic_card_mount_2_translation}",
+                f"nic_card_mount_2_roll:={self.nic_card_mount_2_roll}",
+                f"nic_card_mount_2_pitch:={self.nic_card_mount_2_pitch}",
+                f"nic_card_mount_2_yaw:={self.nic_card_mount_2_yaw}",
+            ])
+
+        if self.nic_card_mount_3_present:
+            args.extend([
+                "nic_card_mount_3_present:=true",
+                f"nic_card_mount_3_translation:={self.nic_card_mount_3_translation}",
+                f"nic_card_mount_3_roll:={self.nic_card_mount_3_roll}",
+                f"nic_card_mount_3_pitch:={self.nic_card_mount_3_pitch}",
+                f"nic_card_mount_3_yaw:={self.nic_card_mount_3_yaw}",
+            ])
+
+        if self.nic_card_mount_4_present:
+            args.extend([
+                "nic_card_mount_4_present:=true",
+                f"nic_card_mount_4_translation:={self.nic_card_mount_4_translation}",
+                f"nic_card_mount_4_roll:={self.nic_card_mount_4_roll}",
+                f"nic_card_mount_4_pitch:={self.nic_card_mount_4_pitch}",
+                f"nic_card_mount_4_yaw:={self.nic_card_mount_4_yaw}",
+            ])
         
         if self.sc_port_0_present:
             args.extend([
@@ -229,6 +374,15 @@ class SceneConfig:
                 f"sc_port_0_roll:={self.sc_port_0_roll}",
                 f"sc_port_0_pitch:={self.sc_port_0_pitch}",
                 f"sc_port_0_yaw:={self.sc_port_0_yaw}",
+            ])
+
+        if self.sc_port_1_present:
+            args.extend([
+                "sc_port_1_present:=true",
+                f"sc_port_1_translation:={self.sc_port_1_translation}",
+                f"sc_port_1_roll:={self.sc_port_1_roll}",
+                f"sc_port_1_pitch:={self.sc_port_1_pitch}",
+                f"sc_port_1_yaw:={self.sc_port_1_yaw}",
             ])
         
         return " ".join(args)
@@ -354,9 +508,7 @@ class SceneGenerator:
                 sfp_mount_rail_1_roll=0.0
                 sfp_mount_rail_1_pitch=0.0
                 sfp_mount_rail_1_yaw=random.uniform(-1.047, 1.047) # ~+/-60 degrees
-                sfp_mount_rail_1_pitch=random.uniform(-0.175, 0.175)
-                sfp_mount_rail_1_yaw=random.uniform(-0.175, 0.175)
-
+                
             # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
             if cable_type == "sfp_sc_cable_reversed":
                 sc_mount_rail_1_present=True
@@ -516,29 +668,77 @@ class SceneGenerator:
                 sfp_mount_rail_0_pitch=sfp_mount_rail_0_pitch,
                 sfp_mount_rail_0_yaw=sfp_mount_rail_0_yaw,
 
+                sfp_mount_rail_1_present=sfp_mount_rail_1_present,
+                sfp_mount_rail_1_translation=sfp_mount_rail_1_translation,
+                sfp_mount_rail_1_roll=sfp_mount_rail_1_roll,
+                sfp_mount_rail_1_pitch=sfp_mount_rail_1_pitch,
+                sfp_mount_rail_1_yaw=sfp_mount_rail_1_yaw,
+
                 sc_mount_rail_0_present=sc_mount_rail_0_present,
                 sc_mount_rail_0_translation=sc_mount_rail_0_translation,
                 sc_mount_rail_0_roll=sc_mount_rail_0_roll,
                 sc_mount_rail_0_pitch=sc_mount_rail_0_pitch,
                 sc_mount_rail_0_yaw=sc_mount_rail_0_yaw,
+
+                sc_mount_rail_1_present=sc_mount_rail_1_present,
+                sc_mount_rail_1_translation=sc_mount_rail_1_translation,
+                sc_mount_rail_1_roll=sc_mount_rail_1_roll,
+                sc_mount_rail_1_pitch=sc_mount_rail_1_pitch,
+                sc_mount_rail_1_yaw=sc_mount_rail_1_yaw,
                 
                 lc_mount_rail_0_present=lc_mount_rail_0_present,
                 lc_mount_rail_0_translation=lc_mount_rail_0_translation,
                 lc_mount_rail_0_roll=lc_mount_rail_0_roll,
                 lc_mount_rail_0_pitch=lc_mount_rail_0_pitch,
                 lc_mount_rail_0_yaw=lc_mount_rail_0_yaw,
+
+                lc_mount_rail_1_present=lc_mount_rail_1_present,
+                lc_mount_rail_1_translation=lc_mount_rail_1_translation,
+                lc_mount_rail_1_roll=lc_mount_rail_1_roll,
+                lc_mount_rail_1_pitch=lc_mount_rail_1_pitch,
+                lc_mount_rail_1_yaw=lc_mount_rail_1_yaw,
                 
                 nic_card_mount_0_present=nic_card_mount_0_present,
                 nic_card_mount_0_translation=nic_card_mount_0_translation,
                 nic_card_mount_0_roll=nic_card_mount_0_roll,
                 nic_card_mount_0_pitch=nic_card_mount_0_pitch,
                 nic_card_mount_0_yaw=nic_card_mount_0_yaw,
+
+                nic_card_mount_1_present=nic_card_mount_1_present,
+                nic_card_mount_1_translation=nic_card_mount_1_translation,
+                nic_card_mount_1_roll=nic_card_mount_1_roll,
+                nic_card_mount_1_pitch=nic_card_mount_1_pitch,
+                nic_card_mount_1_yaw=nic_card_mount_1_yaw,
+
+                nic_card_mount_2_present=nic_card_mount_2_present,
+                nic_card_mount_2_translation=nic_card_mount_2_translation,
+                nic_card_mount_2_roll=nic_card_mount_2_roll,
+                nic_card_mount_2_pitch=nic_card_mount_2_pitch,
+                nic_card_mount_2_yaw=nic_card_mount_2_yaw,
+
+                nic_card_mount_3_present=nic_card_mount_3_present,
+                nic_card_mount_3_translation=nic_card_mount_3_translation,
+                nic_card_mount_3_roll=nic_card_mount_3_roll,
+                nic_card_mount_3_pitch=nic_card_mount_3_pitch,
+                nic_card_mount_3_yaw=nic_card_mount_3_yaw,
+
+                nic_card_mount_4_present=nic_card_mount_4_present,
+                nic_card_mount_4_translation=nic_card_mount_4_translation,
+                nic_card_mount_4_roll=nic_card_mount_4_roll,
+                nic_card_mount_4_pitch=nic_card_mount_4_pitch,
+                nic_card_mount_4_yaw=nic_card_mount_4_yaw,
                 
                 sc_port_0_present=sc_port_0_present,
                 sc_port_0_translation=sc_port_0_translation,
                 sc_port_0_roll=sc_port_0_roll,
                 sc_port_0_pitch=sc_port_0_pitch,
                 sc_port_0_yaw=sc_port_0_yaw,
+
+                sc_port_1_present=sc_port_1_present,
+                sc_port_1_translation=sc_port_1_translation,
+                sc_port_1_roll=sc_port_1_roll,
+                sc_port_1_pitch=sc_port_1_pitch,
+                sc_port_1_yaw=sc_port_1_yaw,
             )
             
             # Check uniqueness
