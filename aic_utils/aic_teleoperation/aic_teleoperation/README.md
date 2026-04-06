@@ -59,7 +59,6 @@ ros2 daemon stop
 ros2 daemon start
 ```
 
-### Connect Headset
 Only for the first time setup:
 ```bash
 cd ~/oculus_reader/
@@ -67,6 +66,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
 ```
+### Connect Headset
 
 Put headset on your forehead so you can view your monitor directly with bare eyes. Connect USB C data cable and run
 ```bash
