@@ -48,12 +48,12 @@ source /opt/ros/kilted/setup.bash
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 ```
 
-### (Optional) ros2 sanity check
-Check availability of topics to confirm ros2 communication with sim container:
+### (Optional) ROS2 sanity check
+Ensure availability of topics to confirm ros2 communication with sim container:
 ```bash
 ros2 topic list
 ```
-If topics list is not populating, restart ros2 daemon and check again:
+If topics are not populating, restart ros2 daemon and check again:
 ```bash
 ros2 daemon stop
 ros2 daemon start
@@ -67,7 +67,6 @@ source .venv/bin/activate
 pip install -e .
 ```
 ### Connect Headset
-
 Put headset on your forehead so you can view your monitor directly with bare eyes. Connect USB C data cable and run
 ```bash
 cd oculus_reader/
