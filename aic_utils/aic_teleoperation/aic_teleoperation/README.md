@@ -60,11 +60,23 @@ ros2 daemon start
 ```
 
 ### Connect Headset
-Put on headset on forehead so you can view your monitor through bare eyes. Connect USB C data cable
+Only for the first time setup:
+```bash
+cd ~/oculus_reader/
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+Put headset on your forehead so you can view your monitor directly with bare eyes. Connect USB C data cable and run
 ```bash
 cd oculus_reader/
+source .venv/bin/activate
 python3 oculus_reader/viz_transforms.py 
 ```
+
+
+
 ---
 
 ## Terminal 3 - Telop Interface
@@ -72,10 +84,6 @@ python3 oculus_reader/viz_transforms.py
 cd ~/ws_aic/src/aic/aic_utils/aic_teleoperation/aic_teleoperation
 pixi run python3 vr_aic.py 
 ```
-
-
-
-
 
 
 
