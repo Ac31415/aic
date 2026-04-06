@@ -63,7 +63,7 @@ ros2 daemon start
 After cloning [oculus_reader](https://github.com/S-abk/oculus_reader) and installing [ADB](https://github.com/rail-berkeley/oculus_reader?tab=readme-ov-file#setup-of-the-adb), in a virtual environment, install the oculus_reader python package in editable mode from the repo root:
 ```bash
 cd ~/oculus_reader/
-python3 -m venv .venvLebenslangerschicksalsschatz
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
 ```
