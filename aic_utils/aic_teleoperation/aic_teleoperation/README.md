@@ -4,7 +4,7 @@
 - Setup aic workspace
 - Test evaluation container with example policies
 - [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
-- [oculus_reader](https://github.com/S-abk/oculus_reader)
+- [oculus_reader](https://github.com/S-abk/oculus_reader) - take a look at [this section](#First-time-setup)
 
 ---
 
@@ -59,10 +59,11 @@ ros2 daemon stop
 ros2 daemon start
 ```
 
-Only for the first time setup:
+### First time setup
+After cloning coculus reader and installing ADB, in a virtual environment, install the oculus_reader python package in editable mode from the repo root:
 ```bash
 cd ~/oculus_reader/
-python3 -m venv .venv
+python3 -m venv .venvLebenslangerschicksalsschatz
 source .venv/bin/activate
 pip install -e .
 ```
