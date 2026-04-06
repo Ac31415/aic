@@ -70,8 +70,8 @@ pip install -e .
 ### Connect Headset
 Put headset on your forehead so you can view your monitor directly with bare eyes. Connect USB C data cable and run
 ```bash
-cd oculus_reader/
-source .venv/bin/activate
+cd ~/oculus_reader/
+source ~/oculus_reader/.venv/bin/activate
 python3 oculus_reader/viz_transforms.py 
 ```
 
