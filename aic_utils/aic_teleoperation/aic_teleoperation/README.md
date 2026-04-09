@@ -1,6 +1,7 @@
 # Setup Workflow
 
 ## Prerequisites
+- Ros2 kilted (ideal but not exclusive - alternatively robostack/pixi workflow to be included)
 - Setup aic workspace
 - Test evaluation container with example policies
 - [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
