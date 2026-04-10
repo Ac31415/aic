@@ -193,6 +193,7 @@ def postprocess_world_xml(
         xml_str,
     )
 
+<<<<<<< HEAD
     # 3. Replace all cable body diaginertia to 1e-6
     #    Normal cable raw export uses 0.01; reversed cable uses 0.001
     for old_diag in ("0.01 0.01 0.01", "0.001 0.001 0.001"):
@@ -202,6 +203,10 @@ def postprocess_world_xml(
 
     # 4. Fix cable_connection_1 plug-end diaginertia to 4e-4
     #    cable_connection_1 has mass=0.01 and holds SC plug end (normal) or LC plug end (reversed)
+=======
+    # 3. Fix cable_connection_1 (SC plug end) diaginertia to 4e-4
+    #    cable_connection_1 has mass=0.01 and is the SC plug connector
+>>>>>>> origin/main
     xml_str = re.sub(
         r'(<body name="cable_connection_1"[^>]*>\s*'
         r'<inertial pos="0 0 0" mass="0.01") diaginertia="0.01 0.01 0.01"',
@@ -216,11 +221,15 @@ def postprocess_world_xml(
         xml_str,
     )
 
+<<<<<<< HEAD
     # 6. Add equality weld constraint for gripper-end plug attachment
     if weld_relpose is None:
         weld_relpose = (
             "-0.000711 0.001759 0.168213" " 0.577301 0.816105 -0.021418 -0.015395"
         )
+=======
+    # 5. Add equality weld constraint for lc_plug attachment
+>>>>>>> origin/main
     weld_section = (
         "\n"
         "  <equality>\n"
