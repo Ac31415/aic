@@ -158,7 +158,7 @@ python3 automate_scene_generation.py \
 	--cable_types sfp_sc_cable,sfp_sc_cable_reversed
 ```
 
-## Known Limitation (add_cable_plugin)
+<!-- ## Known Limitation (add_cable_plugin)
 
 Due to current behavior in `src/aic/aic_utils/aic_mujoco/scripts/add_cable_plugin.py`, the following error can occur, especially when cable type is `sfp_sc_cable_reversed`:
 
@@ -174,7 +174,7 @@ If you need stable generation runs, prefer normal cable only:
 
 ```bash
 --cable_types sfp_sc_cable
-```
+``` -->
 
 ## Output Layout
 
