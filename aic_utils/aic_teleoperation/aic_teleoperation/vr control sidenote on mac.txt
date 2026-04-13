@@ -1,3 +1,10 @@
+cd ~/ws_aic/src/aic/
+pixi shell
+
+
+
+
+
 # terminal 1: Start the Zenoh router if not already running
 source ~/ws_aic/install/setup.zsh
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
@@ -31,3 +38,29 @@ source ~/ws_aic/install/setup.zsh
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
 python '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_teleoperation/aic_teleoperation/vr_aic.py'
+
+
+
+
+
+
+
+
+
+
+
+conda activate intrinsic-challenge-aic ????
+
+cd ~/ws_aic/src/aic/
+pixi shell
+
+python aic_utils/aic_mujoco/scripts/view_scene.py '/Users/wen-chungcheng/ws_aic/src/aic/aic_utils/aic_mujoco/mjcf/scene.xml'
+
+source ~/ws_aic/install/setup.zsh                                                                                          
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+
+ros2 service call /aic_controller/change_target_mode aic_control_interfaces/srv/ChangeTargetMode "{target_mode: {mode: 1}}"
+
+ros2 pkg list
+

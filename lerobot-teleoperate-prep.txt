@@ -27,6 +27,17 @@ ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
 
 
 
+# reload mujoco scene:
+
+colcon build --packages-select aic_mujoco
+
+source ~/ws_aic/install/setup.zsh
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
+
+
+
 
 
 
@@ -89,3 +100,22 @@ lerobot-record \
   --dataset.private=true \
   --play_sounds=false \
   --display_data=true
+
+export RMW_IMPLEMENTATION=rmw_zenoh_cpp
+export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
+lerobot-record \                                    
+  --robot.type=aic_controller --robot.id=aic \
+  --teleop.type=aic_keyboard_ee --teleop.id=aic \
+  --robot.teleop_target_mode=cartesian --robot.teleop_frame_id=base_link \
+  --dataset.repo_id=${HF_USER}/demo-vr-control-0 \
+  --dataset.single_task="demo vr control 0" \
+  --dataset.push_to_hub=true \
+  --dataset.private=true \
+  --play_sounds=false \
+  --display_data=true
+
+
+lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_keyboard_ee --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.teleop_frame_id=base_link --dataset.repo_id=Ac31415/rz=1p140_tbx=0p148_tby=m0p209_tbyaw=0p231_c=sfp_sc_cable_b64ba50386 --dataset.single_task="plug into nic board" --dataset.push_to_hub=true --dataset.private=true --play_sounds=false --display_data=true --dataset.episode_time_s=120 --dataset.num_episodes=5 
+
+# use conda env to train
+lerobot-train --dataset.repo_id=Ac31415/rz1p140_tbx0p148_tbym0p209_tbyaw0p231_csfp_sc_cable_b64ba50386 --policy.type=act --output_dir=trained_models/act_plug_into_nic_5 --job_name=act_plug_into_nic_5 --policy.device=mps --wandb.enable=true --policy.repo_id=Ac31415/policy_act_plug_into_nic_5

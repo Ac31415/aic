@@ -523,11 +523,14 @@ class OculusTFToAICController(Node):
         #   2.5e-3 rad/tick ~= 4.3 deg/s  (rotation axes)
         #   1.5e-4 m/tick   ~= 4.5 mm/s   (translation axes)
         # Scale in x1.5 steps to adjust feel.
-        self.stick_yaw_speed   = 2.5e-3   # rad/tick
-        self.stick_pitch_speed = 2.5e-3   # rad/tick
-        self.stick_roll_speed  = 2.5e-3   # rad/tick
-        self.stick_z_speed     = 1.5e-4   # m/tick
-        self.stick_xy_speed    = 1.5e-4   # m/tick
+        # self.stick_yaw_speed   = 2.5e-3   # rad/tick
+        # self.stick_pitch_speed = 2.5e-3   # rad/tick
+        # self.stick_roll_speed  = 2.5e-3   # rad/tick
+        self.stick_yaw_speed   = 8.5e-3   # rad/tick
+        self.stick_pitch_speed = 8.5e-3   # rad/tick
+        self.stick_roll_speed  = 8.5e-3   # rad/tick
+        self.stick_z_speed     = 3.5e-4   # m/tick
+        self.stick_xy_speed    = 3.5e-4   # m/tick
 
         # ── Analogue stick runtime state ──────────────────────────────────────
         self.analogue_enabled = False
