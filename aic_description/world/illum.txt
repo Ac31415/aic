@@ -1,3 +1,5 @@
 export LIBGL_ALWAYS_SOFTWARE=1
 
 change aic.sdf file
+
+need to add brightness adjustment in auto gen scripts later
