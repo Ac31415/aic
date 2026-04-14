@@ -23,3 +23,17 @@ JointMotionUpdateActionDict = TypedDict(
         "wrist_3_joint": float,
     },
 )
+
+VRMotionUpdateActionDict = TypedDict(
+    "VRMotionUpdateActionDict",
+    {
+        "pose.position.x": float,
+        "pose.position.y": float,
+        "pose.position.z": float,
+        "pose.orientation.x": float,
+        "pose.orientation.y": float,
+        "pose.orientation.z": float,
+        "pose.orientation.w": float,
+        "gripper.position": float,
+    },
+)
