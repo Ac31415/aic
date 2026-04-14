@@ -27,7 +27,8 @@ import draccus
 from pathlib import Path
 from typing import Callable, Dict, Any, List
 from rclpy.node import Node
-from geometry_msgs.msg import Twist, Vector3
+from geometry_msgs.msg import Pose, Vector3, Wrench
+from sensor_msgs.msg import JointState
 
 from aic_model.policy import (
     GetObservationCallback,
@@ -42,7 +43,6 @@ from aic_control_interfaces.msg import (
     MotionUpdate,
     TrajectoryGenerationMode,
 )
-from geometry_msgs.msg import Wrench
 
 # LeRobot & Safetensors
 from lerobot.policies.act.modeling_act import ACTPolicy
@@ -123,7 +123,7 @@ class ACT_plug_nic_5(Policy):
         print(f"Robot state mean: {self.state_mean}")
         print(f"Robot state std: {self.state_std}")
 
-        # Action Stats (1, 7) - Used for Un-normalization
+        # Action Stats (1, 8) - Used for Un-normalization
         self.action_mean = get_stat("action.mean", (1, -1))
         self.action_std = get_stat("action.std", (1, -1))
         print(f"Action mean: {self.action_mean}")
@@ -131,6 +131,11 @@ class ACT_plug_nic_5(Policy):
 
         # Config
         self.image_scaling = 0.25  # Must match AICRobotAICControllerConfig
+
+        # Publisher for gripper commands (VR dataset includes gripper position)
+        self.gripper_pub = parent_node.create_publisher(
+            JointState, "/gripper_commands", 10
+        )
 
         self.get_logger().info("Normalization statistics loaded successfully.")
 
@@ -266,7 +271,7 @@ class ACT_plug_nic_5(Policy):
 
             # 2. Model Inference
             with torch.inference_mode():
-                # returns shape [1, 7] (first action of chunk)
+                # returns shape [1, 8] (first action of chunk)
                 normalized_action = self.policy.select_action(obs_tensors)
 
             print(f"Normalized action from policy: {normalized_action}")
@@ -278,20 +283,25 @@ class ACT_plug_nic_5(Policy):
             print(f"Raw action tensor after un-normalization: {raw_action_tensor}")
 
             # 4. Extract and Command
-            # raw_action_tensor is [1, 7], taking [0] gives vector of 7
+            # raw_action_tensor is [1, 8]:
+            #   [0:3]  TCP position  (x, y, z) in base_link
+            #   [3:7]  TCP orientation quaternion  (x, y, z, w)
+            #   [7]    gripper finger position
             action = raw_action_tensor[0].cpu().numpy()
 
             self.get_logger().info(f"Action: {action}")
 
-            twist = Twist(
-                linear=Vector3(
-                    x=float(action[0]), y=float(action[1]), z=float(action[2])
-                ),
-                angular=Vector3(
-                    x=float(action[3]), y=float(action[4]), z=float(action[5])
-                ),
-            )
-            motion_update = self.set_cartesian_twist_target(twist)
+            pose = Pose()
+            pose.position.x = float(action[0])
+            pose.position.y = float(action[1])
+            pose.position.z = float(action[2])
+            pose.orientation.x = float(action[3])
+            pose.orientation.y = float(action[4])
+            pose.orientation.z = float(action[5])
+            pose.orientation.w = float(action[6])
+            gripper_pos = float(action[7])
+
+            motion_update = self.set_vr_cartesian_pose_target(pose, gripper_pos)
             move_robot(motion_update=motion_update)
             send_feedback("in progress...")
 
@@ -302,27 +312,44 @@ class ACT_plug_nic_5(Policy):
         self.get_logger().info("ACT_plug_nic_5.insert_cable() exiting...")
         return True
 
-    def set_cartesian_twist_target(self, twist: Twist, frame_id: str = "base_link"):
+    def set_vr_cartesian_pose_target(
+        self, pose: Pose, gripper_pos: float, frame_id: str = "base_link"
+    ) -> MotionUpdate:
+        """Build and publish a pose-based MotionUpdate matching VR teleop recordings.
+
+        Mirrors the behaviour of ``send_action_vr_cartesian`` in
+        ``AICRobotAICController``: sends an absolute Cartesian pose target via
+        ``MODE_POSITION`` and publishes a gripper command on ``/gripper_commands``.
+        Stiffness / damping values match those used during VR data collection.
+        """
         motion_update_msg = MotionUpdate()
-        motion_update_msg.velocity = twist
         motion_update_msg.header.frame_id = frame_id
         motion_update_msg.header.stamp = self.get_clock().now().to_msg()
 
+        motion_update_msg.pose = pose
+
         motion_update_msg.target_stiffness = np.diag(
-            [100.0, 100.0, 100.0, 50.0, 50.0, 50.0]
+            [60.0, 60.0, 60.0, 60.0, 60.0, 60.0]
         ).flatten()
         motion_update_msg.target_damping = np.diag(
-            [40.0, 40.0, 40.0, 15.0, 15.0, 15.0]
+            [50.0, 50.0, 50.0, 50.0, 50.0, 50.0]
         ).flatten()
 
         motion_update_msg.feedforward_wrench_at_tip = Wrench(
             force=Vector3(x=0.0, y=0.0, z=0.0), torque=Vector3(x=0.0, y=0.0, z=0.0)
         )
 
-        motion_update_msg.wrench_feedback_gains_at_tip = [0.5, 0.5, 0.5, 0.0, 0.0, 0.0]
+        motion_update_msg.wrench_feedback_gains_at_tip = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
         motion_update_msg.trajectory_generation_mode.mode = (
-            TrajectoryGenerationMode.MODE_VELOCITY
+            TrajectoryGenerationMode.MODE_POSITION
         )
+
+        # Publish gripper command — hande_left_finger_joint, right finger is a mimic
+        gripper_msg = JointState()
+        gripper_msg.header.stamp = motion_update_msg.header.stamp
+        gripper_msg.name = ["hande_left_finger_joint"]
+        gripper_msg.position = [gripper_pos]
+        self.gripper_pub.publish(gripper_msg)
 
         return motion_update_msg
