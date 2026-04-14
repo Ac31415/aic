@@ -33,7 +33,7 @@ from lerobot_teleoperator_devices import KeyboardJointTeleop, KeyboardJointTeleo
 from rclpy.duration import Duration
 from rclpy.executors import SingleThreadedExecutor
 from sensor_msgs.msg import Joy, JointState
-from tf2_ros import Buffer, TransformListener
+from tf2_ros import Buffer, LookupException, ExtrapolationException, TransformListener
 
 from .aic_robot import arm_joint_names
 from .types import JointMotionUpdateActionDict, MotionUpdateActionDict, VRMotionUpdateActionDict
@@ -695,8 +695,8 @@ class AICVRTeleop(Teleoperator):
                     self._last_cmd_q = q_tgt
                     with self._lock:
                         self._current_action = self._make_action(p_tgt, q_tgt, gripper_pos)
-                except Exception:
-                    pass
+                except (LookupException, ExtrapolationException, ValueError) as e:
+                    self._node.get_logger().debug(f"Analogue stick nudge failed: {e}")
             elif self._last_cmd_p is not None:
                 # Hold last pose
                 with self._lock:
@@ -792,7 +792,7 @@ class AICVRTeleop(Teleoperator):
             with self._lock:
                 self._current_action = self._make_action(p_tgt, q_tgt, gripper_pos)
 
-        except Exception:
+        except (LookupException, ExtrapolationException):
             # TF lookup failures are expected transiently at startup or when
             # the oculus_reader node is not yet publishing transforms.
             pass
