@@ -1,0 +1,8 @@
+export DBX_CONTAINER_MANAGER=docker
+
+distrobox enter -r aic_eval -- /entrypoint.sh ground_truth:=false start_aic_engine:=true
+
+pixi reinstall ros-kilted-act-plug-nic-5-policy-node
+
+pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_plug_nic_5_policy_node.ACT_plug_nic_5
+

@@ -1,0 +1,88 @@
+[aic_engine-6] [INFO] [1776227324.473334514] [aic_engine]: ╔════════════════════════════════════════╗
+[aic_engine-6] [INFO] [1776227324.473355554] [aic_engine]: ║   ✓ All Trials Processed!              ║
+[aic_engine-6] [INFO] [1776227324.473365174] [aic_engine]: ║   Successful: 3  Failed: 0             ║
+[aic_engine-6] [INFO] [1776227324.473378704] [aic_engine]: ║   Total Score: 3.000                     ║
+[aic_engine-6] [INFO] [1776227324.473396834] [aic_engine]: ╚════════════════════════════════════════╝
+[aic_engine-6] [INFO] [1776227324.473407235] [aic_engine]:  
+[aic_engine-6] [INFO] [1776227324.474269974] [aic_engine]: ╔════════════════════════════════════════╗
+[aic_engine-6] [INFO] [1776227324.474303385] [aic_engine]: ║        Complete Scoring Results        ║
+[aic_engine-6] [INFO] [1776227324.474325715] [aic_engine]: ╚════════════════════════════════════════╝
+[aic_engine-6] [INFO] [1776227324.474340705] [aic_engine]: total: 3
+[aic_engine-6] [INFO] [1776227324.474352905] [aic_engine]: trial_1:
+[aic_engine-6] [INFO] [1776227324.474363565] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1776227324.474372145] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1776227324.474381786] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1776227324.474389376] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1776227324.474399196] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.474407566] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1776227324.474416096] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1776227324.474425646] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1776227324.474435416] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474444986] [aic_engine]:         message: No contact detected.
+[aic_engine-6] [INFO] [1776227324.474453326] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1776227324.474460776] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474468327] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1776227324.474476557] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1776227324.474482817] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474608488] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1776227324.474626898] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1776227324.474744770] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474754470] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1776227324.474763950] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1776227324.474770400] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474777250] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1776227324.474787710] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1776227324.474792410] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.474798030] [aic_engine]:     message: "No insertion detected. Final plug port distance: 0.14m."
+[aic_engine-6] [INFO] [1776227324.474805560] [aic_engine]: trial_2:
+[aic_engine-6] [INFO] [1776227324.474811170] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1776227324.474816780] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1776227324.474822870] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1776227324.474830021] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1776227324.474841261] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.474847431] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1776227324.474856481] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1776227324.474864551] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1776227324.474873561] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474881431] [aic_engine]:         message: No contact detected.
+[aic_engine-6] [INFO] [1776227324.474891461] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1776227324.474900801] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474910631] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1776227324.474918962] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1776227324.474927632] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474935632] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1776227324.474945112] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1776227324.474956062] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474968262] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1776227324.474979812] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1776227324.474988422] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.474995202] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1776227324.475003282] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1776227324.475010163] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.475022603] [aic_engine]:     message: Distance computation failed, tf between cable and port not found
+[aic_engine-6] [INFO] [1776227324.475032803] [aic_engine]: trial_3:
+[aic_engine-6] [INFO] [1776227324.475041403] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1776227324.475049893] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1776227324.475063063] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1776227324.475072563] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1776227324.475082323] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.475091173] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1776227324.475099874] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1776227324.475106304] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1776227324.475115314] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.475124644] [aic_engine]:         message: No contact detected.
+[aic_engine-6] [INFO] [1776227324.475133814] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1776227324.475157664] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.475166964] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1776227324.475182574] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1776227324.475189085] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.475200375] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1776227324.475209715] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1776227324.475215565] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.475226465] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1776227324.475233705] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1776227324.475242385] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1776227324.475251445] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1776227324.475262295] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1776227324.475269855] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1776227324.475278566] [aic_engine]:     message: Distance computation failed, tf between cable and port not found
