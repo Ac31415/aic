@@ -329,7 +329,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ocl-icd-2.3.3-hb9d3cd8_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/octomap-1.10.0-h84d6215_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/opencl-headers-2025.06.13-h5888daf_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/opencv-4.12.0-qt6_py312h7bb6282_612.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openexr-3.4.4-h40f6f1d_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openh264-2.6.0-hc22cd8d_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openjpeg-2.5.4-h55fea9a_0.conda
@@ -470,7 +469,6 @@ environments:
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-libcurl-vendor-3.7.1-np2py312h2ed9cc7_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-libstatistics-collector-2.0.1-np2py312h2ed9cc7_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-libyaml-vendor-1.7.1-np2py312h2ed9cc7_15.conda
-      - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-lifecycle-0.36.4-np2py312h2ed9cc7_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-lifecycle-msgs-2.3.0-np2py312h2ed9cc7_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-map-msgs-2.5.0-np2py312h2ed9cc7_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-message-filters-7.1.5-np2py312h2ed9cc7_15.conda
@@ -695,6 +693,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.1-hb9d3cd8_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zziplib-0.13.69-he45264a_2.conda
+      - conda: act_plug_nic_5_policy_node
+        build: hb0f4dca_0
       - conda: aic_example_policies
         build: hb0f4dca_0
       - conda: aic_interfaces/aic_control_interfaces
@@ -749,7 +749,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/fb/fe/301e0936b79bcab4cacc7548bf2853fc28dced0a578bab1f7ef53c9aa75b/imageio-2.37.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a0/2d/43c8522a2038e9d0e7dbdf3a61195ecc31ca576fb1527a528c877e87d973/imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f8/62/d9ba6323b9202dd2fe166beab8a86d29465c41a0288cbe229fac60c1ab8d/jsonlines-4.0.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/25/ac/e878e49d3d5a872910cde90767cae4b91a9d9b1863aa3ccfaf6d6b68d610/lerobot-0.5.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/60/8e/8e3763ad36ba0efb9ba0381ae06d328b54081587b45b0c1d049b26ed8d8c/lerobot-0.5.1-py3-none-any.whl
       - pypi: git+https://github.com/koonpeng/lerobot-ros?subdirectory=lerobot_robot_ros&rev=87708d0ae14a724bca78f8ae9d55448332509a57#87708d0ae14a724bca78f8ae9d55448332509a57
       - pypi: git+https://github.com/koonpeng/lerobot-ros?subdirectory=lerobot_teleoperator_devices&rev=87708d0ae14a724bca78f8ae9d55448332509a57#87708d0ae14a724bca78f8ae9d55448332509a57
       - pypi: https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl
@@ -1084,7 +1084,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/nss-3.118-h1c710a3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/numpy-2.2.6-py312h7c1f314_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/octomap-1.10.0-h7b3277c_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/opencv-4.12.0-qt6_py312h5b798a3_612.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openexr-3.4.5-he0ec429_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openh264-2.6.0-hb5b2745_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/openjpeg-2.5.4-hd9e9057_0.conda
@@ -1223,7 +1222,6 @@ environments:
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-libcurl-vendor-3.7.1-np2py312h50b1e4c_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-libstatistics-collector-2.0.1-np2py312h50b1e4c_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-libyaml-vendor-1.7.1-np2py312h50b1e4c_15.conda
-      - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-lifecycle-0.36.4-np2py312h50b1e4c_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-lifecycle-msgs-2.3.0-np2py312h50b1e4c_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-map-msgs-2.5.0-np2py312h50b1e4c_15.conda
       - conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-message-filters-7.1.5-np2py312h50b1e4c_15.conda
@@ -1428,6 +1426,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zlib-1.3.1-h8359307_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hbf9d68e_6.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zziplib-0.13.69-h57f5043_2.conda
+      - conda: act_plug_nic_5_policy_node
+        build: h60d57d3_0
       - conda: aic_example_policies
         build: h60d57d3_0
       - conda: aic_interfaces/aic_control_interfaces
@@ -1482,7 +1482,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/fb/fe/301e0936b79bcab4cacc7548bf2853fc28dced0a578bab1f7ef53c9aa75b/imageio-2.37.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/40/5c/f3d8a657d362cc93b81aab8feda487317da5b5d31c0e1fdfd5e986e55d17/imageio_ffmpeg-0.6.0-py3-none-macosx_11_0_arm64.whl
       - pypi: https://files.pythonhosted.org/packages/f8/62/d9ba6323b9202dd2fe166beab8a86d29465c41a0288cbe229fac60c1ab8d/jsonlines-4.0.0-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/25/ac/e878e49d3d5a872910cde90767cae4b91a9d9b1863aa3ccfaf6d6b68d610/lerobot-0.5.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/60/8e/8e3763ad36ba0efb9ba0381ae06d328b54081587b45b0c1d049b26ed8d8c/lerobot-0.5.1-py3-none-any.whl
       - pypi: git+https://github.com/koonpeng/lerobot-ros?subdirectory=lerobot_robot_ros&rev=87708d0ae14a724bca78f8ae9d55448332509a57#87708d0ae14a724bca78f8ae9d55448332509a57
       - pypi: git+https://github.com/koonpeng/lerobot-ros?subdirectory=lerobot_teleoperator_devices&rev=87708d0ae14a724bca78f8ae9d55448332509a57#87708d0ae14a724bca78f8ae9d55448332509a57
       - pypi: https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl
@@ -6053,10 +6053,10 @@ packages:
   purls: []
   size: 188306
   timestamp: 1745264362794
-- pypi: https://files.pythonhosted.org/packages/25/ac/e878e49d3d5a872910cde90767cae4b91a9d9b1863aa3ccfaf6d6b68d610/lerobot-0.5.0-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/60/8e/8e3763ad36ba0efb9ba0381ae06d328b54081587b45b0c1d049b26ed8d8c/lerobot-0.5.1-py3-none-any.whl
   name: lerobot
-  version: 0.5.0
-  sha256: 4a954ae7dc3a2f29c83e3d29fbb252dded27b80c1674606badd04d8858a1d10d
+  version: 0.5.1
+  sha256: bbd11021023fde0947b6d1ff1c52fe91c86a28ab09a96359892f3ef7e8866862
   requires_dist:
   - datasets>=4.0.0,<5.0.0
   - diffusers>=0.27.2,<0.36.0
@@ -6066,11 +6066,11 @@ packages:
   - setuptools>=71.0.0,<81.0.0
   - cmake>=3.29.0.1,<4.2.0
   - packaging>=24.2,<26.0
-  - torch>=2.2.1,<2.11.0
-  - torchcodec>=0.2.1,<0.11.0 ; (platform_machine != 'aarch64' and platform_machine != 'arm64' and platform_machine != 'armv7l' and platform_machine != 'x86_64' and sys_platform != 'win32') or (platform_machine == 'aarch64' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'arm64' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'armv7l' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'x86_64' and sys_platform != 'darwin' and sys_platform != 'win32')
-  - torchvision>=0.21.0,<0.26.0
+  - torch>=2.7,<2.11.0
+  - torchcodec>=0.3.0,<0.11.0 ; (platform_machine != 'aarch64' and platform_machine != 'arm64' and platform_machine != 'armv7l' and platform_machine != 'x86_64' and sys_platform != 'win32') or (platform_machine == 'aarch64' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'arm64' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'armv7l' and sys_platform != 'linux' and sys_platform != 'win32') or (platform_machine == 'x86_64' and sys_platform != 'darwin' and sys_platform != 'win32')
+  - torchvision>=0.22.0,<0.26.0
   - einops>=0.8.0,<0.9.0
-  - opencv-python-headless>=4.9.0,<4.13.0
+  - opencv-python-headless>=4.9.0,<4.14.0
   - av>=15.0.0,<16.0.0
   - jsonlines>=4.0.0,<5.0.0
   - pynput>=1.7.8,<1.9.0
@@ -6084,7 +6084,7 @@ packages:
   - termcolor>=2.4.0,<4.0.0
   - pygame>=2.5.1,<2.7.0 ; extra == 'pygame-dep'
   - placo>=0.9.6,<0.9.17 ; extra == 'placo-dep'
-  - transformers>=5.3.0,<6.0.0 ; extra == 'transformers-dep'
+  - transformers==5.3.0 ; extra == 'transformers-dep'
   - grpcio==1.73.1 ; extra == 'grpcio-dep'
   - protobuf>=6.31.1,<6.32.0 ; extra == 'grpcio-dep'
   - python-can>=4.2.0,<5.0.0 ; extra == 'can-dep'
@@ -6104,14 +6104,12 @@ packages:
   - lerobot[pygame-dep] ; extra == 'hopejr'
   - lerobot[feetech] ; extra == 'lekiwi'
   - pyzmq>=26.2.1,<28.0.0 ; extra == 'lekiwi'
-  - unitree-sdk2==1.0.1 ; extra == 'unitree-g1'
   - pyzmq>=26.2.1,<28.0.0 ; extra == 'unitree-g1'
   - onnxruntime>=1.16.0,<2.0.0 ; extra == 'unitree-g1'
-  - pin>=3.0.0,<4.0.0 ; extra == 'unitree-g1'
+  - onnx>=1.16.0,<2.0.0 ; extra == 'unitree-g1'
   - meshcat>=0.3.0,<0.4.0 ; extra == 'unitree-g1'
   - lerobot[matplotlib-dep] ; extra == 'unitree-g1'
   - lerobot[pygame-dep] ; extra == 'unitree-g1'
-  - casadi>=3.6.0,<4.0.0 ; extra == 'unitree-g1'
   - reachy2-sdk>=1.0.15,<1.1.0 ; extra == 'reachy2'
   - lerobot[placo-dep] ; extra == 'kinematics'
   - pyrealsense2>=2.55.1.6486,<2.57.0 ; sys_platform != 'darwin' and extra == 'intelrealsense'
@@ -6131,6 +6129,7 @@ packages:
   - num2words>=0.5.14,<0.6.0 ; extra == 'smolvla'
   - accelerate>=1.7.0,<2.0.0 ; extra == 'smolvla'
   - safetensors>=0.4.3,<1.0.0 ; extra == 'smolvla'
+  - lerobot[transformers-dep] ; extra == 'multi-task-dit'
   - lerobot[transformers-dep] ; extra == 'groot'
   - lerobot[peft] ; extra == 'groot'
   - dm-tree>=0.1.8,<1.0.0 ; extra == 'groot'
@@ -10285,32 +10284,6 @@ packages:
   purls: []
   size: 55357
   timestamp: 1749853464518
-- conda: https://conda.anaconda.org/conda-forge/linux-64/opencv-4.12.0-qt6_py312h7bb6282_612.conda
-  sha256: c4532ba519a1b072398de54669c5c783991eb332aaa2a076cc27dd4a6379ccc3
-  md5: 3c22d365c8d69933d2ad9fb4bad1bc24
-  depends:
-  - libopencv 4.12.0 qt6_py312h52d6ec5_612
-  - libprotobuf >=6.31.1,<6.31.2.0a0
-  - py-opencv 4.12.0 qt6_py312h598be00_612
-  - python_abi 3.12.* *_cp312
-  license: Apache-2.0
-  license_family: Apache
-  purls: []
-  size: 28422
-  timestamp: 1766495425558
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/opencv-4.12.0-qt6_py312h5b798a3_612.conda
-  sha256: 5f7db074febac65e5d9bdd3ba877b8c644fc217fafd487da0938d585c8d3a6eb
-  md5: 8f67158fd4d352807f9a6be5f3c1ae7f
-  depends:
-  - libopencv 4.12.0 qt6_py312h74f5ed3_612
-  - libprotobuf >=6.31.1,<6.31.2.0a0
-  - py-opencv 4.12.0 qt6_py312he92a2c1_612
-  - python_abi 3.12.* *_cp312
-  license: Apache-2.0
-  license_family: Apache
-  purls: []
-  size: 27909
-  timestamp: 1766497165754
 - conda: https://conda.anaconda.org/conda-forge/linux-64/openexr-3.4.4-h40f6f1d_1.conda
   sha256: 97881c7f2fb05b24c8481b6b2c311b7106b9c165c47a2d37242927ff5d14f0e0
   md5: c87d9f26932f2e000d3767fc8893e51a
@@ -12013,6 +11986,52 @@ packages:
   purls: []
   size: 6903
   timestamp: 1765280011839
+- conda: act_plug_nic_5_policy_node
+  name: ros-kilted-act-plug-nic-5-policy-node
+  version: 0.0.0
+  build: h60d57d3_0
+  subdir: osx-arm64
+  variants:
+    target_platform: osx-arm64
+  depends:
+  - ros-kilted-aic-control-interfaces
+  - ros-kilted-aic-model
+  - ros-kilted-aic-model-interfaces
+  - ros-kilted-aic-task-interfaces
+  - ros-kilted-geometry-msgs
+  - ros-kilted-rclpy
+  - ros-kilted-sensor-msgs
+  - ros-kilted-std-srvs
+  - ros-kilted-trajectory-msgs
+  - ros2-distro-mutex
+  - ros2-distro-mutex >=0.13.0,<0.14.0a0
+  - libcxx >=22
+  - python_abi 3.12.* *_cp312
+  - numpy >=1.23,<3
+- conda: act_plug_nic_5_policy_node
+  name: ros-kilted-act-plug-nic-5-policy-node
+  version: 0.0.0
+  build: hb0f4dca_0
+  subdir: linux-64
+  variants:
+    target_platform: linux-64
+  depends:
+  - ros-kilted-aic-control-interfaces
+  - ros-kilted-aic-model
+  - ros-kilted-aic-model-interfaces
+  - ros-kilted-aic-task-interfaces
+  - ros-kilted-geometry-msgs
+  - ros-kilted-rclpy
+  - ros-kilted-sensor-msgs
+  - ros-kilted-std-srvs
+  - ros-kilted-trajectory-msgs
+  - ros2-distro-mutex
+  - ros2-distro-mutex >=0.13.0,<0.14.0a0
+  - libgcc >=15
+  - libgcc >=15
+  - libstdcxx >=15
+  - python_abi 3.12.* *_cp312
+  - numpy >=1.23,<3
 - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-action-msgs-2.3.0-np2py312h2ed9cc7_15.conda
   sha256: f60c23a74a393283f780b86828f84184838c8d86dc08c96f19cae7f1d1d1899f
   md5: cd250d5728c4d32013f105b534630961
@@ -12231,7 +12250,6 @@ packages:
   - ros-kilted-aic-model-interfaces
   - ros-kilted-aic-task-interfaces
   - ros-kilted-geometry-msgs
-  - ros-kilted-lifecycle
   - ros-kilted-lifecycle-msgs
   - ros-kilted-rclpy
   - ros-kilted-sensor-msgs
@@ -12256,7 +12274,6 @@ packages:
   - ros-kilted-aic-model-interfaces
   - ros-kilted-aic-task-interfaces
   - ros-kilted-geometry-msgs
-  - ros-kilted-lifecycle
   - ros-kilted-lifecycle-msgs
   - ros-kilted-rclpy
   - ros-kilted-sensor-msgs
@@ -15673,46 +15690,6 @@ packages:
   license: Apache-2.0 OR MIT
   size: 30135
   timestamp: 1769489114419
-- conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-lifecycle-0.36.4-np2py312h2ed9cc7_15.conda
-  sha256: 2f2635089a580b6fffe00bdb8a234f863b05d7a9a2a4c80a743bc394394b1b17
-  md5: 1a46f63cb7d4d9657e26581a56550cff
-  depends:
-  - python
-  - ros-kilted-lifecycle-msgs
-  - ros-kilted-rclcpp
-  - ros-kilted-rclcpp-lifecycle
-  - ros-kilted-ros-workspace
-  - ros-kilted-std-msgs
-  - ros2-distro-mutex 0.13.* kilted_*
-  - __glibc >=2.17,<3.0.a0
-  - libgcc >=14
-  - libstdcxx >=14
-  - libgcc >=14
-  - python_abi 3.12.* *_cp312
-  - ros2-distro-mutex >=0.13.0,<0.14.0a0
-  - numpy >=1.23,<3
-  license: Apache-2.0
-  size: 265297
-  timestamp: 1769486269
-- conda: https://conda.anaconda.org/robostack-kilted/osx-arm64/ros-kilted-lifecycle-0.36.4-np2py312h50b1e4c_15.conda
-  sha256: 73d8953b5339b67045b9176c60c74e8bf46921c11bf32f3b16ba1851f09ed74d
-  md5: 18c65cad713dbd2ea8d55d2d209361fa
-  depends:
-  - python
-  - ros-kilted-lifecycle-msgs
-  - ros-kilted-rclcpp
-  - ros-kilted-rclcpp-lifecycle
-  - ros-kilted-ros-workspace
-  - ros-kilted-std-msgs
-  - ros2-distro-mutex 0.13.* kilted_*
-  - __osx >=11.0
-  - libcxx >=18
-  - ros2-distro-mutex >=0.13.0,<0.14.0a0
-  - python_abi 3.12.* *_cp312
-  - numpy >=1.23,<3
-  license: Apache-2.0
-  size: 195816
-  timestamp: 1769500725657
 - conda: https://conda.anaconda.org/robostack-kilted/linux-64/ros-kilted-lifecycle-msgs-2.3.0-np2py312h2ed9cc7_15.conda
   sha256: e0a0023e6743b4e8866d0289a82ccae9f9a7e0b8b39e5bbd188192198300b72a
   md5: c48e5749478f5bc0bc1086a611df19ca

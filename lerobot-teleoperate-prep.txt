@@ -69,6 +69,8 @@ print(':'.join(paths))
 PY
 )"
 
+export KMP_DUPLICATE_LIB_OK=TRUE
+
 python -c "import pyarrow; print('pyarrow OK')"
 
 run your lerobot-teleoperate command:
