@@ -1,59 +1,78 @@
 #!/usr/bin/env python3
 """
-AIC Oculus Teleop — LeRobot Teleoperator Adapter
-=================================================
+AIC Oculus Teleop — LeRobot Teleoperator
+========================================
 
-Teleoperation pipeline as a LeRobot ``Teleoperator``
-subclass so ``lerobot-record`` can call ``get_action()`` on every step,
-record the action to the dataset, and send it to the robot via
-``send_action()``.
+Streams Cartesian velocity commands from an Oculus Quest right controller
+to the AIC UR5e impedance controller, exposed as a LeRobot
+``Teleoperator`` so ``lerobot-record`` can call ``get_action()`` each step,
+record the action to the dataset, and dispatch it via ``send_action()``.
 
 Design
 ------
+Each tick runs a pose-based pipeline to compute an absolute TCP target:
 
-VR wrist delta  (+ analogue stick nudges)
-    │
-    ├─ axis remap     (X_r = Y_c, Y_r = X_c, Z_r = −Z_c)
-    ├─ sphere clamp   (max displacement from capture)
-    ├─ per-tick step cap
-    ├─ orientation-off override
-    ├─ workspace box clamp
-    └─ first-order low-pass filter
-    ↓
-absolute TCP target  (p_tgt, q_tgt)
+    VR wrist delta  (+ analogue stick nudges)
+        │
+        ├─ axis remap     (X_r = Y_c, Y_r = X_c, Z_r = −Z_c)
+        ├─ sphere clamp   (max displacement from capture)
+        ├─ per-tick step cap
+        ├─ orientation-off override
+        ├─ workspace box clamp
+        └─ first-order low-pass filter
+        ↓
+    absolute TCP target  (p_tgt, q_tgt)
 
-and then, at the end of each tick, differentiates the target to obtain a
-velocity:
+The action emitted to lerobot-record depends on ``cartesian_command_mode``:
 
-    v  = (p_tgt_new − p_tgt_old) / dt
-    ω  = rotvec(q_tgt_new ⊗ q_tgt_old⁻¹) / dt
+    velocity  (default)
+        The target is differentiated tick-to-tick:
+            v  = (p_tgt_new − p_tgt_old) / dt
+            ω  = rotvec(q_tgt_new ⊗ q_tgt_old⁻¹) / dt
+        The robot receives MODE_VELOCITY; closed-loop impedance control
+        tracks the rate command.
 
-The velocity is what ``lerobot-record`` records as the "action" and what
-``AICRobotAICController.send_action_cartesian()`` publishes to the AIC
-controller in ``MODE_VELOCITY``.  Because the velocity is derived from a
-fully clamped + filtered target pose.
+    position
+        The target pose is emitted directly.  The robot receives
+        MODE_POSITION; the controller tracks the absolute pose.  The
+        dataset records the full pose trajectory, which is typically
+        richer supervision for policy learning than velocity.
 
+Because both modes derive from the same clamped + filtered target, every
+safety layer takes effect before anything reaches the robot, regardless
+of mode.  The robot-side ``AICRobotAICControllerConfig.cartesian_command_mode``
+must match the teleop's — a mismatch will cause a schema error at record
+time.
 
 Usage with lerobot-record
 -------------------------
-First time:
+Place this file inside the ``lerobot_robot_aic`` package and export the
+classes from ``__init__.py``::
 
-pixi run python -m ensurepip --upgrade
-
-pixi run pip install -e ~/ws_aic/src/aic/aic_utils/lerobot_robot_aic
+    from .aic_oculus_teleop import AICOculusTeleop, AICOculusTeleopConfig
 
 Record with::
 
-    pixi run lerobot-record \\
-        --robot.type=aic_controller --robot.id=aic \\
-        --teleop.type=aic_oculus   --teleop.id=aic \\
-        --robot.teleop_target_mode=cartesian \\
-        --robot.teleop_frame_id=base_link \\
-        --dataset.repo_id=<hf-user>/<dataset-name> \\
-        --dataset.single_task="insert cable" \\
-        --dataset.push_to_hub=false \\
-        --play_sounds=false \\
+    pixi run lerobot-record \
+        --robot.type=aic_controller --robot.id=aic \
+        --teleop.type=aic_oculus   --teleop.id=aic \
+        --robot.teleop_target_mode=cartesian \
+        --robot.cartesian_command_mode=position \
+        --teleop.cartesian_command_mode=position \
+        --robot.teleop_frame_id=base_link \
+        --dataset.repo_id=<hf-user>/<dataset-name> \
+        --dataset.single_task="insert cable" \
+        --dataset.push_to_hub=false \
+        --play_sounds=false \
         --display_data=true
+
+Standalone
+----------
+Running the module directly (``python -m aic_oculus_teleop``) drives the
+robot without the lerobot-record stack by publishing MotionUpdate messages
+at the nominal rate — useful for smoke-testing the teleop pipeline on
+its own.  The publish path follows the config's ``cartesian_command_mode``
+(velocity → MODE_VELOCITY, position → MODE_POSITION).
 
 Action schema
 -------------
@@ -70,17 +89,17 @@ Action schema
     }
 
 Controls
----------------------------------
+--------
 Keyboard:
   e  Enable VR tracking (captures reference)
   q  Disable VR tracking (zero velocity → robot holds pose)
   o  Toggle orientation follow
   t  Re-tare F/T sensor
   g  Toggle gripper open/closed
-  f  Toggle force-feedback stiffness (standalone main() only — the
-     lerobot-record action dict doesn't carry stiffness)
+  f  Toggle force-feedback stiffness (standalone only — the lerobot-record
+     action dict doesn't carry stiffness)
   l  Toggle workspace box limits
-  x  Exit (standalone main() only)
+  x  Exit (raises SIGINT so both standalone and lerobot-record end cleanly)
 
 Right Oculus controller:
   A                  cycle mode: IDLE → VR TRACKING → ANALOGUE → IDLE
@@ -169,12 +188,24 @@ def _get_lerobot_errors():
 # ----------------------------------------------------------------------------
 
 try:
-    from lerobot_robot_aic.types import MotionUpdateActionDict
+    from lerobot_robot_aic.types import (
+        MotionUpdateActionDict,
+        PoseMotionUpdateActionDict,
+    )
 except (ImportError, Exception):
     from typing import TypedDict
     MotionUpdateActionDict = TypedDict('MotionUpdateActionDict', {
         'linear.x':  float, 'linear.y':  float, 'linear.z':  float,
         'angular.x': float, 'angular.y': float, 'angular.z': float,
+    })
+    PoseMotionUpdateActionDict = TypedDict('PoseMotionUpdateActionDict', {
+        'pose.position.x': float,
+        'pose.position.y': float,
+        'pose.position.z': float,
+        'pose.orientation.x': float,
+        'pose.orientation.y': float,
+        'pose.orientation.z': float,
+        'pose.orientation.w': float,
     })
 
 
@@ -444,6 +475,15 @@ class AICOculusTeleopConfig(_TeleoperatorConfig):
     ctrl_frame: str = "oculus_r"
     tcp_frame:  str = "gripper/tcp"
 
+    # Cartesian command emission mode:
+    #   "velocity"  emit 6-DOF velocity (MODE_VELOCITY on the robot side).
+    #               Target pose is differentiated each tick.
+    #   "position"  emit the absolute target pose (MODE_POSITION).  Records
+    #               the full pose trajectory into the dataset, which is
+    #               typically richer for policy learning.
+    # The robot-side config must match — see AICRobotAICControllerConfig.
+    cartesian_command_mode: str = "velocity"
+
     # Output velocity safety clamps.  The target-pose pipeline (step cap,
     # LPF, sphere, workspace) is the primary safety layer — these are final
     # defense in depth applied after differentiation.
@@ -451,25 +491,27 @@ class AICOculusTeleopConfig(_TeleoperatorConfig):
     max_angular_speed: float = 2.0       # rad/s ceiling
     min_dt:            float = 5.0e-3    # s — floor on dt to prevent 1/dt blow-up
 
-    # velocity target-pose safety parameters.
-    # max_step_xyz was tuned at nominal_rate_hz; we scale by dt so the
-    # effective speed ceiling (~0.60 m/s) is rate-independent.
+    # Target-pose safety parameters.  max_step_xyz is defined per-tick at
+    # nominal_rate_hz; it gets scaled by dt at runtime so the effective
+    # speed ceiling (~0.60 m/s) is rate-independent if lerobot-record calls
+    # get_action at a different rate.
     max_step_xyz:      float = 0.020     # m per tick at nominal rate
-    nominal_rate_hz:   float = 30.0      # rate at which tuning was done
+    nominal_rate_hz:   float = 30.0      # reference rate for scaling
     max_total_offset:  float = 0.35      # m — sphere clamp from capture
     pos_lpf_alpha:     float = 0.55      # first-order LPF on target position
 
-    # Workspace box (base_link, metres). — master
-    # switch is OFF by default; flip to True here to enable, then 'l' gates it.
+    # Workspace box (base_link, metres).  Master switch is OFF by default;
+    # flip to True here to enable, then 'l' gates it at runtime.
     limit_x: tuple[float, float] = (-0.65, -0.15)
     limit_y: tuple[float, float] = (-0.45,  0.45)
     limit_z: tuple[float, float] = ( 0.05,  0.50)
     enable_workspace_limits: bool = False
 
-    # Analogue stick — expressed as per-second rates so the feel is
-    # rate-independent.  Default per-tick values × 30 Hz.
-    stick_xy_speed:    float = 0.08    # m/s at full deflection
-    stick_z_speed:     float = 0.08    # m/s at full deflection
+    # Analogue stick — per-second rates at full deflection, so feel is
+    # rate-independent.  Translation speeds are the fine-control nudges
+    # applied on top of (or instead of) VR tracking; angular speeds match.
+    stick_xy_speed:    float = 0.040     # m/s at full deflection (XY nudge)
+    stick_z_speed:     float = 0.040     # m/s at full deflection (Z nudge)
     stick_yaw_speed:   float = 0.075     # rad/s at full deflection
     stick_pitch_speed: float = 0.075     # rad/s at full deflection
     stick_roll_speed:  float = 0.075     # rad/s at full deflection
@@ -478,17 +520,18 @@ class AICOculusTeleopConfig(_TeleoperatorConfig):
     stick_mod_thresh:  float = 0.30
 
     # Force-feedback stiffness interpolation band (N).  Used only by the
-    # standalone main()'s MotionUpdate publisher.
+    # standalone main()'s MotionUpdate publisher — the lerobot-record
+    # action dict doesn't carry stiffness.
     force_lo: float = 2.0
     force_hi: float = 20.0
 
-    # Terminal HUD Skipped automatically if stdout isn't
-    # a TTY so lerobot-record subprocess output isn't clobbered.
+    # Terminal HUD.  Skipped automatically if stdout isn't a TTY, so
+    # lerobot-record subprocess output isn't clobbered.
     enable_hud: bool = True
 
 
 # =============================================================================
-#  AICOculusTeleop — LeRobot Teleoperator
+#  AICOculusTeleop — LeRobot Teleoperator streaming Cartesian velocity
 # =============================================================================
 
 #
@@ -501,8 +544,11 @@ class AICOculusTeleop(_Teleoperator):
     """
     LeRobot Teleoperator driving the AIC UR5e via Oculus Quest VR.
 
-    Internally runs absolute-pose pipeline; ``get_action()``
-    differentiates the resulting target to emit a MODE_VELOCITY action.
+    ``get_action()`` runs an absolute-pose pipeline each tick (VR delta +
+    stick nudges + sphere clamp + step cap + workspace box + LPF) and
+    emits the result as either a velocity action (target differentiated
+    tick-to-tick) or a position action (target emitted directly),
+    depending on ``cartesian_command_mode``.
     """
 
     config_class = AICOculusTeleopConfig
@@ -515,6 +561,14 @@ class AICOculusTeleop(_Teleoperator):
     def __init__(self, config: AICOculusTeleopConfig):
         super().__init__(config)
         self.config = config
+
+        if self.config.cartesian_command_mode not in ("velocity", "position"):
+            raise ValueError(
+                f"Invalid cartesian_command_mode: "
+                f"{self.config.cartesian_command_mode!r}. "
+                "Supported modes are 'velocity' and 'position'."
+            )
+
         self._is_connected = False
 
         # ROS 2 runtime (created in connect())
@@ -677,8 +731,12 @@ class AICOculusTeleop(_Teleoperator):
     @property
     def action_features(self) -> dict:
         """Schema of the action returned by get_action()."""
+        if self.config.cartesian_command_mode == "position":
+            base_features = PoseMotionUpdateActionDict.__annotations__
+        else:
+            base_features = MotionUpdateActionDict.__annotations__
         return {
-            **MotionUpdateActionDict.__annotations__,
+            **base_features,
             "gripper": float,
         }
 
@@ -718,7 +776,7 @@ class AICOculusTeleop(_Teleoperator):
         return
 
     # ------------------------------------------------------------------
-    # The main tick  — runs target-pose pipeline, then
+    # The main tick  — runs the absolute target-pose pipeline, then
     # differentiates the target into a velocity action.
     # ------------------------------------------------------------------
 
@@ -759,14 +817,13 @@ class AICOculusTeleop(_Teleoperator):
         if self.config.enable_hud:
             self._render_hud()
 
-        # ── Zero-velocity template ──────────────────────────────────────
-        action: dict[str, Any] = {
-            "linear.x":  0.0, "linear.y":  0.0, "linear.z":  0.0,
-            "angular.x": 0.0, "angular.y": 0.0, "angular.z": 0.0,
-            "gripper":   1.0 if self._gripper_closed else 0.0,
-        }
+        # ── Idle action template ───────────────────────────────────────
+        # In velocity mode this is zero-velocity; in position mode it's
+        # the current TCP pose (so a "no input" tick holds the robot at
+        # wherever it is rather than snapping to the origin).
+        action = self._make_idle_action()
 
-        # Fast-exit if 'x' was pressed — emit zero velocity and let the
+        # Fast-exit if 'x' was pressed — emit the idle action and let the
         # standalone main() loop see the flag and break.
         if snap['exit']:
             self._last_t = now
@@ -775,7 +832,8 @@ class AICOculusTeleop(_Teleoperator):
         # --------------------------------------------------------------
         # Analogue-only mode: VR is off but the stick is active.  Run
         # the analogue reference through the stick nudge, clamp, and
-        # diff by emitting velocity instead of republishing position every tick.
+        # diff — produces a velocity action every tick so the controller
+        # keeps receiving a fresh target even when VR is off.
         # --------------------------------------------------------------
         if not enabled:
             self._have_ref = False
@@ -789,10 +847,10 @@ class AICOculusTeleop(_Teleoperator):
                     if self.config.enable_workspace_limits and limits_enabled:
                         p_tgt = self._clamp_box(p_tgt)
 
-                    self._write_velocity_action(action, p_tgt, q_tgt, dt)
+                    self._write_cartesian_action(action, p_tgt, q_tgt, dt)
                 except Exception as e:
                     _sys.stderr.write(f"\n[aic_oculus] analogue tick error: {e!r}\n")
-            # else: idle — zero velocity, don't advance last_cmd_*.
+            # else: idle — emit the idle template, don't advance last_cmd_*.
 
             self._last_t = now
             return action
@@ -846,8 +904,9 @@ class AICOculusTeleop(_Teleoperator):
                 )
 
             # ── Step 5b: per-tick step cap on target ────────────────────
-            # velocity fixed 0.020 m/tick at 30 Hz → scale by dt so the
-            # effective ~0.60 m/s ceiling survives variable call rates.
+            # 0.020 m/tick tuning assumed the nominal rate; scaling by
+            # dt × nominal_rate_hz preserves the effective ~0.60 m/s
+            # ceiling when called at a different rate.
             step_cap = self.config.max_step_xyz * (dt * self.config.nominal_rate_hz)
             if self._last_cmd_p is not None:
                 sx = _clamp(p_tgt[0] - self._last_cmd_p[0], -step_cap, step_cap)
@@ -879,17 +938,84 @@ class AICOculusTeleop(_Teleoperator):
                 )
             p_tgt = self._p_tgt_filt
 
-            # ── Step 7: differentiate target to velocity action ────────
-            self._write_velocity_action(action, p_tgt, q_tgt, dt)
+            # ── Step 7: emit Cartesian action in the configured mode ────
+            self._write_cartesian_action(action, p_tgt, q_tgt, dt)
 
         except Exception as e:
-            # TF lookup transiently fails during startup — emit zero velocity
-            # and keep the loop alive.  Log other exceptions to stderr so
-            # they surface during recording.
+            # TF lookup transiently fails during startup — emit the idle
+            # action and keep the loop alive.  Log other exceptions to
+            # stderr so they surface during recording.
             _sys.stderr.write(f"\n[aic_oculus] tick exception: {e!r}\n")
 
         self._last_t = now
         return action
+
+    # ------------------------------------------------------------------
+    # ------------------------------------------------------------------
+    # Cartesian action emission.  _write_cartesian_action dispatches to
+    # the mode-specific writer; _make_idle_action builds a "no input"
+    # action (zero velocity, or current-pose hold).
+    # ------------------------------------------------------------------
+
+    def _write_cartesian_action(self, action, p_tgt, q_tgt, dt):
+        if self.config.cartesian_command_mode == "position":
+            self._write_position_action(action, p_tgt, q_tgt)
+        else:
+            self._write_velocity_action(action, p_tgt, q_tgt, dt)
+
+    def _current_tcp_pose_for_idle(self):
+        """
+        Best-effort "where is the TCP right now?" for building an idle
+        position-mode action.  Tries, in order: the latest controller
+        state, the last commanded target, the VR reference pose,
+        finally the identity as a last resort.
+        """
+        if self._latest_ctrl is not None:
+            try:
+                pose = self._latest_ctrl.tcp_pose
+                return (
+                    (pose.position.x, pose.position.y, pose.position.z),
+                    (pose.orientation.x, pose.orientation.y,
+                     pose.orientation.z, pose.orientation.w),
+                )
+            except AttributeError:
+                pass
+        if self._last_cmd_p is not None and self._last_cmd_q is not None:
+            return self._last_cmd_p, self._last_cmd_q
+        if self._p_base_tcp0 is not None and self._q_base_tcp0 is not None:
+            return self._p_base_tcp0, self._q_base_tcp0
+        return (0.0, 0.0, 0.0), (0.0, 0.0, 0.0, 1.0)
+
+    def _make_idle_action(self) -> dict[str, Any]:
+        """
+        Action template for "no operator input this tick".
+
+        Velocity mode: six zeros.  The robot holds pose under impedance
+        control because zero commanded velocity.
+
+        Position mode: current TCP pose.  A constant pose is interpreted
+        by the controller as "hold here", so the robot doesn't move on
+        idle ticks — critical because position mode doesn't have an
+        obvious "zero action" representation.
+        """
+        if self.config.cartesian_command_mode == "position":
+            p_ref, q_ref = self._current_tcp_pose_for_idle()
+            return {
+                "pose.position.x": float(p_ref[0]),
+                "pose.position.y": float(p_ref[1]),
+                "pose.position.z": float(p_ref[2]),
+                "pose.orientation.x": float(q_ref[0]),
+                "pose.orientation.y": float(q_ref[1]),
+                "pose.orientation.z": float(q_ref[2]),
+                "pose.orientation.w": float(q_ref[3]),
+                "gripper": 1.0 if self._gripper_closed else 0.0,
+            }
+
+        return {
+            "linear.x":  0.0, "linear.y":  0.0, "linear.z":  0.0,
+            "angular.x": 0.0, "angular.y": 0.0, "angular.z": 0.0,
+            "gripper":   1.0 if self._gripper_closed else 0.0,
+        }
 
     # ------------------------------------------------------------------
     # Velocity writer — differentiates target pose and updates last_cmd_*
@@ -923,6 +1049,24 @@ class AICOculusTeleop(_Teleoperator):
         action["angular.x"] = wx
         action["angular.y"] = wy
         action["angular.z"] = wz
+
+        self._last_cmd_p = p_tgt
+        self._last_cmd_q = q_tgt
+
+    # ------------------------------------------------------------------
+    # Position writer — emits the absolute TCP target directly.  The
+    # target pose is already fully clamped + filtered by the pipeline
+    # that produced it, so no additional safety clamp is applied here.
+    # ------------------------------------------------------------------
+
+    def _write_position_action(self, action, p_tgt, q_tgt):
+        action["pose.position.x"]    = float(p_tgt[0])
+        action["pose.position.y"]    = float(p_tgt[1])
+        action["pose.position.z"]    = float(p_tgt[2])
+        action["pose.orientation.x"] = float(q_tgt[0])
+        action["pose.orientation.y"] = float(q_tgt[1])
+        action["pose.orientation.z"] = float(q_tgt[2])
+        action["pose.orientation.w"] = float(q_tgt[3])
 
         self._last_cmd_p = p_tgt
         self._last_cmd_q = q_tgt
@@ -1022,12 +1166,9 @@ class AICOculusTeleop(_Teleoperator):
         self._latest_ctrl = msg
 
     # ------------------------------------------------------------------
-    # Analogue stick  — maps stick deflections to pose offsets which are applied on top
-    # of the VR reference pose.  The stick deltas are integrated into persistent
-    # offsets which are added to the target pose every tick, allowing the operator to "nudge" 
-    # the robot with the stick and have it hold the offset when the stick returns to centre.
-    # Parameterised by dt so the per-second speeds in config map to
-    # rate-independent feel.
+    # Analogue stick  — accumulates pose offsets under operator control,
+    # parameterised by dt so the per-second speeds in config translate to
+    # rate-independent feel regardless of how often get_action() is called.
     # ------------------------------------------------------------------
 
     def _apply_stick_nudge(self, p_tgt, q_tgt, dt):
@@ -1071,9 +1212,12 @@ class AICOculusTeleop(_Teleoperator):
             return local_axis
 
         if grip_held:
-            # XY translation
-            dx = sx * self.config.stick_xy_speed * dt
-            dy = sy * self.config.stick_xy_speed * dt
+            # XY translation.  Stick X is inverted so a left push maps to
+            # robot +X (forward in the operator's frame) and a right push
+            # to −X; this matches the "reach away / pull back" convention
+            # most operators expect.
+            dx = -sx * self.config.stick_xy_speed * dt
+            dy =  sy * self.config.stick_xy_speed * dt
             local = _rotate_vec((dx, dy, 0.0), q_tgt) \
                 if self._analogue_frame == 'tcp' else (dx, dy, 0.0)
             self._stick_p_offset[0] += local[0]
@@ -1081,10 +1225,12 @@ class AICOculusTeleop(_Teleoperator):
             self._stick_p_offset[2] += local[2]
 
         elif trigger_held:
-            # Pitch + roll
+            # Pitch (stick X) + roll (stick Y).
+            # Stick X sign convention: a right push rotates +pitch, a left
+            # push rotates −pitch.  Stick Y is kept inverted (up = −roll).
             if abs(sx) > 0.0:
                 axis = _frame_axis((0.0, 1.0, 0.0))
-                dq = _quat_from_axis_angle(*axis, -sx * self.config.stick_pitch_speed * dt)
+                dq = _quat_from_axis_angle(*axis, sx * self.config.stick_pitch_speed * dt)
                 self._stick_q_offset = _quat_norm(_quat_mul(dq, self._stick_q_offset))
             if abs(sy) > 0.0:
                 axis = _frame_axis((1.0, 0.0, 0.0))
@@ -1299,11 +1445,13 @@ class AICOculusTeleop(_Teleoperator):
 
 def main():
     """
-    Standalone direct-drive mode.  Publishes MODE_VELOCITY MotionUpdate to
+    Standalone direct-drive runner.  Publishes MotionUpdate messages to
     /aic_controller/pose_commands at the nominal rate so the robot moves
-    without the full lerobot-record stack.  Use this for smoke-testing the
-    teleop before wiring up a recording session.
+    without the full lerobot-record stack — useful for smoke-testing the
+    teleop pipeline.  The trajectory generation mode matches the config's
+    ``cartesian_command_mode`` (velocity → MODE_VELOCITY, position → MODE_POSITION).
 
+    See the module docstring for the full keyboard + controller mapping.
     Exit with 'x' or Ctrl-C.
     """
     # Real lerobot TeleoperatorConfig requires 'type' and 'id' fields; the
@@ -1320,23 +1468,41 @@ def main():
     try:
         from aic_control_interfaces.msg import TrajectoryGenerationMode  # noqa: PLC0415
         mode_vel = TrajectoryGenerationMode.MODE_VELOCITY
+        mode_pos = TrajectoryGenerationMode.MODE_POSITION
     except Exception:
-        mode_vel = 3  # documented value
+        # Fallback values — only used if the enum import above fails.
+        # The real values come from the TrajectoryGenerationMode message
+        # when it's available, so these only matter in degraded setups.
+        mode_vel = 3
+        mode_pos = 2
 
     pub = teleop._node.create_publisher(
         MotionUpdate, '/aic_controller/pose_commands',
         QoSProfile(reliability=ReliabilityPolicy.RELIABLE, depth=10))
 
+    position_mode = (teleop.config.cartesian_command_mode == "position")
+
     def _publish(action, stiff, damp):
         msg = MotionUpdate()
         msg.header.stamp = teleop._node.get_clock().now().to_msg()
         msg.header.frame_id = teleop.config.base_frame
-        msg.velocity.linear.x  = action["linear.x"]
-        msg.velocity.linear.y  = action["linear.y"]
-        msg.velocity.linear.z  = action["linear.z"]
-        msg.velocity.angular.x = action["angular.x"]
-        msg.velocity.angular.y = action["angular.y"]
-        msg.velocity.angular.z = action["angular.z"]
+        if position_mode:
+            msg.pose.position.x    = action["pose.position.x"]
+            msg.pose.position.y    = action["pose.position.y"]
+            msg.pose.position.z    = action["pose.position.z"]
+            msg.pose.orientation.x = action["pose.orientation.x"]
+            msg.pose.orientation.y = action["pose.orientation.y"]
+            msg.pose.orientation.z = action["pose.orientation.z"]
+            msg.pose.orientation.w = action["pose.orientation.w"]
+            msg.trajectory_generation_mode.mode = mode_pos
+        else:
+            msg.velocity.linear.x  = action["linear.x"]
+            msg.velocity.linear.y  = action["linear.y"]
+            msg.velocity.linear.z  = action["linear.z"]
+            msg.velocity.angular.x = action["angular.x"]
+            msg.velocity.angular.y = action["angular.y"]
+            msg.velocity.angular.z = action["angular.z"]
+            msg.trajectory_generation_mode.mode = mode_vel
         msg.target_stiffness   = stiff
         msg.target_damping     = damp
         msg.feedforward_wrench_at_tip.force.x  = 0.0
@@ -1346,7 +1512,6 @@ def main():
         msg.feedforward_wrench_at_tip.torque.y = 0.0
         msg.feedforward_wrench_at_tip.torque.z = 0.0
         msg.wrench_feedback_gains_at_tip = [0.0] * 6
-        msg.trajectory_generation_mode.mode = mode_vel
         pub.publish(msg)
 
     period = 1.0 / config.nominal_rate_hz
