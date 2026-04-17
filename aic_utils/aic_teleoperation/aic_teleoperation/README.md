@@ -1,10 +1,11 @@
 # Setup Workflow
 
 ## Prerequisites
+- Ros2 kilted (ideal but not exclusive - alternatively robostack/pixi workflow to be included)
 - Setup aic workspace
 - Test evaluation container with example policies
 - [rmw_zenoh](https://github.com/ros2/rmw_zenoh) if not on your system
-- [oculus_reader](https://github.com/S-abk/oculus_reader)
+- [oculus_reader](https://github.com/S-abk/oculus_reader) - take a look at [this section](#First-time-setup)
 
 ---
 
@@ -48,23 +49,35 @@ source /opt/ros/kilted/setup.bash
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 ```
 
-### (Optional) ros2 sanity check
-Check availability of topics to confirm ros2 communication with sim container:
+### (Optional) ROS2 sanity check
+Ensure availability of topics to confirm ros2 communication with sim container:
 ```bash
 ros2 topic list
 ```
-If topics list is not populating, restart ros2 daemon and check again:
+If topics are not populating, restart ros2 daemon and check again:
 ```bash
 ros2 daemon stop
 ros2 daemon start
 ```
 
-### Connect Headset
-Put on headset on forehead so you can view your monitor through bare eyes. Connect USB C data cable
+### First time setup
+After cloning [oculus_reader](https://github.com/S-abk/oculus_reader) and installing [ADB](https://github.com/rail-berkeley/oculus_reader?tab=readme-ov-file#setup-of-the-adb), in a virtual environment, install the oculus_reader python package in editable mode from the repo root:
 ```bash
-cd oculus_reader/
+cd ~/oculus_reader/
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+### Connect Headset
+Put headset on your forehead so you can view your monitor directly with bare eyes. Connect USB C data cable and run
+```bash
+cd ~/oculus_reader/
+source ~/oculus_reader/.venv/bin/activate
 python3 oculus_reader/viz_transforms.py 
 ```
+
+
+
 ---
 
 ## Terminal 3 - Telop Interface
@@ -72,10 +85,6 @@ python3 oculus_reader/viz_transforms.py
 cd ~/ws_aic/src/aic/aic_utils/aic_teleoperation/aic_teleoperation
 pixi run python3 vr_aic.py 
 ```
-
-
-
-
 
 
 
