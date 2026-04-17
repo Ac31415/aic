@@ -36,7 +36,11 @@ fully clamped + filtered target pose.
 
 Usage with lerobot-record
 -------------------------
+First time:
 
+pixi run python -m ensurepip --upgrade
+
+pixi run pip install -e ~/ws_aic/src/aic/aic_utils/lerobot_robot_aic
 
 Record with::
 
