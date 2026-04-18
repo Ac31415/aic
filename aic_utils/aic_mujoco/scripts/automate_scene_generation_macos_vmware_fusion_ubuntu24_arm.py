@@ -1100,6 +1100,45 @@ class CablePluginProcessor:
         self.ws_path = ws_path
         self.script_dir = script_dir
         self.add_cable_script = script_dir / "add_cable_plugin.py"
+
+    def _enforce_headlight_in_visual(self, xml_path: Path) -> None:
+        """Ensure generated MJCF uses the expected headlight values in <visual>."""
+        if not xml_path.exists():
+            logger.warning(f"Cannot enforce headlight; file not found: {xml_path}")
+            return
+
+        xml_text = xml_path.read_text(encoding="utf-8")
+
+        visual_match = re.search(r"<visual>(.*?)</visual>", xml_text, flags=re.DOTALL)
+        if visual_match is None:
+            logger.warning(f"No <visual> section found in {xml_path}")
+            return
+
+        visual_block = visual_match.group(0)
+        target_headlight = (
+            '<headlight ambient="1 1 1" diffuse="1 1 1" specular="1 1 1"/>'
+        )
+
+        if "<headlight" in visual_block:
+            updated_visual_block = re.sub(
+                r'<headlight\s+ambient="[^"]*"\s+diffuse="[^"]*"\s+specular="[^"]*"\s*/>',
+                target_headlight,
+                visual_block,
+                count=1,
+            )
+        else:
+            updated_visual_block = visual_block.replace(
+                "<visual>",
+                "<visual>\n    " + target_headlight,
+                1,
+            )
+
+        if updated_visual_block != visual_block:
+            xml_path.write_text(
+                xml_text.replace(visual_block, updated_visual_block, 1),
+                encoding="utf-8",
+            )
+            logger.info(f"Enforced visual headlight values in {xml_path.name}")
     
     def process_mjcf(self, mjcf_dir: Path) -> None:
         """
@@ -1145,6 +1184,9 @@ class CablePluginProcessor:
                 if result.stdout:
                     logger.error(f"Stdout: {result.stdout}")
                 raise RuntimeError("Cable plugin processing failed")
+
+            for output_file in ("aic_world.xml", "aic_robot.xml"):
+                self._enforce_headlight_in_visual(mjcf_dir / output_file)
             
             logger.info("Cable plugin processing completed")
         
