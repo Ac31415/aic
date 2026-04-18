@@ -49,7 +49,7 @@ from rclpy.subscription import Subscription
 from sensor_msgs.msg import JointState
 
 from .aic_robot import aic_cameras, arm_joint_names
-from .types import JointMotionUpdateActionDict, MotionUpdateActionDict
+from .types import JointMotionUpdateActionDict, MotionUpdateActionDict, VRMotionUpdateActionDict
 
 logger = logging.getLogger(__name__)
 
@@ -121,6 +121,7 @@ class AICRos2Interface:
     ]
     motion_update_pub: Publisher[MotionUpdate]
     joint_motion_update_pub: Publisher[JointMotionUpdate]
+    gripper_pub: Publisher[JointState]
     controller_state_sub: Subscription[ControllerState]
     joint_states_sub: Subscription[JointState]
     logger: RcutilsLogger
@@ -155,6 +156,10 @@ class AICRos2Interface:
             JointMotionUpdate, "/aic_controller/joint_commands", 10
         )
 
+        gripper_pub = node.create_publisher(
+            JointState, "/gripper_commands", 10
+        )
+
         controller_state_sub = node.create_subscription(
             ControllerState, "/aic_controller/controller_state", controller_state_cb, 10
         )
@@ -176,6 +181,7 @@ class AICRos2Interface:
             change_target_mode_client=change_target_mode_client,
             motion_update_pub=motion_update_pub,
             joint_motion_update_pub=joint_motion_update_pub,
+            gripper_pub=gripper_pub,
             controller_state_sub=controller_state_sub,
             joint_states_sub=joint_states_sub,
             logger=logger,
@@ -202,10 +208,10 @@ class AICRobotAICController(Robot):
             )
         self.frame_id = config.teleop_frame_id
 
-        if config.teleop_target_mode not in ["cartesian", "joint"]:
+        if config.teleop_target_mode not in ["cartesian", "joint", "vr_cartesian"]:
             raise ValueError(
                 f"Invalid teleop_target_mode: '{config.teleop_target_mode}'. "
-                "Supported modes are 'cartesian' or 'joint'."
+                "Supported modes are 'cartesian', 'joint', or 'vr_cartesian'."
             )
         self.teleop_target_mode = config.teleop_target_mode
 
@@ -258,11 +264,12 @@ class AICRobotAICController(Robot):
 
     @cached_property
     def action_features(self) -> dict[str, type]:
-        return (
-            MotionUpdateActionDict.__annotations__
-            if self.teleop_target_mode == "cartesian"
-            else JointMotionUpdateActionDict.__annotations__
-        )
+        if self.teleop_target_mode == "cartesian":
+            return MotionUpdateActionDict.__annotations__
+        elif self.teleop_target_mode == "joint":
+            return JointMotionUpdateActionDict.__annotations__
+        else:  # "vr_cartesian"
+            return VRMotionUpdateActionDict.__annotations__
 
     @property
     def is_connected(self) -> bool:
@@ -433,12 +440,71 @@ class AICRobotAICController(Robot):
 
         self.ros2_interface.joint_motion_update_pub.publish(msg)
 
+    def send_action_vr_cartesian(self, action: dict[str, Any]) -> None:
+        """Publish an absolute Cartesian pose target from a VR teleoperator action.
+
+        Reads a ``VRMotionUpdateActionDict`` (absolute TCP pose in ``base_link``
+        plus gripper position) and sends:
+        - A ``MotionUpdate`` with ``trajectory_generation_mode = MODE_POSITION (2)``
+          to ``/aic_controller/pose_commands``.
+        - A ``JointState`` gripper command to ``/gripper_commands``.
+        """
+        if not self._is_connected or not self.ros2_interface:
+            raise DeviceNotConnectedError()
+
+        vr_action = cast(VRMotionUpdateActionDict, action)
+
+        try:
+            pos_x = float(vr_action["pose.position.x"])
+        except KeyError:
+            raise KeyError(
+                "Missing key 'pose.position.x'. "
+                "If using `--teleop.type=aic_vr`, have you set `--robot.teleop_target_mode=vr_cartesian`?"
+            ) from None
+
+        msg = MotionUpdate()
+        msg.header.stamp = self.ros2_interface.node.get_clock().now().to_msg()
+        msg.header.frame_id = "base_link"
+
+        msg.pose.position.x = pos_x
+        msg.pose.position.y = float(vr_action["pose.position.y"])
+        msg.pose.position.z = float(vr_action["pose.position.z"])
+        msg.pose.orientation.x = float(vr_action["pose.orientation.x"])
+        msg.pose.orientation.y = float(vr_action["pose.orientation.y"])
+        msg.pose.orientation.z = float(vr_action["pose.orientation.z"])
+        msg.pose.orientation.w = float(vr_action["pose.orientation.w"])
+
+        # TELEOP stiffness/damping values (reduced for compliant teleoperation)
+        msg.target_stiffness = np.diag([60.0, 60.0, 60.0, 60.0, 60.0, 60.0]).flatten()
+        msg.target_damping = np.diag([50.0, 50.0, 50.0, 50.0, 50.0, 50.0]).flatten()
+
+        msg.feedforward_wrench_at_tip = Wrench(
+            force=Vector3(x=0.0, y=0.0, z=0.0),
+            torque=Vector3(x=0.0, y=0.0, z=0.0),
+        )
+        msg.wrench_feedback_gains_at_tip = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+        # MODE_POSITION = 2: the AIC controller tracks the absolute pose target
+        msg.trajectory_generation_mode.mode = 2
+
+        self.ros2_interface.motion_update_pub.publish(msg)
+
+        # Gripper command — hande_left_finger_joint, right finger is a mimic
+        gripper_msg = JointState()
+        gripper_msg.header.stamp = msg.header.stamp
+        gripper_msg.name = ["hande_left_finger_joint"]
+        gripper_msg.position = [float(vr_action["gripper.position"])]
+        self.ros2_interface.gripper_pub.publish(gripper_msg)
+
     def send_action(self, action: dict[str, Any]) -> dict[str, Any]:
         if self.teleop_target_mode == "cartesian":
             self.send_action_cartesian(action)
             return action
         elif self.teleop_target_mode == "joint":
             self.send_action_joint(action)
+            return action
+        elif self.teleop_target_mode == "vr_cartesian":
+            self.send_action_vr_cartesian(action)
             return action
         else:
             raise ValueError("Invalid teleop_target_mode")

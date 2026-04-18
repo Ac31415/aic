@@ -24,6 +24,7 @@ Options for `--teleop.type` (and setting `--robot.teleop_target_mode` accordingl
 - `aic_keyboard_ee` for cartesian-space keyboard control (and set `--robot.teleop_target_mode=cartesian`)
 - `aic_spacemouse` for cartesian-space SpaceMouse control (and set `--robot.teleop_target_mode=cartesian`)
 - `aic_keyboard_joint` for joint-space control (and set `--robot.teleop_target_mode=joint`)
+- `aic_vr` for Oculus Quest VR control (and set `--robot.teleop_target_mode=vr_cartesian`)
 
 Options for `--robot.teleop_frame_id` when `--robot.teleop_target_mode` is `cartesian`:
 - `base_link` to send cartesian targets with respect to the robot's base link.
