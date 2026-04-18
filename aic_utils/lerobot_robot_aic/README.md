@@ -110,6 +110,16 @@ View and edit key mappings and speed settings in `AICKeyboardEETeleop` and `AICK
 
 ### Recording Training Data
 
+On macOS, if you source ROS setup (`source ~/ws_aic/install/setup.zsh`) before
+running LeRobot commands, run this once per shell before `lerobot-record`:
+
+```bash
+aic_fix_macos_dyld_library_path
+```
+
+This removes `.pixi/envs/default/lib` from `DYLD_LIBRARY_PATH` to prevent PyAV
+from loading duplicate FFmpeg dylibs (`objc ... AVFFrameReceiver` warnings).
+
 ```bash
 cd ~/ws_aic/src/aic
 pixi run lerobot-record \

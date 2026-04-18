@@ -61,6 +61,7 @@ pixi shell
 
 source ~/ws_aic/install/setup.zsh
 
+# maybe still do this?
 export DYLD_LIBRARY_PATH="$(python - <<'PY'
 import os
 bad = '/.pixi/envs/default/lib'
@@ -68,6 +69,9 @@ paths = [p for p in (os.environ.get('DYLD_LIBRARY_PATH') or '').split(':') if p 
 print(':'.join(paths))
 PY
 )"
+
+# macOS: avoid duplicate FFmpeg dylib loads in PyAV/pygame (objc AVF* warnings)
+aic_fix_macos_dyld_library_path
 
 python -c "import pyarrow; print('pyarrow OK')"
 
