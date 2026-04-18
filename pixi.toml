@@ -2,7 +2,7 @@
 name = "aic"
 authors = ["Teo Koon Peng <koonpeng@intrinsic.ai>"]
 channels = ["robostack-kilted", "conda-forge"]
-platforms = ["osx-arm64"]
+platforms = ["linux-64", "osx-arm64"]
 version = "0.1.0"
 conda-pypi-map = { "robostack-kilted" = "robostack_mapping.json" }
 preview = ["pixi-build"]
@@ -19,7 +19,6 @@ build = "colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMM
 [target.linux-64.dependencies]
 evdev = ">=1.9.2,<2"
 libgl-devel = "*"
-ros-kilted-generate-parameter-library = ">=0.6.0,<0.7"
 
 [dependencies]
 python = "*"
@@ -63,6 +62,7 @@ ros-kilted-backward-ros = ">=1.0.8,<2"
 ros-kilted-test-msgs = ">=2.3.0,<3"
 ros-kilted-ament-cmake-vendor-package = ">=2.7.4,<3"
 ros-kilted-urdf = ">=2.12.3,<3"
+ros-kilted-generate-parameter-library = ">=0.7.0,<0.8"
 ros-kilted-kdl-parser = ">=2.12.1,<3"
 ros-kilted-filters = ">=2.2.2,<3"
 ros-kilted-tf2-eigen-kdl = ">=0.41.6,<0.42"
@@ -88,8 +88,6 @@ ros-kilted-xacro = "*"
 ros-kilted-rviz2 = ">=15.0.11,<16"
 ros-kilted-tf-transformations = ">=1.0.1,<2"
 ros-kilted-ros2bag = ">=0.32.0,<0.33"
-ros-kilted-act-plug-nic-5-policy-node = { path = "act_plug_nic_5_policy_node" }
-ros2-distro-mutex = ">=0.14.0,<0.15.0a0"
 
 [pypi-dependencies]
 huggingface-hub = { version = "~=1.7" }
