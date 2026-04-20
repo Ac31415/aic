@@ -340,10 +340,21 @@ class _KeyWatcher:
         self._thread            = threading.Thread(target=self._run, daemon=True)
         self._term_fd           = None
         self._term_old          = None
+        self._restore_registered = False
 
     def start(self):
-        self._thread.start()
-        atexit.register(self._restore)
+        with self._lock:
+            # Allow reconnect cycles: after disconnect() sets exit=True, start()
+            # must clear it and use a fresh Thread object.
+            self.exit = False
+            if self._thread.is_alive():
+                return
+            self._thread = threading.Thread(target=self._run, daemon=True)
+            self._thread.start()
+
+        if not self._restore_registered:
+            atexit.register(self._restore)
+            self._restore_registered = True
 
     def _restore(self):
         """Restore terminal on exit so the shell isn't left in cbreak mode."""
@@ -529,6 +540,14 @@ class AICOculusTeleopConfig(_TeleoperatorConfig):
     # lerobot-record subprocess output isn't clobbered.
     enable_hud: bool = True
 
+    # Whether this teleop should open a local stdin keyboard watcher.
+    # Keep this OFF by default so lerobot-record's own keyboard listener
+    # (right/left arrows + esc for episode/reset flow) remains the sole
+    # owner of keyboard control, matching aic_keyboard_ee behavior.
+    #
+    # When running this module standalone, main() enables it explicitly.
+    enable_local_keyboard_controls: bool = False
+
 
 # =============================================================================
 #  AICOculusTeleop — LeRobot Teleoperator streaming Cartesian velocity
@@ -681,17 +700,24 @@ class AICOculusTeleop(_Teleoperator):
         # Hardware + software F/T tare
         self._tare_ft()
 
-        # Keyboard
-        self._keys.start()
+        # Optional local keyboard watcher.  Disabled by default in
+        # lerobot-record to avoid competing with its episode-control
+        # keyboard listener.
+        if self.config.enable_local_keyboard_controls:
+            self._keys.start()
 
         self._is_connected = True
 
         print("\n[aic_oculus] Connected.")
-        print("Keyboard:")
-        print("  e  enable VR tracking   q  disable")
-        print("  o  orientation follow   t  re-tare F/T")
-        print("  g  gripper              f  force-feedback (standalone only)")
-        print("  l  workspace limits     x  exit")
+        if self.config.enable_local_keyboard_controls:
+            print("Keyboard:")
+            print("  e  enable VR tracking   q  disable")
+            print("  o  orientation follow   t  re-tare F/T")
+            print("  g  gripper              f  force-feedback (standalone only)")
+            print("  l  workspace limits     x  exit")
+        else:
+            print("Keyboard:")
+            print("  local keyboard controls disabled (use controller buttons)")
         print("Right controller:")
         print("  A              cycle: IDLE → VR → ANALOGUE → IDLE")
         print("  B              toggle orientation follow")
@@ -1457,9 +1483,13 @@ def main():
     # Real lerobot TeleoperatorConfig requires 'type' and 'id' fields; the
     # stub takes no arguments — try the real form first.
     try:
-        config = AICOculusTeleopConfig(type="aic_oculus", id="aic")
+        config = AICOculusTeleopConfig(
+            type="aic_oculus",
+            id="aic",
+            enable_local_keyboard_controls=True,
+        )
     except TypeError:
-        config = AICOculusTeleopConfig()
+        config = AICOculusTeleopConfig(enable_local_keyboard_controls=True)
 
     teleop = AICOculusTeleop(config)
     teleop.connect()

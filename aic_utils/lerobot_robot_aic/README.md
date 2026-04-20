@@ -23,6 +23,7 @@ Options for `--teleop.type` (and setting `--robot.teleop_target_mode` accordingl
 
 - `aic_keyboard_ee` for cartesian-space keyboard control (and set `--robot.teleop_target_mode=cartesian`)
 - `aic_spacemouse` for cartesian-space SpaceMouse control (and set `--robot.teleop_target_mode=cartesian`)
+- `aic_oculus` for Oculus controller teleoperation (and set `--robot.teleop_target_mode=cartesian`)
 - `aic_keyboard_joint` for joint-space control (and set `--robot.teleop_target_mode=joint`)
 
 Options for `--robot.teleop_frame_id` when `--robot.teleop_target_mode` is `cartesian`:
@@ -137,6 +138,14 @@ pixi run lerobot-record \
 :warning: Note (same as with `lerobot-teleoperate` above): In addition to setting `--teleop.type` you must set `--robot.teleop_target_mode` because the `AICRobotAICController` class needs to know which type of actions to send to the controller and it doesn't have access to `--teleop.type`.
 
 Upon starting the command, you may see `WARN   Watchdog Validator ThreadId(13) zenoh_shm::watchdog::periodic_task: Some("Watchdog Validator")` which is safe to ignore; just look for `INFO ... ls/utils.py:227 Recording episode 0`.
+
+For `--teleop.type=aic_oculus`, local stdin keyboard controls inside the Oculus teleop are disabled by default so `lerobot-record` keeps sole ownership of the episode flow keys (Right Arrow, Left Arrow, ESC). This makes pause/resume between episodes consistent with `aic_keyboard_ee`.
+
+If you want Oculus local keyboard shortcuts (`e`, `q`, `o`, `t`, `g`, `l`, `x`) during recording, opt in with:
+
+```bash
+--teleop.enable_local_keyboard_controls=true
+```
 
 LeRobot recording keys:
 
