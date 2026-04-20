@@ -110,6 +110,9 @@ View and edit key mappings and speed settings in `AICKeyboardEETeleop` and `AICK
 
 ### Recording Training Data
 
+Use `lerobot-record` for keyboard and SpaceMouse teleop.  Use `lerobot-record-vr`
+when recording with the `aic_vr` teleoperator — see [VR recording](#recording-with-vr-teleop) below.
+
 ```bash
 cd ~/ws_aic/src/aic
 pixi run lerobot-record \
@@ -137,6 +140,39 @@ LeRobot recording keys:
 | ESC         | Stop recording   |
 
 <!-- TODO: lerobot-record doesn't load the hil processor to handle teleop events (lerobot bug?) -->
+
+#### Recording with VR teleop
+
+When using `--teleop.type=aic_vr`, use the `lerobot-record-vr` command instead of
+`lerobot-record`.  This variant adds VR-specific lifecycle management:
+
+- **During the reset phase** (scene reload / robot repositioning): VR publishing is
+  paused, so the AIC controller is not sent stale pose targets while the simulation
+  resets the robot.
+- **At the start of each new episode**: the VR reference frame is re-captured from
+  the loaded scene's initial TCP pose, so the robot starts each episode from the
+  correct initial position.
+
+```bash
+cd ~/ws_aic/src/aic
+pixi run lerobot-record-vr \
+  --robot.type=aic_controller --robot.id=aic \
+  --teleop.type=aic_vr --teleop.id=aic \
+  --robot.teleop_target_mode=vr_cartesian \
+  --dataset.repo_id=<hf-repo> \
+  --dataset.single_task=<task-prompt> \
+  --dataset.push_to_hub=false \
+  --dataset.private=true \
+  --play_sounds=false \
+  --display_data=true
+```
+
+At the start of each episode `lerobot-record-vr` automatically enters VR TRACKING
+mode and waits for the reference frame to be captured from the current TCP pose.
+The same keyboard shortcuts as `lerobot-record` apply (Right Arrow / Left Arrow /
+ESC).  During the reset phase the VR controller has no effect on the robot; you
+can still use Button A on the Oculus controller to re-enter tracking mode after
+the scene has reloaded if needed.
 
 ### Training
 

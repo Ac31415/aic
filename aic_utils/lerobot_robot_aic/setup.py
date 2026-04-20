@@ -45,6 +45,8 @@ setup(
     maintainer="koonpeng",
     maintainer_email="koonpeng@intrinsic.ai",
     entry_points={
-        "console_scripts": [],
+        "console_scripts": [
+            "lerobot-record-vr = lerobot_robot_aic.lerobot_record_aic_vr:main",
+        ],
     },
 )

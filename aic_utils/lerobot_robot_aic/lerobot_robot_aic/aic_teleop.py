@@ -518,6 +518,11 @@ class AICVRTeleop(Teleoperator):
         self._follow_orientation: bool = False
         self._analogue_frame: str = "base"  # "base" or "tcp"
 
+        # Reset / episode lifecycle
+        # Set via pause() / start_episode() by lerobot-record-vr.
+        self._paused: bool = False
+        self._init_event: threading.Event | None = None
+
         # Analogue stick state
         self._analogue_ref_p: list | None = None
         self._analogue_ref_q: tuple | None = None
@@ -609,10 +614,62 @@ class AICVRTeleop(Teleoperator):
         if not self.is_connected:
             raise DeviceNotConnectedError()
         with self._lock:
-            return dict(self._current_action)
+            action = dict(self._current_action)
+        # Indicate to AICRobotAICController whether VR is actively controlling the
+        # robot.  When False (IDLE / paused) the robot will not publish pose commands,
+        # preventing unwanted motion during the reset phase or before the user has
+        # engaged VR tracking.  This key is not in VRMotionUpdateActionDict and is
+        # therefore ignored by build_dataset_frame when writing to the dataset.
+        action["_vr_active"] = self._vr_enabled or self._analogue_enabled
+        return action
 
     def send_feedback(self, feedback: dict[str, Any]) -> None:
         pass
+
+    def pause(self) -> None:
+        """Pause VR control during the reset phase between episodes.
+
+        Disables VR and analogue modes so the background timer stops updating
+        the action target.  The robot will not receive new pose commands until
+        ``start_episode()`` is called.
+        """
+        with self._lock:
+            self._paused = True
+            self._vr_enabled = False
+            self._analogue_enabled = False
+        self._node.get_logger().info("AICVRTeleop paused for environment reset.")
+
+    def start_episode(self) -> None:
+        """Prepare VR teleop for a new recording episode.
+
+        Resets the VR reference frame, enters VR TRACKING mode, and blocks until
+        the first reference transform is captured from the current TCP pose (up to
+        1 s).  Call this immediately before the recording ``record_loop`` so that
+        the robot starts the episode from the loaded scene's initial TCP pose.
+        """
+        init_event = threading.Event()
+        self._init_event = init_event
+        with self._lock:
+            self._have_ref = False
+            self._last_cmd_p = None
+            self._last_cmd_q = None
+            self._p_tgt_filt = None
+            self._stick_p_offset = [0.0, 0.0, 0.0]
+            self._stick_q_offset = (0.0, 0.0, 0.0, 1.0)
+            self._analogue_ref_p = None
+            self._analogue_ref_q = None
+            self._vr_enabled = True
+            self._analogue_enabled = False
+            self._paused = False
+
+        if not init_event.wait(timeout=1.0):
+            self._node.get_logger().warning(
+                "AICVRTeleop: VR reference was not captured within 1 s "
+                "(TF may not be available yet). Continuing anyway."
+            )
+        else:
+            self._node.get_logger().info("AICVRTeleop ready for new episode.")
+        self._init_event = None
 
     def disconnect(self) -> None:
         if not self._is_connected:
@@ -678,6 +735,9 @@ class AICVRTeleop(Teleoperator):
 
     def _update(self) -> None:
         """Compute the latest VR target pose and update ``_current_action``."""
+        if self._paused:
+            return
+
         gripper_pos = (
             self.config.gripper_closed_pos
             if self._gripper_closed
@@ -708,6 +768,12 @@ class AICVRTeleop(Teleoperator):
         try:
             if not self._have_ref:
                 self._capture_reference()
+                # Signal start_episode() that the initial reference is ready.
+                # Use a local variable to avoid a race with self._init_event being
+                # cleared by the main thread after wait() returns.
+                init_event = self._init_event
+                if init_event is not None:
+                    init_event.set()
 
             # Step 1: compute controller motion delta from captured reference
             tf_bc = self._lookup(self.config.base_frame, self.config.ctrl_frame)
