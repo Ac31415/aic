@@ -448,9 +448,18 @@ class AICRobotAICController(Robot):
         - A ``MotionUpdate`` with ``trajectory_generation_mode = MODE_POSITION (2)``
           to ``/aic_controller/pose_commands``.
         - A ``JointState`` gripper command to ``/gripper_commands``.
+
+        When the VR teleop is in IDLE or paused mode (``_vr_active`` is False in
+        the action dict), publishing is suppressed so that the AIC controller is
+        not disturbed during the environment-reset phase between episodes.
         """
         if not self._is_connected or not self.ros2_interface:
             raise DeviceNotConnectedError()
+
+        # AICVRTeleop.get_action() adds this key to signal whether VR is actively
+        # controlling the robot.  Skip publishing during IDLE / paused mode.
+        if not action.get("_vr_active", True):
+            return
 
         vr_action = cast(VRMotionUpdateActionDict, action)
 
