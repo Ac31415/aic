@@ -1,0 +1,20 @@
+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
+
+wandb: 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
+
+lerobot-train \
+    --dataset.repo_id=Ac31415/vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816 \                      
+    --policy.type=pi05 \
+    --output_dir=./outputs/pi05_training \
+    --job_name=pi05_base_training \
+    --policy.repo_id=pi05_base_4_nic \
+    --policy.pretrained_path=lerobot/pi05_base \
+    --policy.compile_model=true \
+    --policy.gradient_checkpointing=true \
+    --wandb.enable=true \
+    --policy.dtype=bfloat16 \
+    --policy.freeze_vision_encoder=true \
+    --policy.train_expert_only=true \
+    --steps=3000 \
+    --policy.device=cuda \
+    --batch_size=32
