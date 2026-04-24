@@ -1,0 +1,10 @@
+tasks:
+      task_1:
+        cable_type: "sfp_sc"    # cable type always the same
+        cable_name: "cable_0"   # cable_0 for non-reversed cable; cable_1 for reversed cable
+        plug_type: "sfp"    # only 2 plug types: sfp vs. sc
+        plug_name: "sfp_tip"    # sft_tip vs. sc_tip | sft_module vs. sc_module / sc_plug ??
+        port_type: "sfp"  # sfp vs. sc
+        port_name: "sfp_port_0" # sfp_port_0, sfp_port_1, sc_port_base, sfp_mount, sc_mount
+        target_module_name: "nic_card_mount_0"  # nic_card_mount_0 ~ nic_card_mount_4, sc_port_0, sc_port_1, sfp_mount_rail_0, sc_mount_rail_0, sfp_mount_rail_1, sc_mount_rail_1
+        time_limit: 180

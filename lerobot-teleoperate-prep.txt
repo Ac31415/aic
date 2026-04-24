@@ -123,3 +123,37 @@ lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_keyb
 
 # use conda env to train
 lerobot-train --dataset.repo_id=Ac31415/rz1p140_tbx0p148_tbym0p209_tbyaw0p231_csfp_sc_cable_b64ba50386 --policy.type=act --output_dir=trained_models/act_plug_into_nic_5 --job_name=act_plug_into_nic_5 --policy.device=mps --wandb.enable=true --policy.repo_id=Ac31415/policy_act_plug_into_nic_5
+
+
+
+
+
+
+
+
+
+
+
+
+for mac:
+
+export PYTORCH_ENABLE_MPS_FALLBACK=1
+
+lerobot-train \                     
+  --dataset.repo_id=Ac31415/vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816 \
+  --policy.type=pi05 \
+  --output_dir='/Volumes/USB DISK/trained_models_pi05_base' \
+  --job_name=pi05_base_4_nic \
+  --policy.device=mps \
+  --wandb.enable=true --policy.repo_id=Ac31415/policy_pi05_base_4_vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816 --policy.pretrained_path=lerobot/pi05_base --policy.compile_model=true --policy.gradient_checkpointing=true --policy.dtype=bfloat16 --policy.freeze_vision_encoder=false --policy.train_expert_only=false --steps=3000
+
+
+
+
+lerobot-train \                                                             
+  --dataset.repo_id=Ac31415/vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816 \
+  --policy.type=pi05 \
+  --output_dir='/Volumes/USB DISK/trained_models' \
+  --job_name=pi05_base_4_nic \
+  --policy.device=mps \
+  --wandb.enable=true --policy.repo_id=Ac31415/policy_pi05_base_4_vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816 --policy.pretrained_path=lerobot/pi05_base --policy.compile_model=true --policy.gradient_checkpointing=true --policy.dtype=bfloat16 --policy.freeze_vision_encoder=false --policy.train_expert_only=false --steps=3000
