@@ -251,6 +251,9 @@ class my_policy_node(Policy):
     ):
         self.policy.reset()
         self.get_logger().info(f"my_policy_node.insert_cable() enter. Task: {task}")
+        
+        port_frame = f"task_board/{task.target_module_name}/{task.port_name}_link"
+        cable_tip_frame = f"{task.cable_name}/{task.plug_name}_link"
 
         start_time = time.time()
 
