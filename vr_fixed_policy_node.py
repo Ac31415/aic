@@ -50,6 +50,10 @@ from huggingface_hub import snapshot_download
 from transformers import AutoTokenizer
 
 
+_NORMALIZATION_EPSILON = 1e-8
+_DISCRETIZATION_BINS = 256
+
+
 class my_policy_node(Policy):
     def __init__(self, parent_node: Node):
         super().__init__(parent_node)
@@ -195,13 +199,17 @@ class my_policy_node(Policy):
         """
         # 1. Quantile-normalize state to [-1, 1]: normalized = 2*(x - q01)/(q99 - q01) - 1
         raw_state = torch.from_numpy(state_np).float().unsqueeze(0).to(self.device)
-        denom = (self.state_q99 - self.state_q01).clamp(min=1e-8)
+        denom = (self.state_q99 - self.state_q01).clamp(min=_NORMALIZATION_EPSILON)
         normalized_state = 2.0 * (raw_state - self.state_q01) / denom - 1.0
         normalized_state = normalized_state.clamp(-1.0, 1.0)
 
-        # 2. Discretize into 256 bins
+        # 2. Discretize into 256 bins (matching Pi05PrepareStateTokenizerProcessorStep).
+        # After clamping to [-1, 1], np.digitize returns indices in [1, 256] which shift
+        # to [0, 255] after subtracting 1. The final clip guards against floating-point edge cases.
         state_np_norm = normalized_state[0].cpu().numpy()
-        discretized = np.digitize(state_np_norm, bins=np.linspace(-1, 1, 257)[:-1]) - 1
+        discretized = (
+            np.digitize(state_np_norm, bins=np.linspace(-1, 1, _DISCRETIZATION_BINS + 1)[:-1]) - 1
+        ).clip(0, _DISCRETIZATION_BINS - 1)
 
         # 3. Build full prompt
         cleaned_text = task_text.strip().replace("_", " ").replace("\n", " ")
