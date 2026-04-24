@@ -19,11 +19,9 @@ import os
 os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
 
 import time
-import json
 import torch
 import numpy as np
 import cv2
-import draccus
 from pathlib import Path
 from typing import Callable, Dict, Any, List
 from rclpy.node import Node
@@ -44,11 +42,12 @@ from aic_control_interfaces.msg import (
     TrajectoryGenerationMode,
 )
 
-# LeRobot & Safetensors
-from lerobot.policies.act.modeling_act import ACTPolicy
-from lerobot.policies.act.configuration_act import ACTConfig
+# LeRobot PI05 & Safetensors
+from lerobot.policies.pi05.modeling_pi05 import PI05Policy
+from lerobot.utils.constants import OBS_LANGUAGE_TOKENS, OBS_LANGUAGE_ATTENTION_MASK
 from safetensors.torch import load_file
 from huggingface_hub import snapshot_download
+from transformers import AutoTokenizer
 
 
 class my_policy_node(Policy):
@@ -57,11 +56,11 @@ class my_policy_node(Policy):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         # -------------------------------------------------------------------------
-        # 1. Configuration & Weights Loading
+        # 1. Load PI05 Policy from HuggingFace
         # -------------------------------------------------------------------------
-        repo_id = "Ac31415/policy_4_vrrz1p140tbx0p152tbym0p291tbyaw0p333csfp_sc_cable_48348ed816"
+        repo_id = "Ac31415/pi05_policy_insert_cable"
 
-        # Path to your checkpoint folder
+        # Download checkpoint files
         policy_path = Path(
             snapshot_download(
                 repo_id=repo_id,
@@ -69,26 +68,19 @@ class my_policy_node(Policy):
             )
         )
 
-        # Load Config Manually (Fixes 'Draccus' error by removing unknown 'type' field)
-        with open(policy_path / "config.json", "r") as f:
-            config_dict = json.load(f)
-            if "type" in config_dict:
-                del config_dict["type"]
-
-        config = draccus.decode(ACTConfig, config_dict)
-
-        # Load Policy Architecture & Weights
-        self.policy = ACTPolicy(config)
-        model_weights_path = policy_path / "model.safetensors"
-        self.policy.load_state_dict(load_file(model_weights_path))
+        # Load PI05 policy weights
+        self.policy = PI05Policy.from_pretrained(repo_id)
         self.policy.eval()
         self.policy.to(self.device)
 
-        self.get_logger().info(f"ACT Policy loaded on {self.device} from {policy_path}")
+        self.get_logger().info(f"PI05 Policy loaded on {self.device} from {policy_path}")
 
         # -------------------------------------------------------------------------
         # 2. Normalization Stats Loading
         # -------------------------------------------------------------------------
+        # PI05 uses QUANTILES normalization (q01/q99) for both state and action.
+        # The state is normalized to [-1, 1] before being discretized into the prompt.
+        # The action is unnormalized from [-1, 1] back to robot-space after inference.
         stats_path = (
             policy_path / "policy_preprocessor_step_3_normalizer_processor.safetensors"
         )
@@ -98,34 +90,21 @@ class my_policy_node(Policy):
         def get_stat(key, shape):
             return stats[key].to(self.device).view(*shape)
 
-        # Image Stats (1, 3, 1, 1) for broadcasting against (Batch, Channel, Height, Width)
-        self.img_stats = {
-            "left": {
-                "mean": get_stat("observation.images.left_camera.mean", (1, 3, 1, 1)),
-                "std": get_stat("observation.images.left_camera.std", (1, 3, 1, 1)),
-            },
-            "center": {
-                "mean": get_stat("observation.images.center_camera.mean", (1, 3, 1, 1)),
-                "std": get_stat("observation.images.center_camera.std", (1, 3, 1, 1)),
-            },
-            "right": {
-                "mean": get_stat("observation.images.right_camera.mean", (1, 3, 1, 1)),
-                "std": get_stat("observation.images.right_camera.std", (1, 3, 1, 1)),
-            },
-        }
-        print(f"Image stats: {self.img_stats}")
+        # State quantile stats — normalize state to [-1, 1] before discretization
+        self.state_q01 = get_stat("observation.state.q01", (1, -1))
+        self.state_q99 = get_stat("observation.state.q99", (1, -1))
 
-        # Robot State Stats (1, 26)
-        self.state_mean = get_stat("observation.state.mean", (1, -1))
-        self.state_std = get_stat("observation.state.std", (1, -1))
-        print(f"Robot state mean: {self.state_mean}")
-        print(f"Robot state std: {self.state_std}")
+        # Action quantile stats — unnormalize model output to robot-space
+        self.action_q01 = get_stat("action.q01", (1, -1))
+        self.action_q99 = get_stat("action.q99", (1, -1))
 
-        # Action Stats (1, 8) - Used for Un-normalization
-        self.action_mean = get_stat("action.mean", (1, -1))
-        self.action_std = get_stat("action.std", (1, -1))
-        print(f"Action mean: {self.action_mean}")
-        print(f"Action std: {self.action_std}")
+        # -------------------------------------------------------------------------
+        # 3. Load PaliGemma Tokenizer
+        # -------------------------------------------------------------------------
+        # PI05 encodes the task description and discretized robot state as a text
+        # prompt tokenized by the PaliGemma tokenizer.
+        self.tokenizer = AutoTokenizer.from_pretrained("google/paligemma-3b-pt-224")
+        self.tokenizer_max_length = self.policy.config.tokenizer_max_length
 
         # Config
         self.image_scaling = 0.25  # Must match AICRobotAICControllerConfig
@@ -135,17 +114,19 @@ class my_policy_node(Policy):
             JointState, "/gripper_commands", 10
         )
 
-        self.get_logger().info("Normalization statistics loaded successfully.")
+        self.get_logger().info("PI05 policy node initialized successfully.")
 
     @staticmethod
     def _img_to_tensor(
         raw_img,
         device: torch.device,
         scale: float,
-        mean: torch.Tensor,
-        std: torch.Tensor,
     ) -> torch.Tensor:
-        """Converts ROS Image -> Resized -> Permuted -> Normalized Tensor."""
+        """Converts ROS Image -> Resized -> Permuted -> [0, 1] Tensor (1, C, H, W).
+
+        PI05Policy._preprocess_images normalizes images from [0, 1] to [-1, 1]
+        internally, so no manual mean/std normalization is applied here.
+        """
         # 1. Bytes to Numpy (H, W, C)
         img_np = np.frombuffer(raw_img.data, dtype=np.uint8).reshape(
             raw_img.height, raw_img.width, 3
@@ -167,44 +148,14 @@ class my_policy_node(Policy):
             .to(device)
         )
 
-        # 4. Normalize (Apply Mean/Std)
-        # Formula: (x - mean) / std
-        return (tensor - mean) / std
+        return tensor
 
-    def prepare_observations(self, obs_msg: Observation) -> Dict[str, torch.Tensor]:
-        """Convert ROS Observation message into dictionary of normalized tensors."""
-
-        # --- Process Cameras ---
-        obs = {
-            "observation.images.left_camera": self._img_to_tensor(
-                obs_msg.left_image,
-                self.device,
-                self.image_scaling,
-                self.img_stats["left"]["mean"],
-                self.img_stats["left"]["std"],
-            ),
-            "observation.images.center_camera": self._img_to_tensor(
-                obs_msg.center_image,
-                self.device,
-                self.image_scaling,
-                self.img_stats["center"]["mean"],
-                self.img_stats["center"]["std"],
-            ),
-            "observation.images.right_camera": self._img_to_tensor(
-                obs_msg.right_image,
-                self.device,
-                self.image_scaling,
-                self.img_stats["right"]["mean"],
-                self.img_stats["right"]["std"],
-            ),
-        }
-
-        # --- Process Robot State ---
-        # Construct flat state vector (26 dims) matching training order
+    def _build_state_vector(self, obs_msg: Observation) -> np.ndarray:
+        """Construct flat state vector matching training order."""
         tcp_pose = obs_msg.controller_state.tcp_pose
         tcp_vel = obs_msg.controller_state.tcp_velocity
 
-        state_np = np.array(
+        return np.array(
             [
                 # TCP Position (3)
                 tcp_pose.position.x,
@@ -226,18 +177,82 @@ class my_policy_node(Policy):
                 # TCP Error (6)
                 *obs_msg.controller_state.tcp_error,
                 # Joint Positions (7)
-                # *obs_msg.joint_states.position[:7],
                 *obs_msg.joint_states.position[:7],
-
             ],
             dtype=np.float32,
         )
 
-        # Normalize State
-        raw_state_tensor = (
-            torch.from_numpy(state_np).float().unsqueeze(0).to(self.device)
+    def _tokenize_prompt(
+        self, task_text: str, state_np: np.ndarray
+    ) -> Dict[str, torch.Tensor]:
+        """Build and tokenize the PI05 language prompt encoding the task and robot state.
+
+        Mirrors Pi05PrepareStateTokenizerProcessorStep:
+        1. Quantile-normalize state to [-1, 1] using q01/q99 stats.
+        2. Discretize normalized state into 256 bins (matching the training pipeline).
+        3. Build prompt: "Task: {task_text}, State: {state_str};\\nAction: "
+        4. Tokenize with the PaliGemma tokenizer.
+        """
+        # 1. Quantile-normalize state to [-1, 1]: normalized = 2*(x - q01)/(q99 - q01) - 1
+        raw_state = torch.from_numpy(state_np).float().unsqueeze(0).to(self.device)
+        denom = (self.state_q99 - self.state_q01).clamp(min=1e-8)
+        normalized_state = 2.0 * (raw_state - self.state_q01) / denom - 1.0
+        normalized_state = normalized_state.clamp(-1.0, 1.0)
+
+        # 2. Discretize into 256 bins
+        state_np_norm = normalized_state[0].cpu().numpy()
+        discretized = np.digitize(state_np_norm, bins=np.linspace(-1, 1, 257)[:-1]) - 1
+
+        # 3. Build full prompt
+        cleaned_text = task_text.strip().replace("_", " ").replace("\n", " ")
+        state_str = " ".join(map(str, discretized))
+        full_prompt = f"Task: {cleaned_text}, State: {state_str};\nAction: "
+
+        # 4. Tokenize
+        encoded = self.tokenizer(
+            full_prompt,
+            return_tensors="pt",
+            padding="max_length",
+            max_length=self.tokenizer_max_length,
+            truncation=True,
         )
-        obs["observation.state"] = (raw_state_tensor - self.state_mean) / self.state_std
+
+        return {
+            OBS_LANGUAGE_TOKENS: encoded["input_ids"].to(self.device),
+            OBS_LANGUAGE_ATTENTION_MASK: encoded["attention_mask"].to(self.device),
+        }
+
+    def prepare_observations(
+        self, obs_msg: Observation, task_text: str
+    ) -> Dict[str, torch.Tensor]:
+        """Convert ROS Observation message into a batch dict for PI05Policy.select_action.
+
+        Images are returned as [0, 1] CHW tensors (PI05Policy normalizes them to [-1, 1]
+        internally). The language prompt encodes the task description and current robot
+        state as discretized tokens.
+        """
+        # --- Process Cameras ---
+        obs = {
+            "observation.images.left_camera": self._img_to_tensor(
+                obs_msg.left_image,
+                self.device,
+                self.image_scaling,
+            ),
+            "observation.images.center_camera": self._img_to_tensor(
+                obs_msg.center_image,
+                self.device,
+                self.image_scaling,
+            ),
+            "observation.images.right_camera": self._img_to_tensor(
+                obs_msg.right_image,
+                self.device,
+                self.image_scaling,
+            ),
+        }
+
+        # --- Build and Tokenize Language Prompt (includes discretized robot state) ---
+        state_np = self._build_state_vector(obs_msg)
+        obs.update(self._tokenize_prompt(task_text, state_np))
 
         return obs
 
@@ -251,9 +266,16 @@ class my_policy_node(Policy):
     ):
         self.policy.reset()
         self.get_logger().info(f"my_policy_node.insert_cable() enter. Task: {task}")
-        
+
         port_frame = f"task_board/{task.target_module_name}/{task.port_name}_link"
         cable_tip_frame = f"{task.cable_name}/{task.plug_name}_link"
+
+        # Build task description prompt from task fields
+        task_text = (
+            f"Insert {task.plug_name} of {task.cable_name} "
+            f"into {task.port_name} of {task.target_module_name}"
+        )
+        self.get_logger().info(f"Task prompt: '{task_text}'")
 
         start_time = time.time()
 
@@ -268,26 +290,30 @@ class my_policy_node(Policy):
                 self.get_logger().info("No observation received.")
                 continue
 
-            obs_tensors = self.prepare_observations(observation_msg)
+            obs_batch = self.prepare_observations(observation_msg, task_text)
 
             # 2. Model Inference
             with torch.inference_mode():
-                # returns shape [1, 8] (first action of chunk)
-                normalized_action = self.policy.select_action(obs_tensors)
+                # Returns shape [action_dim] — one action popped from the predicted chunk
+                normalized_action = self.policy.select_action(obs_batch)
 
-            # 3. Un-normalize Action
-            # Formula: (norm * std) + mean
-            raw_action_tensor = (normalized_action * self.action_std) + self.action_mean
-
-            # 4. Extract and Command
-            # raw_action_tensor is [1, 8]:
-            #   [0:3]  TCP position  (x, y, z) in base_link
-            #   [3:7]  TCP orientation quaternion  (x, y, z, w)
-            #   [7]    gripper finger position
-            action = raw_action_tensor[0].cpu().numpy()
+            # 3. Un-normalize Action using quantile stats
+            # Formula: unnorm = (norm + 1) * (q99 - q01) / 2 + q01
+            action_q01 = self.action_q01[0]
+            action_q99 = self.action_q99[0]
+            action_dim = normalized_action.shape[-1]
+            raw_action = (
+                (normalized_action + 1.0)
+                * (action_q99[:action_dim] - action_q01[:action_dim])
+                / 2.0
+                + action_q01[:action_dim]
+            )
+            action = raw_action.cpu().numpy()
 
             self.get_logger().info(f"Action: {action}")
 
+            # 4. Extract and Command
+            # action: [0:3] TCP position (x, y, z), [3:7] TCP orientation quat (x, y, z, w)
             pose = Pose()
             pose.position.x = float(action[0])
             pose.position.y = float(action[1])
@@ -296,7 +322,6 @@ class my_policy_node(Policy):
             pose.orientation.y = float(action[4])
             pose.orientation.z = float(action[5])
             pose.orientation.w = float(action[6])
-            # gripper_pos = float(action[7])
 
             motion_update = self.set_vr_cartesian_pose_target(pose)
             move_robot(motion_update=motion_update)
