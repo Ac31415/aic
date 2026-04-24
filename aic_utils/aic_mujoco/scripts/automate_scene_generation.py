@@ -463,33 +463,31 @@ class SceneGenerator:
             # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
             spawn_cable=True
             cable_type=random.choice(self.allowed_cable_types)
-            cable_x=0.172
-            cable_y=0.024
+            cable_x_mean=0.172
+            cable_y_mean=0.024
 
             # Note: set cable_z to 1.508 if cable_type is sfp_sc_cable_reversed, according to the readme.
             if cable_type == "sfp_sc_cable_reversed":
-                cable_z = 1.508
+                cable_z_mean = 1.508
             else:
-                cable_z = 1.518
+                cable_z_mean = 1.518
 
-            cable_roll=0.4432
-            cable_pitch=-0.48
-            cable_yaw=1.3303
+            cable_roll_mean=0.4432
+            cable_pitch_mean=-0.48
+            cable_yaw_mean=1.3303
             # attach_cable_to_gripper=random.choice([True, False]),
             attach_cable_to_gripper=True
             
-            # # Cable configuration
-            # # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
-            # spawn_cable=True,
-            # cable_type=random.choice(["sfp_sc_cable", "sfp_sc_cable_reversed"]),
-            # cable_x=random.uniform(0.15, 0.19),
-            # cable_y=random.uniform(0.0, 0.05),
-            # cable_z=1.508 if random.random() > 0.5 else 1.518,
-            # # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
-            # cable_roll=random.uniform(0.3, 0.6),
-            # cable_pitch=random.uniform(-0.6, -0.3),
-            # cable_yaw=random.uniform(1.0, 1.66),
-            # # attach_cable_to_gripper=random.choice([True, False]),
+            # Cable configuration
+            # spawn_cable=random.choice([True, False]) if random.random() > 0.3 else True,
+            cable_x=random.uniform(cable_x_mean - 0.002, cable_x_mean + 0.002)
+            cable_y=random.uniform(cable_y_mean - 0.002, cable_y_mean + 0.002)
+            cable_z=random.uniform(cable_z_mean - 0.002, cable_z_mean + 0.002)
+            # cable_z=1.508 if cable_type == "sfp_sc_cable" else 1.518,
+            cable_roll=random.uniform(cable_roll_mean - 0.04, cable_roll_mean + 0.04)
+            cable_pitch=random.uniform(cable_pitch_mean - 0.04, cable_pitch_mean + 0.04)
+            cable_yaw=random.uniform(cable_yaw_mean - 0.04, cable_yaw_mean + 0.04)
+            # attach_cable_to_gripper=random.choice([True, False]),
             # attach_cable_to_gripper=True,
 
             # Mount rails (presence and positioning)
