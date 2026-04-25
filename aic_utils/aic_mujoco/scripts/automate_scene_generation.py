@@ -811,8 +811,8 @@ class GazeboExporter:
             if "</sdf>" not in content:
                 return False
 
-            # A valid AIC export should include robot/tabletop content.
-            return ("tabletop" in content) or ("shoulder_link" in content)
+            # A valid AIC export should include both robot and tabletop content.
+            return ("tabletop" in content) and ("shoulder_link" in content)
 
         process = None
         try:
@@ -839,6 +839,7 @@ class GazeboExporter:
             elapsed_time = 0.0
             last_file_size = 0
             stable_size_count = 0
+            sdf_complete = False
             
             logger.info(f"Polling for SDF export (timeout: {timeout}s, poll interval: {poll_interval}s)...")
             
@@ -869,6 +870,7 @@ class GazeboExporter:
                                     logger.info(f"✓ SDF file detected at {sdf_path} ({current_size} bytes)")
                                     logger.info(f"✓ File size stable - export completed after {elapsed_time:.1f}s")
                                     logger.info("Shutting down Gazebo...")
+                                    sdf_complete = True
                                     break
                                 logger.info(
                                     "SDF file is stable but appears incomplete; waiting for full export..."
@@ -902,6 +904,11 @@ class GazeboExporter:
             file_size = sdf_path.stat().st_size
             if file_size == 0:
                 raise RuntimeError(f"SDF export produced empty file at {sdf_path}")
+            if not sdf_complete:
+                raise RuntimeError(
+                    "SDF export did not reach completeness criteria "
+                    f"after {elapsed_time:.1f}s (size={file_size} bytes)"
+                )
             
             logger.info(f"✓ Scene export complete: {sdf_path} ({file_size} bytes)")
             return sdf_path

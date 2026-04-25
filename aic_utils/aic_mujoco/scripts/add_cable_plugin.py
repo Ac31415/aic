@@ -406,15 +406,36 @@ def main():
             act.gear = [1, 0, 0, 0, 0, 0]
             print(f"  Added actuator: {act.name}")
 
+        def _spec_has_body(spec, body_name):
+            """Return True when a body exists anywhere in the spec body tree."""
+            stack = list(spec.worldbody.bodies)
+            while stack:
+                body = stack.pop()
+                if body.name == body_name:
+                    return True
+                stack.extend(list(body.bodies))
+            return False
+
         # Add robot contact exclusions
         print("Adding robot contact exclusions...")
-        robot_spec.add_exclude(bodyname1="tabletop", bodyname2="shoulder_link")
-        robot_spec.add_exclude(
-            bodyname1="gripper\\hande_finger_link_l",
-            bodyname2="gripper\\hande_finger_link_r",
-        )
-        print("  Added tabletop <-> shoulder_link exclusion")
-        print("  Added gripper finger exclusion")
+        if _spec_has_body(robot_spec, "tabletop") and _spec_has_body(
+            robot_spec, "shoulder_link"
+        ):
+            robot_spec.add_exclude(bodyname1="tabletop", bodyname2="shoulder_link")
+            print("  Added tabletop <-> shoulder_link exclusion")
+        else:
+            print("  Skipped tabletop <-> shoulder_link exclusion (body missing)")
+
+        if _spec_has_body(robot_spec, "gripper\\hande_finger_link_l") and _spec_has_body(
+            robot_spec, "gripper\\hande_finger_link_r"
+        ):
+            robot_spec.add_exclude(
+                bodyname1="gripper\\hande_finger_link_l",
+                bodyname2="gripper\\hande_finger_link_r",
+            )
+            print("  Added gripper finger exclusion")
+        else:
+            print("  Skipped gripper finger exclusion (body missing)")
 
         # Serialize and clean
         robot_xml = robot_spec.to_xml()
