@@ -37,7 +37,7 @@
           <property type="string" key="state">docked_collapsed</property>
         </gz-gui>
         <enabled>true</enabled>
-        <highQuality>false</highQuality>
+        <highQuality>true</highQuality>
         <resolution>256 256 256</resolution>
         <octantCount>1 1 1</octantCount>
         <conserveMemory>true</conserveMemory>
