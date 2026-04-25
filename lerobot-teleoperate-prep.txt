@@ -25,6 +25,10 @@ export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
 ros2 launch aic_mujoco aic_mujoco_bringup.launch.py
 
+or 
+
+ros2 launch aic_mujoco aic_mujoco_bringup.launch.py launch_rviz:=false
+
 
 
 # reload mujoco scene:
@@ -76,6 +80,11 @@ aic_fix_macos_dyld_library_path
 python -c "import pyarrow; print('pyarrow OK')"
 
 run your lerobot-teleoperate command:
+
+
+export KMP_DUPLICATE_LIB_OK=TRUE
+
+lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=Ac31415/sc_to_sc_port_0_test --dataset.single_task="Insert sc_tip of sfp_sc into sc_port_base of sc_port_0" --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=3 --play_sounds=false --display_data=true --dataset.reset_time_s=60 --teleop.enable_local_keyboard_controls=true --dataset.episode_time_s=300
 
 
 
