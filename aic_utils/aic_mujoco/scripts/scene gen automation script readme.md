@@ -36,6 +36,7 @@ Use exactly 2 terminals.
 ### Terminal 1: Start Zenoh Daemon
 
 ```bash
+source ~/ws_aic/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
 ros2 run rmw_zenoh_cpp rmw_zenohd
@@ -44,6 +45,7 @@ ros2 run rmw_zenoh_cpp rmw_zenohd
 ### Terminal 2: Run Automation Script
 
 ```bash
+source ~/ws_aic/install/setup.bash
 export RMW_IMPLEMENTATION=rmw_zenoh_cpp
 export ZENOH_CONFIG_OVERRIDE='transport/shared_memory/enabled=true'
 cd ~/ws_aic/src/aic/aic_utils/aic_mujoco/scripts
