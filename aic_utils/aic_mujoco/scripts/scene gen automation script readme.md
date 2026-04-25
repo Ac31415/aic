@@ -74,10 +74,10 @@ Both scripts support:
 
 - `--enabled_present_params <csv|none>`
 - Optional. Controls which `*_present` flags are allowed to randomize to `True`.
-- Any listed flag can be `True` or `False` randomly.
-- Any unlisted flag is forced to `False`.
-- If omitted: all supported `*_present` flags are enabled.
-- If `none`: all supported `*_present` flags are forced `False`.
+- Any listed flag is guaranteed to be `True`.
+- Any unlisted flag is randomized.
+- If omitted: all supported `*_present` flags are guaranteed `True`.
+- If `none`: all supported `*_present` flags are randomized.
 
 - `--cable_types <csv>`
 - Optional. Allowed cable types: `sfp_sc_cable`, `sfp_sc_cable_reversed`.

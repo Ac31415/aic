@@ -431,9 +431,9 @@ class SceneGenerator:
             )
 
     def _randomize_presence(self, name: str) -> bool:
-        """Randomize a presence flag only when explicitly enabled by the user."""
-        if name not in self.enabled_presence_params:
-            return False
+        """Force enabled presence flags to True and randomize all others."""
+        if name in self.enabled_presence_params:
+            return True
         return random.choice([True, False])
     
     def generate_random_config(self) -> SceneConfig:
@@ -1412,10 +1412,10 @@ def main():
         type=str,
         default=None,
         help=(
-            "Comma-separated list of *_present parameters that are allowed to be randomized "
-            "to True. Parameters omitted from this list are forced to False. "
-            "Use 'none' to force all listed present parameters to False. "
-            "Default: all listed present parameters enabled."
+            "Comma-separated list of *_present parameters that are guaranteed to be True. "
+            "Parameters omitted from this list are randomized. "
+            "Use 'none' to randomize all listed present parameters. "
+            "Default: all listed present parameters guaranteed True."
         ),
     )
     parser.add_argument(
