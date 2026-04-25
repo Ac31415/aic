@@ -122,7 +122,7 @@ python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py \
 ### 3) Allow only specific `*_present` parameters to be enabled
 
 ```bash
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py \
+python3 automate_scene_generation.py \
 	--num_scenes 5 \
 	--gazebo_gui false \
 	--launch_rviz false \
