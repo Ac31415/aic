@@ -17,6 +17,7 @@ import argparse
 import copy
 import json
 import random
+import hashlib
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -414,17 +415,26 @@ def _manifest_to_trials(manifest: Dict, time_limit: int) -> Tuple[Dict[str, Dict
 
 def _build_engine_config_from_manifests(
     sample_config: Dict,
-    normal_manifest: Dict,
-    reversed_manifest: Optional[Dict],
+    normal_manifests: List[Dict],
+    reversed_manifests: Optional[List[Dict]],
     tasks_yaml: Optional[Dict],
     time_limit: int,
 ) -> Dict:
     """Build a full engine config with three randomized trials."""
     trials: Dict[str, Dict] = {}
 
-    normal_scenes = _scene_candidates(normal_manifest, "sfp_sc_cable")
-    reversed_source = reversed_manifest if reversed_manifest is not None else normal_manifest
-    reversed_scenes = _scene_candidates(reversed_source, "sfp_sc_cable_reversed")
+    normal_scenes: List[Dict] = []
+    for manifest in normal_manifests:
+        normal_scenes.extend(_scene_candidates(manifest, "sfp_sc_cable"))
+
+    reversed_source = (
+        reversed_manifests
+        if reversed_manifests is not None and len(reversed_manifests) > 0
+        else normal_manifests
+    )
+    reversed_scenes: List[Dict] = []
+    for manifest in reversed_source:
+        reversed_scenes.extend(_scene_candidates(manifest, "sfp_sc_cable_reversed"))
 
     if len(normal_scenes) < 2:
         raise ValueError("Need at least two normal cable scenes to build trial_1 and trial_2")
@@ -437,7 +447,7 @@ def _build_engine_config_from_manifests(
 
     for trial_index, scene_entry in enumerate(chosen_scenes, start=1):
         scene_config = scene_entry["config"]
-        scene_index = int(scene_entry["index"])
+        scene_index = int(scene_entry.get("index", -1))
         if tasks_yaml is not None:
             task_candidates = _tasks_from_tasks_yaml(tasks_yaml, scene_index)
         else:
@@ -468,6 +478,89 @@ def _build_engine_config_from_manifests(
     engine_config = copy.deepcopy(sample_config)
     engine_config["trials"] = trials
     return engine_config
+
+
+def _task_candidates_for_scene_entry(
+    scene_entry: Dict,
+    tasks_yaml: Optional[Dict],
+    time_limit: int,
+) -> List[Dict[str, object]]:
+    """Resolve task candidates for a scene entry from tasks YAML or scene config."""
+    scene_config = scene_entry["config"]
+    scene_index = int(scene_entry.get("index", -1))
+    if tasks_yaml is not None:
+        return _tasks_from_tasks_yaml(tasks_yaml, scene_index)
+    return _build_tasks_for_scene(scene_config, time_limit=time_limit)
+
+
+def _estimate_max_unique_engine_configs(
+    normal_manifests: List[Dict],
+    reversed_manifests: Optional[List[Dict]],
+    tasks_yaml: Optional[Dict],
+    time_limit: int,
+) -> int:
+    """Estimate discrete max unique full configs from manifest pool.
+
+    This estimate uses scene-task combinations only and ignores randomized gripper
+    offset values in scene blocks.
+    """
+    normal_scenes: List[Dict] = []
+    for manifest in normal_manifests:
+        normal_scenes.extend(_scene_candidates(manifest, "sfp_sc_cable"))
+
+    reversed_source = (
+        reversed_manifests
+        if reversed_manifests is not None and len(reversed_manifests) > 0
+        else normal_manifests
+    )
+    reversed_scenes: List[Dict] = []
+    for manifest in reversed_source:
+        reversed_scenes.extend(_scene_candidates(manifest, "sfp_sc_cable_reversed"))
+
+    if len(normal_scenes) < 2 or len(reversed_scenes) < 1:
+        return 0
+
+    normal_task_counts: List[int] = [
+        len(_task_candidates_for_scene_entry(scene, tasks_yaml, time_limit))
+        for scene in normal_scenes
+    ]
+    reversed_task_counts: List[int] = [
+        len(_task_candidates_for_scene_entry(scene, tasks_yaml, time_limit))
+        for scene in reversed_scenes
+    ]
+
+    # Ordered trial pairs (trial_1, trial_2) use distinct normal scenes: i != j.
+    normal_sum = sum(normal_task_counts)
+    normal_square_sum = sum(count * count for count in normal_task_counts)
+    normal_ordered_pair_task_combos = normal_sum * normal_sum - normal_square_sum
+    reversed_task_combo_sum = sum(reversed_task_counts)
+
+    return normal_ordered_pair_task_combos * reversed_task_combo_sum
+
+
+def _load_manifest_json(path: Path) -> Dict:
+    """Load and validate one manifest file."""
+    if not path.exists():
+        raise FileNotFoundError(f"Manifest not found: {path}")
+    loaded = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(loaded, dict):
+        raise ValueError(f"Manifest must be a JSON object: {path}")
+    return loaded
+
+
+def _build_indexed_output_path(base_output: Path, index: int, total: int) -> Path:
+    """Build output path for one file, adding an index suffix when total > 1."""
+    if total == 1:
+        return base_output
+    return base_output.with_name(
+        f"{base_output.stem}_{index:03d}{base_output.suffix}"
+    )
+
+
+def _engine_config_signature(engine_config: Dict) -> str:
+    """Create a stable fingerprint for uniqueness checks across generated files."""
+    normalized = json.dumps(engine_config, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
 
 
 def _emit_trials_yaml(trials: Dict[str, Dict]) -> str:
@@ -515,14 +608,16 @@ def main() -> None:
         "--normal_manifest",
         type=Path,
         dest="normal_manifest",
+        nargs="+",
         default=None,
-        help="Path to the normal or combined scene manifest JSON file",
+        help="One or more paths to normal or combined scene manifest JSON files",
     )
     parser.add_argument(
         "--reversed_manifest",
         type=Path,
+        nargs="+",
         default=None,
-        help="Optional path to a reversed-cable scene manifest JSON file",
+        help="Optional one or more paths to reversed-cable scene manifest JSON files",
     )
     parser.add_argument(
         "--tasks_yaml",
@@ -542,80 +637,185 @@ def main() -> None:
         default=180,
         help="Task time limit in seconds (default: 180)",
     )
+    parser.add_argument(
+        "--num_engine_configs",
+        type=int,
+        default=1,
+        help=(
+            "Number of full engine config files to generate "
+            "(applies to engine_config and random_engine_config modes only; default: 1)"
+        ),
+    )
+    parser.add_argument(
+        "--estimate_max_unique_only",
+        action="store_true",
+        help=(
+            "Engine-config helper: print estimated discrete maximum number of unique "
+            "full engine configs from manifest pool, then exit"
+        ),
+    )
 
     args = parser.parse_args()
 
     if args.time_limit <= 0:
         raise ValueError("--time_limit must be > 0")
+    if args.num_engine_configs <= 0:
+        raise ValueError("--num_engine_configs must be > 0")
+    if args.estimate_max_unique_only and args.mode != "engine_config":
+        raise ValueError("--estimate_max_unique_only is only valid when --mode engine_config")
 
     if args.mode == "tasks":
+        if args.num_engine_configs != 1:
+            raise ValueError("--num_engine_configs is only valid for full engine config modes")
         if args.normal_manifest is None:
             raise ValueError("--manifest is required when --mode tasks")
-        if not args.normal_manifest.exists():
-            raise FileNotFoundError(f"Manifest not found: {args.normal_manifest}")
-        normal_manifest = json.loads(args.normal_manifest.read_text(encoding="utf-8"))
+        if len(args.normal_manifest) != 1:
+            raise ValueError("--mode tasks currently supports exactly one --manifest file")
+        normal_manifest = _load_manifest_json(args.normal_manifest[0])
         trials, warnings = _manifest_to_trials(normal_manifest, time_limit=args.time_limit)
         yaml_text = _emit_trials_yaml(trials)
+        output_paths = [args.output]
     elif args.mode == "engine_config":
         if args.normal_manifest is None:
             raise ValueError("--normal_manifest is required when --mode engine_config")
-        if not args.normal_manifest.exists():
-            raise FileNotFoundError(f"Manifest not found: {args.normal_manifest}")
-        normal_manifest = json.loads(args.normal_manifest.read_text(encoding="utf-8"))
+        normal_manifests = [_load_manifest_json(path) for path in args.normal_manifest]
 
-        reversed_manifest = None
+        reversed_manifests = None
         if args.reversed_manifest is not None:
-            if not args.reversed_manifest.exists():
-                raise FileNotFoundError(f"Manifest not found: {args.reversed_manifest}")
-            reversed_manifest = json.loads(args.reversed_manifest.read_text(encoding="utf-8"))
+            reversed_manifests = [_load_manifest_json(path) for path in args.reversed_manifest]
 
         if not DEFAULT_SAMPLE_CONFIG.exists():
             raise FileNotFoundError(f"Sample config not found: {DEFAULT_SAMPLE_CONFIG}")
 
         sample_config = _load_yaml(DEFAULT_SAMPLE_CONFIG)
         tasks_yaml = _load_yaml(args.tasks_yaml) if args.tasks_yaml is not None else None
-        engine_config = _build_engine_config_from_manifests(
-            sample_config=sample_config,
-            normal_manifest=normal_manifest,
-            reversed_manifest=reversed_manifest,
+
+        estimate = _estimate_max_unique_engine_configs(
+            normal_manifests=normal_manifests,
+            reversed_manifests=reversed_manifests,
             tasks_yaml=tasks_yaml,
             time_limit=args.time_limit,
         )
-        yaml_text = yaml.dump(
-            engine_config,
-            Dumper=EngineConfigDumper,
-            sort_keys=False,
-            default_flow_style=False,
-            width=120,
-        )
+        if args.estimate_max_unique_only:
+            print(
+                "Estimated max unique full engine configs from manifest pool "
+                f"(discrete scene/task combinations, ignoring randomized gripper offsets): {estimate}"
+            )
+            return
+
+        unique_signatures = set()
+        generated_yaml_texts: List[str] = []
+        max_attempts = max(200, args.num_engine_configs * 200)
+        attempts = 0
+
+        while len(generated_yaml_texts) < args.num_engine_configs and attempts < max_attempts:
+            attempts += 1
+            engine_config = _build_engine_config_from_manifests(
+                sample_config=sample_config,
+                normal_manifests=normal_manifests,
+                reversed_manifests=reversed_manifests,
+                tasks_yaml=tasks_yaml,
+                time_limit=args.time_limit,
+            )
+            signature = _engine_config_signature(engine_config)
+            if signature in unique_signatures:
+                continue
+            unique_signatures.add(signature)
+            generated_yaml_texts.append(
+                yaml.dump(
+                    engine_config,
+                    Dumper=EngineConfigDumper,
+                    sort_keys=False,
+                    default_flow_style=False,
+                    width=120,
+                )
+            )
+
+        if len(generated_yaml_texts) < args.num_engine_configs:
+            raise RuntimeError(
+                "Could not generate enough unique engine config files with the provided "
+                f"manifest pool. Requested={args.num_engine_configs}, "
+                f"generated={len(generated_yaml_texts)}"
+            )
+
+        output_paths = [
+            _build_indexed_output_path(args.output, i + 1, args.num_engine_configs)
+            for i in range(args.num_engine_configs)
+        ]
         warnings = []
     else:
         if not DEFAULT_SAMPLE_CONFIG.exists():
             raise FileNotFoundError(f"Sample config not found: {DEFAULT_SAMPLE_CONFIG}")
         sample_config = _load_yaml(DEFAULT_SAMPLE_CONFIG)
-        engine_config = copy.deepcopy(sample_config)
-        engine_config["trials"] = _generate_random_engine_trials(time_limit=args.time_limit)
-        yaml_text = yaml.dump(
-            engine_config,
-            Dumper=EngineConfigDumper,
-            sort_keys=False,
-            default_flow_style=False,
-            width=120,
-        )
+
+        unique_signatures = set()
+        generated_yaml_texts: List[str] = []
+        max_attempts = max(200, args.num_engine_configs * 200)
+        attempts = 0
+
+        while len(generated_yaml_texts) < args.num_engine_configs and attempts < max_attempts:
+            attempts += 1
+            engine_config = copy.deepcopy(sample_config)
+            engine_config["trials"] = _generate_random_engine_trials(time_limit=args.time_limit)
+            signature = _engine_config_signature(engine_config)
+            if signature in unique_signatures:
+                continue
+            unique_signatures.add(signature)
+            generated_yaml_texts.append(
+                yaml.dump(
+                    engine_config,
+                    Dumper=EngineConfigDumper,
+                    sort_keys=False,
+                    default_flow_style=False,
+                    width=120,
+                )
+            )
+
+        if len(generated_yaml_texts) < args.num_engine_configs:
+            raise RuntimeError(
+                "Could not generate enough unique random engine config files. "
+                f"Requested={args.num_engine_configs}, generated={len(generated_yaml_texts)}"
+            )
+
+        output_paths = [
+            _build_indexed_output_path(args.output, i + 1, args.num_engine_configs)
+            for i in range(args.num_engine_configs)
+        ]
         warnings = []
 
     if args.tasks_yaml is not None and not args.tasks_yaml.exists():
         raise FileNotFoundError(f"Tasks YAML not found: {args.tasks_yaml}")
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(yaml_text, encoding="utf-8")
+    for output_path in output_paths:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
 
     if args.mode == "tasks":
-        print(f"Wrote {len(trials)} trial entries to: {args.output}")
-    elif args.mode == "engine_config":
-        print(f"Wrote engine config YAML to: {args.output}")
+        output_paths[0].write_text(yaml_text, encoding="utf-8")
     else:
-        print(f"Wrote engine config YAML to: {args.output}")
+        for output_path, yaml_text in zip(output_paths, generated_yaml_texts):
+            output_path.write_text(yaml_text, encoding="utf-8")
+
+    if args.mode == "tasks":
+        print(f"Wrote {len(trials)} trial entries to: {output_paths[0]}")
+    elif args.mode == "engine_config":
+        if len(output_paths) == 1:
+            print(f"Wrote engine config YAML to: {output_paths[0]}")
+        else:
+            print(
+                f"Wrote {len(output_paths)} unique engine config YAML files with base: {args.output}"
+            )
+            for output_path in output_paths:
+                print(f"  - {output_path}")
+    else:
+        if len(output_paths) == 1:
+            print(f"Wrote engine config YAML to: {output_paths[0]}")
+        else:
+            print(
+                "Wrote "
+                f"{len(output_paths)} unique random engine config YAML files with base: {args.output}"
+            )
+            for output_path in output_paths:
+                print(f"  - {output_path}")
     for warning in warnings:
         print(f"WARNING: {warning}")
 
