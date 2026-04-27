@@ -35,6 +35,7 @@
     <texture type="2d" colorspace="linear" name="texture_79d083415a0beb7006489abaa2f7f67624ecb5cc84df7fd21d83dada2e2c75a0_lc_plug_visual_merged_0" file="79d083415a0beb7006489abaa2f7f67624ecb5cc84df7fd21d83dada2e2c75a0_lc_plug_visual_03dabf32-0905e8a8aa368516e682f6ec84258100cdb4efef.png"/>
     <texture type="2d" colorspace="linear" name="texture_07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005" file="07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_8fc63b58-7471eafc55dcb668ae68adfe70a147b363ba3be9.png"/>
     <texture type="2d" colorspace="linear" name="texture_07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005_1" file="07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_1f09e86a-a4dc4a72bd6e778067310898a5c179607fd78966.png"/>
+    <texture type="2d" colorspace="linear" name="texture_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006" file="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_dde5a3d8-80fba2240c77c79deed3a9c104fc19aae11de3a0.png"/>
     <texture type="2d" colorspace="linear" name="texture_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_0" file="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_45ced356-decb3c11fd49e8be2155fa2b1c64d354b4b1809a.png"/>
     <texture type="2d" colorspace="linear" name="texture_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_1" file="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_39dce63a-b1ab28e3f7e42255c5bb13a337e50008ebdbcb02.png"/>
     <material name="material_21630dbca88254236676b9eaa3d656b1a410544dc4182b3953f5492d6064c1ce_enclosure_visual_V1014952.001" class="world_default" shininess="30" rgba="0.290196 0.290196 0.290196 1"/>
@@ -58,6 +59,9 @@
     <material name="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1" class="world_default" shininess="30" rgba="0.0313726 0.0313726 0.0313726 1"/>
     <material name="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011" class="world_default" shininess="30" rgba="0.0313726 0.0313726 0.0313726 1"/>
     <material name="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1" class="world_default" shininess="30" rgba="0.0352941 0.0352941 0.0313726 1"/>
+    <material name="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006" class="world_default" texture="texture_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006" shininess="30" rgba="0.5 0.5 0.5 1"/>
+    <material name="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_1" class="world_default" shininess="30" rgba="0.0352941 0.0352941 0.0313726 1"/>
+    <material name="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_2" class="world_default" shininess="30" rgba="0.0313726 0.0313726 0.0313726 1"/>
     <material name="material_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054" class="world_default" shininess="30" rgba="0.0352941 0.0352941 0.0313726 1"/>
     <material name="material_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054_1" class="world_default" shininess="30" rgba="0.0313726 0.0313726 0.0313726 1"/>
     <material name="material_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_0" class="world_default" texture="texture_eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_0" shininess="30" rgba="0.5 0.5 0.5 1"/>
@@ -85,6 +89,9 @@
     <mesh name="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1" class="world_default" content_type="model/obj" file="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1-b37e6ae2e05f8677f37dfa75affee0820ec2722c.obj" inertia="shell"/>
     <mesh name="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011" class="world_default" content_type="model/obj" file="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011-e79a298280ce559f60558a5df64e118c814f63e4.obj" inertia="shell"/>
     <mesh name="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1" class="world_default" content_type="model/obj" file="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1-3a79ef8883f6645921d3fa2c67cf381141e6ea26.obj" inertia="shell"/>
+    <mesh name="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006" class="world_default" content_type="model/obj" file="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006-0690c54f8a7d5fd325c57bdd49f081ad4db184ec.obj" inertia="shell"/>
+    <mesh name="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_1" class="world_default" content_type="model/obj" file="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_1-31aef5141da75eeb5a734da46bb7eaf48a169650.obj" inertia="shell"/>
+    <mesh name="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_2" class="world_default" content_type="model/obj" file="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_2-a5eaa459350ec83eadeb09501472b99f6092b833.obj" inertia="shell"/>
     <mesh name="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054" class="world_default" content_type="model/obj" file="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054-865f98896565b646973302f5cc3bb20e1474682a.obj" inertia="shell"/>
     <mesh name="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054_1" class="world_default" content_type="model/obj" file="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_mount_visual_ISO_4762_-_M2_x_8.054_1-5adcf23490bd5794ededbd17ac1064f40ca2f1d8.obj" inertia="shell"/>
     <mesh name="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_0" class="world_default" content_type="model/obj" file="eb844ba3a06b0888f9b45b9f67fc3733291f98cdcae567ac4695161ef383009a_nic_card_visual_merged_0-b45f6200bfaa68e87732b114c99af8b477e66413.obj" inertia="shell"/>
@@ -130,13 +137,13 @@
       <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
       <geom name="base_vis" class="world_default" size="0.002" contype="0" conaffinity="0"/>
       <plugin instance="composite"/>
-      <body name="cable_connection_0" pos="-2.00171e-08 2.73139e-08 -1.48304e-07" quat="0.92675 -0.0899561 -0.325229 0.165131">
+      <body name="cable_connection_0" pos="-6.01598e-09 3.45404e-08 -1.52959e-07" quat="0.91946 -0.0896831 -0.3418 0.172405">
         <inertial pos="0 0 0" mass="0.01" diaginertia="1e-6 1e-6 1e-6"/>
         <joint name="joint_connection_end_0" class="world_default" pos="0 0 0" type="ball" damping="0.2"/>
         <geom name="visual_0_0" class="world_default" size="0.001 0.00180278" pos="-0.00180278 0.002 0" quat="0.676768 0.204909 0.676764 -0.204908" type="cylinder" contype="0" conaffinity="0"/>
         <geom name="visual_1_0" class="world_default" size="0.001 0.00180278" pos="-0.00180278 -0.002 0" quat="0.676768 -0.204909 0.676764 0.204908" type="cylinder" contype="0" conaffinity="0"/>
         <plugin instance="composite"/>
-        <body name="link_1" pos="0.00244619 -0.00579154 -0.023162" quat="-0.0817782 -0.262164 -0.955934 0.103792">
+        <body name="link_1" pos="0.000649372 -0.00575714 -0.0232904" quat="-0.0460147 -0.270215 -0.95509 0.112562">
           <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
           <joint name="joint_end_0" pos="0 0 -0.024" type="ball"/>
           <geom name="link_1_collision" size="0.002 0.018" pos="0 0 0.006" type="cylinder" group="3"/>
@@ -144,7 +151,7 @@
           <geom name="link_1_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
           <geom name="sphere_1_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
           <plugin instance="composite"/>
-          <body name="link_2" pos="0.00607625 -0.0075754 0.0459479" quat="0.97812 0.158241 0.133111 -0.0228476">
+          <body name="link_2" pos="0.00594775 -0.00744423 0.0460278" quat="0.979004 0.155575 0.129963 -0.0213836">
             <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
             <joint name="joint_1" pos="0 0 -0.024" type="ball"/>
             <geom name="link_2_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -152,7 +159,7 @@
             <geom name="link_2_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
             <geom name="sphere_2_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
             <plugin instance="composite"/>
-            <body name="link_3" pos="0.000342233 -0.00667031 0.0470522" quat="0.989821 0.140155 0.0103718 -0.0224495">
+            <body name="link_3" pos="0.000239161 -0.00651452 0.047098" quat="0.990339 0.136875 0.0078895 -0.020756">
               <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
               <joint name="joint_2" pos="0 0 -0.024" type="ball"/>
               <geom name="link_3_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -160,7 +167,7 @@
               <geom name="link_3_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
               <geom name="sphere_3_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
               <plugin instance="composite"/>
-              <body name="link_4" pos="-0.00222517 -0.00467726 0.0474346" quat="0.993769 0.0991779 -0.0441299 -0.0252793">
+              <body name="link_4" pos="-0.00230159 -0.00452701 0.0474566" quat="0.994056 0.0959444 -0.0460156 -0.0230398">
                 <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                 <joint name="joint_3" pos="0 0 -0.024" type="ball"/>
                 <geom name="link_4_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -168,7 +175,7 @@
                 <geom name="link_4_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                 <geom name="sphere_4_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                 <plugin instance="composite"/>
-                <body name="link_5" pos="-0.00369257 -0.00314892 0.0475048" quat="0.993992 0.0690489 -0.0745669 -0.0406504">
+                <body name="link_5" pos="-0.0037467 -0.00303505 0.0475112" quat="0.994162 0.0665078 -0.0759685 -0.0380324">
                   <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                   <joint name="joint_4" pos="0 0 -0.024" type="ball"/>
                   <geom name="link_5_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -176,7 +183,7 @@
                   <geom name="link_5_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                   <geom name="sphere_5_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                   <plugin instance="composite"/>
-                  <body name="link_6" pos="-0.00400119 -0.00179876 0.047596" quat="0.993727 0.0429305 -0.081144 -0.0638635">
+                  <body name="link_6" pos="-0.0040477 -0.00173459 0.0475928" quat="0.993862 0.0414354 -0.082313 -0.0612112">
                     <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                     <joint name="joint_5" pos="0 0 -0.024" type="ball"/>
                     <geom name="link_6_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -184,7 +191,7 @@
                     <geom name="link_6_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                     <geom name="sphere_6_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                     <plugin instance="composite"/>
-                    <body name="link_7" pos="-0.00351043 -0.000708269 0.0477318" quat="0.993363 0.0211603 -0.0717633 -0.0873645">
+                    <body name="link_7" pos="-0.00356288 -0.000692096 0.0477245" quat="0.993491 0.0207481 -0.0729403 -0.0849953">
                       <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                       <joint name="joint_6" pos="0 0 -0.024" type="ball"/>
                       <geom name="link_7_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -192,7 +199,7 @@
                       <geom name="link_7_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                       <geom name="sphere_7_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                       <plugin instance="composite"/>
-                      <body name="link_8" pos="-0.00241112 0.000200978 0.0478785" quat="0.993427 0.000995451 -0.0504622 -0.102736">
+                      <body name="link_8" pos="-0.00247588 0.000175641 0.047872" quat="0.993557 0.00156277 -0.0517609 -0.100807">
                         <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                         <joint name="joint_7" pos="0 0 -0.024" type="ball"/>
                         <geom name="link_8_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -200,7 +207,7 @@
                         <geom name="link_8_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                         <geom name="sphere_8_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                         <plugin instance="composite"/>
-                        <body name="link_9" pos="-0.0011696 0.00100402 0.0479516" quat="0.993966 -0.0182556 -0.0264413 -0.104875">
+                        <body name="link_9" pos="-0.00124536 0.000940547 0.0479504" quat="0.994109 -0.0168185 -0.027846 -0.103383">
                           <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                           <joint name="joint_8" pos="0 0 -0.024" type="ball"/>
                           <geom name="link_9_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -208,7 +215,7 @@
                           <geom name="link_9_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                           <geom name="sphere_9_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                           <plugin instance="composite"/>
-                          <body name="link_10" pos="-0.000282006 0.00176554 0.0479338" quat="0.994694 -0.0360548 -0.00939097 -0.0958967">
+                          <body name="link_10" pos="-0.000362466 0.00166584 0.0479397" quat="0.994867 -0.0338359 -0.0108209 -0.094751">
                             <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                             <joint name="joint_9" pos="0 0 -0.024" type="ball"/>
                             <geom name="link_10_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -216,7 +223,7 @@
                             <geom name="link_10_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                             <geom name="sphere_10_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                             <plugin instance="composite"/>
-                            <body name="link_11" pos="0.00127256 0.00268174 0.0478169" quat="0.993831 -0.0581865 0.0212804 -0.0919817">
+                            <body name="link_11" pos="0.00119326 0.00255148 0.0478352" quat="0.994107 -0.0552955 0.0199289 -0.0910882">
                               <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                               <joint name="joint_10" pos="0 0 -0.024" type="ball"/>
                               <geom name="link_11_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -224,7 +231,7 @@
                               <geom name="link_11_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                               <geom name="sphere_11_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                               <plugin instance="composite"/>
-                              <body name="link_12" pos="0.00326492 0.00422179 0.0474007" quat="0.991345 -0.0930294 0.0621633 -0.0686813">
+                              <body name="link_12" pos="0.00319572 0.00407201 0.0474367" quat="0.991779 -0.0897125 0.0609852 -0.0678692">
                                 <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                 <joint name="joint_11" pos="0 0 -0.024" type="ball"/>
                                 <geom name="link_12_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -232,7 +239,7 @@
                                 <geom name="link_12_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                 <geom name="sphere_12_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                 <plugin instance="composite"/>
-                                <body name="link_13" pos="0.00481479 0.00598334 0.0467385" quat="0.985881 -0.130515 0.0961868 -0.0418541">
+                                <body name="link_13" pos="0.00475676 0.00583653 0.0467892" quat="0.986452 -0.127206 0.0951645 -0.0409181">
                                   <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                   <joint name="joint_12" pos="0 0 -0.024" type="ball"/>
                                   <geom name="link_13_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -240,7 +247,7 @@
                                   <geom name="link_13_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                   <geom name="sphere_13_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                   <plugin instance="composite"/>
-                                  <body name="link_14" pos="0.00590606 0.00750564 0.0460188" quat="0.979013 -0.161669 0.12311 -0.0155291">
+                                  <body name="link_14" pos="0.00585355 0.00738692 0.0460726" quat="0.979605 -0.15889 0.122149 -0.0144018">
                                     <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                     <joint name="joint_13" pos="0 0 -0.024" type="ball"/>
                                     <geom name="link_14_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -248,7 +255,7 @@
                                     <geom name="link_14_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                     <geom name="sphere_14_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                     <plugin instance="composite"/>
-                                    <body name="link_15" pos="0.00663819 0.00818607 0.0455629" quat="0.974246 -0.173857 0.143368 0.00805551">
+                                    <body name="link_15" pos="0.00658829 0.00811093 0.0456065" quat="0.974702 -0.172005 0.142427 0.00923981">
                                       <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                       <joint name="joint_14" pos="0 0 -0.024" type="ball"/>
                                       <geom name="link_15_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -256,7 +263,7 @@
                                       <geom name="link_15_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                       <geom name="sphere_15_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                       <plugin instance="composite"/>
-                                      <body name="link_16" pos="0.00692039 0.00767785 0.0456615" quat="0.974953 -0.159896 0.152262 0.0267625">
+                                      <body name="link_16" pos="0.00687919 0.0076471 0.0456855" quat="0.97518 -0.159067 0.15149 0.0277855">
                                         <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                         <joint name="joint_15" pos="0 0 -0.024" type="ball"/>
                                         <geom name="link_16_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -264,7 +271,7 @@
                                         <geom name="link_16_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                         <geom name="sphere_16_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                         <plugin instance="composite"/>
-                                        <body name="link_17" pos="0.00681407 0.00605044 0.0462046" quat="0.98033 -0.122605 0.149667 0.0389994">
+                                        <body name="link_17" pos="0.00679574 0.00605502 0.0462088" quat="0.980346 -0.122595 0.14937 0.0397585">
                                           <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                           <joint name="joint_16" pos="0 0 -0.024" type="ball"/>
                                           <geom name="link_17_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -272,7 +279,7 @@
                                           <geom name="link_17_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                           <geom name="sphere_17_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                           <plugin instance="composite"/>
-                                          <body name="link_18" pos="0.00641391 0.00357494 0.0468492" quat="0.986994 -0.0693777 0.138429 0.0432142">
+                                          <body name="link_18" pos="0.00643204 0.00360203 0.04684" quat="0.986871 -0.0698558 0.138886 0.0437839">
                                             <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                             <joint name="joint_17" pos="0 0 -0.024" type="ball"/>
                                             <geom name="link_18_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -280,7 +287,7 @@
                                             <geom name="link_18_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                             <geom name="sphere_18_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                             <plugin instance="composite"/>
-                                            <body name="link_19" pos="0.00637339 0.00138352 0.047098" quat="0.989824 -0.0239689 0.13506 0.0378437">
+                                            <body name="link_19" pos="0.00643221 0.00142111 0.0470793" quat="0.989611 -0.024655 0.136366 0.0382932">
                                               <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                               <joint name="joint_18" pos="0 0 -0.024" type="ball"/>
                                               <geom name="link_19_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -288,7 +295,7 @@
                                               <geom name="link_19_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                               <geom name="sphere_19_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                               <plugin instance="composite"/>
-                                              <body name="link_20" pos="0.00586496 -0.00106264 0.0472501" quat="0.991753 0.0257463 0.122471 0.0276566">
+                                              <body name="link_20" pos="0.005962 -0.00102198 0.0472273" quat="0.991503 0.0249969 0.124556 0.0279686">
                                                 <inertial pos="0 0 0" mass="0.0025" diaginertia="1e-6 1e-6 1e-6"/>
                                                 <joint name="joint_19" pos="0 0 -0.024" type="ball"/>
                                                 <geom name="link_20_collision" size="0.002 0.024" type="cylinder" group="3"/>
@@ -296,7 +303,7 @@
                                                 <geom name="link_20_vis" size="0.002 0.024" type="cylinder" contype="0" conaffinity="0"/>
                                                 <geom name="sphere_20_vis" size="0.002" pos="0 0 0.024" contype="0" conaffinity="0"/>
                                                 <plugin instance="composite"/>
-                                                <body name="cable_connection_1" pos="9.89611e-07 -4.89122e-07 0.0240001" quat="0.776273 0.0593227 -0.626313 -0.0401705">
+                                                <body name="cable_connection_1" pos="1.10253e-06 -5.53432e-07 0.0240001" quat="0.778039 0.0587129 -0.624209 -0.039636">
                                                   <inertial pos="0 0 0" mass="0.01" diaginertia="1e-6 1e-6 1e-6"/>
                                                   <joint name="joint_connection_end_1" class="world_default" pos="0 0 0" type="ball"/>
                                                   <geom name="collision_0" class="world_default" size="0.001 0.00367636" pos="0.00367636 -0.00425 0" quat="0.673802 0.214463 0.673798 -0.214461" type="cylinder" group="3"/>
@@ -304,7 +311,7 @@
                                                   <geom name="visual_0" class="world_default" size="0.001 0.00367636" pos="0.00367636 -0.00425 0" quat="0.673802 0.214463 0.673798 -0.214461" type="cylinder" contype="0" conaffinity="0"/>
                                                   <geom name="visual_1" class="world_default" size="0.001 0.00367636" pos="0.00367636 0.00425 0" quat="0.673802 -0.214463 0.673798 0.214461" type="cylinder" contype="0" conaffinity="0"/>
                                                   <plugin instance="composite"/>
-                                                  <body name="sc_plug_link" pos="0.0520003 2.04731e-07 -2.0798e-08" quat="1 -3.91832e-08 1.05237e-08 1.45491e-07">
+                                                  <body name="sc_plug_link" pos="0.052 1.01119e-07 1.54835e-07" quat="1 1.75785e-07 -6.11616e-08 -7.43568e-08">
                                                     <inertial pos="-0.00907511 4.9566e-05 8.71699e-06" quat="0.000872542 0.70691 -0.000868656 0.707302" mass="0.04" diaginertia="8.85404e-06 7.17322e-06 2.12253e-06"/>
                                                     <geom name="housing blue_predeterminado005_collider_box" class="world_default" size="0.0063605 0.0045 0.00365" pos="0.002038 0.006344 4e-06" type="box" group="3"/>
                                                     <geom name="housing blue_predeterminado005_collider_box.001" class="world_default" size="0.0063605 0.0045 0.00365" pos="0.002038 -0.006344 4e-06" type="box" group="3"/>
@@ -322,7 +329,7 @@
                                                     <geom name="side_box_collision" class="world_default" size="0.002125 0.00081 0.0005" pos="0.00146 -0.00632 0.0042" type="box" group="3"/>
                                                     <geom name="side_box_collision_2" class="world_default" size="0.002125 0.00081 0.0005" pos="0.00146 0.00632 0.0042" type="box" group="3"/>
                                                     <geom name="sc_plug_visual" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_39e0c36083c2ebca1948ca6b7f99419210f3b34232289a37761dbe25cefc0443_sc_plug_visual_merged_0" mesh="39e0c36083c2ebca1948ca6b7f99419210f3b34232289a37761dbe25cefc0443_sc_plug_visual_merged_0"/>
-                                                    <body name="sc_tip_link" pos="0.01165 -1.51215e-07 2.03128e-08" quat="0.499999 -0.5 0.500001 -0.5">
+                                                    <body name="sc_tip_link" pos="0.0116502 -1.04509e-07 -1.40795e-07" quat="0.499998 -0.5 0.500001 -0.5">
                                                       <inertial pos="0 0 0" mass="0.001" diaginertia="1e-06 1e-06 1e-06"/>
                                                     </body>
                                                   </body>
@@ -347,12 +354,12 @@
             </body>
           </body>
         </body>
-        <body name="lc_plug_link" pos="-0.041 1.47828e-08 2.53455e-08" quat="0.707109 -4.00053e-08 7.30512e-08 0.707104">
+        <body name="lc_plug_link" pos="-0.041 6.19284e-09 1.17644e-08" quat="0.707109 5.19887e-08 -1.1262e-08 0.707105">
           <inertial pos="0 0.0197 0" quat="0 0.707107 0 0.707107" mass="0.01" diaginertia="1.06153e-07 9.96094e-08 8.49658e-09"/>
           <geom name="cylinder001_collider_cylinder.001" class="world_default" size="0.000625 0.001502" pos="0.003125 0.0197 0" quat="0.707107 0.707107 0 0" type="cylinder" group="3"/>
           <geom name="cylinder_collider_cylinder.001" class="world_default" size="0.000625 0.001502" pos="-0.003125 0.0197 0" quat="0.707107 0.707107 0 0" type="cylinder" group="3"/>
           <geom name="lc_plug_visual" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_79d083415a0beb7006489abaa2f7f67624ecb5cc84df7fd21d83dada2e2c75a0_lc_plug_visual_merged_0" mesh="79d083415a0beb7006489abaa2f7f67624ecb5cc84df7fd21d83dada2e2c75a0_lc_plug_visual_merged_0"/>
-          <body name="sfp_module_link" pos="-1.52586e-09 0.0384 -9.55562e-09" quat="8.5587e-08 1 -1.2979e-06 -1.37002e-06">
+          <body name="sfp_module_link" pos="2.19733e-09 0.0384001 -1.71349e-08" quat="2.96667e-08 1 -1.38217e-06 -1.40988e-06">
             <inertial pos="0.00024115 0.00702224 0.000553372" quat="0.510037 0.497012 -0.483415 0.50907" mass="0.02" diaginertia="3.07513e-06 2.81054e-06 5.69919e-07"/>
             <geom name="port_collider_box.008" class="world_default" size="0.00071 0.000503 0.0064415" pos="-0.00571 0.018813 -0.003546" quat="0.707107 0.707107 0 0" type="box" group="3"/>
             <geom name="port_collider_box.009" class="world_default" size="0.00071 0.000503 0.0064415" pos="0.00571 0.018813 -0.003546" quat="0.707107 0.707107 0 0" type="box" group="3"/>
@@ -365,7 +372,7 @@
             <geom name="port_collider_box.011" class="world_default" size="0.00125 0.000503 0.0064415" pos="0 0.018813 -0.003546" quat="0.707107 0.707107 0 0" type="box" group="3"/>
             <geom name="sfp_module_visual" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005" mesh="07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005"/>
             <geom name="sfp_module_visual_0" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005_1" mesh="07ae86fedcbbab3b5759a8a6e79ba15af5075968dd5eac2cb4666913710c9b1a_sfp_module_visual_Body.005_1"/>
-            <body name="sfp_tip_link" pos="7.51002e-09 -0.0236501 2.42985e-08" quat="0.707105 0.707108 2.12538e-08 -5.60216e-08">
+            <body name="sfp_tip_link" pos="-9.60839e-09 -0.02365 -1.99347e-08" quat="0.707105 0.707108 -2.5893e-08 -1.33893e-07">
               <inertial pos="0 0 0" mass="0.001" diaginertia="1e-06 1e-06 1e-06"/>
               <geom name="contact_collision" class="world_default" size="0.006875 0.0021125 0.0005" pos="0 0.0021125 -0.0005" type="box" group="3"/>
               <geom name="non_contact_collision" class="world_default" size="0.006875 0.0021125 0.0005" pos="0 -0.0021125 -0.0005" type="box" group="3"/>
@@ -374,58 +381,97 @@
         </body>
       </body>
     </body>
-    <body name="task_board_base_link" pos="0.152213 -0.290884 1.14" quat="0.986211 -2.22927e-09 7.34758e-09 0.165491">
-      <inertial pos="0.00321296 -0.000370452 0.000814815" quat="0.430716 0.495937 -0.501252 0.563273" mass="5.4" diaginertia="0.10948 0.108292 0.105233"/>
+    <body name="task_board_base_link" pos="0.24334 -0.233406 1.14" quat="0.996498 -1.30978e-08 -7.19629e-09 0.0836184">
+      <inertial pos="0.00497273 0.00112988 0.00101818" quat="0.467771 0.467468 -0.533528 0.527268" mass="5.5" diaginertia="0.113535 0.111368 0.107214"/>
       <geom name="task_board_base_link_fixed_joint_lump__v1015083001_collider_box_left_collision" class="world_default" size="0.15 0.114 0.0045" pos="0 -0.1 0.0075" type="box" group="3"/>
       <geom name="task_board_base_link_fixed_joint_lump__v1015083001_collider_right_collision_1" class="world_default" size="0.15 0.0635 0.0045" pos="0 0.149 0.0075" type="box" group="3"/>
       <geom name="task_board_base_link_fixed_joint_lump__v1015083001_collider_mid_collision_2" class="world_default" size="0.07 0.006 0.0045" pos="-0.075 0.05 0.0075" type="box" group="3"/>
       <geom name="task_board_base_link_fixed_joint_lump__v1015083001_collider_bottom_collision_3" class="world_default" size="0.0825 0.2125 0.0045" pos="0.068 0 0.0075" type="box" group="3"/>
       <geom name="task_board_base_link_fixed_joint_lump__v1015083001_collider_top_collision_4" class="world_default" size="0.0075 0.2125 0.0045" pos="-0.143 0 0.0075" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box_collision_5" class="world_default" size="0.0085165 0.003 0.0025" pos="0.0319694 -0.043291 0.0145" quat="0.882224 0 0 0.47083" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.001_collision_6" class="world_default" size="0.0092845 0.003 0.0025" pos="0.0134985 -0.0708579 0.0145" quat="0.882224 0 0 0.47083" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.002_collision_7" class="world_default" size="0.0071345 0.007375 0.001527" pos="0.019401 -0.0620486 0.026186" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.003_collision_8" class="world_default" size="0.0060515 0.007375 0.003999" pos="0.0262688 -0.0517987 0.015364" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.004_collision_9" class="world_default" size="0.0031275 0.007375 0.0069205" pos="0.0175124 -0.0648674 0.015079" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.005_collision_10" class="world_default" size="0.0071345 0.001625 0.007801" pos="0.0176022 -0.0544034 0.020836" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.006_collision_11" class="world_default" size="0.0071345 0.0028625 0.0076325" pos="0.0261455 -0.0600904 0.020805" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.007_collision_12" class="world_default" size="0.0045205 0.00325 0.000902" pos="0.0282238 -0.0488811 0.022179" quat="0.815068 0.180179 -0.337612 0.434991" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box_collision_13" class="world_default" size="0.0085165 0.003 0.0025" pos="0.0423281 0.130876 0.0145" quat="0.953702 0 0 -0.300752" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.001_collision_14" class="world_default" size="0.0092845 0.003 0.0025" pos="0.015148 0.149911 0.0145" quat="0.953702 0 0 -0.300752" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.002_collision_15" class="world_default" size="0.0071345 0.007375 0.001527" pos="0.0238337 0.143828 0.026186" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.003_collision_16" class="world_default" size="0.0060515 0.007375 0.003999" pos="0.0339397 0.136751 0.015364" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.004_collision_17" class="world_default" size="0.0031275 0.007375 0.0069205" pos="0.0210545 0.145775 0.015079" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.005_collision_18" class="world_default" size="0.0071345 0.001625 0.007801" pos="0.0315144 0.145469 0.020836" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.006_collision_19" class="world_default" size="0.0071345 0.0028625 0.0076325" pos="0.0256524 0.137045 0.020805" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.007_collision_20" class="world_default" size="0.0045205 0.00325 0.000902" pos="0.0368164 0.134736 0.022179" quat="0.881106 -0.115093 -0.364966 -0.277859" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box_collision_21" class="world_default" size="0.0088735 0.007 0.0025" pos="0.137313 0.0111089 0.0125" quat="0.99879 0 0 -0.049182" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.001_collision_22" class="world_default" size="0.012906 0.0016 0.0068995" pos="0.120428 0.00734954 0.023451" quat="0.922762 0.0188211 0.38222 -0.0454383" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.002_collision_23" class="world_default" size="0.012906 0.00115 0.0068995" pos="0.121534 0.0185451 0.023451" quat="0.922762 0.0188211 0.38222 -0.0454383" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box_collision_24" class="world_default" size="0.001 0.007 0.0068995" pos="0.112582 0.0135504 0.03187" quat="0.922762 0.0188211 0.38222 -0.0454383" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.001_collision_25" class="world_default" size="0.000921 0.007 0.0068995" pos="0.129414 0.0118887 0.014956" quat="0.922762 0.0188211 0.38222 -0.0454383" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.002_collision_26" class="world_default" size="0.0124785 0.007 0.0025" pos="0.10796 0.0140067 0.0125" quat="0.99879 0 0 -0.049182" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.003_collision_27" class="world_default" size="0.012906 0.007 0.0006195" pos="0.116188 0.0131944 0.018656" quat="0.922762 0.0188211 0.38222 -0.0454383" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.004_collision_28" class="world_default" size="0.0011105 0.007 0.0046245" pos="0.133718 0.0114638 0.014624" quat="0.99879 0 0 -0.049182" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box004_collider_box_collision_29" class="world_default" size="0.001045 0.007 0.008711" pos="0.107999 0.0140029 0.018711" quat="0.99879 0 0 -0.049182" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_collision_30" class="world_default" size="0.0147285 0.008875 0.0025" pos="0.0870743 -0.103536 0.0125" quat="0.99096 0 0 0.134158" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_001_collision_31" class="world_default" size="0.0192665 0.008875 0.000864" pos="0.0707769 -0.108031 0.027144" quat="0.915528 0.0513398 -0.379224 0.123945" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_002_collision_32" class="world_default" size="0.0137425 0.008875 0.001844" pos="0.0826052 -0.104769 0.022684" quat="0.915528 0.0513398 -0.379224 0.123945" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_003_collision_33" class="world_default" size="0.0180555 0.0011525 0.005478" pos="0.0734239 -0.0992896 0.023979" quat="0.915528 0.0513398 -0.379224 0.123945" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_004_collision_34" class="world_default" size="0.0180555 0.0009375 0.005815" pos="0.0773576 -0.11445 0.024217" quat="0.915528 0.0513398 -0.379224 0.123945" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_005_collision_35" class="world_default" size="0.002532 0.008875 0.005815" pos="0.0646564 -0.109719 0.013231" quat="0.915528 0.0513398 -0.379224 0.123945" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_006_collision_36" class="world_default" size="0.0071855 0.008875 0.0025" pos="0.0590488 -0.111266 0.0125" quat="0.99096 0 0 0.134158" type="box" group="3"/>
-      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_007_collision_37" class="world_default" size="0.0024465 0.008875 0.0083775" pos="0.0902372 -0.102664 0.021771" quat="0.99096 0 0 0.134158" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box_collision_5" class="world_default" size="0.0085165 0.003 0.0025" pos="0.0493738 -0.101815 0.0145" quat="0.999403 0 0 0.0345527" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.001_collision_6" class="world_default" size="0.0092845 0.003 0.0025" pos="0.01627 -0.104107 0.0145" quat="0.999403 0 0 0.0345527" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.002_collision_7" class="world_default" size="0.0071345 0.007375 0.001527" pos="0.0268487 -0.103375 0.026186" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.003_collision_8" class="world_default" size="0.0060515 0.007375 0.003999" pos="0.0391572 -0.102523 0.015364" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.004_collision_9" class="world_default" size="0.0031275 0.007375 0.0069205" pos="0.0234638 -0.103609 0.015079" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.005_collision_10" class="world_default" size="0.0071345 0.001625 0.007801" pos="0.0317888 -0.097269 0.020836" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.006_collision_11" class="world_default" size="0.0071345 0.0028625 0.0076325" pos="0.0325285 -0.107505 0.020805" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.007_collision_12" class="world_default" size="0.0045205 0.00325 0.000902" pos="0.0426608 -0.10228 0.022179" quat="0.923328 0.0132227 -0.382455 0.0319225" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box_collision_13" class="world_default" size="0.0085165 0.003 0.0025" pos="0.0418467 0.170347 0.0145" quat="0.9505 0 0 0.310726" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.001_collision_14" class="world_default" size="0.0092845 0.003 0.0025" pos="0.0150714 0.150746 0.0145" quat="0.9505 0 0 0.310726" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.002_collision_15" class="world_default" size="0.0071345 0.007375 0.001527" pos="0.0236277 0.157009 0.026186" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.003_collision_16" class="world_default" size="0.0060515 0.007375 0.003999" pos="0.0335832 0.164297 0.015364" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.004_collision_17" class="world_default" size="0.0031275 0.007375 0.0069205" pos="0.0208899 0.155005 0.015079" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.005_collision_18" class="world_default" size="0.0071345 0.001625 0.007801" pos="0.0245482 0.164809 0.020836" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.006_collision_19" class="world_default" size="0.0071345 0.0028625 0.0076325" pos="0.0306354 0.156546 0.020805" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015081011_collider_box.007_collision_20" class="world_default" size="0.0045205 0.00325 0.000902" pos="0.0364171 0.166372 0.022179" quat="0.878147 0.11891 -0.36374 0.287073" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box_collision_21" class="world_default" size="0.0088735 0.007 0.0025" pos="0.123117 -0.161457 0.0145" quat="0.892392 0 0 -0.451262" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.001_collision_22" class="world_default" size="0.012906 0.0016 0.0068995" pos="0.109027 -0.151422 0.025451" quat="0.824462 0.17269 0.341503 -0.416912" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.002_collision_23" class="world_default" size="0.012906 0.00115 0.0068995" pos="0.118088 -0.144754 0.025451" quat="0.824462 0.17269 0.341503 -0.416912" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box_collision_24" class="world_default" size="0.001 0.007 0.0068995" pos="0.108387 -0.141441 0.03387" quat="0.824462 0.17269 0.341503 -0.416912" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.001_collision_25" class="world_default" size="0.000921 0.007 0.0068995" pos="0.118412 -0.155064 0.016956" quat="0.824462 0.17269 0.341503 -0.416912" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.002_collision_26" class="world_default" size="0.0124785 0.007 0.0025" pos="0.105634 -0.137701 0.0145" quat="0.892392 0 0 -0.451262" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.003_collision_27" class="world_default" size="0.012906 0.007 0.0006195" pos="0.110535 -0.14436 0.020656" quat="0.824462 0.17269 0.341503 -0.416912" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.004_collision_28" class="world_default" size="0.0011105 0.007 0.0046245" pos="0.120976 -0.158547 0.016624" quat="0.892392 0 0 -0.451262" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box004_collider_box_collision_29" class="world_default" size="0.001045 0.007 0.008711" pos="0.105658 -0.137733 0.020711" quat="0.892392 0 0 -0.451262" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box_collision_30" class="world_default" size="0.0088735 0.007 0.0025" pos="0.137404 0.109813 0.0125" quat="0.999374 0 0 -0.0353691" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.001_collision_31" class="world_default" size="0.012906 0.0016 0.0068995" pos="0.12063 0.105588 0.023451" quat="0.923302 0.0135352 0.382444 -0.0326768" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box.002_collision_32" class="world_default" size="0.012906 0.00115 0.0068995" pos="0.121425 0.11681 0.023451" quat="0.923302 0.0135352 0.382444 -0.0326768" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box_collision_33" class="world_default" size="0.001 0.007 0.0068995" pos="0.112615 0.111569 0.03187" quat="0.923302 0.0135352 0.382444 -0.0326768" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.001_collision_34" class="world_default" size="0.000921 0.007 0.0068995" pos="0.129486 0.110374 0.014956" quat="0.923302 0.0135352 0.382444 -0.0326768" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.002_collision_35" class="world_default" size="0.0124785 0.007 0.0025" pos="0.107982 0.111898 0.0125" quat="0.999374 0 0 -0.0353691" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.003_collision_36" class="world_default" size="0.012906 0.007 0.0006195" pos="0.11623 0.111313 0.018656" quat="0.923302 0.0135352 0.382444 -0.0326768" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box.004_collision_37" class="world_default" size="0.0011105 0.007 0.0046245" pos="0.1338 0.110068 0.014624" quat="0.999374 0 0 -0.0353691" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__v1015079011_collider_box003_collider_box004_collider_box_collision_38" class="world_default" size="0.001045 0.007 0.008711" pos="0.108021 0.111895 0.018711" quat="0.999374 0 0 -0.0353691" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_collision_39" class="world_default" size="0.0147285 0.008875 0.0025" pos="0.0812811 0.0167223 0.0125" quat="0.946014 0 0 -0.324125" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_001_collision_40" class="world_default" size="0.0192665 0.008875 0.000864" pos="0.0679273 0.02709 0.027144" quat="0.874003 -0.124037 -0.362024 -0.299452" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_002_collision_41" class="world_default" size="0.0137425 0.008875 0.001844" pos="0.0776192 0.0195654 0.022684" quat="0.874003 -0.124037 -0.362024 -0.299452" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_003_collision_42" class="world_default" size="0.0180555 0.0011525 0.005478" pos="0.0765149 0.0302 0.023979" quat="0.874003 -0.124037 -0.362024 -0.299452" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_004_collision_43" class="world_default" size="0.0180555 0.0009375 0.005815" pos="0.066722 0.0179762 0.024217" quat="0.874003 -0.124037 -0.362024 -0.299452" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_005_collision_44" class="world_default" size="0.002532 0.008875 0.005815" pos="0.0629123 0.0309835 0.013231" quat="0.874003 -0.124037 -0.362024 -0.299452" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_006_collision_45" class="world_default" size="0.0071855 0.008875 0.0025" pos="0.0583175 0.0345508 0.0125" quat="0.946014 0 0 -0.324125" type="box" group="3"/>
+      <geom name="task_board_base_link_fixed_joint_lump__iso_4762_m2_x_8072_collider_box_007_collision_46" class="world_default" size="0.0024465 0.008875 0.0083775" pos="0.0838727 0.0147102 0.021771" quat="0.946014 0 0 -0.324125" type="box" group="3"/>
       <geom name="task_board_base_link_fixed_joint_lump__base_visual_visual" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019" mesh="19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019"/>
       <geom name="task_board_base_link_fixed_joint_lump__base_visual_visual_0" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019_1" mesh="19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019_1"/>
       <geom name="task_board_base_link_fixed_joint_lump__base_visual_visual_1" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019_2" mesh="19f4a95a97b71184a4988be290e52b57fe33862b52d650c82c5d8bc673fc5603_base_visual_ISO_4762_-_M3_x_8.019_2"/>
-      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_1" class="world_default" pos="0.01 -0.0760792 0.012" quat="0.882224 0 0 0.47083" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8"/>
-      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_1_0" class="world_default" pos="0.01 -0.0760792 0.012" quat="0.882224 0 0 0.47083" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1"/>
-      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_2" class="world_default" pos="0.01 0.153517 0.012" quat="0.953702 0 0 -0.300752" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8"/>
-      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_2_0" class="world_default" pos="0.01 0.153517 0.012" quat="0.953702 0 0 -0.300752" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1"/>
-      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_3" class="world_default" pos="0.0985 0.0149406 0.01" quat="0.99879 0 0 -0.049182" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040"/>
-      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_3_0" class="world_default" pos="0.0985 0.0149406 0.01" quat="0.99879 0 0 -0.049182" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1"/>
-      <geom name="task_board_base_link_fixed_joint_lump__sfp_mount_visual_visual_4" class="world_default" pos="0.055 -0.112383 0.01" quat="0.99096 0 0 0.134158" type="mesh" contype="0" conaffinity="0" material="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011" mesh="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011"/>
-      <geom name="task_board_base_link_fixed_joint_lump__sfp_mount_visual_visual_4_0" class="world_default" pos="0.055 -0.112383 0.01" quat="0.99096 0 0 0.134158" type="mesh" contype="0" conaffinity="0" material="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1" mesh="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1"/>
-      <body name="nic_card_mount_0::nic_card_mount_link" childclass="nic_card_default" pos="-0.0810404 -0.1745 0.012" quat="0.999941 0 0 -0.0108711">
+      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_1" class="world_default" pos="0.01 -0.104541 0.012" quat="0.999403 0 0 0.0345527" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8"/>
+      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_1_0" class="world_default" pos="0.01 -0.104541 0.012" quat="0.999403 0 0 0.0345527" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1"/>
+      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_2" class="world_default" pos="0.01 0.147033 0.012" quat="0.9505 0 0 0.310726" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8"/>
+      <geom name="task_board_base_link_fixed_joint_lump__lc_mount_visual_visual_2_0" class="world_default" pos="0.01 0.147033 0.012" quat="0.9505 0 0 0.310726" type="mesh" contype="0" conaffinity="0" material="material_2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1" mesh="2930cc982f7c22f627f740e8d773d607e5376661d31dd59af8c5c6916788d3e5_lc_mount_visual_ISO_4762_-_M2_x_8_1"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_3" class="world_default" pos="0.1 -0.130045 0.012" quat="0.892392 0 0 -0.451262" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_3_0" class="world_default" pos="0.1 -0.130045 0.012" quat="0.892392 0 0 -0.451262" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_4" class="world_default" pos="0.0985 0.11257 0.01" quat="0.999374 0 0 -0.0353691" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sc_mount_visual_visual_4_0" class="world_default" pos="0.0985 0.11257 0.01" quat="0.999374 0 0 -0.0353691" type="mesh" contype="0" conaffinity="0" material="material_ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1" mesh="ffa8ab95e6b413f8201909c54bab3b167d4710d88967dd6e3d34f13c43447666_sc_mount_visual_ISO_4762_-_M2_x_8.040_1"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sfp_mount_visual_visual_5" class="world_default" pos="0.055 0.0371265 0.01" quat="0.946014 0 0 -0.324125" type="mesh" contype="0" conaffinity="0" material="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011" mesh="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011"/>
+      <geom name="task_board_base_link_fixed_joint_lump__sfp_mount_visual_visual_5_0" class="world_default" pos="0.055 0.0371265 0.01" quat="0.946014 0 0 -0.324125" type="mesh" contype="0" conaffinity="0" material="material_0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1" mesh="0caf49b143bca9a0c9a13d66d2f75335ec2e74c5bba5cfb7bf0c411aed5bc2cd_sfp_mount_visual_ISO_4762_-_M2_x_8.011_1"/>
+      <body name="sc_port_0::sc_port_link" childclass="sc_port_default" pos="-0.0685906 0.0295 0.0165" quat="0.500398 0.5 0.499602 0.5">
+        <inertial pos="0 -0.00100271 0.000137321" quat="-0.00185702 0.707104 -0.00185702 0.707104" mass="0.04" diaginertia="6.5519e-06 5.50329e-06 1.86262e-06"/>
+        <geom name="cube_collider_box" class="world_default" size="0.0008435 0.013716 0.00465" pos="0.012047 0 0" type="box" group="3"/>
+        <geom name="cube_collider_box.001" class="world_default" size="0.0128905 0.0054 0.000425" pos="0 0 0.004225" type="box" group="3"/>
+        <geom name="cube_collider_box_mid" class="world_default" size="0.00515 0.013716 0.0003" pos="0 0 0.00435" type="box" group="3"/>
+        <geom name="cube_collider_box_mid02" class="world_default" size="0.0025 0.013716 0.0003" pos="0.01 0 0.00435" type="box" group="3"/>
+        <geom name="cube_collider_box_mid03" class="world_default" size="0.0025 0.013716 0.0003" pos="-0.01 0 0.00435" type="box" group="3"/>
+        <geom name="cube_collider_box.002" class="world_default" size="0.012825 0.013716 0.0003" pos="0 0 -0.00435" type="box" group="3"/>
+        <geom name="cube_collider_box.003" class="world_default" size="0.0008435 0.013716 0.00465" pos="-0.012047 0 0" type="box" group="3"/>
+        <geom name="cube_collider_box.004" class="world_default" size="0.002742 0.001524 0.00465" pos="-0.014683 0 0" type="box" group="3"/>
+        <geom name="cube_collider_box.005" class="world_default" size="0.002742 0.001524 0.00465" pos="0.014683 0 0" type="box" group="3"/>
+        <geom name="cube_collider_box.006" class="world_default" size="0.001496 0.013716 0.00465" type="box" group="3"/>
+        <geom name="v1015120013_collider_box" class="world_default" size="0.006 0.005 0.0015" pos="0.0183 -0.003 0" quat="0.5 -0.5 0.5 0.5" type="box" group="3"/>
+        <geom name="v1015120012_collider_box" class="world_default" size="0.006 0.005 0.0015" pos="-0.0183 -0.003 0" quat="0.5 -0.5 -0.5 -0.5" type="box" group="3"/>
+        <geom name="iso 4762 - m2 x 6013_collider_cylinder" class="world_default" size="0.0019 0.004" pos="0.0153 -0.0005 0" quat="0.693475 0.693475 0.138174 -0.138174" type="cylinder" group="3"/>
+        <geom name="iso 4762 - m2 x 6012_collider_cylinder" class="world_default" size="0.0019 0.004" pos="-0.0153 -0.0005 0" quat="0.693475 0.693475 0.138174 -0.138174" type="cylinder" group="3"/>
+        <geom name="contact_collision_0" class="world_default" size="0.0125 0.001473 0.0045" pos="0 -0.0034 0" quat="1.73205e-07 -1 0 0" type="box" group="3"/>
+        <geom name="sc_port_visual" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006" mesh="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_FOA-005A_3D_v1.006"/>
+        <geom name="sc_port_visual_0" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_1" mesh="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_1"/>
+        <geom name="sc_port_visual_1" class="world_default" type="mesh" contype="0" conaffinity="0" material="material_f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_2" mesh="f9b7abd4aff4f6ca20f93c5fe58d59063f878893c8c44b0ffe569a5291eee046_sc_port_visual_merged_2"/>
+        <site name="sc_port_sensor" class="world_default" pos="0 0 0"/>
+        <body name="sc_port_base_link" pos="0 -0.002 0" quat="9.38184e-07 9.38187e-07 0.707105 -0.707108">
+          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          <body name="sc_port_base_link_entrance" pos="0 0 -0.01564">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          </body>
+        </body>
+      </body>
+      <body name="nic_card_mount_0::nic_card_mount_link" childclass="nic_card_default" pos="-0.0584058 -0.1745 0.012" quat="0.999746 0 0 -0.0225474">
         <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
         <geom name="v1015085006_collider_box" class="world_default" size="0.0025035 0.036998 0.0775" pos="0.006002 -0.025497 0.0875" quat="0.707107 0 0 0.707107" type="box" group="3"/>
         <geom name="v1015085006_collider_box.001" class="world_default" size="0.0125 0.01075 0.007" pos="-0.0555 -0.0155 0.172" quat="0.707107 0 0 0.707107" type="box" group="3"/>
@@ -489,7 +535,7 @@
           </body>
         </body>
       </body>
-      <body name="nic_card_mount_3::nic_card_mount_link" childclass="nic_card_default" pos="-0.0894788 -0.0545 0.012" quat="0.998332 0 0 0.0577379">
+      <body name="nic_card_mount_2::nic_card_mount_link" childclass="nic_card_default" pos="-0.0966227 -0.0945 0.012" quat="0.997509 0 0 -0.0705403">
         <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
         <geom name="v1015085006_collider_box_0" class="world_default" size="0.0025035 0.036998 0.0775" pos="0.006002 -0.025497 0.0875" quat="0.707107 0 0 0.707107" type="box" group="3"/>
         <geom name="v1015085006_collider_box.001_0" class="world_default" size="0.0125 0.01075 0.007" pos="-0.0555 -0.0155 0.172" quat="0.707107 0 0 0.707107" type="box" group="3"/>
@@ -564,8 +610,9 @@
 
   <contact>
     <exclude body1="cable_end_0" body2="link_1"/>
+    <exclude name="task_board_base_link_sc_port_0::sc_port_link" body1="task_board_base_link" body2="sc_port_0::sc_port_link"/>
     <exclude name="task_board_base_link_nic_card_mount_0::nic_card_mount_link" body1="task_board_base_link" body2="nic_card_mount_0::nic_card_mount_link"/>
-    <exclude name="task_board_base_link_nic_card_mount_3::nic_card_mount_link" body1="task_board_base_link" body2="nic_card_mount_3::nic_card_mount_link"/>
+    <exclude name="task_board_base_link_nic_card_mount_2::nic_card_mount_link" body1="task_board_base_link" body2="nic_card_mount_2::nic_card_mount_link"/>
   </contact>
 
   <equality>
