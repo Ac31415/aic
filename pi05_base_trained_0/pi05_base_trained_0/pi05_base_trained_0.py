@@ -55,66 +55,71 @@ class pi05_base_trained_0(Policy):
         super().__init__(parent_node)
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        # -------------------------------------------------------------------------
-        # 1. Load PI05 Policy from HuggingFace
-        # -------------------------------------------------------------------------
         repo_id = "Ac31415/trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4"
 
-        # Download checkpoint files
+        self.get_logger().info("Loading weights from local cache...")
+
+        # 1. Force local cache loading to skip HF network pings
         policy_path = Path(
             snapshot_download(
                 repo_id=repo_id,
                 allow_patterns=["config.json", "model.safetensors", "*.safetensors"],
+                local_files_only=True # ADDED
             )
         )
 
-        # Load PI05 policy weights
-        self.policy = PI05Policy.from_pretrained(repo_id)
+        self.policy = PI05Policy.from_pretrained(repo_id, local_files_only=True) # ADDED
         self.policy.eval()
         self.policy.to(self.device)
 
-        self.get_logger().info(f"PI05 Policy loaded on {self.device} from {policy_path}")
-
-        # -------------------------------------------------------------------------
-        # 2. Normalization Stats Loading
-        # -------------------------------------------------------------------------
-        # PI05 uses QUANTILES normalization (q01/q99) for both state and action.
-        # The state is normalized to [-1, 1] before being discretized into the prompt.
-        # The action is unnormalized from [-1, 1] back to robot-space after inference.
-        stats_path = (
-            policy_path / "policy_preprocessor_step_3_normalizer_processor.safetensors"
-        )
+        stats_path = policy_path / "policy_preprocessor_step_3_normalizer_processor.safetensors"
         stats = load_file(stats_path)
 
-        # Helper to extract and shape stats for broadcasting
         def get_stat(key, shape):
             return stats[key].to(self.device).view(*shape)
 
-        # State quantile stats — normalize state to [-1, 1] before discretization
         self.state_q01 = get_stat("observation.state.q01", (1, -1))
         self.state_q99 = get_stat("observation.state.q99", (1, -1))
-
-        # Action quantile stats — unnormalize model output to robot-space
         self.action_q01 = get_stat("action.q01", (1, -1))
         self.action_q99 = get_stat("action.q99", (1, -1))
 
-        # -------------------------------------------------------------------------
-        # 3. Load PaliGemma Tokenizer
-        # -------------------------------------------------------------------------
-        # PI05 encodes the task description and discretized robot state as a text
-        # prompt tokenized by the PaliGemma tokenizer.
-        self.tokenizer = AutoTokenizer.from_pretrained("google/paligemma-3b-pt-224")
+        # Force local cache for tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            "google/paligemma-3b-pt-224", 
+            local_files_only=True # ADDED
+        )
         self.tokenizer_max_length = self.policy.config.tokenizer_max_length
 
-        # Config
-        self.image_scaling = 0.25  # Must match AICRobotAICControllerConfig
-
-        # Publisher for gripper commands (VR dataset includes gripper position)
+        self.image_scaling = 0.25  
         self.gripper_pub = parent_node.create_publisher(
             JointState, "/gripper_commands", 10
         )
+        
+        # 2. Perform a CUDA Warmup Pass
+        self.get_logger().info("Performing CUDA warmup pass...")
+        self._warmup_cuda()
 
-        self.get_logger().info("PI05 policy node initialized successfully.")
+        self.get_logger().info("PI05 policy node initialized and warmed up successfully.")
+
+    def _warmup_cuda(self):
+        """Runs a dummy forward pass to pre-allocate CUDA memory."""
+        # Create dummy tensors matching the expected input shapes
+        dummy_img = torch.zeros((1, 3, 224, 224), dtype=torch.float32, device=self.device)
+        dummy_state = np.zeros(26, dtype=np.float32)
+        
+        # Tokenize a dummy prompt
+        dummy_prompt = self._tokenize_prompt("warmup task", dummy_state)
+        
+        dummy_batch = {
+            "observation.images.left_camera": dummy_img,
+            "observation.images.center_camera": dummy_img,
+            "observation.images.right_camera": dummy_img,
+            **dummy_prompt
+        }
+
+        # Run inference once and discard the output
+        with torch.inference_mode():
+            _ = self.policy.select_action(dummy_batch)
 
     @staticmethod
     def _img_to_tensor(
