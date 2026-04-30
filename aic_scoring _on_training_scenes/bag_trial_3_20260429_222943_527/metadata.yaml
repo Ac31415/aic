@@ -1,0 +1,78 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 30811400769
+  starting_time:
+    nanoseconds_since_epoch: 1777516183567822654
+  message_count: 161693
+  topics_with_message_count:
+    - topic_metadata:
+        name: /tf_static
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 1
+    - topic_metadata:
+        name: /fts_broadcaster/wrench
+        type: geometry_msgs/msg/WrenchStamped
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 3927
+    - topic_metadata:
+        name: /aic_controller/pose_commands
+        type: aic_control_interfaces/msg/MotionUpdate
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 360
+    - topic_metadata:
+        name: /scoring/tf
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 39766
+    - topic_metadata:
+        name: /tf
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 39212
+    - topic_metadata:
+        name: /aic_controller/controller_state
+        type: aic_control_interfaces/msg/ControllerState
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 39214
+    - topic_metadata:
+        name: /joint_states
+        type: sensor_msgs/msg/JointState
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 39213
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - bag_trial_3_20260429_222943_527_0.mcap
+  files:
+    - path: bag_trial_3_20260429_222943_527_0.mcap
+      starting_time:
+        nanoseconds_since_epoch: 1777516183567822654
+      duration:
+        nanoseconds: 30811400769
+      message_count: 161693
+  custom_data: ~
+  ros_distro: kilted
