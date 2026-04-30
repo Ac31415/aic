@@ -34,6 +34,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Dict, List, Optional, Set, Tuple
 import random
+import math
 
 # Setup logging
 logging.basicConfig(
@@ -451,12 +452,12 @@ class SceneGenerator:
             robot_yaw=-3.141
             
             # Task board position with some randomization
-            task_board_x=random.uniform(0.1, 0.3)
-            task_board_y=random.uniform(-0.3, -0.1)
+            task_board_x=random.uniform(-0.005, 0.005)
+            task_board_y=random.uniform(-0.005, 0.005)
             task_board_z=1.14  # Fixed
             task_board_roll=0.0
             task_board_pitch=0.0
-            task_board_yaw=random.uniform(-0.5, 0.5)
+            task_board_yaw=random.uniform(-math.pi, math.pi)
 
             # Cable configuration (same as grasp pose mentioned in `docs/qualification_phase.md`??)
             # values obtained from `aic_bringup/README.md`
