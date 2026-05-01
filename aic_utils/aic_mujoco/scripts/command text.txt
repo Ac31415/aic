@@ -1,0 +1,1 @@
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 1 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_0_present --cable_types sfp_sc_cable

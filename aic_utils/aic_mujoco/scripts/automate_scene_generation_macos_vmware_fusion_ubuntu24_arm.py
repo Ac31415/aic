@@ -80,6 +80,14 @@ SFP_REQUIRED_FOR_NORMAL = {
 }
 
 
+ROBOT_BASE_CENTER_X = 0.0
+ROBOT_BASE_CENTER_Y = 0.0
+ROBOT_BASE_RADIUS_M = 0.06
+TASK_BOARD_HALF_X_M = 0.30 / 2.0
+TASK_BOARD_HALF_Y_M = 0.425 / 2.0
+TASK_BOARD_CLEARANCE_M = 0.1
+
+
 def parse_csv_arg(value: str) -> List[str]:
     """Parse comma-separated CLI values into a normalized list."""
     return [item.strip() for item in value.split(",") if item.strip()]
@@ -436,6 +444,25 @@ class SceneGenerator:
         if name in self.enabled_presence_params:
             return True
         return random.choice([True, False])
+
+    def _task_board_intersects_robot_base(
+        self,
+        task_board_x: float,
+        task_board_y: float,
+        task_board_yaw: float,
+    ) -> bool:
+        dx = task_board_x - ROBOT_BASE_CENTER_X
+        dy = task_board_y - ROBOT_BASE_CENTER_Y
+        cos_yaw = math.cos(task_board_yaw)
+        sin_yaw = math.sin(task_board_yaw)
+        local_x = cos_yaw * dx + sin_yaw * dy
+        local_y = -sin_yaw * dx + cos_yaw * dy
+        clamped_x = max(-TASK_BOARD_HALF_X_M, min(local_x, TASK_BOARD_HALF_X_M))
+        clamped_y = max(-TASK_BOARD_HALF_Y_M, min(local_y, TASK_BOARD_HALF_Y_M))
+        dist_x = local_x - clamped_x
+        dist_y = local_y - clamped_y
+        radius = ROBOT_BASE_RADIUS_M + TASK_BOARD_CLEARANCE_M
+        return (dist_x * dist_x + dist_y * dist_y) <= (radius * radius)
     
     def generate_random_config(self) -> SceneConfig:
         """Generate a unique random scene configuration."""
@@ -452,12 +479,21 @@ class SceneGenerator:
             robot_yaw=-3.141
             
             # Task board position with some randomization
-            task_board_x=random.uniform(-0.005, 0.005)
-            task_board_y=random.uniform(-0.005, 0.005)
+            task_board_x=random.uniform(0, 0.3)
+            task_board_y=random.uniform(-0.3, 0.3)
+            # task_board_x=-0.05
+            # task_board_y=0
             task_board_z=1.14  # Fixed
             task_board_roll=0.0
             task_board_pitch=0.0
             task_board_yaw=random.uniform(-math.pi, math.pi)
+
+            if self._task_board_intersects_robot_base(
+                task_board_x,
+                task_board_y,
+                task_board_yaw,
+            ):
+                continue
 
             # Cable configuration (same as grasp pose mentioned in `docs/qualification_phase.md`??)
             # values obtained from `aic_bringup/README.md`
@@ -1252,7 +1288,7 @@ class OrchestrationManager:
         
         # Create output directory structure
         self.mjcf_base_dir = self.ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
-        self.export_base_dir = Path("/mnt/hgfs/exported mujoco training envs")
+        self.export_base_dir = Path("/mnt/hgfs/new envs folder")
         
         # Initialize components
         self.scene_generator = SceneGenerator(
