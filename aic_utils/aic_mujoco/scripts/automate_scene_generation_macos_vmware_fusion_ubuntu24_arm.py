@@ -466,7 +466,7 @@ class SceneGenerator:
     
     def generate_random_config(self) -> SceneConfig:
         """Generate a unique random scene configuration."""
-        max_attempts = 100
+        max_attempts = 1000
         
         for attempt in range(max_attempts):
 
