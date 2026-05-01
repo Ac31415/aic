@@ -85,7 +85,8 @@ ROBOT_BASE_CENTER_Y = 0.0
 ROBOT_BASE_RADIUS_M = 0.06
 TASK_BOARD_HALF_X_M = 0.30 / 2.0
 TASK_BOARD_HALF_Y_M = 0.425 / 2.0
-TASK_BOARD_CLEARANCE_M = 0.01
+# TASK_BOARD_CLEARANCE_M = 0.01
+TASK_BOARD_CLEARANCE_M = 0.10
 
 
 def parse_csv_arg(value: str) -> List[str]:
@@ -479,8 +480,8 @@ class SceneGenerator:
             robot_yaw=-3.141
             
             # Task board position with some randomization
-            task_board_x=random.uniform(-0.005, 0.005)
-            task_board_y=random.uniform(-0.005, 0.005)
+            task_board_x=random.uniform(0, 0.3)
+            task_board_y=random.uniform(-0.3, 0.3)
             task_board_z=1.14  # Fixed
             task_board_roll=0.0
             task_board_pitch=0.0

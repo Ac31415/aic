@@ -1,1 +1,21 @@
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 1 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_0_present --cable_types sfp_sc_cable
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_0_present --cable_types sfp_sc_cable DONE
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_1_present --cable_types sfp_sc_cable
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_2_present --cable_types sfp_sc_cable
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_3_present --cable_types sfp_sc_cable
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_4_present --cable_types sfp_sc_cable
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params sc_port_0_present --cable_types sfp_sc_cable_reversed
+
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params sc_port_1_present --cable_types sfp_sc_cable_reversed
+
+
+
+
+
+python3 generate_tasks_from_manifest.py --mode engine_config --manifest "/mnt/hgfs/exported mujoco training envs/normal cable scenes/scene_manifest_cable_5.json" "/mnt/hgfs/exported mujoco training envs/normal cable scenes/scene_manifest_cable_5.json" --reversed_manifest "/mnt/hgfs/exported mujoco training envs/reversed cable scenes/scene_manifest_cable_reversed_5.json" --num_engine_configs 3 --output /tmp/aic_engine_pool.yaml --time_limit 180
+
+python3 src/aic/aic_utils/aic_mujoco/scripts/generate_tasks_from_manifest.py --mode random_engine_config --num_engine_configs 5 --output /tmp/aic_random_pool.yaml --time_limit 180
