@@ -852,6 +852,13 @@ def main():
         print("Generating World XML...")
         xml_str = world_spec.to_xml()
         xml_str = rename_class(xml_str, "unused", "world_default")
+        xml_str = re.sub(
+            r'(<default class="cable_default">\s*<joint[^>]*?) damping="[^"]*"',
+            r'\1 damping="0.2"',
+            xml_str,
+            count=1,
+            flags=re.DOTALL,
+        )
 
         def strip_class_from_cable_children(xml):
             for i in range(1, 21):
