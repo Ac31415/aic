@@ -798,7 +798,7 @@ def main():
         # Add cable_default
         root_default = world_spec.default
         cable_default = world_spec.add_default("cable_default", root_default)
-        cable_default.joint.damping = np.array([[0.2], [0.2], [0.2]], dtype=np.float64)
+        cable_default.joint.damping = np.array([0.2, 0.2, 0.2], dtype=np.float64)
         print("Added 'cable_default' with joint damping [0.2, 0.2, 0.2].")
 
         # Add friction defaults for task board components (matching Gazebo SDF)
