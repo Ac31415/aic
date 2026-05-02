@@ -26,6 +26,7 @@ import os
 import re
 import shutil
 import signal
+import shlex
 import subprocess
 import sys
 import tempfile
@@ -466,7 +467,7 @@ class SceneGenerator:
     
     def generate_random_config(self) -> SceneConfig:
         """Generate a unique random scene configuration."""
-        max_attempts = 100
+        max_attempts = 1000
         
         for attempt in range(max_attempts):
 
@@ -830,11 +831,22 @@ class GazeboExporter:
         
         # Build launch command
         cmd = [
-            "bash", "-c",
-            f"source {self.ws_path}/install/setup.bash && "
-            f"ros2 launch aic_bringup aic_gz_bringup.launch.py "
-            f"{config.to_launch_args(gazebo_gui=self.gazebo_gui, launch_rviz=self.launch_rviz)}"
+            "/entrypoint.sh",
+            *shlex.split(
+                config.to_launch_args(
+                    gazebo_gui=self.gazebo_gui,
+                    launch_rviz=self.launch_rviz,
+                )
+            ),
         ]
+        
+        # # Build launch command
+        # cmd = [
+        #     "bash", "-c",
+        #     f"source {self.ws_path}/install/setup.bash && "
+        #     f"ros2 launch aic_bringup aic_gz_bringup.launch.py "
+        #     f"{config.to_launch_args(gazebo_gui=self.gazebo_gui, launch_rviz=self.launch_rviz)}"
+        # ]
         
         logger.info(f"Launching Gazebo with parameters: {config.scene_name}")
         
@@ -951,6 +963,7 @@ class GazeboExporter:
             return sdf_path
         
         except Exception as e:
+            print(f"Error during Gazebo export: {e}")
             logger.error(f"Gazebo export failed: {e}")
             # Ensure full launch tree is terminated even on error.
             if process is not None:
@@ -1089,24 +1102,51 @@ class MJCFConverter:
             f"source {self.ws_path}/install/setup.bash && "
             f"sdf2mjcf {sdf_path} {output_dir}/aic_world.xml"
         ]
-        
-        try:
-            result = subprocess.run(
-                cmd,
-                capture_output=True,
-                text=True,
-                timeout=300
+
+        backend_override = os.environ.get("AIC_SDF2MJCF_GL_BACKEND")
+        if backend_override:
+            gl_backends = [backend_override]
+        else:
+            # Prefer EGL in containers. Fall back to X11 (glfw) and OSMesa.
+            gl_backends = ["egl", "glfw", "osmesa"]
+
+        last_error: Optional[str] = None
+        for gl_backend in gl_backends:
+            env = os.environ.copy()
+            env["MUJOCO_GL"] = gl_backend
+
+            if gl_backend in {"egl", "osmesa"}:
+                env["PYOPENGL_PLATFORM"] = gl_backend
+                # Avoid accidental X11 path for headless backends.
+                env.pop("DISPLAY", None)
+            else:
+                env.pop("PYOPENGL_PLATFORM", None)
+
+            logger.info(f"Running sdf2mjcf with MUJOCO_GL={gl_backend}")
+            try:
+                result = subprocess.run(
+                    cmd,
+                    env=env,
+                    capture_output=True,
+                    text=True,
+                    timeout=300
+                )
+            except subprocess.TimeoutExpired:
+                raise RuntimeError("sdf2mjcf conversion timed out")
+
+            if result.returncode == 0:
+                logger.info(f"MJCF conversion completed to {output_dir}")
+                return output_dir
+
+            last_error = result.stderr or "sdf2mjcf failed without stderr"
+            logger.warning(
+                f"sdf2mjcf failed with MUJOCO_GL={gl_backend}: {last_error}"
             )
-            
-            if result.returncode != 0:
-                logger.error(f"sdf2mjcf failed: {result.stderr}")
-                raise RuntimeError(f"sdf2mjcf conversion failed")
-            
-            logger.info(f"MJCF conversion completed to {output_dir}")
-            return output_dir
+            if result.stdout:
+                logger.warning(f"sdf2mjcf stdout ({gl_backend}): {result.stdout}")
         
-        except subprocess.TimeoutExpired:
-            raise RuntimeError("sdf2mjcf conversion timed out")
+        logger.error(f"sdf2mjcf failed for all GL backends: {gl_backends}")
+        raise RuntimeError(f"sdf2mjcf conversion failed: {last_error}")
 
 
 class MJCFOrganizer:
@@ -1288,7 +1328,7 @@ class OrchestrationManager:
         
         # Create output directory structure
         self.mjcf_base_dir = self.ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
-        self.export_base_dir = Path("/mnt/hgfs/new envs folder")
+        self.export_base_dir = self.output_dir
         
         # Initialize components
         self.scene_generator = SceneGenerator(
@@ -1375,6 +1415,7 @@ class OrchestrationManager:
         
         # Save configuration manifest
         manifest_path = self.mjcf_base_dir / "scene_manifest.json"
+        self.mjcf_base_dir.mkdir(parents=True, exist_ok=True)
         manifest_data = {
             "num_scenes": self.num_scenes,
             "scenes": [{"index": i, "name": c.scene_name, "config": asdict(c)} 
@@ -1430,8 +1471,22 @@ def main():
     parser.add_argument(
         '--ws_path',
         type=str,
-        default=os.path.expanduser("~/ws_aic"),
+        default="/ws_aic_build_sdf2mjcf",
         help='Path to ROS 2 workspace'
+    )
+    
+    # parser.add_argument(
+    #     '--ws_path',
+    #     type=str,
+    #     default="/ws_aic",
+    #     help='Path to ROS 2 workspace'
+    # )
+    
+    parser.add_argument(
+        '--export_dir',
+        type=str,
+        default="/aic_out",
+        help='Directory to copy finalized MJCF exports (inside the container)'
     )
     parser.add_argument(
         '--export_timeout',
@@ -1526,7 +1581,7 @@ def main():
     manager = OrchestrationManager(
         ws_path=ws_path,
         num_scenes=args.num_scenes,
-        output_dir=ws_path / "src/aic/aic_utils/aic_mujoco/mjcf",
+        output_dir=Path(args.export_dir),
         export_timeout=args.export_timeout,
         gazebo_gui=args.gazebo_gui,
         launch_rviz=args.launch_rviz,
