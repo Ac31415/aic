@@ -876,8 +876,8 @@ class GazeboExporter:
             process = subprocess.Popen(
                 cmd,
                 env=self.env,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                stdout=sys.stdout,
+                stderr=sys.stderr,
                 text=True,
                 start_new_session=True,
             )
