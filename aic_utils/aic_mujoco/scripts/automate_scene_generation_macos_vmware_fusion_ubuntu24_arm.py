@@ -1288,7 +1288,7 @@ class OrchestrationManager:
         
         # Create output directory structure
         self.mjcf_base_dir = self.ws_path / "src/aic/aic_utils/aic_mujoco/mjcf"
-        self.export_base_dir = Path("/mnt/hgfs/new envs folder")
+        self.export_base_dir = Path("/mnt/hgfs/envs folder")
         
         # Initialize components
         self.scene_generator = SceneGenerator(

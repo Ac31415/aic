@@ -1,16 +1,16 @@
 python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_0_present --cable_types sfp_sc_cable DONE
 
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_1_present --cable_types sfp_sc_cable
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_1_present --cable_types sfp_sc_cable DONE
 
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_2_present --cable_types sfp_sc_cable
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_2_present --cable_types sfp_sc_cable DONE
 
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_3_present --cable_types sfp_sc_cable
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_3_present --cable_types sfp_sc_cable DONE forgot to save the json file
 
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_4_present --cable_types sfp_sc_cable
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params nic_card_mount_4_present --cable_types sfp_sc_cable DONE
 
 python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params sc_port_0_present --cable_types sfp_sc_cable_reversed DONE
 
-python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params sc_port_1_present --cable_types sfp_sc_cable_reversed
+python3 automate_scene_generation_macos_vmware_fusion_ubuntu24_arm.py --num_scenes 100 --gazebo_gui false --launch_rviz false --enabled_present_params sc_port_1_present --cable_types sfp_sc_cable_reversed DONE
 
 
 
