@@ -1,0 +1,469 @@
+scoring:
+  topics:
+  - topic:
+      name: /joint_states
+      type: sensor_msgs/msg/JointState
+  - topic:
+      name: /tf
+      type: tf2_msgs/msg/TFMessage
+  - topic:
+      name: /tf_static
+      type: tf2_msgs/msg/TFMessage
+      latched: True
+  - topic:
+      name: /scoring/tf
+      type: tf2_msgs/msg/TFMessage
+  - topic:
+      name: /aic/gazebo/contacts/off_limit
+      type: ros_gz_interfaces/msg/Contacts
+  - topic:
+      name: /fts_broadcaster/wrench
+      type: geometry_msgs/msg/WrenchStamped
+  - topic:
+      name: /aic_controller/joint_commands
+      type: aic_control_interfaces/msg/JointMotionUpdate
+  - topic:
+      name: /aic_controller/pose_commands
+      type: aic_control_interfaces/msg/MotionUpdate
+  - topic:
+      name: /scoring/insertion_event
+      type: std_msgs/msg/String
+  - topic:
+      name: /aic_controller/controller_state
+      type: aic_control_interfaces/msg/ControllerState
+task_board_limits:
+  nic_rail:
+    min_translation: -0.0215
+    max_translation: 0.0234
+  sc_rail:
+    min_translation: -0.06
+    max_translation: 0.055
+  mount_rail:
+    min_translation: -0.09425
+    max_translation: 0.09425
+trials:
+  trial_1:
+    scene:
+      task_board:
+        pose:
+          x: 0.15998159189437347
+          y: -0.18004212728566488
+          z: 1.14
+          roll: 0.0
+          pitch: 0.0
+          yaw: -0.06507262995472263
+        nic_rail_0:
+          entity_present: False
+          entity_name: nic_card_0
+          entity_pose:
+            translation: -0.0007402885291183103
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.0847498602749969
+        nic_rail_1:
+          entity_present: False
+          entity_name: nic_card_1
+          entity_pose:
+            translation: -0.008061359944486498
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.1558743310457324
+        nic_rail_2:
+          entity_present: True
+          entity_name: nic_card_2
+          entity_pose:
+            translation: -0.004986950024510408
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.0990455863812049
+        nic_rail_3:
+          entity_present: False
+          entity_name: nic_card_3
+          entity_pose:
+            translation: -0.0041974341381568955
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.09358197474880525
+        nic_rail_4:
+          entity_present: False
+          entity_name: nic_card_4
+          entity_pose:
+            translation: -0.018464998339587868
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.12403822846928486
+        sc_rail_0:
+          entity_present: True
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: 0.02889753514070849
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        sc_rail_1:
+          entity_present: False
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: 0.007221233823547932
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        lc_mount_rail_0:
+          entity_present: False
+          entity_name: lc_mount_0
+          entity_pose:
+            translation: -0.035182411597113585
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.5458556107938297
+        sfp_mount_rail_0:
+          entity_present: True
+          entity_name: sfp_mount_0
+          entity_pose:
+            translation: 0.05444502616579189
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.6465092283857372
+        sc_mount_rail_0:
+          entity_present: True
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: -0.01759203626602615
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.5199013163563608
+        lc_mount_rail_1:
+          entity_present: True
+          entity_name: lc_mount_1
+          entity_pose:
+            translation: 0.0806915072498823
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.8027298195931065
+        sfp_mount_rail_1:
+          entity_present: True
+          entity_name: sfp_mount_1
+          entity_pose:
+            translation: -0.019010876542380567
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.5784857401647159
+        sc_mount_rail_1:
+          entity_present: False
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: 0.06631616658242956
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.23598738283190324
+      cables:
+        cable_0:
+          pose:
+            gripper_offset:
+              x: -0.0017797156611436544
+              y: 0.016294616746389674
+              z: 0.044340872480349416
+              roll: 0.46634902364044967
+              pitch: -0.4951888300365462
+              yaw: 1.2945700960947313
+            roll: 0.4132312336123694
+            pitch: -0.5146520624639223
+            yaw: 1.3443021381413884
+          attach_cable_to_gripper: True
+          cable_type: sfp_sc_cable
+    tasks:
+      task_1:
+        cable_type: sfp_sc
+        cable_name: cable_0
+        plug_type: sfp
+        plug_name: sfp_tip
+        port_type: sfp
+        port_name: sfp_port_0
+        target_module_name: nic_card_mount_2
+        time_limit: 180
+  trial_2:
+    scene:
+      task_board:
+        pose:
+          x: 0.13361716553042727
+          y: -0.19027935869044255
+          z: 1.14
+          roll: 0.0
+          pitch: 0.0
+          yaw: -0.3002102045782602
+        nic_rail_0:
+          entity_present: True
+          entity_name: nic_card_0
+          entity_pose:
+            translation: -0.020191728228750424
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.07236207062015093
+        nic_rail_1:
+          entity_present: True
+          entity_name: nic_card_1
+          entity_pose:
+            translation: -0.006034432250733822
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.07227669689972616
+        nic_rail_2:
+          entity_present: False
+          entity_name: nic_card_2
+          entity_pose:
+            translation: 0.005222779293338697
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.11920987472180256
+        nic_rail_3:
+          entity_present: False
+          entity_name: nic_card_3
+          entity_pose:
+            translation: 0.01268147133195454
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.056499733604189334
+        nic_rail_4:
+          entity_present: True
+          entity_name: nic_card_4
+          entity_pose:
+            translation: -0.018332451080660533
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.1526421558010002
+        sc_rail_0:
+          entity_present: False
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: -0.04087550232635277
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        sc_rail_1:
+          entity_present: True
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: -0.008320401183124791
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        lc_mount_rail_0:
+          entity_present: False
+          entity_name: lc_mount_0
+          entity_pose:
+            translation: -0.051544184691035264
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.8355900022758361
+        sfp_mount_rail_0:
+          entity_present: True
+          entity_name: sfp_mount_0
+          entity_pose:
+            translation: 0.053603280916123486
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.24560724956943625
+        sc_mount_rail_0:
+          entity_present: True
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: -0.08481290484398575
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.6712936058174082
+        lc_mount_rail_1:
+          entity_present: False
+          entity_name: lc_mount_1
+          entity_pose:
+            translation: -0.0957258433404303
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.010436784223067486
+        sfp_mount_rail_1:
+          entity_present: True
+          entity_name: sfp_mount_1
+          entity_pose:
+            translation: -0.02865908637312288
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.28568175780818494
+        sc_mount_rail_1:
+          entity_present: True
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: -0.06154708054866543
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.09038911085111434
+      cables:
+        cable_0:
+          pose:
+            gripper_offset:
+              x: 0.0018261342689521016
+              y: 0.01570545371050167
+              z: 0.040780331220601804
+              roll: 0.429511466394379
+              pitch: -0.47245503141064243
+              yaw: 1.3457123887409588
+            roll: 0.4485837124864455
+            pitch: -0.4912304126340691
+            yaw: 1.324715902373829
+          attach_cable_to_gripper: True
+          cable_type: sfp_sc_cable
+    tasks:
+      task_1:
+        cable_type: sfp_sc
+        cable_name: cable_0
+        plug_type: sfp
+        plug_name: sfp_tip
+        port_type: sfp
+        port_name: sfp_port_1
+        target_module_name: nic_card_mount_1
+        time_limit: 180
+  trial_3:
+    scene:
+      task_board:
+        pose:
+          x: 0.25100144941482505
+          y: -0.19843946618177838
+          z: 1.14
+          roll: 0.0
+          pitch: 0.0
+          yaw: -0.2691559541326537
+        nic_rail_0:
+          entity_present: False
+          entity_name: nic_card_0
+          entity_pose:
+            translation: 0.0019803712914582966
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.04706589004372347
+        nic_rail_1:
+          entity_present: False
+          entity_name: nic_card_1
+          entity_pose:
+            translation: -0.016961948017566255
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.1330133860984513
+        nic_rail_2:
+          entity_present: True
+          entity_name: nic_card_2
+          entity_pose:
+            translation: -0.01967885114292448
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.023470484353541182
+        nic_rail_3:
+          entity_present: True
+          entity_name: nic_card_3
+          entity_pose:
+            translation: 0.018428171927475853
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.08728836534504691
+        nic_rail_4:
+          entity_present: False
+          entity_name: nic_card_4
+          entity_pose:
+            translation: 0.022605330926520104
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0934560216581779
+        sc_rail_0:
+          entity_present: True
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: 0.04078818916056068
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        sc_rail_1:
+          entity_present: True
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: 0.004670131059134372
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.0
+        lc_mount_rail_0:
+          entity_present: True
+          entity_name: lc_mount_0
+          entity_pose:
+            translation: 0.009909409619404189
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.8900843908558006
+        sfp_mount_rail_0:
+          entity_present: True
+          entity_name: sfp_mount_0
+          entity_pose:
+            translation: 0.019117830995154003
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.11189537171292407
+        sc_mount_rail_0:
+          entity_present: True
+          entity_name: sc_mount_0
+          entity_pose:
+            translation: 0.026208208026319416
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.13365713949858515
+        lc_mount_rail_1:
+          entity_present: True
+          entity_name: lc_mount_1
+          entity_pose:
+            translation: 0.019106809765541716
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.6911050651565613
+        sfp_mount_rail_1:
+          entity_present: False
+          entity_name: sfp_mount_1
+          entity_pose:
+            translation: 0.0024407406626963946
+            roll: 0.0
+            pitch: 0.0
+            yaw: -0.851782828794669
+        sc_mount_rail_1:
+          entity_present: False
+          entity_name: sc_mount_1
+          entity_pose:
+            translation: -0.021684528962013408
+            roll: 0.0
+            pitch: 0.0
+            yaw: 0.04574486069565609
+      cables:
+        cable_1:
+          pose:
+            gripper_offset:
+              x: -0.00037421317410795394
+              y: 0.017150312864915508
+              z: 0.04106826844407216
+              roll: 0.4655669863536777
+              pitch: -0.4977093554249733
+              yaw: 1.3483795916344605
+            roll: 0.45097151789030526
+            pitch: -0.5062309953871738
+            yaw: 1.3444517183671312
+          attach_cable_to_gripper: True
+          cable_type: sfp_sc_cable_reversed
+    tasks:
+      task_1:
+        cable_type: sfp_sc
+        cable_name: cable_1
+        plug_type: sc
+        plug_name: sc_tip
+        port_type: sc
+        port_name: sc_port_base
+        target_module_name: sc_port_1
+        time_limit: 180
+robot:
+  home_joint_positions:
+    shoulder_pan_joint: -0.1597
+    shoulder_lift_joint: -1.3542
+    elbow_joint: -1.6648
+    wrist_1_joint: -1.6933
+    wrist_2_joint: 1.571
+    wrist_3_joint: 1.411
