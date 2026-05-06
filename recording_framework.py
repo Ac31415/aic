@@ -14,37 +14,42 @@ import os
 import math
 import random
 import shlex
+import shutil
 import re
 import signal
+import select
 import subprocess
 import sys
 import threading
 import time
+import termios
+import tty
 from collections import deque
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
 
 REPO_IDS = [
-    "caai-aic/corrected_sfp_to_sfp_port_0_of_nic_card_mount_0",
-    "caai-aic/corrected_sfp_to_sfp_port_1_of_nic_card_mount_0",
-    "caai-aic/corrected_sfp_to_sfp_port_0_of_nic_card_mount_1",
-    "caai-aic/corrected_sfp_to_sfp_port_1_of_nic_card_mount_1",
-    "caai-aic/corrected_sfp_to_sfp_port_0_of_nic_card_mount_2",
-    "caai-aic/corrected_sfp_to_sfp_port_1_of_nic_card_mount_2",
-    "caai-aic/corrected_sfp_to_sfp_port_0_of_nic_card_mount_3",
-    "caai-aic/corrected_sfp_to_sfp_port_1_of_nic_card_mount_3",
-    "caai-aic/corrected_sfp_to_sfp_port_0_of_nic_card_mount_4",
-    "caai-aic/corrected_sfp_to_sfp_port_1_of_nic_card_mount_4",
-    "caai-aic/corrected_sc_to_sc_port_base_of_sc_port_0",
-    "caai-aic/corrected_sc_to_sc_port_base_of_sc_port_1",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_0",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_0",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_1",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_1",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_2",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_2",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_3",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_3",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_4",
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_4",
+    "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_0",
+    "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_1",
     "caai-aic/test-dataset",
 ]
 
 AIC_ROOT = Path.home() / "ws_aic_caai" / "src" / "aic"
 OCULUS_DIR = AIC_ROOT / "oculus_reader"
 HF_CACHE_ROOT = Path.home() / ".cache" / "huggingface" / "lerobot"
+HF_HUB_CACHE_ROOT = Path.home() / ".cache" / "huggingface" / "hub"
 RMW_IMPLEMENTATION = "rmw_zenoh_cpp"
 ZENOH_CONFIG_OVERRIDE = (
     "transport/shared_memory/enabled=true;"
@@ -56,6 +61,57 @@ SFP_TASK_TEMPLATE = (
 )
 SC_TASK_TEMPLATE = "Insert sc_tip of sfp_sc into sc_port_base of sc_port_{port}"
 TEST_TASK_PROMPT = "insert cable"
+
+DATASET_SCENE_OVERRIDES = {
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_0": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_0_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_0": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_0_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_1": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_1_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_1": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_1_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_2": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_2_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_2": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_2_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_3": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_3_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_3": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_3_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_4": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_4_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_4": {
+        "cable_type": "sfp_sc_cable",
+        "nic_card_mount_4_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_0": {
+        "cable_type": "sfp_sc_cable_reversed",
+        "sc_port_0_present": True,
+    },
+    "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_1": {
+        "cable_type": "sfp_sc_cable_reversed",
+        "sc_port_1_present": True,
+    },
+}
 
 PRESENCE_PARAM_NAMES = {
     "lc_mount_rail_0_present",
@@ -773,6 +829,14 @@ class DatasetInfoFetcher:
 
     def fetch_episode_count(self, repo_id: str) -> Optional[int]:
         try:
+            local_count = _find_episode_count_in_local_cache(repo_id)
+            if local_count is not None:
+                return local_count
+            if not _has_local_cache(repo_id):
+                _ensure_local_dataset_cache(repo_id, self.hf_token)
+                local_count = _find_episode_count_in_local_cache(repo_id)
+                if local_count is not None:
+                    return local_count
             return self._fetch_episode_count(repo_id)
         except Exception as exc:
             print(f"[warn] Could not fetch info for {repo_id}: {exc}")
@@ -782,7 +846,7 @@ class DatasetInfoFetcher:
         api = self._get_hf_api()
         info = api.dataset_info(repo_id=repo_id)
         if info.card_data:
-            for key in ("num_episodes", "episodes", "episode_count"):
+            for key in ("total_episodes", "num_episodes", "episodes", "episode_count"):
                 if key in info.card_data:
                     try:
                         return int(info.card_data[key])
@@ -790,18 +854,22 @@ class DatasetInfoFetcher:
                         pass
 
         files = api.list_repo_files(repo_id=repo_id, repo_type="dataset")
+        if files and all(name == ".gitattributes" for name in files):
+            return 0
         json_candidates = [
             "episodes.json",
             "episode_index.json",
             "meta.json",
             "metadata.json",
+            "meta/info.json",
+            "meta/stats.json",
         ]
         for filename in json_candidates:
             if filename in files:
                 data = _download_json(repo_id, filename, self.hf_token)
                 if data is None:
                     continue
-                for key in ("num_episodes", "episodes"):
+                for key in ("total_episodes", "num_episodes", "episodes"):
                     if key in data:
                         try:
                             return int(data[key])
@@ -829,8 +897,20 @@ class DatasetInfoFetcher:
 class RecordingTask:
     definition: TaskDefinition
 
+    def _should_resume(self) -> bool:
+        info_path = self.definition.dataset_root / "meta" / "info.json"
+        return info_path.exists()
+
+    def prepare_dataset_root(self) -> None:
+        root = self.definition.dataset_root
+        info_path = root / "meta" / "info.json"
+        if info_path.exists():
+            return
+        if root.exists() and _is_empty_dir(root):
+            shutil.rmtree(root)
+
     def lerobot_command(self, num_episodes: int) -> List[str]:
-        return [
+        cmd = [
             "pixi",
             "run",
             "lerobot-record",
@@ -849,11 +929,13 @@ class RecordingTask:
             "--display_data=true",
             "--dataset.reset_time_s=30",
             "--dataset.episode_time_s=600",
-            "--resume=true",
             f"--dataset.repo_id={self.definition.repo_id}",
             f"--dataset.single_task={self.definition.single_task}",
             f"--dataset.root={self.definition.dataset_root}",
         ]
+        if self._should_resume():
+            cmd.append("--resume=true")
+        return cmd
 
 
 def _download_json(
@@ -923,6 +1005,180 @@ def _count_episodes_from_parquet(
     return None
 
 
+def _count_episodes_from_parquet_path(path: Path) -> Optional[int]:
+    if not path.exists():
+        return None
+    columns = ["episode_index", "episode_id", "episode"]
+    try:
+        import pandas as pd
+
+        df = pd.read_parquet(path, columns=columns)
+        for column in columns:
+            if column in df.columns:
+                return int(df[column].nunique())
+    except Exception:
+        pass
+
+    try:
+        import pyarrow.parquet as pq
+
+        table = pq.read_table(path, columns=columns)
+        for column in columns:
+            if column in table.column_names:
+                return int(table.column(column).unique().length())
+    except Exception:
+        return None
+
+    return None
+
+
+def _count_episodes_from_json_path(path: Path) -> Optional[int]:
+    if not path.exists():
+        return None
+    if path.suffix == ".jsonl":
+        try:
+            with path.open("r", encoding="utf-8") as handle:
+                return sum(1 for line in handle if line.strip())
+        except OSError:
+            return None
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    for key in ("total_episodes", "num_episodes", "episodes", "episode_count"):
+        if key in data:
+            try:
+                return int(data[key])
+            except (TypeError, ValueError):
+                return None
+    if isinstance(data, list):
+        return len(data)
+    return None
+
+
+def _iter_local_cache_paths(repo_id: str) -> Iterable[Path]:
+    repo_slug = repo_id.replace("/", "--")
+    hub_root = HF_HUB_CACHE_ROOT / f"datasets--{repo_slug}"
+    lerobot_root = HF_CACHE_ROOT / repo_id
+    if lerobot_root.exists():
+        yield lerobot_root
+
+    if hub_root.exists():
+        snapshots = hub_root / "snapshots"
+        if snapshots.exists():
+            for snapshot in sorted(snapshots.iterdir(), reverse=True):
+                if snapshot.is_dir():
+                    yield snapshot
+
+
+def _has_local_cache(repo_id: str) -> bool:
+    return any(_has_candidate_files(path) for path in _iter_local_cache_paths(repo_id))
+
+
+def _ensure_local_dataset_cache(repo_id: str, token: Optional[str]) -> None:
+    try:
+        from huggingface_hub import snapshot_download
+    except Exception:
+        return
+
+    allow_patterns = [
+        "**/episodes.json",
+        "**/episodes.jsonl",
+        "**/episode_index.json",
+        "**/episode_index.jsonl",
+        "**/episode_index.parquet",
+        "**/meta.json",
+        "**/metadata.json",
+        "**/dataset_info.json",
+        "**/info.json",
+        "**/stats.json",
+    ]
+    try:
+        snapshot_download(
+            repo_id=repo_id,
+            repo_type="dataset",
+            allow_patterns=allow_patterns,
+            token=token,
+        )
+    except Exception as exc:
+        print(f"[warn] Could not cache dataset {repo_id}: {exc}")
+        return
+
+
+def _find_episode_count_in_local_cache(repo_id: str) -> Optional[int]:
+    json_candidates = [
+        "episodes.json",
+        "episodes.jsonl",
+        "episode_index.json",
+        "episode_index.jsonl",
+        "meta.json",
+        "metadata.json",
+        "dataset_info.json",
+        "info.json",
+        "meta/info.json",
+        "meta/stats.json",
+        "data/episodes.json",
+        "data/episodes.jsonl",
+        "data/episode_index.json",
+        "data/episode_index.jsonl",
+        "data/meta.json",
+        "data/metadata.json",
+    ]
+    parquet_candidates = [
+        "episode_index.parquet",
+        "episode_index/episode_index.parquet",
+        "data/episode_index.parquet",
+    ]
+
+    for root in _iter_local_cache_paths(repo_id):
+        for filename in json_candidates:
+            count = _count_episodes_from_json_path(root / filename)
+            if count is not None:
+                return count
+
+        for filename in parquet_candidates:
+            count = _count_episodes_from_parquet_path(root / filename)
+            if count is not None:
+                return count
+
+    return None
+
+
+def _has_candidate_files(root: Path) -> bool:
+    if not root.exists():
+        return False
+    candidates = [
+        "episodes.json",
+        "episodes.jsonl",
+        "episode_index.json",
+        "episode_index.jsonl",
+        "meta.json",
+        "metadata.json",
+        "dataset_info.json",
+        "info.json",
+        "meta/info.json",
+        "meta/stats.json",
+        "episode_index.parquet",
+        "episode_index/episode_index.parquet",
+        "data/episodes.json",
+        "data/episodes.jsonl",
+        "data/episode_index.json",
+        "data/episode_index.jsonl",
+        "data/episode_index.parquet",
+        "data/meta.json",
+        "data/metadata.json",
+    ]
+    return any((root / path).exists() for path in candidates)
+
+
+def _is_empty_dir(path: Path) -> bool:
+    if not path.exists() or not path.is_dir():
+        return False
+    return not any(path.iterdir())
+
+
 def _fallback_count_with_datasets(repo_id: str) -> Optional[int]:
     try:
         from datasets import load_dataset
@@ -960,7 +1216,7 @@ def build_tasks() -> List[RecordingTask]:
     for mount in range(5):
         for port in range(2):
             repo_id = (
-                "caai-aic/corrected_sfp_to_sfp_port_"
+                "caai-aic/corrected_lab_collected_sfp_to_sfp_port_"
                 f"{port}_of_nic_card_mount_{mount}"
             )
             tasks.append(
@@ -975,7 +1231,7 @@ def build_tasks() -> List[RecordingTask]:
             )
 
     for port in range(2):
-        repo_id = f"caai-aic/corrected_sc_to_sc_port_base_of_sc_port_{port}"
+        repo_id = f"caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_{port}"
         tasks.append(
             RecordingTask(
                 TaskDefinition(
@@ -1004,13 +1260,22 @@ def prompt_connect_quest() -> None:
 
 def start_vr_teleop() -> VRTeleopProcess:
     command = "pixi run python3 oculus_reader/viz_transforms.py"
-    process = _launch_terminal(command, title="AIC VR Teleop", cwd=OCULUS_DIR)
+    process = _launch_terminal(
+        command, title="AIC VR Teleop", cwd=OCULUS_DIR, keep_open=False
+    )
     print("[info] VR teleop launched in a new terminal.")
     return VRTeleopProcess(process=process)
 
 
 def build_scene_generator() -> SceneGenerator:
     return SceneGenerator()
+
+
+def apply_scene_overrides(repo_id: str, config: SceneConfig) -> SceneConfig:
+    overrides = DATASET_SCENE_OVERRIDES.get(repo_id)
+    if not overrides:
+        return config
+    return replace(config, **overrides)
 
 
 def start_scene(launch_args: str, ws_path: Path) -> SceneProcess:
@@ -1020,7 +1285,9 @@ def start_scene(launch_args: str, ws_path: Path) -> SceneProcess:
         "export DBX_CONTAINER_MANAGER=docker; "
         f"distrobox enter -r aic_eval -- {launch_cmd}"
     )
-    process = _launch_terminal(command, title="AIC Scene", cwd=ws_path)
+    process = _launch_terminal(
+        command, title="AIC Scene", cwd=ws_path, keep_open=False
+    )
     print("[info] Scene launch started in a new terminal.")
     return SceneProcess(process=process, detached=True)
 
@@ -1133,22 +1400,71 @@ def run_recording(
     task: RecordingTask,
     num_episodes: int,
     start_episode_count: Optional[int],
+    scene_generator: SceneGenerator,
+    ws_path: Path,
+    scene_holder: Dict[str, SceneProcess],
 ) -> RecordingResult:
+    task.prepare_dataset_root()
     cmd = " ".join(shlex.quote(arg) for arg in task.lerobot_command(num_episodes))
-    _launch_terminal(cmd, title="LeRobot Record", cwd=AIC_ROOT)
+    record_process = _launch_terminal(
+        cmd,
+        title="LeRobot Record",
+        cwd=AIC_ROOT,
+        keep_open=False,
+    )
     print("[info] Recording launched in a new terminal.")
-    input("Press Enter here after recording finishes to continue... ")
+    print(
+        "Press Right Arrow to restart the scene for the next episode, "
+        "or Enter here to finish recording."
+    )
+    _wait_for_recording_controls(
+        task,
+        num_episodes,
+        scene_generator,
+        ws_path,
+        scene_holder,
+    )
+    if start_episode_count is not None:
+        print("[info] Waiting for local dataset metadata to update...")
+        _wait_for_local_episode_update(
+            task.definition.repo_id,
+            start_episode_count,
+        )
     return RecordingResult(completed_episodes=num_episodes, exit_code=0)
 
 
-def _launch_terminal(command: str, title: str, cwd: Path) -> subprocess.Popen:
+def _wait_for_local_episode_update(
+    repo_id: str,
+    previous_count: int,
+    timeout_s: int = 300,
+    poll_interval_s: int = 5,
+) -> Optional[int]:
+    deadline = time.time() + timeout_s
+    latest_count = previous_count
+    while time.time() < deadline:
+        current = _find_episode_count_in_local_cache(repo_id)
+        if current is not None:
+            latest_count = current
+            if current != previous_count:
+                return current
+        time.sleep(poll_interval_s)
+    return latest_count
+
+
+def _launch_terminal(
+    command: str, title: str, cwd: Path, keep_open: bool = True
+) -> subprocess.Popen:
+    if keep_open:
+        tail = "; exec bash"
+    else:
+        tail = ""
     terminal_cmd = [
         "gnome-terminal",
         f"--title={title}",
         "--",
         "bash",
         "-lc",
-        f"cd {shlex.quote(str(cwd))} && {command}; exec bash",
+        f"cd {shlex.quote(str(cwd))} && {command}{tail}",
     ]
     try:
         return subprocess.Popen(terminal_cmd)
@@ -1158,8 +1474,112 @@ def _launch_terminal(command: str, title: str, cwd: Path) -> subprocess.Popen:
         ) from exc
 
 
+def _terminate_processes(patterns: Iterable[str]) -> None:
+    for pattern in patterns:
+        try:
+            subprocess.run(
+                ["pkill", "-f", pattern],
+                check=False,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+        except Exception:
+            pass
+
+
+def _terminate_gazebo_in_distrobox() -> None:
+    cmd = (
+        "export DBX_CONTAINER_MANAGER=docker; "
+        "distrobox enter -r aic_eval -- pkill -f 'gzserver|gzclient|gazebo'"
+    )
+    try:
+        subprocess.run(
+            ["bash", "-lc", cmd],
+            check=False,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+    except Exception:
+        pass
+
+
+def cleanup_session_processes() -> None:
+    _terminate_processes(["rerun", "re_viewer", "gzclient", "gzserver", "gazebo"])
+    _terminate_gazebo_in_distrobox()
+
+
+def _wait_for_recording_controls(
+    task: RecordingTask,
+    num_episodes: int,
+    scene_generator: SceneGenerator,
+    ws_path: Path,
+    scene_holder: Dict[str, SceneProcess],
+) -> None:
+    restart_event = threading.Event()
+    finish_event = threading.Event()
+    episodes_completed = 0
+    listener = None
+    use_global_hotkeys = False
+    try:
+        from pynput import keyboard
+
+        def on_press(key: keyboard.Key) -> Optional[bool]:
+            if key == keyboard.Key.right:
+                restart_event.set()
+            return None
+
+        listener = keyboard.Listener(on_press=on_press)
+        listener.start()
+        use_global_hotkeys = True
+    except Exception:
+        use_global_hotkeys = False
+
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setcbreak(fd)
+        while True:
+            if finish_event.is_set():
+                return
+            if restart_event.is_set():
+                restart_event.clear()
+                episodes_completed += 1
+                print("[info] Restarting scene for next episode...")
+                scene = scene_holder.get("scene")
+                if scene:
+                    scene.stop()
+                cleanup_session_processes()
+                if episodes_completed >= num_episodes:
+                    print("[info] Episode quota reached; stopping session.")
+                    return
+                config = scene_generator.generate_random_config()
+                config = apply_scene_overrides(task.definition.repo_id, config)
+                launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
+                scene_holder["scene"] = start_scene(launch_args, ws_path)
+                wait_for_scene_ready(ws_path, scene_holder["scene"])
+                continue
+
+            ready, _, _ = select.select([fd], [], [], 0.2)
+            if not ready:
+                continue
+            ch = sys.stdin.read(1)
+            if ch in ("\n", "\r"):
+                return
+            if not use_global_hotkeys and ch == "\x1b":
+                seq = sys.stdin.read(2)
+                if seq == "[C":
+                    restart_event.set()
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+        if listener is not None:
+            listener.stop()
+
+
 def read_hf_token(path: Optional[Path]) -> Optional[str]:
     if path is None:
+        default_path = Path.home() / ".cache" / "huggingface" / "token"
+        if default_path.exists():
+            return default_path.read_text(encoding="utf-8").strip()
         return None
     if not path.exists():
         print(f"[warn] HF token path not found: {path}")
@@ -1213,11 +1633,13 @@ def main() -> int:
 
             task = choose_task(tasks, episode_counts)
             if task is None:
+                vr_process.stop()
                 break
 
             num_episodes = prompt_num_episodes()
 
             config = scene_generator.generate_random_config()
+            config = apply_scene_overrides(task.definition.repo_id, config)
             launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
             scene = start_scene(launch_args, ws_path)
             ready = wait_for_scene_ready(ws_path, scene)
@@ -1227,20 +1649,33 @@ def main() -> int:
                 continue
 
             start_count = episode_counts.get(task.definition.repo_id)
-            result = run_recording(task, num_episodes, start_count)
+            scene_holder = {"scene": scene}
+            result = run_recording(
+                task,
+                num_episodes,
+                start_count,
+                scene_generator,
+                ws_path,
+                scene_holder,
+            )
             print(
                 f"[info] Recording finished with code {result.exit_code}; "
                 f"episodes completed: {result.completed_episodes}"
             )
 
+            scene = scene_holder["scene"]
             scene.stop()
             print("[info] Scene stopped.")
+
+            cleanup_session_processes()
 
             print("[info] Refreshing dataset info...")
 
     except KeyboardInterrupt:
         print("\n[info] Interrupted by user.")
+        vr_process.stop()
     finally:
+        cleanup_session_processes()
         vr_process.stop()
 
     return 0
