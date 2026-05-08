@@ -1,0 +1,4 @@
+cd ~/ws_aic_caai/src/aic
+pixi run python3 recording_framework.py
+
+make sure to put in the passwords for both the framework terminal and the gazebo scene terminal
