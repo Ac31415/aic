@@ -478,8 +478,8 @@ class SceneGenerator:
             )
 
     def _randomize_presence(self, name: str) -> bool:
-        if name in self.enabled_presence_params:
-            return True
+        # if name in self.enabled_presence_params:
+        #     return True
         return random.choice([True, False])
 
     def _task_board_intersects_robot_base(
@@ -1278,6 +1278,21 @@ def apply_scene_overrides(repo_id: str, config: SceneConfig) -> SceneConfig:
     return replace(config, **overrides)
 
 
+def launch_scene_for_episode(
+    repo_id: str,
+    config: SceneConfig,
+    ws_path: Path,
+    scene_holder: Dict[str, object],
+) -> SceneProcess:
+    config = apply_scene_overrides(repo_id, config)
+    launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
+    scene_holder["scene_config"] = config
+    scene_holder["scene_launch_args"] = launch_args
+    scene = start_scene(launch_args, ws_path)
+    scene_holder["scene"] = scene
+    return scene
+
+
 def start_scene(launch_args: str, ws_path: Path) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
     print(f"[info] Scene launch command: {launch_cmd}")
@@ -1402,20 +1417,25 @@ def run_recording(
     start_episode_count: Optional[int],
     scene_generator: SceneGenerator,
     ws_path: Path,
-    scene_holder: Dict[str, SceneProcess],
+    scene_holder: Dict[str, object],
 ) -> RecordingResult:
     task.prepare_dataset_root()
-    cmd = " ".join(shlex.quote(arg) for arg in task.lerobot_command(num_episodes))
+    # For multi-episode sessions we run `lerobot-record` as separate
+    # processes with `--dataset.num_episodes=1` and restart it per episode.
+    initial_num = 1 if num_episodes > 1 else num_episodes
+    cmd = " ".join(shlex.quote(arg) for arg in task.lerobot_command(initial_num))
     record_process = _launch_terminal(
         cmd,
         title="LeRobot Record",
         cwd=AIC_ROOT,
         keep_open=False,
     )
+    # expose record process so the control loop can restart it
+    scene_holder["record"] = record_process
     print("[info] Recording launched in a new terminal.")
     print(
         "Press Right Arrow to restart the scene for the next episode, "
-        "or Enter here to finish recording."
+        "Left Arrow to relaunch the current scene parameters, or Enter here to finish recording."
     )
     _wait_for_recording_controls(
         task,
@@ -1424,11 +1444,31 @@ def run_recording(
         ws_path,
         scene_holder,
     )
+    # Ensure recording process is terminated when session finishes
+    proc = scene_holder.get("record")
+    if isinstance(proc, subprocess.Popen):
+        if proc.poll() is None:
+            # For multi-episode sessions, give more time for the last episode to be processed
+            timeout_s = 120 if num_episodes > 1 else 10
+            print(f"[info] Waiting for lerobot-record to finish (timeout: {timeout_s}s)...")
+            try:
+                proc.wait(timeout=timeout_s)
+            except subprocess.TimeoutExpired:
+                print(f"[warn] lerobot-record did not finish within {timeout_s}s, terminating...")
+                try:
+                    proc.terminate()
+                    proc.wait(timeout=5)
+                except Exception:
+                    try:
+                        proc.kill()
+                    except Exception:
+                        pass
     if start_episode_count is not None:
         print("[info] Waiting for local dataset metadata to update...")
         _wait_for_local_episode_update(
             task.definition.repo_id,
             start_episode_count,
+            expected_new_episodes=num_episodes,
         )
     return RecordingResult(completed_episodes=num_episodes, exit_code=0)
 
@@ -1438,16 +1478,45 @@ def _wait_for_local_episode_update(
     previous_count: int,
     timeout_s: int = 300,
     poll_interval_s: int = 5,
+    expected_new_episodes: Optional[int] = None,
 ) -> Optional[int]:
     deadline = time.time() + timeout_s
     latest_count = previous_count
+    stable_count = None
+    stable_checks = 0
+    required_stable_checks = 3  # Require 3 consecutive checks with same count
+    
+    expected_final_count = None
+    if expected_new_episodes is not None:
+        expected_final_count = previous_count + expected_new_episodes
+    
     while time.time() < deadline:
         current = _find_episode_count_in_local_cache(repo_id)
         if current is not None:
             latest_count = current
-            if current != previous_count:
+            # If we know the expected count, wait for it to be reached
+            if expected_final_count is not None:
+                if current >= expected_final_count:
+                    # Once we reach expected count, verify it's stable
+                    if current == stable_count:
+                        stable_checks += 1
+                        if stable_checks >= required_stable_checks:
+                            print(f"[info] Dataset metadata updated: {previous_count} → {current} episodes")
+                            return current
+                    else:
+                        stable_count = current
+                        stable_checks = 1
+                else:
+                    # Haven't reached expected count yet, reset stable counter
+                    stable_count = None
+                    stable_checks = 0
+            elif current != previous_count:
+                # If no expected count specified, return on any change (original behavior)
                 return current
         time.sleep(poll_interval_s)
+    
+    if latest_count > previous_count:
+        print(f"[info] Dataset metadata updated: {previous_count} → {latest_count} episodes (timeout)")
     return latest_count
 
 
@@ -1503,9 +1572,14 @@ def _terminate_gazebo_in_distrobox() -> None:
         pass
 
 
-def cleanup_session_processes() -> None:
-    _terminate_processes(["rerun", "re_viewer", "gzclient", "gzserver", "gazebo"])
-    _terminate_gazebo_in_distrobox()
+def cleanup_session_processes(*, include_distrobox: bool = True, include_visualization: bool = True) -> None:
+    patterns = ["gzclient", "gzserver", "gazebo"]
+    if include_visualization:
+        patterns = ["rerun", "re_viewer"] + patterns
+
+    _terminate_processes(patterns)
+    if include_distrobox:
+        _terminate_gazebo_in_distrobox()
 
 
 def _wait_for_recording_controls(
@@ -1513,9 +1587,10 @@ def _wait_for_recording_controls(
     num_episodes: int,
     scene_generator: SceneGenerator,
     ws_path: Path,
-    scene_holder: Dict[str, SceneProcess],
+    scene_holder: Dict[str, object],
 ) -> None:
     restart_event = threading.Event()
+    relaunch_event = threading.Event()
     finish_event = threading.Event()
     episodes_completed = 0
     listener = None
@@ -1526,6 +1601,8 @@ def _wait_for_recording_controls(
         def on_press(key: keyboard.Key) -> Optional[bool]:
             if key == keyboard.Key.right:
                 restart_event.set()
+            if key == keyboard.Key.left:
+                relaunch_event.set()
             return None
 
         listener = keyboard.Listener(on_press=on_press)
@@ -1541,21 +1618,70 @@ def _wait_for_recording_controls(
         while True:
             if finish_event.is_set():
                 return
+            if relaunch_event.is_set():
+                relaunch_event.clear()
+                scene = scene_holder.get("scene")
+                if isinstance(scene, SceneProcess):
+                    scene.stop()
+                cleanup_session_processes(include_distrobox=True, include_visualization=False)
+
+                current_config = scene_holder.get("scene_config")
+                if not isinstance(current_config, SceneConfig):
+                    print("[warn] No active scene configuration available to relaunch.")
+                    continue
+
+                print("[info] Relaunching scene with the current episode parameters...")
+                scene_holder["scene"] = launch_scene_for_episode(
+                    task.definition.repo_id,
+                    current_config,
+                    ws_path,
+                    scene_holder,
+                )
+                wait_for_scene_ready(ws_path, scene_holder["scene"])
+                continue
             if restart_event.is_set():
                 restart_event.clear()
                 episodes_completed += 1
-                print("[info] Restarting scene for next episode...")
                 scene = scene_holder.get("scene")
-                if scene:
+                if isinstance(scene, SceneProcess):
                     scene.stop()
-                cleanup_session_processes()
                 if episodes_completed >= num_episodes:
                     print("[info] Episode quota reached; stopping session.")
                     return
+                # Keep visualization (e.g. rerun) running between episode restarts
+                cleanup_session_processes(include_distrobox=True, include_visualization=False)
+
+                # Restart the recording process (run single-episode recorder)
+                rec_proc = scene_holder.get("record")
+                if isinstance(rec_proc, subprocess.Popen):
+                    try:
+                        if rec_proc.poll() is None:
+                            rec_proc.terminate()
+                            rec_proc.wait(timeout=5)
+                    except Exception:
+                        try:
+                            rec_proc.kill()
+                        except Exception:
+                            pass
+                try:
+                    rec_cmd = " ".join(shlex.quote(arg) for arg in task.lerobot_command(1))
+                    new_rec = _launch_terminal(
+                        rec_cmd,
+                        title="LeRobot Record",
+                        cwd=AIC_ROOT,
+                        keep_open=False,
+                    )
+                    scene_holder["record"] = new_rec
+                except Exception as exc:
+                    print(f"[warn] Could not relaunch recording: {exc}")
+                print("[info] Restarting scene for next episode...")
                 config = scene_generator.generate_random_config()
-                config = apply_scene_overrides(task.definition.repo_id, config)
-                launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
-                scene_holder["scene"] = start_scene(launch_args, ws_path)
+                scene_holder["scene"] = launch_scene_for_episode(
+                    task.definition.repo_id,
+                    config,
+                    ws_path,
+                    scene_holder,
+                )
                 wait_for_scene_ready(ws_path, scene_holder["scene"])
                 continue
 
@@ -1569,6 +1695,8 @@ def _wait_for_recording_controls(
                 seq = sys.stdin.read(2)
                 if seq == "[C":
                     restart_event.set()
+                elif seq == "[D":
+                    relaunch_event.set()
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         if listener is not None:
@@ -1639,9 +1767,13 @@ def main() -> int:
             num_episodes = prompt_num_episodes()
 
             config = scene_generator.generate_random_config()
-            config = apply_scene_overrides(task.definition.repo_id, config)
-            launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
-            scene = start_scene(launch_args, ws_path)
+            scene_holder: Dict[str, object] = {}
+            scene = launch_scene_for_episode(
+                task.definition.repo_id,
+                config,
+                ws_path,
+                scene_holder,
+            )
             ready = wait_for_scene_ready(ws_path, scene)
             if not ready:
                 scene.stop()
@@ -1649,7 +1781,6 @@ def main() -> int:
                 continue
 
             start_count = episode_counts.get(task.definition.repo_id)
-            scene_holder = {"scene": scene}
             result = run_recording(
                 task,
                 num_episodes,
@@ -1667,7 +1798,7 @@ def main() -> int:
             scene.stop()
             print("[info] Scene stopped.")
 
-            cleanup_session_processes()
+            cleanup_session_processes(include_distrobox=False)
 
             print("[info] Refreshing dataset info...")
 
@@ -1675,7 +1806,7 @@ def main() -> int:
         print("\n[info] Interrupted by user.")
         vr_process.stop()
     finally:
-        cleanup_session_processes()
+        cleanup_session_processes(include_distrobox=False)
         vr_process.stop()
 
     return 0

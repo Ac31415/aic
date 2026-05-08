@@ -101,4 +101,4 @@ create a framework that allows users to record robot arm training data to huggin
 6. # what happens when the user presses the esc key when they try to end the current recording session: #
     - waiting until the recording uploaded to huggingface is complete
     - bring the user back to the page diaplaying the UPDATED number of episodes of each datasets (include also the number of episodes left before reaching 100, if the number of episodes of a dataset is greater than or equal to 100, do not display the number of episodes left before reaching 10), that still allows the user to choose which task to record next.
-    - the user would have the option to quit the whole framework here. 
+    - the user would have the option to quit the whole framework here.
