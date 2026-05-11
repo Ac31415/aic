@@ -38,6 +38,7 @@ setuptools = ">=71.0.0,<81.0.0"                                                 
 ros-kilted-tf-transformations = ">=1.1.1,<2"
 libjpeg-turbo = ">=3.1.4.1,<4"
 ffmpeg = ">=8.1.1,<9"
+ros-kilted-act-trained-0-policy-node = { path = "act_trained_0_policy_node" }
 
 [pypi-dependencies]
 huggingface-hub = { version = "~=1.7" }
@@ -47,7 +48,7 @@ lerobot_teleoperator_devices = { git = "https://github.com/koonpeng/lerobot-ros"
 mujoco = "==3.5.0"
 pynput = ">=1.7.6,<2"
 pyspacemouse = ">=2.0.0, <3"
-oculus-reader = { path = "/home/minghanwei/ws_aic_caai/src/aic/oculus_reader", editable = true }
+oculus-reader = { path = "oculus_reader", editable = true }
 
 [activation]
 scripts = ["pixi_env_setup.sh"]
