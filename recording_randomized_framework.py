@@ -959,16 +959,15 @@ class RecordingTask:
     definition: TaskDefinition
 
     def _should_resume(self) -> bool:
-        info_path = self.definition.dataset_root / "meta" / "info.json"
-        return info_path.exists()
+        episodes_dir = self.definition.dataset_root / "meta" / "episodes"
+        return any(episodes_dir.glob("*.parquet"))
 
     def prepare_dataset_root(self) -> None:
         root = self.definition.dataset_root
-        info_path = root / "meta" / "info.json"
-        if info_path.exists():
-            return
-        if root.exists() and _is_empty_dir(root):
-            shutil.rmtree(root)
+        if self._should_resume():
+            return  # valid dataset with at least one episode — keep it
+        if root.exists():
+            shutil.rmtree(root)  # partial or empty state — wipe so lerobot starts fresh
 
     def cheatcode_lerobot_command(
         self, num_episodes: int, config: "SceneConfig"
@@ -988,7 +987,7 @@ class RecordingTask:
             "--teleop.id=aic",
             "--robot.teleop_target_mode=cartesian",
             "--robot.teleop_frame_id=gripper/tcp",
-            "--dataset.push_to_hub=true",
+            "--dataset.push_to_hub=false", # change to true when ready to push to hub
             "--dataset.private=true",
             f"--dataset.num_episodes={num_episodes}",
             "--play_sounds=false",
@@ -1369,6 +1368,7 @@ def _gz_topic_list(container: str = "aic_eval") -> List[str]:
             [
                 "docker", "exec", container,
                 "bash", "-c",
+                "export GZ_IP=127.0.0.1; "
                 "source /opt/ros/kilted/setup.bash; "
                 "source /ws_aic/install/setup.bash; "
                 "gz topic -l 2>/dev/null",
@@ -1380,6 +1380,67 @@ def _gz_topic_list(container: str = "aic_eval") -> List[str]:
         return result.stdout.splitlines()
     except Exception:
         return []
+
+
+_RCLPY_TF_CHECK = """\
+import rclpy, sys, time
+from rclpy.node import Node
+from rclpy.executors import SingleThreadedExecutor
+from tf2_ros import Buffer, TransformListener
+rclpy.init()
+node = Node('spawn_check')
+tf_buf = Buffer()
+TransformListener(tf_buf, node)
+executor = SingleThreadedExecutor()
+executor.add_node(node)
+deadline = time.time() + {timeout}
+while time.time() < deadline:
+    executor.spin_once(timeout_sec=0.5)
+    try:
+        tf_buf.lookup_transform('world', '{frame}', rclpy.time.Time())
+        rclpy.shutdown(); sys.exit(0)
+    except Exception:
+        pass
+rclpy.shutdown(); sys.exit(1)
+"""
+
+_RCLPY_INSERTION_WAIT = """\
+import rclpy, sys, time
+from rclpy.node import Node
+from rclpy.executors import SingleThreadedExecutor
+from tf2_ros import Buffer, TransformListener
+rclpy.init()
+node = Node('insertion_wait')
+tf_buf = Buffer()
+TransformListener(tf_buf, node)
+executor = SingleThreadedExecutor()
+executor.add_node(node)
+plug_frame = '{plug_frame}'
+port_frame = '{port_frame}'
+# Warm up the TF buffer and let the arm start moving before checking.
+warmup_end = time.time() + 20
+while time.time() < warmup_end:
+    executor.spin_once(timeout_sec=0.5)
+# Now poll: compare both frames in world Z (same as cheatcode does in base_link).
+# Require 3 consecutive detections to avoid TF glitches.
+deadline = time.time() + {timeout}
+consecutive = 0
+while time.time() < deadline:
+    executor.spin_once(timeout_sec=0.5)
+    try:
+        tp = tf_buf.lookup_transform('world', plug_frame, rclpy.time.Time())
+        tr = tf_buf.lookup_transform('world', port_frame, rclpy.time.Time())
+        z_diff = tp.transform.translation.z - tr.transform.translation.z
+        if z_diff <= -0.010:
+            consecutive += 1
+            if consecutive >= 3:
+                rclpy.shutdown(); sys.exit(0)
+        else:
+            consecutive = 0
+    except Exception:
+        consecutive = 0
+rclpy.shutdown(); sys.exit(1)
+"""
 
 
 def wait_for_scene_ready(
@@ -1435,23 +1496,42 @@ def wait_for_scene_ready(
 def wait_for_objects_spawned(
     config: "SceneConfig",
     timeout_s: int = 120,
-    container: str = "aic_eval",
 ) -> bool:
-    """Wait until the cable insertion-event topic appears in Gazebo.
+    """Wait until the cable's TF frame appears, confirming the scene is spawned."""
+    import rclpy
+    from rclpy.node import Node
+    from rclpy.executors import SingleThreadedExecutor
+    from tf2_ros import Buffer, TransformListener
 
-    This topic is only published once the cable object is live in the
-    simulation.  On timeout we warn and proceed rather than aborting, so
-    a transient gz-topic discovery failure never skips a scene.
-    """
-    target = f"/{config.task_cable_name}/insertion_event"
-    print(f"[info] Waiting for objects to spawn (watching: {target})...")
+    frame = f"{config.task_cable_name}/{config.task_plug_name}_link"
+    print(f"[info] Waiting for objects to spawn (TF frame: {frame})...")
+
+    ctx = rclpy.Context()
+    rclpy.init(context=ctx)
+    node = Node("spawn_check", context=ctx)
+    tf_buf = Buffer()
+    TransformListener(tf_buf, node)
+    executor = SingleThreadedExecutor(context=ctx)
+    executor.add_node(node)
+
+    found = False
     deadline = time.time() + timeout_s
     while time.time() < deadline:
-        if target in _gz_topic_list(container):
-            print("[info] Scene objects confirmed spawned.")
-            return True
-        time.sleep(3)
-    print("[warn] Could not confirm object spawning via gz topics; proceeding anyway.")
+        executor.spin_once(timeout_sec=0.5)
+        try:
+            tf_buf.lookup_transform("world", frame, rclpy.time.Time(clock_type=rclpy.clock.ClockType.ROS_TIME))
+            found = True
+            break
+        except Exception:
+            pass
+
+    node.destroy_node()
+    ctx.try_shutdown()
+
+    if found:
+        print("[info] Scene objects confirmed spawned.")
+    else:
+        print("[warn] Could not confirm object spawning; proceeding anyway.")
     return True
 
 
@@ -1704,44 +1784,64 @@ def _terminate_gazebo_in_distrobox() -> None:
 
 
 def _wait_for_insertion_event(
-    cable_name: str,
+    plug_frame: str,
+    port_frame: str,
     timeout_s: int = 300,
-    container: str = "aic_eval",
 ) -> bool:
-    """Poll /<cable_name>/insertion_event via gz topic inside the container.
+    """Wait until the plug TF frame is at insertion depth below the port frame.
 
-    Returns True as soon as the event fires (insertion achieved), False if the
-    timeout elapses first.  Uses a short-lived subprocess per poll so the main
-    thread can remain responsive to KeyboardInterrupt.
+    Runs rclpy in a background thread of the main process so it does not
+    contend with concurrent `pixi run lerobot-record` for the pixi lock.
     """
-    topic = f"/{cable_name}/insertion_event"
-    source_cmd = (
-        "source /opt/ros/kilted/setup.bash && "
-        "source /ws_aic/install/setup.bash && "
-    )
-    poll_timeout = 5
-    deadline = time.time() + timeout_s
-    while time.time() < deadline:
-        remaining = deadline - time.time()
-        wait = min(poll_timeout, remaining)
-        if wait <= 0:
-            break
-        try:
-            result = subprocess.run(
-                [
-                    "docker", "exec", container,
-                    "bash", "-c",
-                    f"{source_cmd}timeout {int(wait)} gz topic -e -t {topic} -n 1 2>/dev/null",
-                ],
-                capture_output=True,
-                text=True,
-                timeout=int(wait) + 3,
-            )
-            if result.returncode == 0 and result.stdout.strip():
-                return True
-        except Exception:
-            pass
-    return False
+    import threading
+    import rclpy
+    from rclpy.node import Node
+    from rclpy.executors import SingleThreadedExecutor
+    from tf2_ros import Buffer, TransformListener
+
+    detected = [False]
+    stop_evt = threading.Event()
+
+    def _run() -> None:
+        ctx = rclpy.Context()
+        rclpy.init(context=ctx)
+        node = Node("insertion_wait", context=ctx)
+        tf_buf = Buffer()
+        TransformListener(tf_buf, node)
+        executor = SingleThreadedExecutor(context=ctx)
+        executor.add_node(node)
+
+        # Warm up: let TF buffer fill and arm start moving.
+        warmup_end = time.time() + 20
+        while time.time() < warmup_end and not stop_evt.is_set():
+            executor.spin_once(timeout_sec=0.5)
+
+        consecutive = 0
+        deadline = time.time() + timeout_s
+        while time.time() < deadline and not stop_evt.is_set():
+            executor.spin_once(timeout_sec=0.5)
+            try:
+                tp = tf_buf.lookup_transform("world", plug_frame, rclpy.time.Time(clock_type=rclpy.clock.ClockType.ROS_TIME))
+                tr = tf_buf.lookup_transform("world", port_frame, rclpy.time.Time(clock_type=rclpy.clock.ClockType.ROS_TIME))
+                z_diff = tp.transform.translation.z - tr.transform.translation.z
+                if z_diff <= -0.010:
+                    consecutive += 1
+                    if consecutive >= 3:
+                        detected[0] = True
+                        break
+                else:
+                    consecutive = 0
+            except Exception:
+                consecutive = 0
+
+        node.destroy_node()
+        ctx.try_shutdown()
+
+    t = threading.Thread(target=_run, daemon=True)
+    t.start()
+    t.join(timeout=timeout_s + 35)
+    stop_evt.set()
+    return detected[0]
 
 
 def cleanup_session_processes(*, include_distrobox: bool = True, include_visualization: bool = True) -> None:
@@ -2101,9 +2201,13 @@ def main_cheatcode() -> int:
             # Monitor for insertion completion while lerobot-record runs.
             # _wait_for_insertion_event blocks until the gz insertion_event
             # topic fires (cable inserted) or the timeout elapses.
-            print("[info] Waiting for insertion event...")
+            plug_frame = f"{config.task_cable_name}/{config.task_plug_name}_link"
+            port_frame = f"task_board/{config.task_module_name}/{config.task_port_name}_link"
+            print(f"[info] Waiting for insertion ({plug_frame} → {port_frame})...")
             inserted = _wait_for_insertion_event(
-                config.task_cable_name, timeout_s=300
+                plug_frame=plug_frame,
+                port_frame=port_frame,
+                timeout_s=300,
             )
             if inserted:
                 print("[info] Insertion detected — episode complete.")
