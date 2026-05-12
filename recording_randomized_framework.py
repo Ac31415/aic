@@ -17,6 +17,7 @@ import shlex
 import shutil
 import re
 import signal
+import tempfile
 import select
 import subprocess
 import sys
@@ -27,7 +28,7 @@ import tty
 from collections import deque
 from dataclasses import dataclass, replace
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 
 REPO_IDS = [
@@ -47,7 +48,6 @@ REPO_IDS = [
 ]
 
 AIC_ROOT = Path.home() / "ws_aic_caai" / "src" / "aic"
-OCULUS_DIR = AIC_ROOT / "oculus_reader"
 HF_CACHE_ROOT = Path.home() / ".cache" / "huggingface" / "lerobot"
 HF_HUB_CACHE_ROOT = Path.home() / ".cache" / "huggingface" / "hub"
 RMW_IMPLEMENTATION = "rmw_zenoh_cpp"
@@ -865,20 +865,6 @@ class SceneProcess:
             self.process.wait()
 
 
-@dataclass
-class VRTeleopProcess:
-    process: subprocess.Popen
-
-    def stop(self, timeout: int = 10) -> None:
-        if self.process.poll() is not None:
-            return
-        try:
-            self.process.terminate()
-            self.process.wait(timeout=timeout)
-        except subprocess.TimeoutExpired:
-            self.process.kill()
-            self.process.wait()
-
 
 @dataclass
 class RecordingResult:
@@ -983,34 +969,6 @@ class RecordingTask:
             return
         if root.exists() and _is_empty_dir(root):
             shutil.rmtree(root)
-
-    def lerobot_command(self, num_episodes: int) -> List[str]:
-        cmd = [
-            "pixi",
-            "run",
-            "lerobot-record",
-            "--robot.type=aic_controller",
-            "--robot.id=aic",
-            "--teleop.type=aic_oculus",
-            "--teleop.id=aic",
-            "--robot.teleop_target_mode=cartesian",
-            "--robot.cartesian_command_mode=position",
-            "--teleop.cartesian_command_mode=position",
-            "--robot.teleop_frame_id=base_link",
-            "--dataset.push_to_hub=true",
-            "--dataset.private=true",
-            f"--dataset.num_episodes={num_episodes}",
-            "--play_sounds=false",
-            "--display_data=true",
-            "--dataset.reset_time_s=30",
-            "--dataset.episode_time_s=600",
-            f"--dataset.repo_id={self.definition.repo_id}",
-            f"--dataset.single_task={self.definition.single_task}",
-            f"--dataset.root={self.definition.dataset_root}",
-        ]
-        if self._should_resume():
-            cmd.append("--resume=true")
-        return cmd
 
     def cheatcode_lerobot_command(
         self, num_episodes: int, config: "SceneConfig"
@@ -1363,19 +1321,6 @@ def build_tasks() -> List[RecordingTask]:
     return tasks
 
 
-def prompt_connect_quest() -> None:
-    print("Connect the Quest 3 headset, then press Enter to continue.")
-    input("→ ")
-
-
-def start_vr_teleop() -> VRTeleopProcess:
-    command = "pixi run python3 oculus_reader/viz_transforms.py"
-    process = _launch_terminal(
-        command, title="AIC VR Teleop", cwd=OCULUS_DIR, keep_open=False
-    )
-    print("[info] VR teleop launched in a new terminal.")
-    return VRTeleopProcess(process=process)
-
 
 def build_scene_generator() -> SceneGenerator:
     return SceneGenerator()
@@ -1417,6 +1362,26 @@ def start_scene(launch_args: str, ws_path: Path) -> SceneProcess:
     return SceneProcess(process=process, detached=True)
 
 
+def _gz_topic_list(container: str = "aic_eval") -> List[str]:
+    """Return the list of active gz topics inside the container, or []."""
+    try:
+        result = subprocess.run(
+            [
+                "docker", "exec", container,
+                "bash", "-c",
+                "source /opt/ros/kilted/setup.bash; "
+                "source /ws_aic/install/setup.bash; "
+                "gz topic -l 2>/dev/null",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        return result.stdout.splitlines()
+    except Exception:
+        return []
+
+
 def wait_for_scene_ready(
     ws_path: Path,
     scene: SceneProcess,
@@ -1427,7 +1392,6 @@ def wait_for_scene_ready(
     poll_interval = 5
     attempt = 0
     gz_ready_count = 0
-    sdf_ready_count = 0
     while time.time() < deadline:
         if not scene.detached and scene.process is not None:
             if scene.process.poll() is not None:
@@ -1437,24 +1401,18 @@ def wait_for_scene_ready(
                 )
                 return False
         attempt += 1
-        gz_cmd = (
-            "export DBX_CONTAINER_MANAGER=docker; "
-            "distrobox enter -r aic_eval -- pgrep -f gzserver"
-        )
         gz_running = False
         try:
-            gz_result = subprocess.run(
-                ["bash", "-c", gz_cmd],
+            result = subprocess.run(
+                ["docker", "exec", "aic_eval", "pgrep", "-f", "gzserver"],
                 capture_output=True,
                 text=True,
                 timeout=10,
             )
-            if gz_result.returncode == 0 and gz_result.stdout.strip():
+            if result.returncode == 0 and result.stdout.strip():
                 gz_running = True
-        except subprocess.TimeoutExpired:
+        except Exception:
             gz_running = False
-
-        sdf_ready = Path("/tmp/aic.sdf").exists()
 
         if gz_running:
             gz_ready_count += 1
@@ -1463,23 +1421,38 @@ def wait_for_scene_ready(
                 return True
         else:
             gz_ready_count = 0
-
-        if sdf_ready:
-            sdf_ready_count += 1
-            if sdf_ready_count >= 3:
-                print("[info] Gazebo is ready (SDF exported).")
-                return True
-        else:
-            sdf_ready_count = 0
             print(
                 f"[info] Gazebo not ready yet (attempt {attempt}); "
-                "gzserver/SDF not detected"
+                "gzserver not detected"
             )
 
         time.sleep(poll_interval)
 
     print("[warn] Timed out waiting for Gazebo readiness.")
     return False
+
+
+def wait_for_objects_spawned(
+    config: "SceneConfig",
+    timeout_s: int = 120,
+    container: str = "aic_eval",
+) -> bool:
+    """Wait until the cable insertion-event topic appears in Gazebo.
+
+    This topic is only published once the cable object is live in the
+    simulation.  On timeout we warn and proceed rather than aborting, so
+    a transient gz-topic discovery failure never skips a scene.
+    """
+    target = f"/{config.task_cable_name}/insertion_event"
+    print(f"[info] Waiting for objects to spawn (watching: {target})...")
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        if target in _gz_topic_list(container):
+            print("[info] Scene objects confirmed spawned.")
+            return True
+        time.sleep(3)
+    print("[warn] Could not confirm object spawning via gz topics; proceeding anyway.")
+    return True
 
 
 def choose_task(
@@ -1538,7 +1511,7 @@ def run_recording(
         cmd,
         title="LeRobot Record",
         cwd=AIC_ROOT,
-        keep_open=False,
+        keep_open=True,
     )
     # expose record process so the control loop can restart it
     scene_holder["record"] = record_process
@@ -1630,27 +1603,75 @@ def _wait_for_local_episode_update(
     return latest_count
 
 
+def _build_terminal_cmd(title: str, script_path: str) -> List[str]:
+    """Return the argv to open a terminal running script_path.
+
+    Checks $TERMINAL first, then known Ubuntu terminals, then
+    x-terminal-emulator.  All entries use a plain script path so there are
+    no shell-quoting differences between terminals.
+    """
+    known: List[Tuple[str, Any]] = [
+        ("gnome-terminal", lambda: ["gnome-terminal", f"--title={title}", "--", script_path]),
+        ("tilix",          lambda: ["tilix", "-t", title, "-e", script_path]),
+        ("terminator",     lambda: ["terminator", "-T", title, "-x", script_path]),
+        ("xfce4-terminal", lambda: ["xfce4-terminal", f"--title={title}", "-x", script_path]),
+        ("xterm",          lambda: ["xterm", "-title", title, "-e", script_path]),
+    ]
+
+    candidates: List[Tuple[str, Any]] = []
+    env_term = os.environ.get("TERMINAL", "").strip()
+    if env_term:
+        match = next(((n, f) for n, f in known if n == env_term), None)
+        if match:
+            candidates.append(match)
+        elif shutil.which(env_term):
+            candidates.append((env_term, lambda t=env_term: [t, "-e", script_path]))
+
+    for entry in known:
+        name, _ = entry
+        if name not in {n for n, _ in candidates} and shutil.which(name):
+            candidates.append(entry)
+
+    if shutil.which("x-terminal-emulator"):
+        candidates.append(("x-terminal-emulator", lambda: ["x-terminal-emulator", "-e", script_path]))
+
+    if not candidates:
+        raise RuntimeError("No terminal emulator found. Install one or set $TERMINAL.")
+
+    _, builder = candidates[0]
+    return builder()
+
+
 def _launch_terminal(
     command: str, title: str, cwd: Path, keep_open: bool = True
 ) -> subprocess.Popen:
-    if keep_open:
-        tail = "; exec bash"
-    else:
-        tail = ""
-    terminal_cmd = [
-        "gnome-terminal",
-        f"--title={title}",
-        "--",
-        "bash",
-        "-lc",
-        f"cd {shlex.quote(str(cwd))} && {command}{tail}",
-    ]
+    tail = "; exec bash" if keep_open else ""
+    shell_cmd = f"cd {shlex.quote(str(cwd))} && {command}{tail}"
+
+    # Write a self-deleting temp script so no terminal needs quoting tricks.
+    script = tempfile.NamedTemporaryFile(
+        mode="w", suffix=".sh", prefix="aic_term_", delete=False
+    )
+    try:
+        script.write(
+            f"#!/bin/bash\n"
+            f'export PATH="$HOME/.pixi/bin:$PATH"\n'
+            f"rm -f {shlex.quote(script.name)}\n"
+            f"{shell_cmd}\n"
+        )
+        script.close()
+        os.chmod(script.name, 0o755)
+    except Exception:
+        script.close()
+        os.unlink(script.name)
+        raise
+
+    terminal_cmd = _build_terminal_cmd(title, script.name)
     try:
         return subprocess.Popen(terminal_cmd)
     except FileNotFoundError as exc:
-        raise RuntimeError(
-            "gnome-terminal is required to launch new terminals."
-        ) from exc
+        os.unlink(script.name)
+        raise RuntimeError(f"Could not launch terminal ({terminal_cmd[0]}): {exc}") from exc
 
 
 def _terminate_processes(patterns: Iterable[str]) -> None:
@@ -1680,6 +1701,47 @@ def _terminate_gazebo_in_distrobox() -> None:
         )
     except Exception:
         pass
+
+
+def _wait_for_insertion_event(
+    cable_name: str,
+    timeout_s: int = 300,
+    container: str = "aic_eval",
+) -> bool:
+    """Poll /<cable_name>/insertion_event via gz topic inside the container.
+
+    Returns True as soon as the event fires (insertion achieved), False if the
+    timeout elapses first.  Uses a short-lived subprocess per poll so the main
+    thread can remain responsive to KeyboardInterrupt.
+    """
+    topic = f"/{cable_name}/insertion_event"
+    source_cmd = (
+        "source /opt/ros/kilted/setup.bash && "
+        "source /ws_aic/install/setup.bash && "
+    )
+    poll_timeout = 5
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        remaining = deadline - time.time()
+        wait = min(poll_timeout, remaining)
+        if wait <= 0:
+            break
+        try:
+            result = subprocess.run(
+                [
+                    "docker", "exec", container,
+                    "bash", "-c",
+                    f"{source_cmd}timeout {int(wait)} gz topic -e -t {topic} -n 1 2>/dev/null",
+                ],
+                capture_output=True,
+                text=True,
+                timeout=int(wait) + 3,
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                return True
+        except Exception:
+            pass
+    return False
 
 
 def cleanup_session_processes(*, include_distrobox: bool = True, include_visualization: bool = True) -> None:
@@ -1779,7 +1841,7 @@ def _wait_for_recording_controls(
                         rec_cmd,
                         title="LeRobot Record",
                         cwd=AIC_ROOT,
-                        keep_open=False,
+                        keep_open=True,
                     )
                     scene_holder["record"] = new_rec
                 except Exception as exc:
@@ -1851,9 +1913,6 @@ def main() -> int:
     hf_token = read_hf_token(args.hf_token_path)
     fetcher = DatasetInfoFetcher(hf_token=hf_token)
 
-    prompt_connect_quest()
-    vr_process = start_vr_teleop()
-
     scene_generator = build_scene_generator()
     print("[info] Scene generator initialized.")
 
@@ -1871,7 +1930,6 @@ def main() -> int:
 
             task = choose_task(tasks, episode_counts)
             if task is None:
-                vr_process.stop()
                 break
 
             num_episodes = prompt_num_episodes()
@@ -1914,10 +1972,8 @@ def main() -> int:
 
     except KeyboardInterrupt:
         print("\n[info] Interrupted by user.")
-        vr_process.stop()
     finally:
         cleanup_session_processes(include_distrobox=False)
-        vr_process.stop()
 
     return 0
 
@@ -2025,6 +2081,8 @@ def main_cheatcode() -> int:
                 cleanup_session_processes(include_distrobox=False)
                 continue
 
+            wait_for_objects_spawned(config)
+
             # One episode per scene: the cheatcode runs automatically so there
             # is no need for the per-episode restart loop used by the VR path.
             cmd = " ".join(
@@ -2036,16 +2094,27 @@ def main_cheatcode() -> int:
                 cmd,
                 title="LeRobot Cheatcode Record",
                 cwd=AIC_ROOT,
-                keep_open=False,
+                keep_open=True,
             )
             scene_holder["record"] = record_process
 
-            # Wait for lerobot-record to finish before tearing down the scene.
-            print("[info] Waiting for lerobot-record to finish...")
+            # Monitor for insertion completion while lerobot-record runs.
+            # _wait_for_insertion_event blocks until the gz insertion_event
+            # topic fires (cable inserted) or the timeout elapses.
+            print("[info] Waiting for insertion event...")
+            inserted = _wait_for_insertion_event(
+                config.task_cable_name, timeout_s=300
+            )
+            if inserted:
+                print("[info] Insertion detected — episode complete.")
+            else:
+                print("[warn] Insertion timeout; episode may have failed.")
+
+            # Give lerobot-record a moment to save the episode, then clean up.
             try:
-                record_process.wait(timeout=300)
+                record_process.wait(timeout=30)
             except subprocess.TimeoutExpired:
-                print("[warn] lerobot-record timed out; terminating.")
+                print("[warn] lerobot-record did not exit after insertion; terminating.")
                 try:
                     record_process.terminate()
                     record_process.wait(timeout=10)
@@ -2069,4 +2138,4 @@ def main_cheatcode() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(main_cheatcode())
