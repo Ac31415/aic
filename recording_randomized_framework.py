@@ -1511,7 +1511,7 @@ def run_recording(
         cmd,
         title="LeRobot Record",
         cwd=AIC_ROOT,
-        keep_open=True,
+        keep_open=False,
     )
     # expose record process so the control loop can restart it
     scene_holder["record"] = record_process
@@ -1841,7 +1841,7 @@ def _wait_for_recording_controls(
                         rec_cmd,
                         title="LeRobot Record",
                         cwd=AIC_ROOT,
-                        keep_open=True,
+                        keep_open=False,
                     )
                     scene_holder["record"] = new_rec
                 except Exception as exc:
@@ -2094,7 +2094,7 @@ def main_cheatcode() -> int:
                 cmd,
                 title="LeRobot Cheatcode Record",
                 cwd=AIC_ROOT,
-                keep_open=True,
+                keep_open=False,
             )
             scene_holder["record"] = record_process
 
