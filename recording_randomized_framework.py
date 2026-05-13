@@ -1007,6 +1007,7 @@ class RecordingTask:
             f"--teleop.task_port_name={config.task_port_name}",
             "--dataset.streaming_encoding=true",
             "--dataset.encoder_threads=2",
+            "--dataset.fps=20",
         ]
         if self._should_resume():
             cmd.append("--resume=true")
