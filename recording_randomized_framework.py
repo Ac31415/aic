@@ -1005,6 +1005,8 @@ class RecordingTask:
             f"--teleop.task_plug_name={config.task_plug_name}",
             f"--teleop.task_module_name={config.task_module_name}",
             f"--teleop.task_port_name={config.task_port_name}",
+            "--dataset.streaming_encoding=true",
+            "--dataset.encoder_threads=2",
         ]
         if self._should_resume():
             cmd.append("--resume=true")

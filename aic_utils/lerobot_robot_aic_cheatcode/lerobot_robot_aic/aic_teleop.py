@@ -382,7 +382,7 @@ class AICCheatCodeTeleopConfig(TeleoperatorConfig):
     hover_height: float = 0.03  # Reduced from 0.10 - less drift time
     approach_height: float = 0.20
     insertion_base_speed: float = 0.012  # Increased from 0.008 - faster descent
-    insertion_depth: float = -0.050
+    insertion_depth: float = -0.080
     insertion_dwell: float = 2.0
 
     # Alignment convergence criteria
