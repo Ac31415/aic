@@ -1353,12 +1353,14 @@ def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> Scene
     print(f"[info] Scene launch command: {launch_cmd}")
     if headless:
         command = f"docker exec aic_eval {launch_cmd}"
+        process = subprocess.Popen(["bash", "-c", command], cwd=ws_path)
+        print("[info] Scene launch started (headless subprocess).")
     else:
         command = f"docker exec -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTHORITY aic_eval {launch_cmd}"
-    process = _launch_terminal(
-        command, title="AIC Scene", cwd=ws_path, keep_open=False
-    )
-    print("[info] Scene launch started in a new terminal.")
+        process = _launch_terminal(
+            command, title="AIC Scene", cwd=ws_path, keep_open=False
+        )
+        print("[info] Scene launch started in a new terminal.")
     return SceneProcess(process=process, detached=True)
 
 
@@ -2161,7 +2163,6 @@ def main_cheatcode() -> int:
     print(f"[info] {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
 
     episodes_total = 0
-    round_robin_index = 0
     try:
         while True:
             # Select the next dataset in round-robin order.
@@ -2178,8 +2179,7 @@ def main_cheatcode() -> int:
                 if not eligible:
                     print("[info] All datasets have reached the target episode count.")
                     break
-            task = eligible[round_robin_index % len(eligible)]
-            round_robin_index += 1
+            task = eligible[0]
             current_count = _read_episode_count(task)
 
             print(f"\n[info] === Episode {episodes_total + 1} — {task.definition.repo_id} ({current_count} episodes so far) ===")
