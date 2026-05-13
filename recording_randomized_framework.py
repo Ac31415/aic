@@ -44,7 +44,6 @@ REPO_IDS = [
     "caai-aic/corrected_lab_collected_sfp_to_sfp_port_1_of_nic_card_mount_4",
     "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_0",
     "caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_1",
-    "caai-aic/test-dataset",
 ]
 
 AIC_ROOT = Path.home() / "ws_aic_caai" / "src" / "aic"
@@ -509,7 +508,7 @@ class SceneGenerator:
         radius = ROBOT_BASE_RADIUS_M + TASK_BOARD_CLEARANCE_M
         return (dist_x * dist_x + dist_y * dist_y) <= (radius * radius)
 
-    def generate_random_config(self) -> SceneConfig:
+    def generate_random_config(self, target: Optional[dict] = None) -> SceneConfig:
         max_attempts = 1000
 
         for _ in range(max_attempts):
@@ -533,7 +532,7 @@ class SceneGenerator:
                 continue
 
             spawn_cable = True
-            cable_type = random.choice(self.allowed_cable_types)
+            cable_type = target["cable_type"] if target is not None else random.choice(self.allowed_cable_types)
             cable_x_mean = 0.172
             cable_y_mean = 0.024
             cable_z_mean = 1.508 if cable_type == "sfp_sc_cable_reversed" else 1.518
@@ -683,18 +682,28 @@ class SceneGenerator:
                         "nic_card_mount_4_present"
                     )
 
-            # --- Cheatcode target selection ---
-            # The cheatcode teleop drives the arm using ground-truth TF frames
-            # from the simulation, so we must pick a specific port module as
-            # the insertion target and guarantee it is actually present in the
-            # scene (the earlier while-loops only guarantee *some* component is
-            # present, not necessarily a port module the cheatcode can reach).
-
+            # --- Target selection ---
             task_cable_name = "cable_0"
-
-            if cable_type == "sfp_sc_cable":
-                # sfp_sc_cable uses the SFP plug tip; valid cheatcode targets
-                # are NIC card mounts (each exposes sfp_port_0 and sfp_port_1).
+            if target is not None:
+                task_plug_name = target["task_plug_name"]
+                task_module_name = target["task_module_name"]
+                task_port_name = target["task_port_name"]
+                # Force the target component present regardless of random flags.
+                if task_module_name == "nic_card_mount_0":
+                    nic_card_mount_0_present = True
+                elif task_module_name == "nic_card_mount_1":
+                    nic_card_mount_1_present = True
+                elif task_module_name == "nic_card_mount_2":
+                    nic_card_mount_2_present = True
+                elif task_module_name == "nic_card_mount_3":
+                    nic_card_mount_3_present = True
+                elif task_module_name == "nic_card_mount_4":
+                    nic_card_mount_4_present = True
+                elif task_module_name == "sc_port_0":
+                    sc_port_0_present = True
+                elif task_module_name == "sc_port_1":
+                    sc_port_1_present = True
+            elif cable_type == "sfp_sc_cable":
                 task_plug_name = "sfp_tip"
                 nic_flags = [
                     ("nic_card_mount_0", nic_card_mount_0_present),
@@ -704,8 +713,6 @@ class SceneGenerator:
                     ("nic_card_mount_4", nic_card_mount_4_present),
                 ]
                 present_nic = [name for name, p in nic_flags if p]
-                # If no NIC card mount is present, force one so the cheatcode
-                # always has a reachable target port.
                 if not present_nic:
                     forced = random.choice([name for name, _ in nic_flags])
                     if forced == "nic_card_mount_0":
@@ -720,21 +727,14 @@ class SceneGenerator:
                         nic_card_mount_4_present = True
                     present_nic = [forced]
                 task_module_name = random.choice(present_nic)
-                # NIC card mounts expose two SFP ports; randomise between them
-                # for greater trajectory variety in the dataset.
                 task_port_name = random.choice(["sfp_port_0", "sfp_port_1"])
-
-            else:  # sfp_sc_cable_reversed
-                # sfp_sc_cable_reversed uses the SC plug tip; valid cheatcode
-                # targets are SC port modules (single port each: sc_port_base).
+            else:
                 task_plug_name = "sc_tip"
                 sc_flags = [
                     ("sc_port_0", sc_port_0_present),
                     ("sc_port_1", sc_port_1_present),
                 ]
                 present_sc = [name for name, p in sc_flags if p]
-                # If no SC port is present, force one so the cheatcode always
-                # has a reachable target port.
                 if not present_sc:
                     forced = random.choice([name for name, _ in sc_flags])
                     if forced == "sc_port_0":
@@ -743,7 +743,6 @@ class SceneGenerator:
                         sc_port_1_present = True
                     present_sc = [forced]
                 task_module_name = random.choice(present_sc)
-                # SC port modules have a single port; name is always the same.
                 task_port_name = "sc_port_base"
 
             config = SceneConfig(
@@ -960,7 +959,13 @@ class RecordingTask:
 
     def _should_resume(self) -> bool:
         info_path = self.definition.dataset_root / "meta" / "info.json"
-        return info_path.exists()
+        if not info_path.exists():
+            return False
+        try:
+            info = json.loads(info_path.read_text())
+            return int(info.get("total_episodes", 0)) > 0
+        except Exception:
+            return False
 
     def prepare_dataset_root(self) -> None:
         root = self.definition.dataset_root
@@ -971,7 +976,7 @@ class RecordingTask:
             shutil.rmtree(root)
 
     def cheatcode_lerobot_command(
-        self, num_episodes: int, config: "SceneConfig"
+        self, num_episodes: int, config: "SceneConfig", push_to_hub: bool = False, display_data: bool = True
     ) -> List[str]:
         # Like lerobot_command but uses the aic_cheatcode teleop, which drives
         # the arm using ground-truth TF frames from the simulation instead of
@@ -988,11 +993,12 @@ class RecordingTask:
             "--teleop.id=aic",
             "--robot.teleop_target_mode=cartesian",
             "--robot.teleop_frame_id=gripper/tcp",
-            "--dataset.push_to_hub=true",
+            f"--dataset.push_to_hub={'true' if push_to_hub else 'false'}",
             "--dataset.private=true",
             f"--dataset.num_episodes={num_episodes}",
+            "--dataset.episode_time_s=3600",
             "--play_sounds=false",
-            "--display_data=true",
+            f"--display_data={'true' if display_data else 'false'}",
             f"--dataset.repo_id={self.definition.repo_id}",
             f"--dataset.single_task={self.definition.single_task}",
             f"--dataset.root={self.definition.dataset_root}",
@@ -1309,15 +1315,6 @@ def build_tasks() -> List[RecordingTask]:
             )
         )
 
-    tasks.append(
-        RecordingTask(
-            TaskDefinition(
-                repo_id="caai-aic/test-dataset",
-                single_task=TEST_TASK_PROMPT,
-            )
-        )
-    )
-
     return tasks
 
 
@@ -1338,23 +1335,24 @@ def launch_scene_for_episode(
     config: SceneConfig,
     ws_path: Path,
     scene_holder: Dict[str, object],
+    headless: bool = True,
 ) -> SceneProcess:
     config = apply_scene_overrides(repo_id, config)
-    launch_args = config.to_launch_args(gazebo_gui=True, launch_rviz=False)
+    launch_args = config.to_launch_args(gazebo_gui=not headless, launch_rviz=False)
     scene_holder["scene_config"] = config
     scene_holder["scene_launch_args"] = launch_args
-    scene = start_scene(launch_args, ws_path)
+    scene = start_scene(launch_args, ws_path, headless=headless)
     scene_holder["scene"] = scene
     return scene
 
 
-def start_scene(launch_args: str, ws_path: Path) -> SceneProcess:
+def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
     print(f"[info] Scene launch command: {launch_cmd}")
-    command = (
-        "export DBX_CONTAINER_MANAGER=docker; "
-        f"distrobox enter -r aic_eval -- {launch_cmd}"
-    )
+    if headless:
+        command = f"docker exec aic_eval {launch_cmd}"
+    else:
+        command = f"docker exec -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTHORITY aic_eval {launch_cmd}"
     process = _launch_terminal(
         command, title="AIC Scene", cwd=ws_path, keep_open=False
     )
@@ -1392,6 +1390,7 @@ def wait_for_scene_ready(
     poll_interval = 5
     attempt = 0
     gz_ready_count = 0
+    sdf_ready_count = 0
     while time.time() < deadline:
         if not scene.detached and scene.process is not None:
             if scene.process.poll() is not None:
@@ -1414,6 +1413,8 @@ def wait_for_scene_ready(
         except Exception:
             gz_running = False
 
+        sdf_ready = Path("/tmp/aic.sdf").exists()
+
         if gz_running:
             gz_ready_count += 1
             if gz_ready_count >= 3:
@@ -1421,9 +1422,19 @@ def wait_for_scene_ready(
                 return True
         else:
             gz_ready_count = 0
+
+        if sdf_ready:
+            sdf_ready_count += 1
+            if sdf_ready_count >= 3:
+                print("[info] Gazebo is ready (SDF exported).")
+                return True
+        else:
+            sdf_ready_count = 0
+
+        if not gz_running and not sdf_ready:
             print(
                 f"[info] Gazebo not ready yet (attempt {attempt}); "
-                "gzserver not detected"
+                "gzserver/SDF not detected"
             )
 
         time.sleep(poll_interval)
@@ -1688,64 +1699,41 @@ def _terminate_processes(patterns: Iterable[str]) -> None:
 
 
 def _terminate_gazebo_in_distrobox() -> None:
-    cmd = (
-        "export DBX_CONTAINER_MANAGER=docker; "
-        "distrobox enter -r aic_eval -- pkill -f 'gzserver|gzclient|gazebo'"
-    )
     try:
         subprocess.run(
-            ["bash", "-lc", cmd],
+            ["docker", "exec", "aic_eval", "pkill", "-9", "-f", "gzserver|gzclient|gazebo|gz sim|ros_gz_container|component_container|aic_adapter|kilted"],
             check=False,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
     except Exception:
         pass
+    time.sleep(3)  # give the container time to fully release resources
 
 
-def _wait_for_insertion_event(
-    cable_name: str,
-    timeout_s: int = 300,
-    container: str = "aic_eval",
-) -> bool:
-    """Poll /<cable_name>/insertion_event via gz topic inside the container.
 
-    Returns True as soon as the event fires (insertion achieved), False if the
-    timeout elapses first.  Uses a short-lived subprocess per poll so the main
-    thread can remain responsive to KeyboardInterrupt.
-    """
-    topic = f"/{cable_name}/insertion_event"
-    source_cmd = (
-        "source /opt/ros/kilted/setup.bash && "
-        "source /ws_aic/install/setup.bash && "
-    )
-    poll_timeout = 5
-    deadline = time.time() + timeout_s
-    while time.time() < deadline:
-        remaining = deadline - time.time()
-        wait = min(poll_timeout, remaining)
-        if wait <= 0:
-            break
-        try:
-            result = subprocess.run(
-                [
-                    "docker", "exec", container,
-                    "bash", "-c",
-                    f"{source_cmd}timeout {int(wait)} gz topic -e -t {topic} -n 1 2>/dev/null",
-                ],
-                capture_output=True,
-                text=True,
-                timeout=int(wait) + 3,
-            )
-            if result.returncode == 0 and result.stdout.strip():
-                return True
-        except Exception:
-            pass
-    return False
+
+def _read_episode_count(task: "RecordingTask") -> int:
+    info_path = task.definition.dataset_root / "meta" / "info.json"
+    if not info_path.exists():
+        return 0
+    try:
+        return int(json.loads(info_path.read_text()).get("total_episodes", 0))
+    except Exception:
+        return 0
+
+
+def _log_failed_scene(config: "SceneConfig", log_path: Path) -> None:
+    import dataclasses, json
+    entry = {"timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"), **dataclasses.asdict(config)}
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(log_path, "a") as f:
+        f.write(json.dumps(entry) + "\n")
+    print(f"[warn] Failed scene config logged to {log_path}")
 
 
 def cleanup_session_processes(*, include_distrobox: bool = True, include_visualization: bool = True) -> None:
-    patterns = ["gzclient", "gzserver", "gazebo"]
+    patterns = ["gzclient", "gzserver", "gazebo", "aic_adapter", "kilted"]
     if include_visualization:
         patterns = ["rerun", "re_viewer"] + patterns
 
@@ -1978,6 +1966,30 @@ def main() -> int:
     return 0
 
 
+def _target_for_task(task: RecordingTask) -> dict:
+    """Derive the fixed cheatcode target parameters from a task's repo_id."""
+    repo_id = task.definition.repo_id
+    if "sfp_to_sfp" in repo_id:
+        # e.g. caai-aic/corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_2
+        parts = repo_id.split("sfp_to_")[1]       # "sfp_port_0_of_nic_card_mount_2"
+        port_part, mount_part = parts.split("_of_")  # "sfp_port_0", "nic_card_mount_2"
+        return {
+            "cable_type": "sfp_sc_cable",
+            "task_plug_name": "sfp_tip",
+            "task_module_name": mount_part,
+            "task_port_name": port_part,
+        }
+    else:
+        # e.g. caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_1
+        sc_num = repo_id.split("sc_port_")[-1]  # "0" or "1"
+        return {
+            "cable_type": "sfp_sc_cable_reversed",
+            "task_plug_name": "sc_tip",
+            "task_module_name": f"sc_port_{sc_num}",
+            "task_port_name": "sc_port_base",
+        }
+
+
 def main_cheatcode() -> int:
     """Fully automated recording loop using the cheatcode teleop.
 
@@ -2002,28 +2014,49 @@ def main_cheatcode() -> int:
         help="Path to ws_aic_caai/src/aic",
     )
     parser.add_argument(
-        "--repo-id",
-        type=str,
-        default="caai-aic/aic-cheatcode-random",
-        help="Hugging Face dataset repo ID to write episodes into",
-    )
-    parser.add_argument(
-        "--task-description",
-        type=str,
-        default="insert plug",
-        help="Single-task description string stored in the dataset",
-    )
-    parser.add_argument(
         "--num-scenes",
         type=int,
         default=0,
-        help="Number of scenes to record (0 = run until interrupted with Ctrl-C)",
+        help=(
+            "Target number of episodes per dataset (0 = run forever). "
+            "When set to N the script keeps running until every dataset has at "
+            "least N saved episodes, choosing whichever dataset has the fewest "
+            "episodes on each iteration."
+        ),
     )
     parser.add_argument(
         "--hf-token-path",
         type=Path,
         default=None,
         help="Optional Hugging Face token path",
+    )
+    parser.add_argument(
+        "--failure-log",
+        type=Path,
+        default=Path("failed_scenes.jsonl"),
+        help="File to append failed scene configs to (default: failed_scenes.jsonl)",
+    )
+    parser.add_argument(
+        "--push-to-hub",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Push dataset to Hugging Face Hub after each episode (default: off). Requires HF authentication.",
+    )
+    parser.add_argument(
+        "--force-repo-id",
+        type=str,
+        default=None,
+        help="Pin every iteration to a specific dataset repo-id (useful for targeted testing).",
+    )
+    parser.add_argument(
+        "--headless",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "Headless mode (default: on). Controls whether Gazebo opens a GUI window. "
+            "Pass --no-headless when running from a desktop to see the Gazebo simulation. "
+            "lerobot is always controlled via key events (uinput) regardless of this flag."
+        ),
     )
     args = parser.parse_args()
 
@@ -2034,31 +2067,41 @@ def main_cheatcode() -> int:
 
     hf_token = read_hf_token(args.hf_token_path)
 
-    # Build a minimal task definition pointing at the target dataset.
-    task_def = TaskDefinition(
-        repo_id=args.repo_id,
-        single_task=args.task_description,
-    )
-    task = RecordingTask(definition=task_def)
-    task.prepare_dataset_root()
+    all_tasks = build_tasks()
+
+    print("[info] Cleaning up any leftover Gazebo processes before starting...")
+    cleanup_session_processes(include_distrobox=True)
 
     scene_generator = build_scene_generator()
-    print("[info] Cheatcode recording started.")
-    print(f"[info] Dataset: {args.repo_id}")
     unlimited = args.num_scenes == 0
-    print(
-        f"[info] Scenes to record: {'unlimited (Ctrl-C to stop)' if unlimited else args.num_scenes}"
-    )
+    print("[info] Cheatcode recording started.")
+    print(f"[info] {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
 
-    scenes_done = 0
+    episodes_total = 0
     try:
-        while unlimited or scenes_done < args.num_scenes:
-            scene_num = scenes_done + 1
-            print(f"\n[info] === Scene {scene_num} ===")
+        while True:
+            # Select the eligible dataset with fewest saved episodes.
+            if args.force_repo_id:
+                eligible = [t for t in all_tasks if t.definition.repo_id == args.force_repo_id]
+                if not eligible:
+                    print(f"[error] --force-repo-id '{args.force_repo_id}' not found in task list.")
+                    break
+            else:
+                eligible = [
+                    t for t in all_tasks
+                    if unlimited or _read_episode_count(t) < args.num_scenes
+                ]
+                if not eligible:
+                    print("[info] All datasets have reached the target episode count.")
+                    break
+            task = min(eligible, key=_read_episode_count)
+            current_count = _read_episode_count(task)
 
-            # Each scene gets a freshly randomised configuration, including a
-            # guaranteed cheatcode insertion target derived from the cable type.
-            config = scene_generator.generate_random_config()
+            print(f"\n[info] === Episode {episodes_total + 1} — {task.definition.repo_id} ({current_count} episodes so far) ===")
+
+            # Generate a scene whose target is fixed to this dataset's port/module.
+            target = _target_for_task(task)
+            config = scene_generator.generate_random_config(target=target)
             print(
                 f"[info] Target: cable={config.task_cable_name}  "
                 f"plug={config.task_plug_name}  "
@@ -2066,73 +2109,69 @@ def main_cheatcode() -> int:
                 f"port={config.task_port_name}"
             )
 
+            task.prepare_dataset_root()
+
             scene_holder: Dict[str, object] = {}
             scene = launch_scene_for_episode(
-                args.repo_id,
+                task.definition.repo_id,
                 config,
                 ws_path,
                 scene_holder,
+                headless=args.headless,
             )
 
             ready = wait_for_scene_ready(ws_path, scene)
             if not ready:
                 scene.stop()
                 print("[warn] Scene did not start; skipping and retrying.")
-                cleanup_session_processes(include_distrobox=False)
+                cleanup_session_processes(include_distrobox=True)
                 continue
 
             wait_for_objects_spawned(config)
 
-            # One episode per scene: the cheatcode runs automatically so there
-            # is no need for the per-episode restart loop used by the VR path.
-            cmd = " ".join(
-                shlex.quote(arg)
-                for arg in task.cheatcode_lerobot_command(1, config)
-            )
-            print(f"[info] Launching lerobot-record: {cmd}")
-            record_process = _launch_terminal(
-                cmd,
-                title="LeRobot Cheatcode Record",
-                cwd=AIC_ROOT,
-                keep_open=True,
-            )
+            print("[info] Taring force-torque sensor before recording...")
+            tare_cmd = ["pixi", "run", "ros2", "service", "call",
+                        "/aic_controller/tare_force_torque_sensor", "std_srvs/srv/Trigger"]
+            tare_ok = False
+            for tare_attempt in range(3):
+                result = subprocess.run(tare_cmd, cwd=AIC_ROOT, capture_output=True, text=True)
+                if result.returncode == 0 and "success=True" in result.stdout:
+                    tare_ok = True
+                    break
+                print(f"[warn] Tare attempt {tare_attempt + 1}/3 failed — retrying in 5s...")
+                time.sleep(5)
+            if not tare_ok:
+                print("[error] Tare failed after 3 attempts — aborting scene.")
+                scene = scene_holder["scene"]
+                scene.stop()
+                cleanup_session_processes(include_distrobox=True)
+                _log_failed_scene(config, args.failure_log)
+                continue
+
+            lerobot_cmd = task.cheatcode_lerobot_command(1, config, push_to_hub=args.push_to_hub, display_data=not args.headless)
+            print(f"[info] Launching lerobot-record: {' '.join(shlex.quote(a) for a in lerobot_cmd)}")
+            record_process = subprocess.Popen(lerobot_cmd, cwd=AIC_ROOT)
             scene_holder["record"] = record_process
 
-            # Monitor for insertion completion while lerobot-record runs.
-            # _wait_for_insertion_event blocks until the gz insertion_event
-            # topic fires (cable inserted) or the timeout elapses.
-            print("[info] Waiting for insertion event...")
-            inserted = _wait_for_insertion_event(
-                config.task_cable_name, timeout_s=300
-            )
-            if inserted:
-                print("[info] Insertion detected — episode complete.")
+            episodes_before = _read_episode_count(task)
+            record_process.wait()
+            if _read_episode_count(task) > episodes_before:
+                episodes_total += 1
+                new_count = _read_episode_count(task)
+                print(f"[info] Episode saved → {task.definition.repo_id} now has {new_count} episodes (total across all datasets: {episodes_total})")
             else:
-                print("[warn] Insertion timeout; episode may have failed.")
-
-            # Give lerobot-record a moment to save the episode, then clean up.
-            try:
-                record_process.wait(timeout=30)
-            except subprocess.TimeoutExpired:
-                print("[warn] lerobot-record did not exit after insertion; terminating.")
-                try:
-                    record_process.terminate()
-                    record_process.wait(timeout=10)
-                except Exception:
-                    record_process.kill()
+                print("[warn] Episode not saved (cheatcode timed out or lerobot error) — discarding.")
+                _log_failed_scene(config, args.failure_log)
 
             scene = scene_holder["scene"]
             scene.stop()
             print("[info] Scene stopped.")
-            cleanup_session_processes(include_distrobox=False)
-
-            scenes_done += 1
-            print(f"[info] Episodes recorded so far: {scenes_done}")
+            cleanup_session_processes(include_distrobox=True)
 
     except KeyboardInterrupt:
-        print(f"\n[info] Interrupted. Episodes recorded: {scenes_done}")
+        print(f"\n[info] Interrupted. Episodes recorded this run: {episodes_total}")
     finally:
-        cleanup_session_processes(include_distrobox=False)
+        cleanup_session_processes(include_distrobox=True)
 
     return 0
 
