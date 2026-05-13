@@ -382,7 +382,7 @@ class AICCheatCodeTeleopConfig(TeleoperatorConfig):
     hover_height: float = 0.03  # Reduced from 0.10 - less drift time
     approach_height: float = 0.20
     insertion_base_speed: float = 0.012  # Increased from 0.008 - faster descent
-    insertion_depth: float = -0.035
+    insertion_depth: float = -0.050
     insertion_dwell: float = 2.0
 
     # Alignment convergence criteria
@@ -393,7 +393,7 @@ class AICCheatCodeTeleopConfig(TeleoperatorConfig):
 
     # Spiral search during INSERT — sweeps the plug tip over the port opening
     # to overcome residual XY alignment error without relying on exact centering.
-    spiral_radius: float = 0.003   # max XY search radius in metres (3 mm)
+    spiral_radius: float = 0.006   # max XY search radius in metres (6 mm)
     spiral_freq: float = 0.5       # orbits per second
     spiral_ramp_s: float = 2.0     # seconds to ramp from 0 to full radius
 

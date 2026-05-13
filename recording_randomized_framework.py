@@ -2158,9 +2158,10 @@ def main_cheatcode() -> int:
     print(f"[info] {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
 
     episodes_total = 0
+    round_robin_index = 0
     try:
         while True:
-            # Select the eligible dataset with fewest saved episodes.
+            # Select the next dataset in round-robin order.
             if args.force_repo_id:
                 eligible = [t for t in all_tasks if t.definition.repo_id == args.force_repo_id]
                 if not eligible:
@@ -2174,7 +2175,8 @@ def main_cheatcode() -> int:
                 if not eligible:
                     print("[info] All datasets have reached the target episode count.")
                     break
-            task = min(eligible, key=_read_episode_count)
+            task = eligible[round_robin_index % len(eligible)]
+            round_robin_index += 1
             current_count = _read_episode_count(task)
 
             print(f"\n[info] === Episode {episodes_total + 1} — {task.definition.repo_id} ({current_count} episodes so far) ===")
