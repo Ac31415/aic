@@ -29,6 +29,7 @@ from lerobot.teleoperators.keyboard import (
 from lerobot.utils.errors import DeviceAlreadyConnectedError, DeviceNotConnectedError
 from lerobot_teleoperator_devices import KeyboardJointTeleop, KeyboardJointTeleopConfig
 from rclpy.executors import SingleThreadedExecutor
+from std_msgs.msg import String
 
 from .aic_robot import arm_joint_names
 from .types import JointMotionUpdateActionDict, MotionUpdateActionDict
@@ -344,6 +345,15 @@ class AICSpaceMouseTeleop(Teleoperator):
 # ==============================================================================
 # START OF NEW ADDITION: AICCheatCodeTeleop (Simplified)
 # ==============================================================================
+
+_recording_events: dict | None = None
+
+APPROACH_TIMEOUT_S: float = 60.0
+ALIGN_TIMEOUT_S: float = 60.0
+INSERT_TIMEOUT_S: float = 60.0
+FORCE_FREEZE_Z_N: float = 19.5    # above this in INSERT: freeze Z descent, keep spiral running
+FORCE_SAFETY_STOP_N: float = 55.0  # above this sustained 0.8s in INSERT: full safety stop
+
 import numpy as np
 from aic_model_interfaces.msg import Observation
 from scipy.spatial.transform import Rotation as R
@@ -372,7 +382,7 @@ class AICCheatCodeTeleopConfig(TeleoperatorConfig):
     hover_height: float = 0.03  # Reduced from 0.10 - less drift time
     approach_height: float = 0.20
     insertion_base_speed: float = 0.012  # Increased from 0.008 - faster descent
-    insertion_depth: float = -0.015
+    insertion_depth: float = -0.035
     insertion_dwell: float = 2.0
 
     # Alignment convergence criteria
@@ -380,6 +390,12 @@ class AICCheatCodeTeleopConfig(TeleoperatorConfig):
     align_angular_tolerance: float = 0.03
     align_timeout: float = 8.0
     align_min_dwell: float = 2.0
+
+    # Spiral search during INSERT — sweeps the plug tip over the port opening
+    # to overcome residual XY alignment error without relying on exact centering.
+    spiral_radius: float = 0.003   # max XY search radius in metres (3 mm)
+    spiral_freq: float = 0.5       # orbits per second
+    spiral_ramp_s: float = 2.0     # seconds to ramp from 0 to full radius
 
     # --- Task Variables (Override via command line) ---
     task_cable_name: str = "cable_0"
@@ -404,6 +420,10 @@ class AICCheatCodeTeleop(Teleoperator):
         self._insertion_depth_reached_time = None
         self._force_exceed_start_time = None
         self._actual_plug_port_z = float("nan")
+        self._done_signalled = False
+        self._insertion_detected = False
+        self._approach_start_time: float = 0.0
+        self._insert_start_time: float = 0.0
 
         # Integrator for linear PI controller
         self._lin_err_integrator = np.zeros(3)
@@ -455,12 +475,22 @@ class AICCheatCodeTeleop(Teleoperator):
         self._insertion_depth_reached_time = None
         self._has_tare = False
         self._tare_offset = np.zeros(3)
+        self._insertion_detected = False
+        self._approach_start_time = 0.0
+        self._insert_start_time = 0.0
 
         self._obs_sub = self._node.create_subscription(
             Observation,
             "/observations",
             self._obs_callback,
             qos_profile_sensor_data,
+        )
+
+        self._insertion_event_sub = self._node.create_subscription(
+            String,
+            "/scoring/insertion_event",
+            self._insertion_event_callback,
+            10,
         )
 
         self._executor = SingleThreadedExecutor()
@@ -493,6 +523,11 @@ class AICCheatCodeTeleop(Teleoperator):
             f"Phase: {self.phase} | z_off: {self.z_offset:.4f} | "
             f"plug_z_actual: {self._actual_plug_port_z}"
         )
+
+    def _insertion_event_callback(self, msg: String) -> None:
+        if not self._insertion_detected:
+            print(f"[CheatCode] Insertion event received: '{msg.data}' → transitioning to DONE.")
+            self._insertion_detected = True
 
     @property
     def is_calibrated(self) -> bool:
@@ -555,6 +590,7 @@ class AICCheatCodeTeleop(Teleoperator):
             self.phase = "APPROACH"
             self.z_offset = cfg.approach_height
             self.start_time = current_time
+            self._approach_start_time = current_time
             self._lin_err_integrator = np.zeros(3)
 
         elapsed = current_time - self.start_time
@@ -634,33 +670,26 @@ class AICCheatCodeTeleop(Teleoperator):
         r_error = r_target * r_current.inv()
         angular_error = float(np.linalg.norm(r_error.as_rotvec()))
 
-        # Universal insertion completion check
-        if self.phase not in ("INIT", "APPROACH", "DONE"):
+        # Universal insertion completion check — Gazebo ground-truth only.
+        # The geometric depth fallback was removed because it produced false
+        # positives when the plug landed near the port without seating.
+        if self.phase not in ("INIT", "APPROACH", "DONE", "FAILED"):
             actual_plug_port_z = plug_pos[2] - port_pos[2]
             self._actual_plug_port_z = actual_plug_port_z
-            if actual_plug_port_z <= cfg.insertion_depth + 0.005:
-                if self._insertion_depth_reached_time is None:
-                    self._insertion_depth_reached_time = current_time
-                    print(
-                        "[UNIVERSAL] Plug at insertion depth "
-                        f"(actual_z={actual_plug_port_z:.4f}m). "
-                        f"Dwelling for {cfg.insertion_dwell}s..."
-                    )
-                elif (
-                    current_time - self._insertion_depth_reached_time
-                ) >= cfg.insertion_dwell:
-                    print(
-                        "[UNIVERSAL] Insertion complete after "
-                        f"{cfg.insertion_dwell}s dwell "
-                        f"(actual_z={actual_plug_port_z:.4f}m). DONE."
-                    )
-                    self.phase = "DONE"
-            else:
-                self._insertion_depth_reached_time = None
+            if self._insertion_detected:
+                print("[UNIVERSAL] Insertion event confirmed → DONE.")
+                self.phase = "DONE"
 
         # State machine transitions
-        if self.phase == "APPROACH":
+        if self.phase == "FAILED":
+            return self._set_zero_action()
+
+        elif self.phase == "APPROACH":
             self._lin_err_integrator = np.zeros(3)
+            if current_time - self._approach_start_time > APPROACH_TIMEOUT_S:
+                print(f"[APPROACH] Timeout ({APPROACH_TIMEOUT_S}s) — giving up.")
+                self._signal_episode_failure()
+                return self._set_zero_action()
             if dist_to_target < 0.01 and elapsed > 1.5:
                 print(f"Hover reached (err={dist_to_target:.4f}m). Entering ALIGN phase.")
                 self.phase = "ALIGN"
@@ -697,57 +726,84 @@ class AICCheatCodeTeleop(Teleoperator):
                     )
                 self.phase = "INSERT"
                 self.start_time = current_time
-                # Keep integrator — carries XY correction built during ALIGN
+                self._insert_start_time = current_time
+                self._lin_err_integrator = np.zeros(3)  # spiral tracks port directly
 
         elif self.phase == "INSERT":
-            # Safety hold only - no rampdown (rely on wrench feedback for compliance)
-            force_hold_threshold = 19.5
+            if current_time - self._insert_start_time > INSERT_TIMEOUT_S:
+                print(f"[INSERT] Timeout ({INSERT_TIMEOUT_S}s) — giving up.")
+                self._signal_episode_failure()
+                return self._set_zero_action()
+
+            # dt needed for descent and spiral timing
+            if self._last_action_time is None:
+                dt = 0.033
+            else:
+                dt = min(current_time - self._last_action_time, 0.1)
+
+            # Two-tier force response:
+            #   Moderate (≥FORCE_FREEZE_Z_N): freeze Z descent, spiral keeps running
+            #   Extreme  (≥FORCE_SAFETY_STOP_N sustained 0.8s): full safety stop
             force_hold_duration = 0.8
-            if self._latest_force_mag > force_hold_threshold:
+            freeze_z = self._latest_force_mag >= FORCE_FREEZE_Z_N
+            if self._latest_force_mag >= FORCE_SAFETY_STOP_N:
                 if self._force_exceed_start_time is None:
                     self._force_exceed_start_time = current_time
                 elif (current_time - self._force_exceed_start_time) > force_hold_duration:
                     print(
-                        f"[INSERT] High force sustained ({self._latest_force_mag:.1f}N) - "
-                        "safety hold until force drops."
+                        f"[INSERT] Extreme force sustained ({self._latest_force_mag:.1f}N) - "
+                        "safety stop."
                     )
                     self._last_action_time = current_time
                     return self._set_zero_action()
             else:
                 self._force_exceed_start_time = None
 
-            # Constant-speed descent (no force rampdown - matches original CheatCode)
-            if self._last_action_time is None:
-                dt = 0.033
+            # Descend only when below freeze threshold
+            if not freeze_z:
+                descent = cfg.insertion_base_speed * dt
+                self.z_offset = max(cfg.insertion_depth, self.z_offset - descent)
             else:
-                dt = min(current_time - self._last_action_time, 0.1)
-
-            descent = cfg.insertion_base_speed * dt
-            self.z_offset = max(cfg.insertion_depth, self.z_offset - descent)
+                print(
+                    f"[INSERT] Force {self._latest_force_mag:.1f}N ≥ {FORCE_FREEZE_Z_N}N "
+                    "— Z frozen, spiral running"
+                )
             target_pos[2] = port_pos[2] + plug_offset[2] + self.z_offset
 
-            # Debug logging
+            # Spiral search: expand from 0 to spiral_radius over spiral_ramp_s,
+            # then hold at full radius.  Traces a helix during descent so the
+            # plug tip sweeps the port opening and seats when it finds the hole.
+            t_insert = current_time - self._insert_start_time
+            spiral_r = cfg.spiral_radius * min(1.0, t_insert / max(cfg.spiral_ramp_s, 1e-6))
+            spiral_angle = 2.0 * np.pi * cfg.spiral_freq * t_insert
+            target_pos[0] += spiral_r * np.cos(spiral_angle)
+            target_pos[1] += spiral_r * np.sin(spiral_angle)
+
             print(
-                f"[INSERT] z_offset={self.z_offset:.4f} | descent_rate={descent/dt:.4f}m/s | "
-                f"force={self._latest_force_mag:.1f}N | dt={dt:.3f}s"
+                f"[INSERT] z_offset={self.z_offset:.4f} | "
+                f"force={self._latest_force_mag:.1f}N | spiral_r={spiral_r*1000:.1f}mm "
+                f"angle={np.degrees(spiral_angle):.0f}°"
             )
 
         elif self.phase == "DONE":
             self._last_action_time = current_time
+            if not self._done_signalled:
+                self._done_signalled = True
+                self._signal_episode_save()
             return self._set_zero_action()
 
         # PI velocity controller (world frame)
         lin_err = target_pos - gripper_pos
 
-        # XY-only integrator using plug-tip-to-port error (like original CheatCode)
-        # This directly compensates for cable droop and gripper compliance
-        plug_xy_error = port_pos[:2] - plug_pos[:2]
-        self._lin_err_integrator[:2] = np.clip(
-            self._lin_err_integrator[:2] + plug_xy_error,
-            -cfg.max_integrator_windup,
-            cfg.max_integrator_windup,
-        )
-        # Never integrate Z - it's managed by explicit z_offset descent
+        # XY integrator compensates cable droop during APPROACH/ALIGN.
+        # Disabled during INSERT so it doesn't fight the spiral search.
+        if self.phase != "INSERT":
+            plug_xy_error = port_pos[:2] - plug_pos[:2]
+            self._lin_err_integrator[:2] = np.clip(
+                self._lin_err_integrator[:2] + plug_xy_error,
+                -cfg.max_integrator_windup,
+                cfg.max_integrator_windup,
+            )
         self._lin_err_integrator[2] = 0.0
 
         # Proportional term uses full gripper error, integral uses plug-tip XY error
@@ -791,6 +847,25 @@ class AICCheatCodeTeleop(Teleoperator):
 
         self._last_action_time = current_time
         return cast(dict, self._current_actions)
+
+    def _signal_episode_save(self) -> None:
+        import lerobot_robot_aic as _mod
+        if _mod._recording_events is not None:
+            _mod._recording_events["exit_early"] = True
+            print("[CheatCode] Episode save signalled.")
+        else:
+            print("[CheatCode] WARNING: no recording events reference — episode will not be saved.")
+
+    def _signal_episode_failure(self) -> None:
+        import lerobot_robot_aic as _mod
+        if _mod._recording_events is not None:
+            _mod._recording_events["exit_early"] = True
+            _mod._recording_events["rerecord_episode"] = True
+            _mod._recording_events["stop_recording"] = True
+            print("[CheatCode] Episode failure signalled — discarding.")
+        else:
+            print("[CheatCode] WARNING: no recording events reference — failure not signalled.")
+        self.phase = "FAILED"
 
     def send_feedback(self, feedback: dict[str, Any]) -> None:
         pass
