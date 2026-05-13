@@ -424,6 +424,7 @@ class AICCheatCodeTeleop(Teleoperator):
         self._insertion_detected = False
         self._approach_start_time: float = 0.0
         self._insert_start_time: float = 0.0
+        self._insert_plug_offset_z: float = 0.0
 
         # Integrator for linear PI controller
         self._lin_err_integrator = np.zeros(3)
@@ -727,6 +728,7 @@ class AICCheatCodeTeleop(Teleoperator):
                 self.phase = "INSERT"
                 self.start_time = current_time
                 self._insert_start_time = current_time
+                self._insert_plug_offset_z = plug_offset[2]
                 self._lin_err_integrator = np.zeros(3)  # spiral tracks port directly
 
         elif self.phase == "INSERT":
@@ -768,7 +770,7 @@ class AICCheatCodeTeleop(Teleoperator):
                     f"[INSERT] Force {self._latest_force_mag:.1f}N ≥ {FORCE_FREEZE_Z_N}N "
                     "— Z frozen, spiral running"
                 )
-            target_pos[2] = port_pos[2] + plug_offset[2] + self.z_offset
+            target_pos[2] = port_pos[2] + self._insert_plug_offset_z + self.z_offset
 
             # Spiral search: expand from 0 to spiral_radius over spiral_ramp_s,
             # then hold at full radius.  Traces a helix during descent so the
