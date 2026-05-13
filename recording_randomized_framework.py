@@ -517,8 +517,8 @@ class SceneGenerator:
             robot_pitch = 0.0
             robot_yaw = -3.141
 
-            task_board_x = random.uniform(0, 0.3)
-            task_board_y = random.uniform(-0.3, 0.3)
+            task_board_x = random.uniform(-0.70, -0.04)
+            task_board_y = random.uniform(-0.13, 0.40)
             task_board_z = 1.14
             task_board_roll = 0.0
             task_board_pitch = 0.0
