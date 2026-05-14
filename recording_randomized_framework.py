@@ -1360,7 +1360,9 @@ def launch_scene_for_episode(
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
     _log("info", f"Scene launch command: {launch_cmd}")
-    env_flags = f"-e GZ_PARTITION={_WORKER_ID} -e ROS_DOMAIN_ID={_WORKER_ID}"
+    # Only inject isolation env vars for workers > 0; worker 0 uses the
+    # container's own defaults (matches the pre-parallelism working state).
+    env_flags = f"-e GZ_PARTITION={_WORKER_ID} -e ROS_DOMAIN_ID={_WORKER_ID}" if _WORKER_ID > 0 else ""
     if headless:
         command = f"docker exec {env_flags} {_CONTAINER_NAME} {launch_cmd}"
         process = subprocess.Popen(["bash", "-c", command], cwd=ws_path)
