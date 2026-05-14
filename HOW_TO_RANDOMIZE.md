@@ -23,7 +23,7 @@ This runs indefinitely (until Ctrl-C) in headless mode, distributing episodes ac
 
 Every iteration of the recording loop does the following unconditionally:
 
-1. **Dataset selection** — the script picks whichever of the 12 datasets currently has the fewest saved episodes. The insertion target (cable type, module, port) is fixed by that dataset's definition.
+1. **Dataset selection** — the script picks the first dataset that has not yet reached the episode target (`--num-scenes`). Datasets are filled one at a time in order: all episodes for dataset 0 are collected before dataset 1 starts, and so on. If `--num-scenes 0` (run forever), all datasets are always eligible and the first one in the list is always chosen. The insertion target (cable type, module, port) is fixed by that dataset's definition.
 
 2. **Random scene generation** — a new `SceneConfig` is drawn with random task board pose and random presence/positions of all board components. The cable type and insertion target are locked to the selected dataset, so only the surrounding scene geometry is randomised.
 
@@ -83,7 +83,7 @@ All datasets are stored locally under `~/.cache/huggingface/lerobot/<repo-id>/`.
 
 Target number of **successful episodes per dataset**. Set to `0` to run until Ctrl-C.
 
-When set to `N` the script keeps running until every dataset has at least `N` saved episodes. On each iteration it picks whichever dataset currently has the fewest episodes, so all 12 datasets fill up evenly. For example `--num-scenes 5` records 5 episodes for each of the 12 datasets (60 episodes total).
+When set to `N` the script keeps running until every dataset has at least `N` saved episodes. Datasets are filled **sequentially** — the first dataset is filled to `N` before the second starts, and so on. For example `--num-scenes 100` collects 100 episodes for dataset 0, then 100 for dataset 1, etc. (1200 episodes total across 12 datasets).
 
 Failed scenes (insertion timeout) do **not** count toward the target — only successful insertions produce saved episodes.
 
@@ -147,6 +147,82 @@ Path to the AIC workspace root. Only needed if you run the script from a non-sta
 
 ---
 
+### `--worker-id`
+**Default:** `0`
+
+Zero-based index of this worker process. Each worker handles a non-overlapping slice of the 12 datasets (`worker_id`, `worker_id + num_workers`, `worker_id + 2*num_workers`, …). Used together with `--num-workers` to run multiple parallel recording processes on the same machine.
+
+---
+
+### `--num-workers`
+**Default:** `1`
+
+Total number of parallel workers. Each worker uses its own distrobox container (`aic_eval` for worker 0, `aic_eval_1` for worker 1, etc.) so Gazebo instances are fully isolated. ROS and gz-transport topics are separated via `ROS_DOMAIN_ID` and `GZ_PARTITION` set to the worker id.
+
+---
+
+### `--repo-prefix`
+**Default:** `""` (empty — uses the default dataset names)
+
+String prepended to every dataset repo ID. Use this when collecting on multiple machines to avoid pushing to the same HuggingFace datasets and creating conflicts. Each machine should use a unique prefix, e.g. `hpc_a100_` or `hpc_h100_`.
+
+```bash
+# Machine A
+pixi run python3 recording_randomized_framework.py --repo-prefix hpc_a100_
+
+# Machine B
+pixi run python3 recording_randomized_framework.py --repo-prefix hpc_h100_
+```
+
+With `--repo-prefix hpc_a100_` the datasets become `caai-aic/hpc_a100_corrected_lab_collected_sfp_to_sfp_port_0_of_nic_card_mount_0`, etc.
+
+---
+
+## Parallel recording (multiple workers on one machine)
+
+Running 4 workers in parallel collects 4 episodes simultaneously, one per Gazebo instance. Each worker handles 3 of the 12 datasets.
+
+### 1. Create extra distrobox containers (one-time setup)
+
+Worker 0 uses the existing `aic_eval` container. Create containers for workers 1–3:
+
+```bash
+distrobox create --name aic_eval_1 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
+distrobox create --name aic_eval_2 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
+distrobox create --name aic_eval_3 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
+```
+
+### 2. Run 4 workers in separate tmux panes
+
+```bash
+# Pane 0
+pixi run python3 recording_randomized_framework.py \
+  --num-scenes 100 --num-workers 4 --worker-id 0 --repo-prefix hpc_a100_
+
+# Pane 1
+pixi run python3 recording_randomized_framework.py \
+  --num-scenes 100 --num-workers 4 --worker-id 1 --repo-prefix hpc_a100_
+
+# Pane 2
+pixi run python3 recording_randomized_framework.py \
+  --num-scenes 100 --num-workers 4 --worker-id 2 --repo-prefix hpc_a100_
+
+# Pane 3
+pixi run python3 recording_randomized_framework.py \
+  --num-scenes 100 --num-workers 4 --worker-id 3 --repo-prefix hpc_a100_
+```
+
+This collects 100 episodes × 12 datasets = 1200 episodes total, split across 4 parallel workers.
+
+### Notes
+
+- Workers do **not** conflict with each other — each handles a non-overlapping set of 3 datasets and writes to separate local directories.
+- Worker 0 uses the SDF file check (`/tmp/aic.sdf`) to confirm scene readiness. Workers 1–3 skip that check (they share `/tmp` with worker 0 and would see each other's SDF file).
+- `ROS_DOMAIN_ID` and `GZ_PARTITION` are set to the worker id inside each container, so gz-transport and ROS2 topics do not bleed between instances.
+- Multiple machines pushing to HuggingFace must use different `--repo-prefix` values — HF datasets are **not** merged automatically; pushing from two machines to the same repo without coordination risks corruption.
+
+---
+
 ## HuggingFace setup
 
 By default the script records **locally only** — no HuggingFace account is needed. If you want episodes pushed to the Hub (via `--push-to-hub`), follow these steps once per machine:
@@ -205,3 +281,13 @@ pixi run python3 recording_randomized_framework.py
 ```
 
 Press **Ctrl-C** at any time to stop cleanly after the current episode finishes.
+
+### Parallel overnight run — 4 workers, 100 episodes per dataset, machine-prefixed
+
+```bash
+# Run each in its own tmux pane
+pixi run python3 recording_randomized_framework.py --num-scenes 100 --num-workers 4 --worker-id 0 --repo-prefix hpc_a100_
+pixi run python3 recording_randomized_framework.py --num-scenes 100 --num-workers 4 --worker-id 1 --repo-prefix hpc_a100_
+pixi run python3 recording_randomized_framework.py --num-scenes 100 --num-workers 4 --worker-id 2 --repo-prefix hpc_a100_
+pixi run python3 recording_randomized_framework.py --num-scenes 100 --num-workers 4 --worker-id 3 --repo-prefix hpc_a100_
+```

@@ -150,6 +150,11 @@ SFP_REQUIRED_FOR_NORMAL = {
 ROBOT_BASE_CENTER_X = 0.0
 ROBOT_BASE_CENTER_Y = 0.0
 ROBOT_BASE_RADIUS_M = 0.06
+
+# Worker identity — set by main_cheatcode() before the recording loop starts.
+# Each parallel worker process sets these once; all helper functions read them.
+_CONTAINER_NAME: str = "aic_eval"
+_WORKER_ID: int = 0
 TASK_BOARD_HALF_X_M = 0.30 / 2.0
 TASK_BOARD_HALF_Y_M = 0.425 / 2.0
 TASK_BOARD_CLEARANCE_M = 0.1
@@ -1287,12 +1292,12 @@ def _fallback_count_with_datasets(repo_id: str) -> Optional[int]:
     return None
 
 
-def build_tasks() -> List[RecordingTask]:
+def build_tasks(repo_prefix: str = "") -> List[RecordingTask]:
     tasks: List[RecordingTask] = []
     for mount in range(5):
         for port in range(2):
             repo_id = (
-                "caai-aic/corrected_lab_collected_sfp_to_sfp_port_"
+                f"caai-aic/{repo_prefix}corrected_lab_collected_sfp_to_sfp_port_"
                 f"{port}_of_nic_card_mount_{mount}"
             )
             tasks.append(
@@ -1307,7 +1312,7 @@ def build_tasks() -> List[RecordingTask]:
             )
 
     for port in range(2):
-        repo_id = f"caai-aic/corrected_lab_collected_sc_to_sc_port_base_of_sc_port_{port}"
+        repo_id = f"caai-aic/{repo_prefix}corrected_lab_collected_sc_to_sc_port_base_of_sc_port_{port}"
         tasks.append(
             RecordingTask(
                 TaskDefinition(
@@ -1351,12 +1356,13 @@ def launch_scene_for_episode(
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
     print(f"[info] Scene launch command: {launch_cmd}")
+    env_flags = f"-e GZ_PARTITION={_WORKER_ID} -e ROS_DOMAIN_ID={_WORKER_ID}"
     if headless:
-        command = f"docker exec aic_eval {launch_cmd}"
+        command = f"docker exec {env_flags} {_CONTAINER_NAME} {launch_cmd}"
         process = subprocess.Popen(["bash", "-c", command], cwd=ws_path)
         print("[info] Scene launch started (headless subprocess).")
     else:
-        command = f"docker exec -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTHORITY aic_eval {launch_cmd}"
+        command = f"docker exec {env_flags} -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTHORITY {_CONTAINER_NAME} {launch_cmd}"
         process = _launch_terminal(
             command, title="AIC Scene", cwd=ws_path, keep_open=False
         )
@@ -1364,7 +1370,8 @@ def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> Scene
     return SceneProcess(process=process, detached=True)
 
 
-def _gz_topic_list(container: str = "aic_eval") -> List[str]:
+def _gz_topic_list(container: str = "") -> List[str]:
+    container = container or _CONTAINER_NAME
     """Return the list of active gz topics inside the container, or []."""
     try:
         result = subprocess.run(
@@ -1469,7 +1476,7 @@ def wait_for_scene_ready(
         gz_running = False
         try:
             result = subprocess.run(
-                ["docker", "exec", "aic_eval", "pgrep", "-f", "gzserver"],
+                ["docker", "exec", _CONTAINER_NAME, "pgrep", "-f", "gzserver"],
                 capture_output=True,
                 text=True,
                 timeout=10,
@@ -1479,7 +1486,9 @@ def wait_for_scene_ready(
         except Exception:
             gz_running = False
 
-        sdf_ready = Path("/tmp/aic.sdf").exists()
+        # SDF check is unreliable with multiple workers (shared /tmp), so only
+        # use it for the default single-worker setup.
+        sdf_ready = Path("/tmp/aic.sdf").exists() if _WORKER_ID == 0 else False
 
         if gz_running:
             gz_ready_count += 1
@@ -1786,7 +1795,7 @@ def _terminate_processes(patterns: Iterable[str]) -> None:
 def _terminate_gazebo_in_distrobox() -> None:
     try:
         subprocess.run(
-            ["docker", "exec", "aic_eval", "pkill", "-9", "-f", "gzserver|gzclient|gazebo|gz sim|ros_gz_container|component_container|aic_adapter|kilted"],
+            ["docker", "exec", _CONTAINER_NAME, "pkill", "-9", "-f", "gzserver|gzclient|gazebo|gz sim|ros_gz_container|component_container|aic_adapter|kilted"],
             check=False,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
@@ -2143,6 +2152,32 @@ def main_cheatcode() -> int:
             "lerobot is always controlled via key events (uinput) regardless of this flag."
         ),
     )
+    parser.add_argument(
+        "--worker-id",
+        type=int,
+        default=0,
+        help=(
+            "Worker index for parallel recording (default: 0). "
+            "Worker N uses container aic_eval_N (or aic_eval for 0), "
+            "ROS_DOMAIN_ID=N, GZ_PARTITION=N, and handles every Nth dataset."
+        ),
+    )
+    parser.add_argument(
+        "--num-workers",
+        type=int,
+        default=1,
+        help="Total number of parallel workers (default: 1). Used to partition datasets across workers.",
+    )
+    parser.add_argument(
+        "--repo-prefix",
+        type=str,
+        default="",
+        help=(
+            "Prefix to prepend to every dataset repo name (default: none). "
+            "Use this to separate collections from different machines, e.g. "
+            "--repo-prefix hpc_a100_ produces caai-aic/hpc_a100_corrected_lab_collected_..."
+        ),
+    )
     args = parser.parse_args()
 
     ws_path = args.ws_path
@@ -2152,7 +2187,13 @@ def main_cheatcode() -> int:
 
     hf_token = read_hf_token(args.hf_token_path)
 
-    all_tasks = build_tasks()
+    global _CONTAINER_NAME, _WORKER_ID
+    _WORKER_ID = args.worker_id
+    _CONTAINER_NAME = "aic_eval" if _WORKER_ID == 0 else f"aic_eval_{_WORKER_ID}"
+
+    all_tasks = build_tasks(repo_prefix=args.repo_prefix)
+    # Each worker handles every Nth dataset (round-robin slice across workers).
+    all_tasks = all_tasks[_WORKER_ID::args.num_workers]
 
     print("[info] Cleaning up any leftover Gazebo processes before starting...")
     cleanup_session_processes(include_distrobox=True)
@@ -2160,7 +2201,7 @@ def main_cheatcode() -> int:
     scene_generator = build_scene_generator()
     unlimited = args.num_scenes == 0
     print("[info] Cheatcode recording started.")
-    print(f"[info] {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
+    print(f"[info] Worker {_WORKER_ID} | container: {_CONTAINER_NAME} | {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
 
     episodes_total = 0
     try:
