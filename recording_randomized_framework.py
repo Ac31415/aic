@@ -155,6 +155,10 @@ ROBOT_BASE_RADIUS_M = 0.06
 # Each parallel worker process sets these once; all helper functions read them.
 _CONTAINER_NAME: str = "aic_eval"
 _WORKER_ID: int = 0
+
+
+def _log(level: str, msg: str) -> None:
+    print(f"[{level}] [W{_WORKER_ID}] {msg}", flush=True)
 TASK_BOARD_HALF_X_M = 0.30 / 2.0
 TASK_BOARD_HALF_Y_M = 0.425 / 2.0
 TASK_BOARD_CLEARANCE_M = 0.1
@@ -904,7 +908,7 @@ class DatasetInfoFetcher:
                     return local_count
             return self._fetch_episode_count(repo_id)
         except Exception as exc:
-            print(f"[warn] Could not fetch info for {repo_id}: {exc}")
+            _log("warn", f"Could not fetch info for {repo_id}: {exc}")
             return None
 
     def _fetch_episode_count(self, repo_id: str) -> Optional[int]:
@@ -1184,7 +1188,7 @@ def _ensure_local_dataset_cache(repo_id: str, token: Optional[str]) -> None:
             token=token,
         )
     except Exception as exc:
-        print(f"[warn] Could not cache dataset {repo_id}: {exc}")
+        _log("warn", f"Could not cache dataset {repo_id}: {exc}")
         return
 
 
@@ -1355,18 +1359,18 @@ def launch_scene_for_episode(
 
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
-    print(f"[info] Scene launch command: {launch_cmd}")
+    _log("info", f"Scene launch command: {launch_cmd}")
     env_flags = f"-e GZ_PARTITION={_WORKER_ID} -e ROS_DOMAIN_ID={_WORKER_ID}"
     if headless:
         command = f"docker exec {env_flags} {_CONTAINER_NAME} {launch_cmd}"
         process = subprocess.Popen(["bash", "-c", command], cwd=ws_path)
-        print("[info] Scene launch started (headless subprocess).")
+        _log("info", "Scene launch started (headless subprocess).")
     else:
         command = f"docker exec {env_flags} -e DISPLAY=$DISPLAY -e XAUTHORITY=$XAUTHORITY {_CONTAINER_NAME} {launch_cmd}"
         process = _launch_terminal(
             command, title="AIC Scene", cwd=ws_path, keep_open=False
         )
-        print("[info] Scene launch started in a new terminal.")
+        _log("info", "Scene launch started in a new terminal.")
     return SceneProcess(process=process, detached=True)
 
 
@@ -1458,7 +1462,7 @@ def wait_for_scene_ready(
     scene: SceneProcess,
     timeout_s: int = 300,
 ) -> bool:
-    print("[info] Waiting for Gazebo to fully load...")
+    _log("info", "Waiting for Gazebo to fully load...")
     deadline = time.time() + timeout_s
     poll_interval = 5
     attempt = 0
@@ -1493,7 +1497,7 @@ def wait_for_scene_ready(
         if gz_running:
             gz_ready_count += 1
             if gz_ready_count >= 3:
-                print("[info] Gazebo is ready (gzserver running).")
+                _log("info", "Gazebo is ready (gzserver running).")
                 return True
         else:
             gz_ready_count = 0
@@ -1501,7 +1505,7 @@ def wait_for_scene_ready(
         if sdf_ready:
             sdf_ready_count += 1
             if sdf_ready_count >= 3:
-                print("[info] Gazebo is ready (SDF exported).")
+                _log("info", "Gazebo is ready (SDF exported).")
                 return True
         else:
             sdf_ready_count = 0
@@ -1514,7 +1518,7 @@ def wait_for_scene_ready(
 
         time.sleep(poll_interval)
 
-    print("[warn] Timed out waiting for Gazebo readiness.")
+    _log("warn", "Timed out waiting for Gazebo readiness.")
     return False
 
 
@@ -1529,7 +1533,7 @@ def wait_for_objects_spawned(
     from tf2_ros import Buffer, TransformListener
 
     frame = f"{config.task_cable_name}/{config.task_plug_name}_link"
-    print(f"[info] Waiting for objects to spawn (TF frame: {frame})...")
+    _log("info", f"Waiting for objects to spawn (TF frame: {frame})...")
 
     ctx = rclpy.Context()
     rclpy.init(context=ctx)
@@ -1554,9 +1558,9 @@ def wait_for_objects_spawned(
     ctx.try_shutdown()
 
     if found:
-        print("[info] Scene objects confirmed spawned.")
+        _log("info", "Scene objects confirmed spawned.")
     else:
-        print("[warn] Could not confirm object spawning; proceeding anyway.")
+        _log("warn", "Could not confirm object spawning; proceeding anyway.")
     return True
 
 
@@ -1620,7 +1624,7 @@ def run_recording(
     )
     # expose record process so the control loop can restart it
     scene_holder["record"] = record_process
-    print("[info] Recording launched in a new terminal.")
+    _log("info", "Recording launched in a new terminal.")
     print(
         "Press Right Arrow to restart the scene for the next episode, "
         "Left Arrow to relaunch the current scene parameters, or Enter here to finish recording."
@@ -1638,11 +1642,11 @@ def run_recording(
         if proc.poll() is None:
             # For multi-episode sessions, give more time for the last episode to be processed
             timeout_s = 120 if num_episodes > 1 else 10
-            print(f"[info] Waiting for lerobot-record to finish (timeout: {timeout_s}s)...")
+            _log("info", f"Waiting for lerobot-record to finish (timeout: {timeout_s}s)...")
             try:
                 proc.wait(timeout=timeout_s)
             except subprocess.TimeoutExpired:
-                print(f"[warn] lerobot-record did not finish within {timeout_s}s, terminating...")
+                _log("warn", f"lerobot-record did not finish within {timeout_s}s, terminating...")
                 try:
                     proc.terminate()
                     proc.wait(timeout=5)
@@ -1652,7 +1656,7 @@ def run_recording(
                     except Exception:
                         pass
     if start_episode_count is not None:
-        print("[info] Waiting for local dataset metadata to update...")
+        _log("info", "Waiting for local dataset metadata to update...")
         _wait_for_local_episode_update(
             task.definition.repo_id,
             start_episode_count,
@@ -1689,7 +1693,7 @@ def _wait_for_local_episode_update(
                     if current == stable_count:
                         stable_checks += 1
                         if stable_checks >= required_stable_checks:
-                            print(f"[info] Dataset metadata updated: {previous_count} → {current} episodes")
+                            _log("info", f"Dataset metadata updated: {previous_count} → {current} episodes")
                             return current
                     else:
                         stable_count = current
@@ -1704,7 +1708,7 @@ def _wait_for_local_episode_update(
         time.sleep(poll_interval_s)
     
     if latest_count > previous_count:
-        print(f"[info] Dataset metadata updated: {previous_count} → {latest_count} episodes (timeout)")
+        _log("info", f"Dataset metadata updated: {previous_count} → {latest_count} episodes (timeout)")
     return latest_count
 
 
@@ -1823,7 +1827,7 @@ def _log_failed_scene(config: "SceneConfig", log_path: Path) -> None:
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with open(log_path, "a") as f:
         f.write(json.dumps(entry) + "\n")
-    print(f"[warn] Failed scene config logged to {log_path}")
+    _log("warn", f"Failed scene config logged to {log_path}")
 
 
 def cleanup_session_processes(*, include_distrobox: bool = True, include_visualization: bool = True) -> None:
@@ -1881,10 +1885,10 @@ def _wait_for_recording_controls(
 
                 current_config = scene_holder.get("scene_config")
                 if not isinstance(current_config, SceneConfig):
-                    print("[warn] No active scene configuration available to relaunch.")
+                    _log("warn", "No active scene configuration available to relaunch.")
                     continue
 
-                print("[info] Relaunching scene with the current episode parameters...")
+                _log("info", "Relaunching scene with the current episode parameters...")
                 scene_holder["scene"] = launch_scene_for_episode(
                     task.definition.repo_id,
                     current_config,
@@ -1900,7 +1904,7 @@ def _wait_for_recording_controls(
                 if isinstance(scene, SceneProcess):
                     scene.stop()
                 if episodes_completed >= num_episodes:
-                    print("[info] Episode quota reached; stopping session.")
+                    _log("info", "Episode quota reached; stopping session.")
                     return
                 # Keep visualization (e.g. rerun) running between episode restarts
                 cleanup_session_processes(include_distrobox=True, include_visualization=False)
@@ -1927,8 +1931,8 @@ def _wait_for_recording_controls(
                     )
                     scene_holder["record"] = new_rec
                 except Exception as exc:
-                    print(f"[warn] Could not relaunch recording: {exc}")
-                print("[info] Restarting scene for next episode...")
+                    _log("warn", f"Could not relaunch recording: {exc}")
+                _log("info", "Restarting scene for next episode...")
                 config = scene_generator.generate_random_config()
                 scene_holder["scene"] = launch_scene_for_episode(
                     task.definition.repo_id,
@@ -1964,7 +1968,7 @@ def read_hf_token(path: Optional[Path]) -> Optional[str]:
             return default_path.read_text(encoding="utf-8").strip()
         return None
     if not path.exists():
-        print(f"[warn] HF token path not found: {path}")
+        _log("warn", f"HF token path not found: {path}")
         return None
     return path.read_text(encoding="utf-8").strip()
 
@@ -1996,9 +2000,9 @@ def main() -> int:
     fetcher = DatasetInfoFetcher(hf_token=hf_token)
 
     scene_generator = build_scene_generator()
-    print("[info] Scene generator initialized.")
+    _log("info", "Scene generator initialized.")
 
-    print("[info] Updating task list...")
+    _log("info", "Updating task list...")
     tasks = build_tasks()
 
     try:
@@ -2027,7 +2031,7 @@ def main() -> int:
             ready = wait_for_scene_ready(ws_path, scene)
             if not ready:
                 scene.stop()
-                print("[warn] Scene did not start; returning to menu.")
+                _log("warn", "Scene did not start; returning to menu.")
                 continue
 
             start_count = episode_counts.get(task.definition.repo_id)
@@ -2046,14 +2050,14 @@ def main() -> int:
 
             scene = scene_holder["scene"]
             scene.stop()
-            print("[info] Scene stopped.")
+            _log("info", "Scene stopped.")
 
             cleanup_session_processes(include_distrobox=False)
 
-            print("[info] Refreshing dataset info...")
+            _log("info", "Refreshing dataset info...")
 
     except KeyboardInterrupt:
-        print("\n[info] Interrupted by user.")
+        _log("info", "Interrupted by user.")
     finally:
         cleanup_session_processes(include_distrobox=False)
 
@@ -2197,13 +2201,13 @@ def main_cheatcode() -> int:
     # Each worker handles every Nth dataset (round-robin slice across workers).
     all_tasks = all_tasks[_WORKER_ID::args.num_workers]
 
-    print("[info] Cleaning up any leftover Gazebo processes before starting...")
+    _log("info", "Cleaning up any leftover Gazebo processes before starting...")
     cleanup_session_processes(include_distrobox=True)
 
     scene_generator = build_scene_generator()
     unlimited = args.num_scenes == 0
-    print("[info] Cheatcode recording started.")
-    print(f"[info] Worker {_WORKER_ID} | container: {_CONTAINER_NAME} | {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
+    _log("info", "Cheatcode recording started.")
+    _log("info", f"Worker {_WORKER_ID} | container: {_CONTAINER_NAME} | {len(all_tasks)} datasets | target: {'unlimited' if unlimited else f'{args.num_scenes} episodes each'}")
 
     episodes_total = 0
     try:
@@ -2212,7 +2216,7 @@ def main_cheatcode() -> int:
             if args.force_repo_id:
                 eligible = [t for t in all_tasks if t.definition.repo_id == args.force_repo_id]
                 if not eligible:
-                    print(f"[error] --force-repo-id '{args.force_repo_id}' not found in task list.")
+                    _log("error", f"--force-repo-id '{args.force_repo_id}' not found in task list.")
                     break
             else:
                 eligible = [
@@ -2220,12 +2224,12 @@ def main_cheatcode() -> int:
                     if unlimited or _read_episode_count(t) < args.num_scenes
                 ]
                 if not eligible:
-                    print("[info] All datasets have reached the target episode count.")
+                    _log("info", "All datasets have reached the target episode count.")
                     break
             task = eligible[0]
             current_count = _read_episode_count(task)
 
-            print(f"\n[info] === Episode {episodes_total + 1} — {task.definition.repo_id} ({current_count} episodes so far) ===")
+            _log("info", f"=== Episode {episodes_total + 1} — {task.definition.repo_id} ({current_count} episodes so far) ===")
 
             # Generate a scene whose target is fixed to this dataset's port/module.
             target = _target_for_task(task)
@@ -2251,13 +2255,13 @@ def main_cheatcode() -> int:
             ready = wait_for_scene_ready(ws_path, scene)
             if not ready:
                 scene.stop()
-                print("[warn] Scene did not start; skipping and retrying.")
+                _log("warn", "Scene did not start; skipping and retrying.")
                 cleanup_session_processes(include_distrobox=True)
                 continue
 
             wait_for_objects_spawned(config)
 
-            print("[info] Taring force-torque sensor before recording...")
+            _log("info", "Taring force-torque sensor before recording...")
             tare_cmd = ["pixi", "run", "ros2", "service", "call",
                         "/aic_controller/tare_force_torque_sensor", "std_srvs/srv/Trigger"]
             tare_ok = False
@@ -2266,10 +2270,10 @@ def main_cheatcode() -> int:
                 if result.returncode == 0 and "success=True" in result.stdout:
                     tare_ok = True
                     break
-                print(f"[warn] Tare attempt {tare_attempt + 1}/3 failed — retrying in 5s...")
+                _log("warn", f"Tare attempt {tare_attempt + 1}/3 failed — retrying in 5s...")
                 time.sleep(5)
             if not tare_ok:
-                print("[error] Tare failed after 3 attempts — aborting scene.")
+                _log("error", "Tare failed after 3 attempts — aborting scene.")
                 scene = scene_holder["scene"]
                 scene.stop()
                 cleanup_session_processes(include_distrobox=True)
@@ -2277,7 +2281,7 @@ def main_cheatcode() -> int:
                 continue
 
             lerobot_cmd = task.cheatcode_lerobot_command(1, config, push_to_hub=args.push_to_hub, display_data=not args.headless)
-            print(f"[info] Launching lerobot-record: {' '.join(shlex.quote(a) for a in lerobot_cmd)}")
+            _log("info", f"Launching lerobot-record: {' '.join(shlex.quote(a) for a in lerobot_cmd)}")
             record_process = subprocess.Popen(lerobot_cmd, cwd=AIC_ROOT)
             scene_holder["record"] = record_process
 
@@ -2286,18 +2290,18 @@ def main_cheatcode() -> int:
             if _read_episode_count(task) > episodes_before:
                 episodes_total += 1
                 new_count = _read_episode_count(task)
-                print(f"[info] Episode saved → {task.definition.repo_id} now has {new_count} episodes (total across all datasets: {episodes_total})")
+                _log("info", f"Episode saved → {task.definition.repo_id} now has {new_count} episodes (total across all datasets: {episodes_total})")
             else:
-                print("[warn] Episode not saved (cheatcode timed out or lerobot error) — discarding.")
+                _log("warn", "Episode not saved (cheatcode timed out or lerobot error) — discarding.")
                 _log_failed_scene(config, args.failure_log)
 
             scene = scene_holder["scene"]
             scene.stop()
-            print("[info] Scene stopped.")
+            _log("info", "Scene stopped.")
             cleanup_session_processes(include_distrobox=True)
 
     except KeyboardInterrupt:
-        print(f"\n[info] Interrupted. Episodes recorded this run: {episodes_total}")
+        _log("info", f"Interrupted. Episodes recorded this run: {episodes_total}")
     finally:
         cleanup_session_processes(include_distrobox=True)
 
