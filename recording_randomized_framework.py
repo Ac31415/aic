@@ -1368,12 +1368,31 @@ def _ensure_xvfb() -> None:
         capture_output=True,
     )
     if already.returncode != 0:
+        # Remove stale lock files left over from a container restart; Xvfb exits
+        # immediately if it finds /tmp/.X99-lock even though no server is running.
+        subprocess.run(
+            ["docker", "exec", _CONTAINER_NAME, "bash", "-c",
+             "rm -f /tmp/.X99-lock /tmp/.X11-unix/X99"],
+            capture_output=True,
+        )
         subprocess.run(
             ["docker", "exec", "-d", _CONTAINER_NAME,
              "Xvfb", ":99", "-screen", "0", "1280x1024x24", "-ac", "+extension", "GLX"],
             capture_output=True,
         )
         time.sleep(2)
+        # Verify Xvfb actually started; abort early if not so the scene launch
+        # fails loudly rather than silently producing an unusable OpenGL context.
+        verify = subprocess.run(
+            ["docker", "exec", _CONTAINER_NAME, "pgrep", "-f", "Xvfb :99"],
+            capture_output=True,
+        )
+        if verify.returncode != 0:
+            raise RuntimeError(
+                f"Xvfb failed to start inside container '{_CONTAINER_NAME}'. "
+                "Check that the container has Xvfb installed and no other process "
+                "holds :99."
+            )
 
 
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
