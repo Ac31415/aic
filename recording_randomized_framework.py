@@ -2190,6 +2190,8 @@ def main_cheatcode() -> int:
     global _CONTAINER_NAME, _WORKER_ID
     _WORKER_ID = args.worker_id
     _CONTAINER_NAME = "aic_eval" if _WORKER_ID == 0 else f"aic_eval_{_WORKER_ID}"
+    os.environ["ROS_DOMAIN_ID"] = str(_WORKER_ID)
+    os.environ["GZ_PARTITION"] = str(_WORKER_ID)
 
     all_tasks = build_tasks(repo_prefix=args.repo_prefix)
     # Each worker handles every Nth dataset (round-robin slice across workers).

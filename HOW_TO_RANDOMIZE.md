@@ -182,15 +182,21 @@ With `--repo-prefix hpc_a100_` the datasets become `caai-aic/hpc_a100_corrected_
 
 Running 4 workers in parallel collects 4 episodes simultaneously, one per Gazebo instance. Each worker handles 3 of the 12 datasets.
 
-### 1. Create extra distrobox containers (one-time setup)
+### 1. Create and start extra distrobox containers (one-time setup)
 
-Worker 0 uses the existing `aic_eval` container. Create containers for workers 1–3:
+Worker 0 uses the existing `aic_eval` container. Create and start containers for workers 1–3:
 
 ```bash
 distrobox create --name aic_eval_1 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
 distrobox create --name aic_eval_2 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
 distrobox create --name aic_eval_3 --image ghcr.io/intrinsic-dev/aic/aic_eval:latest
+
+docker start aic_eval_1
+docker start aic_eval_2
+docker start aic_eval_3
 ```
+
+`distrobox create` only registers the container — it does not start it. `docker exec` (used by the framework) requires the container to already be running, so `docker start` must be called before launching the workers.
 
 ### 2. Run 4 workers in separate tmux panes
 
