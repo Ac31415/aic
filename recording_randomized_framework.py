@@ -1357,6 +1357,20 @@ def launch_scene_for_episode(
     return scene
 
 
+def _ensure_xvfb() -> None:
+    """Start a virtual framebuffer inside the container if not already running.
+
+    Ogre2 (Gazebo's renderer) requires an OpenGL context even in headless mode.
+    Xvfb satisfies this via Mesa software rendering without a physical display.
+    """
+    subprocess.run(
+        ["docker", "exec", _CONTAINER_NAME, "bash", "-c",
+         "pgrep -f 'Xvfb :99' > /dev/null || Xvfb :99 -screen 0 1280x1024x24 -ac +extension GLX &"],
+        capture_output=True,
+    )
+    time.sleep(1)
+
+
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
     launch_cmd = f"/entrypoint.sh {launch_args} start_aic_engine:=false"
     _log("info", f"Scene launch command: {launch_cmd}")
@@ -1364,7 +1378,7 @@ def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> Scene
     # container's own defaults (matches the pre-parallelism working state).
     env_flags = f"-e GZ_PARTITION={_WORKER_ID} -e ROS_DOMAIN_ID={_WORKER_ID}" if _WORKER_ID > 0 else ""
     if headless:
-        command = f"docker exec {env_flags} {_CONTAINER_NAME} {launch_cmd}"
+        command = f"docker exec {env_flags} -e DISPLAY=:99 {_CONTAINER_NAME} {launch_cmd}"
         process = subprocess.Popen(["bash", "-c", command], cwd=ws_path)
         _log("info", "Scene launch started (headless subprocess).")
     else:
@@ -2196,13 +2210,16 @@ def main_cheatcode() -> int:
     global _CONTAINER_NAME, _WORKER_ID
     _WORKER_ID = args.worker_id
     _CONTAINER_NAME = "aic_eval" if _WORKER_ID == 0 else f"aic_eval_{_WORKER_ID}"
-    os.environ["ROS_DOMAIN_ID"] = str(_WORKER_ID)
-    os.environ["GZ_PARTITION"] = str(_WORKER_ID)
+    if _WORKER_ID > 0:
+        os.environ["ROS_DOMAIN_ID"] = str(_WORKER_ID)
+        os.environ["GZ_PARTITION"] = str(_WORKER_ID)
 
     all_tasks = build_tasks(repo_prefix=args.repo_prefix)
     # Each worker handles every Nth dataset (round-robin slice across workers).
     all_tasks = all_tasks[_WORKER_ID::args.num_workers]
 
+    _log("info", "Starting virtual framebuffer (Xvfb) in container...")
+    _ensure_xvfb()
     _log("info", "Cleaning up any leftover Gazebo processes before starting...")
     cleanup_session_processes(include_distrobox=True)
 
