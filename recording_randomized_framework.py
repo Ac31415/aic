@@ -1363,12 +1363,17 @@ def _ensure_xvfb() -> None:
     Ogre2 (Gazebo's renderer) requires an OpenGL context even in headless mode.
     Xvfb satisfies this via Mesa software rendering without a physical display.
     """
-    subprocess.run(
-        ["docker", "exec", _CONTAINER_NAME, "bash", "-c",
-         "pgrep -f 'Xvfb :99' > /dev/null || Xvfb :99 -screen 0 1280x1024x24 -ac +extension GLX &"],
+    already = subprocess.run(
+        ["docker", "exec", _CONTAINER_NAME, "pgrep", "-f", "Xvfb :99"],
         capture_output=True,
     )
-    time.sleep(1)
+    if already.returncode != 0:
+        subprocess.run(
+            ["docker", "exec", "-d", _CONTAINER_NAME,
+             "Xvfb", ":99", "-screen", "0", "1280x1024x24", "-ac", "+extension", "GLX"],
+            capture_output=True,
+        )
+        time.sleep(2)
 
 
 def start_scene(launch_args: str, ws_path: Path, headless: bool = True) -> SceneProcess:
