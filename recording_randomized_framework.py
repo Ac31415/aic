@@ -1364,7 +1364,7 @@ def _ensure_xvfb() -> None:
     Xvfb satisfies this via Mesa software rendering without a physical display.
     """
     already = subprocess.run(
-        ["docker", "exec", _CONTAINER_NAME, "pgrep", "-f", "Xvfb :99"],
+        ["docker", "exec", _CONTAINER_NAME, "pgrep", "Xvfb"],
         capture_output=True,
     )
     if already.returncode != 0:
@@ -1384,7 +1384,7 @@ def _ensure_xvfb() -> None:
         # Verify Xvfb actually started; abort early if not so the scene launch
         # fails loudly rather than silently producing an unusable OpenGL context.
         verify = subprocess.run(
-            ["docker", "exec", _CONTAINER_NAME, "pgrep", "-f", "Xvfb :99"],
+            ["docker", "exec", _CONTAINER_NAME, "pgrep", "Xvfb"],
             capture_output=True,
         )
         if verify.returncode != 0:
