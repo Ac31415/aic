@@ -409,7 +409,8 @@ class AICRobotAICController(Robot):
             force=Vector3(x=0.0, y=0.0, z=0.0),
             torque=Vector3(x=0.0, y=0.0, z=0.0),
         )
-        msg.wrench_feedback_gains_at_tip = [0.5, 0.5, 0.5, 0.0, 0.0, 0.0]
+        gain = float(action.get("wrench_gain", 0.5))
+        msg.wrench_feedback_gains_at_tip = [gain, gain, gain, 0.0, 0.0, 0.0]
         msg.trajectory_generation_mode.mode = TrajectoryGenerationMode.MODE_VELOCITY
         self.ros2_interface.motion_update_pub.publish(msg)
 

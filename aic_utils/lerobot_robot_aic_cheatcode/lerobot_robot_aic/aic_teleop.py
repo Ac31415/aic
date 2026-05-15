@@ -426,8 +426,6 @@ class AICCheatCodeTeleop(Teleoperator):
         self._insert_start_time: float = 0.0
         self._insert_plug_offset_z: float = 0.0
 
-        self._dbg_frame: int = 0
-
         # Integrator for linear PI controller
         self._lin_err_integrator = np.zeros(3)
 
@@ -689,10 +687,6 @@ class AICCheatCodeTeleop(Teleoperator):
 
         elif self.phase == "APPROACH":
             self._lin_err_integrator = np.zeros(3)
-            self._dbg_frame += 1
-            if self._dbg_frame % 100 == 0:
-                n = self._dbg_frame // 100
-                print(f"[DBG-{n}] gripper={gripper_pos.round(3)} target={target_pos.round(3)} dist={dist_to_target:.4f}")
             if current_time - self._approach_start_time > APPROACH_TIMEOUT_S:
                 print(f"[APPROACH] Timeout ({APPROACH_TIMEOUT_S}s) — giving up.")
                 self._signal_episode_failure()
@@ -851,6 +845,7 @@ class AICCheatCodeTeleop(Teleoperator):
             "angular.x": float(v_angular_tcp[0]),
             "angular.y": float(v_angular_tcp[1]),
             "angular.z": float(v_angular_tcp[2]),
+            "wrench_gain": 0.0 if self.phase in ("APPROACH", "ALIGN") else 0.5,
         }
 
         self._last_action_time = current_time
