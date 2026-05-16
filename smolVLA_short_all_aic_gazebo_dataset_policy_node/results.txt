@@ -1,0 +1,415 @@
+(lerobot-training) wcheng3@dgx1:/raid/scratch/wcheng3$ accelerate launch --multi_gpu --num_processes=4 $(which lerobot-train)   --policy.path=lerobot/smolvla_base   --dataset.repo_id=caai-aic/short-all-aic-gazebo-dataset   --batch_size=64   --steps=20000   --output_dir=/raid/scratch/wcheng3/aic-official/lerobot-trained-models/trained_model_smolVLA_long_all_aic_gazebo_dataset   --job_name=smolVLA_long_all_aic_gazebo_dataset   --policy.device=cuda   --wandb.enable=true --policy.repo_id=caai-aic/smolVLA_short_all_aic_gazebo_dataset_policy --policy.private=true --rename_map='{"observation.images.center_camera": "observation.images.camera1", "observation.images.left_camera": "observation.images.camera2", "observation.images.right_camera": "observation.images.camera3"}' --save_checkpoint=true --save_freq=2000
+The following values were not passed to `accelerate launch` and had defaults used instead:
+        `--num_machines` was set to a value of `1`
+        `--mixed_precision` was set to a value of `'no'`
+        `--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+INFO 2026-05-15 17:14:50 ot_train.py:212 {'batch_size': 64,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'caai-aic/short-all-aic-gazebo-dataset',
+             'return_uint8': False,
+             'revision': None,
+             'root': None,
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec'},
+ 'env': None,
+ 'eval': {'batch_size': 50, 'n_episodes': 50, 'use_async_envs': True},
+ 'eval_freq': 20000,
+ 'job_name': 'smolVLA_long_all_aic_gazebo_dataset',
+ 'log_freq': 200,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.95],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 0.0001,
+               'type': 'adamw',
+               'weight_decay': 1e-10},
+ 'output_dir': '/raid/scratch/wcheng3/aic-official/lerobot-trained-models/trained_model_smolVLA_long_all_aic_gazebo_dataset',
+ 'peft': None,
+ 'persistent_workers': True,
+ 'policy': {'adapt_to_pi_aloha': False,
+            'add_image_special_tokens': False,
+            'attention_mode': 'cross_attn',
+            'chunk_size': 50,
+            'compile_mode': 'max-autotune',
+            'compile_model': False,
+            'device': 'cuda',
+            'empty_cameras': 0,
+            'expert_width_multiplier': 0.75,
+            'freeze_vision_encoder': True,
+            'input_features': {'observation.images.camera1': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.camera2': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.images.camera3': {'shape': [3,
+                                                                        256,
+                                                                        256],
+                                                              'type': <FeatureType.VISUAL: 'VISUAL'>},
+                               'observation.state': {'shape': [6],
+                                                     'type': <FeatureType.STATE: 'STATE'>}},
+            'license': None,
+            'load_vlm_weights': True,
+            'max_action_dim': 32,
+            'max_period': 4.0,
+            'max_state_dim': 32,
+            'min_period': 0.004,
+            'n_action_steps': 50,
+            'n_obs_steps': 1,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.IDENTITY: 'IDENTITY'>},
+            'num_expert_layers': 0,
+            'num_steps': 10,
+            'num_vlm_layers': 16,
+            'optimizer_betas': [0.9, 0.95],
+            'optimizer_eps': 1e-08,
+            'optimizer_grad_clip_norm': 10.0,
+            'optimizer_lr': 0.0001,
+            'optimizer_weight_decay': 1e-10,
+            'output_features': {'action': {'shape': [6],
+                                           'type': <FeatureType.ACTION: 'ACTION'>}},
+            'pad_language_to': 'max_length',
+            'prefix_length': 0,
+            'pretrained_path': 'lerobot/smolvla_base',
+            'private': True,
+            'push_to_hub': True,
+            'repo_id': 'caai-aic/smolVLA_short_all_aic_gazebo_dataset_policy',
+            'resize_imgs_with_padding': [512, 512],
+            'rtc_config': None,
+            'scheduler_decay_lr': 2.5e-06,
+            'scheduler_decay_steps': 30000,
+            'scheduler_warmup_steps': 1000,
+            'self_attn_every_n_layers': 2,
+            'tags': None,
+            'tokenizer_max_length': 48,
+            'train_expert_only': True,
+            'train_state_proj': True,
+            'type': 'smolvla',
+            'use_amp': False,
+            'use_cache': True,
+            'use_delta_joint_actions_aloha': False,
+            'use_peft': False,
+            'vlm_model_name': 'HuggingFaceTB/SmolVLM2-500M-Video-Instruct'},
+ 'prefetch_factor': 4,
+ 'rename_map': {'observation.images.center_camera': 'observation.images.camera1',
+                'observation.images.left_camera': 'observation.images.camera2',
+                'observation.images.right_camera': 'observation.images.camera3'},
+ 'resume': False,
+ 'reward_model': None,
+ 'sample_weighting': None,
+ 'save_checkpoint': True,
+ 'save_freq': 2000,
+ 'scheduler': {'decay_lr': 2.5e-06,
+               'num_decay_steps': 30000,
+               'num_warmup_steps': 1000,
+               'peak_lr': 0.0001,
+               'type': 'cosine_decay_with_warmup'},
+ 'seed': 1000,
+ 'steps': 20000,
+ 'tolerance_s': 0.2,
+ 'use_policy_training_preset': True,
+ 'wandb': {'add_tags': True,
+           'disable_artifact': False,
+           'enable': True,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'run_id': None}}
+INFO 2026-05-15 17:14:54 db_utils.py:121 Logs will be synced with wandb.
+INFO 2026-05-15 17:14:54 db_utils.py:122 Track this run --> https://wandb.ai/fau-rl-lab/lerobot/runs/vurqujxr
+INFO 2026-05-15 17:14:54 ot_train.py:236 Creating dataset
+INFO 2026-05-15 17:14:54 eo_utils.py:109 Using video codec: libsvtav1
+INFO 2026-05-15 17:15:01 ot_train.py:270 Creating policy
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 489/489 [00:00<00:00, 1814.51it/s]
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+Loading  HuggingFaceTB/SmolVLM2-500M-Video-Instruct weights ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 489/489 [00:00<00:00, 2252.17it/s]
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 489/489 [00:00<00:00, 2266.56it/s]
+Loading weights: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 489/489 [00:00<00:00, 2280.00it/s]
+Reducing the number of VLM layers to 16 ...
+Reducing the number of VLM layers to 16 ...
+Reducing the number of VLM layers to 16 ...
+Reducing the number of VLM layers to 16 ...
+INFO 2026-05-15 17:15:16 ot_train.py:347 Creating optimizer and scheduler
+INFO 2026-05-15 17:15:16 hedulers.py:111 Auto-scaling LR scheduler: num_training_steps (20000) < num_decay_steps (30000). Scaling warmup: 1000 → 666, decay: 30000 → 20000 (scale factor: 0.667)
+INFO 2026-05-15 17:15:16 ot_train.py:374 Output dir: /raid/scratch/wcheng3/aic-official/lerobot-trained-models/trained_model_smolVLA_long_all_aic_gazebo_dataset
+INFO 2026-05-15 17:15:16 ot_train.py:381 cfg.steps=20000 (20K)
+INFO 2026-05-15 17:15:16 ot_train.py:382 dataset.num_frames=386564 (387K)
+INFO 2026-05-15 17:15:16 ot_train.py:383 dataset.num_episodes=1097
+INFO 2026-05-15 17:15:16 ot_train.py:386 Effective batch size: 64 x 4 = 256
+INFO 2026-05-15 17:15:16 ot_train.py:387 num_learnable_params=99880992 (100M)
+INFO 2026-05-15 17:15:16 ot_train.py:388 num_total_params=450046176 (450M)
+Training:   0%|                                                                                                                              | 0/20000 [00:00<?, ?step/s]INFO 2026-05-15 17:15:16 ot_train.py:453 Start offline training on a fixed dataset, with effective batch size: 256
+[rank2]:[W515 17:15:19.141179869 reducer.cpp:1500] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank3]:[W515 17:15:19.186519064 reducer.cpp:1500] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank0]:[W515 17:15:20.323330995 reducer.cpp:1500] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+[rank1]:[W515 17:15:20.354677625 reducer.cpp:1500] Warning: find_unused_parameters=True was specified in DDP constructor, but did not find any unused parameters in the forward pass. This flag results in an extra traversal of the autograd graph every iteration,  which can adversely affect performance. If your model indeed never has any unused parameters in the forward pass, consider turning this flag off. Note that this warning may be a false positive if your model has flow control causing later iterations to have unused parameters. (function operator())
+Training:   1%|█▏                                                                                                                | 200/20000 [02:23<3:39:03,  1.51step/s]INFO 2026-05-15 17:17:40 ot_train.py:488 step:200 smpl:51K ep:145 epch:0.13 loss:0.680 grdn:3.746 lr:1.5e-05 updt_s:0.675 data_s:0.043
+Training:   2%|██▎                                                                                                               | 400/20000 [04:44<3:33:58,  1.53step/s]INFO 2026-05-15 17:20:00 ot_train.py:488 step:400 smpl:102K ep:291 epch:0.26 loss:0.269 grdn:1.622 lr:4.5e-05 updt_s:0.666 data_s:0.035
+Training:   3%|███▍                                                                                                              | 600/20000 [07:05<3:32:54,  1.52step/s]INFO 2026-05-15 17:22:21 ot_train.py:488 step:600 smpl:154K ep:436 epch:0.40 loss:0.195 grdn:1.510 lr:7.5e-05 updt_s:0.668 data_s:0.033
+Training:   4%|████▌                                                                                                             | 800/20000 [09:18<3:17:11,  1.62step/s]INFO 2026-05-15 17:24:34 ot_train.py:488 step:800 smpl:205K ep:581 epch:0.53 loss:0.167 grdn:1.341 lr:9.8e-05 updt_s:0.630 data_s:0.034
+Training:   5%|█████▋                                                                                                           | 1000/20000 [11:32<3:52:49,  1.36step/s]INFO 2026-05-15 17:26:48 ot_train.py:488 step:1K smpl:256K ep:726 epch:0.66 loss:0.141 grdn:1.127 lr:1.0e-04 updt_s:0.635 data_s:0.033
+Training:   6%|██████▊                                                                                                          | 1200/20000 [13:44<3:12:41,  1.63step/s]INFO 2026-05-15 17:29:00 ot_train.py:488 step:1K smpl:307K ep:872 epch:0.79 loss:0.131 grdn:1.016 lr:9.9e-05 updt_s:0.624 data_s:0.032
+Training:   7%|███████▉                                                                                                         | 1400/20000 [15:57<3:48:47,  1.35step/s]INFO 2026-05-15 17:31:13 ot_train.py:488 step:1K smpl:358K ep:1K epch:0.93 loss:0.121 grdn:0.973 lr:9.9e-05 updt_s:0.629 data_s:0.034
+Training:   8%|█████████                                                                                                        | 1600/20000 [18:09<3:42:57,  1.38step/s]INFO 2026-05-15 17:33:25 ot_train.py:488 step:2K smpl:410K ep:1K epch:1.06 loss:0.113 grdn:0.920 lr:9.9e-05 updt_s:0.623 data_s:0.035
+Training:   9%|██████████▏                                                                                                      | 1800/20000 [20:20<2:59:14,  1.69step/s]INFO 2026-05-15 17:35:36 ot_train.py:488 step:2K smpl:461K ep:1K epch:1.19 loss:0.106 grdn:0.851 lr:9.8e-05 updt_s:0.619 data_s:0.034
+Training:  10%|███████████▎                                                                                                     | 2000/20000 [22:32<3:02:33,  1.64step/s]INFO 2026-05-15 17:37:49 ot_train.py:488 step:2K smpl:512K ep:1K epch:1.32 loss:0.105 grdn:0.815 lr:9.8e-05 updt_s:0.625 data_s:0.033
+INFO 2026-05-15 17:37:49 ot_train.py:502 Checkpoint policy after step 2000
+Training:  11%|████████████▍                                                                                                    | 2200/20000 [24:49<3:38:56,  1.35step/s]INFO 2026-05-15 17:40:05 ot_train.py:488 step:2K smpl:563K ep:2K epch:1.46 loss:0.099 grdn:0.813 lr:9.7e-05 updt_s:0.626 data_s:0.032
+Training:  12%|█████████████▌                                                                                                   | 2400/20000 [27:00<2:49:30,  1.73step/s]INFO 2026-05-15 17:42:16 ot_train.py:488 step:2K smpl:614K ep:2K epch:1.59 loss:0.096 grdn:0.795 lr:9.7e-05 updt_s:0.618 data_s:0.033
+Training:  13%|██████████████▋                                                                                                  | 2600/20000 [29:13<3:37:40,  1.33step/s]INFO 2026-05-15 17:44:29 ot_train.py:488 step:3K smpl:666K ep:2K epch:1.72 loss:0.094 grdn:0.719 lr:9.6e-05 updt_s:0.629 data_s:0.035
+Training:  14%|███████████████▊                                                                                                 | 2800/20000 [31:25<3:22:01,  1.42step/s]INFO 2026-05-15 17:46:42 ot_train.py:488 step:3K smpl:717K ep:2K epch:1.85 loss:0.091 grdn:0.722 lr:9.6e-05 updt_s:0.627 data_s:0.035
+Training:  15%|████████████████▉                                                                                                | 3000/20000 [33:37<3:28:44,  1.36step/s]INFO 2026-05-15 17:48:53 ot_train.py:488 step:3K smpl:768K ep:2K epch:1.99 loss:0.092 grdn:0.750 lr:9.5e-05 updt_s:0.624 data_s:0.031
+Training:  16%|██████████████████                                                                                               | 3200/20000 [35:50<3:15:05,  1.44step/s]INFO 2026-05-15 17:51:06 ot_train.py:488 step:3K smpl:819K ep:2K epch:2.12 loss:0.083 grdn:0.694 lr:9.4e-05 updt_s:0.627 data_s:0.037
+Training:  17%|███████████████████▏                                                                                             | 3400/20000 [38:01<3:21:35,  1.37step/s]INFO 2026-05-15 17:53:18 ot_train.py:488 step:3K smpl:870K ep:2K epch:2.25 loss:0.082 grdn:0.681 lr:9.4e-05 updt_s:0.622 data_s:0.032
+Training:  18%|████████████████████▎                                                                                            | 3600/20000 [40:15<2:38:23,  1.73step/s]INFO 2026-05-15 17:55:31 ot_train.py:488 step:4K smpl:922K ep:3K epch:2.38 loss:0.082 grdn:0.695 lr:9.3e-05 updt_s:0.633 data_s:0.033
+Training:  19%|█████████████████████▍                                                                                           | 3800/20000 [42:29<2:53:10,  1.56step/s]INFO 2026-05-15 17:57:45 ot_train.py:488 step:4K smpl:973K ep:3K epch:2.52 loss:0.079 grdn:0.662 lr:9.2e-05 updt_s:0.632 data_s:0.034
+Training:  20%|██████████████████████▌                                                                                          | 4000/20000 [44:42<2:41:43,  1.65step/s]INFO 2026-05-15 17:59:58 ot_train.py:488 step:4K smpl:1M ep:3K epch:2.65 loss:0.077 grdn:0.648 lr:9.1e-05 updt_s:0.629 data_s:0.034
+INFO 2026-05-15 17:59:58 ot_train.py:502 Checkpoint policy after step 4000
+Training:  21%|███████████████████████▋                                                                                         | 4200/20000 [47:01<3:07:09,  1.41step/s]INFO 2026-05-15 18:02:17 ot_train.py:488 step:4K smpl:1M ep:3K epch:2.78 loss:0.075 grdn:0.680 lr:9.0e-05 updt_s:0.636 data_s:0.035
+Training:  22%|████████████████████████▊                                                                                        | 4400/20000 [49:13<2:49:13,  1.54step/s]INFO 2026-05-15 18:04:30 ot_train.py:488 step:4K smpl:1M ep:3K epch:2.91 loss:0.073 grdn:0.633 lr:8.9e-05 updt_s:0.626 data_s:0.033
+Training:  23%|█████████████████████████▉                                                                                       | 4600/20000 [51:29<3:09:40,  1.35step/s]INFO 2026-05-15 18:06:45 ot_train.py:488 step:5K smpl:1M ep:3K epch:3.05 loss:0.075 grdn:0.590 lr:8.8e-05 updt_s:0.638 data_s:0.036
+Training:  24%|███████████████████████████                                                                                      | 4800/20000 [53:41<3:09:30,  1.34step/s]INFO 2026-05-15 18:08:57 ot_train.py:488 step:5K smpl:1M ep:3K epch:3.18 loss:0.070 grdn:0.633 lr:8.7e-05 updt_s:0.628 data_s:0.032
+Training:  25%|████████████████████████████▎                                                                                    | 5000/20000 [55:52<2:22:11,  1.76step/s]INFO 2026-05-15 18:11:09 ot_train.py:488 step:5K smpl:1M ep:4K epch:3.31 loss:0.070 grdn:0.590 lr:8.6e-05 updt_s:0.622 data_s:0.032
+Training:  26%|█████████████████████████████▍                                                                                   | 5200/20000 [58:08<2:17:07,  1.80step/s]INFO 2026-05-15 18:13:24 ot_train.py:488 step:5K smpl:1M ep:4K epch:3.44 loss:0.069 grdn:0.596 lr:8.5e-05 updt_s:0.643 data_s:0.032
+Training:  27%|█████████████████████████████▉                                                                                 | 5400/20000 [1:00:23<3:00:10,  1.35step/s]INFO 2026-05-15 18:15:39 ot_train.py:488 step:5K smpl:1M ep:4K epch:3.58 loss:0.067 grdn:0.564 lr:8.4e-05 updt_s:0.641 data_s:0.034
+Training:  28%|███████████████████████████████                                                                                | 5600/20000 [1:02:37<2:44:35,  1.46step/s]INFO 2026-05-15 18:17:54 ot_train.py:488 step:6K smpl:1M ep:4K epch:3.71 loss:0.067 grdn:0.598 lr:8.3e-05 updt_s:0.634 data_s:0.034
+Training:  29%|████████████████████████████████▏                                                                              | 5800/20000 [1:04:53<2:33:31,  1.54step/s]INFO 2026-05-15 18:20:09 ot_train.py:488 step:6K smpl:1M ep:4K epch:3.84 loss:0.065 grdn:0.574 lr:8.2e-05 updt_s:0.642 data_s:0.033
+Training:  30%|█████████████████████████████████▎                                                                             | 6000/20000 [1:07:08<2:51:10,  1.36step/s]INFO 2026-05-15 18:22:25 ot_train.py:488 step:6K smpl:2M ep:4K epch:3.97 loss:0.064 grdn:0.573 lr:8.1e-05 updt_s:0.643 data_s:0.033
+INFO 2026-05-15 18:22:25 ot_train.py:502 Checkpoint policy after step 6000
+Training:  31%|██████████████████████████████████▍                                                                            | 6200/20000 [1:09:29<2:49:28,  1.36step/s]INFO 2026-05-15 18:24:45 ot_train.py:488 step:6K smpl:2M ep:5K epch:4.11 loss:0.060 grdn:0.586 lr:7.9e-05 updt_s:0.642 data_s:0.038
+Training:  32%|███████████████████████████████████▌                                                                           | 6400/20000 [1:11:44<2:33:04,  1.48step/s]INFO 2026-05-15 18:27:01 ot_train.py:488 step:6K smpl:2M ep:5K epch:4.24 loss:0.061 grdn:0.545 lr:7.8e-05 updt_s:0.639 data_s:0.035
+Training:  33%|████████████████████████████████████▋                                                                          | 6600/20000 [1:13:59<2:31:44,  1.47step/s]INFO 2026-05-15 18:29:15 ot_train.py:488 step:7K smpl:2M ep:5K epch:4.37 loss:0.060 grdn:0.551 lr:7.7e-05 updt_s:0.636 data_s:0.035
+Training:  34%|█████████████████████████████████████▋                                                                         | 6800/20000 [1:16:15<2:21:22,  1.56step/s]INFO 2026-05-15 18:31:32 ot_train.py:488 step:7K smpl:2M ep:5K epch:4.50 loss:0.061 grdn:0.529 lr:7.5e-05 updt_s:0.643 data_s:0.036
+Training:  35%|██████████████████████████████████████▊                                                                        | 7000/20000 [1:18:30<2:36:59,  1.38step/s]INFO 2026-05-15 18:33:46 ot_train.py:488 step:7K smpl:2M ep:5K epch:4.64 loss:0.057 grdn:0.524 lr:7.4e-05 updt_s:0.633 data_s:0.037
+Training:  36%|███████████████████████████████████████▉                                                                       | 7200/20000 [1:20:43<2:06:51,  1.68step/s]INFO 2026-05-15 18:35:59 ot_train.py:488 step:7K smpl:2M ep:5K epch:4.77 loss:0.056 grdn:0.543 lr:7.3e-05 updt_s:0.629 data_s:0.035
+Training:  37%|█████████████████████████████████████████                                                                      | 7400/20000 [1:22:58<2:28:34,  1.41step/s]INFO 2026-05-15 18:38:14 ot_train.py:488 step:7K smpl:2M ep:5K epch:4.90 loss:0.056 grdn:0.503 lr:7.1e-05 updt_s:0.638 data_s:0.033
+Training:  38%|██████████████████████████████████████████▏                                                                    | 7600/20000 [1:25:13<2:02:25,  1.69step/s]INFO 2026-05-15 18:40:30 ot_train.py:488 step:8K smpl:2M ep:6K epch:5.03 loss:0.056 grdn:0.492 lr:7.0e-05 updt_s:0.639 data_s:0.036
+Training:  39%|███████████████████████████████████████████▎                                                                   | 7800/20000 [1:27:29<2:04:59,  1.63step/s]INFO 2026-05-15 18:42:45 ot_train.py:488 step:8K smpl:2M ep:6K epch:5.17 loss:0.053 grdn:0.487 lr:6.8e-05 updt_s:0.643 data_s:0.035
+Training:  40%|████████████████████████████████████████████▍                                                                  | 8000/20000 [1:29:44<2:06:49,  1.58step/s]INFO 2026-05-15 18:45:00 ot_train.py:488 step:8K smpl:2M ep:6K epch:5.30 loss:0.052 grdn:0.497 lr:6.7e-05 updt_s:0.637 data_s:0.034
+INFO 2026-05-15 18:45:00 ot_train.py:502 Checkpoint policy after step 8000
+Training:  41%|█████████████████████████████████████████████▌                                                                 | 8200/20000 [1:32:05<2:27:04,  1.34step/s]INFO 2026-05-15 18:47:22 ot_train.py:488 step:8K smpl:2M ep:6K epch:5.43 loss:0.053 grdn:0.526 lr:6.6e-05 updt_s:0.648 data_s:0.034
+Training:  42%|██████████████████████████████████████████████▌                                                                | 8400/20000 [1:34:22<2:25:52,  1.33step/s]INFO 2026-05-15 18:49:38 ot_train.py:488 step:8K smpl:2M ep:6K epch:5.56 loss:0.051 grdn:0.482 lr:6.4e-05 updt_s:0.645 data_s:0.035
+Training:  43%|███████████████████████████████████████████████▋                                                               | 8600/20000 [1:36:35<2:17:33,  1.38step/s]INFO 2026-05-15 18:51:52 ot_train.py:488 step:9K smpl:2M ep:6K epch:5.70 loss:0.051 grdn:0.468 lr:6.3e-05 updt_s:0.629 data_s:0.036
+Training:  44%|████████████████████████████████████████████████▊                                                              | 8800/20000 [1:38:50<2:19:15,  1.34step/s]INFO 2026-05-15 18:54:07 ot_train.py:488 step:9K smpl:2M ep:6K epch:5.83 loss:0.052 grdn:0.458 lr:6.1e-05 updt_s:0.637 data_s:0.035
+Training:  45%|█████████████████████████████████████████████████▉                                                             | 9000/20000 [1:41:06<2:01:24,  1.51step/s]INFO 2026-05-15 18:56:22 ot_train.py:488 step:9K smpl:2M ep:7K epch:5.96 loss:0.049 grdn:0.449 lr:6.0e-05 updt_s:0.641 data_s:0.035
+Training:  46%|███████████████████████████████████████████████████                                                            | 9200/20000 [1:43:24<2:12:01,  1.36step/s]INFO 2026-05-15 18:58:40 ot_train.py:488 step:9K smpl:2M ep:7K epch:6.09 loss:0.048 grdn:0.451 lr:5.8e-05 updt_s:0.647 data_s:0.041
+Training:  47%|████████████████████████████████████████████████████▏                                                          | 9400/20000 [1:45:39<1:46:54,  1.65step/s]INFO 2026-05-15 19:00:55 ot_train.py:488 step:9K smpl:2M ep:7K epch:6.23 loss:0.049 grdn:0.456 lr:5.7e-05 updt_s:0.635 data_s:0.036
+Training:  48%|█████████████████████████████████████████████████████▎                                                         | 9600/20000 [1:47:54<2:09:58,  1.33step/s]INFO 2026-05-15 19:03:11 ot_train.py:488 step:10K smpl:2M ep:7K epch:6.36 loss:0.047 grdn:0.462 lr:5.5e-05 updt_s:0.639 data_s:0.037
+Training:  49%|██████████████████████████████████████████████████████▍                                                        | 9800/20000 [1:50:01<1:37:03,  1.75step/s]INFO 2026-05-15 19:05:17 ot_train.py:488 step:10K smpl:3M ep:7K epch:6.49 loss:0.046 grdn:0.430 lr:5.4e-05 updt_s:0.601 data_s:0.029
+Training:  50%|███████████████████████████████████████████████████████                                                       | 10000/20000 [1:51:47<1:25:48,  1.94step/s]INFO 2026-05-15 19:07:04 ot_train.py:488 step:10K smpl:3M ep:7K epch:6.62 loss:0.045 grdn:0.426 lr:5.2e-05 updt_s:0.515 data_s:0.016
+INFO 2026-05-15 19:07:04 ot_train.py:502 Checkpoint policy after step 10000
+Training:  51%|████████████████████████████████████████████████████████                                                      | 10200/20000 [1:53:38<1:27:45,  1.86step/s]INFO 2026-05-15 19:08:54 ot_train.py:488 step:10K smpl:3M ep:7K epch:6.75 loss:0.044 grdn:0.398 lr:5.0e-05 updt_s:0.516 data_s:0.015
+Training:  52%|█████████████████████████████████████████████████████████▏                                                    | 10400/20000 [1:55:28<1:23:34,  1.91step/s]INFO 2026-05-15 19:10:44 ot_train.py:488 step:10K smpl:3M ep:8K epch:6.89 loss:0.044 grdn:0.428 lr:4.9e-05 updt_s:0.535 data_s:0.015
+Training:  53%|██████████████████████████████████████████████████████████▎                                                   | 10600/20000 [1:57:17<1:15:41,  2.07step/s]INFO 2026-05-15 19:12:34 ot_train.py:488 step:11K smpl:3M ep:8K epch:7.02 loss:0.045 grdn:0.399 lr:4.7e-05 updt_s:0.526 data_s:0.019
+Training:  54%|███████████████████████████████████████████████████████████▍                                                  | 10800/20000 [1:59:03<1:30:09,  1.70step/s]INFO 2026-05-15 19:14:19 ot_train.py:488 step:11K smpl:3M ep:8K epch:7.15 loss:0.043 grdn:0.434 lr:4.6e-05 updt_s:0.510 data_s:0.014
+Training:  55%|████████████████████████████████████████████████████████████▌                                                 | 11000/20000 [2:00:46<1:16:58,  1.95step/s]INFO 2026-05-15 19:16:02 ot_train.py:488 step:11K smpl:3M ep:8K epch:7.28 loss:0.044 grdn:0.409 lr:4.4e-05 updt_s:0.499 data_s:0.014
+Training:  56%|█████████████████████████████████████████████████████████████▌                                                | 11200/20000 [2:02:37<1:17:49,  1.88step/s]INFO 2026-05-15 19:17:53 ot_train.py:488 step:11K smpl:3M ep:8K epch:7.42 loss:0.043 grdn:0.385 lr:4.3e-05 updt_s:0.539 data_s:0.015
+Training:  57%|██████████████████████████████████████████████████████████████▋                                               | 11400/20000 [2:04:29<1:18:39,  1.82step/s]INFO 2026-05-15 19:19:45 ot_train.py:488 step:11K smpl:3M ep:8K epch:7.55 loss:0.044 grdn:0.390 lr:4.1e-05 updt_s:0.545 data_s:0.015
+Training:  58%|███████████████████████████████████████████████████████████████▊                                              | 11600/20000 [2:06:22<1:21:21,  1.72step/s]INFO 2026-05-15 19:21:38 ot_train.py:488 step:12K smpl:3M ep:8K epch:7.68 loss:0.042 grdn:0.376 lr:4.0e-05 updt_s:0.547 data_s:0.015
+Training:  59%|████████████████████████████████████████████████████████████████▉                                             | 11800/20000 [2:08:14<1:13:34,  1.86step/s]INFO 2026-05-15 19:23:30 ot_train.py:488 step:12K smpl:3M ep:9K epch:7.81 loss:0.041 grdn:0.385 lr:3.8e-05 updt_s:0.544 data_s:0.014
+Training:  60%|██████████████████████████████████████████████████████████████████                                            | 12000/20000 [2:09:50<1:12:48,  1.83step/s]INFO 2026-05-15 19:25:06 ot_train.py:488 step:12K smpl:3M ep:9K epch:7.95 loss:0.042 grdn:0.381 lr:3.7e-05 updt_s:0.461 data_s:0.016
+INFO 2026-05-15 19:25:06 ot_train.py:502 Checkpoint policy after step 12000
+Training:  61%|███████████████████████████████████████████████████████████████████                                           | 12200/20000 [2:11:28<1:14:49,  1.74step/s]INFO 2026-05-15 19:26:44 ot_train.py:488 step:12K smpl:3M ep:9K epch:8.08 loss:0.040 grdn:0.367 lr:3.5e-05 updt_s:0.453 data_s:0.018
+Training:  62%|█████████████████████████████████████████████████████████████████████▍                                          | 12400/20000 [2:13:01<54:23,  2.33step/s]INFO 2026-05-15 19:28:17 ot_train.py:488 step:12K smpl:3M ep:9K epch:8.21 loss:0.039 grdn:0.356 lr:3.4e-05 updt_s:0.448 data_s:0.015
+Training:  63%|██████████████████████████████████████████████████████████████████████▌                                         | 12600/20000 [2:14:35<55:13,  2.23step/s]INFO 2026-05-15 19:29:51 ot_train.py:488 step:13K smpl:3M ep:9K epch:8.34 loss:0.039 grdn:0.372 lr:3.3e-05 updt_s:0.454 data_s:0.016
+Training:  64%|██████████████████████████████████████████████████████████████████████▍                                       | 12800/20000 [2:16:11<1:08:30,  1.75step/s]INFO 2026-05-15 19:31:27 ot_train.py:488 step:13K smpl:3M ep:9K epch:8.48 loss:0.040 grdn:0.369 lr:3.1e-05 updt_s:0.458 data_s:0.019
+Training:  65%|███████████████████████████████████████████████████████████████████████▌                                      | 13000/20000 [2:18:02<1:08:02,  1.71step/s]INFO 2026-05-15 19:33:19 ot_train.py:488 step:13K smpl:3M ep:9K epch:8.61 loss:0.039 grdn:0.365 lr:3.0e-05 updt_s:0.541 data_s:0.015
+Training:  66%|█████████████████████████████████████████████████████████████████████████▉                                      | 13200/20000 [2:19:40<52:41,  2.15step/s]INFO 2026-05-15 19:34:57 ot_train.py:488 step:13K smpl:3M ep:10K epch:8.74 loss:0.039 grdn:0.358 lr:2.8e-05 updt_s:0.469 data_s:0.017
+Training:  67%|█████████████████████████████████████████████████████████████████████████▋                                    | 13400/20000 [2:21:24<1:04:42,  1.70step/s]INFO 2026-05-15 19:36:41 ot_train.py:488 step:13K smpl:3M ep:10K epch:8.87 loss:0.040 grdn:0.357 lr:2.7e-05 updt_s:0.501 data_s:0.019
+Training:  68%|██████████████████████████████████████████████████████████████████████████▊                                   | 13600/20000 [2:23:15<1:19:24,  1.34step/s]INFO 2026-05-15 19:38:31 ot_train.py:488 step:14K smpl:3M ep:10K epch:9.01 loss:0.039 grdn:0.348 lr:2.6e-05 updt_s:0.529 data_s:0.019
+Training:  69%|█████████████████████████████████████████████████████████████████████████████▎                                  | 13800/20000 [2:25:01<52:54,  1.95step/s]INFO 2026-05-15 19:40:17 ot_train.py:488 step:14K smpl:4M ep:10K epch:9.14 loss:0.039 grdn:0.342 lr:2.4e-05 updt_s:0.515 data_s:0.016
+Training:  70%|██████████████████████████████████████████████████████████████████████████████▍                                 | 14000/20000 [2:26:41<48:58,  2.04step/s]INFO 2026-05-15 19:41:58 ot_train.py:488 step:14K smpl:4M ep:10K epch:9.27 loss:0.040 grdn:0.345 lr:2.3e-05 updt_s:0.484 data_s:0.016
+INFO 2026-05-15 19:41:58 ot_train.py:502 Checkpoint policy after step 14000
+Training:  71%|███████████████████████████████████████████████████████████████████████████████▌                                | 14200/20000 [2:28:31<54:20,  1.78step/s]INFO 2026-05-15 19:43:47 ot_train.py:488 step:14K smpl:4M ep:10K epch:9.40 loss:0.038 grdn:0.337 lr:2.2e-05 updt_s:0.504 data_s:0.016
+Training:  72%|████████████████████████████████████████████████████████████████████████████████▋                               | 14400/20000 [2:30:16<49:16,  1.89step/s]INFO 2026-05-15 19:45:33 ot_train.py:488 step:14K smpl:4M ep:10K epch:9.54 loss:0.039 grdn:0.333 lr:2.1e-05 updt_s:0.512 data_s:0.015
+Training:  73%|█████████████████████████████████████████████████████████████████████████████████▊                              | 14600/20000 [2:31:59<45:19,  1.99step/s]INFO 2026-05-15 19:47:16 ot_train.py:488 step:15K smpl:4M ep:11K epch:9.67 loss:0.038 grdn:0.333 lr:2.0e-05 updt_s:0.497 data_s:0.015
+Training:  74%|██████████████████████████████████████████████████████████████████████████████████▉                             | 14800/20000 [2:33:37<43:48,  1.98step/s]INFO 2026-05-15 19:48:54 ot_train.py:488 step:15K smpl:4M ep:11K epch:9.80 loss:0.038 grdn:0.323 lr:1.8e-05 updt_s:0.473 data_s:0.016
+Training:  75%|████████████████████████████████████████████████████████████████████████████████████                            | 15000/20000 [2:35:14<42:41,  1.95step/s]INFO 2026-05-15 19:50:31 ot_train.py:488 step:15K smpl:4M ep:11K epch:9.93 loss:0.036 grdn:0.316 lr:1.7e-05 updt_s:0.468 data_s:0.016
+Training:  76%|█████████████████████████████████████████████████████████████████████████████████████                           | 15200/20000 [2:37:00<43:27,  1.84step/s]INFO 2026-05-15 19:52:16 ot_train.py:488 step:15K smpl:4M ep:11K epch:10.07 loss:0.038 grdn:0.311 lr:1.6e-05 updt_s:0.507 data_s:0.019
+Training:  77%|██████████████████████████████████████████████████████████████████████████████████████▏                         | 15400/20000 [2:38:49<42:20,  1.81step/s]INFO 2026-05-15 19:54:06 ot_train.py:488 step:15K smpl:4M ep:11K epch:10.20 loss:0.037 grdn:0.311 lr:1.5e-05 updt_s:0.529 data_s:0.015
+Training:  78%|███████████████████████████████████████████████████████████████████████████████████████▎                        | 15600/20000 [2:40:38<39:20,  1.86step/s]INFO 2026-05-15 19:55:54 ot_train.py:488 step:16K smpl:4M ep:11K epch:10.33 loss:0.036 grdn:0.307 lr:1.4e-05 updt_s:0.528 data_s:0.015
+Training:  79%|████████████████████████████████████████████████████████████████████████████████████████▍                       | 15800/20000 [2:42:27<38:36,  1.81step/s]INFO 2026-05-15 19:57:44 ot_train.py:488 step:16K smpl:4M ep:11K epch:10.46 loss:0.038 grdn:0.318 lr:1.3e-05 updt_s:0.530 data_s:0.015
+Training:  80%|█████████████████████████████████████████████████████████████████████████████████████████▌                      | 16000/20000 [2:43:58<27:51,  2.39step/s]INFO 2026-05-15 19:59:14 ot_train.py:488 step:16K smpl:4M ep:12K epch:10.60 loss:0.037 grdn:0.309 lr:1.2e-05 updt_s:0.432 data_s:0.017
+INFO 2026-05-15 19:59:14 ot_train.py:502 Checkpoint policy after step 16000
+Training:  81%|██████████████████████████████████████████████████████████████████████████████████████████▋                     | 16200/20000 [2:45:30<26:56,  2.35step/s]INFO 2026-05-15 20:00:46 ot_train.py:488 step:16K smpl:4M ep:12K epch:10.73 loss:0.037 grdn:0.302 lr:1.1e-05 updt_s:0.421 data_s:0.017
+Training:  82%|███████████████████████████████████████████████████████████████████████████████████████████▊                    | 16400/20000 [2:46:55<25:14,  2.38step/s]INFO 2026-05-15 20:02:11 ot_train.py:488 step:16K smpl:4M ep:12K epch:10.86 loss:0.036 grdn:0.301 lr:1.1e-05 updt_s:0.407 data_s:0.016
+Training:  83%|████████████████████████████████████████████████████████████████████████████████████████████▉                   | 16600/20000 [2:48:20<24:58,  2.27step/s]INFO 2026-05-15 20:03:36 ot_train.py:488 step:17K smpl:4M ep:12K epch:10.99 loss:0.038 grdn:0.301 lr:9.7e-06 updt_s:0.406 data_s:0.017
+Training:  84%|██████████████████████████████████████████████████████████████████████████████████████████████                  | 16800/20000 [2:49:46<22:18,  2.39step/s]INFO 2026-05-15 20:05:02 ot_train.py:488 step:17K smpl:4M ep:12K epch:11.13 loss:0.037 grdn:0.296 lr:8.9e-06 updt_s:0.406 data_s:0.021
+Training:  85%|███████████████████████████████████████████████████████████████████████████████████████████████▏                | 17000/20000 [2:51:13<25:36,  1.95step/s]INFO 2026-05-15 20:06:30 ot_train.py:488 step:17K smpl:4M ep:12K epch:11.26 loss:0.036 grdn:0.295 lr:8.2e-06 updt_s:0.413 data_s:0.022
+Training:  86%|████████████████████████████████████████████████████████████████████████████████████████████████▎               | 17200/20000 [2:52:57<26:09,  1.78step/s]INFO 2026-05-15 20:08:13 ot_train.py:488 step:17K smpl:4M ep:12K epch:11.39 loss:0.036 grdn:0.297 lr:7.5e-06 updt_s:0.503 data_s:0.014
+Training:  87%|█████████████████████████████████████████████████████████████████████████████████████████████████▍              | 17400/20000 [2:54:41<21:11,  2.04step/s]INFO 2026-05-15 20:09:57 ot_train.py:488 step:17K smpl:4M ep:13K epch:11.52 loss:0.037 grdn:0.286 lr:6.8e-06 updt_s:0.504 data_s:0.015
+Training:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████▌             | 17600/20000 [2:56:17<16:19,  2.45step/s]INFO 2026-05-15 20:11:33 ot_train.py:488 step:18K smpl:5M ep:13K epch:11.66 loss:0.036 grdn:0.287 lr:6.2e-06 updt_s:0.463 data_s:0.015
+Training:  89%|███████████████████████████████████████████████████████████████████████████████████████████████████▋            | 17800/20000 [2:57:40<14:30,  2.53step/s]INFO 2026-05-15 20:12:56 ot_train.py:488 step:18K smpl:5M ep:13K epch:11.79 loss:0.036 grdn:0.289 lr:5.6e-06 updt_s:0.396 data_s:0.017
+Training:  90%|████████████████████████████████████████████████████████████████████████████████████████████████████▊           | 18000/20000 [2:59:23<18:27,  1.81step/s]INFO 2026-05-15 20:14:40 ot_train.py:488 step:18K smpl:5M ep:13K epch:11.92 loss:0.037 grdn:0.285 lr:5.1e-06 updt_s:0.503 data_s:0.014
+INFO 2026-05-15 20:14:40 ot_train.py:502 Checkpoint policy after step 18000
+Training:  91%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉          | 18200/20000 [3:01:16<16:36,  1.81step/s]INFO 2026-05-15 20:16:33 ot_train.py:488 step:18K smpl:5M ep:13K epch:12.05 loss:0.036 grdn:0.284 lr:4.7e-06 updt_s:0.526 data_s:0.017
+Training:  92%|███████████████████████████████████████████████████████████████████████████████████████████████████████         | 18400/20000 [3:02:59<13:10,  2.02step/s]INFO 2026-05-15 20:18:15 ot_train.py:488 step:18K smpl:5M ep:13K epch:12.19 loss:0.036 grdn:0.282 lr:4.2e-06 updt_s:0.497 data_s:0.014
+Training:  93%|████████████████████████████████████████████████████████████████████████████████████████████████████████▏       | 18600/20000 [3:04:39<11:33,  2.02step/s]INFO 2026-05-15 20:19:55 ot_train.py:488 step:19K smpl:5M ep:14K epch:12.32 loss:0.036 grdn:0.279 lr:3.8e-06 updt_s:0.486 data_s:0.014
+Training:  94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▎      | 18800/20000 [3:06:25<10:06,  1.98step/s]INFO 2026-05-15 20:21:41 ot_train.py:488 step:19K smpl:5M ep:14K epch:12.45 loss:0.036 grdn:0.284 lr:3.5e-06 updt_s:0.512 data_s:0.014
+Training:  95%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▍     | 19000/20000 [3:08:11<08:51,  1.88step/s]INFO 2026-05-15 20:23:27 ot_train.py:488 step:19K smpl:5M ep:14K epch:12.58 loss:0.035 grdn:0.278 lr:3.2e-06 updt_s:0.517 data_s:0.014
+Training:  96%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▌    | 19200/20000 [3:09:51<07:02,  1.90step/s]INFO 2026-05-15 20:25:08 ot_train.py:488 step:19K smpl:5M ep:14K epch:12.72 loss:0.035 grdn:0.282 lr:3.0e-06 updt_s:0.486 data_s:0.014
+Training:  97%|████████████████████████████████████████████████████████████████████████████████████████████████████████████▋   | 19400/20000 [3:11:30<04:49,  2.08step/s]INFO 2026-05-15 20:26:46 ot_train.py:488 step:19K smpl:5M ep:14K epch:12.85 loss:0.035 grdn:0.280 lr:2.8e-06 updt_s:0.476 data_s:0.014
+Training:  98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████▊  | 19600/20000 [3:13:08<03:49,  1.75step/s]INFO 2026-05-15 20:28:24 ot_train.py:488 step:20K smpl:5M ep:14K epch:12.98 loss:0.036 grdn:0.278 lr:2.7e-06 updt_s:0.476 data_s:0.014
+Training:  99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▉ | 19800/20000 [3:14:59<01:48,  1.84step/s]INFO 2026-05-15 20:30:15 ot_train.py:488 step:20K smpl:5M ep:14K epch:13.11 loss:0.035 grdn:0.280 lr:2.6e-06 updt_s:0.535 data_s:0.017
+Training: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20000/20000 [3:16:48<00:00,  1.81step/s]INFO 2026-05-15 20:32:04 ot_train.py:488 step:20K smpl:5M ep:15K epch:13.24 loss:0.036 grdn:0.278 lr:2.5e-06 updt_s:0.532 data_s:0.014
+INFO 2026-05-15 20:32:04 ot_train.py:502 Checkpoint policy after step 20000
+Training: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20000/20000 [3:16:52<00:00,  1.69step/s]
+INFO 2026-05-15 20:32:08 ot_train.py:576 End of training
+Processing Files (1 / 1)      : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████|  907MB /  907MB,  182MB/s  
+New Data Upload               : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████|  232MB /  232MB, 46.6MB/s  
+  ..._policy/model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████|  907MB /  907MB            
+INFO 2026-05-15 20:32:18 etrained.py:246 Model pushed to https://huggingface.co/caai-aic/smolVLA_short_all_aic_gazebo_dataset_policy
+Processing Files (1 / 1)      : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 9.54kB / 9.54kB,  0.00B/s  
+New Data Upload               : |                                                                                                           |  0.00B /  0.00B,  0.00B/s  
+  ...zer_processor.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 9.54kB / 9.54kB            
+Processing Files (1 / 1)      : 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 9.54kB / 9.54kB,  0.00B/s  
+New Data Upload               : |                                                                                                           |  0.00B /  0.00B,  0.00B/s  
+  ...zer_processor.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 9.54kB / 9.54kB 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[aic_engine-6] [INFO] [1778901791.086846160] [aic_engine]: ╔════════════════════════════════════════╗
+[aic_engine-6] [INFO] [1778901791.086852933] [aic_engine]: ║   ✓ All Trials Processed!              ║
+[aic_engine-6] [INFO] [1778901791.086857431] [aic_engine]: ║   Successful: 3  Failed: 0             ║
+[aic_engine-6] [INFO] [1778901791.086862781] [aic_engine]: ║   Total Score: -45.000                     ║
+[aic_engine-6] [INFO] [1778901791.086868562] [aic_engine]: ╚════════════════════════════════════════╝
+[aic_engine-6] [INFO] [1778901791.086873602] [aic_engine]:  
+[aic_engine-6] [INFO] [1778901791.087509936] [aic_engine]: ╔════════════════════════════════════════╗
+[aic_engine-6] [INFO] [1778901791.087519223] [aic_engine]: ║        Complete Scoring Results        ║
+[aic_engine-6] [INFO] [1778901791.087523682] [aic_engine]: ╚════════════════════════════════════════╝
+[aic_engine-6] [INFO] [1778901791.087529763] [aic_engine]: total: -45
+[aic_engine-6] [INFO] [1778901791.087534332] [aic_engine]: trial_1:
+[aic_engine-6] [INFO] [1778901791.087538570] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1778901791.087542748] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1778901791.087546886] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1778901791.087551044] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1778901791.087555171] [aic_engine]:     score: -24
+[aic_engine-6] [INFO] [1778901791.087559149] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1778901791.087563567] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1778901791.087567585] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1778901791.087571583] [aic_engine]:         score: -24
+[aic_engine-6] [INFO] [1778901791.087576091] [aic_engine]:         message: Contacts detected (only first reported) between entity named [ur5e::wrist_3_link::wrist_3_link_fixed_joint_lump__body_collider_box_collision_15] and [enclosure walls::enclosure_walls_link::v1015062008_collider_box]. Penalty applied.
+[aic_engine-6] [INFO] [1778901791.087582062] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1778901791.087586000] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087590027] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1778901791.087612079] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1778901791.087616948] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087620866] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1778901791.087625144] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1778901791.087629121] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087632919] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1778901791.087637748] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1778901791.087641976] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087645873] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1778901791.087650412] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1778901791.087654199] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1778901791.087658096] [aic_engine]:     message: "No insertion detected. Final plug port distance: 0.64m."
+[aic_engine-6] [INFO] [1778901791.087661994] [aic_engine]: trial_2:
+[aic_engine-6] [INFO] [1778901791.087665761] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1778901791.087669558] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1778901791.087673636] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1778901791.087677523] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1778901791.087681210] [aic_engine]:     score: -24
+[aic_engine-6] [INFO] [1778901791.087684947] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1778901791.087688935] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1778901791.087692702] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1778901791.087696449] [aic_engine]:         score: -24
+[aic_engine-6] [INFO] [1778901791.087700516] [aic_engine]:         message: Contacts detected (only first reported) between entity named [ur5e::wrist_3_link::wrist_3_link_fixed_joint_lump__body_collider_box_collision_15] and [enclosure walls::enclosure_walls_link::v1015062008_collider_box]. Penalty applied.
+[aic_engine-6] [INFO] [1778901791.087706438] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1778901791.087710375] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087714212] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1778901791.087719042] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1778901791.087722989] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087726816] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1778901791.087730523] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1778901791.087734351] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087738218] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1778901791.087742927] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1778901791.087746594] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087750391] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1778901791.087755400] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1778901791.087759348] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1778901791.087763185] [aic_engine]:     message: "No insertion detected. Final plug port distance: 0.66m."
+[aic_engine-6] [INFO] [1778901791.087767133] [aic_engine]: trial_3:
+[aic_engine-6] [INFO] [1778901791.087771060] [aic_engine]:   tier_1:
+[aic_engine-6] [INFO] [1778901791.087774857] [aic_engine]:     score: 1
+[aic_engine-6] [INFO] [1778901791.087784926] [aic_engine]:     message: Model validation succeeded.
+[aic_engine-6] [INFO] [1778901791.087789355] [aic_engine]:   tier_2:
+[aic_engine-6] [INFO] [1778901791.087793152] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1778901791.087802650] [aic_engine]:     message: Scoring succeeded.
+[aic_engine-6] [INFO] [1778901791.087808330] [aic_engine]:     categories:
+[aic_engine-6] [INFO] [1778901791.087812579] [aic_engine]:       contacts:
+[aic_engine-6] [INFO] [1778901791.087816626] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087820984] [aic_engine]:         message: No contact detected.
+[aic_engine-6] [INFO] [1778901791.087824812] [aic_engine]:       duration:
+[aic_engine-6] [INFO] [1778901791.087828819] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087832626] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning time bonus
+[aic_engine-6] [INFO] [1778901791.087839159] [aic_engine]:       insertion force:
+[aic_engine-6] [INFO] [1778901791.087843347] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087847685] [aic_engine]:         message: No excessive force detected
+[aic_engine-6] [INFO] [1778901791.087851963] [aic_engine]:       trajectory efficiency:
+[aic_engine-6] [INFO] [1778901791.087856071] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087859808] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+[aic_engine-6] [INFO] [1778901791.087865068] [aic_engine]:       trajectory smoothness:
+[aic_engine-6] [INFO] [1778901791.087868955] [aic_engine]:         score: 0
+[aic_engine-6] [INFO] [1778901791.087872983] [aic_engine]:         message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+[aic_engine-6] [INFO] [1778901791.087877662] [aic_engine]:   tier_3:
+[aic_engine-6] [INFO] [1778901791.087882020] [aic_engine]:     score: 0
+[aic_engine-6] [INFO] [1778901791.087886148] [aic_engine]:     message: "No insertion detected. Final plug port distance: 0.60m."
