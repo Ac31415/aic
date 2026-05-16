@@ -1,0 +1,792 @@
+    1  ls
+    2  df -h
+    3  ros2
+    4  ollama
+    5  clear
+    6  exit
+    7  reboot
+    8  sudo apt date
+    9  sudo apt update
+   10  sudo apt upgrade -y
+   11  nvidia-smi
+   12  reboot
+   13  ros2 topic list
+   14  exit
+   15  ros2 run demo_nodes_py listener
+   16  ls
+   17  ls Downloads/
+   18  cd
+   19  mkdir ~/isaacsim
+   20  cd ~/Downloads
+   21  unzip "isaac-sim-standalone-5.1.0-linux-x86_64.zip" -d ~/isaacsim
+   22  cd ~/isaacsim
+   23  ./post_install.sh
+   24  ./isaac-sim.selector.sh
+   25  cd
+   26  locale  # check for UTF-8
+   27  sudo apt update && sudo apt install locales
+   28  sudo locale-gen en_US en_US.UTF-8
+   29  sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+   30  export LANG=en_US.UTF-8
+   31  locale  # verify settings
+   32  sudo apt install software-properties-common
+   33  sudo add-apt-repository universe
+   34  sudo apt update && sudo apt install curl -y
+   35  export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+   36  curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo ${UBUNTU_CODENAME:-${VERSION_CODENAME}})_all.deb"
+   37  sudo dpkg -i /tmp/ros2-apt-source.deb
+   38  sudo apt update && sudo apt install ros-dev-tools
+   39  sudo apt update
+   40  sudo apt upgrade
+   41  sudo apt install ros-jazzy-desktop[B
+   42  nano .bashrc 
+   43  ls
+   44  ros2 run demo_nodes_cpp talker
+   45  . .bashrc 
+   46  ros2 run demo_nodes_cpp talker
+   47  ros2 topic list
+   48  reboot
+   49  cd
+   50  ls
+   51  pwd
+   52  mkdir ~/isaacsim_assets
+   53  cd ~/Downloads
+   54  cat isaac-sim-assets-complete-5.1.0.zip.001 isaac-sim-assets-complete-5.1.0.zip.002 isaac-sim-assets-complete-5.1.0.zip.003 > isaac-sim-assets-complete-5.1.0.zip
+   55  unzip "isaac-sim-assets-complete-5.1.0.zip" -d ~/isaacsim_assets
+   56  cd
+   57  ls
+   58  cd isaacsim
+   59  cd
+   60  ls isaacsim_assets/
+   61  ls isaacsim_assets/Assets/Isaac/5.1/
+   62  cd /home/minghanwei/isaacsim/apps/
+   63  ls
+   64  nano isaacsim.exp.base.kit 
+   65  ./isaac-sim.sh --/persistent/isaac/asset_root/default="/home/minghanwei/isaacsim_assets/Assets/Isaac/5.1"
+   66  cd i
+   67  cd ~/isaacsim
+   68  ./isaac-sim.sh --/persistent/isaac/asset_root/default="/home/minghanwei/isaacsim_assets/Assets/Isaac/5.1"
+   69  clear
+   70  ros2 topic list
+   71  shutdown now
+   72  htop
+   73  sudo apt install htop
+   74  ls
+   75  nvidia-smi 
+   76  clear
+   77  nvidia-smi 
+   78  df -h
+   79  hostname -I
+   80  hostname -I\
+   81  hostname -I
+   82  ls
+   83  ls -al
+   84  reboot
+   85  nvidia-smi
+   86  nvidia-smi -l
+   87  lsblk
+   88  docker
+   89  sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+   90  # Add Docker's official GPG key:
+   91  sudo apt update
+   92  sudo apt install ca-certificates curl
+   93  sudo install -m 0755 -d /etc/apt/keyrings
+   94  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   95  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   96  # Add the repository to Apt sources:
+   97  sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+   98  Types: deb
+   99  URIs: https://download.docker.com/linux/ubuntu
+  100  Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+  101  Components: stable
+  102  Architectures: $(dpkg --print-architecture)
+  103  Signed-By: /etc/apt/keyrings/docker.asc
+  104  EOF
+  105  sudo apt update
+  106  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  107  sudo systemctl status docker
+  108  sudo docker run hello-world
+  109  sudo apt-get update && sudo apt-get install -y --no-install-recommends    ca-certificates    curl    gnupg2
+  110  curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg   && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list |     sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' |     sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+  111  sudo apt-get update
+  112  export NVIDIA_CONTAINER_TOOLKIT_VERSION=1.19.0-1
+  113  sudo nvidia-ctk runtime configure --runtime=docker
+  114  sudo systemctl restart docker
+  115  cat /etc/docker/daemon.json
+  116  sudo systemctl restart docker
+  117  sudo apt install distrobox
+  118  curl -fsSL https://pixi.sh/install.sh | sh
+  119  # Restart your terminal after installation
+  120  reset
+  121  # Clone this repo
+  122  mkdir -p ~/ws_aic/src
+  123  cd ~/ws_aic/src
+  124  git clone https://github.com/intrinsic-dev/aic
+  125  # Install and build dependencies
+  126  cd ~/ws_aic/src/aic
+  127  pixi install
+  128  nano hf-token.txt
+  129  cat hf-token.txt
+  130  pixi install
+  131  export DBX_CONTAINER_MANAGER=docker
+  132  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  133  sudo groupadd docker
+  134  sudo usermod -aG docker $USER
+  135  hf
+  136  dpkg list 
+  137  dpkg -l  
+  138  dpkg -l  | grep  huggin
+  139  dpkg -l  | grep  h
+  140  dpkg -l  | grep  hf
+  141  printenv | grep HF
+  142  printenv | grep Hug
+  143  ls -al
+  144  cd ws_aic/src/aic/
+  145  ls -al
+  146  # Create and enter the eval container
+  147  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  148  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  149  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  150  exit
+  151  git config --global user.email "wcheng3@fau.edu"
+  152  git config --global user.name "Ac31415"
+  153  htop
+  154  iotop
+  155  sudo apt install iotop
+  156  iotop
+  157  sudo iotop
+  158  ls -lh .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/
+  159  ls -lh .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/
+  160  ls -lh .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  161  ls -al .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  162  ls -al /home/minghanwei/.cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  163  ls -al /home/minghanwei/.cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/7189adef7f1a7d22ed2ba1c778b4b81127f93eca
+  164  cd ..
+  165  ls -al
+  166  cd ~
+  167  ls -al .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  168  pwd
+  169  cd .cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  170  pwd
+  171  nvcc
+  172  sudo apt install nvidia-cuda-toolkit
+  173  ls -al /home/minghanwei/.cache/huggingface/hub/models--caai-aic--trained_models_pi05_base_sfp_to_sfp_port_0_of_nic_card_mount_0_sc_to_sc_port_base_of_sc_port_0_4/snapshots/7189adef7f1a7d22ed2ba1c778b4b81127f93eca/
+  174  cd ws_aic
+  175  pixi run ros2 topic list
+  176  pixi shell
+  177  cd src/aic/
+  178  pixi run ros2 topic list
+  179  pixi run ros2 topic echo /fts_broadcaster/wrench
+  180  pixi run ros2 topic list
+  181  pixi run ros2 topic echo /aic_controller/joint_commands
+  182  sudo snap install code --classic
+  183  code .
+  184  cd
+  185  hf
+  186  ls -al
+  187  ls -al .cache/huggingface/
+  188  ls -al .cache/huggingface/hub/
+  189  htop
+  190  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=aic_example_policies.ros.WaveArm
+  191  pixi add huggingface_hub
+  192  pixi hf
+  193  pixi run hf
+  194  pixi hf login
+  195  pixi run hf login
+  196  pixi run hf auth
+  197  pixi run hf auth login
+  198  pixi run hf auth whoami
+  199  pixi add fsspec = "<=2026.2.0"
+  200  pixi add "fsspec<=2026.2.0"
+  201  pixi reinstall ros-kilted-pi05-base-trained-0
+  202  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  203  pixi run add transformers
+  204  pixi add transformers
+  205  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  206  pixi reinstall lerobot
+  207  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  208  pixi run hf auth whoami
+  209  pixi reinstall ros-kilted-pi05-base-trained-0
+  210  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  211  pixi reinstall ros-kilted-pi05-base-trained-0
+  212  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  213  pixi reinstall ros-kilted-pi05-base-trained-0
+  214  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  215  pixi reinstall ros-kilted-pi05-base-trained-0
+  216  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  217  pixi run ls /home/minghanwei/.cache/huggingface/hub/
+  218  pixi run ls -al /home/minghanwei/.cache/huggingface/hub/
+  219  pixi reinstall ros-kilted-pi05-base-trained-0
+  220  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  221  pixi reinstall ros-kilted-pi05-base-trained-0
+  222  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  223  pixi reinstall ros-kilted-pi05-base-trained-0
+  224  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  225  pixi reinstall lerobot
+  226  pixi remove lerobot
+  227  pixi reinstall lerobot
+  228  pixi remove lerobot
+  229  pixi install
+  230  pixi reinstall lerobot
+  231  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  232  pixi reinstall ros-kilted-pi05-base-trained-0
+  233  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  234  pixi reinstall lerobot
+  235  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  236  pixi add "safetensors>=0.4.0"
+  237  pixi reinstall lerobot
+  238  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  239  pixi reinstall lerobot
+  240  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  241  pixi reinstall lerobot
+  242  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  243  pixi reinstall lerobot
+  244  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  245  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=aic_example_policies.ros.RunACT
+  246  pixi reinstall lerobot
+  247  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=aic_example_policies.ros.RunACT
+  248  pixi reinstall lerobot
+  249  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  250  pixi reinstall lerobot
+  251  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  252  pixi reinstall ros-kilted-pi05-base-trained-0
+  253  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  254  pixi run python /home/minghanwei/ws_aic/src/aic/pi05_base_trained_0/pi05_base_trained_0/remap_pi05.py
+  255  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  256  pixi reinstall ros-kilted-pi05-base-trained-0
+  257  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  258  pixi reinstall ros-kilted-pi05-base-trained-0
+  259  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  260  pixi reinstall lerobot
+  261  pixi reinstall ros-kilted-pi05-base-trained-0
+  262  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  263  pixi reinstall ros-kilted-pi05-base-trained-0
+  264  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  265  pixi reinstall ros-kilted-pi05-base-trained-0
+  266  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  267  pixi reinstall ros-kilted-pi05-base-trained-0
+  268  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=pi05_base_trained_0.pi05_base_trained_0
+  269  nvidia-smi -l
+  270  cd
+  271  ls
+  272  ls -al
+  273  sudo shutdown now
+  274  docker run hello-world
+  275  # Indicate distrobox to use Docker as container manager
+  276  export DBX_CONTAINER_MANAGER=docker
+  277  # Create and enter the eval container
+  278  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  279  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  280  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  281  distrobox enter -r aic_eval
+  282  ls -al
+  283  cd ws_aic/src/aic/
+  284  export DBX_CONTAINER_MANAGER=docker
+  285  # Create and enter the eval container
+  286  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  287  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  288  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  289  distrobox enter -r aic_eval
+  290  cd ~/ws_aic/src/aic
+  291  ls aic_utils/lerobot_robot_aic/lerobot_robot_aic
+  292  /entrypoint.sh spawn_task_board:=true     task_board_x:=0.3 task_board_y:=-0.1 task_board_z:=1.2     task_board_roll:=0.0 task_board_pitch:=0.0 task_board_yaw:=0.785     sfp_mount_rail_0_present:=true sfp_mount_rail_0_translation:=-0.08     sc_mount_rail_0_present:=true sc_mount_rail_0_translation:=-0.09     nic_card_mount_0_present:=true nic_card_mount_0_translation:=0.005     sc_port_0_present:=true sc_port_0_translation:=-0.04     spawn_cable:=true cable_type:=sfp_sc_cable attach_cable_to_gripper:=true     ground_truth:=true start_aic_engine:=false launch_rviz:=false
+  293  export DBX_CONTAINER_MANAGER=docker
+  294  distrobox enter -r aic_eval
+  295  adb devices
+  296  cd ~/ws_aic/src/aic
+  297  export DBX_CONTAINER_MANAGER=docker
+  298  distrobox enter -r aic_eval
+  299  cd oculus_reader/
+  300  pwd
+  301  cd ..
+  302  ls
+  303  cd ws_aic_caai/
+  304  cd src/aic/
+  305  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  306  sudo apt-get install git-lfs
+  307  git lfs install # has to be run only once on a single user account
+  308  git config lfs.https://github.com/rail-berkeley/oculus_reader.git/info/lfs.locksverify false
+  309  git clone https://github.com/rail-berkeley/oculus_reader.git
+  310  sudo apt install android-tools-adb
+  311  pixi add --path oculus_reader/
+  312  pixi add --pypi oculus_reader/
+  313  pixi add --pypi "oculus_reader/"
+  314  pixi add --pypi "oculus_reader @ oculus_reader/"
+  315  pixi add oculus_reader/
+  316  pixi add --pypi --editable "oculus_reader @ file:///home/minghanwei/ws_aic_caai/src/aic/oculus_reader"
+  317  pixi run python oculus_reader/reader.py
+  318  cd oculus_reader/
+  319  cd ..
+  320  pixi run python oculus_reader/reader.py
+  321  ls
+  322  ls oculus_reader
+  323  pixi run python oculus_reader/viz_transforms.py 
+  324  pixi add tf_transformations
+  325  pixi add ros-kilted-tf-transformations
+  326  pixi run python oculus_reader/viz_transforms.py 
+  327  cd ~/ws_aic_caai/src/aic
+  328  adb devices
+  329  cd oculus_reader/
+  330  ls
+  331  pixi run python3 oculus_reader/viz_transforms.py 
+  332  cd ..
+  333  pixi add --pypi --editable 'oculus_reader' @ file://home/minghanwei/ws_aic_caai/src/aic/oculus_reader'
+  334  \
+  335  pixi add --pypi --editable 'oculus_reader @ file://home/minghanwei/ws_aic_caai/src/aic/oculus_reader'
+  336  pixi add --pypi --editable 'oculus_reader @ file:///home/minghanwei/ws_aic_caai/src/aic/oculus_reader'
+  337  pixi run python3 oculus_reader/viz_transforms.py 
+  338  cd oculus_reader/
+  339  pixi run python3 oculus_reader/viz_transforms.py 
+  340  cd ..
+  341  pixi add ros-humble-tf-transformations
+  342  pixi add ros-kilted-tf-transformations
+  343  cd oculus_reader/
+  344  pixi run python3 oculus_reader/viz_transforms.py 
+  345  history > ~/Desktop/oculus_setup.txt
+  346  cd ~/ws_aic_caai/src/aic
+  347  cd oculus_reader/
+  348  pwd
+  349  cd ..
+  350  export DBX_CONTAINER_MANAGER=docker
+  351  # Create and enter the eval container
+  352  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  353  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  354  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  355  distrobox enter -r aic_eval
+  356  cd ws_aic_caai/src/aic/
+  357  /entrypoint.sh spawn_task_board:=true     task_board_x:=0.3 task_board_y:=-0.1 task_board_z:=1.2     task_board_roll:=0.0 task_board_pitch:=0.0 task_board_yaw:=0.785     sfp_mount_rail_0_present:=true sfp_mount_rail_0_translation:=-0.08     sc_mount_rail_0_present:=true sc_mount_rail_0_translation:=-0.09     nic_card_mount_0_present:=true nic_card_mount_0_translation:=0.005     sc_port_0_present:=true sc_port_0_translation:=-0.04     spawn_cable:=true cable_type:=sfp_sc_cable attach_cable_to_gripper:=true     ground_truth:=true start_aic_engine:=false
+  358  pixi run lerobot-record         --robot.type=aic_controller --robot.id=aic         --teleop.type=aic_oculus   --teleop.id=aic         --robot.teleop_target_mode=cartesian         --robot.cartesian_command_mode=position         --teleop.cartesian_command_mode=position         --robot.teleop_frame_id=base_link         --dataset.repo_id=caai-aic/test-dataset          --dataset.single_task="insert cable"         --dataset.push_to_hub=false         --play_sounds=false         --display_data=true
+  359  pixi reinstall
+  360  pixi run lerobot-record         --robot.type=aic_controller --robot.id=aic         --teleop.type=aic_oculus   --teleop.id=aic         --robot.teleop_target_mode=cartesian         --robot.cartesian_command_mode=position         --teleop.cartesian_command_mode=position         --robot.teleop_frame_id=base_link         --dataset.repo_id=caai-aic/test-dataset          --dataset.single_task="insert cable"         --dataset.push_to_hub=false         --play_sounds=false         --display_data=true
+  361  history > ~/Desktop/dataset_collection.txt
+  362  cd ~/ws_aic_caai/src/aic
+  363  cd oculus_reader/
+  364  pixi run python3 oculus_reader/viz_transforms.py
+  365  adb devices
+  366  pixi run python3 oculus_reader/viz_transforms.py
+  367  cd ws_aic_caai/src/aic/
+  368  export DBX_CONTAINER_MANAGER=docker
+  369  distrobox enter -r aic_eval
+  370  cd ws_aic_caai/src/aic/
+  371  lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true
+  372  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true
+  373  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true --dataset.single_task="insert cable"
+  374  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true --dataset.single_task="insert cable" --dataset.root='/home/minghanwei/.cache/huggingface/lerobot/caai-aic/test-dataset'
+  375  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --dataset.single_task="insert cable"
+  376  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true --dataset.single_task="insert cable" --dataset.root='/home/minghanwei/.cache/huggingface/lerobot/caai-aic/test-dataset'
+  377  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true --dataset.single_task="insert cable" --dataset.root='/home/minghanwei/.cache/huggingface/lerobot/caai-aic/test-dataset' --fps 30
+  378  pixi run lerobot-record --robot.type=aic_controller --robot.id=aic --teleop.type=aic_oculus --teleop.id=aic --robot.teleop_target_mode=cartesian --robot.cartesian_command_mode=position --teleop.cartesian_command_mode=position --robot.teleop_frame_id=base_link --dataset.repo_id=caai-aic/test-dataset --dataset.push_to_hub=true --dataset.private=true --dataset.num_episodes=90 --play_sounds=false --display_data=true --dataset.reset_time_s=30 --dataset.episode_time_s=600 --resume=true --dataset.single_task="insert cable" --dataset.root='/home/minghanwei/.cache/huggingface/lerobot/caai-aic/test-dataset' --dataset.streaming_encoding=false
+  379  lerobot-edit-dataset     --repo_id caai-aic/test-dataset     --operation.type info     --operation.show_features true
+  380  pixi run lerobot-edit-dataset     --repo_id caai-aic/test-dataset     --operation.type info     --operation.show_features true
+  381  pixi run lerobot-replay --robot.type=aic_controller --robot.id=aic --dataset.repo_id=caai-aic/test-dataset --dataset.episode=0
+  382  pixi add libjpeg-turbo
+  383  pixi run lerobot-replay --robot.type=aic_controller --robot.id=aic --dataset.repo_id=caai-aic/test-dataset --dataset.episode=0
+  384  pixi add ffmpeg>=7.0
+  385  pixi run lerobot-replay --robot.type=aic_controller --robot.id=aic --dataset.repo_id=caai-aic/test-dataset --dataset.episode=0[AA[[[[[[[[[[[B[BBBBBB[[
+  386  pixi add jpeg[
+  387  pixi run python3 recording_framework.py
+  388  cd ~/ws_aic_caai/src/aic0
+  389  export DBX_CONTAINER_MANAGER=docker
+  390  distrobox enter -r aic_eval -- /entrypoint.sh start_aic_engine:=false spawn_task_board:=true gazebo_gui:=true
+  391  python3 recording_framework.py
+  392  pixi run python3 recording_framework.py
+  393  pixi run python3 recording_framework.py
+  394  sudo snap install vlc
+  395  sudo snap install vlc-classic
+  396  sudo snap install vlc_classic
+  397  vlc
+  398  snap -h
+  399  man snap
+  400  snap remove -h
+  401  snap remove --purge vlc
+  402  sudo snap install vlc --classic
+  403  vlc
+  404  sudo snap remove vlc
+  405  sudo apt install vlc
+  406  pixi reinstall lerobot
+  407  GIT_LFS_SKIP_SMUDGE=1 pixi reinstall lerobot
+  408  pixi run python3 recording_framework.py
+  409  pixi reinstall lerobot
+  410  GIT_LFS_SKIP_SMUDGE=1 pixi reinstall lerobot
+  411  pixi run python3 recording_framework.py
+  412  pixi reinstall lerobot
+  413  pixi run python3 recording_framework.py
+  414  pixi reinstall ros-kilted-lerobot-robot-aic
+  415  pixi run python3 recording_framework.py
+  416  pixi reinstall lerobot
+  417  pixi run python3 recording_framework.py
+  418  pixi run python3 recording_framework.py --hf-token-path '/home/minghanwei/.cache/huggingface/token' 
+  419  export HF_TOKEN=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
+  420  pixi run python3 recording_framework.py --hf-token-path '/home/minghanwei/.cache/huggingface/token' 
+  421  cd ..
+  422  pixi run python3 recording_framework.py
+  423  pixi reinstall lerobot
+  424  pixi run python3 recording_framework.py
+  425  cd ws_aic_caai/src/aic/
+  426  pixi run python3 recording_framework.py
+  427  [A
+  428  cd ws_aic_caai/src/aic/
+  429  export DBX_CONTAINER_MANAGER=docker
+  430  distrobox enter -r aic_eval
+  431  /entrypoint.sh spawn_task_board:=true     task_board_x:=0.3 task_board_y:=-0.1 task_board_z:=1.2     task_board_roll:=0.0 task_board_pitch:=0.0 task_board_yaw:=0.785     sfp_mount_rail_0_present:=true sfp_mount_rail_0_translation:=-0.08     sc_mount_rail_0_present:=true sc_mount_rail_0_translation:=-0.09     nic_card_mount_0_present:=true nic_card_mount_0_translation:=0.005     sc_port_0_present:=true sc_port_0_translation:=-0.04     spawn_cable:=true cable_type:=sfp_sc_cable attach_cable_to_gripper:=true     ground_truth:=true start_aic_engine:=false
+  432  cd ..
+  433  export DBX_CONTAINER_MANAGER=docker
+  434  distrobox enter -r aic_eval
+  435  pixi run lerobot-record         --robot.type=aic_controller --robot.id=aic         --teleop.type=aic_oculus   --teleop.id=aic         --robot.teleop_target_mode=cartesian         --robot.cartesian_command_mode=position         --teleop.cartesian_command_mode=position         --robot.teleop_frame_id=base_link         --dataset.repo_id=caai-aic/test-dataset          --dataset.single_task="insert cable"         --dataset.push_to_hub=true         --play_sounds=false         --display_data=true --dataset.private=true --resume=true --dataset.root='/home/minghanwei/.cache/huggingface/lerobot/caai-aic/test-dataset' 
+  436  cd ..
+  437  pixi run python3 recording_framework.py
+  438  cd ~/ws_aic_caai/src/aic
+  439  cd oculus_reader/
+  440  pixi run python3 oculus_reader/viz_transforms.py
+  441  ~/ws_aic_caai/src/aic
+  442  pixi run python3 recording_framework.py
+  443  cd ~/ws_aic_caai/src/aic
+  444  pixi run python3 recording_framework.py
+  445  pixi run python3 recording_framework.py
+  446  pixi run python3 recording_framework.py
+  447  cd ~/ws_aic_caai/src/aic
+  448  pixi run python3 recording_framework.py
+  449  cd ~/ws_aic_caai/src/aic
+  450  pixi run python3 recording_framework.py
+  451  cd ~/ws_aic_caai/src/aic
+  452  pixi run python3 recording_framework.py
+  453  ros2 pkg create act_trained_0_policy_node --build-type ament_python
+  454  pixi reinstall ros-kilted-act-trained-0-policy-node
+  455  cd '/home/minghanwei/ws_aic/src/aic'
+  456  pixi reinstall ros-kilted-act-trained-0-policy-node
+  457  exit
+  458  cd act_trained_0_policy_node/
+  459  ls -al
+  460  ros2 pkg create act_trained_0_policy_node_assets --build-type ament_python
+  461  ros2 pkg create act_trained_0_policy_node --build-type ament_python
+  462  cd '/home/minghanwei/ws_aic_caai/src/aic/act_trained_0_policy_node/act_trained_0_policy_node'
+  463  ros2 pkg create act_short_all_aic_dataset_policy --build-type ament_python
+  464  cd ..
+  465  pixi reinstall ros-kilted-act-trained-0-policy-node
+  466  exit
+  467  cd '/home/minghanwei/ws_aic_caai/src/aic/act_trained_0_policy_node/act_trained_0_policy_node'
+  468  ros2 pkg create act_short_all_aic_dataset_policy --build-type ament_python
+  469  exit
+  470  minghan2024
+  471  pixi run python3 recording_framework.py
+  472  cd ~/ws_aic_caai/src/aic
+  473  pixi run python3 recording_framework.py
+  474  docker images
+  475  docker images -a
+  476  docker exec -it fau-caai-solution:v1 /bin/bash
+  477  docker images -a
+  478  docker exec -it fau-caai-solution:v1 /bin/bash
+  479  docker exec -it 879eef1fe877 /bin/bash
+  480  docker ps
+  481  docker exec -it 879eef1fe877 /bin/bash
+  482  docker images -a
+  483  docker ps
+  484  docker exec -it fau-caai-solution:v1 /bin/bash
+  485  docker ps
+  486  docker exec -it a48c1a474798 /bin/bash
+  487  docker ps
+  488  docker images -a
+  489  docker ps
+  490  history > ~/Desktop/docker-check.txt
+  491  cd ..
+  492  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  493  unzip awscliv2.zip
+  494  sudo ./aws/install
+  495  aws
+  496  aws configure --profile fau-caai
+  497  export AWS_PROFILE=fau-caai
+  498  aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 973918476471.dkr.ecr.us-east-1.amazonaws.com
+  499  docker tag localhost/fau-caai-solution:v1 973918476471.dkr.ecr.us-east-1.amazonaws.com/aic-team/fau-caai:v1
+  500  docker tag fau-caai-solution:v1 973918476471.dkr.ecr.us-east-1.amazonaws.com/aic-team/fau-caai:v1
+  501  docker push 973918476471.dkr.ecr.us-east-1.amazonaws.com/aic-team/fau-caai:v1
+  502  history > ~/Desktop/docker-img-push.txt
+  503  docker compose -f docker/docker-compose.yaml build model
+  504  cd src/aic/
+  505  docker compose -f docker/docker-compose.yaml build model
+  506  docker compose -f docker/docker-compose.yaml up
+  507  docker compose -f docker/docker-compose.yaml build model
+  508  docker compose -f docker/docker-compose.yaml up
+  509  docker compose -f docker/docker-compose.yaml build model
+  510  docker compose -f docker/docker-compose.yaml up
+  511  docker compose -f docker/docker-compose.yaml build model
+  512  docker compose -f docker/docker-compose.yaml up
+  513  docker compose -f docker/docker-compose.yaml build model
+  514  docker compose -f docker/docker-compose.yaml up
+  515  docker compose -f docker/docker-compose.yaml build model
+  516  docker compose -f docker/docker-compose.yaml up
+  517  docker compose -f docker/docker-compose.yaml build model
+  518  docker compose -f docker/docker-compose.yaml up
+  519  docker compose -f docker/docker-compose.yaml build model
+  520  docker compose -f docker/docker-compose.yaml up
+  521  aws
+  522  sudo apt  install awscli
+  523  history > ~/Desktop/docker-img-build.txt
+  524  cd src/aic/
+  525  distrobox enter -r aic_eval -- /entrypoint.sh
+  526  distrobox enter -r aic_eval
+  527  export DBX_CONTAINER_MANAGER=docker
+  528  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  529  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  530  distrobox enter -r aic_eval
+  531  cd src/aic/
+  532  pixi shell
+  533  pixi reinstall ros-kilted-act-trained-0-policy-node
+  534  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  535  pixi reinstall ros-kilted-act-trained-0-policy-node
+  536  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  537  pixi reinstall ros-kilted-act-trained-0-policy-node
+  538  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  539  pixi reinstall ros-kilted-act-trained-0-policy-node
+  540  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  541  pixi reinstall ros-kilted-act-trained-0-policy-node
+  542  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  543  pixi reinstall ros-kilted-act-trained-0-policy-node
+  544  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  545  pixi reinstall ros-kilted-act-trained-0-policy-node
+  546  cd '/home/minghanwei/ws_aic_caai/src/aic/act_trained_0_policy_node'
+  547  ls -al
+  548  cd ..
+  549  pixi shell
+  550  pixi reinstall ros-kilted-act-trained-0-policy-node
+  551  pixi shell
+  552  pixi reinstall ros-kilted-act-trained-0-policy-node
+  553  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  554  export OFFLINE_POLICY_PATH='/home/minghanwei/ws_aic_caai/src/aic/act_trained_0_policy_node/act_trained_0_policy_node/act_short_all_aic_dataset_policy'
+  555  pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=act_trained_0_policy_node.act_trained_0_policy_node
+  556  docker compose -f docker/docker-compose.yaml build model
+  557  pixi reinstall ros-kilted-act-trained-0-policy-node
+  558  docker compose -f docker/docker-compose.yaml build model
+  559  pixi install
+  560  docker compose -f docker/docker-compose.yaml build model
+  561  cd ~/ws_aic_caai/src/aic
+  562  pixi run python3 recording_framework.py
+  563  cd ws_aic_caai/
+  564  cd src/aic/
+  565  pixi run python3 recording_framework.py
+  566  cd '/home/minghanwei/ws_aic_rocky'
+  567  ls -al
+  568  cd src/IntrinsicAIChallenge/
+  569  pixi self-update --version 0.67.2
+  570  pixi install
+  571  cd '/home/minghanwei/ws_aic/src/aic'
+  572  pixi self-update --version 0.67.2
+  573  # Indicate distrobox to use Docker as container manager
+  574  export DBX_CONTAINER_MANAGER=docker
+  575  # Create and enter the eval container
+  576  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  577  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  578  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  579  distrobox list
+  580  distrobox rm aic_eval
+  581  distrobox list
+  582  # Indicate distrobox to use Docker as container manager
+  583  export DBX_CONTAINER_MANAGER=docker
+  584  # Create and enter the eval container
+  585  docker pull ghcr.io/intrinsic-dev/aic/aic_eval:latest
+  586  # If you do *not* have an NVIDIA GPU, remove the --nvidia flag for GPU support
+  587  distrobox create -r --nvidia -i ghcr.io/intrinsic-dev/aic/aic_eval:latest aic_eval
+  588  distrobox enter -r aic_eval
+  589  cd '/home/minghanwei/ws_aic/src/aic/mystuff/custom_commands'
+  590  ./record_multiple_data.sh
+  591  pixi add scipy
+  592  ./record_multiple_data.sh
+  593  cd ~/ws_aic
+  594  pixi run ros2 service list
+  595  cd src/aic/
+  596  pixi run ros2 service list
+  597  pixi run ros2 topic hz /left_camera/image
+  598  cd src/aic/
+  599  pixi run ros2 topic hz /left_camera/image
+  600  pixi run ros2 topic hz /center_camera/image
+  601  cd src/aic/
+  602  pixi run python3 -c "
+  603  from recording_randomized_framework import main_cheatcode
+  604  raise SystemExit(main_cheatcode())
+  605  " -- --repo-id caai-aic/my-dataset --num-scenes 1
+  606  pixi run python3 -c "
+  607  from recording_randomized_framework import main_cheatcode
+  608  raise SystemExit(main_cheatcode())
+  609  " --repo-id caai-aic/my-dataset --num-scenes 1
+  610  pixi run python3 -c "
+  611  from recording_randomized_framework import main_cheatcode
+  612  raise SystemExit(main_cheatcode())
+  613  " --repo-id caai-aic/my-dataset --num-scenes 1
+  614  pixi run python3 -c "
+  615  from recording_randomized_framework import main_cheatcode
+  616  raise SystemExit(main_cheatcode())
+  617  " --repo-id caai-aic/my-dataset --num-scenes 1
+  618  pixi run python3 -c "
+  619  from recording_randomized_framework import main_cheatcode
+  620  raise SystemExit(main_cheatcode())
+  621  " --repo-id caai-aic/my-dataset --num-scenes 1
+  622  pixi run python3 -c "
+  623  from recording_randomized_framework import main_cheatcode
+  624  raise SystemExit(main_cheatcode())
+  625  " --repo-id caai-aic/my-dataset --num-scenes 1
+  626  pixi run python3 -c "
+  627  from recording_randomized_framework import main_cheatcode
+  628  raise SystemExit(main_cheatcode())
+  629  " --repo-id caai-aic/my-dataset --num-scenes 1
+  630  pixi run python3 -c "
+  631  from recording_randomized_framework import main_cheatcode
+  632  raise SystemExit(main_cheatcode())
+  633  " --repo-id caai-aic/my-dataset --num-scenes 1
+  634  pixi run python3 -c "
+  635  from recording_randomized_framework import main_cheatcode
+  636  raise SystemExit(main_cheatcode())
+  637  " --repo-id caai-aic/my-dataset --num-scenes 1
+  638  pixi run python3 -c "
+  639  from recording_randomized_framework import main_cheatcode
+  640  raise SystemExit(main_cheatcode())
+  641  " --repo-id caai-aic/my-dataset --num-scenes 1
+  642  pixi run python3 -c "
+  643  from recording_randomized_framework import main_cheatcode
+  644  raise SystemExit(main_cheatcode())
+  645  " --repo-id caai-aic/my-dataset --num-scenes 1
+  646  pixi run python3 -c "
+  647  from recording_randomized_framework import main_cheatcode
+  648  raise SystemExit(main_cheatcode())
+  649  " --repo-id caai-aic/my-dataset --num-scenes 1
+  650  pixi run python3 -c "
+  651  from recording_randomized_framework import main_cheatcode
+  652  raise SystemExit(main_cheatcode())
+  653  " --repo-id caai-aic/my-dataset --num-scenes 1
+  654  pixi run python3 -c "
+  655  from recording_randomized_framework import main_cheatcode
+  656  raise SystemExit(main_cheatcode())
+  657  " --repo-id caai-aic/my-dataset --num-scenes 1
+  658  pixi run python3 -c "
+  659  from recording_randomized_framework import main_cheatcode
+  660  raise SystemExit(main_cheatcode())
+  661  " --repo-id caai-aic/my-dataset --num-scenes 1
+  662  pixi run python3 -c "
+  663  from recording_randomized_framework import main_cheatcode
+  664  raise SystemExit(main_cheatcode())
+  665  " --repo-id caai-aic/my-dataset --num-scenes 2
+  666  pixi run python3 -c "
+  667  from recording_randomized_framework import main_cheatcode
+  668  raise SystemExit(main_cheatcode())
+  669  " --repo-id caai-aic/my-dataset --num-scenes 2
+  670  pixi run python3 -c "
+  671  from recording_randomized_framework import main_cheatcode
+  672  raise SystemExit(main_cheatcode())
+  673  " --repo-id caai-aic/my-dataset --num-scenes 2
+  674  pixi run python3 -c "
+  675  from recording_randomized_framework import main_cheatcode
+  676  raise SystemExit(main_cheatcode())
+  677  " --repo-id caai-aic/my-dataset --num-scenes 2
+  678  cd mystuff/custom_commands/
+  679  ls -al
+  680  ./start_docker.sh
+  681  cd src/aic/
+  682  pixi run rqt
+  683  pixi add rqt
+  684  pixi add ros-kilted-rqt-gui
+  685  pixi run rqt
+  686  pixi add ros-kilted-rqt-topic
+  687  pixi run rqt
+  688  pixi run ros2 topic list
+  689  pixi run ros2 topic echo /scoring/insertion_event
+  690  pixi add ros-kilted-rqt-graph
+  691  pixi run rqt
+  692  pixi run rqt
+  693  pixi add ros-kilted-rqt*
+  694  pixi add ros-kilted-rqt\*
+  695  pixi add ros-kilted-rqt-py
+  696  pixi add ros-kilted-rqt-plot
+  697  pixi add ros-kilted-rqt-tf-tree
+  698  pixi add ros-kilted-rqt
+  699  pixi run rqt
+  700  pixi run rqt_graph
+  701  pixi run rqt_graph --force-discover
+  702  pixi run rqt
+  703  pixi run ros2 topic info /scoring/insertion-event
+  704  pixi run ros2 topic list
+  705  pixi run ros2 topic info /scoring/insertion_event
+  706  pixi run ros2 topic bw /scoring/insertion_event
+  707  pixi run ros2 topic echo /scoring/insertion_event
+  708  pixi run ros2 topic bw /scoring/insertion_event
+  709  cd src/aic/mystuff/
+  710  cd custom_commands/
+  711  ./record_multiple_data.sh
+  712  cd src/aic/
+  713  pixi run python3 -c "
+  714  from recording_randomized_framework import main_cheatcode
+  715  raise SystemExit(main_cheatcode())
+  716  " -- --repo-id caai-aic/my-dataset --num-scenes 1
+  717  pixi run python3 -c "
+  718  from recording_randomized_framework import main_cheatcode
+  719  raise SystemExit(main_cheatcode())
+  720  "--repo-id caai-aic/my-dataset --num-scenes 1
+  721  pixi run python3 -c "
+  722  from recording_randomized_framework import main_cheatcode
+  723  raise SystemExit(main_cheatcode())
+  724  " --repo-id caai-aic/my-dataset --num-scenes 1
+  725  cd mystuff/custom_commands/
+  726  ./start_scoring.sh
+  727  ./start_docker.sh
+  728  pixi run python3 -c "
+  729  from recording_randomized_framework import main_cheatcode
+  730  raise SystemExit(main_cheatcode())
+  731  " --repo-id caai-aic/my-dataset --num-scenes 1
+  732  cd src/aic/
+  733  pixi run python3 -c "
+  734  from recording_randomized_framework import main_cheatcode
+  735  raise SystemExit(main_cheatcode())
+  736  " --repo-id caai-aic/my-dataset --num-scenes 1
+  737  pixi run python3 -c "
+  738  from recording_randomized_framework import main_cheatcode
+  739  raise SystemExit(main_cheatcode())
+  740  " --repo-id caai-aic/my-dataset --num-scenes 1
+  741  pixi run python3 -c "
+  742  from recording_randomized_framework import main_cheatcode
+  743  raise SystemExit(main_cheatcode())
+  744  " --repo-id caai-aic/my-dataset --num-scenes 1
+  745  pixi run python3 -c "
+  746  from recording_randomized_framework import main_cheatcode
+  747  raise SystemExit(main_cheatcode())
+  748  " --repo-id caai-aic/my-dataset --num-scenes 1
+  749  pixi run python3 -c "
+  750  from recording_randomized_framework import main_cheatcode
+  751  raise SystemExit(main_cheatcode())
+  752  " --repo-id caai-aic/my-dataset --num-scenes 1
+  753  pixi run python3 -c "
+  754  from recording_randomized_framework import main_cheatcode
+  755  raise SystemExit(main_cheatcode())
+  756  " --repo-id caai-aic/my-dataset --num-scenes 1
+  757  pixi run python3 -c "
+  758  from recording_randomized_framework import main_cheatcode
+  759  raise SystemExit(main_cheatcode())
+  760  " --repo-id caai-aic/my-dataset --num-scenes 1
+  761  pixi run python3 -c "
+  762  from recording_randomized_framework import main_cheatcode
+  763  raise SystemExit(main_cheatcode())
+  764  " --repo-id caai-aic/my-dataset --num-scenes 1
+  765  pixi run python3 recording_framework.py -cheatcode-all --cheatcode-episodes 1
+  766  pixi run python3 recording_framework.py --cheatcode-all --cheatcode-episodes 1
+  767  pixi run python3 recording_framework.py
+  768  cd src/aic/
+  769  pixi run python3 recording_framework.py
+  770  pixi run python3 -c "
+  771  from recording_randomized_framework import main_cheatcode
+  772  raise SystemExit(main_cheatcode())
+  773  " --repo-id caai-aic/my-dataset --num-scenes 1
+  774  pixi run python3 recording_framework.py
+  775  pixi run python3 -c "
+  776  from recording_randomized_framework import main_cheatcode
+  777  raise SystemExit(main_cheatcode())
+  778  " --repo-id caai-aic/my-dataset --num-scenes 1
+  779  pixi run python3 -c "
+  780  from recording_randomized_framework import main_cheatcode
+  781  raise SystemExit(main_cheatcode())
+  782  " --repo-id caai-aic/my-dataset --num-scenes 1
+  783  pixi run python3 recording_framework.py
+  784  pixi reinstall aic_utils
+  785  pixi run python3 recording_framework.py
+  786  pixi reinstall lerobot_robot_aic
+  787  pixi run python3 recording_framework.py
+  788  cd src/aic/
+  789  pixi run rqt
+  790  cd src/aic/
+  791  pixi run python3 recording_framework.py
+  792  history > recording-framework-use-1.txt
